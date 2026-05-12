@@ -1,8 +1,4 @@
-# Tipos de Arquivos
-
-Agora que entendemos que tudo no linux é arquivos, temos que entender os tipos e o seu papel dentro do sistema.
-
-## Extensão
+# Extensão
 
 Anteriormente falamos que arquivos possuem um `nome.formato` esse `.formato` nada mais é que o identificador daquele aquivo, ele diz para o sistema de que forma ele deve ser usado.
 
