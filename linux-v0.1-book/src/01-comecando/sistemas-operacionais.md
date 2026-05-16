@@ -4,42 +4,39 @@
 
 É o sistema mais popular do mundo para desktops e notebooks.
 
-- Foco: Versatilidade e compatibilidade.
-- Vantagens: Roda quase qualquer software existente e é a plataforma definitiva para games.
-- Ponto fraco: Por ser o mais usado, também é o alvo principal de vírus e malwares, exigindo mais atenção com segurança.
-
+- **Foco:** versatilidade e compatibilidade;
+- **Vantagens:** roda qualquer software existente;
+- **Ponto fraco:** por ser o mais usado, também é o principal alvo de vírus e *malwares*, exigindo mais atenção com segurança.
 
 ## macOS (Apple)
 
-Exclusivo para os computadores da Apple (MacBooks e iMacs).
+Exclusivo para os computadores da *Apple*.
 
-- Foco: Experiência do usuário e design.
-- Vantagens: Extremamente estável, fluido e com uma integração impecável com outros produtos da Apple (como o iPhone).
-- Ponto fraco: O custo de entrada é alto, já que você é obrigado a comprar o hardware da Apple.
- 
+- **Foco:** experiência do usuário e *design*.
+- **Vantagens:** extremamente estável, fluido e com integração impecável com outros produtos da *Apple*.
+- **Ponto fraco:** o custo de entrada é alto, pois exige a compra do hardware exclusivo.
 
-## Linux (Open Source)
+## Linux (*Open Source*)
 
-Ao contrário dos outros, o Linux não é uma empresa, mas um núcleo (kernel) aberto que permite que diversas versões (chamadas de "distribuições" ou distros) sejam criadas, como Ubuntu, Fedora e Mint.
+Ao contrário dos outros, o *Linux* não é um produto de empresa, mas um núcleo (*kernel*) aberto que permite a criação de diversas versões, chamadas de
+*distribuições* ou *distros*, como *Ubuntu*, *Fedora* e *Linux Mint*.
 
-- Foco: Liberdade e customização.
-- Vantagens: É gratuito, leve e extremamente seguro. É o "rei dos servidores" e da infraestrutura da internet.
-- Ponto fraco: Pode ter uma curva de aprendizado maior para quem está acostumado com o Windows, e alguns softwares específicos (como a suíte Adobe) não rodam nativamente.
-
+- **Foco:** liberdade e customização;
+- **Vantagens:** gratuito, leve e extremamente seguro. É o "rei dos servidores" e da infraestrutura da internet;
+- **Ponto fraco:** pode ter uma curva de aprendizado maior em algumas distribuições e alguns softwares específicos (como a suíte *Adobe*) não rodam nativamente.
 
 ## Android (Google)
 
-Baseado no kernel do Linux, é o sistema operacional móvel mais usado no planeta.
+Baseado no *kernel* do *Linux*, é o sistema operacional móvel mais usado no planeta.
 
-- Foco: Mobilidade e ecossistema aberto.
-- Vantagens: Está presente desde celulares baratinhos até aparelhos de ultra-luxo. Oferece grande liberdade para instalar aplicativos de fontes variadas e personalizar a interface.
-- Ponto fraco: Como muitas fabricantes (Samsung, Xiaomi, Motorola) modificam o sistema, as atualizações de segurança podem demorar para chegar em modelos mais antigos.
- 
+- **Foco:** mobilidade e ecossistema aberto;
+- **Vantagens:** presente desde celulares básicos até aparelhos de alto padrão. Oferece grande liberdade para instalar aplicativos de fontes variadas e personalizar a interface;
+- **Ponto fraco:** como muitas fabricantes (*Samsung*, *Xiaomi*, *Motorola*) modificam o sistema, as atualizações de segurança podem demorar a chegar em modelos mais antigos.
 
 ## iOS / iPadOS (Apple)
 
-Exclusivo para os dispositivos móveis da Apple (iPhones e iPads).
+Exclusivo para os dispositivos móveis da *Apple* (*iPhones* e *iPads*).
 
-- Foco: Segurança, desempenho otimizado e experiência integrada.
-- Vantagens: Atualizações de segurança chegam a todos os dispositivos suportados ao mesmo tempo, ecossistema muito bem integrado com macOS, e a App Store tem uma curadoria rigorosa.
-- Ponto fraco: Sistema mais fechado, menos liberdade de personalização e instalação de apps fora da loja oficial em comparação ao Android.
+- **Foco:** segurança, desempenho otimizado e experiência integrada;
+- **Vantagens:** Atualizações de segurança chegam simultaneamente a todos os dispositivos suportados, o ecossistema é muito bem integrado com o *macOS*e a *App Store* mantém uma curadoria rigorosa;
+- **Ponto fraco:** sistema mais fechado, com menos liberdade de personalização e instalação de aplicativos fora da loja oficial em comparação ao *Android*.
