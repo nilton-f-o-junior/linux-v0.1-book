@@ -1,15 +1,21 @@
 # Summary
 
-* [Aprensentação](./00-intro/aprensentacao.md)
+* [Apresentação](./00-intro/apresentacao.md)
   * [Prefácio](./00-intro/prefacio.md)
   * [Introdução](./00-intro/introducao.md) 
 
 * [Começando](./01-comecando/intro.md)
   * [Dispositivos](./01-comecando/dispositivos.md)
-  * [Sistemas Operacionais](./01-comecando/sistemas-operacionais.md)
-  * [Servidores](./01-comecando/servidores.md)
   * [Software](./01-comecando/software.md)
+  * [Sistemas Operacionais](./01-comecando/sistemas-operacionais.md)
   * [Distribuições](./01-comecando/distribuicoes.md)
+  * [Desktop Environments](./01-comecando/desktop-environments.md)
+  * [Tiling Window Managers](./01-comecando/tiling-window-managers.md)
+
+<!-- * []() -->
+
+
+
 <!-- * [Arquivos](./02-arquivos/intro.md) -->
   <!-- * [Arquivos](./02-arquivos/arquivos.md) -->
   <!-- * [Tipos de Arquivos](./02-arquivos/tipos-de-arquivos.md) -->
