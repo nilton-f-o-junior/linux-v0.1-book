@@ -55,4 +55,4 @@ Atue como um especialista em Git e Engenharia de Software. Gere uma ou mais mens
 
 Por favor, mantenha as mensagens em português, de forma clara e profissional.
 
-4. Mostrar o resultado e perguntar se desejar aplicar os commits.
+4. Mostrar o resultado e perguntar se desejar aplicar os commits...
