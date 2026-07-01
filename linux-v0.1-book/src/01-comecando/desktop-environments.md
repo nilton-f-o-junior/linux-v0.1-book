@@ -1,6 +1,6 @@
 # Desktop Environments
 
-Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto, um fundo personalizável e um menu de aplicativos, está olhando para uma construção inteiramente separada do kernel. Equipes inteiras de desenvolvedores precisaram escrever todo aquele ambiente do zero. O kernel não entregou nada disso de bandeja. Entre o kernel e o ambiente gráfico existe ainda uma camada intermediária chamada servidor gráfico, hoje representada principalmente pelo *Wayland* e, em sistemas mais antigos, pelo *X11*, responsável por traduzir as instruções do sistema em imagens na tela.
+Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto, um fundo personalizável e um menu de aplicativos, está olhando para uma construção inteiramente separada do kernel. Equipes inteiras de desenvolvedores precisaram escrever todo aquele ambiente do zero. O kernel não entregou nada disso de bandeja. Entre o kernel e o ambiente gráfico existe ainda uma camada intermediária chamada servidor gráfico, hoje dividida entre o *Wayland*, cada vez mais adotado, e o *X11*, ainda amplamente utilizado, responsável por traduzir as instruções do sistema em imagens na tela.
 
 Essa é a camada visual que fica entre você e o sistema operacional. No Linux, diferente do Windows ou do macOS, essa camada é intercambiável: você escolhe qual prefere, e cada opção tem uma filosofia própria. A seguir, um panorama dos mais populares.
 
