@@ -12,9 +12,17 @@
   * [Desktop Environments](./01-comecando/desktop-environments.md)
   * [Tiling Window Managers](./01-comecando/tiling-window-managers.md)
 
-<!-- * []() -->
-
-
+* [Hardware](./02-hardware/intro.md)
+  * [Placa-mãe](./02-hardware/placa-mae.md)
+  * [BIOS e UEFI](./02-hardware/bios-e-uefi.md)
+  * [CPU](./02-hardware/cpu.md)
+  * [Memória RAM](./02-hardware/memoria-ram.md)
+  * [Armazenamento](./02-hardware/armazenamento.md)
+  * [GPU](./02-hardware/gpu.md)
+  * [Fonte de Alimentação](./02-hardware/fonte-de-alimentacao.md)
+  * [Resfriamento](./02-hardware/resfriamento.md)
+  * [Monitor](./02-hardware/monitor.md)
+  * [Periféricos](./02-hardware/perifericos.md)
 
 <!-- * [Arquivos](./02-arquivos/intro.md) -->
   <!-- * [Arquivos](./02-arquivos/arquivos.md) -->
