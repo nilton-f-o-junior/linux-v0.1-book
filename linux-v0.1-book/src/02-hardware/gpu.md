@@ -4,7 +4,7 @@ Por muito tempo, a GPU ficou nos bastidores. Era o componente que desenhava pixe
 
 ## O que é a GPU?
 
-GPU significa *Graphics Processing Unit*, Unidade de Processamento Gráfico. É um chip dedicado ao processamento paralelo massivo: em vez de alguns poucos núcleos poderosos como a CPU, a GPU tem centenas ou milhares de núcleos menores, todos trabalhando ao mesmo tempo.
+GPU significa *Graphics Processing Unit* ou Unidade de Processamento Gráfico. É um chip dedicado ao processamento paralelo massivo: em vez de poucos núcleos poderosos, como na CPU, a GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.
 
 A razão para esse design é a natureza do trabalho gráfico. Para exibir uma cena em 3D na tela, a GPU precisa calcular a cor e posição de cada pixel, levando em conta luzes, sombras, texturas e a geometria dos objetos. Um monitor Full HD tem mais de dois milhões de pixels. A 60 quadros por segundo, isso são mais de 120 milhões de cálculos de pixels por segundo, e cada um com várias operações matemáticas envolvidas. Nenhum processador de uso geral com poucos núcleos consegue fazer isso em tempo real. A GPU resolve o problema com paralelismo: divide esse trabalho em milhares de tarefas idênticas e as executa simultaneamente.
 
@@ -52,9 +52,9 @@ O mercado de GPUs discretas é dominado por dois fabricantes, com um terceiro en
 
 A **NVIDIA** lidera em desempenho absoluto e no mercado de computação acelerada. Suas GPUs para consumidores seguem a linha GeForce, dividida em faixas:
 
-- RTX 4060 e similares: entrada e uso intermediário, jogos em 1080p e 1440p
-- RTX 4070 e 4080: desempenho alto, jogos em 1440p e 4K com ray tracing
-- RTX 4090: topo de linha para consumidores, renderização profissional e AI local
+- **RTX 4060 e similares:** entrada e uso intermediário, jogos em 1080p e 1440p
+- **RTX 4070 e 4080:** desempenho alto, jogos em 1440p e 4K com ray tracing
+- **RTX 4090:** topo de linha para consumidores, renderização profissional e AI local
 
 Para servidores e machine learning, a NVIDIA oferece a linha Tesla e, mais recentemente, as arquiteturas A100 e H100, que dominam os data centers de grandes laboratórios de IA. O ecossistema de software da NVIDIA, o *CUDA*, é a plataforma mais madura para computação em GPU e a principal razão pela qual a empresa mantém vantagem no mercado profissional: a maioria dos frameworks de machine learning foi construída com suporte primário a CUDA.
 

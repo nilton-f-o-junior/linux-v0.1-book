@@ -28,10 +28,13 @@ Em dispositivos móveis, a RAM segue padrões próprios como LPDDR (*Low Power D
 
 A resposta depende do uso, mas alguns parâmetros práticos ajudam a calibrar a expectativa:
 
-- **4 GB** é o mínimo funcional hoje, suficiente para tarefas simples em distribuições Linux leves, mas apertado para uso geral;
-- **8 GB** era o padrão razoável por anos, ainda funciona para uso cotidiano moderado, mas começa a ficar limitado com navegadores modernos e muitas abas abertas;
-- **16 GB** é o ponto confortável para desenvolvimento de software, edição de imagens e múltiplas abas abertas;
-- **32 GB ou mais** é território de edição de vídeo, virtualização, workstations e servidores.
+- **4 GB:** é o mínimo funcional hoje, suficiente para tarefas simples em distribuições Linux leves, mas apertado para uso geral;
+
+- **8 GB:** era o padrão razoável por anos, ainda funciona para uso cotidiano moderado, mas começa a ficar limitado com navegadores modernos e muitas abas abertas;
+
+- **16 GB:** é o ponto confortável para desenvolvimento de software, edição de imagens e múltiplas abas abertas;
+
+- **32 GB ou mais:** é território de edição de vídeo, virtualização, workstations e servidores.
 
 No Linux, o consumo base de RAM varia bastante conforme o ambiente gráfico escolhido. Um sistema com XFCE ou LXQt pode iniciar usando menos de 500 MB; o GNOME com extensões ativas pode facilmente ocupar mais de 1,5 GB só na área de trabalho, antes de qualquer aplicativo ser aberto.
 
