@@ -14,7 +14,7 @@ Dentro da placa-mãe há um conjunto de circuitos chamado chipset. Ele funciona 
 
 Processadores modernos integram parte das funções que antes eram exclusivas do chipset, como o controlador de memória e algumas linhas PCIe diretas. O que o chipset ainda gerencia varia conforme a plataforma, mas o princípio se mantém: ele complementa o processador em tudo que não passa diretamente por ele.
 
-A escolha do chipset define em grande parte o que a placa-mãe suporta. Chipsets de linha mais alta permitem overclocking, oferecem mais linhas PCIe e mais portas USB. Chipsets de entrada restringem algumas dessas opções para reduzir custo. Para o usuário final, a escolha prática é sempre entre a placa e o conjunto de recursos que ela oferece, não o chipset em si.
+A escolha do chipset define em grande parte o que a placa-mãe suporta. Chipsets de linha mais alta permitem *overclocking*, oferecem mais linhas PCIe e mais portas USB. Chipsets de entrada restringem algumas dessas opções para reduzir custo. Para o usuário final, a escolha prática é sempre entre a placa e o conjunto de recursos que ela oferece, não o chipset em si.
 
 ## Form factor: o tamanho importa
 
@@ -43,7 +43,7 @@ Um detalhe relevante sobre o manuseio:
 
 ### Slots de memória
 
-A maioria das placas-mãe tem dois ou quatro slots de RAM. A quantidade de slots define quanto de memória o sistema pode ter no total e se é possível operar em dual channel, uma configuração que aumenta a largura de banda da memória ao usar dois pentes simultaneamente em vez de um.
+A maioria das placas-mãe tem dois ou quatro slots de RAM. A quantidade de slots define quanto de memória o sistema pode ter no total e se é possível operar em *dual channel*, uma configuração que aumenta a largura de banda da memória ao usar dois pentes simultaneamente em vez de um.
 
 As placas mais modernas usam DDR5, enquanto plataformas mais antigas ainda utilizam DDR4. Os dois padrões são fisicamente incompatíveis: um pente DDR5 não encaixa em um slot DDR4, e vice-versa.
 
@@ -59,9 +59,9 @@ Cada geração de DDR tem um encaixe físico diferente. O pente muda de tamanho,
 
 #### Dual channel e quad channel
 
-Quando dois pentes de RAM idênticos são instalados nos slots corretos, a placa-mãe ativa o modo dual channel, que dobra a largura de banda disponível para o processador ao acessar a memória. A diferença é perceptível especialmente em processadores com GPU integrada, que compartilham a memória RAM com os gráficos, e em tarefas que movimentam grandes volumes de dados entre CPU e memória.
+Quando dois pentes de RAM idênticos são instalados nos slots corretos, a placa-mãe ativa o modo *dual channel*, que dobra a largura de banda disponível para o processador ao acessar a memória. A diferença é perceptível especialmente em processadores com GPU integrada, que compartilham a memória RAM com os gráficos, e em tarefas que movimentam grandes volumes de dados entre CPU e memória.
 
-Os slots de dual channel na placa são identificados por cores: instalar os pentes nos dois slots da mesma cor ativa o modo. O manual da placa sempre indica a combinação correta.
+Os slots de *dual channel* na placa são identificados por cores: instalar os pentes nos dois slots da mesma cor ativa o modo. O manual da placa sempre indica a combinação correta.
 
 Placas de servidor com múltiplos processadores podem operar em quad channel ou até oito canais, aumentando ainda mais a largura de banda total disponível.
 
@@ -75,7 +75,7 @@ Na prática, para uso geral, a diferença entre frequências e latências próxi
 
 Os slots de memória ficam sempre próximos ao soquete do processador, já que o controlador de memória está dentro da própria CPU nas arquiteturas modernas. Quanto menor a distância entre os dois, menor a latência das trilhas que os conectam.
 
-Nas placas com quatro slots, a ordem de instalação importa. Instalar um único pente no slot errado pode impedir o dual channel ou, em alguns casos, fazer o sistema não inicializar. A regra geral é: dois pentes vão nos slots 2 e 4 (ou A2 e B2, conforme a nomenclatura da placa). O manual sempre especifica, e a placa costuma ter a indicação impressa na própria PCB ao lado dos slots.
+Nas placas com quatro slots, a ordem de instalação importa. Instalar um único pente no slot errado pode impedir o *dual channel* ou, em alguns casos, fazer o sistema não inicializar. A regra geral é: dois pentes vão nos slots 2 e 4 (ou A2 e B2, conforme a nomenclatura da placa). O manual sempre especifica, e a placa costuma ter a indicação impressa na própria PCB ao lado dos slots.
 
 ### Slots PCIe
 
@@ -115,7 +115,7 @@ Entre os componentes da placa-mãe que menos aparecem nas especificações de ma
 
 O processador não consome energia de forma constante. Em momentos de carga intensa, a demanda sobe abruptamente. VRMs de qualidade inferior esquentam mais, são menos eficientes e, em casos extremos, limitam o desempenho do processador ao não conseguir entregar energia suficiente de forma estável.
 
-Em montagens simples com processadores de consumo moderado, VRMs medianos cumprem seu papel sem dificuldade. O problema aparece quando processadores de alto TDP, especialmente os que permitem overclocking, são instalados em placas com VRMs subdimensionados para aquela carga.
+Em montagens simples com processadores de consumo moderado, VRMs medianos cumprem seu papel sem dificuldade. O problema aparece quando processadores de alto TDP, especialmente os que permitem *overclocking*, são instalados em placas com VRMs subdimensionados para aquela carga.
 
 ## Conectividade integrada
 

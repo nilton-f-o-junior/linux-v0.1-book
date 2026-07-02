@@ -12,7 +12,7 @@ A imagem não é estática. O monitor redesenha a tela dezenas de vezes por segu
 
 A forma como os pixels são construídos e iluminados define boa parte das características do monitor. Quatro tecnologias são relevantes no mercado atual, cada uma com características e casos de uso distintos.
 
-Antes de entrar nas variações, vale entender dois termos que aparecem com frequência. O LCD (Liquid Crystal Display) é a base da maioria dos monitores: a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada backlight. O IPS, o TN e o VA são todos painéis LCD; o que os diferencia é a forma como os cristais líquidos são organizados e controlados. A denominação LED, por sua vez, refere-se ao tipo de backlight: monitores chamados de "LED" simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. Não é uma tecnologia de painel separada, mas uma forma de iluminação mais eficiente que permite designs mais finos e melhor precisão de cores em comparação com os modelos fluorescentes.
+Antes de entrar nas variações, vale entender dois termos que aparecem com frequência. O LCD (Liquid Crystal Display) é a base da maioria dos monitores: a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada *backlight*. O IPS, o TN e o VA são todos painéis LCD; o que os diferencia é a forma como os cristais líquidos são organizados e controlados. A denominação LED, por sua vez, refere-se ao tipo de *backlight*: monitores chamados de "LED" simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. Não é uma tecnologia de painel separada, mas uma forma de iluminação mais eficiente que permite designs mais finos e melhor precisão de cores em comparação com os modelos fluorescentes.
 
 ### IPS — In-Plane Switching
 
@@ -44,14 +44,14 @@ Os ângulos de visão são melhores que o TN mas inferiores ao IPS. O tempo de r
 
 ### OLED
 
-O OLED (Organic Light-Emitting Diode) representa uma mudança estrutural em relação às tecnologias anteriores. Nos painéis LCD convencionais (IPS, TN e VA), os pixels não emitem luz: eles filtram uma iluminação de fundo chamada backlight. No OLED, cada pixel é sua própria fonte de luz e pode ser apagado individualmente.
+O OLED (Organic Light-Emitting Diode) representa uma mudança estrutural em relação às tecnologias anteriores. Nos painéis LCD convencionais (IPS, TN e VA), os pixels não emitem luz: eles filtram uma iluminação de fundo chamada *backlight*. No OLED, cada pixel é sua própria fonte de luz e pode ser apagado individualmente.
 
 O resultado é um preto absoluto: quando um pixel está apagado, ele não emite nenhuma luz. O contraste é, na prática, muito superior ao de qualquer painel LCD, já que pixels completamente apagados não emitem luz alguma, algo que nenhum LCD consegue replicar. As cores são vibrantes e o tempo de resposta é extremamente baixo. Vale mencionar também a luminosidade: monitores OLED costumam atingir picos elevados de brilho (medidos em nits), o que favorece o uso em ambientes com bastante luz ambiente.
 
-A principal preocupação com monitores OLED é a queima de tela (burn-in): pixels que exibem imagens estáticas por períodos muito longos podem degradar de forma permanente, deixando uma sombra visível. Fabricantes têm implementado mecanismos de mitigação, mas o cuidado ainda é relevante para usos que envolvam elementos fixos na tela, como barras de tarefas ou HUDs de jogos.
+A principal preocupação com monitores OLED é a queima de tela (*burn-in*): pixels que exibem imagens estáticas por períodos muito longos podem degradar de forma permanente, deixando uma sombra visível. Fabricantes têm implementado mecanismos de mitigação, mas o cuidado ainda é relevante para usos que envolvam elementos fixos na tela, como barras de tarefas ou HUDs de jogos.
 
 - Vantagens: contraste infinito, pixels que se apagam completamente eliminando qualquer emissão de luz, cores excepcionais, tempo de resposta mínimo.
-- Desvantagens: custo elevado, risco de burn-in em uso prolongado com imagens estáticas.
+- Desvantagens: custo elevado, risco de *burn-in* em uso prolongado com imagens estáticas.
 - Uso típico: entusiastas, jogos de alto nível, edição profissional de vídeo e fotografia.
 
 ## Resolução
@@ -74,7 +74,7 @@ A taxa de atualização do monitor só se traduz em benefício real se a placa d
 
 ## Tempo de resposta
 
-O tempo de resposta indica quanto tempo um pixel leva para mudar de uma cor para outra, medido em milissegundos (ms). Tempos de resposta altos resultam em ghosting: um rastro visível atrás de objetos em movimento rápido.
+O tempo de resposta indica quanto tempo um pixel leva para mudar de uma cor para outra, medido em milissegundos (ms). Tempos de resposta altos resultam em *ghosting*: um rastro visível atrás de objetos em movimento rápido.
 
 Para uso geral, qualquer valor abaixo de 5 ms é imperceptível. Para jogos rápidos, valores entre 1 e 2 ms são desejáveis. Fabricantes frequentemente divulgam o menor tempo de resposta possível nas especificações, medido em condições ideais, geralmente entre transições de cinza para cinza (GtG). O comportamento médio em uso real costuma ser diferente.
 
@@ -85,7 +85,7 @@ Quando a placa de vídeo entrega quadros em ritmo variável e o monitor os exibe
 - **G-Sync** (NVIDIA): sincroniza o monitor com a saída da placa de vídeo NVIDIA. Exige um módulo proprietário no monitor, o que eleva o custo.
 - **FreeSync** (AMD): padrão aberto baseado em Adaptive-Sync, suportado pela maioria dos monitores modernos. Funciona nativamente com placas AMD e, em monitores com certificação G-Sync Compatible, também com placas NVIDIA.
 
-Ambas as tecnologias eliminam o tearing e reduzem o stuttering (engasgos e pausas abruptas na imagem), resultando em uma experiência visivelmente mais suave em jogos.
+Ambas as tecnologias eliminam o tearing e reduzem o *stuttering* (engasgos e pausas abruptas na imagem), resultando em uma experiência visivelmente mais suave em jogos.
 
 ## Conexões
 

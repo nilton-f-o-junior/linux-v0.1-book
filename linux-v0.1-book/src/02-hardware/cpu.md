@@ -57,7 +57,7 @@ A arquitetura x86 domina computadores pessoais e servidores há décadas. É o p
   - Core i3: entrada, tarefas cotidianas
   - Core i5: intermediário, uso geral e jogos
   - Core i7: alto desempenho, produtividade pesada
-  - Core i9: topo de linha para desktops, workstations e notebooks premium
+  - Core i9: topo de linha para desktops, *workstations* e notebooks premium
 
   As gerações recentes adotaram o design híbrido com núcleos de desempenho e núcleos de eficiência no mesmo chip.
 
