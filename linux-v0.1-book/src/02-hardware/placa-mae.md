@@ -52,9 +52,13 @@ As placas mais modernas usam DDR5, enquanto plataformas mais antigas ainda utili
 Cada geração de DDR tem um encaixe físico diferente. O pente muda de tamanho, a posição do entalhe que guia a instalação muda, e o slot da placa-mãe muda junto. Isso torna impossível instalar uma geração errada por acidente: um pente DDR5 simplesmente não entra em um slot DDR4, e vice-versa.
 
 - **DDR1:** 184 pinos, entalhe próximo ao centro do pente, levemente deslocado para um lado.
+
 - **DDR2:** 240 pinos, entalhe reposicionado em relação ao DDR1. Mesmo número de pinos que o DDR3, mas em posição diferente, o que impede a troca entre os dois.
+
 - **DDR3:** 240 pinos, entalhe em posição distinta do DDR2. Presente em plataformas mais antigas que ainda circulam no mercado usado.
+
 - **DDR4:** 288 pinos, entalhe deslocado novamente. É o padrão mais encontrado em máquinas em uso hoje.
+
 - **DDR5:** 288 pinos, mesmo número que o DDR4, mas com o entalhe em posição diferente e altura do conector ligeiramente maior. Incompatível com slots DDR4 apesar da semelhança visual.
 
 #### Dual channel e quad channel
@@ -101,11 +105,11 @@ A placa recebe energia da fonte por meio de dois conectores principais: o conect
 
 Na parte de trás do gabinete, visível externamente, fica o painel de I/O da placa-mãe: o conjunto de portas que conecta o computador ao mundo externo. O que está disponível ali varia muito conforme o modelo, mas geralmente inclui:
 
-- Portas USB-A em versões 3.0 ou superiores
-- Uma ou mais portas USB-C, às vezes com suporte a Thunderbolt em placas de alto padrão
-- Saída de vídeo integrada (HDMI ou DisplayPort), presente apenas quando o processador tem GPU integrada
-- Porta de rede RJ-45
-- Entradas e saídas de áudio
+- Portas USB-A em versões 3.0 ou superiores;
+- Uma ou mais portas USB-C, às vezes com suporte a Thunderbolt em placas de alto padrão;
+- Saída de vídeo integrada (HDMI ou DisplayPort), presente apenas quando o processador tem GPU integrada;
+- Porta de rede RJ-45;
+- Entradas e saídas de áudio.
 
 Placas mais recentes frequentemente incluem o painel de I/O já pré-instalado, o que simplifica a montagem e evita um passo extra no processo de encaixar o gabinete.
 
@@ -149,11 +153,11 @@ O BMC opera de forma completamente autônoma em relação ao sistema principal. 
 
 Na prática, pelo IPMI é possível:
 
-- Ligar, desligar e reiniciar o servidor remotamente
-- Acessar o console do sistema como se estivesse fisicamente presente (KVM over IP)
-- Monitorar temperaturas, tensões e velocidade de ventoinhas em tempo real
-- Receber alertas automáticos quando algum sensor ultrapassa o limite configurado
-- Atualizar o firmware de componentes sem acesso físico à máquina
+- Ligar, desligar e reiniciar o servidor remotamente;
+- Acessar o console do sistema como se estivesse fisicamente presente (KVM over IP);
+- Monitorar temperaturas, tensões e velocidade de ventoinhas em tempo real;
+- Receber alertas automáticos quando algum sensor ultrapassa o limite configurado;
+- Atualizar o firmware de componentes sem acesso físico à máquina.
 
 Cada fabricante implementa o BMC sob um nome próprio: a Dell chama de iDRAC, a HPE de iLO, a Lenovo de XClarity. O protocolo IPMI por baixo é o mesmo, mas as interfaces e recursos adicionais variam.
 
@@ -161,8 +165,10 @@ Cada fabricante implementa o BMC sob um nome próprio: a Dell chama de iDRAC, a 
 
 Placas de servidor seguem padrões de form factor próprios, pensados para instalação em racks, os armários padronizados usados em data centers. Os formatos mais comuns são:
 
-- **EATX:** variação estendida do ATX, comum em servidores tower e workstations de alto desempenho.
-- **EEB (Extended E-ATX):** formato maior, usado em placas dual socket com muitos slots de expansão.
+- **EATX:** variação estendida do ATX, comum em servidores tower e workstations de alto desempenho;
+
+- **EEB (Extended E-ATX):** formato maior, usado em placas dual socket com muitos slots de expansão;
+
 - **Formatos proprietários:** fabricantes como Supermicro e Dell desenvolvem placas com dimensões customizadas para caber exatamente em seus próprios chassis de rack.
 
 ### Chipsets de servidor

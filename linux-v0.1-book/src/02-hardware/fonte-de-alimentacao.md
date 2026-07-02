@@ -22,9 +22,11 @@ A potência de uma fonte é medida em watts e indica o máximo de energia que el
 
 Alguns parâmetros práticos:
 
-- **300 a 450 W** cobre computadores simples sem placa de vídeo dedicada, como os usados para tarefas de escritório e navegação.
-- **550 a 750 W** é o intervalo adequado para sistemas com placa de vídeo intermediária e uso geral.
-- **850 W ou mais** é o território de placas de vídeo de alto desempenho, múltiplos discos e sistemas voltados a jogos ou workstations.
+- **300W a 450W:** cobre computadores simples sem placa de vídeo dedicada, como os usados para tarefas de escritório e navegação;
+
+- **550W a 750W:** é o intervalo adequado para sistemas com placa de vídeo intermediária e uso geral;
+
+- **850W ou mais:** é o território de placas de vídeo de alto desempenho, múltiplos discos e sistemas voltados a jogos ou workstations.
 
 O consumo real do sistema raramente atinge o pico teórico. Uma fonte de 650 W operando um sistema que consome 400 W sob carga plena funciona dentro da sua faixa de maior eficiência, que é, na prática, o cenário ideal.
 

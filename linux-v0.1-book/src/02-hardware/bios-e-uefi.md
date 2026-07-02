@@ -20,10 +20,10 @@ sistema seja UEFI, e os fabricantes de placas-mãe mantêm essa terminologia nas
 
 Para acessar essas configurações, é preciso pressionar uma tecla específica logo nos primeiros segundos após ligar o computador, antes que o bootloader assuma o controle. A tecla varia conforme o fabricante:
 
-- `Del` ou `F2`: mais comuns em placas-mãe e notebooks em geral;
-- `F1`: presente em máquinas Lenovo;
-- `F10`: encontrado em alguns modelos HP;
-- `F12`: costuma abrir diretamente o menu de seleção de dispositivo de boot em várias marcas.
+- **`Del` ou `F2`:** mais comuns em placas-mãe e notebooks em geral;
+- **`F1`:** presente em máquinas Lenovo;
+- **`F10`:** encontrado em alguns modelos HP;
+- **`F12`:** costuma abrir diretamente o menu de seleção de dispositivo de boot em várias marcas.
 
 Muitos fabricantes exibem brevemente essa informação na tela durante o POST, uma linha discreta como "Press DEL to enter setup", mas ela desaparece rápido. Se não houver tempo de reagir, basta reiniciar e tentar novamente.
 
@@ -42,6 +42,6 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 
 O comportamento do bootloader varia conforme o sistema operacional:
 
-- **Linux**: configurável, personalizável e visível ao usuário, especialmente no GRUB;
-- **Windows**: proprietário e transparente, sem interação direta pelo usuário;
-- **macOS (Apple Silicon, a partir de 2020)**: gerenciado pelo próprio chip, de forma integrada e invisível ao usuário.
+- **Linux:** configurável, personalizável e visível ao usuário, especialmente no GRUB;
+- **Windows:** proprietário e transparente, sem interação direta pelo usuário;
+- **macOS (Apple Silicon, a partir de 2020):** gerenciado pelo próprio chip, de forma integrada e invisível ao usuário.

@@ -18,19 +18,26 @@ A ventoinha é o componente mais fundamental do resfriamento ativo, e também o 
 
 As especificações que importam na hora de escolher ou comparar ventoinhas:
 
-- **Tamanho**: medido em milímetros (80 mm, 120 mm, 140 mm, 200 mm). Ventoinhas maiores movem o mesmo volume de ar com menos rotações, portanto com menos ruído. A maioria dos gabinetes modernos aceita 120 mm e 140 mm.
-- **RPM (rotações por minuto)**: define a velocidade máxima. Mais RPM significa mais fluxo de ar e mais ruído. Uma ventoinha de 140 mm a 800 RPM pode mover tanto ar quanto uma de 120 mm a 1.200 RPM, com bem menos som.
-- **CFM (cubic feet per minute)**: medida do volume de ar movido por minuto. Quanto maior, mais ar circula.
-- **mmH₂O (pressão estática)**: relevante para ventoinhas que precisam empurrar ar através de obstáculos como as aletas de um dissipador ou um radiador de water cooler. Alta pressão estática, não apenas alto CFM, é o que importa nesses casos.
-- **Nível de ruído (dBA)**: medido em decibéis ponderados. Abaixo de 25 dBA é considerado quase inaudível em ambiente normal.
+- **Tamanho:** medido em milímetros (80 mm, 120 mm, 140 mm, 200 mm). Ventoinhas maiores movem o mesmo volume de ar com menos rotações, portanto com menos ruído. A maioria dos gabinetes modernos aceita 120 mm e 140 mm.
+
+- **RPM (rotações por minuto):** define a velocidade máxima. Mais RPM significa mais fluxo de ar e mais ruído. Uma ventoinha de 140 mm a 800 RPM pode mover tanto ar quanto uma de 120 mm a 1.200 RPM, com bem menos som.
+
+- **CFM (cubic feet per minute):** medida do volume de ar movido por minuto. Quanto maior, mais ar circula.
+
+- **mmH₂O (pressão estática):** relevante para ventoinhas que precisam empurrar ar através de obstáculos como as aletas de um dissipador ou um radiador de water cooler. Alta pressão estática, não apenas alto CFM, é o que importa nesses casos.
+
+- **Nível de ruído (dBA):** medido em decibéis ponderados. Abaixo de 25 dBA é considerado quase inaudível em ambiente normal.
 
 ### Rolamentos
 
 O rolamento do eixo central determina a longevidade e o comportamento sonoro da ventoinha ao longo do tempo.
 
 - **Sleeve bearing (bucha):** o mais barato. Funciona bem com o eixo na posição horizontal, mas o desgaste é maior quando o eixo fica na vertical, como em ventoinhas instaladas no topo do gabinete. Também é mais sensível a temperaturas altas. Vida útil típica de 20.000 a 30.000 horas.
+
 - **Ball bearing (esfera):** usa esferas metálicas no eixo. Funciona bem em qualquer orientação, suporta mais calor e tem vida útil mais longa, 50.000 horas ou mais, mas pode produzir um leve ruído característico quando novo.
+
 - **Fluid dynamic bearing (FDB):** usa um filme de óleo pressurizado. Combina a silenciosidade do sleeve com a durabilidade do ball bearing. É o padrão em ventoinhas de qualidade média para cima.
+
 - **Magnetic levitation (Maglev):** o eixo flutua por campos magnéticos, sem contato físico. Extremamente silencioso e duradouro, usado em ventoinhas de alto desempenho.
 
 ## Tipos de resfriamento
@@ -46,7 +53,9 @@ Dentro do dissipador, é comum encontrar *heat pipes*: tubos selados contendo um
 Os principais formatos de cooler a ar:
 
 - **Baixo perfil:** compacto e plano, adequado para gabinetes pequenos (ITX). Desempenho limitado pela menor massa metálica e fluxo de ar reduzido.
+
 - **Torre simples:** aletas dispostas verticalmente com uma ventoinha soprando horizontalmente. Boa relação entre tamanho e desempenho, suficiente para a maioria dos processadores.
+
 - **Torre dupla (push-pull):** duas torres de aletas com ventoinhas em ambos os lados, uma empurrando e outra puxando o ar simultaneamente. Maximiza o fluxo através das aletas e é a configuração de maior desempenho no resfriamento a ar.
 
 ### Resfriamento a líquido
@@ -55,9 +64,9 @@ Em vez de depender apenas do ar, o *water cooling* usa um líquido, geralmente �
 
 O resultado é que o calor do processador é transportado para longe e dissipado em uma superfície maior. Radiadores de 240 mm, 360 mm ou mais têm área de dissipação que nenhum cooler a ar consegue igualar.
 
-**AIO (All-In-One):** circuito fechado, selado de fábrica, com bomba e reservatório integrados no cabeçote. Fácil de instalar, sem manutenção. Boa escolha para quem quer o desempenho do water cooling sem a complexidade do loop customizado.
+- **AIO (All-In-One):** circuito fechado, selado de fábrica, com bomba e reservatório integrados no cabeçote. Fácil de instalar, sem manutenção. Boa escolha para quem quer o desempenho do water cooling sem a complexidade do loop customizado.
 
-**Loop customizado:** cada componente, reservatório, bomba, tubos, bloco e radiador, é escolhido e montado separadamente. Permite incluir mais componentes no mesmo circuito (processador, placa de vídeo, chipset), maior controle sobre o desempenho e a estética, e fácil reposição de peças. Exige mais planejamento, manutenção periódica e investimento inicial maior.
+- **Loop customizado:** cada componente, reservatório, bomba, tubos, bloco e radiador, é escolhido e montado separadamente. Permite incluir mais componentes no mesmo circuito (processador, placa de vídeo, chipset), maior controle sobre o desempenho e a estética, e fácil reposição de peças. Exige mais planejamento, manutenção periódica e investimento inicial maior.
 
 ### Resfriamento passivo
 
@@ -75,9 +84,11 @@ A configuração mais comum posiciona as ventoinhas de entrada (intake) na frent
 
 A pressão interna do gabinete é um parâmetro deliberado:
 
-- **Pressão positiva** (mais entradas que saídas): ar entra pelos filtros, menos poeira se acumula. Temperatura ligeiramente mais alta.
-- **Pressão negativa** (mais saídas que entradas): ar é sugado por qualquer fresta, sem filtrar. Mais poeira a longo prazo, mas fluxo mais intenso.
-- **Pressão neutra** (entradas e saídas equilibradas): o compromisso entre os dois extremos, comum em configurações bem planejadas.
+- **Pressão positiva (mais entradas que saídas):** ar entra pelos filtros, menos poeira se acumula. Temperatura ligeiramente mais alta.
+
+- **Pressão negativa (mais saídas que entradas):** ar é sugado por qualquer fresta, sem filtrar. Mais poeira a longo prazo, mas fluxo mais intenso.
+
+- **Pressão neutra (entradas e saídas equilibradas):** o compromisso entre os dois extremos, comum em configurações bem planejadas.
 
 A organização dos cabos internos também faz diferença. Cabos soltos bloqueiam o fluxo de ar e criam zonas de acúmulo de calor. É uma das razões pelas quais fontes modulares são valorizadas em montagens que levam o resfriamento a sério.
 
@@ -90,9 +101,13 @@ O processador e a placa de vídeo concentram a maior parte da carga térmica. Em
 As regiões críticas em um gabinete típico:
 
 - **Topo da placa-mãe (área da CPU):** alta concentração de calor, diretamente sob o cooler. É o ponto mais bem servido de fluxo de ar intencional.
+
 - **Área da placa de vídeo:** geração de calor intensa. Placas modernas têm três ventoinhas próprias e expelem o ar quente para dentro do gabinete, e esse ar precisa ser evacuado pelas ventoinhas do gabinete.
+
 - **Área da fonte de alimentação:** gera calor próprio e tem sua ventoinha interna. Em gabinetes com fonte na parte inferior, fica parcialmente isolada do restante do sistema.
+
 - **Região do armazenamento:** SSDs NVMe em slots M.2 podem esquentar significativamente sob carga de leitura e escrita intensa. Muitas placas-mãe incluem dissipadores metálicos sobre esses slots exatamente por esse motivo.
+
 - **Região traseira e superior:** zona de saída de ar. É naturalmente mais quente que a entrada frontal.
 
 Entender o mapa de calor do sistema orienta decisões práticas: onde posicionar as ventoinhas adicionais, quais componentes precisam de atenção especial e como organizar o interior para que o fluxo de ar não seja interrompido antes de cumprir seu papel.
