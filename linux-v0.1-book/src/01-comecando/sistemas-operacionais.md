@@ -21,15 +21,15 @@ Exclusivo para os computadores da *Apple*.
 Ao contrário dos outros, o *Linux* não é um produto de empresa, mas um núcleo (*kernel*) de código aberto (*open source*) que permite a criação de diversas versões, chamadas de *distribuições* ou *distros*, como *Ubuntu*, *Fedora* e *Linux Mint*.
 
 - **Foco:** liberdade e customização;
-- **Vantagens:** gratuito, leve e reconhecido pela sua segurança e estabilidade, especialmente em ambientes de servidor. É dominante em servidores e na infraestrutura da internet;
-- **Ponto fraco:** pode ter uma curva de aprendizado maior em algumas distribuições e alguns softwares específicos (como a suíte *Adobe*) não rodam nativamente. Existem, porém, alternativas de código aberto consolidadas, como *GIMP* e *Inkscape*, que cobrem boa parte dessas necessidades.
+- **Vantagens:** gratuito, leve e reconhecido pela sua segurança e estabilidade, especialmente em ambientes de servidor;
+- **Ponto fraco:** pode ter uma curva de aprendizado maior em algumas distribuições e alguns softwares específicos (como a suíte *Adobe*) não rodam nativamente, porém, já existem outras alternativas de código aberto.
 
 ## Android (Google)
 
 Baseado no *kernel* do *Linux*, é o sistema operacional móvel mais usado no planeta.
 
 - **Foco:** mobilidade e ecossistema aberto;
-- **Vantagens:** presente desde celulares básicos até aparelhos de alto padrão. Oferece grande liberdade para instalar aplicativos de fontes variadas e personalizar a interface;
+- **Vantagens:** presente desde celulares básicos até aparelhos de alto padrão, oferece grande liberdade para instalar aplicativos de fontes variadas;
 - **Ponto fraco:** como muitas fabricantes (*Samsung*, *Xiaomi*, *Motorola*) modificam o sistema, as atualizações de segurança podem demorar a chegar em modelos mais antigos, embora esse cenário tenha melhorado progressivamente com atualizações modulares introduzidas nas versões mais recentes do sistema.
 
 ## iOS / iPadOS (Apple)
