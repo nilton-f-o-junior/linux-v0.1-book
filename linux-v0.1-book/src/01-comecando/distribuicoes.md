@@ -12,7 +12,7 @@ Tecnicamente falando Linux é apenas o *kernel*, o núcleo do sistema operaciona
 
 A [Debian](https://www.debian.org/) nasceu em 1993 e foi construída com um princípio muito claro: *software livre*, estabilidade e governança comunitária. Ela criou o formato de pacotes `.deb` e o gerenciador `apt` (construído sobre o `dpkg`, a ferramenta base de gerenciamento de pacotes), que se tornaram padrão em boa parte do mundo Linux.
 
-A filha mais famosa da Debian é o [Ubuntu](https://ubuntu.com/), lançado pela Canonical em 2004 com o objetivo de tornar o Linux acessível para o usuário comum. O Ubuntu teve tanto sucesso que gerou uma família própria: o [Linux Mint](https://linuxmint.com/) (focado em facilidade de uso), o [Pop!\_OS](https://pop.system76.com/) (voltado para criadores e *gamers*), o [Zorin OS](https://zorin.com/os/) (desenhado para quem vem do Windows) e muitas outras.
+A filha mais famosa do Debian é o [Ubuntu](https://ubuntu.com/), lançado pela Canonical em 2004 com o objetivo de tornar o Linux acessível para o usuário comum. O Ubuntu teve tanto sucesso que gerou uma família própria: o [Linux Mint](https://linuxmint.com/) (focado em facilidade de uso), o [Pop!\_OS](https://pop.system76.com/) (voltado para criadores e *gamers*), o [Zorin OS](https://zorin.com/os/) (desenhado para quem vem do Windows) e muitas outras.
 
 ### Red Hat
 
@@ -24,7 +24,7 @@ Para quem quer a robustez do RHEL sem pagar pelo suporte, existem *clones comuni
 
 A [Arch](https://archlinux.org/) tem uma filosofia completamente diferente. Ela é *rolling release*: não tem versões, o sistema é atualizado continuamente com os pacotes mais recentes. A instalação é feita *do zero*, sem assistentes, e o usuário monta o sistema peça por peça. Isso a torna complexa para iniciantes, mas muito popular entre entusiastas.
 
-O [Manjaro](https://manjaro.org/) surgiu para tornar a experiência Arch mais acessível, com um instalador gráfico e pacotes pré-configurados. O [EndeavourOS](https://endeavouros.com/) segue caminho parecido, mas ficando bem mais próximo da Arch pura.
+O [Manjaro](https://manjaro.org/) surgiu para tornar a experiência Arch mais acessível, com um instalador gráfico e pacotes pré-configurados. O [EndeavourOS](https://endeavouros.com/) segue caminho parecido, mas fica bem mais próximo da Arch pura.
 
 ### Outras famílias relevantes
 
@@ -36,11 +36,11 @@ O [openSUSE](https://www.opensuse.org/) tem uma linhagem própria, com a versão
 
 #### Gentoo
 
-O [Gentoo](https://www.gentoo.org/) é a distribuição onde você *compila tudo*. Cada pacote é compilado localmente com as otimizações que você definir. Extremamente poderosa, extremamente trabalhosa.
+O [Gentoo](https://www.gentoo.org/) é a distribuição onde você *compila tudo*. Cada pacote é compilado localmente com as otimizações que você definir. Extremamente poderosa, mas extremamente trabalhosa.
 
 #### Slackware
 
-O [Slackware](http://www.slackware.com/), lançado em 1993, é a distribuição ativa mais antiga. Sem gerenciador de dependências, sem assistentes — *purismo total*.
+O [Slackware](http://www.slackware.com/), lançado em 1993, é a distribuição ativa mais antiga. Sem gerenciador de dependências, sem assistentes, purismo total.
 
 #### NixOS
 

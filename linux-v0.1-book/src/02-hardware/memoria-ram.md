@@ -39,6 +39,6 @@ No Linux, o consumo base de RAM varia bastante conforme o ambiente gráfico esco
 
 Quando a RAM se esgota, o sistema operacional recorre a um mecanismo de emergência: o *swap*. Uma parte do armazenamento em disco é usada como extensão da memória, movendo dados menos usados para lá e liberando espaço na RAM para o que está sendo processado.
 
-O custo é pesado. Acessar dados no swap significa acessar o disco, que mesmo sendo um SSD rápido, é significativamente mais lento que a RAM. O sistema começa a travar e os programas ficam lentos. É o sinal clássico de que a memória instalada não é suficiente para a carga de trabalho em questão.
+O custo é pesado. Acessar dados no *swap* significa acessar o disco, que mesmo sendo um SSD rápido, é significativamente mais lento que a RAM. O sistema começa a travar e os programas ficam lentos. É o sinal clássico de que a memória instalada não é suficiente para a carga de trabalho em questão.
 
-No Linux, o swap pode ser configurado como uma partição dedicada ou como um arquivo dentro do sistema de arquivos comum. Distribuições modernas como o Ubuntu configuram um arquivo de swap por padrão, o que facilita ajustes sem reparticionar o disco.
+No Linux, o *swap* pode ser configurado como uma partição dedicada ou como um arquivo dentro do sistema de arquivos comum. Distribuições modernas como o Ubuntu configuram um arquivo de *swap* por padrão, o que facilita ajustes sem reparticionar o disco.

@@ -79,12 +79,12 @@ De forma simples: é possível dividir o espaço de um SSD e fazê-lo se comport
 
 A razão mais imediata é separação de responsabilidades. Em um servidor Linux, é comum isolar o sistema operacional em uma partição, os dados dos usuários em outra e os logs do sistema em uma terceira. Se os logs crescerem sem controle e preencherem o disco, apenas a partição deles é afetada. O sistema continua funcionando, e os dados dos usuários permanecem intactos.
 
-Em desktops com dual boot (dois sistemas operacionais no mesmo computador), o particionamento é o que permite que Windows e Linux coexistam sem interferência: cada sistema vive em sua própria região do disco e não enxerga o território do outro.
+Em desktops com *dual boot* (dois sistemas operacionais no mesmo computador), o particionamento é o que permite que Windows e Linux coexistam sem interferência: cada sistema vive em sua própria região do disco e não enxerga o território do outro.
 
 #### Sistemas de arquivos
 
 Criar uma partição é apenas o primeiro passo. Para que o sistema operacional consiga gravar e ler dados nela, é preciso formatá-la com um sistema de arquivos, uma estrutura que define como arquivos são nomeados, organizados e localizados dentro daquele espaço.
 
-- O Windows usa NTFS como padrão em partições de sistema, com suporte a permissões detalhadas, arquivos grandes e journaling (mecanismo que registra operações pendentes e permite recuperar o estado consistente do disco após uma queda de energia abrupta).
+- O Windows usa NTFS como padrão em partições de sistema, com suporte a permissões detalhadas, arquivos grandes e *journaling* (mecanismo que registra operações pendentes e permite recuperar o estado consistente do disco após uma queda de energia abrupta).
 
 - O Linux adota por padrão o ext4 na maioria das distribuições, com características similares e décadas de refinamento. O Btrfs é outra opção que ganha adoção em distribuições mais recentes.

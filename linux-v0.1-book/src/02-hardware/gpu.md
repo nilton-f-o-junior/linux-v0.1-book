@@ -1,6 +1,6 @@
 # GPU
 
-Por muito tempo, a GPU ficou nos bastidores. Era o componente que desenhava pixels na tela, útil para jogos e pouco mais. Isso mudou. Hoje a GPU é protagonista em machine learning, edição de vídeo, simulações científicas e renderização profissional. Entender o que ela faz e por que importa deixou de ser assunto exclusivo de quem monta computadores para jogos.
+Por muito tempo, a GPU ficou nos bastidores. Era o componente que desenhava pixels na tela, útil para jogos e pouco mais. Isso mudou. Hoje a GPU é protagonista em *machine learning*, edição de vídeo, simulações científicas e renderização profissional. Entender o que ela faz e por que importa deixou de ser assunto exclusivo de quem monta computadores para jogos.
 
 ## O que é a GPU?
 
@@ -16,7 +16,7 @@ O caminho de uma cena 3D até os pixels na tela segue um processo chamado *pipel
 
 O ponto de partida são os dados brutos da cena: a posição dos vértices que formam os objetos, as fontes de luz, as texturas das superfícies e a posição da câmera virtual. A GPU pega tudo isso e transforma em uma imagem bidimensional através de estágios sucessivos.
 
-No estágio de geometria, a GPU transforma as coordenadas tridimensionais dos objetos em coordenadas de tela, descartando o que está fora do campo de visão. No estágio de rasterização, ela converte as formas geométricas em fragmentos, conjuntos de pixels candidatos a aparecer na tela. No estágio de sombreamento, calcula a cor final de cada fragmento levando em conta iluminação, texturas e efeitos especiais. No final, o resultado é enviado para o framebuffer e exibido no monitor.
+No estágio de geometria, a GPU transforma as coordenadas tridimensionais dos objetos em coordenadas de tela, descartando o que está fora do campo de visão. No estágio de rasterização, ela converte as formas geométricas em fragmentos, conjuntos de pixels candidatos a aparecer na tela. No estágio de sombreamento, calcula a cor final de cada fragmento levando em conta iluminação, texturas e efeitos especiais. No final, o resultado é enviado para o *framebuffer* e exibido no monitor.
 
 Dois tipos de programas rodam durante esse processo: os *vertex shaders*, que processam vértices e transformações geométricas, e os *fragment shaders* (ou pixel shaders), que determinam a cor de cada pixel. A programação desses shaders é o que permite efeitos visuais sofisticados, de reflexos realistas a sombras dinâmicas e profundidade de campo.
 
@@ -66,7 +66,7 @@ A **Intel** voltou ao mercado de GPUs discretas em 2022 com a linha Arc, após d
 
 A descoberta de que GPUs são eficientes para qualquer cálculo altamente paralelo transformou o componente em peça central da computação moderna.
 
-Em machine learning, o treinamento de redes neurais é essencialmente multiplicação de matrizes em escala massiva. Uma GPU com milhares de núcleos pode paralelizar essas operações de forma que leva horas o que levaria semanas em uma CPU. É por isso que GPUs são a infraestrutura sobre a qual os grandes modelos de linguagem e sistemas de visão computacional são treinados.
+Em *machine learning*, o treinamento de redes neurais é essencialmente multiplicação de matrizes em escala massiva. Uma GPU com milhares de núcleos pode paralelizar essas operações de forma que leva horas o que levaria semanas em uma CPU. É por isso que GPUs são a infraestrutura sobre a qual os grandes modelos de linguagem e sistemas de visão computacional são treinados.
 
 Em renderização de vídeo e VFX, o processamento de efeitos, composição de camadas e codificação de vídeo são acelerados pela GPU, reduzindo o tempo de exportação de horas para minutos em projetos complexos.
 

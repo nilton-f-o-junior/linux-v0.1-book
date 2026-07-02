@@ -57,7 +57,7 @@ A arquitetura x86 domina computadores pessoais e servidores há décadas. É o p
   - Core i3: entrada, tarefas cotidianas
   - Core i5: intermediário, uso geral e jogos
   - Core i7: alto desempenho, produtividade pesada
-  - Core i9: topo de linha para desktops, workstations e notebooks premium
+  - Core i9: topo de linha para desktops, *workstations* e notebooks premium
 
   As gerações recentes adotaram o design híbrido com núcleos de desempenho e núcleos de eficiência no mesmo chip.
 
@@ -80,13 +80,11 @@ Servidores têm exigências diferentes de desktops e notebooks. Não se trata ap
 
 As linhas específicas para servidores dos principais fabricantes são:
 
-- **Intel Xeon:** é a linha da Intel voltada exclusivamente a servidores e estações de trabalho profissionais. Os Xeons suportam configurações multiprocessador, ou seja, duas CPUs físicas instaladas na mesma placa-mãe operando como um único sistema, algo impossível com processadores da linha Core. Também suportam ECC RAM (*Error-Correcting Code*), um tipo de memória que detecta e corrige automaticamente erros de bit, essencial em ambientes onde qualquer corrupção de dados é inaceitável, como bancos de dados financeiros e sistemas de saúde. A capacidade de memória suportada é muito maior: enquanto desktops comuns suportam até 128 GB de RAM, servidores Xeon podem endereçar terabytes.
+- **Intel Xeon:** linha da Intel para servidores. Suporta multiprocessamento (várias CPUs na mesma placa), memória ECC (corrige erros de bit automaticamente) e capacidade de RAM na casa dos terabytes, acima dos 128 GB dos desktops comun;
 
-- **AMD EPYC:** é a resposta da AMD ao Xeon no mercado de servidores, baseada na mesma arquitetura Zen dos processadores Ryzen. Os EPYCs ganharam adoção expressiva em data centers a partir do final dos anos 2010, oferecendo contagens de núcleos elevadas (modelos recentes chegam a 96 ou 128 núcleos por processador) e suporte a grandes volumes de memória. Assim como o Xeon, suportam ECC RAM e configurações multiprocessador. Em benchmarks de cargas paralelas intensas, como computação científica e virtualização, os EPYCs são referência no mercado atual.
+- **AMD EPYC:** resposta da AMD ao Xeon, baseada na arquitetura Zen (mesma dos Ryzen). Modelos recentes chegam a 96–128 núcleos, também com ECC e multiprocessamento. É referência em cargas paralelas intensas, como computação científica e virtualização;
 
-- **ARM em data centers:** durante décadas, servidores foram sinônimo de x86. Isso começou a mudar com a chegada de processadores ARM projetados especificamente para data centers. O exemplo mais relevante é o **AWS Graviton**, desenvolvido pela Amazon para seus próprios servidores na nuvem. Os Graviton oferecem uma relação entre desempenho e consumo de energia muito superior ao x86 em cargas de trabalho compatíveis, o que se traduz diretamente em menor custo operacional para quem aluga capacidade de processamento. A **Ampere Altra** é outra linha ARM voltada a servidores, adotada por provedores de nuvem como Google Cloud e Microsoft Azure. A limitação ainda existente é a compatibilidade de software: aplicações compiladas exclusivamente para x86 precisam ser recompiladas ou emuladas para rodar em ARM, o que torna a migração gradual em vez de imediata.
-
-A tendência é clara: o mercado de servidores, historicamente dominado pelo x86, está se tornando cada vez mais heterogêneo. Para cargas de trabalho que podem ser adaptadas, ARM oferece eficiência energética que o x86 ainda não consegue igualar, e em data centers operando milhares de servidores, eficiência energética se traduz diretamente em economia de milhões por ano.
+- **ARM em data centers:** alternativa mais recente ao domínio x86. O AWS Graviton (Amazon) e a Ampere Altra (usada por Google Cloud e Azure) se destacam pela melhor relação desempenho/consumo de energia, reduzindo custo operacional. A limitação é a compatibilidade: softwares feitos só para x86 precisam ser recompilados ou emulados para rodar em ARM.
 
 ## Tempo de vida de um processador
 
@@ -96,23 +94,23 @@ Processadores são um dos componentes mais duráveis de um computador. Diferente
 
 O que efetivamente limita a vida útil de um processador no nível do hardware são dois fenômenos:
 
-- **Eletromigração:** ao longo de anos de uso intenso, os átomos dos condutores metálicos dentro do chip migram lentamente sob o efeito da corrente elétrica. Em escala de tempo suficientemente longa, isso pode criar falhas nos circuitos. Os fabricantes dimensionam os processadores para operar dentro dos parâmetros especificados por décadas sem que esse fenômeno cause problemas — desde que temperatura e tensão se mantenham dentro dos limites recomendados.
+- **Eletromigração:** ao longo de anos de uso intenso, os átomos dos condutores metálicos dentro do chip migram lentamente sob o efeito da corrente elétrica. Em escala de tempo suficientemente longa, isso pode criar falhas nos circuitos;
 
-- **Calor acumulado:** o maior inimigo real de qualquer componente eletrônico é o calor constante e elevado. Um processador que opera próximo ao limite de temperatura por anos acumula estresse térmico nos materiais. É por isso que servidores são projetados com resfriamento robusto e monitoramento contínuo de temperatura — manter o processador frio não é apenas questão de desempenho, é questão de longevidade.
+- **Calor acumulado:** o maior inimigo real de qualquer componente eletrônico é o calor constante e elevado. Um processador que opera próximo ao limite de temperatura por anos acumula estresse térmico nos materiais.
 
 Operando dentro das especificações, com resfriamento adequado e tensões estáveis fornecidas por uma boa fonte de alimentação, um processador pode durar décadas. Falhas prematuras quase sempre têm causa identificável: superaquecimento, sobrecargas de tensão ou defeitos de fabricação que se manifestam nos primeiros meses de uso.
 
 ### Obsolescência de software
 
-A durabilidade física, porém, não é o único limite. Um Xeon de 2010 pode estar eletricamente perfeito hoje e ainda assim ser inutilizável para certas tarefas — não porque o hardware falhou, mas porque o software parou de suportá-lo.
+A durabilidade física, porém, não é o único limite. Um Xeon de 2010 pode estar eletricamente perfeito hoje e ainda assim ser inutilizável para certas tarefas, não porque o hardware falhou, mas porque o software parou de suportá-lo.
 
 Esse processo acontece em camadas:
 
-- **Sistema operacional:** o Windows 11, por exemplo, exige requisitos de firmware como TPM 2.0 e Secure Boot, além de uma lista restrita de CPUs suportadas pela Microsoft — bloqueando a instalação mesmo em hardware funcionando perfeitamente. O Linux é mais permissivo nesse aspecto, permitindo rodar versões recentes do kernel em hardware mais antigo por mais tempo.
+- **Sistema operacional:** o Windows 11, por exemplo, exige requisitos de firmware como TPM 2.0 e Secure Boot, além de uma lista restrita de CPUs suportadas pela Microsoft, bloqueando a instalação mesmo em hardware funcionando perfeitamente. O Linux é mais permissivo nesse aspecto, permitindo rodar versões recentes do kernel em hardware mais antigo por mais tempo;
 
-- **Instruções de hardware:** cada geração de processadores adiciona novos conjuntos de instruções — AVX, AVX2, AVX-512 — que aceleram operações específicas como criptografia, compressão e cálculos científicos. Softwares modernos compilados para tirar vantagem dessas instruções simplesmente não rodam em processadores que não as possuem.
+- **Instruções de hardware:** novas gerações trazem conjuntos como AVX, AVX2 e AVX-512, que aceleram tarefas como criptografia e cálculos científicos, softwares compilados para usá-las não funcionam em CPUs sem esse suporte;
 
-- **Suporte do fabricante:** a Intel e a AMD encerram oficialmente o suporte a microarquiteturas antigas em algum momento, o que significa que vulnerabilidades descobertas depois dessa data não receberão correções de microcódigo. O processador continua funcionando, mas fica exposto a falhas de segurança conhecidas sem solução oficial.
+- **Suporte do fabricante:** Intel e AMD param de lançar correções de microcódigo para arquiteturas antigas. O processador continua funcionando, mas fica vulnerável a falhas sem correção oficial.
 
 ### O caso dos Xeons antigos
 
@@ -179,9 +177,3 @@ A política de compatibilidade entre gerações varia bastante entre os fabrican
 Mesmo quando o soquete é compatível, há um detalhe que pega muitos usuários de surpresa: ao combinar uma placa-mãe mais antiga com um processador mais novo, o firmware da placa pode precisar de atualização para reconhecer o novo chip. Uma placa com soquete AM5, por exemplo, pode não inicializar com um Ryzen de geração mais recente se o firmware estiver desatualizado.
 
 O problema é que atualizar o firmware normalmente exige que o computador já esteja funcionando, o que cria um impasse quando o único processador disponível é justamente o que a placa ainda não reconhece. Algumas placas-mãe oferecem um recurso chamado BIOS Flashback, que permite atualizar o firmware com apenas um pendrive e energia, sem precisar de processador ou memória instalados. É um recurso valioso em montagens novas que combinam placa mais antiga com processador mais recente.
-
-## O processador no contexto do sistema
-
-O processador é frequentemente o primeiro componente que vem à mente quando se fala em desempenho, mas raramente é o único gargalo. Um processador potente com pouca RAM vai travar ao abrir muitos programas simultaneamente. Com armazenamento lento, vai esperar os dados chegarem. Com um sistema de resfriamento inadequado, vai reduzir sua própria velocidade para não superaquecer. Em jogos e aplicações gráficas, a GPU, responsável pelo processamento de imagens, frequentemente determina o desempenho mais do que a CPU.
-
-O desempenho real é sempre o resultado do conjunto. O processador define o teto do que é possível calcular, mas são os outros componentes que determinam se esse teto será alcançado na prática.

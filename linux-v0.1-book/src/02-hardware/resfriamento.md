@@ -41,7 +41,7 @@ O rolamento do eixo central determina a longevidade e o comportamento sonoro da 
 
 A escolha do metal importa: o cobre conduz calor com mais eficiência, mas é pesado e caro. O alumínio é mais leve e barato, porém menos condutor. Dissipadores de alto desempenho frequentemente combinam os dois: uma base de cobre em contato com o chip e aletas de alumínio para a dissipação final.
 
-Dentro do dissipador, é comum encontrar heat pipes: tubos selados contendo um fluido que evapora na parte quente, migra para a parte fria pelas aletas, condensa e retorna pela parede interna do tubo por capilaridade. É um mecanismo que transporta calor com muito mais eficiência do que o metal sólido sozinho faria.
+Dentro do dissipador, é comum encontrar *heat pipes*: tubos selados contendo um fluido que evapora na parte quente, migra para a parte fria pelas aletas, condensa e retorna pela parede interna do tubo por capilaridade. É um mecanismo que transporta calor com muito mais eficiência do que o metal sólido sozinho faria.
 
 Os principais formatos de cooler a ar:
 
@@ -51,7 +51,7 @@ Os principais formatos de cooler a ar:
 
 ### Resfriamento a líquido
 
-Em vez de depender apenas do ar, o water cooling usa um líquido, geralmente água com aditivos antialgae e anticorrosão, como meio de transporte térmico. Um bloco metálico (waterblock) fica em contato direto com o componente. O líquido circula pelo bloco, absorve o calor, é bombeado até um radiador e ali dissipado para o ar pelas ventoinhas. Então retorna, mais frio, para o bloco.
+Em vez de depender apenas do ar, o *water cooling* usa um líquido, geralmente água com aditivos antialgae e anticorrosão, como meio de transporte térmico. Um bloco metálico (*waterblock*) fica em contato direto com o componente. O líquido circula pelo bloco, absorve o calor, é bombeado até um radiador e ali dissipado para o ar pelas ventoinhas. Então retorna, mais frio, para o bloco.
 
 O resultado é que o calor do processador é transportado para longe e dissipado em uma superfície maior. Radiadores de 240 mm, 360 mm ou mais têm área de dissipação que nenhum cooler a ar consegue igualar.
 

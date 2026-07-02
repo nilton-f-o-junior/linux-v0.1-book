@@ -1,11 +1,11 @@
-# O Hardware
+# Do Componente ao Computador
 
-Antes de o sistema operacional assumir o controle, existe uma realidade física que precisa funcionar: uma interação precisa entre silício, metal e eletricidade. Este capítulo explora os componentes que formam essa fundação, permitindo que o software ganhe vida.
+Antes de instalar um sistema operacional ou abrir um terminal, é preciso entender sobre o que ele vai rodar. Este capítulo constrói a base física que sustenta tudo o que vem depois.
 
-O material está dividido para abordar os componentes essenciais, começando pelo motor do computador: o **processador (CPU)**, que executa as instruções; a **memória RAM**, que atua como uma mesa de trabalho de alta velocidade; e a **placa-mãe**, que integra e comunica todas as peças.
+Começamos pela placa-mãe, o esqueleto que conecta e organiza todos os outros componentes. Em seguida, vemos como a BIOS e a UEFI atuam no primeiro instante, antes mesmo do sistema operacional carregar, inicializando o hardware e decidindo de onde o computador vai partir.
 
-Entenderemos como a energia que sai da tomada é convertida e distribuída de forma estável pela **fonte de alimentação**, e como os dados são preservados permanentemente no **armazenamento**, seja em SSDs de velocidade extrema ou em HDDs de maior capacidade.
+Depois, chegamos ao par que dá vida ao sistema: a CPU, responsável pelo processamento, e a memória RAM, que guarda o que está em uso no momento. Na sequência, vemos o armazenamento, onde os dados permanecem quando a máquina é desligada, e a GPU, essencial tanto para exibir qualquer coisa na tela quanto para tarefas pesadas de processamento gráfico e paralelo.
 
-Exploramos também a camada de processamento gráfico com a **GPU** e as tecnologias de exibição dos **monitores**.
+Com essa base, olhamos para o que sustenta e possibilita o funcionamento de tudo isso: a fonte de alimentação, que entrega energia estável para cada componente, e o resfriamento, que impede que o calor gerado pelo esforço da CPU e da GPU comprometa o sistema.
 
-Por fim, abordamos a interface com o usuário através dos **periféricos** e a importância vital dos sistemas de **resfriamento** para garantir a estabilidade e a longevidade de todo o sistema.
+Por fim, tratamos da camada de interação: o monitor, por onde tudo é visto, e os periféricos, como teclado, mouse e outros dispositivos que conectam o usuário à máquina.

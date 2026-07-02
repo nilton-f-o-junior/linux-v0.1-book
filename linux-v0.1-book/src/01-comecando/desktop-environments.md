@@ -12,7 +12,7 @@ O GNOME aposta em simplicidade e coerência. Sua filosofia é reduzir o número 
 
 Por ser visualmente rico e moderno, funciona melhor em máquinas com pelo menos 4 GB de memória RAM. O gerenciador de arquivos padrão é o Nautilus.
 
-- **Parecido com:** macOS (minimalismo e fluxo de trabalho baseado em atividades), com ressalva: a semelhança é mais estética do que funcional: o GNOME tem lógica própria e pode surpreender quem espera um comportamento idêntico ao do macOS;
+- **Parecido com:** macOS (minimalismo e fluxo de trabalho baseado em atividades), com ressalva: a semelhança é mais estética do que funcional: o GNOME tem lógica própria;
 - **Ideal para:** quem quer algo que "simplesmente funciona", com foco em produtividade e organização sem distrações;
 - **Onde encontrar:** Ubuntu, Fedora, Debian, é o ambiente padrão em muitas das grandes distribuições.
 
@@ -34,7 +34,7 @@ Apesar da aparência mais tradicional, o XFCE é bem personalizável e pode ser 
 
 - **Parecido com:** interfaces tradicionais de desktop, com barra de tarefas fixa e menus convencionais, mas com consumo de recursos muito inferior;
 - **Ideal para:** máquinas mais antigas ou usuários que priorizam desempenho e leveza;
-- **Onde encontrar:** Xubuntu, Manjaro XFCE.
+- **Onde encontrar:** Xubuntu, MX Linux, Linux Mint (edição XFCE).
 
 ### LXQt
 
@@ -43,7 +43,7 @@ O LXQt caminha numa direção parecida com o XFCE, mas com uma base tecnológica
 Assim como o XFCE, entrega uma experiência gráfica funcional com consumo mínimo de recursos, mas com componentes mais atuais por baixo dos panos. O gerenciador de arquivos padrão é o *PCManFM-Qt*, leve e funcional.
 
 - **Ideal para:** hardware muito limitado, máquinas antigas onde até o XFCE pode pesar;
-- **Onde encontrar:** Lubuntu.
+- **Onde encontrar:** Lubuntu, Manjaro LXQt.
 
 ### Cinnamon
 
@@ -53,7 +53,7 @@ Ele combina essa familiaridade com um visual moderno e elegante, além de boas o
 
 - **Parecido com:** Windows 10 (interface intuitiva e familiar);
 - **Ideal para:** usuários migrando do Windows pela primeira vez, é uma das melhores portas de entrada para o Linux;
-- **Onde encontrar:** Linux Mint, Manjaro Cinnamon.
+- **Onde encontrar:** Linux Mint.
 
 ## Por que tantos?
 
