@@ -1,18 +1,16 @@
 # Periféricos
 
-O computador, por si só, é um sistema fechado. Processa, armazena, calcula — mas não recebe instruções do mundo exterior nem comunica resultados de volta sem intermediários. Os periféricos são esses intermediários: dispositivos que conectam o sistema ao usuário e ao ambiente ao redor, transformando ações físicas em dados e dados em saída perceptível.
+Dispositivos que conectam o sistema ao usuário e ao ambiente ao redor, transformando ações físicas em dados e dados em saída perceptível.
 
 ## Dispositivos de entrada e saída
 
 Antes de falar sobre periféricos específicos, vale entender a distinção fundamental que os organiza: a diferença entre entrada e saída.
 
-- **Dispositivo de entrada:** envia informação para dentro do computador. Captura algo do mundo externo — um movimento, uma pressão, um som, uma imagem — e converte esse estímulo em dados digitais que o sistema pode processar. O teclado é o exemplo mais direto: cada tecla pressionada gera um código que o sistema operacional interpreta como um caractere ou comando;
+- **Dispositivo de entrada:** envia informação para dentro do computador, captura algo do mundo externo: um movimento, uma pressão, um som, uma imagem e converte esse estímulo em dados digitais que o sistema pode processar. O teclado é o exemplo mais direto, cada tecla pressionada gera um código que o sistema operacional interpreta como um caractere ou comando;
 
-- **Dispositivo de saída:** faz o caminho inverso — recebe dados processados pelo computador e os converte em algo perceptível ao usuário ou ao ambiente. O monitor transforma sinais digitais em luz; as caixas de som convertem dados em ondas sonoras; a impressora transfere informação para o papel. Em todos os casos, a direção é a mesma: do sistema para o mundo.
+- **Dispositivo de saída:** faz o caminho inverso, recebe dados processados pelo computador e os converte em algo perceptível ao usuário ou ao ambiente. O monitor transforma sinais digitais em luz e as caixas de som convertem dados em ondas sonoras.
 
-Essa distinção, embora simples, nem sempre é absoluta. Alguns dispositivos operam nos dois sentidos simultaneamente. Uma tela sensível ao toque exibe imagens como dispositivo de saída e detecta toques como dispositivo de entrada. Um headset com microfone reproduz áudio e captura voz ao mesmo tempo. Nesses casos, fala-se em dispositivos de entrada e saída, ou simplesmente dispositivos de E/S.
-
-O canal que conecta esses dispositivos ao computador também faz parte da equação. O sistema operacional detecta cada periférico conectado, carrega o driver correspondente — um software que traduz os comandos genéricos do sistema para as instruções específicas do dispositivo — e o disponibiliza para uso. A maioria dos periféricos modernos usa USB como interface, um padrão criado exatamente para unificar e simplificar essas conexões. Periféricos sem fio usam Bluetooth ou um receptor USB dedicado com radiofrequência proprietária.
+- **Dispositivos de entrada e saída (E/S):** alguns dispositivos operam nos dois sentidos simultaneamente. Uma tela sensível ao toque exibe imagens como dispositivo de saída e detecta toques como dispositivo de entrada.
 
 ## Dispositivos de entrada
 
@@ -20,27 +18,33 @@ O canal que conecta esses dispositivos ao computador também faz parte da equaç
 
 O teclado é o periférico de entrada mais antigo ainda em uso universal. Cada tecla é um interruptor: ao ser pressionada, fecha um circuito e envia um código para o sistema operacional, que interpreta qual caractere foi digitado.
 
-O mecanismo interno do interruptor define a experiência de digitação. Dois tipos principais dominam o mercado:
+Dois tipos principais dominam o mercado:
 
 - **Membrana:** uma camada plástica flexível que comprime ao toque. São silenciosos, baratos e presentes na maioria dos teclados de escritório;
 
 - **Mecânico:** um switch independente sob cada tecla, com feedback tátil ou sonoro mais pronunciado. Dentro dessa categoria, os switches variam conforme o comportamento:
 
-  - **Linear:** resistência uniforme ao longo de todo o percurso, sem ponto de clique. Preferido por quem digita rápido ou joga;
+  - **Linear:** resistência uniforme ao longo de todo o percurso, sem ponto de clique;
 
-  - **Tátil:** oferece um ponto de resistência no meio do percurso, sem som audível. Equilibra feedback físico e silêncio;
+  - **Tátil:** oferece um ponto de resistência no meio do percurso, sem som audível;
 
-  - **Clicky:** adiciona um clique audível no ponto de atuação. Popular entre quem prefere confirmação sonora ao digitar.
+  - **Clicky:** adiciona um clique audível no ponto de atuação.
 
-A conexão com o computador é feita por USB com fio ou por rádio frequência e Bluetooth em modelos sem fio. Modelos sem fio eliminam o cabo mas introduzem latência mínima e dependência de bateria — irrelevante para digitação comum, percebida por jogadores competitivos em situações de reação extrema.
+- **Magnético:** sensores detectam a posição de um magneto na tecla sem contato elétrico direto. Permitem ajustar o ponto de ativação, sendo populares em teclados para jogos competitivos;
+
+- **Óptico:** a ativação é detectada por um feixe de luz interrompido, em vez de contato elétrico. São vendidos como mais rápidos e resistentes à oxidação dos contatos;
+
+- **Capacitivo:** medem a mudança de capacitância ao toque, sem contato elétrico direto.
+
+A conexão com o computador é feita por USB com fio ou por rádio frequência e Bluetooth em modelos sem fio. Modelos sem fio eliminam o cabo mas introduzem latência mínima e dependência de bateria, irrelevante para digitação comum, percebida por jogadores competitivos em situações de reação extrema.
 
 ### Mouse
 
-O mouse traduz movimento físico em movimento do cursor na tela. Nos modelos ópticos modernos — padrão hoje — um sensor ilumina a superfície abaixo e fotografa microscópicas variações a milhares de vezes por segundo, calculando a direção e a velocidade do deslocamento.
+O mouse traduz movimento físico em movimento do cursor na tela, um sensor ilumina a superfície abaixo e fotografa microscópicas variações a milhares de vezes por segundo, calculando a direção e a velocidade do deslocamento.
 
-A precisão do sensor é medida em DPI (dots per inch, pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento. Usuários de monitores de alta resolução ou com áreas de trabalho grandes tendem a usar DPI mais alto; jogadores de precisão frequentemente preferem valores mais baixos com movimentos amplos de braço.
+A precisão do sensor é medida em DPI (*dots per inch* ou pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento..
 
-Além do DPI, a taxa de polling define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo; valores mais altos, como 4.000 ou 8.000 Hz, existem em modelos voltados a jogos competitivos e reduzem a latência percebida.
+Além do DPI, a taxa de *polling* define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo, valores mais altos, como 4.000 ou 8.000 Hz, existem em modelos voltados a jogos competitivos e reduzem a latência percebida.
 
 ### Outros dispositivos de entrada
 
