@@ -1,6 +1,6 @@
 # Armazenamento
 
-Antes de ligar o computador, antes de o sistema operacional existir em memória, antes de qualquer processo rodar, há um lugar onde tudo está guardado permanentemente: o dispositivo de armazenamento. É nele que o sistema operacional vive quando o computador está desligado, e é de lá que ele é carregado toda vez que a máquina é iniciada.
+Antes de ligar o computador, antes de o sistema operacional existir em memória, antes de qualquer processo rodar, há um lugar onde tudo está guardado permanentemente, o dispositivo de armazenamento. É nele que o sistema operacional vive quando o computador está desligado, e é de lá que ele é carregado toda vez que a máquina é iniciada.
 
 ## O que é armazenamento?
 
@@ -22,13 +22,13 @@ Sem braços mecânicos, sem pratos girando, o acesso a qualquer ponto do armazen
 
 Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs mais antigos e mais baratos usam a interface SATA, a mesma criada originalmente para os HDs. Ela funciona bem, mas é um gargalo para os chips modernos de memória flash.
 
-Os SSDs NVMe (Non-Volatile Memory Express) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva: onde um SSD SATA lê dados a cerca de 500 MB/s, um NVMe pode ultrapassar os 7.000 MB/s nos modelos mais rápidos, sendo que modelos intermediários ficam entre 2.000 e 4.000 MB/s, ainda muito acima do SATA. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.
+Os SSDs NVMe (*Non-Volatile Memory Express*) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva: onde um SSD SATA lê dados a cerca de 500 MB/s, um NVMe pode ultrapassar os 7.000 MB/s nos modelos mais rápidos, sendo que modelos intermediários ficam entre 2.000 e 4.000 MB/s, ainda muito acima do SATA. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.
 
 ### HD - Hard Disk Drive
 
 O HD é a tecnologia mais antiga ainda em uso comum. Dentro da carcaça metálica há pratos magnéticos girando em alta velocidade, normalmente entre 5.400 e 7.200 rotações por minuto, e um braço mecânico com uma cabeça de leitura e escrita que se move sobre eles para acessar os dados.
 
-Esse mecanismo físico é o que define o HD: barato para produzir, capaz de armazenar grandes volumes de dados, mas limitado pela velocidade da mecânica. Cada leitura depende do prato estar na posição certa e do braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se soma e fica perceptível.
+O HD é mais barato de se produzir e capaz de armazenar grandes volumes de dados, mas é limitado pela velocidade da mecânica. Cada leitura depende de o prato estar na posição certa e de o braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se acumula e se torna perceptível.
 
 - **Vantagens:** custo por gigabyte muito baixo, ideal para armazenar grandes volumes de dados.
 - **Desvantagens:** mais lento, sensível a impactos físicos (a mecânica interna pode ser danificada) e consome mais energia.
@@ -38,7 +38,7 @@ Esse mecanismo físico é o que define o HD: barato para produzir, capaz de arma
 
 #### RAID
 
-Um servidor que guarda dados importantes raramente confia em um único disco. O RAID (Redundant Array of Independent Disks ou Conjunto Redundante de Discos Independentes) é uma técnica que combina múltiplos discos para funcionar como uma unidade só. Cada configuração equilibra de forma diferente velocidade, redundância e capacidade útil:
+Um servidor que guarda dados importantes raramente confia em um único disco. O RAID (*Redundant Array of Independent Disks* ou Conjunto Redundante de Discos Independentes) é uma técnica que combina múltiplos discos para funcionar como uma unidade só. Cada configuração equilibra de forma diferente velocidade, redundância e capacidade útil:
 
 - **RAID 0:** os dados são divididos entre dois ou mais discos, o que aumenta a velocidade de leitura e escrita.
   - Não há redundância, se um disco falhar, todos os dados são perdidos;
@@ -62,9 +62,9 @@ O resultado prático é que um servidor bem configurado pode perder um disco fí
 
 Em ambientes corporativos ou de nuvem, o armazenamento frequentemente não está na mesma máquina que o sistema que o usa. Dois protocolos dominam esse cenário.
 
-- **NAS (Network Attached Storage ou Armazenamento Conectado em Rede):** expõe o armazenamento pela rede como se fosse um sistema de arquivos comum: o servidor acessa pastas remotas da mesma forma que acessaria um disco local. É simples de configurar e suficiente para muitos cenários;
+- **NAS (*Network Attached Storage* ou Armazenamento Conectado em Rede):** expõe o armazenamento pela rede como se fosse um sistema de arquivos comum: o servidor acessa pastas remotas da mesma forma que acessaria um disco local. É simples de configurar e suficiente para muitos cenários;
  
-- **SAN (Storage Area Network ou Rede de Área de Armazenamento):** cria uma rede dedicada exclusivamente ao tráfego de armazenamento, separada da rede comum de dados. O servidor enxerga o armazenamento remoto como se fosse um disco diretamente conectado. É uma solução mais complexa e cara, usada em ambientes que exigem altíssimo desempenho e baixa latência, como bancos de dados críticos e sistemas financeiros.
+- **SAN (*Storage Area Network* ou Rede de Área de Armazenamento):** cria uma rede dedicada exclusivamente ao tráfego de armazenamento, separada da rede comum de dados. O servidor enxerga o armazenamento remoto como se fosse um disco diretamente conectado. É uma solução mais complexa e cara, usada em ambientes que exigem altíssimo desempenho e baixa latência, como bancos de dados críticos e sistemas financeiros.
 
 #### A escala da nuvem
 
@@ -72,7 +72,7 @@ Provedores como AWS, Google Cloud e Azure abstraem toda essa complexidade em ser
 
 Essa abstração tem impactos práticos diretos:
 
-- **Custo:** menos controle direto sobre o hardware subjacente.
+- **Custo:** menos controle direto sobre o hardware subjacente;
 - **Vantagem:** um volume pode ser ampliado, movido ou replicado para outra região geográfica com poucos comandos, algo impraticável com hardware físico.
 
 ### Particionamento de disco
@@ -87,7 +87,7 @@ De forma simples: é possível dividir o espaço de um SSD e fazê-lo se comport
 
 A razão mais imediata é separação de responsabilidades. Em um servidor Linux, é comum isolar o sistema operacional em uma partição, os dados dos usuários em outra e os logs do sistema em uma terceira. Se os logs crescerem sem controle e preencherem o disco, apenas a partição deles é afetada. O sistema continua funcionando, e os dados dos usuários permanecem intactos.
 
-Em desktops com *dual boot* (dois sistemas operacionais no mesmo computador), o particionamento é o que permite que Windows e Linux coexistam sem interferência: cada sistema vive em sua própria região do disco e não enxerga o território do outro.
+Em desktops com *dual boot* (dois sistemas operacionais no mesmo computador), o particionamento é o que permite que Windows e Linux coexistam sem interferência, cada sistema vive em sua própria região do disco e não enxerga o território do outro.
 
 #### Sistemas de arquivos
 
