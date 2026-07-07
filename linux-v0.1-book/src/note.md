@@ -39,6 +39,23 @@ Reduzir o uso de  —  e trocar por , ou por :
 
 ---
 
+Analise o arquivo de referência anexado a esta mensagem para compreender detalhadamente seu estilo, tom de voz, formatação e estrutura de escrita.
+
+Instruções de Estilo a Serem Mantidas:
+
+    Formatação: Mantenha a mesma estrutura (ex: uso de tópicos, listas, negritos, tamanho médio dos parágrafos e divisão de seções).
+
+    Tom de Voz: Replique a personalidade da escrita (ex: se é formal, corporativa, didática, descontraída, técnica ou persuasiva).
+
+    Pequenos Detalhes: Identifique e repita padrões sutis, como a escolha de vocabulário, termos técnicos específicos, uso ou ausência de emojis, e a forma como o autor se dirige ao leitor (ex: primeira ou terceira pessoa).
+
+Sua Tarefa:
+Com base no padrão do arquivo anexado, escreva um novo texto sobre: [insira aqui o novo tema ou assunto].
+
+Diretrizes para o novo texto: > [Insira aqui o que não pode faltar no novo texto, como pontos principais, objetivo ou limite de tamanho].
+
+---
+
 Atue como um especialista em Git e Engenharia de Software. Gere uma ou mais mensagens de commit com base nas seguintes diretrizes estritas:
 
 1. **Divisão de Commits:** Se o diff contiver mudanças que não pertencem ao mesmo contexto ou propósito, divida-as em múltiplos commits separados e sequenciais.
