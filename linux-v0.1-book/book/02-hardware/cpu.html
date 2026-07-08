@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CPU - Linux - eBook</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-0392ca55.css">
+        <link rel="stylesheet" href="../css/chrome-fc474251.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex-6b0dbb24.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-f9a244e0.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Linux - eBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="processador-cpu"><a class="header" href="#processador-cpu">Processador (CPU)</a></h1>
+<p>Se há um componente que define o que um computador é capaz de fazer, é o processador. Tudo o que acontece dentro de uma máquina (abrir um programa, compilar código, renderizar uma imagem, executar um jogo) passa, em algum momento, pelo processador. Ele não armazena dados permanentemente como o SSD, nem exibe resultados como o monitor: ele calcula. É o componente que transforma instruções em resultados.</p>
+<h2 id="o-que-é-a-cpu"><a class="header" href="#o-que-é-a-cpu">O que é a CPU?</a></h2>
+<p>CPU significa <em>Central Processing Unit</em>, Unidade Central de Processamento. É um chip de silício, fabricado com transistores em escala nanométrica, capaz de executar bilhões de operações por segundo. Cada operação é simples: somar dois números, comparar valores, mover dados de um lugar para outro. A complexidade emerge da velocidade e da quantidade: bilhões dessas operações simples por segundo produzem tudo o que se vê na tela.</p>
+<p>O processador trabalha em ciclos. A cada ciclo, ele busca uma instrução na memória, decodifica o que ela significa, executa a operação correspondente e grava o resultado. Esse fluxo (buscar, decodificar, executar, gravar) é repetido incessantemente, bilhões de vezes por segundo em cada núcleo, a uma frequência medida em gigahertz.</p>
+<h2 id="frequência-e-núcleos"><a class="header" href="#frequência-e-núcleos">Frequência e núcleos</a></h2>
+<p>Dois parâmetros aparecem sempre nas especificações de qualquer processador: a frequência de clock e o número de núcleos.</p>
+<p>A <strong>frequência de clock</strong>, medida em GHz (gigahertz), indica quantos ciclos o processador completa por segundo. Um processador a 4 GHz executa quatro bilhões de ciclos por segundo. Frequência mais alta significa mais operações por segundo, mas apenas quando o trabalho é sequencial, uma instrução dependendo do resultado da anterior.</p>
+<p>Os <strong>núcleos</strong> são unidades de processamento independentes dentro do mesmo chip. Um processador com oito núcleos pode executar oito tarefas simultaneamente, cada uma em seu próprio núcleo. Para programas que conseguem dividir o trabalho em partes paralelas, como renderização de vídeo, compilação de código ou simulações científicas, mais núcleos se traduzem diretamente em menos tempo.</p>
+<p>A relação entre frequência e núcleos não é simples. Um jogo que depende fortemente de processamento sequencial se beneficia mais de frequência alta. Uma aplicação que distribui carga por múltiplas threads se beneficia de mais núcleos. Os processadores modernos tentam equilibrar os dois, mas as prioridades variam conforme o design.</p>
+<h3 id="núcleos-de-eficiência-e-núcleos-de-desempenho"><a class="header" href="#núcleos-de-eficiência-e-núcleos-de-desempenho">Núcleos de eficiência e núcleos de desempenho</a></h3>
+<p>Algumas arquiteturas modernas adotam um design híbrido: núcleos de alto desempenho convivem com núcleos de alta eficiência no mesmo chip. Os núcleos de desempenho são mais rápidos e potentes, mas consomem mais energia. Os de eficiência fazem menos por ciclo, mas consomem muito pouco.</p>
+<p>O sistema operacional distribui as tarefas conforme a demanda: tarefas em segundo plano e processos simples vão para os núcleos de eficiência; jogos e aplicações pesadas são direcionados aos núcleos de desempenho. O resultado é um equilíbrio entre performance máxima quando necessário e economia de energia no uso cotidiano.</p>
+<h2 id="cache"><a class="header" href="#cache">Cache</a></h2>
+<p>A memória RAM é rápida, mas o processador é ainda mais rápido. Se a cada instrução o processador precisasse buscar dados na RAM, ficaria a maior parte do tempo esperando. O cache resolve esse problema.</p>
+<p>O cache é uma memória embutida diretamente no chip do processador, extremamente rápida e com latência mínima. Quando o processador acessa um dado, ele guarda uma cópia no cache. Se precisar do mesmo dado novamente em breve, encontra-o ali, sem precisar ir até a RAM.</p>
+<p>O cache é organizado em níveis:</p>
+<ul>
+<li>
+<p><strong>L1:</strong> o menor e mais rápido, dedicado a cada núcleo individualmente. Capacidade típica de dezenas de kilobytes por núcleo;</p>
+</li>
+<li>
+<p><strong>L2:</strong> maior e um pouco mais lento, ainda exclusivo por núcleo na maioria das arquiteturas. Capacidade na casa dos megabytes;</p>
+</li>
+<li>
+<p><strong>L3:</strong> compartilhado entre todos os núcleos do processador. Muito maior, podendo chegar a dezenas de megabytes, mas com latência maior que os anteriores.</p>
+</li>
+</ul>
+<p>A eficiência do cache depende da localidade dos dados: programas que acessam os mesmos dados repetidamente ou em sequência se beneficiam muito mais do que aqueles com acesso aleatório a grandes volumes.</p>
+<h2 id="tdp-e-consumo-de-energia"><a class="header" href="#tdp-e-consumo-de-energia">TDP e consumo de energia</a></h2>
+<p>Todo processador tem um TDP (<em>Thermal Design Power</em>), que expressa quanto calor o componente dissipa sob carga típica, medido em watts. É o parâmetro que orienta a escolha do sistema de resfriamento: um processador com TDP de 65 W precisa de um cooler diferente de um com TDP de 125 W.</p>
+<p>Processadores para desktops têm TDPs mais altos porque operam conectados à tomada e com espaço para dissipadores maiores. Processadores para notebooks precisam operar com TDPs muito menores, frequentemente entre 15 W e 45 W, para preservar a bateria e caber em designs finos. Essa restrição energética é o que define, em grande parte, a diferença de desempenho entre um processador de notebook e o equivalente para desktop da mesma geração.</p>
+<h2 id="fabricantes-e-arquiteturas"><a class="header" href="#fabricantes-e-arquiteturas">Fabricantes e arquiteturas</a></h2>
+<p>Vale entender primeiro uma distinção importante: <strong>arquitetura</strong> e <strong>fabricante</strong> não são a mesma coisa. A arquitetura define o conjunto de instruções que o processador entende, isto é, a linguagem que ele fala. O fabricante é quem projeta e produz o chip. Dois processadores de fabricantes diferentes podem compartilhar a mesma arquitetura; dois processadores do mesmo fabricante podem ter arquiteturas distintas.</p>
+<p>As duas arquiteturas dominantes hoje são <strong>x86</strong> e <strong>ARM</strong>, e elas não são intercambiáveis: um programa compilado para x86 não roda nativamente em ARM sem emulação ou tradução, e vice-versa.</p>
+<h3 id="x86-desktops-notebooks-e-servidores-tradicionais"><a class="header" href="#x86-desktops-notebooks-e-servidores-tradicionais">x86: desktops, notebooks e servidores tradicionais</a></h3>
+<p>A arquitetura x86 domina computadores pessoais e servidores há décadas. É o padrão para a maioria dos softwares de desktop e jogos. Dois fabricantes disputam esse mercado:</p>
+<ul>
+<li>
+<p><strong>Intel:</strong> pioneira da arquitetura x86 e dominante no setor por décadas. Seus processadores para uso geral seguem a nomenclatura Core, dividida em faixas de desempenho:</p>
+<ul>
+<li><strong>Core i3:</strong> entrada, tarefas cotidianas;</li>
+<li><strong>Core i5:</strong> intermediário, uso geral e jogos;</li>
+<li><strong>Core i7:</strong> alto desempenho, produtividade pesada;</li>
+<li><strong>Core i9:</strong> topo de linha para desktops, <em>workstations</em> e notebooks premium.</li>
+</ul>
+</li>
+</ul>
+<p>As gerações recentes adotaram o design híbrido com núcleos de desempenho e núcleos de eficiência no mesmo chip.</p>
+<ul>
+<li>
+<p><strong>AMD:</strong> também fabrica processadores x86 e recuperou competitividade significativa a partir de 2017 com a arquitetura Zen. Suas linhas principais são:</p>
+<ul>
+<li><strong>Ryzen 3, 5, 7, 9:</strong> equivalentes às faixas da Intel em termos de posicionamento, conhecidos por oferecer alta contagem de núcleos a preços competitivos;</li>
+<li><strong>Threadripper:</strong> voltado a estações de trabalho profissionais e servidores, com contagens de núcleos muito acima do comum.</li>
+</ul>
+</li>
+</ul>
+<h3 id="arm-dispositivos-móveis-e-eficiência-energética"><a class="header" href="#arm-dispositivos-móveis-e-eficiência-energética">ARM: dispositivos móveis e eficiência energética</a></h3>
+<p>A arquitetura ARM foi projetada desde o início para consumo de energia mínimo, o que a torna dominante em celulares, tablets e dispositivos embarcados. A diferença fundamental em relação ao x86 é de filosofia: ARM faz menos por instrução, mas de forma muito mais eficiente em termos energéticos.</p>
+<p>Aqui, a <strong>ARM</strong> (a empresa) não fabrica chips diretamente: ela licencia a arquitetura para outros fabricantes, que desenvolvem seus próprios designs:</p>
+<ul>
+<li>
+<p><strong>Apple Silicon (M1, M2, M3, M4):</strong> processadores ARM desenvolvidos pela própria Apple para seus Macs e iPads. Demonstraram que eficiência energética e alto desempenho não são excludentes, superando em vários cenários processadores x86 tradicionais;</p>
+</li>
+<li>
+<p><strong>Qualcomm Snapdragon:</strong> presente na maioria dos smartphones Android de alto desempenho e em alguns notebooks Windows;</p>
+</li>
+<li>
+<p><strong>Chips em smartphones e tablets em geral:</strong> praticamente todos os dispositivos móveis modernos usam alguma variante de ARM, independentemente da marca.</p>
+</li>
+</ul>
+<h3 id="processadores-para-servidores"><a class="header" href="#processadores-para-servidores">Processadores para servidores</a></h3>
+<p>Servidores têm exigências diferentes de desktops e notebooks. Não se trata apenas de mais desempenho: servidores precisam operar continuamente por anos, lidar com dezenas ou centenas de tarefas simultâneas, suportar grandes volumes de memória RAM e, em muitos casos, funcionar em pares para garantir disponibilidade mesmo em caso de falha de hardware. Os processadores voltados a esse mercado são projetados com essas prioridades em mente, e diferem dos chips para uso pessoal em vários aspectos além da contagem de núcleos.</p>
+<p>As linhas específicas para servidores dos principais fabricantes são:</p>
+<ul>
+<li>
+<p><strong>Intel Xeon:</strong> linha da Intel para servidores. Suporta multiprocessamento (várias CPUs na mesma placa), memória ECC (corrige erros de bit automaticamente) e capacidade de RAM na casa dos terabytes, acima dos 128 GB dos desktops comun;</p>
+</li>
+<li>
+<p><strong>AMD EPYC:</strong> resposta da AMD ao Xeon, baseada na arquitetura Zen (mesma dos Ryzen). Modelos recentes chegam a 96–128 núcleos, também com ECC e multiprocessamento. É referência em cargas paralelas intensas, como computação científica e virtualização;</p>
+</li>
+<li>
+<p><strong>ARM em data centers:</strong> alternativa mais recente ao domínio x86. O AWS Graviton (Amazon) e a Ampere Altra (usada por Google Cloud e Azure) se destacam pela melhor relação desempenho/consumo de energia, reduzindo custo operacional. A limitação é a compatibilidade: softwares feitos só para x86 precisam ser recompilados ou emulados para rodar em ARM.</p>
+</li>
+</ul>
+<h2 id="tempo-de-vida-de-um-processador"><a class="header" href="#tempo-de-vida-de-um-processador">Tempo de vida de um processador</a></h2>
+<p>Processadores são um dos componentes mais duráveis de um computador. Diferente de discos mecânicos, que têm partes em movimento sujeitas a desgaste, ou de baterias, que degradam quimicamente com o uso, um processador não tem partes móveis e não se desgasta da mesma forma. Na prática, é comum ver Xeons de dez ou quinze anos rodando 24 horas por dia, sete dias por semana, sem falhas, e isso não é exceção, é o esperado para esse segmento.</p>
+<h3 id="longevidade-física"><a class="header" href="#longevidade-física">Longevidade física</a></h3>
+<p>O que efetivamente limita a vida útil de um processador no nível do hardware são dois fenômenos:</p>
+<ul>
+<li>
+<p><strong>Eletromigração:</strong> ao longo de anos de uso intenso, os átomos dos condutores metálicos dentro do chip migram lentamente sob o efeito da corrente elétrica. Em escala de tempo suficientemente longa, isso pode criar falhas nos circuitos;</p>
+</li>
+<li>
+<p><strong>Calor acumulado:</strong> o maior inimigo real de qualquer componente eletrônico é o calor constante e elevado. Um processador que opera próximo ao limite de temperatura por anos acumula estresse térmico nos materiais.</p>
+</li>
+</ul>
+<p>Operando dentro das especificações, com resfriamento adequado e tensões estáveis fornecidas por uma boa fonte de alimentação, um processador pode durar décadas. Falhas prematuras quase sempre têm causa identificável: superaquecimento, sobrecargas de tensão ou defeitos de fabricação que se manifestam nos primeiros meses de uso.</p>
+<h3 id="obsolescência-de-software"><a class="header" href="#obsolescência-de-software">Obsolescência de software</a></h3>
+<p>A durabilidade física, porém, não é o único limite. Um Xeon de 2010 pode estar eletricamente perfeito hoje e ainda assim ser inutilizável para certas tarefas, não porque o hardware falhou, mas porque o software parou de suportá-lo.</p>
+<p>Esse processo acontece em camadas:</p>
+<ul>
+<li>
+<p><strong>Sistema operacional:</strong> o Windows 11, por exemplo, exige requisitos de firmware como TPM 2.0 e Secure Boot, além de uma lista restrita de CPUs suportadas pela Microsoft, bloqueando a instalação mesmo em hardware funcionando perfeitamente. O Linux é mais permissivo nesse aspecto, permitindo rodar versões recentes do kernel em hardware mais antigo por mais tempo;</p>
+</li>
+<li>
+<p><strong>Instruções de hardware:</strong> novas gerações trazem conjuntos como AVX, AVX2 e AVX-512, que aceleram tarefas como criptografia e cálculos científicos, softwares compilados para usá-las não funcionam em CPUs sem esse suporte;</p>
+</li>
+<li>
+<p><strong>Suporte do fabricante:</strong> Intel e AMD param de lançar correções de microcódigo para arquiteturas antigas. O processador continua funcionando, mas fica vulnerável a falhas sem correção oficial.</p>
+</li>
+</ul>
+<h3 id="o-caso-dos-xeons-antigos"><a class="header" href="#o-caso-dos-xeons-antigos">O caso dos Xeons antigos</a></h3>
+<p>O uso de Xeons antigos em servidores caseiros e pequenas infraestruturas é um fenômeno real e economicamente racional. Um Xeon E5 de 2013, por exemplo, pode ser encontrado por poucos dólares no mercado de usados, oferece múltiplos núcleos, suporte a grandes volumes de ECC RAM e funciona perfeitamente com Linux atual para tarefas como armazenamento em rede, virtualização leve e serviços de homelabs.</p>
+<p>O que esses usuários abrem mão é previsível: eficiência energética muito inferior aos processadores modernos, ausência das instruções mais recentes e nenhuma garantia de correções de segurança. Para uma máquina isolada rodando serviços internos, esses trade-offs frequentemente são aceitáveis. Para infraestrutura exposta à internet com dados sensíveis, o risco de vulnerabilidades sem correção é um fator que precisa ser avaliado com cuidado.</p>
+<h2 id="processadores-e-sistemas-operacionais"><a class="header" href="#processadores-e-sistemas-operacionais">Processadores e sistemas operacionais</a></h2>
+<p>A relação entre processador e sistema operacional vai além de simplesmente “ligar e funcionar”. O sistema operacional precisa ser construído para entender a linguagem do processador, e quando essa correspondência falha ou é imperfeita, os problemas aparecem em camadas diferentes.</p>
+<h3 id="compatibilidade-de-arquitetura"><a class="header" href="#compatibilidade-de-arquitetura">Compatibilidade de arquitetura</a></h3>
+<p>Um sistema operacional é um software como qualquer outro: precisa ser compilado para a arquitetura do processador que vai executá-lo. Um sistema compilado para x86 não roda nativamente em ARM sem emulação ou tradução, e vice-versa. Isso tem implicações práticas diretas dependendo do sistema:</p>
+<ul>
+<li>
+<p><strong>Linux:</strong> por ser open source, o kernel Linux é compilado para dezenas de arquiteturas diferentes. Rodar Linux em ARM, x86, RISC-V ou outros processadores é uma questão de usar a versão correta da distribuição. Essa flexibilidade é uma das razões pelas quais o Linux domina servidores ARM e dispositivos embarcados;</p>
+</li>
+<li>
+<p><strong>Windows:</strong> historicamente exclusivo do x86, o Windows on ARM existe e funciona em processadores como o Qualcomm Snapdragon. A Microsoft desenvolveu uma camada de tradução que permite rodar aplicativos x86 em hardware ARM, mas com custo de desempenho variável. A compatibilidade melhorou ao longo dos anos, mas ainda não é total para todos os softwares;</p>
+</li>
+<li>
+<p><strong>macOS:</strong> até 2020, rodava exclusivamente em x86 (Intel). Com a transição para o Apple Silicon, a Apple desenvolveu o Rosetta 2, uma camada de tradução que converte código x86 para ARM em tempo real. A transição foi tecnicamente bem-sucedida, mas aplicativos não recompilados nativamente para ARM rodam com desempenho levemente inferior.</p>
+</li>
+</ul>
+<h3 id="suporte-a-drivers-e-hardware"><a class="header" href="#suporte-a-drivers-e-hardware">Suporte a drivers e hardware</a></h3>
+<p>O driver é o software que permite ao sistema operacional conversar com um componente de hardware. Processadores muito novos, ou plataformas de nicho, às vezes chegam ao mercado antes de os sistemas operacionais terem suporte completo.</p>
+<p>No Linux, esse fenômeno é mais visível. O suporte a novos processadores e chipsets depende de contribuições ao kernel, que seguem um ciclo de lançamento próprio. Um processador lançado hoje pode ter suporte completo no kernel apenas meses depois. Distribuições que seguem o kernel de perto, como o Arch Linux ou o Fedora, tendem a receber esse suporte antes de distribuições mais conservadoras, como o Debian estável.</p>
+<p>No Windows, a Microsoft e os fabricantes de processadores costumam coordenar o lançamento de drivers com o lançamento do hardware, tornando o processo mais transparente para o usuário final. O problema aparece mais em hardware corporativo antigo ou em processadores de nicho sem suporte ativo do fabricante.</p>
+<h3 id="problemas-reais-e-conhecidos"><a class="header" href="#problemas-reais-e-conhecidos">Problemas reais e conhecidos</a></h3>
+<p>Alguns problemas entre processadores e sistemas operacionais são bem documentados e vale conhecer:</p>
+<ul>
+<li>
+<p><strong>Vulnerabilidades de hardware e mitigações:</strong> as vulnerabilidades Spectre e Meltdown, descobertas em 2018, afetaram praticamente todos os processadores x86 modernos da Intel e AMD. As correções foram aplicadas via atualizações do sistema operacional, mas introduziram perda de desempenho mensurável em certas operações, especialmente em servidores com cargas de trabalho intensas em I/O. O impacto variou conforme o processador e o sistema operacional, mas foi um lembrete de que falhas de hardware são corrigidas em software, sempre com custo;</p>
+</li>
+<li>
+<p><strong>Linux em processadores Intel muito novos:</strong> lançamentos recentes de arquiteturas Intel chegaram ao mercado com suporte incompleto no kernel Linux para funcionalidades específicas, como gerenciamento de energia e gráficos integrados. O resultado prático é que instalar uma distribuição Linux com kernel desatualizado em hardware novo pode resultar em bateria com autonomia menor, aquecimento excessivo ou recursos que simplesmente não funciona;</p>
+</li>
+<li>
+<p><strong>Windows on ARM e compatibilidade de software:</strong> apesar da camada de tradução, alguns softwares com drivers de kernel ou proteções antitrapaça em jogos não funcionam corretamente em Windows on ARM. Jogos com sistemas anti-cheat que operam em nível de kernel são um exemplo recorrente de incompatibilidade;</p>
+</li>
+<li>
+<p><strong>Processadores AMD e Linux:</strong> historicamente, alguns chipsets AMD tiveram suporte mais lento no kernel Linux do que os equivalentes Intel, especialmente em funcionalidades de gerenciamento de energia. Essa diferença diminuiu bastante nos últimos anos, mas ainda aparece em lançamentos muito recentes.</p>
+</li>
+</ul>
+<h2 id="o-soquete-e-a-compatibilidade-com-a-placa-mãe"><a class="header" href="#o-soquete-e-a-compatibilidade-com-a-placa-mãe">O soquete e a compatibilidade com a placa-mãe</a></h2>
+<p>Além da compatibilidade com software, o processador precisa ser fisicamente compatível com a placa-mãe. Ele não se encaixa em qualquer modelo: precisa de um soquete compatível, ou seja, um conector físico com centenas ou milhares de pinos e contatos, projetado especificamente para aquela família de processadores. Soquetes de fabricantes diferentes são fisicamente incompatíveis entre si: um processador AMD não cabe em uma placa Intel, e vice-versa. Isso não é apenas uma questão de formato: a disposição elétrica dos pinos também é diferente.</p>
+<h3 id="o-que-define-a-compatibilidade"><a class="header" href="#o-que-define-a-compatibilidade">O que define a compatibilidade</a></h3>
+<p>Dois fatores determinam se um processador funciona em uma placa-mãe:</p>
+<ul>
+<li>
+<p><strong>O soquete físico:</strong> precisa ser idêntico. Os soquetes atuais mais comuns são o LGA1700 e o LGA1851 para processadores Intel, e o AM4 e o AM5 para processadores AMD. Tentar encaixar um processador no soquete errado é impossível sem força, e forçar danifica ambos;</p>
+</li>
+<li>
+<p><strong>O chipset da placa-mãe:</strong> mesmo com o soquete correto, nem toda placa suporta todos os processadores daquele soquete. O chipset é o conjunto de circuitos da placa que gerencia a comunicação entre os componentes, e cada chipset tem uma lista oficial de processadores suportados, chamada QVL (<em>Qualified Vendor List</em>). Um processador lançado depois da placa pode não constar nessa lista sem uma atualização de firmware.</p>
+</li>
+</ul>
+<h3 id="compatibilidade-entre-gerações"><a class="header" href="#compatibilidade-entre-gerações">Compatibilidade entre gerações</a></h3>
+<p>A política de compatibilidade entre gerações varia bastante entre os fabricantes:</p>
+<ul>
+<li>
+<p><strong>AMD:</strong> manteve o soquete AM4 por cinco anos e múltiplas gerações de processadores Ryzen, do Ryzen 1000 ao Ryzen 5000. Isso significou que era possível trocar um processador de geração mais antiga por um mais novo na mesma placa, com ou sem atualização de firmware, dependendo do chipset. O AM5, lançado em 2022, iniciou um novo ciclo com a mesma promessa de longevidade;</p>
+</li>
+<li>
+<p><strong>Intel:</strong> historicamente troca de soquete com mais frequência, às vezes a cada uma ou duas gerações. Isso significa que trocar de processador Intel frequentemente implica trocar também a placa-mãe.</p>
+</li>
+</ul>
+<h3 id="a-armadilha-do-firmware"><a class="header" href="#a-armadilha-do-firmware">A armadilha do firmware</a></h3>
+<p>Mesmo quando o soquete é compatível, há um detalhe que pega muitos usuários de surpresa: ao combinar uma placa-mãe mais antiga com um processador mais novo, o firmware da placa pode precisar de atualização para reconhecer o novo chip. Uma placa com soquete AM5, por exemplo, pode não inicializar com um Ryzen de geração mais recente se o firmware estiver desatualizado.</p>
+<p>O problema é que atualizar o firmware normalmente exige que o computador já esteja funcionando, o que cria um impasse quando o único processador disponível é justamente o que a placa ainda não reconhece. Algumas placas-mãe oferecem um recurso chamado BIOS Flashback, que permite atualizar o firmware com apenas um pendrive e energia, sem precisar de processador ou memória instalados. É um recurso valioso em montagens novas que combinam placa mais antiga com processador mais recente.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../02-hardware/bios-e-uefi.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../02-hardware/memoria-ram.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../02-hardware/bios-e-uefi.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../02-hardware/memoria-ram.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-09f2665d.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
