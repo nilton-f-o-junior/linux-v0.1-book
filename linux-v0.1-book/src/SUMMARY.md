@@ -24,23 +24,29 @@
   * [Monitor](./02-hardware/monitor.md)
   * [Periféricos](./02-hardware/perifericos.md)
 
-<!-- * [Arquivos](./02-arquivos/intro.md) -->
-  <!-- * [Arquivos](./02-arquivos/arquivos.md) -->
-  <!-- * [Tipos de Arquivos](./02-arquivos/tipos-de-arquivos.md) -->
-  <!-- * [Tamanho dos Arquivos](./02-arquivos/tamanho-dos-arquivos.md) -->
+* [Software](./03-software/intro.md)
+  * [Software Livre e Filosofia GNU](./03-software/software-livre-e-filosofia-gnu.md)
+  * [Kernel](./03-software/kernel.md)
+  * [CLI vs. GUI vs. TUI](./03-software/cli-vs-gui-vs-tui.md)
+  * [Pacotes e Repositórios](./03-software/pacotes-e-repositorios.md)
 
-<!-- * [Visualizando Arquivos](./03-visualizando-arquivos/intro.md) -->
-  <!-- * [cat](./03-visualizando-arquivos/cat.md) -->
-  <!-- * [head](./03-visualizando-arquivos/head.md) -->
-  <!-- * [tail](./03-visualizando-arquivos/tail.md) -->
-  <!-- * [more](./03-visualizando-arquivos/more.md) -->
-  <!-- * [less](./03-visualizando-arquivos/less.md) -->
+* [Arquivos](./arquivos/intro.md)
+  * [Arquivos](./arquivos/arquivos.md)
+  * [Tipos de Arquivos](./arquivos/tipos-de-arquivos.md)
+  * [Tamanho dos Arquivos](./arquivos/tamanho-dos-arquivos.md)
 
-<!-- * [Manipulando Arquivos](./04-manipulando-arquivos/intro.md) -->
-  <!-- * [ls](./04-manipulando-arquivos/ls.md) -->
-  <!-- * [cp](./04-manipulando-arquivos/cp.md) -->
-  <!-- * [mkdir](./04-manipulando-arquivos/mkdir.md) -->
-  <!-- * [mv](./04-manipulando-arquivos/mv.md) -->
-  <!-- * [rm](./04-manipulando-arquivos/rm.md) -->
-  <!-- * [touch](./04-manipulando-arquivos/touch.md) -->
+* [Visualizando Arquivos](./visualizando-arquivos/intro.md)
+  * [cat](./visualizando-arquivos/cat.md)
+  * [head](./visualizando-arquivos/head.md)
+  * [tail](./visualizando-arquivos/tail.md)
+  * [more](./visualizando-arquivos/more.md)
+  * [less](./visualizando-arquivos/less.md)
+
+* [Manipulando Arquivos](./manipulando-arquivos/intro.md)
+  * [ls](./manipulando-arquivos/ls.md)
+  * [cp](./manipulando-arquivos/cp.md)
+  * [mkdir](./manipulando-arquivos/mkdir.md)
+  * [mv](./manipulando-arquivos/mv.md)
+  * [rm](./manipulando-arquivos/rm.md)
+  * [touch](./manipulando-arquivos/touch.md)
 
