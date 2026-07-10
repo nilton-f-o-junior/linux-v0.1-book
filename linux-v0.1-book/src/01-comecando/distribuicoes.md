@@ -22,7 +22,7 @@ Para quem quer a robustez do RHEL sem pagar pelo suporte, existem clones comunit
 
 ### Arch Linux
 
-A [Arch](https://archlinux.org/) tem uma filosofia completamente diferente. Ela é *rolling release*: não tem versões, o sistema é atualizado continuamente com os pacotes mais recentes. A instalação é feita do zero, sem assistentes, e o usuário monta o sistema peça por peça. Isso a torna complexa para iniciantes, mas muito popular entre entusiastas.
+A [Arch](https://archlinux.org/) tem uma filosofia completamente diferente. Ela é rolling release: não tem versões, o sistema é atualizado continuamente com os pacotes mais recentes. Tradicionalmente, a instalação é feita do zero, sem assistentes gráficos, e o usuário monta o sistema peça por peça. Embora hoje exista também um script oficial opcional, o archinstall, para quem prefere um caminho guiado. Isso a torna complexa para iniciantes, mas muito popular entre entusiastas.
 
 O [Manjaro](https://manjaro.org/) surgiu para tornar a experiência Arch mais acessível, com um instalador gráfico e pacotes pré-configurados. O [EndeavourOS](https://endeavouros.com/) segue caminho parecido, mas fica bem mais próximo da Arch pura.
 
@@ -40,7 +40,7 @@ O [Gentoo](https://www.gentoo.org/) é a distribuição onde você compila tudo.
 
 #### Slackware
 
-O [Slackware](http://www.slackware.com/), lançado em 1993, é a distribuição ativa mais antiga. Sem gerenciador de dependências, sem assistentes, purismo total.
+O [Slackware](http://www.slackware.com/), lançado em 1993, é a distribuição ativa mais antiga. Sem gerenciador de dependências automático e com um instalador minimalista em modo texto, é sinônimo de purismo total.
 
 #### NixOS
 
