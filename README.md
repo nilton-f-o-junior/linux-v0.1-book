@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="img/linux-logo.png">
+	<img src="img/git-linux.png">
 </p>
 
 > Um guia completo em português sobre Linux, do hardware que sustenta o sistema aos conceitos que definem o kernel e suas distribuições.
