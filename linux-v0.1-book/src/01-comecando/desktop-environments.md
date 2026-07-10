@@ -28,7 +28,7 @@ Para quem gosta de controlar cada detalhe do próprio ambiente, o KDE é quase u
 
 ### XFCE
 
-O XFCE nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários o suficiente, sem excessos.
+O XFCE nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente, sem excessos.
 
 Apesar da aparência mais tradicional, o XFCE é bem personalizável e pode ser ajustado conforme a necessidade. O gerenciador de arquivos padrão é o Thunar, conhecido por ser rápido e direto ao ponto.
 

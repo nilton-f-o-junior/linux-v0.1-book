@@ -22,7 +22,7 @@ O sucessor espiritual do i3: compatível com sua configuração, mas construído
 
 ### dwm
 
-Uma filosofia de software que leva o minimalismo ao extremo. O código é extremamente enxuto, com algumas centenas de linhas. Não há arquivo de configuração, você edita o código-fonte diretamente e recompila.
+Uma filosofia de software que leva o minimalismo ao extremo. O código é extremamente enxuto, com pouco menos de duas mil linhas. Não há arquivo de configuração: você edita o código-fonte diretamente e recompila.
 
 - **Roda sobre:** X11;
 - **Ideal para:** entusiastas de minimalismo extremo, confortáveis em editar e recompilar o código-fonte para configurar o ambiente;
@@ -36,7 +36,7 @@ Adota uma abordagem diferente: não interpreta atalhos de teclado por conta pró
 
 ### Hyprland
 
-Um dos TWMs que mais cresceu em popularidade nos últimos anos. Trouxe algo que os TWMs clássicos evitam: animações, janelas que deslizam, bordas arredondadas, efeitos visuais. É a aposta de quem quer o melhor dos dois mundos.
+Um dos TWMs que mais cresceram em popularidade nos últimos anos. Trouxe algo que os TWMs clássicos evitam: animações, janelas que deslizam, bordas arredondadas, efeitos visuais. É a aposta de quem quer o melhor dos dois mundos.
 
 - **Roda sobre:** Wayland;
 - **Ideal para:** quem busca a lógica de mosaico sem abrir mão de animações e efeitos visuais modernos;
