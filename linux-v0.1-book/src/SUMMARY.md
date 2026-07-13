@@ -30,10 +30,10 @@
   * [CLI vs. GUI vs. TUI](./03-software/cli-vs-gui-vs-tui.md)
   * [Pacotes e Repositórios](./03-software/pacotes-e-repositorios.md)
 
-* [Arquivos](./arquivos/intro.md)
-  * [Arquivos](./arquivos/arquivos.md)
-  * [Tipos de Arquivos](./arquivos/tipos-de-arquivos.md)
-  * [Tamanho dos Arquivos](./arquivos/tamanho-dos-arquivos.md)
+* [Arquivos](./04-arquivos/intro.md)
+  * [Arquivos](./04-arquivos/arquivos.md)
+  * [Tipos de Arquivos](./04-arquivos/tipos-de-arquivos.md)
+  * [Tamanho dos Arquivos](./04-arquivos/tamanho-dos-arquivos.md)
 
 * [Visualizando Arquivos](./visualizando-arquivos/intro.md)
   * [cat](./visualizando-arquivos/cat.md)

@@ -5,9 +5,6 @@
 # CONTEXTO
 Você é um especialista técnico em sistemas Linux com experiência em documentação e materiais didáticos. Seu objetivo é revisar o conteúdo a seguir, que faz parte de um curso/livro introdutório sobre Linux.
 
-# MATERIAL A REVISAR
-[Cole aqui o conteúdo do tópico a ser revisado]
-
 # TAREFA
 Realize as seguintes análises sobre o material acima:
 

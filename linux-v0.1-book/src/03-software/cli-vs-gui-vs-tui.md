@@ -26,8 +26,6 @@ Programas clássicos como o gerenciador de arquivos *Midnight Commander* ou ferr
 
 A TUI une a leveza e a portabilidade da CLI (podendo ser rodada facilmente através de conexões SSH lentas) com o feedback visual organizado e menus fáceis de navegar da GUI.
 
----
-
 ## O ecossistema de uso: onde cada uma domina
 
 Nenhuma interface substituiu a outra por completo; elas coexistem porque atendem a necessidades estruturalmente diferentes no ecossistema da computação.

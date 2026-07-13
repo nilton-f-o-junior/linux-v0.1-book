@@ -26,7 +26,7 @@ Dois tipos de programas rodam durante esse processo: os *vertex shaders*, que pr
 
 O modelo de rasterização descrito acima é eficiente, mas demanda um trabalho maior para se aproxima da iluminação real, o *ray tracing* é uma abordagem diferente: simula o comportamento físico da luz traçando raios virtuais a partir da câmera, calculando com o que cada raio colide, qual luz reflete e como os efeitos se propagam pela cena. O resultado é iluminação significativamente mais realista, com reflexos precisos, sombras suaves e iluminação global que leva em conta a luz que ricocheia entre superfícies.
 
-O Ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e soluções de reconstrução de imagem por inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.
+O Ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.
 
 ## VRAM: a memória da GPU
 
@@ -50,13 +50,13 @@ Notebooks mais avançados combinam os dois: a GPU integrada cuida do uso cotidia
 
 O mercado de GPUs discretas é dominado por dois fabricantes, com um terceiro entrando com força crescente.
 
-A **NVIDIA** lidera em desempenho absoluto e no mercado de computação acelerada. Suas GPUs para consumidores seguem a linha GeForce, dividida em faixas:
+A **NVIDIA** lidera em desempenho absoluto e no mercado de computação acelerada. Suas GPUs para consumidores seguem a linha GeForce, dividida em faixas — os exemplos abaixo refletem a geração disponível no momento em que este livro foi escrito, mas a NVIDIA renova sua linha a cada um ou dois anos, então vale sempre checar qual é a geração atual:
 
-- **RTX 4060 e similares:** entrada e uso intermediário, jogos em 1080p e 1440p;
-- **RTX 4070 e 4080:** desempenho alto, jogos em 1440p e 4K com ray tracing;
-- **RTX 4090:** topo de linha para consumidores, renderização profissional e AI local.
+- **Entrada e uso intermediário:** jogos em 1080p e 1440p;
+- **Desempenho alto:** jogos em 1440p e 4K com ray tracing;
+- **Topo de linha para consumidores:** renderização profissional e AI local.
 
-Para servidores e machine learning, a NVIDIA oferece a linha Tesla e, mais recentemente, as arquiteturas A100 e H100, que dominam os data centers de grandes laboratórios de IA. O ecossistema de software da NVIDIA, o *CUDA*, é a plataforma mais madura para computação em GPU e a principal razão pela qual a empresa mantém vantagem no mercado profissional.
+Para servidores e machine learning, a NVIDIA oferece GPUs dedicadas a data center que dominam os laboratórios de IA de grande porte, com sucessivas gerações lançadas nos últimos anos. O ecossistema de software da NVIDIA, o *CUDA*, é a plataforma mais madura para computação em GPU e a principal razão pela qual a empresa mantém vantagem no mercado profissional.
 
 A **AMD** compete com a linha Radeon para consumidores e com as GPUs Instinct para servidores. Suas GPUs oferecem boa relação custo-desempenho em jogos, e a AMD investiu nos últimos anos em construir um ecossistema de software alternativo ao CUDA, chamado ROCm.
 
@@ -64,7 +64,7 @@ A **Intel** voltou ao mercado de GPUs discretas em 2022 com a linha Arc, após d
 
 ## TDP e resfriamento
 
-A GPU é frequentemente o componente que mais consome energia dentro de um computador. GPUs de alto desempenho para consumidores têm TDPs entre 150 W e 450 W. GPUs de data center, como a H100, chegam a 700 W.
+A GPU é frequentemente o componente que mais consome energia dentro de um computador. GPUs de alto desempenho para consumidores têm TDPs entre 150 W e 450 W. GPUs de data center de ponta já ultrapassam a marca de 700 W, e essa tendência de alta segue a cada nova geração.
 
 Esse calor precisa ser dissipado, placas de vídeo discretas vêm com sistemas de resfriamento próprios: coolers com dois ou três ventiladores são o padrão em GPUs de médio e alto desempenho. Em servidores, as GPUs são refrigeradas por fluxo de ar forçado pelo gabinete ou, em instalações de grande escala, por resfriamento líquido.
 
