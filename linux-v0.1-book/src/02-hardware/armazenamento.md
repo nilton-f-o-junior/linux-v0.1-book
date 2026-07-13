@@ -24,6 +24,8 @@ Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs
 
 Os SSDs NVMe (*Non-Volatile Memory Express*) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva: onde um SSD SATA lê dados a cerca de 500 MB/s, um NVMe pode ultrapassar os 7.000 MB/s nos modelos mais rápidos, sendo que modelos intermediários ficam entre 2.000 e 4.000 MB/s, ainda muito acima do SATA. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.
 
+Vale distinguir dois termos que costumam ser confundidos: M.2 é o formato físico do conector, o formato de "pente" encontrado em notebooks e placas-mãe modernas, enquanto NVMe é o protocolo de comunicação usado sobre o barramento PCIe. Por isso existem tanto SSDs M.2 com interface SATA quanto SSDs M.2 com interface NVMe, e apenas os últimos entregam o ganho real de velocidade descrito acima.
+
 ### HD - Hard Disk Drive
 
 O HD é a tecnologia mais antiga ainda em uso comum. Dentro da carcaça metálica há pratos magnéticos girando em alta velocidade, normalmente entre 5.400 e 7.200 rotações por minuto, e um braço mecânico com uma cabeça de leitura e escrita que se move sobre eles para acessar os dados.
@@ -80,8 +82,6 @@ Essa abstração tem impactos práticos diretos:
 Um disco físico, seja ele um SSD ou um HD, chega ao sistema como um bloco bruto. Antes de guardar qualquer dado, esse espaço precisa ser organizado. O particionamento é o processo de dividir esse bloco em regiões independentes, cada uma com início, fim e propósito definidos.
 
 Para o sistema operacional, cada partição aparece como um dispositivo separado. Um único disco de 1 TB pode se comportar como se fossem dois ou três discos menores, cada um com seu próprio sistema de arquivos, suas próprias permissões e sua própria função.
-
-De forma simples: é possível dividir o espaço de um SSD e fazê-lo se comportar como se fossem dois, funcionando com sistemas diferentes, arquivos diferentes e propósitos diferentes.
 
 #### Por que particionar?
 
