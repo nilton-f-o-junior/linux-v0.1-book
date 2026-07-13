@@ -15,8 +15,8 @@
         <link rel="icon" href="../favicon-de23e50b.svg">
         <link rel="shortcut icon" href="../favicon-8114d1fc.png">
         <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-e96d0476.css">
-        <link rel="stylesheet" href="../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../css/general-0392ca55.css">
+        <link rel="stylesheet" href="../css/chrome-fc474251.css">
         <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da940e3e.js";
+            window.path_to_searchindex_js = "../searchindex-c9e3b045.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-f9a244e0.js"></script>
+        <script src="../toc-2ed926f7.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -191,7 +191,7 @@
 <p>Dois tipos de programas rodam durante esse processo: os <em>vertex shaders</em>, que processam vértices e transformações geométricas, e os <em>fragment shaders</em> (ou pixel shaders), que determinam a cor de cada pixel. A programação desses shaders é o que permite efeitos visuais sofisticados, de reflexos realistas a sombras dinâmicas e profundidade de campo.</p>
 <h3 id="ray-tracing"><a class="header" href="#ray-tracing">Ray tracing</a></h3>
 <p>O modelo de rasterização descrito acima é eficiente, mas demanda um trabalho maior para se aproxima da iluminação real, o <em>ray tracing</em> é uma abordagem diferente: simula o comportamento físico da luz traçando raios virtuais a partir da câmera, calculando com o que cada raio colide, qual luz reflete e como os efeitos se propagam pela cena. O resultado é iluminação significativamente mais realista, com reflexos precisos, sombras suaves e iluminação global que leva em conta a luz que ricocheia entre superfícies.</p>
-<p>O Ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e soluções de reconstrução de imagem por inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.</p>
+<p>O Ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.</p>
 <h2 id="vram-a-memória-da-gpu"><a class="header" href="#vram-a-memória-da-gpu">VRAM: a memória da GPU</a></h2>
 <p>A GPU tem sua própria memória, a <em>VRAM</em> (<em>Video RAM</em>). É nela que ficam as texturas, os buffers de geometria, os shaders compilados e o framebuffer com a imagem sendo construída. A VRAM é fisicamente integrada à placa de vídeo, conectada à GPU por um barramento muito mais largo do que a RAM principal, onde a memória convencional usa canais de 64 ou 128 bits, a VRAM pode usar 192, 256 ou até 384 bits, o que se traduz em largura de banda muito superior.</p>
 <p>A quantidade de VRAM importa diretamente: texturas de alta resolução em jogos modernos, cenas 3D complexas e modelos de linguagem carregados localmente consomem VRAM rapidamente. Quando a VRAM se esgota, o sistema começa a mover dados para a RAM principal ou para o armazenamento, com queda de desempenho perceptível ou erros de execução.</p>
@@ -209,17 +209,17 @@
 <p>Notebooks mais avançados combinam os dois: a GPU integrada cuida do uso cotidiano, e a discreta entra em ação quando a tarefa exige mais potência, o sistema operacional alterna entre as duas automaticamente ou conforme configuração do usuário, equilibrando desempenho e consumo de energia.</p>
 <h2 id="fabricantes-e-arquiteturas"><a class="header" href="#fabricantes-e-arquiteturas">Fabricantes e arquiteturas</a></h2>
 <p>O mercado de GPUs discretas é dominado por dois fabricantes, com um terceiro entrando com força crescente.</p>
-<p>A <strong>NVIDIA</strong> lidera em desempenho absoluto e no mercado de computação acelerada. Suas GPUs para consumidores seguem a linha GeForce, dividida em faixas:</p>
+<p>A <strong>NVIDIA</strong> lidera em desempenho absoluto e no mercado de computação acelerada. Suas GPUs para consumidores seguem a linha GeForce, dividida em faixas — os exemplos abaixo refletem a geração disponível no momento em que este livro foi escrito, mas a NVIDIA renova sua linha a cada um ou dois anos, então vale sempre checar qual é a geração atual:</p>
 <ul>
-<li><strong>RTX 4060 e similares:</strong> entrada e uso intermediário, jogos em 1080p e 1440p;</li>
-<li><strong>RTX 4070 e 4080:</strong> desempenho alto, jogos em 1440p e 4K com ray tracing;</li>
-<li><strong>RTX 4090:</strong> topo de linha para consumidores, renderização profissional e AI local.</li>
+<li><strong>Entrada e uso intermediário:</strong> jogos em 1080p e 1440p;</li>
+<li><strong>Desempenho alto:</strong> jogos em 1440p e 4K com ray tracing;</li>
+<li><strong>Topo de linha para consumidores:</strong> renderização profissional e AI local.</li>
 </ul>
-<p>Para servidores e machine learning, a NVIDIA oferece a linha Tesla e, mais recentemente, as arquiteturas A100 e H100, que dominam os data centers de grandes laboratórios de IA. O ecossistema de software da NVIDIA, o <em>CUDA</em>, é a plataforma mais madura para computação em GPU e a principal razão pela qual a empresa mantém vantagem no mercado profissional.</p>
+<p>Para servidores e machine learning, a NVIDIA oferece GPUs dedicadas a data center que dominam os laboratórios de IA de grande porte, com sucessivas gerações lançadas nos últimos anos. O ecossistema de software da NVIDIA, o <em>CUDA</em>, é a plataforma mais madura para computação em GPU e a principal razão pela qual a empresa mantém vantagem no mercado profissional.</p>
 <p>A <strong>AMD</strong> compete com a linha Radeon para consumidores e com as GPUs Instinct para servidores. Suas GPUs oferecem boa relação custo-desempenho em jogos, e a AMD investiu nos últimos anos em construir um ecossistema de software alternativo ao CUDA, chamado ROCm.</p>
 <p>A <strong>Intel</strong> voltou ao mercado de GPUs discretas em 2022 com a linha Arc, após décadas vendendo apenas gráficos integrados. Os primeiros lançamentos tiveram desempenho inconsistente, mas melhorias de driver estabilizaram as placas ao longo do tempo, o Arc ainda não compete com o topo das linhas NVIDIA e AMD, mas é uma opção legítima em faixas de entrada e intermediário.</p>
 <h2 id="tdp-e-resfriamento"><a class="header" href="#tdp-e-resfriamento">TDP e resfriamento</a></h2>
-<p>A GPU é frequentemente o componente que mais consome energia dentro de um computador. GPUs de alto desempenho para consumidores têm TDPs entre 150 W e 450 W. GPUs de data center, como a H100, chegam a 700 W.</p>
+<p>A GPU é frequentemente o componente que mais consome energia dentro de um computador. GPUs de alto desempenho para consumidores têm TDPs entre 150 W e 450 W. GPUs de data center de ponta já ultrapassam a marca de 700 W, e essa tendência de alta segue a cada nova geração.</p>
 <p>Esse calor precisa ser dissipado, placas de vídeo discretas vêm com sistemas de resfriamento próprios: coolers com dois ou três ventiladores são o padrão em GPUs de médio e alto desempenho. Em servidores, as GPUs são refrigeradas por fluxo de ar forçado pelo gabinete ou, em instalações de grande escala, por resfriamento líquido.</p>
 <p>O consumo de energia da GPU também é o principal fator na escolha da fonte de alimentação, montar um computador com uma GPU de alta performance exige uma fonte com potência suficiente e, muitas vezes, conectores de alimentação específicos para a placa, além dos que já vão para o processador e os demais componentes.</p>
 <h2 id="a-gpu-no-contexto-do-sistema"><a class="header" href="#a-gpu-no-contexto-do-sistema">A GPU no contexto do sistema</a></h2>
@@ -290,7 +290,7 @@
 
         <script src="../clipboard-1626706a.min.js"></script>
         <script src="../highlight-abc7f01d.js"></script>
-        <script src="../book-609e4cb8.js"></script>
+        <script src="../book-c22b7243.js"></script>
 
         <!-- Custom JS scripts -->
 
