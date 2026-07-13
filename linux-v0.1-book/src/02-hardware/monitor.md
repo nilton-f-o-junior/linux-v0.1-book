@@ -10,12 +10,11 @@ A imagem não é estática, o monitor redesenha a tela dezenas de vezes por segu
 
 ## Tecnologias de painel
 
-A forma como os pixels são construídos e iluminados define boa parte das características do monitor. Quatro tecnologias são relevantes no mercado atual, cada uma com características e casos de uso distintos.
+A forma como os pixels são construídos e iluminados define boa parte das características do monitor. Quatro tecnologias são relevantes no mercado atual, cada uma com características e casos de uso distinots.
 
 Antes de entrar nas variações, vale entender dois termos que aparecem com frequência:
 
 - **LCD (*Liquid Crystal Display*):** é a base da maioria dos monitores: a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada backlight.
-
 - **LED:** refere-se ao tipo de *backlight*, não a uma tecnologia de painel separada: monitores chamados de "LED" simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. É uma forma de iluminação mais eficiente, que permite designs mais finos e melhor precisão de cores em comparação com os modelos fluorescentes.
 
 ### IPS
@@ -58,25 +57,23 @@ A principal preocupação com monitores OLED é a queima de tela (*burn-in*): pi
 - **Desvantagens:** custo elevado, risco de *burn-in* em uso prolongado com imagens estáticas;
 - **Uso típico:** entusiastas, jogos de alto nível, edição profissional de vídeo e fotografia.
 
-## Resolução
+## Resolução e o Ambiente Linux
 
-A resolução define quantos pixels compõem a imagem, mais pixels significam mais detalhes visíveis, mas também maior exigência da placa de vídeo para renderizar.
+A resolução define quantos pixels compõem a imagem. Mais pixels significam mais detalhes visíveis, mas também maior exigência da placa de vídeo para renderizar. Em sistemas Linux, o gerenciamento de múltiplos monitores e resoluções é feito diretamente por servidores gráficos como o **Xorg** ou o moderno **Wayland**, que lidam com o escalonamento da interface para que os elementos não fiquem pequenos demais em telas de alta densidade.
 
 As resoluções mais comuns no mercado atual:
 
 - **Full HD (1920 × 1080):** padrão dominante por anos, ainda presente na maioria dos monitores de entrada e meio de gama. Adequado para telas de até 27 polegadas; em tamanhos maiores, a densidade de pixels começa a ser percebida;
-
 - **QHD (2560 × 1440):** equilíbrio entre nitidez e desempenho, indicado para monitores de 27 a 32 polegadas, exige mais da placa de vídeo que o Full HD mas sem o custo total do 4K. O termo "2K" é usado informalmente no mercado para se referir a essa resolução, embora tecnicamente 2K corresponda ao padrão de cinema digital (2048×1080);
-
 - **4K / UHD (3840 × 2160):** quatro vezes mais pixels que o Full HD, a nitidez é notável em telas maiores, especialmente para edição de imagem e vídeo. Exige hardware potente para jogos nessa resolução com desempenho fluido.
 
 ## Taxa de atualização
 
 A taxa de atualização é medida em hertz (Hz) e indica quantas vezes por segundo o monitor redesenha a imagem. Um monitor de 60 Hz exibe até 60 quadros por segundo, um de 144 Hz até 144.
 
-Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos, a diferença entre 60 Hz e 144 Hz é perceptível: o movimento parece mais fluido, e a resposta aos comandos parece mais imediata. Monitores de 165 Hz, 240 Hz e até 360 Hz existem no mercado, voltados a jogadores competitivos que buscam qualquer vantagem de desempenho.
+Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos ou na própria fluidez ao arrastar janelas na interface gráfica, a diferença para 144 Hz é perceptível: o movimento parece mais suave e a resposta imediata. Monitores de 165 Hz, 240 Hz e até 360 Hz existem no mercado, voltados a jogadores competitivos.
 
-A taxa de atualização do monitor só se traduz em benefício real se a placa de vídeo conseguir entregar quadros suficientes por segundo. Um monitor de 144 Hz com uma placa que renderiza 60 quadros por segundo em um determinado jogo não vai exibir 144 quadros por segundo.
+A taxa de atualização do monitor só se traduz em benefício real se a placa de vídeo conseguir entregar quadros suficientes por segundo. Se uma placa renderiza apenas 60 quadros por segundo em um monitor de 144 Hz, o monitor repetirá os quadros captados, operando visualmente à taxa da placa.
 
 ## Tempo de resposta
 
@@ -88,35 +85,26 @@ Para uso geral, qualquer valor abaixo de 5 ms é imperceptível, já para jogos 
 
 Quando a placa de vídeo entrega quadros em ritmo variável e o monitor os exibe em intervalos fixos, o resultado pode ser o *tearing*: uma divisão horizontal visível na imagem, como se dois quadros diferentes fossem exibidos ao mesmo tempo. As tecnologias de sincronização adaptativa resolvem esse problema.
 
-- **G-Sync (NVIDIA):** sincroniza o monitor com a saída da placa de vídeo NVIDIA, vale salientar que exige um módulo proprietário no monitor, o que eleva o custo;
-
-- **FreeSync (AMD):** padrão aberto baseado em Adaptive-Sync, suportado pela maioria dos monitores modernos e funciona nativamente com placas AMD e, em monitores com certificação G-Sync Compatible, também com placas NVIDIA.
-
-Ambas as tecnologias eliminam o tearing e reduzem o *stuttering* (engasgos e pausas abruptas na imagem), resultando em uma experiência visivelmente mais suave em jogos.
+- **G-Sync (NVIDIA):** Sincroniza o monitor com a saída da placa de vídeo NVIDIA. Originalmente exigia um módulo de hardware proprietário embutido no monitor (o que elevava seu custo), mas hoje também funciona via software em telas certificadas como *G-Sync Compatible*.
+- **FreeSync (AMD):** padrão aberto baseado em Adaptive-Sync, suportado pela maioria dos monitores modernos. Funciona nativamente com placas AMD e também com placas NVIDIA em monitores compatíveis. Ambas as tecnologias são suportadas no Linux, especialmente sob o servidor gráfico Wayland.
 
 ## Conexões
 
 O monitor se comunica com o computador por meio de cabos que transportam o sinal de vídeo digital. Cada padrão tem capacidades diferentes em termos de resolução e taxa de atualização suportadas, os mesmos conectores se aplicam tanto a desktops quanto a notebooks.
 
 - **HDMI:** o conector mais universal, presente em monitores, televisores, consoles e placas de vídeo. Versões mais recentes suportam 4K a 120 Hz ou mais, mas é preciso atentar à versão do cabo e das portas envolvidas;
-
 - **DisplayPort:** padrão preferido em ambientes de PC desktop, especialmente para altas taxas de atualização. Suporta encadeamento de monitores em equipamentos compatíveis;
-
 - **USB-C / Thunderbolt:** presente em notebooks modernos e monitores mais recentes. Um único cabo pode transmitir vídeo, dados e energia ao mesmo tempo, simplificando a conexão;
-
 - **VGA:** conector analógico antigo, ainda encontrado em monitores e computadores mais velhos. Transmite sinal analógico, com qualidade inferior aos padrões digitais atuais.
 
 ## Proporção de tela
 
 A proporção de tela é a relação entre a largura e a altura do painel, expressa no formato largura:altura. Ela define o formato da imagem exibida e influencia tanto a experiência visual quanto a compatibilidade com diferentes tipos de conteúdo.
 
-- **16:9** é a mais comum no mercado atual e o padrão para a maioria dos vídeos, jogos e interfaces de sistema operacional. Monitores Full HD, QHD e 4K seguem essa proporção;
-
-- **16:10** ligeiramente mais alta que o 16:9, tem ganhado espaço em monitores voltados a produtividade e em notebooks, oferecendo mais área vertical para documentos e código;
-
-- 21:9 chamada de ultrawide, oferece uma tela significativamente mais larga. Em produtividade, permite exibir dois documentos ou janelas lado a lado sem a necessidade de um segundo monitor, a desvantagem é que alguns conteúdos mais antigos, não foram produzidos nessa proporção e exibem barras laterais para preencher o espaço;
-
-- **32:9** existem no segmento entusiasta e equivalem a dois monitores 16:9 fundidos em uma única tela, sem a divisão física entre eles.
+- **16:9:** é a mais comum no mercado atual e o padrão para a maioria dos vídeos, jogos e interfaces de sistema operacional. Monitores Full HD, QHD e 4K seguem essa proporção;
+- **16:10:** ligeiramente mais alta que o 16:9, tem ganhado espaço em monitores voltados a produtividade e em notebooks, oferecendo mais área vertical para documentos e códigos de programação;
+- **21:9:** chamada de ultrawide, oferece uma tela significativamente mais larga. Em produtividade, permite exibir dois documentos ou janelas lado a lado sem a necessidade de um segundo monitor;
+- **32:9:** existem no segmento entusiasta e equivalem a dois monitores 16:9 fundidos em uma única tela, sem a divisão física entre eles.
 
 ## Ergonomia e ajustes físicos
 
@@ -124,4 +112,4 @@ A posição do monitor afeta diretamente o conforto em uso prolongado. Monitores
 
 A distância recomendada entre os olhos e a tela varia conforme o tamanho do monitor, mas em geral fica entre 50 e 80 cm. A parte superior da tela deve estar aproximadamente na altura dos olhos ou levemente abaixo, para reduzir a tensão no pescoço.
 
-Monitores com certificação de baixa emissão de luz azul ou com modo de filtragem de luz azul ativável no software podem reduzir o cansaço visual em sessões longas, embora os estudos sobre o impacto real da luz azul de monitores ainda não sejam conclusivos.
+Monitores com certificação de baixa emissão de luz azul ou com modo de filtragem de luz azul ativável no software podem reduzir o cansaço visual em sessões longas, embora os estudos sobre o impacto real da luz azul de monitores ainda não sejam concluivos.

@@ -7,87 +7,72 @@ Dispositivos que conectam o sistema ao usuário e ao ambiente ao redor, transfor
 Antes de falar sobre periféricos específicos, vale entender a distinção fundamental que os organiza: a diferença entre entrada e saída.
 
 - **Dispositivo de entrada:** envia informação para dentro do computador, captura algo do mundo externo: um movimento, uma pressão, um som, uma imagem e converte esse estímulo em dados digitais que o sistema pode processar. O teclado é o exemplo mais direto, cada tecla pressionada gera um código que o sistema operacional interpreta como um caractere ou comando;
-
 - **Dispositivo de saída:** faz o caminho inverso, recebe dados processados pelo computador e os converte em algo perceptível ao usuário ou ao ambiente. O monitor transforma sinais digitais em luz e as caixas de som convertem dados em ondas sonoras.
-
 - **Dispositivos de entrada e saída (E/S):** alguns dispositivos operam nos dois sentidos simultaneamente. Uma tela sensível ao toque exibe imagens como dispositivo de saída e detecta toques como dispositivo de entrada.
 
 ## Dispositivos de entrada
 
-### Teclado
+### Teclado e o Layout de Teclas
 
-O teclado é o periférico de entrada mais antigo ainda em uso universal. Cada tecla é um interruptor: ao ser pressionada, fecha um circuito e envia um código para o sistema operacional, que interpreta qual caractere foi digitado.
+O teclado é o periférico de entrada mais antigo ainda em uso universal. Cada tecla é um interruptor: ao ser pressionada, fecha um circuito e envia um código para o sistema operacional, que interpreta qual caractere foi digitado. 
 
-Dois tipos principais dominam o mercado:
+No Linux, um dos primeiros passos de configuração é definir o mapa de layout correto do teclado. Os mais comuns no Brasil são o **ABNT2** (que possui a tecla Ç e o sotaque circunflexo junto ao número 1) e o **Inglês Internacional (US)**, que exige combinações de teclas para gerar acentuações.
+
+Dois tipos principais de construção dominam o mercado:
 
 - **Membrana:** uma camada plástica flexível que comprime ao toque. São silenciosos, baratos e presentes na maioria dos teclados de escritório;
-
 - **Mecânico:** um switch independente sob cada tecla, com feedback tátil ou sonoro mais pronunciado. Dentro dessa categoria, os switches variam conforme o comportamento:
-
   - **Linear:** resistência uniforme ao longo de todo o percurso, sem ponto de clique;
-
   - **Tátil:** oferece um ponto de resistência no meio do percurso, sem som audível;
-
   - **Clicky:** adiciona um clique audível no ponto de atuação.
-
-- **Magnético:** sensores detectam a posição de um magneto na tecla sem contato elétrico direto. Permitem ajustar o ponto de ativação, sendo populares em teclados para jogos competitivos;
-
-- **Óptico:** a ativação é detectada por um feixe de luz interrompido, em vez de contato elétrico. São vendidos como mais rápidos e resistentes à oxidação dos contatos;
-
+- **Magnético:** sensores detectam a posição de um magneto na tecla sem contato elétrico direto. Permitem ajustar o ponto de ativação;
+- **Óptico:** a ativação é detectada por um feixe de luz interrompido, em vez de contato elétrico;
 - **Capacitivo:** medem a mudança de capacitância ao toque, sem contato elétrico direto.
 
-A conexão com o computador é feita por USB com fio ou por rádio frequência e Bluetooth em modelos sem fio. Modelos sem fio eliminam o cabo mas introduzem latência mínima e dependência de bateria, irrelevante para digitação comum, percebida por jogadores competitivos em situações de reação extrema.
+A conexão com o computador é feita por USB com fio ou por radiofrequência e Bluetooth em modelos sem fio.
 
 ### Mouse
 
-O mouse traduz movimento físico em movimento do cursor na tela, um sensor ilumina a superfície abaixo e fotografa microscópicas variações a milhares de vezes por segundo, calculando a direção e a velocidade do deslocamento.
+O mouse traduz movimento físico em movimento do cursor na tela. Um sensor ilumina a superfície abaixo e fotografa microscópicas variações a milhares de vezes por segundo, calculando a direção e a velocidade do deslocamento.
 
-A precisão do sensor é medida em DPI (*dots per inch* ou pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento..
-
-Além do DPI, a taxa de *polling* define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo, valores mais altos, como 4.000 ou 8.000 Hz, existem em modelos voltados a jogos competitivos e reduzem a latência percebida.
+A precisão do sensor é medida em DPI (*dots per inch* ou pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento. A taxa de *polling* define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo.
 
 ### Outros dispositivos de entrada
 
-- **Trackpad:** presente em todos os notebooks, reproduz as funções do mouse por meio de gestos com os dedos sobre uma superfície sensível ao toque. Nos modelos modernos, gestos com dois, três ou quatro dedos executam ações como rolar a página, alternar entre janelas ou invocar controles do sistema;
-
-- **Mesa digitalizadora:** substitui o mouse por uma caneta que detecta pressão e inclinação sobre uma superfície plana. É o padrão em ilustração digital, retoque fotográfico e design — o controle por caneta permite variações de espessura e opacidade que nenhum mouse replica;
-
+- **Trackpad:** presente em todos os notebooks, reproduz as funções do mouse por meio de gestos com os dedos sobre uma superfície sensível ao toque;
+- **Mesa digitalizadora e Displays Interativos:** substitui o mouse por uma caneta que detecta pressão e inclinação. Podem ser mesas tradicionais (onde você risca olhando para o monitor) ou displays interativos (telas de alta fidelidade feitas para desenhar diretamente sobre elas);
 - **Microfone:** captura áudio analógico e o converte em sinal digital, classificando-se como dispositivo de entrada de áudio;
-
-- **Controles de jogo, joysticks, volantes e pedais:** periféricos especializados que reproduzem a interface física de consoles ou veículos, enviando ao sistema os estados dos botões e eixos em tempo real.
+- **Controles de jogo:** periféricos especializados (joysticks, volantes) que enviam ao sistema os estados dos botões e eixos em tempo real. No Linux, a maior parte desses dispositivos é reconhecida nativamente pelo próprio Kernel através de drivers de código aberto.
 
 ## Dispositivos de saída
 
 ### Monitor
 
-O monitor é o dispositivo de saída visual principal, responsável por converter o sinal enviado pela placa de vídeo em imagem visível. Cada imagem é formada por milhões de pixels — pontos de luz compostos por três subpixels nas cores vermelho, verde e azul — que combinados reproduzem uma ampla gama de cores. A qualidade dessa conversão, em termos de resolução, fidelidade de cor, taxa de atualização e tempo de resposta, define em grande parte a experiência visual do usuário com o sistema.
+O monitor é o dispositivo de saída visual principal, responsável por converter o sinal enviado pela placa de vídeo em imagem visível. Cada imagem é formada por milhões de pixels que combinados reproduzem uma ampla gama de cores. A qualidade dessa conversão define em grande parte a experiência visual do usuário com o sistema.
 
 ### Caixas de som e fones de ouvido
 
-O computador processa áudio internamente como dados digitais — amostras numéricas que representam variações de pressão sonora ao longo do tempo. Para que esse áudio se torne som audível, é necessário um conversor digital-analógico (DAC) e, em seguida, um amplificador que envie o sinal aos alto-falantes ou fones.
+O computador processa áudio internamente como dados digitais. Para que esse áudio se torne som audível, é necessário um conversor digital-analógico (DAC) e, em seguida, um amplificador que envie o sinal aos alto-falantes ou fones.
 
-Essa conversão acontece no hardware de áudio do sistema. Em placas-mãe comuns, esse circuito está integrado ao chipset — funcional para uso cotidiano, mas com limitações em qualidade de sinal, especialmente para fones de ouvido de alta impedância. Placas de som dedicadas, instaladas em slot PCIe ou conectadas por USB, oferecem conversores de maior qualidade, menor ruído e amplificadores mais potentes.
+Essa conversão acontece no hardware de áudio do sistema. Em placas-mãe comuns, esse circuito integrado atende ao uso cotidiano. Para obter maior fidelidade e potência sonora em equipamentos profissionais, utilizam-se interfaces de áudio ou DACs externos conectados via porta USB. Em sistemas Linux, servidores de som modernos como o **PipeWire** organizam e misturam esses fluxos de áudio de maneira eficiente e estável.
 
-- **Caixas de som:** transformam o sinal elétrico em movimento de um cone, que comprime o ar e gera ondas sonoras. Podem ser simples estéreos de mesa ou sistemas multicanal com subwoofer para reprodução de áudio posicional;
-
-- **Fones de ouvido:** funcionam pelo mesmo princípio em escala reduzida, com drivers próximos aos ouvidos. Modelos com cancelamento ativo de ruído (ANC) adicionam um microfone voltado para o ambiente externo e geram ondas inversas que neutralizam o som ao redor antes que ele chegue aos ouvidos — útil em ambientes barulhentos como aviões ou escritórios abertos.
+- **Caixas de som:** transformam o sinal elétrico em movimento de um cone, que comprime o ar e gera ondas sonoras;
+- **Fones de ouvido:** funcionam pelo mesmo princípio em escala reduzida. Modelos com cancelamento ativo de ruído (ANC) adicionam um microfone voltado para o ambiente externo e geram ondas inversas que neutralizam o som ao redor antes que ele chegue aos ouvidos.
 
 ### Impressoras
 
-A impressora recebe dados digitais e os transfere para um substrato físico, geralmente papel. Duas tecnologias dominam o mercado de uso pessoal e corporativo.
+A impressora recebe dados digitais e os transfers para um substrato físico, geralmente papel. Duas tecnologias dominam o mercado:
 
-- **Jato de tinta (inkjet):** projeta gotículas microscópicas de tinta colorida sobre o papel, formando a imagem ponto a ponto. Versátil e capaz de imprimir com alta fidelidade de cor em papel fotográfico. Custo de aquisição menor, mas custo por página mais alto pelo preço dos cartuchos;
-
-- **Laser:** usa um feixe de laser para carregar eletrostaticamente um tambor, que atrai um pó fino chamado toner. O papel absorve o toner, fundido pelo calor. Mais rápida para volumes altos, com custo por página menor em uso intenso, e o resultado é mais duradouro — a impressão não borra com umidade.
+- **Jato de tinta (inkjet):** projeta gotículas microscópicas de tinta colorida sobre o papel. Custo de aquisição menor, mas custo por página mais alto pelo preço dos cartuchos;
+- **Laser:** usa um feixe de laser para carregar eletrostaticamente um tambor, que atrai um pó fino chamado toner. O papel absorve o toner, fundido pelo calor. Mais rápida para volumes altos, com custo por página menor em uso intenso. No Linux, a comunicação com impressoras é largamente gerenciada pelo subsistema **CUPS** (*Common UNIX Printing System*).
 
 ## Armazenamento externo
 
-Ao contrário dos dispositivos de armazenamento internos, fixados dentro do gabinete e acessados diretamente pela placa-mãe, o armazenamento externo conecta-se por interfaces como USB ou Thunderbolt e pode ser facilmente transportado entre máquinas. É uma categoria que une portabilidade e persistência: os dados sobrevivem sem energia, assim como em qualquer outro dispositivo de armazenamento não volátil, e podem ser levados de um computador a outro sem nenhuma configuração adicional.
+Diferente dos dispositivos internos, fixados dentro do gabinete, o armazenamento externo conecta-se por interfaces como USB ou Thunderbolt e pode ser facilmente transportado entre máquinas. É uma categoria que une portabilidade e persistência. 
 
-- **Pendrive:** a forma mais compacta e barata de armazenamento externo. Usa chips de memória flash e conecta-se por USB. Capacidades variam de poucos gigabytes até alguns terabytes nos modelos mais recentes. A velocidade depende da geração do conector: um pendrive USB 3.2 transfere dados significativamente mais rápido que um modelo USB 2.0 de aparência similar;
+*Nota de contexto Linux:* Ao conectar uma unidade externa no Linux, o sistema realiza a operação de **montagem** (*mount*) do dispositivo em um diretório do sistema para torná-lo acessível ao usuário, reconhecendo sistemas de arquivos comuns como ext4, NTFS ou exFAT.
 
-- **SSD externo:** segue o mesmo princípio do pendrive, mas em formato maior e com desempenho superior. Modelos conectados por USB 3.2 ou Thunderbolt atingem velocidades comparáveis às dos SSDs internos SATA, sendo práticos para edição de vídeo diretamente do disco externo ou backups rápidos de grandes volumes. Alguns modelos NVMe em gabinetes Thunderbolt chegam próximos ao desempenho de SSDs internos de alto desempenho;
-
-- **HD externo:** usa o mesmo mecanismo magnético dos HDs internos — pratos girando e braço de leitura — em uma carcaça portátil. Oferece a maior capacidade por custo entre todas as opções externas, sendo a escolha prática para backups volumosos de fotos, vídeos e coleções de mídia. A limitação é a fragilidade mecânica: impactos físicos durante a operação podem danificar o mecanismo interno;
-
-- **Cartão de memória (SD / microSD):** armazenamento compacto usado em câmeras, drones, consoles portáteis e dispositivos móveis. Lido no computador por leitor integrado ou adaptador USB. A velocidade é classificada por classes (Class 10, UHS-I, UHS-II, V30, V60, V90), que indicam a taxa mínima garantida de escrita — relevante para gravação de vídeo em alta resolução sem interrupções.
+- **Pendrive:** a forma mais compacta e barata de armazenamento externo. Usa chips de memória flash e conecta-se por USB;
+- **SSD externo:** segue o mesmo princípio do pendrive, mas em formato maior e com desempenho muito superior, alcançando velocidades altíssimas via USB 3.2 ou Thunderbolt;
+- **HD externo:** usa o mesmo mecanismo magnético dos HDs internos. Oferece a maior capacidade por custo, mas possui fragilidade mecânica contra impactos;
+- **Cartão de memória (SD / microSD):** armazenamento compacto usado em câmeras e dispositivos móveis. A velocidade é classificada por classes que indicam a taxa mínima garantida de escrita.
