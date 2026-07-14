@@ -18,21 +18,16 @@ Com o tempo, essas restrições foram se tornando um problema real. A indústria
 Na prática, UEFI é o BIOS moderno. A maioria das pessoas ainda chama de "entrar na BIOS" a ação de acessar as configurações de firmware, mesmo que o
 sistema seja UEFI, e os fabricantes de placas-mãe mantêm essa terminologia nas interfaces para não confundir os usuários.
 
-Para acessar essas configurações, é preciso pressionar uma tecla específica logo nos primeiros segundos após ligar o computador, antes que o bootloader assuma o controle. A tecla varia conforme o fabricante:
+Para acessar essas configurações, é preciso pressionar uma tecla específica logo nos primeiros segundos após ligar o computador, antes que o bootloader assuma o controle. Não existe um padrão único: a tecla varia conforme o fabricante e até mesmo entre modelos de uma mesma marca, sendo `Del`, `F2`, `F1`, `F10` e `F12` algumas das mais comuns. Na dúvida, o manual do fabricante ou uma busca pelo modelo exato da placa-mãe ou do notebook é o caminho mais confiável para descobrir a tecla certa.
 
-- **`Del` ou `F2`:** mais comuns em placas-mãe e notebooks em geral;
-- **`F1`:** presente em máquinas Lenovo;
-- **`F10`:** encontrado em alguns modelos HP;
-- **`F12`:** costuma abrir diretamente o menu de seleção de dispositivo de boot em várias marcas.
-
-Muitos fabricantes exibem brevemente essa informação na tela durante o POST, uma linha discreta como "Press DEL to enter setup", mas ela desaparece rápido. Se não houver tempo de reagir, basta reiniciar e tentar novamente.
+Muitos fabricantes exibem brevemente essa informação na tela durante o POST, uma linha discreta como "Press DEL to enter setup", mas ela desaparece rápido. Além disso, muitos computadores modernos vêm com um recurso de inicialização rápida (*Fast Boot*) habilitado por padrão no UEFI, que reduz ainda mais essa janela de tempo. Se não houver tempo de reagir, basta reiniciar e tentar novamente.
 
 ## O bootloader: a ponte entre o firmware e o kernel
 
 Após o POST, o firmware localiza um dispositivo de armazenamento inicializável, geralmente o SSD ou HD onde o sistema operacional está instalado, e transfere o controle para um programa específico gravado no início desse dispositivo. Esse programa é o *bootloader*.
 
 O bootloader tem uma função muito precisa: encontrar o kernel do sistema operacional no disco, carregá-lo na memória e inicializá-lo. Ele é uma camada
-necessária porque o kernel não pode simplesmente "se carregar sozinho", ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware. Isso acontece porque, nesse ponto, ainda não há nenhum sistema operacional ativo para fazer esse trabalho.
+necessária porque o kernel não pode simplesmente "se carregar sozinho", ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware, da mesma forma que alguém precisa abrir a porta de uma sala antes de qualquer pessoa entrar nela. Isso acontece porque, nesse ponto, ainda não há nenhum sistema operacional ativo para fazer esse trabalho.
 
 No Linux, o bootloader mais comum é o *GRUB* (Grand Unified Bootloader), que consegue localizar kernels em partições diferentes, passar parâmetros de
 configuração para o kernel e lidar com múltiplos sistemas no mesmo computador, o que os usuários chamam de *dual boot*.

@@ -88,9 +88,9 @@ Servidores têm exigências diferentes de desktops e notebooks. Não se trata ap
 
 As linhas específicas para servidores dos principais fabricantes são:
 
-- **Intel Xeon:** linha da Intel para servidores. Suporta multiprocessamento (várias CPUs na mesma placa), memória ECC (corrige erros de bit automaticamente) e capacidade de RAM na casa dos terabytes, acima dos 128 GB dos desktops comun;
+- **Intel Xeon:** linha da Intel para servidores. Suporta multiprocessamento (várias CPUs na mesma placa), memória ECC (corrige erros de bit automaticamente) e capacidade de RAM que ultrapassa facilmente os limites usuais de um desktop comum;
 
-- **AMD EPYC:** resposta da AMD ao Xeon, baseada na arquitetura Zen (mesma dos Ryzen). Modelos recentes chegam a 96–128 núcleos, também com ECC e multiprocessamento. É referência em cargas paralelas intensas, como computação científica e virtualização;
+- **AMD EPYC:** resposta da AMD ao Xeon, baseada na arquitetura Zen (mesma dos Ryzen). Modelos recentes já ultrapassam a marca de cem núcleos, um número que cresce a cada nova geração, também com ECC e multiprocessamento. É referência em cargas paralelas intensas, como computação científica e virtualização;
 
 - **ARM em data centers:** alternativa mais recente ao domínio x86. O AWS Graviton (Amazon) e a Ampere Altra (usada por Google Cloud e Azure) se destacam pela melhor relação desempenho/consumo de energia, reduzindo custo operacional. A limitação é a compatibilidade: softwares feitos só para x86 precisam ser recompilados ou emulados para rodar em ARM.
 
@@ -154,7 +154,7 @@ Alguns problemas entre processadores e sistemas operacionais são bem documentad
 
 - **Vulnerabilidades de hardware e mitigações:** as vulnerabilidades Spectre e Meltdown, descobertas em 2018, afetaram praticamente todos os processadores x86 modernos da Intel e AMD. As correções foram aplicadas via atualizações do sistema operacional, mas introduziram perda de desempenho mensurável em certas operações, especialmente em servidores com cargas de trabalho intensas em I/O. O impacto variou conforme o processador e o sistema operacional, mas foi um lembrete de que falhas de hardware são corrigidas em software, sempre com custo;
 
-- **Linux em processadores Intel muito novos:** lançamentos recentes de arquiteturas Intel chegaram ao mercado com suporte incompleto no kernel Linux para funcionalidades específicas, como gerenciamento de energia e gráficos integrados. O resultado prático é que instalar uma distribuição Linux com kernel desatualizado em hardware novo pode resultar em bateria com autonomia menor, aquecimento excessivo ou recursos que simplesmente não funciona;
+- **Linux em processadores Intel muito novos:** lançamentos recentes de arquiteturas Intel chegaram ao mercado com suporte incompleto no kernel Linux para funcionalidades específicas, como gerenciamento de energia e gráficos integrados. O resultado prático é que instalar uma distribuição Linux com kernel desatualizado em hardware novo pode resultar em bateria com autonomia menor, aquecimento excessivo ou recursos que simplesmente não funcionam;
 
 - **Windows on ARM e compatibilidade de software:** apesar da camada de tradução, alguns softwares com drivers de kernel ou proteções antitrapaça em jogos não funcionam corretamente em Windows on ARM. Jogos com sistemas anti-cheat que operam em nível de kernel são um exemplo recorrente de incompatibilidade;
 
