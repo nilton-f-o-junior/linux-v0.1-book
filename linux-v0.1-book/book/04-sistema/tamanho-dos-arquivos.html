@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>touch - Linux - eBook</title>
+        <title>Tamanho dos Arquivos - Linux - eBook</title>
 
 
         <!-- Custom HTML head -->
@@ -174,44 +174,69 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="touch"><a class="header" href="#touch">touch</a></h1>
-<p>Altera a data e hora de acesso/modificação de um arquivo. Se o arquivo não existir, cria um arquivo vazio.</p>
-<pre><code class="language-bash">touch [opções] [arquivos]
-</code></pre>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
-</thead>
-<tbody>
-<tr><td><code>arquivos</code></td><td>Arquivos que terão sua data e hora modificados</td></tr>
-<tr><td><code>-t MMDDhhmm[ANO.ss]</code></td><td>Define data/hora manualmente: mês, dia, hora, minuto e opcionalmente ano e segundos</td></tr>
-<tr><td><code>-a</code>, <code>--time=atime</code></td><td>Altera somente a data e hora de acesso</td></tr>
-<tr><td><code>-m</code>, <code>--time=mtime</code></td><td>Altera somente a data e hora de modificação</td></tr>
-<tr><td><code>-c</code>, <code>--no-create</code></td><td>Não cria o arquivo caso ele não exista</td></tr>
-<tr><td><code>-r arquivo</code></td><td>Usa a data e hora de outro arquivo como referência</td></tr>
-</tbody>
-</table>
-</div>
-<p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">touch arquivo.txt                     # cria `arquivo.txt` vazio ou atualiza sua data/hora para agora
-touch a.txt b.txt c.txt               # cria ou atualiza a data/hora de múltiplos arquivos
-touch -c arquivo.txt                  # atualiza a data/hora sem criar o arquivo caso não exista
-touch -a arquivo.txt                  # atualiza somente a data de acesso
-touch -m arquivo.txt                  # atualiza somente a data de modificação
-touch -t 12311830 arquivo.txt         # define a data/hora para 31 de dezembro às 18:30
-touch -t 202312311830.00 arquivo.txt  # define para 31/12/2023 às 18:30:00
-touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arquivo.txt`
-</code></pre>
+                        <h1 id="o-tamanho-dos-arquivos-digitais"><a class="header" href="#o-tamanho-dos-arquivos-digitais">O tamanho dos arquivos digitais</a></h1>
+<p>Se os tipos de arquivos determinam a forma dos dados e o sistema de arquivos organiza a sua localização na árvore de diretórios, o tamanho dos arquivos é a medida do seu “peso” no mundo digital. No universo físico, pesamos objetos em gramas ou medimos em metros; na computação, tudo se resume à quantidade de espaço que uma sequência de zeros e uns ocupa fisicamente em um dispositivo de armazenamento, seja ele um SSD, um HD ou uma fita magnética.</p>
+<h2 id="a-unidade-fundamental-bits-e-bytes"><a class="header" href="#a-unidade-fundamental-bits-e-bytes">A unidade fundamental: Bits e Bytes</a></h2>
+<p>No nível mais baixo da computação, a menor unidade de informação possível é o <strong>bit</strong> (acrônimo para <em>Binary Digit</em>). Um bit representa um estado elétrico ou magnético simples: ou ele está desligado (0) ou está ligado (1). Sozinho, um bit não consegue carregar muita informação, funcionando apenas como uma resposta de “sim” ou “não”.</p>
+<p>Para criar dados complexos, os computadores agrupam esses bits em conjuntos de 8. Esse grupo de 8 bits recebe o nome de <strong>Byte</strong>.</p>
+<ul>
+<li><strong>1 Bit:</strong> A menor unidade (0 ou 1).</li>
+<li><strong>1 Byte:</strong> Um conjunto de 8 bits.</li>
+</ul>
+<p>O Byte é considerado a unidade fundamental de armazenamento prático porque, historicamente, 1 Byte era o espaço exato necessário para armazenar um único caractere de texto (como a letra “A”, o número “7” ou um ponto final) no padrão de codificação ASCII. Portanto, se você criar um arquivo de texto simples contendo apenas a palavra <code>computador</code>, esse arquivo terá exatamente 10 Bytes de tamanho.</p>
+<h2 id="a-escala-de-grandezas-digitais"><a class="header" href="#a-escala-de-grandezas-digitais">A escala de grandezas digitais</a></h2>
+<p>À medida que os arquivos incorporam elementos mais complexos do que texto puro — como imagens de alta resolução, áudios e vídeos em alta definição —, o número de Bytes necessários para contê-los cresce exponencialmente. Para evitar lidar com números astronômicos na casa dos bilhões ou trilhões, utilizamos prefixos multiplicadores padronizados:</p>
+<ul>
+<li><strong>Kilobyte (KB):</strong> Tradicionalmente equivale a 1.000 Bytes. É o peso aproximado de uma página de texto digitada sem imagens.</li>
+<li><strong>Megabyte (MB):</strong> Equivale a 1.000 Kilobytes (ou 1 milhão de Bytes). É a escala usada para músicas em MP3 (uma canção média tem de 4 a 8 MB) e fotos tiradas pelo celular (geralmente entre 2 e 1ú MB).</li>
+<li><strong>Gigabyte (GB):</strong> Equivale a 1.000 Megabytes (ou 1 bilhão de Bytes). É a unidade de medida para filmes em alta definição, capacidade de memória RAM e instaladores de sistemas operacionais.</li>
+<li><strong>Terabyte (TB):</strong> Equivale a 1.000 Gigabytes (ou 1 trilhão de Bytes). É a escala utilizada para medir a capacidade total de armazenamento de HDs externos e SSDs modernos voltados para o consumidor.</li>
+<li><strong>Petabyte (PB):</strong> Equivale a 1.000 Terabytes. Uma escala gigantesca, utilizada por servidores de nuvem, data centers de empresas como Google e Netflix, e pesquisas científicas de grande porte.</li>
+</ul>
+<h2 id="o-mistério-dos-gigabytes-desaparecidos-decimal-vs-binário"><a class="header" href="#o-mistério-dos-gigabytes-desaparecidos-decimal-vs-binário">O mistério dos “Gigabytes desaparecidos”: Decimal vs. Binário</a></h2>
+<p>Uma das maiores dúvidas no mundo da tecnologia ocorre quando alguém compra um HD ou SSD de “1 TB” e, ao conectá-lo ao computador, o sistema operacional exibe que o disco possui apenas cerca de <strong>931 GB</strong> de espaço disponível. Onde foram parar os quase 70 GB restantes?</p>
+<p>Esse fenômeno não é um defeito, mas sim uma divergência matemática entre duas formas de contagem: a <strong>decimal</strong> (base 10) e a <strong>binária</strong> (base 2).</p>
+<h3 id="a-visão-dos-fabricantes-sistema-decimal--si"><a class="header" href="#a-visão-dos-fabricantes-sistema-decimal--si">A visão dos fabricantes (Sistema Decimal / SI)</a></h3>
+<p>Os fabricantes de hardware seguem o Sistema Internacional de Unidades (SI). Para eles, os prefixos funcionam estritamente em potências de 10, exatamente como no mundo físico (onde 1 quilômetro são 1.000 metros).</p>
+<ul>
+<li>$1\text{ KB} = 10^3 = 1.000\text{ Bytes}$</li>
+<li>$1\text{ MB} = 10^6 = 1.000.000\text{ Bytes}$</li>
+<li>$1\text{ GB} = 10^9 = 1.000.000.000\text{ Bytes}$</li>
+<li>$1\text{ TB} = 10^{12} = 1.000.000.000.000\text{ Bytes}$</li>
+</ul>
+<h3 id="a-visão-do-sistema-operacional-sistema-binário--iec"><a class="header" href="#a-visão-do-sistema-operacional-sistema-binário--iec">A visão do sistema operacional (Sistema Binário / IEC)</a></h3>
+<p>Os computadores pensam de forma binária. Para a arquitetura de processadores e memórias, trabalhar com potências de 2 é muito mais eficiente do que usar a base decimal. Por isso, historicamente, os sistemas operacionais adotaram o valor de $2^{10}$ ($1.024$) como multiplicador.</p>
+<ul>
+<li>$1\text{ KiB} = 2^{10} = 1.024\text{ Bytes}$</li>
+<li>$1\text{ MiB} = 2^{20} = 1.048.576\text{ Bytes}$</li>
+<li>$1\text{ GiB} = 2^{30} = 1.073.741.824\text{ Bytes}$</li>
+</ul>
+<p>Para corrigir essa confusão, a IEC (<em>International Electrotechnical Commission</em>) criou os prefixos binários: <strong>Kibibyte (KiB)</strong>, <strong>Mebibyte (MiB)</strong> e <strong>Gibibyte (GiB)</strong>.</p>
+<p>Quando você compra um disco de 1.000.000.000.000 de Bytes (1 TB comercial), o sistema operacional divide esse valor por $1.073.741.824$ para descobrir o tamanho em GiB. O resultado matemático é exatamente <strong>931,3 GiB</strong>. O Windows, por uma questão de legado, faz essa conta binária mas continua exibindo a sigla “GB” na tela, gerando a falsa impressão de que há espaço faltando.</p>
+<h2 id="tamanho-real-vs-tamanho-em-disco-size-on-disk"><a class="header" href="#tamanho-real-vs-tamanho-em-disco-size-on-disk">Tamanho Real vs. Tamanho em Disco (<em>Size on Disk</em>)</a></h2>
+<p>Ao clicar com o botão direito sobre qualquer arquivo e acessar suas propriedades, você notará duas informações distintas: o <strong>Tamanho</strong> (Tamanho Real) e o <strong>Tamanho em disco</strong>. Quase sempre, o tamanho em disco é ligeiramente maior do que o tamanho real do arquivo.</p>
+<p>Isso acontece devido à forma como os sistemas de arquivos (como NTFS no Windows, ou EXT4 no Linux) gerenciam o espaço físico do HD ou SSD. O sistema de arquivos não grava os dados bit a bit de forma contínua; ele divide o disco em pequenos blocos de tamanho fixo chamados <strong>clusters</strong> ou <strong>unidades de alocação</strong>. O padrão da indústria para a maioria dos sistemas é adotar clusters de <strong>4 KB</strong> (4.096 Bytes).</p>
+<p>Cada cluster só pode conter dados de um único arquivo por vez. Portanto, se você criar um arquivo de texto que pesa apenas <strong>100 Bytes</strong> (Tamanho Real), o sistema operacional será obrigado a dedicar <strong>1 cluster inteiro</strong> para ele no disco. Consequentemente, o “Tamanho em disco” desse arquivo passará a ser de <strong>4 KB</strong>. O espaço restante daquele bloco (3.996 Bytes) é chamado de <em>Slack Space</em> (espaço frouxo) e fica inutilizado até que o arquivo cresça ou seja deletado.</p>
+<p>Se você tiver uma pasta com 10.000 arquivos minúsculos de texto, a diferença entre o tamanho real somado e o tamanho que eles ocupam fisicamente no disco pode chegar a dezenas de Megabytes desperdiçados devido a essa fragmentação em blocos.</p>
+<h2 id="o-impacto-prático-do-tamanho-na-computação"><a class="header" href="#o-impacto-prático-do-tamanho-na-computação">O impacto prático do tamanho na computação</a></h2>
+<p>O tamanho de um arquivo dita o comportamento de toda a infraestrutura computacional ao seu redor:</p>
+<ul>
+<li><strong>Velocidade de carregamento:</strong> Quando você abre um arquivo, o processador ordena que ele seja copiado do armazenamento local (SSD/HD) para a memória RAM. Um documento de 50 KB abre instantaneamente; um banco de dados de 50 GB pode levar minutos para ser carregado na memória, dependendo da velocidade de leitura do hardware.</li>
+<li><strong>Largura de banda na rede:</strong> No tráfego de internet, o tamanho do arquivo determina o tempo de download e upload. Transmitir um arquivo de vídeo não compactado via rede consome muita banda, o que justifica a existência de algoritmos de compressão (como <code>.zip</code> ou formatos de streaming) para encolher o peso digital dos arquivos antes do envio.</li>
+<li><strong>Limitações arquitetônicas:</strong> Sistemas de arquivos antigos possuem limites severos de tamanho. O antigo formato FAT32 (muito usado ainda em pendrives antigos) possui uma limitação matemática rígida: ele é incapaz de armazenar qualquer arquivo individual que seja maior do que <strong>4 GB</strong>, independentemente de o pendrive ter 64 GB de espaço total livre. Tentar copiar um arquivo de vídeo de 5 GB para um disco em FAT32 resultará em um erro de sistema instantâneo.</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../manipulando-arquivos/rm.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../04-sistema/tipos-de-arquivos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
+                            <a rel="next prefetch" href="../04-sistema/raiz-de-arquivos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -219,10 +244,13 @@ touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arqu
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../manipulando-arquivos/rm.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../04-sistema/tipos-de-arquivos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
+                    <a rel="next prefetch" href="../04-sistema/raiz-de-arquivos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
             </nav>
 
         </div>

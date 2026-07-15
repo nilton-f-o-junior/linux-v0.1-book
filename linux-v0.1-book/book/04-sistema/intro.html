@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>touch - Linux - eBook</title>
+        <title>Sistema - Linux - eBook</title>
 
 
         <!-- Custom HTML head -->
@@ -174,44 +174,19 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="touch"><a class="header" href="#touch">touch</a></h1>
-<p>Altera a data e hora de acesso/modificação de um arquivo. Se o arquivo não existir, cria um arquivo vazio.</p>
-<pre><code class="language-bash">touch [opções] [arquivos]
-</code></pre>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
-</thead>
-<tbody>
-<tr><td><code>arquivos</code></td><td>Arquivos que terão sua data e hora modificados</td></tr>
-<tr><td><code>-t MMDDhhmm[ANO.ss]</code></td><td>Define data/hora manualmente: mês, dia, hora, minuto e opcionalmente ano e segundos</td></tr>
-<tr><td><code>-a</code>, <code>--time=atime</code></td><td>Altera somente a data e hora de acesso</td></tr>
-<tr><td><code>-m</code>, <code>--time=mtime</code></td><td>Altera somente a data e hora de modificação</td></tr>
-<tr><td><code>-c</code>, <code>--no-create</code></td><td>Não cria o arquivo caso ele não exista</td></tr>
-<tr><td><code>-r arquivo</code></td><td>Usa a data e hora de outro arquivo como referência</td></tr>
-</tbody>
-</table>
-</div>
-<p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">touch arquivo.txt                     # cria `arquivo.txt` vazio ou atualiza sua data/hora para agora
-touch a.txt b.txt c.txt               # cria ou atualiza a data/hora de múltiplos arquivos
-touch -c arquivo.txt                  # atualiza a data/hora sem criar o arquivo caso não exista
-touch -a arquivo.txt                  # atualiza somente a data de acesso
-touch -m arquivo.txt                  # atualiza somente a data de modificação
-touch -t 12311830 arquivo.txt         # define a data/hora para 31 de dezembro às 18:30
-touch -t 202312311830.00 arquivo.txt  # define para 31/12/2023 às 18:30:00
-touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arquivo.txt`
-</code></pre>
+                        <h1 id="arquivos"><a class="header" href="#arquivos">Arquivos</a></h1>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../manipulando-arquivos/rm.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../03-software/pacotes-e-repositorios.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
+                            <a rel="next prefetch" href="../04-sistema/tipos-de-arquivos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -219,10 +194,13 @@ touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arqu
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../manipulando-arquivos/rm.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../03-software/pacotes-e-repositorios.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
+                    <a rel="next prefetch" href="../04-sistema/tipos-de-arquivos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
             </nav>
 
         </div>

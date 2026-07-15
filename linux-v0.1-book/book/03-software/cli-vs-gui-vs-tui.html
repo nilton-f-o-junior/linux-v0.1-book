@@ -15,8 +15,8 @@
         <link rel="icon" href="../favicon-de23e50b.svg">
         <link rel="shortcut icon" href="../favicon-8114d1fc.png">
         <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-0392ca55.css">
-        <link rel="stylesheet" href="../css/chrome-fc474251.css">
+        <link rel="stylesheet" href="../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../css/chrome-d279d366.css">
         <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-c9e3b045.js";
+            window.path_to_searchindex_js = "../searchindex-00a83828.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-2ed926f7.js"></script>
@@ -177,7 +177,7 @@
                         <h1 id="cli-vs-gui-vs-tui"><a class="header" href="#cli-vs-gui-vs-tui">CLI vs. GUI vs. TUI</a></h1>
 <p>Se o sistema operacional é a engrenagem que gerencia o hardware, a interface é o ponto de contato onde o humano encontra a máquina. O computador não exige telas coloridas ou cliques de mouse para funcionar; ele exige instruções. A forma como traduzimos o pensamento humano em comandos executáveis define a interface — e a escolha entre texto puro, janelas visuais ou blocos de caracteres molda toda a experiência de computação.</p>
 <h2 id="cli"><a class="header" href="#cli">CLI</a></h2>
-<p>A CLI (Command Line Interface, ou Interface de Linha de Comando) é a forma mais direta e antiga de comunicação com um computador moderno. Trata-se de uma interface baseada estritamente em texto, onde o usuário digita comandos em um terminal e recebe respostas textuais. Não há ponteiros, ícones ou botões. O cursor piscando no prompt aguarda a próxima instrução.</p>
+<p>A CLI (Command Line Interface, ou Interface de Linha de Comando) é a forma mais direta e antiga de comunicação com um computador moderno. Trata-se de uma interface baseada estritamente em texto, geralmente acessada por meio de um emulador de terminal, onde o usuário digita comandos e recebe respostas textuais. Não há ponteiros, ícones ou botões. O cursor piscando no prompt aguarda a próxima instrução.</p>
 <p>A grande força dela reside na eficiência e na capacidade de automação. Como os comandos são estruturados em sintaxe textual, tarefas repetitivas podem ser agrupadas em scripts para execução em lote (<em>shell scripting</em>). Além disso, a CLI consome uma fração irrisória de recursos de hardware (memória e processamento), tornando-a a interface padrão para administração de servidores remotos.</p>
 <p>Para o usuário iniciante, contudo, a CLI apresenta uma barreira de entrada íngreme: a falta de pistas visuais. O usuário precisa saber exatamente o nome do comando, suas flags (parâmetros) e argumentos para realizar qualquer ação.</p>
 <h2 id="gui"><a class="header" href="#gui">GUI</a></h2>
@@ -185,12 +185,12 @@
 <p>A principal vantagem da GUI é a descoberta ativa e a baixa carga cognitiva. Um usuário consegue deduzir a função de um programa apenas explorando visualmente os menus. O fluxo de trabalho é guiado e intuitivo.</p>
 <p>Por outro lado, a GUI cobra seu preço em consumo de recursos. Renderizar gráficos de alta resolução, animações e gerenciar o estado visual de dezenas de janelas exige poder de processamento da CPU e da GPU, além de uma quantidade significativa de memória RAM. Adicionalmente, automatizar fluxos complexos em interfaces gráficas é uma tarefa consideravelmente mais difícil do que em ambientes de linha de comando.</p>
 <h2 id="tui"><a class="header" href="#tui">TUI</a></h2>
-<p>A TUI (Text User Interface, ou Interface Textual do Usuário) é o meio-termo histórico e conceitual entre a rigidez da CLI e o peso visual da GUI. Embora funcione inteiramente dentro de uma tela de terminal baseada em texto, a TUI usa caracteres especiais (como lines e blocos) e cores para desenhar um layout visual. Ela oferece janelas, menus suspensos, barras de progresso e caixas de diálogo, mas construídos com caracteres textuais.</p>
-<p>Programas clássicos como o gerenciador de arquivos <em>Midnight Commander</em> ou ferramentas de configuração de sistemas são exemplos clássicos de TUI. Muitas TUIs modernas aceitam comandos de mouse no terminal, mas a maioria é otimizada para navegação rápida via teclado (usando as setas, a tecla Tab e atalhos).</p>
+<p>A TUI (Text User Interface, ou Interface Textual do Usuário) é o meio-termo histórico e conceitual entre a rigidez da CLI e o peso visual da GUI. Embora funcione inteiramente dentro de uma tela de terminal baseada em texto, a TUI usa caracteres especiais (como símbolos de borda e blocos Unicode) e cores para desenhar um layout visual. Ela oferece janelas, menus suspensos, barras de progresso e caixas de diálogo, mas construídos com caracteres textuais.</p>
+<p>Programas como o monitor de sistema <em>htop</em> e o gerenciador de arquivos <em>Midnight Commander</em> são exemplos clássicos de TUI. Muitas TUIs modernas aceitam comandos de mouse no terminal, mas a maioria é otimizada para navegação rápida via teclado (usando as setas, a tecla Tab e atalhos).</p>
 <p>A TUI une a leveza e a portabilidade da CLI (podendo ser rodada facilmente através de conexões SSH lentas) com o feedback visual organizado e menus fáceis de navegar da GUI.</p>
 <h2 id="o-ecossistema-de-uso-onde-cada-uma-domina"><a class="header" href="#o-ecossistema-de-uso-onde-cada-uma-domina">O ecossistema de uso: onde cada uma domina</a></h2>
 <p>Nenhuma interface substituiu a outra por completo; elas coexistem porque atendem a necessidades estruturalmente diferentes no ecossistema da computação.</p>
-<p>No desenvolvimento de software e na administração de sistemas, a CLI e a TUI são absolutas. Desenvolvedores utilizam ferramentas baseadas em CLI (como o <code>git</code> para versionamento de código ou o <code>npm</code> para gerenciamento de pacotes) porque a velocidade de digitação de comandos estruturados supera o tempo de mover o mouse entre menus de uma GUI. Editores de texto baseados em TUI, como o <em>Vim</em> ou o <em>Nano</em>, permitem modificar arquivos diretamente em servidores remotos sem a necessidade de baixar o arquivo ou abrir uma sessão pesada de desktop remoto.</p>
+<p>No desenvolvimento de software e na administração de sistemas, a CLI e a TUI são absolutas. Desenvolvedores utilizam ferramentas baseadas em CLI (como o <code>git</code> para versionamento de código ou o <code>npm</code> para gerenciamento de pacotes) porque a velocidade de digitação de comandos estruturados supera o tempo de mover o mouse entre menus de uma GUI. Editores de texto baseados em TUI, como o <em>Nano</em> (mais amigável para iniciantes) ou o <em>Vim</em>, permitem modificar arquivos diretamente em servidores remotos sem a necessidade de baixar o arquivo ou abrir uma sessão pesada de desktop remoto.</p>
 <p>Para tarefas que envolvem criatividade visual, edição de vídeo, navegação casual na web e jogos, a GUI é indispensável. O cérebro humano processa informações visuais espaciais com facilidade, e ferramentas como suítes de escritório, navegadores de internet e softwares de design dependem fundamentalmente da precisão espacial e renderização de imagem que apenas a GUI consegue entregar.</p>
 
                     </main>
@@ -257,7 +257,7 @@
 
         <script src="../clipboard-1626706a.min.js"></script>
         <script src="../highlight-abc7f01d.js"></script>
-        <script src="../book-c22b7243.js"></script>
+        <script src="../book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 
