@@ -6,11 +6,11 @@ Cada imagem que aparece na tela passou antes por um longo caminho dentro do comp
 
 O monitor é o dispositivo de saída visual do computador. Ele recebe um sinal do sistema, seja analógico ou digital, e o converte em uma imagem formada por milhões de pequenos pontos de luz chamados pixels. Cada pixel é composto por três subpixels nas cores primárias da luz: vermelho, verde e azul. A combinação dessas três intensidades em cada ponto é capaz de reproduzir uma ampla gama de cores visíveis ao olho humano.
 
-A imagem não é estática, o monitor redesenha a tela dezenas de vezes por segundo, criando a ilusão de movimento. A frequência com que isso acontece é chamada de taxa de atualização, tema abordado em uma seção própria a seguir.
+A imagem não é estática, o monitor redesenha a tela dezenas de vezes por segundo, criando a ilusão de movimento. A frequência com que isso acontece é chamada de taxa de atualização.
 
 ## Tecnologias de painel
 
-A forma como os pixels são construídos e iluminados define boa parte das características do monitor. Quatro tecnologias são relevantes no mercado atual, cada uma com características e casos de uso distinots.
+A forma como os pixels são construídos e iluminados define boa parte das características do monitor. Quatro tecnologias são relevantes no mercado atual, cada uma com características e casos de uso distintos.
 
 Antes de entrar nas variações, vale entender dois termos que aparecem com frequência:
 
@@ -56,6 +56,10 @@ A principal preocupação com monitores OLED é a queima de tela (*burn-in*): pi
 - **Vantagens:** contraste infinito, pixels que se apagam completamente eliminando qualquer emissão de luz, cores excepcionais, tempo de resposta mínimo;
 - **Desvantagens:** custo elevado, risco de *burn-in* em uso prolongado com imagens estáticas;
 - **Uso típico:** entusiastas, jogos de alto nível, edição profissional de vídeo e fotografia.
+
+### HDR (*High Dynamic Range*)
+
+O HDR é uma tecnologia que amplia a gama de cores e o contraste, permitindo que as partes claras da imagem sejam mais brilhantes e as escuras mais profundas, resultando em uma imagem mais próxima da realidade.
 
 ## Resolução e o Ambiente Linux
 

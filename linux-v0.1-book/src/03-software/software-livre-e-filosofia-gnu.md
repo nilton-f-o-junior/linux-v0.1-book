@@ -1,6 +1,6 @@
 # Software Livre e Filosofia GNU
 
-Se o hardware é a estrutura física que viabiliza a computação, e o sistema operacional é o que organiza seus recursos, o software é o pensamento transformado em código. Mas o software não é apenas uma ferramenta técnica; ele é um produto de escolhes legais e políticas. A forma como o código é distribuído define o que o usuário pode ou não fazer em sua própria máquina, estabelecendo a fronteira entre o controle do usuário sobre o sistema e o controle do sistema sobre o usuário.
+Se o hardware é a estrutura física que viabiliza a computação, e o sistema operacional é o que organiza seus recursos, o software é o pensamento transformado em código. Mas o software não é apenas uma ferramenta técnica; ele é um produto de escolhas legais e políticas. A forma como o código é distribuído define o que o usuário pode ou não fazer em sua própria máquina, estabelecendo a fronteira entre o controle do usuário sobre o sistema e o controle do sistema sobre o usuário.
 
 ## O que é o Software Livre?
 
@@ -39,7 +39,7 @@ O kernel gerencia o processador, a memória e os discos; as ferramentas GNU forn
 
 ## O ecossistema de desenvolvimento: Livre vs. Código Aberto
 
-Com o passar dos anos, o modelo de desenvolvimento comunitário provou ser extremamente eficiente, atraindo a atenção do mercado corporativo. Em 1998, surgiu o termo *Open Source* (Código Aberto), criando uma cisão ideológica que persiste até hoje no ecossistema.
+Com o passar dos anos, o modelo de desenvolvimento comunitário provou ser extremamente eficiente, atraindo a atenção do mercado corporativo. Em 1998, surgiu o termo *Open Source* (Código Aberto), impulsionado pela *Open Source Initiative* (OSI), criando uma cisão ideológica que persiste até hoje no ecossistema.
 
 O Código Aberto foca nos benefícios metodológicos e econômicos: argumenta que abrir o código resulta em softwares melhores, com menos bugs, desenvolvimento mais rápido e custos reduzidos. É uma abordagem essencialmente pragmática e técnica.
 

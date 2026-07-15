@@ -4,9 +4,9 @@ Por muito tempo, a GPU ficou nos bastidores. Era o componente que desenhava pixe
 
 ## O que é a GPU?
 
-GPU significa *Graphics Processing Unit* ou Unidade de Processamento Gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU, a GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.
+GPU significa *Graphics Processing Unit* ou Unidade de Processamento Gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.
 
-A razão para esse design é a natureza do trabalho gráfico. Para exibir uma cena em 3D na tela, a GPU precisa calcular a cor e posição de cada pixel, levando em conta luzes, sombras, texturas e a geometria dos objetos. Um monitor Full HD tem mais de dois milhões de pixels, a 60 quadros por segundo, isso são mais de 120 milhões de cálculos de pixels por segundo, e cada um com várias operações matemáticas envolvidas. Nenhum processador de uso geral com poucos núcleos consegue fazer isso em tempo real, a GPU resolve o problema com paralelismo, ela divide esse trabalho em milhares de tarefas idênticas e as executa simultaneamente.
+A razão para esse design é a natureza do trabalho gráfico. Para exibir uma cena em 3D na tela, a GPU precisa calcular a cor e posição de cada pixel, levando em conta luzes, sombras, texturas e a geometria dos objetos. Um monitor Full HD tem mais de dois milhões de pixels, a 60 quadros por segundo. Isso são mais de 120 milhões de cálculos de pixels por segundo, e cada um com várias operações matemáticas envolvidas. Nenhum processador de uso geral com poucos núcleos consegue fazer isso em tempo real. A GPU resolve o problema com paralelismo: ela divide esse trabalho em milhares de tarefas idênticas e as executa simultaneamente.
 
 ## Como ela processa imagens
 
@@ -18,7 +18,9 @@ O ponto de partida são os dados brutos da cena: a posição dos vértices que f
 - No estágio de rasterização, ela converte as formas geométricas em fragmentos — conjuntos de pixels candidatos a aparecer na tela.
 - No estágio de sombreamento, ela calcula a cor final de cada fragmento, levando em conta iluminação, texturas e efeitos especiais.
 
-No final, o resultado é enviado para o *framebuffer* e exibido no monitor.
+No final, o resultado é enviado para o *framebuffer* — uma área de memória que armazena a imagem final antes de ser exibida — e então enviado ao monitor.
+
+Para que os softwares consigam conversar com a GPU, eles utilizam APIs gráficas (*Application Programming Interfaces*), como o OpenGL e o Vulkan. Essas interfaces funcionam como tradutores, permitindo que o desenvolvedor envie instruções de renderização que a GPU consiga processar, independentemente do modelo da placa.
 
 Dois tipos de programas rodam durante esse processo: os *vertex shaders*, que processam vértices e transformações geométricas, e os *fragment shaders* (ou pixel shaders), que determinam a cor de cada pixel. A programação desses shaders é o que permite efeitos visuais sofisticados, de reflexos realistas a sombras dinâmicas e profundidade de campo.
 
@@ -30,7 +32,7 @@ O Ray tracing puro é computacionalmente intenso demais para tempo real sem hard
 
 ## VRAM: a memória da GPU
 
-A GPU tem sua própria memória, a *VRAM* (*Video RAM*). É nela que ficam as texturas, os buffers de geometria, os shaders compilados e o framebuffer com a imagem sendo construída. A VRAM é fisicamente integrada à placa de vídeo, conectada à GPU por um barramento muito mais largo do que a RAM principal, onde a memória convencional usa canais de 64 ou 128 bits, a VRAM pode usar 192, 256 ou até 384 bits, o que se traduz em largura de banda muito superior.
+A GPU tem sua própria memória, a *VRAM* (*Video RAM*). É nela que ficam as texturas, os buffers de geometria, os shaders compilados e o framebuffer com a imagem sendo construída. A VRAM é fisicamente integrada à placa de vídeo, conectada à GPU por um barramento muito mais largo do que a RAM principal. Enquanto a memória convencional usa canais de 64 ou 128 bits, a VRAM pode usar 192, 256 ou até 384 bits, o que se traduz em largura de banda muito superior.
 
 A quantidade de VRAM importa diretamente: texturas de alta resolução em jogos modernos, cenas 3D complexas e modelos de linguagem carregados localmente consomem VRAM rapidamente. Quando a VRAM se esgota, o sistema começa a mover dados para a RAM principal ou para o armazenamento, com queda de desempenho perceptível ou erros de execução.
 
@@ -44,21 +46,21 @@ Nem toda GPU é uma placa separada dentro do computador. Existem dois tipos fund
 
 - **GPU discreta:** é um componente separado, com seu próprio chip, sua própria VRAM e seu próprio sistema de resfriamento. Conecta-se à placa-mãe pelo barramento PCIe, que fornece a largura de banda necessária para a troca de dados com a CPU. É o que vai dentro de um desktop gamer, de uma workstation de edição de vídeo e dos servidores usados para treinar modelos de inteligência artificial.
 
-Notebooks mais avançados combinam os dois: a GPU integrada cuida do uso cotidiano, e a discreta entra em ação quando a tarefa exige mais potência, o sistema operacional alterna entre as duas automaticamente ou conforme configuração do usuário, equilibrando desempenho e consumo de energia.
+Notebooks mais avançados combinam os dois: a GPU integrada cuida do uso cotidiano, e a discreta entra em ação quando a tarefa exige mais potência. O sistema operacional alterna entre as duas automaticamente ou conforme configuração do usuário, equilibrando desempenho e consumo de energia.
 
 ## Fabricantes e arquiteturas
 
 O mercado de GPUs discretas é dominado por dois fabricantes, com um terceiro entrando com força crescente.
 
-A **NVIDIA** lidera em desempenho absoluto e no mercado de computação acelerada. Suas GPUs para consumidores seguem a linha GeForce, dividida em faixas — os exemplos abaixo refletem a geração disponível no momento em que este livro foi escrito, mas a NVIDIA renova sua linha a cada um ou dois anos, então vale sempre checar qual é a geração atual:
+A **NVIDIA** lidera em desempenho absoluto e no mercado de computação acelerada. Suas GPUs para consumidores seguem a linha GeForce, dividida em faixas — os exemplos abaixo refletem a geração disponível no momento em que este livro foi escrito, mas a NVIDIA renova sua linha a cada um ou dois anos. Portanto, vale sempre checar qual é a geração atual:
 
 - **Entrada e uso intermediário:** jogos em 1080p e 1440p;
 - **Desempenho alto:** jogos em 1440p e 4K com ray tracing;
 - **Topo de linha para consumidores:** renderização profissional e AI local.
 
-Para servidores e machine learning, a NVIDIA oferece GPUs dedicadas a data center que dominam os laboratórios de IA de grande porte, com sucessivas gerações lançadas nos últimos anos. O ecossistema de software da NVIDIA, o *CUDA*, é a plataforma mais madura para computação em GPU e a principal razão pela qual a empresa mantém vantagem no mercado profissional.
+Para servidores e machine learning, a NVIDIA oferece GPUs dedicadas a data center que dominam os laboratórios de IA de grande porte, com sucessivas gerações lançadas nos últimos anos. O ecossistema de software da NVIDIA, o *CUDA*, é a plataforma mais madura para computação em GPU e a principal razão pela qual a empresa mantém vantagem no mercado profissional. No ecossistema Linux, a NVIDIA é conhecida por seus drivers proprietários, que oferecem a melhor performance, mas podem exigir configurações manuais.
 
-A **AMD** compete com a linha Radeon para consumidores e com as GPUs Instinct para servidores. Suas GPUs oferecem boa relação custo-desempenho em jogos, e a AMD investiu nos últimos anos em construir um ecossistema de software alternativo ao CUDA, chamado ROCm.
+A **AMD** compete com a linha Radeon para consumidores e com as GPUs Instinct para servidores. Suas GPUs oferecem boa relação custo-desempenho em jogos, e a AMD investiu nos últimos anos em construir um ecossistema de software alternativo ao CUDA, chamado ROCm. Já a AMD possui drivers de código aberto integrados ao kernel do Linux, facilitando a instalação e a estabilidade do sistema.
 
 A **Intel** voltou ao mercado de GPUs discretas em 2022 com a linha Arc, após décadas vendendo apenas gráficos integrados. Os primeiros lançamentos tiveram desempenho inconsistente, mas melhorias de driver estabilizaram as placas ao longo do tempo, o Arc ainda não compete com o topo das linhas NVIDIA e AMD, mas é uma opção legítima em faixas de entrada e intermediário.
 
@@ -66,12 +68,12 @@ A **Intel** voltou ao mercado de GPUs discretas em 2022 com a linha Arc, após d
 
 A GPU é frequentemente o componente que mais consome energia dentro de um computador. GPUs de alto desempenho para consumidores têm TDPs entre 150 W e 450 W. GPUs de data center de ponta já ultrapassam a marca de 700 W, e essa tendência de alta segue a cada nova geração.
 
-Esse calor precisa ser dissipado, placas de vídeo discretas vêm com sistemas de resfriamento próprios: coolers com dois ou três ventiladores são o padrão em GPUs de médio e alto desempenho. Em servidores, as GPUs são refrigeradas por fluxo de ar forçado pelo gabinete ou, em instalações de grande escala, por resfriamento líquido.
+Esse calor precisa ser dissipado. Placas de vídeo discretas vêm com sistemas de resfriamento próprios: coolers com dois ou três ventiladores são o padrão em GPUs de médio e alto desempenho. Em servidores, as GPUs são refrigeradas por fluxo de ar forçado pelo gabinete ou, em instalações de grande escala, por resfriamento líquido.
 
-O consumo de energia da GPU também é o principal fator na escolha da fonte de alimentação, montar um computador com uma GPU de alta performance exige uma fonte com potência suficiente e, muitas vezes, conectores de alimentação específicos para a placa, além dos que já vão para o processador e os demais componentes.
+O consumo de energia da GPU também é o principal fator na escolha da fonte de alimentação. Montar um computador com uma GPU de alta performance exige uma fonte com potência suficiente e, muitas vezes, conectores de alimentação específicos para a placa, além dos que já vão para o processador e os demais componentes.
 
 ## A GPU no contexto do sistema
 
-Assim como o processador raramente é o único gargalo, a GPU também não opera no vácuo, uma GPU potente alimentada por um processador antigo pode desperdiçar seu potencial em jogos que dependem de cálculos de física e inteligência artificial na CPU. Pouca VRAM limita a resolução das texturas que podem ser carregadas. Uma fonte de alimentação subdimensionada pode causar instabilidade sob carga total.
+Assim como o processador raramente é o único gargalo, a GPU também não opera no vácuo. Uma GPU potente alimentada por um processador antigo pode desperdiçar seu potencial em jogos que dependem de cálculos de física e inteligência artificial na CPU. Pouca VRAM limita a resolução das texturas que podem ser carregadas. Uma fonte de alimentação subdimensionada pode causar instabilidade sob carga total.
 
 O desempenho real é sempre o resultado do sistema como um todo, a GPU define o teto do que é possível renderizar e calcular em paralelo, mas são os outros componentes que determinam se esse teto será alcançado na prática.

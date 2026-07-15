@@ -4,7 +4,7 @@ Se o sistema operacional é a base sobre a qual tudo roda, os pacotes são a for
 
 ## O que é um pacote?
 
-Um pacote é um arquivo compactado que reúne tudo o que um programa precisa para ser instalado corretamente: os binários executáveis, as bibliotecas que ele usa, os arquivos de configuração padrão, a documentação e um conjunto de metadados que descreve o próprio pacote. Esses metadados incluem o nome do software, a versão, a arquitetura para a qual foi compilado e, principalmente, as dependências, ou seja, quais outros pacotes precisam estar presentes para que ele funcione.
+Um pacote é um arquivo compactado que reúne tudo o que um programa precisa para ser instalado corretamente: os binários executáveis (arquivos já compilados e prontos para execução pelo computador), as bibliotecas que ele usa, os arquivos de configuração padrão, a documentação e um conjunto de metadados que descreve o próprio pacote. Esses metadados incluem o nome do software, a versão, a arquitetura para a qual foi compilado e, principalmente, as dependências, ou seja, quais outros pacotes precisam estar presentes para que ele funcione.
 
 Sem esse formato padronizado, cada instalação seria um processo manual: baixar o código-fonte, compilar, descobrir na tentativa e erro quais bibliotecas faltam, resolver cada uma delas separadamente. O pacote existe justamente para eliminar essa fricção.
 
@@ -42,7 +42,7 @@ Usar essas ferramentas diretamente é possível, mas pouco prático: se o pacote
 
 - **Zypper:** gerenciador de alto nível do openSUSE, também construído sobre o rpm.
 
-Na prática, é essa camada de alto nível que o usuário acessa no dia a dia. Comandos como `apt install`, `dnf install` ou `pacman -S` descrevem a intenção — instalar um programa — e deixam para o gerenciador a tarefa de descobrir tudo o que precisa ser baixado.
+Na prática, é essa camada de alto nível que o usuário acessa no dia a dia. Comandos como `sudo apt install`, `sudo dnf install` ou `sudo pacman -S` descrevem a intenção — instalar um programa — e deixam para o gerenciador a tarefa de descobrir tudo o que precisa ser baixado.
 
 ## Repositórios
 
@@ -61,6 +61,8 @@ Quando um pacote não está nos repositórios oficiais, ou está em uma versão 
 - **EPEL (Extra Packages for Enterprise Linux):** repositório mantido pela comunidade Fedora, com pacotes adicionais para distribuições baseadas em Red Hat Enterprise Linux.
 
 - **COPR:** sistema de repositórios pessoais equivalente ao PPA, mas para o ecossistema Fedora.
+
+- **AUR (Arch User Repository):** repositório mantido pela comunidade Arch Linux, onde usuários compartilham scripts de construção (PKGBUILDs) para software que não está nos repositórios oficiais.
 
 Adicionar um repositório de terceiros expande o que está disponível, mas também expande a superfície de confiança do sistema: o gerenciador passa a instalar pacotes de uma fonte que não passou pela mesma curadoria dos repositórios oficiais. Isso não é necessariamente um problema — muitos PPAs são mantidos pelos próprios desenvolvedores do software —, mas exige mais cautela do usuário sobre o que está habilitando.
 
@@ -88,7 +90,7 @@ Ao adicionar um repositório de terceiros, é comum que o próprio processo exij
 
 O gerenciador de pacotes mantém, localmente, uma cópia do índice de cada repositório configurado. Essa cópia é o que permite que comandos de busca e verificação de versão respondam rapidamente, sem precisar consultar o servidor remoto a cada operação.
 
-Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (`apt update`, `dnf makecache`, `pacman -Sy`), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar.
+Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (`sudo apt update`, `sudo dnf makecache`, `sudo pacman -Sy`), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar. No caso do APT, é importante notar que o comando `update` atualiza apenas o índice de pacotes disponíveis, e não os programas instalados no sistema.
 
 ## Pacotes binários e pacotes de código-fonte
 
