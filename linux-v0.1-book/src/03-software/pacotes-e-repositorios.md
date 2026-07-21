@@ -10,7 +10,7 @@ Sem esse formato padronizado, cada instalação seria um processo manual: baixar
 
 ## Formatos de pacote
 
-Cada família de distribuições Linux adotou seu próprio formato de pacote, e a escolha de formato costuma ser a primeira coisa que diferencia uma distribuição da outra do ponto de vida prático:
+Cada família de distribuições Linux adotou seu próprio formato de pacote, e a escolha de formato costuma ser a primeira coisa que diferencia uma distribuição da outra do ponto de vista prático:
 
 - **.deb:** formato usado por Debian, Ubuntu e derivados. É um arquivo *ar* que contém, internamente, os binários e os metadados de controle do pacote.
 
@@ -90,7 +90,7 @@ Ao adicionar um repositório de terceiros, é comum que o próprio processo exij
 
 O gerenciador de pacotes mantém, localmente, uma cópia do índice de cada repositório configurado. Essa cópia é o que permite que comandos de busca e verificação de versão respondam rapidamente, sem precisar consultar o servidor remoto a cada operação.
 
-Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (`sudo apt update`, `sudo dnf makecache`, `sudo pacman -Sy`), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar. No caso do APT, é importante notar que o comando `update` atualiza apenas o índice de pacotes disponíveis, e não os programas instalados no sistema.
+Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (`sudo apt update`, `sudo dnf makecache`, `sudo pacman -Sy`), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar. No caso do APT, é importante notar que o comando `update` atualiza apenas o índice de pacotes disponíveis, e não os programas instalados no sistema. No caso do Pacman, vale uma ressalva: o recomendado é sempre sincronizar e atualizar o sistema juntos (`sudo pacman -Syu`), em vez de rodar `-Sy` isoladamente, para evitar inconsistências entre pacotes — um cuidado específico do Arch Linux que será retomado em mais detalhe em um capítulo futuro.
 
 ## Pacotes binários e pacotes de código-fonte
 

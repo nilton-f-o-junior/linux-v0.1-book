@@ -1,6 +1,6 @@
 # CLI vs. GUI vs. TUI
 
-Se o sistema operacional é a engrenagem que gerencia o hardware, a interface é o ponto de contato onde o humano encontra a máquina. O computador não exige telas coloridas ou cliques de mouse para funcionar; ele exige instruções. A forma como traduzimos o pensamento humano em comandos executáveis define a interface — e a escolha entre texto puro, janelas visuais ou blocos de caracteres molda toda a experiência de computação.
+Se o sistema operacional é a engrenagem que gerencia o hardware, a interface é o ponto de contato onde o humano encontra a máquina. O computador não exige telas coloridas ou cliques de mouse para funcionar; ele exige instruções. A forma como traduzimos o pensamento humano em comandos executáveis define a interface — e a escolha entre texto puro, janelas visuais ou blocos de caracteres molda toda a experiência de computação. No mundo Linux, essa escolha é especialmente relevante: é comum encontrar servidores rodando sem nenhuma interface gráfica instalada, administrados inteiramente por linha de comando através de uma conexão remota.
 
 ## CLI
 
@@ -20,7 +20,7 @@ Por outro lado, a GUI cobra seu preço em consumo de recursos. Renderizar gráfi
 
 ## TUI
 
-A TUI (Text User Interface, ou Interface Textual do Usuário) é o meio-termo histórico e conceitual entre a rigidez da CLI e o peso visual da GUI. Embora funcione inteiramente dentro de uma tela de terminal baseada em texto, a TUI usa caracteres especiais (como símbolos de borda e blocos Unicode) e cores para desenhar um layout visual. Ela oferece janelas, menus suspensos, barras de progresso e caixas de diálogo, mas construídos com caracteres textuais.
+A TUI (Text User Interface, ou Interface Textual do Usuário) é o meio-termo histórico e conceitual entre a rigidez da CLI e o peso visual da GUI. Embora funcione inteiramente dentro de uma tela de terminal baseada em texto, a TUI usa caracteres especiais (como símbolos de borda e blocos Unicode) e cores para desenhar um layout visual. Ela oferece janelas, menus suspensos, barras de progresso e caixas de diálogo, desenhados inteiramente com caracteres textuais.
 
 Programas como o monitor de sistema *htop* e o gerenciador de arquivos *Midnight Commander* são exemplos clássicos de TUI. Muitas TUIs modernas aceitam comandos de mouse no terminal, mas a maioria é otimizada para navegação rápida via teclado (usando as setas, a tecla Tab e atalhos).
 
@@ -30,6 +30,6 @@ A TUI une a leveza e a portabilidade da CLI (podendo ser rodada facilmente atrav
 
 Nenhuma interface substituiu a outra por completo; elas coexistem porque atendem a necessidades estruturalmente diferentes no ecossistema da computação.
 
-No desenvolvimento de software e na administração de sistemas, a CLI e a TUI são absolutas. Desenvolvedores utilizam ferramentas baseadas em CLI (como o `git` para versionamento de código ou o `npm` para gerenciamento de pacotes) porque a velocidade de digitação de comandos estruturados supera o tempo de mover o mouse entre menus de uma GUI. Editores de texto baseados em TUI, como o *Nano* (mais amigável para iniciantes) ou o *Vim*, permitem modificar arquivos diretamente em servidores remotos sem a necessidade de baixar o arquivo ou abrir uma sessão pesada de desktop remoto.
+No desenvolvimento de software e na administração de sistemas, a CLI e a TUI dominam o cenário. Desenvolvedores utilizam ferramentas baseadas em CLI (como o `git` para versionamento de código ou o `npm` para gerenciamento de pacotes) porque a velocidade de digitação de comandos estruturados supera o tempo de mover o mouse entre menus de uma GUI. Editores de texto baseados em TUI, como o *Nano* (mais amigável para iniciantes) ou o *Vim* (com uma curva de aprendizado própria, por seu sistema de edição por modos), permitem modificar arquivos diretamente em servidores remotos sem a necessidade de baixar o arquivo ou abrir uma sessão pesada de desktop remoto.
 
 Para tarefas que envolvem criatividade visual, edição de vídeo, navegação casual na web e jogos, a GUI é indispensável. O cérebro humano processa informações visuais espaciais com facilidade, e ferramentas como suítes de escritório, navegadores de internet e softwares de design dependem fundamentalmente da precisão espacial e renderização de imagem que apenas a GUI consegue entregar.
