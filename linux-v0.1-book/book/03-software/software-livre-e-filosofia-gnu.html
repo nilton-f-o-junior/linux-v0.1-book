@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-00a83828.js";
+            window.path_to_searchindex_js = "../searchindex-74c16180.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-2ed926f7.js"></script>
+        <script src="../toc-a0cfbb35.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -186,17 +186,18 @@
 </ul>
 <p>Se um programa priva o usuário de qualquer uma dessas liberdades, ele é classificado como software proprietário ou privativo. Nesse modelo, o desenvolvedor detém o controle sobre o software e, por extensão, sobre o que os usuários podem fazer com ele. No modelo livre, o controle pertence inteiramente aos usuários, individual e coletivamente.</p>
 <h2 id="a-filosofia-gnu-e-richard-stallman"><a class="header" href="#a-filosofia-gnu-e-richard-stallman">A Filosofia GNU e Richard Stallman</a></h2>
-<p>Na década de 1970, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a <em>Free Software Foundation</em> (FSF).</p>
+<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a <em>Free Software Foundation</em> (FSF).</p>
 <p>O objetivo do projeto era ambicioso: criar um sistema operacional inteiramente livre, de modo que ninguém precisasse usar software proprietário para operar um computador. O nome GNU é um acrônimo recursivo para <em>“GNU’s Not Unix”</em> (GNU não é Unix), uma homenagem técnica ao sistema que serviu de inspiração arquitetônica, mas cujas restrições de licença a filosofia GNU rejeitava.</p>
 <p>Para a filosofia GNU, o compartilhamento de software é um imperativo ético. Negar a alguém o direito de entender ou modificar um programa que ele utiliza é visto como uma violação da autonomia individual e um obstáculo à cooperação social.</p>
 <h2 id="o-mecanismo-do-copyleft-e-a-gpl"><a class="header" href="#o-mecanismo-do-copyleft-e-a-gpl">O mecanismo do Copyleft e a GPL</a></h2>
 <p>Para garantir que o software livre permanecesse livre, Stallman utilizou as próprias leis de direito autoral (<em>copyright</em>) de forma invertida, criando o conceito de <em>copyleft</em>.</p>
-<p>Em vez de usar o direito autoral para instruir e restringir o uso e a modificação, o copyleft usa a lei para garantir que ninguém possa remover essas liberdades. Sob uma licença com copyleft, qualquer pessoa é livre para modificar e redistribuir o código, desde que a versão modificada seja distribuída sob as mesmas condições de liberdade. Isso impede que uma empresa pegue um código público, faça melhorias e o transforme em um produto fechado e proprietário.</p>
+<p>Em vez de usar o direito autoral para restringir e limitar o uso e a modificação, o copyleft usa a lei para garantir que ninguém possa remover essas liberdades. Sob uma licença com copyleft, qualquer pessoa é livre para modificar e redistribuir o código, desde que a versão modificada seja distribuída sob as mesmas condições de liberdade. Isso impede que uma empresa utilize um código público, faça melhorias e o transforme em um produto fechado e proprietário.</p>
 <p>A expressão máxima desse conceito é a GPL (<em>GNU General Public License</em>), a licença criada para proteger o sistema GNU. Ela funciona como um pacto legal: você pode usar e modificar o código como quiser, mas se decidir compartilhá-lo, é obrigado a passar adiante as mesmas liberdades que recebeu.</p>
+<p>Vale notar que nem toda licença de software livre ou de código aberto exige copyleft. Licenças permissivas, como a MIT e a BSD, também garantem as quatro liberdades, mas não obrigam que versões modificadas sejam redistribuídas sob a mesma licença — o que permite, inclusive, que o código seja incorporado em produtos fechados. Essa distinção entre licenças copyleft e permissivas será retomada em mais detalhe em um capítulo futuro sobre licenciamento.</p>
 <h2 id="o-encontro-entre-o-gnu-e-o-linux"><a class="header" href="#o-encontro-entre-o-gnu-e-o-linux">O encontro entre o GNU e o Linux</a></h2>
 <p>No início da década de 1990, o Projeto GNU já havia desenvolvido quase todas as partes necessárias para um sistema operacional completo: compiladores (GCC), editores de texto, bibliotecas de sistema e interpretadores de comando. Faltava, porém, o componente central que gerencia diretamente o hardware: o núcleo, ou <em>kernel</em>.</p>
 <p>Esse espaço foi preenchido em 1991, quando um estudante finlandês chamado Linus Torvalds desenvolveu um kernel independente e, posteriormente, o licenciou sob a GPL do GNU. A união das ferramentas de sistema do GNU com o kernel de Torvalds resultou no sistema operacional completo que hoje comumente chamamos de Linux, mas que a FSF e defensores da filosofia original argumentam que deve ser chamado de GNU/Linux.</p>
-<p>O kernel gerencia o processador, a memória e os discos; as ferramentas GNU fornecem a interface, os utilitários e o ambiente para o usuário operar o sistema. Um não funciona como um sistema completo sem o outro.</p>
+<p>O kernel gerencia o processador, a memória e os discos; as ferramentas GNU fornecem a interface, os utilitários e o ambiente para o usuário operar o sistema. Nenhum dos dois — kernel ou ferramentas GNU — forma sozinho um sistema completo.</p>
 <h2 id="o-ecossistema-de-desenvolvimento-livre-vs-código-aberto"><a class="header" href="#o-ecossistema-de-desenvolvimento-livre-vs-código-aberto">O ecossistema de desenvolvimento: Livre vs. Código Aberto</a></h2>
 <p>Com o passar dos anos, o modelo de desenvolvimento comunitário provou ser extremamente eficiente, atraindo a atenção do mercado corporativo. Em 1998, surgiu o termo <em>Open Source</em> (Código Aberto), impulsionado pela <em>Open Source Initiative</em> (OSI), criando uma cisão ideológica que persiste até hoje no ecossistema.</p>
 <p>O Código Aberto foca nos benefícios metodológicos e econômicos: argumenta que abrir o código resulta em softwares melhores, com menos bugs, desenvolvimento mais rápido e custos reduzidos. É uma abordagem essencialmente pragmática e técnica.</p>
