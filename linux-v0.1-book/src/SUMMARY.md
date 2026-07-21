@@ -29,6 +29,7 @@
   * [Kernel](./03-software/kernel.md)
   * [CLI vs. GUI vs. TUI](./03-software/cli-vs-gui-vs-tui.md)
   * [Pacotes e Repositórios](./03-software/pacotes-e-repositorios.md)
+  * [Licenças](./03-software/licencas.md)
 
 * [Sistema](./04-sistema/intro.md)
   * [Tipos de Arquivos](./04-sistema/tipos-de-arquivos.md)
