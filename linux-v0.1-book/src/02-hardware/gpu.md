@@ -1,6 +1,6 @@
 # GPU
 
-GPU significa Unidade de Processamento Gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.
+GPU significa unidade de processamento gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.
 
 Para exibir uma cena em 3D na tela, a GPU precisa calcular a cor e posição de cada pixel, levando em conta luzes, sombras, texturas e a geometria dos objetos. Um monitor Full HD tem mais de dois milhões de pixels, a 60 quadros por segundo. Isso são mais de 120 milhões de cálculos de pixels por segundo, e cada um com várias operações matemáticas envolvidas.
 
@@ -24,7 +24,7 @@ Para que os softwares consigam conversar com a GPU, eles utilizam APIs gráficas
 
 O modelo de rasterização descrito acima é eficiente, mas demanda um trabalho maior para se aproxima da iluminação real, o *ray tracing* é uma abordagem diferente: simula o comportamento físico da luz traçando raios virtuais a partir da câmera, calculando com o que cada raio colide, qual luz reflete e como os efeitos se propagam pela cena. O resultado é iluminação significativamente mais realista, com reflexos precisos, sombras suaves e iluminação global que leva em conta a luz que ricocheia entre superfícies.
 
-O Ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.
+O ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.
 
 ## VRAM: a memória da GPU
 

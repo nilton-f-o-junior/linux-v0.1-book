@@ -4,45 +4,44 @@ Dispositivos que conectam o sistema ao usuário e ao ambiente ao redor, transfor
 
 ## Dispositivos de entrada e saída
 
-Antes de falar sobre periféricos específicos, vale entender a distinção fundamental que os organiza: a diferença entre entrada e saída.
-
 - **Dispositivo de entrada:** envia informação para dentro do computador, captura algo do mundo externo: um movimento, uma pressão, um som, uma imagem e converte esse estímulo em dados digitais que o sistema pode processar. O teclado é o exemplo mais direto, cada tecla pressionada gera um código que o sistema operacional interpreta como um caractere ou comando;
+
 - **Dispositivo de saída:** faz o caminho inverso, recebe dados processados pelo computador e os converte em algo perceptível ao usuário ou ao ambiente. O monitor transforma sinais digitais em luz e as caixas de som convertem dados em ondas sonoras.
+
 - **Dispositivos de entrada e saída (E/S):** alguns dispositivos operam nos dois sentidos simultaneamente. Uma tela sensível ao toque exibe imagens como dispositivo de saída e detecta toques como dispositivo de entrada.
 
 ## Dispositivos de entrada
 
-### Teclado e o Layout de Teclas
+### Teclado
 
 O teclado é o periférico de entrada mais antigo ainda em uso universal. Cada tecla é um interruptor: ao ser pressionada, fecha um circuito e envia um código para o sistema operacional, que interpreta qual caractere foi digitado. 
 
-No Linux, um dos primeiros passos de configuração é definir o mapa de layout correto do teclado. Os mais comuns no Brasil são o **ABNT2** (que possui a tecla Ç e o sotaque circunflexo junto ao número 1) e o **Inglês Internacional (US)**, que exige combinações de teclas para gerar acentuações.
+No Linux, um dos primeiros passos de configuração é definir o mapa de layout correto do teclado. Os mais comuns no Brasil são o **ABNT2** (que possui a tecla Ç e o circunflexo junto ao número 1), o **Inglês Internacional (US)**, que exige combinações de teclas para gerar acentuações.
 
 Dois tipos principais de construção dominam o mercado:
 
-- **Membrana:** uma camada plástica flexível que comprime ao toque. São silenciosos, baratos e presentes na maioria dos teclados de escritório;
-- **Mecânico:** um switch independente sob cada tecla, com feedback tátil ou sonoro mais pronunciado. Dentro dessa categoria, os switches variam conforme o comportamento:
-  - **Linear:** resistência uniforme ao longo de todo o percurso, sem ponto de clique;
-  - **Tátil:** oferece um ponto de resistência no meio do percurso, sem som audível;
-  - **Clicky:** adiciona um clique audível no ponto de atuação.
-- **Magnético:** sensores detectam a posição de um magneto na tecla sem contato elétrico direto. Permitem ajustar o ponto de ativação;
+- **Membrana:** uma camada plástica flexível que comprime ao toque, são silenciosos e baratos;
+- **Mecânico:** um switch independente sob cada tecla, com feedback tátil ou sonoro mais pronunciado.
+- **Magnético:** sensores detectam a posição de um magneto na tecla sem contato elétrico direto.
 - **Óptico:** a ativação é detectada por um feixe de luz interrompido, em vez de contato elétrico;
 - **Capacitivo:** medem a mudança de capacitância ao toque, sem contato elétrico direto.
 
-A conexão com o computador é feita por USB com fio ou por radiofrequência e Bluetooth em modelos sem fio.
+A conexão com o computador é feita por: USB, fio, radiofrequência e Bluetooth.
 
 ### Mouse
 
 O mouse traduz movimento físico em movimento do cursor na tela. Um sensor ilumina a superfície abaixo e fotografa microscópicas variações a milhares de vezes por segundo, calculando a direção e a velocidade do deslocamento.
 
-A precisão do sensor é medida em DPI (*dots per inch* ou pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento. A taxa de *polling* define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo.
+A precisão do sensor é medida em DPI (pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento. A taxa de *polling* define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo.
 
 ### Outros dispositivos de entrada
 
 - **Trackpad:** presente em todos os notebooks, reproduz as funções do mouse por meio de gestos com os dedos sobre uma superfície sensível ao toque;
-- **Mesa digitalizadora e Displays Interativos:** substitui o mouse por uma caneta que detecta pressão e inclinação. Podem ser mesas tradicionais (onde você risca olhando para o monitor) ou displays interativos (telas de alta fidelidade feitas para desenhar diretamente sobre elas);
+- **Mesa digitalizadora:** substitui o mouse por uma caneta que detecta pressão e inclinação. Podem ser mesas tradicionais (onde você risca olhando para o monitor) ou displays interativos (telas de alta fidelidade feitas para desenhar diretamente sobre elas);
 - **Microfone:** captura áudio analógico e o converte em sinal digital, classificando-se como dispositivo de entrada de áudio;
-- **Controles de jogo:** periféricos especializados (joysticks, volantes) que enviam ao sistema os estados dos botões e eixos em tempo real. No Linux, a maior parte desses dispositivos é reconhecida nativamente pelo próprio Kernel através de drivers de código aberto.
+- **Controles de jogo:** periféricos especializados (joysticks, volantes) que enviam ao sistema os estados dos botões e eixos em tempo real.
+
+No Linux, a maior parte desses dispositivos é reconhecida nativamente pelo próprio Kernel através de drivers de código aberto.
 
 ## Dispositivos de saída
 
@@ -64,13 +63,13 @@ Essa conversão acontece no hardware de áudio do sistema. Em placas-mãe comuns
 A impressora recebe dados digitais e os transfers para um substrato físico, geralmente papel. Duas tecnologias dominam o mercado:
 
 - **Jato de tinta (inkjet):** projeta gotículas microscópicas de tinta colorida sobre o papel. Custo de aquisição menor, mas custo por página mais alto pelo preço dos cartuchos;
-- **Laser:** usa um feixe de laser para carregar eletrostaticamente um tambor, que atrai um pó fino chamado toner. O papel absorve o toner, fundido pelo calor. Mais rápida para volumes altos, com custo por página menor em uso intenso. No Linux, a comunicação com impressoras é largamente gerenciada pelo subsistema **CUPS** (*Common UNIX Printing System*).
+- **Laser:** usa um feixe de laser para carregar eletrostaticamente um tambor, que atrai um pó fino chamado toner. O papel absorve o toner, fundido pelo calor. Mais rápida para volumes altos, com custo por página menor em uso intenso. i
+
+No Linux, a comunicação com impressoras é largamente gerenciada pelo subsistema **CUPS** (*Common UNIX Printing System*).
 
 ## Armazenamento externo
 
 Diferente dos dispositivos internos, fixados dentro do gabinete, o armazenamento externo conecta-se por interfaces como USB ou Thunderbolt e pode ser facilmente transportado entre máquinas. É uma categoria que une portabilidade e persistência. 
-
-*Nota de contexto Linux:* Ao conectar uma unidade externa no Linux, o sistema realiza a operação de **montagem** (*mount*) do dispositivo em um diretório do sistema para torná-lo acessível ao usuário, reconhecendo sistemas de arquivos comuns como ext4, NTFS ou exFAT.
 
 - **Pendrive:** a forma mais compacta e barata de armazenamento externo. Usa chips de memória flash e conecta-se por USB;
 - **SSD externo:** segue o mesmo princípio do pendrive, mas em formato maior e com desempenho muito superior, alcançando velocidades altíssimas via USB 3.2 ou Thunderbolt;

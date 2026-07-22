@@ -1,9 +1,5 @@
 # Monitor
 
-Cada imagem que aparece na tela passou antes por um longo caminho dentro do computador: o processador calculou, a placa de vídeo renderizou, e o monitor transformou tudo isso em luz. É o único componente com o qual o usuário interage visualmente o tempo todo, mas raramente se pensa no que acontece dentro dele para que uma imagem apareça ali.
-
-## O que é um monitor?
-
 O monitor é o dispositivo de saída visual do computador. Ele recebe um sinal do sistema, seja analógico ou digital, e o converte em uma imagem formada por milhões de pequenos pontos de luz chamados pixels. Cada pixel é composto por três subpixels nas cores primárias da luz: vermelho, verde e azul. A combinação dessas três intensidades em cada ponto é capaz de reproduzir uma ampla gama de cores visíveis ao olho humano.
 
 A imagem não é estática, o monitor redesenha a tela dezenas de vezes por segundo, criando a ilusão de movimento. A frequência com que isso acontece é chamada de taxa de atualização.
@@ -14,8 +10,8 @@ A forma como os pixels são construídos e iluminados define boa parte das carac
 
 Antes de entrar nas variações, vale entender dois termos que aparecem com frequência:
 
-- **LCD (*Liquid Crystal Display*):** é a base da maioria dos monitores: a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada backlight.
-- **LED:** refere-se ao tipo de *backlight*, não a uma tecnologia de painel separada: monitores chamados de "LED" simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. É uma forma de iluminação mais eficiente, que permite designs mais finos e melhor precisão de cores em comparação com os modelos fluorescentes.
+- **LCD (*Liquid Crystal Display*):** a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada *backlight*.
+- **LED:** monitores chamados de "LED" simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. Sendo mais eficiente, que permite designs mais finos e melhor precisão de cores.
 
 ### IPS
 
@@ -23,17 +19,13 @@ O painel IPS (*In-Plane Switching*) é conhecido pela qualidade de cor e pelos �
 
 - **Vantagens:** cores precisas e consistentes, ângulos de visão excelentes;
 - **Desvantagens:** historicamente mais caro e com tempo de resposta um pouco maior que painéis TN, embora os modelos modernos tenham reduzido bastante essa diferença;
-- **Uso típico:** criação de conteúdo, uso profissional, consumo geral de alta qualidade.
 
 ### TN
 
-O painel TN (*Twisted Nematic*) é a tecnologia LCD mais antiga entre as apresentadas e ainda presente principalmente em monitores voltados a jogos de entrada e intermediários. Seu diferencial é o tempo de resposta baixo, que pode chegar a 1 ms nos melhores modelos, reduzindo o borrão em cenas de movimento rápido.
-
-Em contrapartida, os ângulos de visão são ruins: as cores se distorcem visivelmente ao olhar o painel de qualquer posição que não seja diretamente de frente, a reprodução de cores também é inferior ao IPS.
+O painel TN (*Twisted Nematic*) é a tecnologia LCD mais antiga entre as apresentadas e ainda presente principalmente em monitores voltados a jogos de entrada e intermediários. Seu diferencial é o tempo de resposta baixo, que pode chegar a 1 ms nos melhores modelos, reduzindo o borrão em cenas de movimento rápido. Em contrapartida, os ângulos de visão são ruins: as cores se distorcem visivelmente ao olhar o painel de qualquer posição que não seja diretamente de frente, a reprodução de cores também é inferior ao IPS.
 
 - **Vantagens:** tempo de resposta muito baixo, custo reduzido;
 - **Desvantagens:** ângulos de visão limitados, qualidade de cor inferior;
-- **Uso típico:** jogos competitivos onde velocidade importa mais que fidelidade visual.
 
 ### VA 
 
@@ -43,7 +35,6 @@ Os ângulos de visão são melhores que o TN mas inferiores ao IPS, o tempo de r
 
 - **Vantagens:** contraste elevado, maior capacidade de escurecer pixels e reproduzir a ausência de luz com fidelidade, boa experiência em filmes e conteúdo cinematográfico;
 - **Desvantagens:** *smearing* em alguns modelos, desempenho em jogos inferior ao TN e IPS modernos;
-- **Uso típico:** consumo de filmes e séries, uso geral com ênfase em qualidade visual.
 
 ### OLED
 
@@ -55,9 +46,8 @@ A principal preocupação com monitores OLED é a queima de tela (*burn-in*): pi
 
 - **Vantagens:** contraste infinito, pixels que se apagam completamente eliminando qualquer emissão de luz, cores excepcionais, tempo de resposta mínimo;
 - **Desvantagens:** custo elevado, risco de *burn-in* em uso prolongado com imagens estáticas;
-- **Uso típico:** entusiastas, jogos de alto nível, edição profissional de vídeo e fotografia.
 
-### HDR (*High Dynamic Range*)
+### HDR
 
 O HDR é uma tecnologia que amplia a gama de cores e o contraste, permitindo que as partes claras da imagem sejam mais brilhantes e as escuras mais profundas, resultando em uma imagem mais próxima da realidade.
 
@@ -75,7 +65,7 @@ As resoluções mais comuns no mercado atual:
 
 A taxa de atualização é medida em hertz (Hz) e indica quantas vezes por segundo o monitor redesenha a imagem. Um monitor de 60 Hz exibe até 60 quadros por segundo, um de 144 Hz até 144.
 
-Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos ou na própria fluidez ao arrastar janelas na interface gráfica, a diferença para 144 Hz é perceptível: o movimento parece mais suave e a resposta imediata. Monitores de 165 Hz, 240 Hz e até 360 Hz existem no mercado, voltados a jogadores competitivos.
+Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos ou na própria fluidez ao arrastar janelas na interface gráfica, a diferença para 144 Hz é perceptível: o movimento parece mais suave e a resposta imediata.
 
 A taxa de atualização do monitor só se traduz em benefício real se a placa de vídeo conseguir entregar quadros suficientes por segundo. Se uma placa renderiza apenas 60 quadros por segundo em um monitor de 144 Hz, o monitor repetirá os quadros captados, operando visualmente à taxa da placa.
 
@@ -83,7 +73,7 @@ A taxa de atualização do monitor só se traduz em benefício real se a placa d
 
 O tempo de resposta indica quanto tempo um pixel leva para mudar de uma cor para outra, medido em milissegundos (ms). Tempos de resposta altos resultam em *ghosting*: um rastro visível atrás de objetos em movimento rápido.
 
-Para uso geral, qualquer valor abaixo de 5 ms é imperceptível, já para jogos rápidos, valores entre 1 e 2 ms são desejáveis. Fabricantes frequentemente divulgam o menor tempo de resposta possível nas especificações, medido em condições ideais, geralmente entre transições de cinza para cinza (GtG).
+Para uso geral, qualquer valor abaixo de 5 ms é imperceptível, já para jogos rápidos, valores entre 1 e 2 ms são desejáveis. Fabricantes frequentemente divulgam o menor tempo de resposta possível nas especificações, medido em condições ideais, geralmente entre transições de cinza para cinza.
 
 ## Sincronização adaptativa
 

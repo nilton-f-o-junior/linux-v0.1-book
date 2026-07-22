@@ -2,7 +2,7 @@
 
 A memória RAM, vista anteriormente, é rápida mas volátil: perde tudo quando a energia cai. O armazenamento é o oposto. É persistente, os dados ficam gravados mesmo sem energia, e é onde o sistema coloca tudo que precisa sobreviver entre uma sessão e outra: o próprio sistema operacional, os programas instalados, os arquivos do usuário.
 
-## SSD - Solid State Drive
+## SSD 
 
 O SSD não tem partes móveis. Armazena dados em chips de memória flash, a mesma tecnologia base usada em celulares e câmeras, mas em versões otimizadas para desempenho e durabilidade.
 
@@ -17,7 +17,7 @@ Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs
 
 Os SSDs **NVMe** (*Non-Volatile Memory Express*) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s.
 
-## HD - Hard Disk Drive
+## HD
 
 O HD é mais barato de se produzir e capaz de armazenar grandes volumes de dados, mas é limitado pela velocidade da mecânica. Cada leitura depende de o prato estar na posição certa e de o braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se acumula e se torna perceptível.
 
