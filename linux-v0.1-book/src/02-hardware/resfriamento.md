@@ -1,13 +1,5 @@
 # Resfriamento
 
-Todo componente eletrônico que realiza trabalho gera calor como subproduto. Se esse calor não for removido, os componentes esquentam além dos limites projetados, causando travamentos, danos permanentes ou falhas. O resfriamento é o sistema responsável por manter cada componente dentro da sua faixa segura de temperatura.
-
-## Como o calor sai do componente
-
-O primeiro elo da cadeia é o contato físico entre o componente e o sistema de resfriamento. O processador possui uma tampa metálica chamada IHS (*Integrated Heat Spreader*) que distribui o calor da área ativa do chip por uma superfície maior. Sobre essa tampa vai uma camada fina de pasta térmica, um material com alta condutividade que preenche as microscópicas imperfeições entre as superfícies metálicas, eliminando bolsas de ar que agiriam como isolante.
-
-Sem pasta térmica, o contato real entre chip e dissipador seria apenas nos pontos mais altos das duas superfícies. O uso deste composto reduz drasticamente a resistência térmica e tem impacto direto nas temperaturas de operação.
-
 ## Ventoinhas
 
 As ventoinhas movem o ar: seja puxando ar fresco para dentro do gabinete, empurrando ar quente para fora ou forçando o fluxo de ar sobre as aletas de um dissipador.
@@ -25,11 +17,6 @@ As ventoinhas movem o ar: seja puxando ar fresco para dentro do gabinete, empurr
 É o modelo mais comum e suficiente para a maioria dos sistemas. Um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.
 
 Dentro do dissipador, é comum encontrar *heat pipes*: tubos selados contendo um fluido que evapora na parte quente, migra para a parte fria pelas aletas, condensa e retorna pela parede interna do tubo por capilaridade.
-
-
-
-[Image of heat pipe working principle]
-
 
 Os principais formatos de cooler a ar:
 - **Baixo perfil:** compacto e plano, adequado para gabinetes pequenos (ITX);
