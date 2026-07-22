@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-74c16180.js";
+            window.path_to_searchindex_js = "searchindex-41f7e1a4.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-a0cfbb35.js"></script>
@@ -190,16 +190,14 @@
 <p>Ele é um sistema operacional livre e de código aberto (<em>open-source</em>), o que significa que qualquer pessoa tem a liberdade de executar, estudar, modificar e distribuir seu código-fonte. Isso o torna extremamente versátil, podendo ser executado em uma ampla variedade de dispositivos, desde servidores e <em>mainframes</em> até <em>smartphones</em> e dispositivos <em>IoT</em> (internet das coisas). O Linux se posiciona como uma alternativa a plataformas proprietárias como Windows e macOS, amplamente adotadas, mas mais restritivas em termos de customização e custos de licença.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="do-hardware-ao-sistema"><a class="header" href="#do-hardware-ao-sistema">Do Hardware ao Sistema</a></h1>
-<p>Antes de abrir o terminal ou digitar o primeiro comando, é importante entender alguns conceitos iniciais. Este capítulo constrói a base conceitual que sustenta tudo o que vem depois.</p>
-<p>Começamos pelos dispositivos: desktops, smartphones, servidores e sistemas embarcados, cada um com sua arquitetura, propósito e restrições de hardware.</p>
-<p>Em seguida, vemos o que é software e como ele se organiza, da distinção entre software de sistema e software de aplicação até os conceitos de código aberto e software livre que estão no coração do Linux.
-Depois, exploramos os principais sistemas operacionais, do Windows ao macOS, passando pelo Linux e pelos sistemas móveis, com atenção especial aos SOs voltados para servidores.</p>
-<p>Com essa base, entramos nas distribuições Linux: o que são, por que existem tantas e como se organizam nas três grandes famílias, Debian, Red Hat e Arch, além de outras relevantes.</p>
-<p>Em seguida, olhamos para a camada visual do Linux, os ambientes de desktop: GNOME, KDE Plasma, XFCE e Cinnamon, cada um com uma filosofia distinta de uso. Por fim, para quem quiser ir além, apresentamos os gerenciadores de janelas em mosaico, uma categoria de interface radicalmente diferente, onde o teclado substitui o mouse.</p>
+<p>Antes de entender melhor como o sistema funciona e escrever os primeiros comandos no terminal, temos que construir uma base conceitual que sustentará tudo que vem depois.</p>
+<p>Começamos pelos dispositivos, como desktops, smartphones, servidores e sistemas embarcados; em seguida, vemos o que é software e como ele se organiza, para depois explorarmos os principais sistemas operacionais.</p>
+<p>Com essa base, entramos nas distribuições Linux: o que são, por que existem tantas e como se organizam nas três grandes famílias: Debian, Red Hat e Arch.</p>
+<p>Olhamos, por fim, para a camada visual do Linux: os ambientes de desktop e os gerenciadores de janelas em mosaico.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="dispositivos"><a class="header" href="#dispositivos">Dispositivos</a></h1>
 <h2 id="computadores-de-uso-geral-desktoplaptop"><a class="header" href="#computadores-de-uso-geral-desktoplaptop">Computadores de Uso Geral (Desktop/Laptop)</a></h2>
-<p>São projetados para serem versáteis. O hardware é dimensionado para cargas de trabalho variadas, desde tarefas simples como digitar um texto até renderização de vídeos pesados.</p>
+<p>O hardware é dimensionado para cargas de trabalho variadas, desde tarefas simples como digitar um texto até renderização de vídeos pesados.</p>
 <ul>
 <li>
 <p><strong>Arquitetura:</strong> geralmente baseada em <em>x86/x64</em> (<em>Intel</em> ou <em>AMD</em>);</p>
@@ -209,7 +207,7 @@ Depois, exploramos os principais sistemas operacionais, do Windows ao macOS, pas
 </li>
 </ul>
 <h2 id="dispositivos-móveis-smartphonestablets"><a class="header" href="#dispositivos-móveis-smartphonestablets">Dispositivos Móveis (Smartphones/Tablets)</a></h2>
-<p>Projetados para portabilidade e consumo de conteúdo. O hardware é otimizado para eficiência energética, priorizando autonomia de bateria sem sacrificar o desempenho em tarefas do dia a dia.</p>
+<p>O hardware é otimizado para eficiência energética, priorizando autonomia de bateria sem sacrificar o desempenho em tarefas do dia a dia.</p>
 <ul>
 <li>
 <p><strong>Arquitetura:</strong> baseada em <em>ARM</em> (<em>Apple Silicon</em>, <em>Qualcomm Snapdragon</em>, <em>MediaTek</em>);</p>
@@ -229,7 +227,7 @@ Depois, exploramos os principais sistemas operacionais, do Windows ao macOS, pas
 </li>
 </ul>
 <h2 id="sistemas-embarcados-embedded-systems"><a class="header" href="#sistemas-embarcados-embedded-systems">Sistemas Embarcados (Embedded Systems)</a></h2>
-<p>É aqui que entram o <em>Arduino</em>, <em>ESP32</em> e <em>Raspberry Pi</em>. Um sistema embarcado é um sistema dedicado a executar uma função específica, integrado ao produto final.</p>
+<p>Um sistema embarcado é um sistema dedicado a executar uma função específica, integrado ao produto final.</p>
 <ul>
 <li>
 <p><strong>Microcontroladores</strong> (ex.: <em>Arduino</em>, <em>ESP32</em>):</p>
@@ -253,25 +251,16 @@ Depois, exploramos os principais sistemas operacionais, do Windows ao macOS, pas
 <p>Todo software se encaixa em uma de duas grandes categorias:</p>
 <ul>
 <li>
-<p><strong>Software de Sistema:</strong> responsável por gerenciar o hardware e criar o ambiente onde os demais programas rodam, é aqui que entram os <em>sistemas operacionais</em> como <em>Windows</em>, <em>macOS</em> e <em>Linux</em>, e os <em>drivers</em>, que permitem ao sistema operacional se comunicar com os dispositivos de hardware conectados ao computador;</p>
+<p><strong>Software de Sistema:</strong> responsável por gerenciar o hardware e criar o ambiente onde os demais programas rodam, é aqui que entram os <em>sistemas operacionais</em> como <em>Windows</em>, <em>macOS</em> e <em>Linux</em>, e os <em>drivers</em>;</p>
 </li>
 <li>
 <p><strong>Software de Aplicação:</strong> programas que usamos no dia a dia, como navegadores, editores de texto, jogos e aplicativos.</p>
 </li>
 </ul>
-<p>Por baixo de tudo, o software é escrito em <em>linguagens de programação</em>, instruções que os desenvolvedores usam para dizer ao computador o que executar. Esse processo de tradução pode ocorrer de duas formas:</p>
-<ul>
-<li>
-<p><strong>Compilação:</strong> todo o código é traduzido de uma vez para linguagem de máquina (zeros e uns), gerando um arquivo executável;</p>
-</li>
-<li>
-<p><strong>Interpretação:</strong> o código é lido e traduzido linha por linha, na hora em que o programa está rodando, sem gerar um executável separado.</p>
-</li>
-</ul>
 <p>Outros dois conceitos muito conhecidos são:</p>
 <ul>
 <li>
-<p><strong>Software Open-source (código aberto):</strong> programas cujo código-fonte é público e pode ser lido, modificado e redistribuído por qualquer pessoa. O Linux é o exemplo mais famoso, mas o modelo aberto está por trás de boa parte da infraestrutura da internet moderna, de servidores a aplicações em nuvem;</p>
+<p><strong>Software Open-source (código aberto):</strong> programas cujo código-fonte é público e pode ser lido, modificado e redistribuído por qualquer pessoa.</p>
 </li>
 <li>
 <p><strong>Software Livre (<em>free software</em>):</strong> termo relacionado, mas com ênfase na liberdade do usuário mais do que na abertura do código, a diferença é sutil, porém importante, e é um tema que revisitaremos ao falar sobre licenças.</p>
@@ -332,125 +321,89 @@ Depois, exploramos os principais sistemas operacionais, do Windows ao macOS, pas
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="distribuições"><a class="header" href="#distribuições">Distribuições</a></h1>
-<p>Uma das características mais marcantes do Linux é a variedade, ao contrário do Windows ou macOS, não existe “um Linux”, mas dezenas de versões construídas sobre o mesmo núcleo, cada uma com objetivos e públicos distintos.</p>
-<h2 id="o-que-é-uma-distribuição-linux"><a class="header" href="#o-que-é-uma-distribuição-linux">O que é uma distribuição Linux?</a></h2>
-<p>Tecnicamente falando Linux é apenas o <em>kernel</em>, o núcleo do sistema operacional, ele gerencia o <em>hardware</em>, a memória e os processos. Mas um <em>kernel</em> sozinho não é um sistema utilizável. Para isso, é preciso empacotá-lo junto com ferramentas, interfaces gráficas, gerenciadores de pacotes, utilitários e configurações. Esse pacote completo é o que chamamos de distribuição ou distro.</p>
+<p>Tecnicamente falando, Linux é apenas o kernel, o núcleo do sistema operacional, que gerencia o hardware, a memória e os processos. Mas um kernel sozinho não é um sistema utilizável. Para isso, é preciso empacotá-lo junto com ferramentas, interfaces gráficas, gerenciadores de pacotes, utilitários e configurações. Esse pacote completo é o que chamamos de distribuição ou distro.</p>
 <h2 id="as-três-grandes-famílias"><a class="header" href="#as-três-grandes-famílias">As três grandes famílias</a></h2>
 <h3 id="debian"><a class="header" href="#debian">Debian</a></h3>
-<p>A <a href="https://www.debian.org/">Debian</a> nasceu em 1993 e foi construída com um princípio muito claro: <em>software livre</em>, estabilidade e governança comunitária. Ela criou o formato de pacotes <code>.deb</code> e o gerenciador <code>apt</code> (construído sobre o <code>dpkg</code>, a ferramenta base de gerenciamento de pacotes), que se tornaram padrão em boa parte do mundo Linux.</p>
-<p>A filha mais famosa do Debian é o <a href="https://ubuntu.com/">Ubuntu</a>, lançado pela Canonical em 2004 com o objetivo de tornar o Linux acessível para o usuário comum. O Ubuntu teve tanto sucesso que gerou uma família própria: o <a href="https://linuxmint.com/">Linux Mint</a> (focado em facilidade de uso), o <a href="https://pop.system76.com/">Pop!_OS</a> (voltado para criadores e <em>gamers</em>), o <a href="https://zorin.com/os/">Zorin OS</a> (desenhado para quem vem do Windows) e muitas outras.</p>
+<p>A <a href="https://www.debian.org/">Debian</a> nasceu em 1993 e foi construída com um princípio muito claro: software livre, estabilidade e governança comunitária. Ela criou o formato de pacotes <code>.deb</code> e o gerenciador <code>apt</code> (construído sobre o <code>dpkg</code>, a ferramenta base de gerenciamento de pacotes), que se tornaram padrão em boa parte do mundo Linux.</p>
+<ul>
+<li>Principais distribuições filhas: <a href="https://ubuntu.com/">Ubuntu</a> e <a href="https://linuxmint.com/">Linux Mint</a>.</li>
+</ul>
 <h3 id="red-hat"><a class="header" href="#red-hat">Red Hat</a></h3>
 <p>A <a href="https://www.redhat.com/">Red Hat</a> foi pioneira na ideia de que era possível construir um negócio em torno de software livre. Ela adotou e consolidou o formato <code>.rpm</code> e o sistema de pacotes <code>yum/dnf</code>. Sua distribuição empresarial, o <a href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">RHEL (Red Hat Enterprise Linux)</a>, é amplamente usada em servidores corporativos e ambientes críticos.</p>
-<p>Para quem quer a robustez do RHEL sem pagar pelo suporte, existem clones comunitários como o <a href="https://almalinux.org/">AlmaLinux</a> e o <a href="https://rockylinux.org/">Rocky Linux</a>. Já o <a href="https://fedoraproject.org/">Fedora</a> funciona como laboratório de inovação da Red Hat, onde as novidades são testadas antes de chegar ao RHEL.</p>
+<ul>
+<li>Principais distribuições filhas: <a href="https://fedoraproject.org/">Fedora</a> e <a href="https://rockylinux.org/">Rocky Linux</a>.</li>
+</ul>
 <h3 id="arch-linux"><a class="header" href="#arch-linux">Arch Linux</a></h3>
-<p>A <a href="https://archlinux.org/">Arch</a> tem uma filosofia completamente diferente. Ela é rolling release: não tem versões, o sistema é atualizado continuamente com os pacotes mais recentes. Tradicionalmente, a instalação é feita do zero, sem assistentes gráficos, e o usuário monta o sistema peça por peça. Embora hoje exista também um script oficial opcional, o archinstall, para quem prefere um caminho guiado. Isso a torna complexa para iniciantes, mas muito popular entre entusiastas.</p>
-<p>O <a href="https://manjaro.org/">Manjaro</a> surgiu para tornar a experiência Arch mais acessível, com um instalador gráfico e pacotes pré-configurados. O <a href="https://endeavouros.com/">EndeavourOS</a> segue caminho parecido, mas fica bem mais próximo da Arch pura.</p>
-<h3 id="outras-famílias-relevantes"><a class="header" href="#outras-famílias-relevantes">Outras famílias relevantes</a></h3>
+<p>A <a href="https://archlinux.org/">Arch</a> tem uma filosofia completamente diferente: é rolling release, ou seja, não tem versões — o sistema é atualizado continuamente com os pacotes mais recentes. Tradicionalmente, a instalação é feita do zero, sem assistentes gráficos, e o usuário monta o sistema peça por peça. Hoje existe também um script oficial opcional, o archinstall, para quem prefere um caminho guiado.</p>
+<ul>
+<li>Principais distribuições filhas: <a href="https://manjaro.org/">Manjaro</a> e <a href="https://endeavouros.com/">EndeavourOS</a>.</li>
+</ul>
+<h2 id="outras-famílias-relevantes"><a class="header" href="#outras-famílias-relevantes">Outras famílias relevantes</a></h2>
 <p>Além dessas três, outras distribuições com linhagens próprias merecem menção.</p>
-<h4 id="opensuse"><a class="header" href="#opensuse">openSUSE</a></h4>
-<p>O <a href="https://www.opensuse.org/">openSUSE</a> tem uma linhagem própria, com a versão <em>Leap</em> (estável e previsível) e a <em>Tumbleweed</em> (<em>rolling release</em> como a Arch). É muito usada em ambientes profissionais na Europa.</p>
-<h4 id="gentoo"><a class="header" href="#gentoo">Gentoo</a></h4>
-<p>O <a href="https://www.gentoo.org/">Gentoo</a> é a distribuição onde você compila tudo. Cada pacote é compilado localmente com as otimizações que você definir. Extremamente poderosa, mas extremamente trabalhosa.</p>
-<h4 id="slackware"><a class="header" href="#slackware">Slackware</a></h4>
+<h3 id="opensuse"><a class="header" href="#opensuse">openSUSE</a></h3>
+<p>O <a href="https://www.opensuse.org/">openSUSE</a> tem uma linhagem própria, com a versão Leap (estável e previsível) e a Tumbleweed (rolling release como a Arch).</p>
+<h3 id="gentoo"><a class="header" href="#gentoo">Gentoo</a></h3>
+<p>O <a href="https://www.gentoo.org/">Gentoo</a> é a distribuição onde você compila tudo. Cada pacote é compilado localmente com as otimizações que você definir.</p>
+<h3 id="slackware"><a class="header" href="#slackware">Slackware</a></h3>
 <p>O <a href="http://www.slackware.com/">Slackware</a>, lançado em 1993, é a distribuição ativa mais antiga. Sem gerenciador de dependências automático e com um instalador minimalista em modo texto, é sinônimo de purismo total.</p>
-<h4 id="nixos"><a class="header" href="#nixos">NixOS</a></h4>
-<p>O <a href="https://nixos.org/">NixOS</a> representa uma abordagem radicalmente diferente: o sistema inteiro é descrito por um arquivo de configuração <em>declarativo</em>. Qualquer mudança pode ser revertida. É fascinante e cresceu muito nos últimos anos entre desenvolvedores.</p>
+<h3 id="nixos"><a class="header" href="#nixos">NixOS</a></h3>
+<p>O <a href="https://nixos.org/">NixOS</a> representa uma abordagem radicalmente diferente: o sistema inteiro é descrito por um arquivo de configuração declarativo. Qualquer mudança pode ser revertida.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="desktop-environments"><a class="header" href="#desktop-environments">Desktop Environments</a></h1>
-<p>Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto, um fundo personalizável e um menu de aplicativos, está olhando para uma construção inteiramente separada do kernel. Equipes inteiras de desenvolvedores precisaram escrever todo aquele ambiente do zero. O kernel não entregou nada disso de bandeja. Entre o kernel e o ambiente gráfico existe ainda uma camada intermediária chamada servidor gráfico, hoje dividida entre o <em>Wayland</em>, cada vez mais adotado, e o <em>X11</em>, ainda amplamente utilizado, responsável por traduzir as instruções do sistema em imagens na tela.</p>
-<p>Essa é a camada visual que fica entre você e o sistema operacional. No Linux, diferente do Windows ou do macOS, essa camada é intercambiável: você escolhe qual prefere, e cada opção tem uma filosofia própria. A seguir, um panorama dos mais populares.</p>
+<p>Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto e um fundo personalizável, está olhando para uma construção inteiramente separada do kernel: desenvolvedores precisaram escrever todo aquele ambiente do zero.</p>
+<p>Entre o kernel e o ambiente gráfico existe ainda uma camada intermediária chamada servidor gráfico, responsável por traduzir as instruções do sistema em imagens na tela. Hoje ela está dividida entre o <em>Wayland</em>, cada vez mais adotado, e o <em>X11</em>, ainda amplamente utilizado.</p>
+<p>Vale destacar que o ambiente de desktop é independente da distribuição escolhida. A grande maioria das distribuições permite instalar e alternar entre diferentes ambientes gráficos, e muitas oferecem variações oficiais, cada uma vindo com um ambiente diferente já configurado por padrão. Escolher uma distribuição e escolher um ambiente de desktop são, na prática, decisões separadas.</p>
 <h2 id="um-ecossistema-muitas-filosofias"><a class="header" href="#um-ecossistema-muitas-filosofias">Um ecossistema, muitas filosofias</a></h2>
 <h3 id="gnome"><a class="header" href="#gnome">GNOME</a></h3>
-<p>O GNOME aposta em simplicidade e coerência. Sua filosofia é reduzir o número de decisões que o usuário precisa tomar: poucos botões expostos, fluxos bem definidos, estética limpa e moderna. A área de trabalho é quase vazia por padrão, o foco está nas “Atividades”, um painel central que organiza tarefas e aplicativos abertos.</p>
-<p>Por ser visualmente rico e moderno, funciona melhor em máquinas com pelo menos 4 GB de memória RAM. O gerenciador de arquivos padrão é o Nautilus.</p>
-<ul>
-<li><strong>Parecido com:</strong> macOS (minimalismo e fluxo de trabalho baseado em atividades), com ressalva: a semelhança é mais estética do que funcional: o GNOME tem lógica própria;</li>
-<li><strong>Ideal para:</strong> quem quer algo que “simplesmente funciona”, com foco em produtividade e organização sem distrações;</li>
-<li><strong>Onde encontrar:</strong> Ubuntu, Fedora, Debian, é o ambiente padrão em muitas das grandes distribuições.</li>
-</ul>
+<p>O <a href="https://www.gnome.org/">GNOME</a> aposta em simplicidade e coerência. Sua filosofia é reduzir o número de decisões que o usuário precisa tomar: poucos botões expostos, fluxos bem definidos, estética limpa e moderna. A área de trabalho é quase vazia por padrão. O foco está nas “atividades”, um painel central que organiza tarefas e aplicativos abertos.</p>
 <h3 id="kde-plasma"><a class="header" href="#kde-plasma">KDE Plasma</a></h3>
-<p>O KDE Plasma vai na direção oposta ao GNOME. É um ambiente profundamente configurável, onde praticamente tudo pode ser ajustado: posição da barra de tarefas, comportamento dos ícones, atalhos de teclado, temas visuais e efeitos de janela. É possível adicionar widgets diretamente na área de trabalho, criar temas personalizados e muito mais.</p>
-<p>Para quem gosta de controlar cada detalhe do próprio ambiente, o KDE é quase um playground. E apesar de todo esse poder, ele é surpreendentemente eficiente, funcionando bem em hardware com recursos moderados. O gerenciador de arquivos padrão é o Dolphin, completo e fácil de usar.</p>
-<ul>
-<li><strong>Parecido com:</strong> Windows 10/11 (em aparência e familiaridade);</li>
-<li><strong>Ideal para:</strong> usuários que querem uma interface familiar, porém altamente personalizável;</li>
-<li><strong>Onde encontrar:</strong> Kubuntu, Manjaro KDE, openSUSE.</li>
-</ul>
+<p>O <a href="https://kde.org/plasma-desktop/">KDE Plasma</a> vai na direção oposta ao GNOME. É um ambiente profundamente configurável, onde praticamente tudo pode ser ajustado: posição da barra de tarefas, comportamento dos ícones, atalhos de teclado, temas visuais e efeitos de janela. É possível adicionar widgets diretamente na área de trabalho, criar temas personalizados e muito mais.</p>
+<h3 id="cosmic"><a class="header" href="#cosmic">COSMIC</a></h3>
+<p>O <a href="https://system76.com/cosmic">COSMIC</a> é um ambiente relativamente novo, desenvolvido do zero por uma empresa fabricante de computadores focada em Linux. Diferente da maioria dos ambientes tradicionais, foi escrito em uma linguagem de programação moderna voltada para segurança e desempenho. Ainda em evolução ativa, busca unir uma estética contemporânea com um modelo de configuração simples e direto.</p>
 <h3 id="xfce"><a class="header" href="#xfce">XFCE</a></h3>
-<p>O XFCE nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente, sem excessos.</p>
-<p>Apesar da aparência mais tradicional, o XFCE é bem personalizável e pode ser ajustado conforme a necessidade. O gerenciador de arquivos padrão é o Thunar, conhecido por ser rápido e direto ao ponto.</p>
-<ul>
-<li><strong>Parecido com:</strong> interfaces tradicionais de desktop, com barra de tarefas fixa e menus convencionais, mas com consumo de recursos muito inferior;</li>
-<li><strong>Ideal para:</strong> máquinas mais antigas ou usuários que priorizam desempenho e leveza;</li>
-<li><strong>Onde encontrar:</strong> Xubuntu, MX Linux, Linux Mint (edição XFCE).</li>
-</ul>
-<h3 id="lxqt"><a class="header" href="#lxqt">LXQt</a></h3>
-<p>O LXQt caminha numa direção parecida com o XFCE, mas com uma base tecnológica mais moderna. É o sucessor espiritual do antigo LXDE e tornou-se a escolha preferida de distribuições voltadas para hardware de baixo desempenho.</p>
-<p>Assim como o XFCE, entrega uma experiência gráfica funcional com consumo mínimo de recursos, mas com componentes mais atuais por baixo dos panos. O gerenciador de arquivos padrão é o <em>PCManFM-Qt</em>, leve e funcional.</p>
-<ul>
-<li><strong>Ideal para:</strong> hardware muito limitado, máquinas antigas onde até o XFCE pode pesar;</li>
-<li><strong>Onde encontrar:</strong> Lubuntu, Manjaro LXQt.</li>
-</ul>
+<p>O <a href="https://www.xfce.org/">XFCE</a> nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente, sem excessos.</p>
+<h3 id="mate"><a class="header" href="#mate">MATE</a></h3>
+<p>O <a href="https://mate-desktop.org/">MATE</a> nasceu como uma continuação do GNOME 2, num momento em que parte da comunidade não se identificou com as mudanças trazidas pelo GNOME 3. Ele preserva a metáfora clássica de área de trabalho, com painéis, menus tradicionais e ícones na tela. É uma opção leve e familiar para quem prefere esse modelo mais convencional, e é uma das alternativas oferecidas pelo Linux Mint.</p>
 <h3 id="cinnamon"><a class="header" href="#cinnamon">Cinnamon</a></h3>
-<p>O Cinnamon foi criado pelos desenvolvedores do Linux Mint com um objetivo bastante claro: oferecer uma experiência familiar para quem vem do Windows. Barra de tarefas embaixo, menu de aplicativos no canto esquerdo, janelas que se comportam de forma previsível.</p>
-<p>Ele combina essa familiaridade com um visual moderno e elegante, além de boas opções de personalização. É confortável, polido e tem uma das menores curvas de adaptação para novos usuários Linux. O gerenciador de arquivos padrão é o Nemo.</p>
-<ul>
-<li><strong>Parecido com:</strong> Windows 10 (interface intuitiva e familiar);</li>
-<li><strong>Ideal para:</strong> usuários migrando do Windows pela primeira vez, é uma das melhores portas de entrada para o Linux;</li>
-<li><strong>Onde encontrar:</strong> Linux Mint.</li>
-</ul>
+<p>O <a href="https://projects.linuxmint.com/cinnamon/">Cinnamon</a> foi criado pelos desenvolvedores do Linux Mint com um objetivo bastante claro: oferecer uma experiência familiar para quem vem do Windows. Tem barra de tarefas na parte inferior, menu de aplicativos no canto esquerdo e janelas que se comportam de forma previsível.</p>
+<h3 id="lxqt"><a class="header" href="#lxqt">LXQt</a></h3>
+<p>O <a href="https://lxqt-project.org/">LXQt</a> caminha numa direção parecida com o XFCE, mas com uma base tecnológica mais moderna. É o sucessor espiritual do antigo LXDE e tornou-se a escolha preferida de distribuições voltadas para hardware de baixo desempenho.</p>
+<h3 id="budgie"><a class="header" href="#budgie">Budgie</a></h3>
+<p>O <a href="https://buddiesofbudgie.org/">Budgie</a> nasceu com o objetivo de oferecer uma experiência elegante e simples, sem abrir mão de recursos modernos. Foi criado originalmente para uma distribuição específica, mas hoje é mantido de forma independente para funcionar em diferentes sistemas. Sua proposta central é equilibrar praticidade visual com um conjunto enxuto de opções de configuração.</p>
 <h2 id="por-que-tantos"><a class="header" href="#por-que-tantos">Por que tantos?</a></h2>
 <p>Essa multiplicidade não é fragmentação: é liberdade com consequências práticas, sejam elas boas ou não. O mundo Linux é fértil em novos projetos, muitos nascidos como ramificações de iniciativas já existentes. Isso faz surgir novas opções e atrai desenvolvedores que, ao conhecer esses projetos, acabam contribuindo para eles.</p>
 <p>Há quem defenda que parte desse esforço deveria ser redirecionado para projetos já consolidados. Mas isso vai contra a filosofia Unix e tudo que o Linux compartilha há décadas: projetos antigos continuam recebendo atualizações, novos projetos surgem com o tempo, e cada pessoa tem o direito de decidir onde dedica sua energia.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tiling-window-managers"><a class="header" href="#tiling-window-managers">Tiling Window Managers</a></h1>
-<p>Existe uma categoria de interface que fica um passo além dos ambientes de trabalho tradicionais. Os gerenciadores de janelas em mosaico, ou <em>tiling window managers</em> (TWMs), não entregam uma área de trabalho no sentido convencional: sem ícones na tela, sem barra de tarefas clicável, sem mouse obrigatório. O que entregam é controle total sobre onde cada janela fica, e fazem isso de forma automática.</p>
-<p>Ao abrir um programa, ele ocupa a tela inteira. Ao abrir um segundo, a tela se divide ao meio. Um terceiro, e a divisão se reorganiza novamente. Cada janela encaixa ao lado da outra como peças de um quebra-cabeça, sem sobreposição, sem espaço vazio. O nome <em>tiling</em>, em inglês, significa azulejo, e o comportamento é exatamente esse.</p>
-<h2 id="os-mais-populares"><a class="header" href="#os-mais-populares">Os mais populares</a></h2>
-<h3 id="i3"><a class="header" href="#i3">i3</a></h3>
-<p>Provavelmente o ponto de entrada mais acessível. Sua configuração é feita por um único arquivo de texto legível, e a curva de aprendizado, apesar de real, é bem documentada. É estável, amplamente adotado e tem uma comunidade ativa. Muitos usuários que partem do i3 nunca voltam para ambientes tradicionais.</p>
-<ul>
-<li><strong>Roda sobre:</strong> X11;</li>
-<li><strong>Ideal para:</strong> quem está começando com TWMs e quer a curva de aprendizado mais suave, com bastante documentação disponível;</li>
-</ul>
-<h3 id="sway"><a class="header" href="#sway">Sway</a></h3>
-<p>O sucessor espiritual do i3: compatível com sua configuração, mas construído sobre o Wayland em vez do X11. Para quem quer modernidade por baixo sem reaprender tudo por cima, é a transição natural.</p>
-<ul>
-<li><strong>Roda sobre:</strong> Wayland;</li>
-<li><strong>Ideal para:</strong> usuários de i3 que querem migrar para Wayland sem reaprender tudo do zero;</li>
-</ul>
-<h3 id="dwm"><a class="header" href="#dwm">dwm</a></h3>
-<p>Uma filosofia de software que leva o minimalismo ao extremo. O código é extremamente enxuto, com pouco menos de duas mil linhas. Não há arquivo de configuração: você edita o código-fonte diretamente e recompila.</p>
-<ul>
-<li><strong>Roda sobre:</strong> X11;</li>
-<li><strong>Ideal para:</strong> entusiastas de minimalismo extremo, confortáveis em editar e recompilar o código-fonte para configurar o ambiente;</li>
-</ul>
-<h3 id="bspwm"><a class="header" href="#bspwm">bspwm</a></h3>
-<p>Adota uma abordagem diferente: não interpreta atalhos de teclado por conta própria. Toda interação é feita por meio de mensagens enviadas por outros programas, o que significa que um programa separado, como o <code>sxhkd</code>, precisa ser configurado para mapear os atalhos de teclado. Isso o torna extremamente flexível para quem quer montar um ambiente completamente personalizado do zero.</p>
-<ul>
-<li><strong>Roda sobre:</strong> X11;</li>
-<li><strong>Ideal para:</strong> um ambiente completamente personalizado do zero, combinando ferramentas externas;</li>
-</ul>
+<p>Os gerenciadores de janelas em mosaico, ou <em>tiling window managers</em> (TWMs), não entregam uma área de trabalho no sentido convencional: sem ícones na tela, sem barra de tarefas clicável, sem mouse obrigatório. O que entregam é controle total sobre onde cada janela fica, e fazem isso de forma automática.</p>
+<p>Ao abrir um programa, ele ocupa a tela inteira. Ao abrir um segundo, a tela se divide ao meio. Um terceiro programa faz a divisão se reorganizar novamente, e assim por diante. Cada janela encaixa ao lado da outra como peças de um quebra-cabeça, sem sobreposição, sem espaço vazio. O nome <em>tiling</em>, em inglês, significa azulejo, e o comportamento é exatamente esse.</p>
+<p>Assim como os ambientes de desktop tradicionais, os TWMs também se dividem entre os que rodam sobre o <em>Wayland</em> e os que rodam sobre o <em>X11</em>.</p>
+<h2 id="wayland"><a class="header" href="#wayland">Wayland</a></h2>
 <h3 id="hyprland"><a class="header" href="#hyprland">Hyprland</a></h3>
-<p>Um dos TWMs que mais cresceram em popularidade nos últimos anos. Trouxe algo que os TWMs clássicos evitam: animações, janelas que deslizam, bordas arredondadas, efeitos visuais. É a aposta de quem quer o melhor dos dois mundos.</p>
-<ul>
-<li><strong>Roda sobre:</strong> Wayland;</li>
-<li><strong>Ideal para:</strong> quem busca a lógica de mosaico sem abrir mão de animações e efeitos visuais modernos;</li>
-</ul>
-<h3 id="qtile"><a class="header" href="#qtile">Qtile</a></h3>
-<p>Uma proposta diferente dentro do universo dos TWMs: é configurado e estendido inteiramente em Python. Em vez de editar arquivos de texto com sintaxe própria, o usuário escreve código Python para definir layouts, atalhos, barras e comportamentos.</p>
-<ul>
-<li><strong>Roda sobre:</strong> X11 e Wayland;</li>
-<li><strong>Ideal para:</strong> programadores Python que buscam configurar o ambiente escrevendo código em vez de arquivos de configuração próprios;</li>
-</ul>
+<p>O <a href="https://hyprland.org/">hyprland</a> é um dos TWMs que mais cresceram em popularidade nos últimos anos. Trouxe algo que os TWMs clássicos evitam: animações, janelas que deslizam, bordas arredondadas, efeitos visuais. É a aposta de quem quer o melhor dos dois mundos.</p>
+<h3 id="sway"><a class="header" href="#sway">Sway</a></h3>
+<p>O sucessor espiritual do i3, <a href="https://swaywm.org/">swaywm</a> é compatível com sua configuração, mas construído sobre o Wayland em vez do X11. Para quem quer modernidade por baixo sem reaprender tudo por cima, é a transição natural.</p>
 <h3 id="niri"><a class="header" href="#niri">Niri</a></h3>
-<p>Um TWM com uma proposta distinta: em vez do layout de mosaico tradicional, organiza as janelas em colunas rolantes (<em>scrollable tiling</em>), como uma fita horizontal infinita.</p>
-<ul>
-<li><strong>Roda sobre:</strong> Wayland;</li>
-<li><strong>Ideal para:</strong> quem busca uma alternativa mais fluida ao Sway e ao Hyprland, com organização em colunas rolantes;</li>
-</ul>
+<p>Um TWM com uma proposta distinta, o <a href="https://github.com/YaLTeR/niri">niri</a> em vez do layout de mosaico tradicional, organiza as janelas em colunas rolantes (<em>scrollable tiling</em>), como uma fita horizontal infinita.</p>
+<h3 id="river"><a class="header" href="#river">River</a></h3>
+<p>Um TWM minimalista, o <a href="https://isaacfreund.com/software/river/">river</a> é um núcleo enxuto, com comportamento definido por meio de um programa externo de configuração. Isso mantém o projeto pequeno e fácil de entender, ao custo de exigir mais trabalho manual do usuário.</p>
+<h3 id="wayfire"><a class="header" href="#wayfire">Wayfire</a></h3>
+<p>O <a href="https://wayfire.org/">wayfire</a> une o conceito de tiling a um sistema de plugins que permite adicionar efeitos visuais, animações e comportamentos personalizados. É uma opção para quem vem de ambientes mais visuais e não quer abrir mão completamente desses recursos.</p>
+<h2 id="x11"><a class="header" href="#x11">X11</a></h2>
+<h3 id="i3"><a class="header" href="#i3">i3</a></h3>
+<p>Provavelmente o ponto de entrada mais acessível, o <a href="https://i3wm.org/">i3wm</a> trás uma configuração baseada em um único arquivo de texto legível, e a curva de aprendizado é bem documentada. É estável, amplamente adotado e tem uma comunidade ativa.</p>
+<h3 id="awesomewm"><a class="header" href="#awesomewm">AwesomeWM</a></h3>
+<p>Um TWM altamente configurável e estendido por meio da linguagem Lua, <a href="https://awesomewm.org/">awesomewm</a> permite criar barras de status, widgets e comportamentos personalizados com bastante liberdade, sendo uma escolha comum entre quem gosta de programar sua própria interface.</p>
+<h3 id="bspwm"><a class="header" href="#bspwm">bspwm</a></h3>
+<p>O <a href="https://github.com/baskerville/bspwm">bspwm</a> não interpreta atalhos de teclado por conta própria. Toda interação é feita por meio de mensagens enviadas por outros programas, o que significa que um programa separado, como o <code>sxhkd</code>, precisa ser configurado para mapear os atalhos de teclado. Isso o torna extremamente flexível para quem quer montar um ambiente completamente personalizado do zero.</p>
+<h3 id="qtile"><a class="header" href="#qtile">Qtile</a></h3>
+<p>Uma proposta diferente dentro do universo dos TWMs, o <a href="https://qtile.org/">qtile</a> é configurado e estendido inteiramente em Python. Em vez de editar arquivos de texto com sintaxe própria, o usuário escreve código Python para definir layouts, atalhos, barras e comportamentos.</p>
+<h3 id="dwm"><a class="header" href="#dwm">dwm</a></h3>
+<p>Uma filosofia de software que leva o minimalismo ao extremo, o <a href="https://dwm.suckless.org/">dwm</a> possui um código extremamente enxuto, com pouco menos de duas mil linhas. Não há arquivo de configuração: você edita o código-fonte diretamente e recompila.</p>
+<h3 id="xmonad"><a class="header" href="#xmonad">xmonad</a></h3>
+<p>O  <a href="https://xmonad.org/">xmonad.org</a> é escrito e configurado na linguagem Haskell. Sua configuração é, na prática, um pequeno programa, o que atrai principalmente usuários já familiarizados com programação funcional. É extremamente estável, ainda que exija uma curva de aprendizado mais acentuada para quem não conhece a linguagem.</p>
 <h2 id="o-que-esperar-da-experiência"><a class="header" href="#o-que-esperar-da-experiência">O que esperar da experiência</a></h2>
-<p>Usar um TWM pela primeira vez é desorientante, pois não há nada na tela além do que você colocou lá. Nenhuma pista visual, nenhum menu de boas-vindas. A produtividade inicial cai, e a configuração consome tempo.</p>
+<p>Usar um TWM pela primeira vez é desorientador, pois não há nada na tela além do que você colocou lá. Nenhuma pista visual, nenhum menu de boas-vindas. A produtividade inicial cai, e a configuração consome tempo.</p>
 <p>Com algumas semanas de uso, a lógica começa a fazer sentido, o teclado se torna uma extensão do pensamento, e mover o mouse para clicar em algo passa a parecer lento. Muitos usuários descrevem a transição como irreversível.</p>
 <p>É uma categoria ideal para desenvolvedores, administradores de sistemas e qualquer pessoa que passe horas por dia no terminal, mas não é recomendada para quem está começando no Linux ou precisa de uma experiência imediata sem curva de aprendizado.</p>
 <div style="break-before: page; page-break-before: always;"></div>
