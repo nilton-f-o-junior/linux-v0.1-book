@@ -2,7 +2,7 @@
 
 ## Computadores de Uso Geral (Desktop/Laptop)
 
-São projetados para serem versáteis. O hardware é dimensionado para cargas de trabalho variadas, desde tarefas simples como digitar um texto até renderização de vídeos pesados.
+O hardware é dimensionado para cargas de trabalho variadas, desde tarefas simples como digitar um texto até renderização de vídeos pesados.
 
 - **Arquitetura:** geralmente baseada em *x86/x64* (*Intel* ou *AMD*);
 
@@ -10,7 +10,7 @@ São projetados para serem versáteis. O hardware é dimensionado para cargas de
 
 ## Dispositivos Móveis (Smartphones/Tablets)
 
-Projetados para portabilidade e consumo de conteúdo. O hardware é otimizado para eficiência energética, priorizando autonomia de bateria sem sacrificar o desempenho em tarefas do dia a dia.
+O hardware é otimizado para eficiência energética, priorizando autonomia de bateria sem sacrificar o desempenho em tarefas do dia a dia.
 
 - **Arquitetura:** baseada em *ARM* (*Apple Silicon*, *Qualcomm Snapdragon*, *MediaTek*);
 
@@ -26,7 +26,7 @@ Projetados para disponibilidade contínua e atendimento simultâneo a múltiplos
 
 ## Sistemas Embarcados (Embedded Systems)
 
-É aqui que entram o *Arduino*, *ESP32* e *Raspberry Pi*. Um sistema embarcado é um sistema dedicado a executar uma função específica, integrado ao produto final.
+Um sistema embarcado é um sistema dedicado a executar uma função específica, integrado ao produto final.
 
 - **Microcontroladores** (ex.: *Arduino*, *ESP32*):
   - Em geral, não possuem sistema operacional;
