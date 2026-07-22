@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-7f8ea519.js";
+            window.path_to_searchindex_js = "../searchindex-21766e2e.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-a0cfbb35.js"></script>
@@ -175,6 +175,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="resfriamento"><a class="header" href="#resfriamento">Resfriamento</a></h1>
+<p>Todo componente eletrônico converte parte da energia em calor. À medida que diversos componentes são instalados dentro de um mesmo espaço, esse calor se acumula e pode diminuir a vida útil desses equipamentos; portanto, o uso de resfriamento é extremamente necessário</p>
 <h2 id="ventoinhas"><a class="header" href="#ventoinhas">Ventoinhas</a></h2>
 <p>As ventoinhas movem o ar: seja puxando ar fresco para dentro do gabinete, empurrando ar quente para fora ou forçando o fluxo de ar sobre as aletas de um dissipador.</p>
 <ul>
@@ -186,7 +187,7 @@
 </ul>
 <h2 id="tipos-de-resfriamento"><a class="header" href="#tipos-de-resfriamento">Tipos de resfriamento</a></h2>
 <h3 id="resfriamento-a-ar"><a class="header" href="#resfriamento-a-ar">Resfriamento a ar</a></h3>
-<p>É o modelo mais comum e suficiente para a maioria dos sistemas. Um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.</p>
+<p>É o modelo mais comum e suficiente para a maioria dos sistemas. O cooler é um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.</p>
 <p>Dentro do dissipador, é comum encontrar <em>heat pipes</em>: tubos selados contendo um fluido que evapora na parte quente, migra para a parte fria pelas aletas, condensa e retorna pela parede interna do tubo por capilaridade.</p>
 <p>Os principais formatos de cooler a ar:</p>
 <ul>
@@ -195,7 +196,7 @@
 <li><strong>Torre dupla (<em>push-pull</em>):</strong> duas torres de aletas com ventoinhas em ambos os lados, maximizando o fluxo através das aletas.</li>
 </ul>
 <h3 id="resfriamento-a-líquido"><a class="header" href="#resfriamento-a-líquido">Resfriamento a líquido</a></h3>
-<p>Em vez de depender apenas do ar, o water cooling usa um líquido (geralmente água com aditivos antialga e anticorrosivo). Um bloco metálico (waterblock) fica em contato direto com o componente; o líquido circula por ele, absorve o calor e é bombeado até um radiador, onde é dissipado para o ar pelas ventoinhas.</p>
+<p>Em vez de depender apenas do ar, o water cooler usa um líquido (geralmente água com aditivos antialga e anticorrosivo). Um bloco metálico (water block) fica em contato direto com o componente; o líquido circula por ele, absorve o calor e é bombeado até um radiador, onde é dissipado para o ar pelas ventoinhas.</p>
 <ul>
 <li><strong>AIO (<em>All-In-One</em>):</strong> circuito fechado, com bomba e reservatório integrados no cabeçote; fácil de instalar e sem manutenção.</li>
 <li><strong>Loop customizado:</strong> cada componente é escolhido e montado separadamente (reservatório, bomba, tubos, bloco e radiador). Exige conhecimento técnico maior, é mais caro e necessita de manutenções periódicas.</li>
@@ -207,7 +208,7 @@
 <h2 id="mapa-de-calor"><a class="header" href="#mapa-de-calor">Mapa de calor</a></h2>
 <p>As regiões críticas em um gabinete típico incluem a área da CPU (topo da placa-mãe), área da placa de vídeo, fonte de alimentação e a região traseira superior. Entender este mapa orienta o posicionamento estratégico de ventoinhas adicionais.</p>
 <h2 id="temperaturas-e-monitoramento-no-linux"><a class="header" href="#temperaturas-e-monitoramento-no-linux">Temperaturas e Monitoramento no Linux</a></h2>
-<p>Quando o processador se aproxima do seu limite térmico de fábrica (Tjunction ou Tmax), ele reduz automaticamente sua velocidade de operação para gerar menos calor e evitar a queima, um mecanismo de proteção chamado <em>thermal throttling</em>.</p>
+<p>Quando o processador se aproxima do seu limite térmico de fábrica, ele reduz automaticamente sua velocidade de operação para gerar menos calor e evitar a queima, um mecanismo de proteção chamado <em>thermal throttling</em>.</p>
 <p>No Linux, o monitoramento dessas métricas não depende de softwares pesados proprietários. O próprio sistema operacional expõe esses dados diretamente através do sistema de arquivos virtual <code>/sys/class/hwmon/</code>. Na prática, o administrador ou usuário utiliza ferramentas de terminal consolidadas, como o pacote <code>lm-sensors</code> (através do comando <code>sensors</code>), ou utilitários gráficos da sua distribuição para acompanhar as temperaturas em tempo real e diagnosticar problemas de arrefecimento.</p>
 
                     </main>

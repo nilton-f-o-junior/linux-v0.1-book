@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-7f8ea519.js";
+            window.path_to_searchindex_js = "../searchindex-21766e2e.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-a0cfbb35.js"></script>
@@ -175,7 +175,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="gpu"><a class="header" href="#gpu">GPU</a></h1>
-<p>GPU significa Unidade de Processamento Gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.</p>
+<p>GPU significa unidade de processamento gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.</p>
 <p>Para exibir uma cena em 3D na tela, a GPU precisa calcular a cor e posição de cada pixel, levando em conta luzes, sombras, texturas e a geometria dos objetos. Um monitor Full HD tem mais de dois milhões de pixels, a 60 quadros por segundo. Isso são mais de 120 milhões de cálculos de pixels por segundo, e cada um com várias operações matemáticas envolvidas.</p>
 <p>Nenhum processador de uso geral com poucos núcleos consegue fazer isso em tempo real. A GPU resolve o problema com paralelismo: ela divide esse trabalho em milhares de tarefas idênticas e as executa simultaneamente.</p>
 <h2 id="como-ela-processa-imagens"><a class="header" href="#como-ela-processa-imagens">Como ela processa imagens</a></h2>
@@ -190,7 +190,7 @@
 <p>Para que os softwares consigam conversar com a GPU, eles utilizam APIs gráficas (<em>Application Programming Interfaces</em>), como o OpenGL e o Vulkan. Essas interfaces funcionam como tradutores, permitindo que o desenvolvedor envie instruções de renderização que a GPU consiga processar, independentemente do modelo da placa.</p>
 <h3 id="ray-tracing"><a class="header" href="#ray-tracing">Ray tracing</a></h3>
 <p>O modelo de rasterização descrito acima é eficiente, mas demanda um trabalho maior para se aproxima da iluminação real, o <em>ray tracing</em> é uma abordagem diferente: simula o comportamento físico da luz traçando raios virtuais a partir da câmera, calculando com o que cada raio colide, qual luz reflete e como os efeitos se propagam pela cena. O resultado é iluminação significativamente mais realista, com reflexos precisos, sombras suaves e iluminação global que leva em conta a luz que ricocheia entre superfícies.</p>
-<p>O Ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.</p>
+<p>O ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.</p>
 <h2 id="vram-a-memória-da-gpu"><a class="header" href="#vram-a-memória-da-gpu">VRAM: a memória da GPU</a></h2>
 <p>A GPU tem sua própria memória, a <em>VRAM</em> (<em>Video RAM</em>). É nela que ficam as texturas, os buffers de geometria, os shaders compilados e o framebuffer com a imagem sendo construída. A VRAM é fisicamente integrada à placa de vídeo, conectada à GPU por um barramento muito mais largo do que a RAM principal. Enquanto a memória convencional usa canais de 64 ou 128 bits, a VRAM pode usar 192, 256 ou até 384 bits, o que se traduz em largura de banda muito superior.</p>
 <p>A quantidade de VRAM importa diretamente: texturas de alta resolução em jogos modernos, cenas 3D complexas e modelos de linguagem carregados localmente consomem VRAM rapidamente. Quando a VRAM se esgota, o sistema começa a mover dados para a RAM principal ou para o armazenamento, com queda de desempenho perceptível ou erros de execução.</p>

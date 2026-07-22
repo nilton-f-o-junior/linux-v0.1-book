@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-7f8ea519.js";
+            window.path_to_searchindex_js = "searchindex-21766e2e.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-a0cfbb35.js"></script>
@@ -728,7 +728,7 @@
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="armazenamento"><a class="header" href="#armazenamento">Armazenamento</a></h1>
 <p>A memória RAM, vista anteriormente, é rápida mas volátil: perde tudo quando a energia cai. O armazenamento é o oposto. É persistente, os dados ficam gravados mesmo sem energia, e é onde o sistema coloca tudo que precisa sobreviver entre uma sessão e outra: o próprio sistema operacional, os programas instalados, os arquivos do usuário.</p>
-<h2 id="ssd---solid-state-drive"><a class="header" href="#ssd---solid-state-drive">SSD - Solid State Drive</a></h2>
+<h2 id="ssd"><a class="header" href="#ssd">SSD</a></h2>
 <p>O SSD não tem partes móveis. Armazena dados em chips de memória flash, a mesma tecnologia base usada em celulares e câmeras, mas em versões otimizadas para desempenho e durabilidade.</p>
 <p>Sem braços mecânicos, sem pratos girando, o acesso a qualquer ponto do armazenamento é quase instantâneo. Um computador com SSD inicializa o sistema operacional em segundos. Programas abrem antes de o usuário piscar.</p>
 <ul>
@@ -738,7 +738,7 @@
 <h3 id="nvme-ssds-ainda-mais-rápidos"><a class="header" href="#nvme-ssds-ainda-mais-rápidos">NVMe: SSDs ainda mais rápidos</a></h3>
 <p>Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs mais antigos e mais baratos usam a interface SATA, a mesma criada originalmente para os HDs. Ela funciona bem, mas é um gargalo para os chips modernos de memória flash.</p>
 <p>Os SSDs <strong>NVMe</strong> (<em>Non-Volatile Memory Express</em>) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s.</p>
-<h2 id="hd---hard-disk-drive"><a class="header" href="#hd---hard-disk-drive">HD - Hard Disk Drive</a></h2>
+<h2 id="hd"><a class="header" href="#hd">HD</a></h2>
 <p>O HD é mais barato de se produzir e capaz de armazenar grandes volumes de dados, mas é limitado pela velocidade da mecânica. Cada leitura depende de o prato estar na posição certa e de o braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se acumula e se torna perceptível.</p>
 <ul>
 <li><strong>Vantagens:</strong> custo por gigabyte muito baixo, ideal para armazenar grandes volumes de dados;</li>
@@ -809,7 +809,7 @@
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="gpu"><a class="header" href="#gpu">GPU</a></h1>
-<p>GPU significa Unidade de Processamento Gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.</p>
+<p>GPU significa unidade de processamento gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.</p>
 <p>Para exibir uma cena em 3D na tela, a GPU precisa calcular a cor e posição de cada pixel, levando em conta luzes, sombras, texturas e a geometria dos objetos. Um monitor Full HD tem mais de dois milhões de pixels, a 60 quadros por segundo. Isso são mais de 120 milhões de cálculos de pixels por segundo, e cada um com várias operações matemáticas envolvidas.</p>
 <p>Nenhum processador de uso geral com poucos núcleos consegue fazer isso em tempo real. A GPU resolve o problema com paralelismo: ela divide esse trabalho em milhares de tarefas idênticas e as executa simultaneamente.</p>
 <h2 id="como-ela-processa-imagens"><a class="header" href="#como-ela-processa-imagens">Como ela processa imagens</a></h2>
@@ -824,7 +824,7 @@
 <p>Para que os softwares consigam conversar com a GPU, eles utilizam APIs gráficas (<em>Application Programming Interfaces</em>), como o OpenGL e o Vulkan. Essas interfaces funcionam como tradutores, permitindo que o desenvolvedor envie instruções de renderização que a GPU consiga processar, independentemente do modelo da placa.</p>
 <h3 id="ray-tracing"><a class="header" href="#ray-tracing">Ray tracing</a></h3>
 <p>O modelo de rasterização descrito acima é eficiente, mas demanda um trabalho maior para se aproxima da iluminação real, o <em>ray tracing</em> é uma abordagem diferente: simula o comportamento físico da luz traçando raios virtuais a partir da câmera, calculando com o que cada raio colide, qual luz reflete e como os efeitos se propagam pela cena. O resultado é iluminação significativamente mais realista, com reflexos precisos, sombras suaves e iluminação global que leva em conta a luz que ricocheia entre superfícies.</p>
-<p>O Ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.</p>
+<p>O ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.</p>
 <h2 id="vram-a-memória-da-gpu"><a class="header" href="#vram-a-memória-da-gpu">VRAM: a memória da GPU</a></h2>
 <p>A GPU tem sua própria memória, a <em>VRAM</em> (<em>Video RAM</em>). É nela que ficam as texturas, os buffers de geometria, os shaders compilados e o framebuffer com a imagem sendo construída. A VRAM é fisicamente integrada à placa de vídeo, conectada à GPU por um barramento muito mais largo do que a RAM principal. Enquanto a memória convencional usa canais de 64 ou 128 bits, a VRAM pode usar 192, 256 ou até 384 bits, o que se traduz em largura de banda muito superior.</p>
 <p>A quantidade de VRAM importa diretamente: texturas de alta resolução em jogos modernos, cenas 3D complexas e modelos de linguagem carregados localmente consomem VRAM rapidamente. Quando a VRAM se esgota, o sistema começa a mover dados para a RAM principal ou para o armazenamento, com queda de desempenho perceptível ou erros de execução.</p>
@@ -917,6 +917,7 @@
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="resfriamento"><a class="header" href="#resfriamento">Resfriamento</a></h1>
+<p>Todo componente eletrônico converte parte da energia em calor. À medida que diversos componentes são instalados dentro de um mesmo espaço, esse calor se acumula e pode diminuir a vida útil desses equipamentos; portanto, o uso de resfriamento é extremamente necessário</p>
 <h2 id="ventoinhas"><a class="header" href="#ventoinhas">Ventoinhas</a></h2>
 <p>As ventoinhas movem o ar: seja puxando ar fresco para dentro do gabinete, empurrando ar quente para fora ou forçando o fluxo de ar sobre as aletas de um dissipador.</p>
 <ul>
@@ -928,7 +929,7 @@
 </ul>
 <h2 id="tipos-de-resfriamento"><a class="header" href="#tipos-de-resfriamento">Tipos de resfriamento</a></h2>
 <h3 id="resfriamento-a-ar"><a class="header" href="#resfriamento-a-ar">Resfriamento a ar</a></h3>
-<p>É o modelo mais comum e suficiente para a maioria dos sistemas. Um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.</p>
+<p>É o modelo mais comum e suficiente para a maioria dos sistemas. O cooler é um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.</p>
 <p>Dentro do dissipador, é comum encontrar <em>heat pipes</em>: tubos selados contendo um fluido que evapora na parte quente, migra para a parte fria pelas aletas, condensa e retorna pela parede interna do tubo por capilaridade.</p>
 <p>Os principais formatos de cooler a ar:</p>
 <ul>
@@ -937,7 +938,7 @@
 <li><strong>Torre dupla (<em>push-pull</em>):</strong> duas torres de aletas com ventoinhas em ambos os lados, maximizando o fluxo através das aletas.</li>
 </ul>
 <h3 id="resfriamento-a-líquido"><a class="header" href="#resfriamento-a-líquido">Resfriamento a líquido</a></h3>
-<p>Em vez de depender apenas do ar, o water cooling usa um líquido (geralmente água com aditivos antialga e anticorrosivo). Um bloco metálico (waterblock) fica em contato direto com o componente; o líquido circula por ele, absorve o calor e é bombeado até um radiador, onde é dissipado para o ar pelas ventoinhas.</p>
+<p>Em vez de depender apenas do ar, o water cooler usa um líquido (geralmente água com aditivos antialga e anticorrosivo). Um bloco metálico (water block) fica em contato direto com o componente; o líquido circula por ele, absorve o calor e é bombeado até um radiador, onde é dissipado para o ar pelas ventoinhas.</p>
 <ul>
 <li><strong>AIO (<em>All-In-One</em>):</strong> circuito fechado, com bomba e reservatório integrados no cabeçote; fácil de instalar e sem manutenção.</li>
 <li><strong>Loop customizado:</strong> cada componente é escolhido e montado separadamente (reservatório, bomba, tubos, bloco e radiador). Exige conhecimento técnico maior, é mais caro e necessita de manutenções periódicas.</li>
@@ -949,35 +950,30 @@
 <h2 id="mapa-de-calor"><a class="header" href="#mapa-de-calor">Mapa de calor</a></h2>
 <p>As regiões críticas em um gabinete típico incluem a área da CPU (topo da placa-mãe), área da placa de vídeo, fonte de alimentação e a região traseira superior. Entender este mapa orienta o posicionamento estratégico de ventoinhas adicionais.</p>
 <h2 id="temperaturas-e-monitoramento-no-linux"><a class="header" href="#temperaturas-e-monitoramento-no-linux">Temperaturas e Monitoramento no Linux</a></h2>
-<p>Quando o processador se aproxima do seu limite térmico de fábrica (Tjunction ou Tmax), ele reduz automaticamente sua velocidade de operação para gerar menos calor e evitar a queima, um mecanismo de proteção chamado <em>thermal throttling</em>.</p>
+<p>Quando o processador se aproxima do seu limite térmico de fábrica, ele reduz automaticamente sua velocidade de operação para gerar menos calor e evitar a queima, um mecanismo de proteção chamado <em>thermal throttling</em>.</p>
 <p>No Linux, o monitoramento dessas métricas não depende de softwares pesados proprietários. O próprio sistema operacional expõe esses dados diretamente através do sistema de arquivos virtual <code>/sys/class/hwmon/</code>. Na prática, o administrador ou usuário utiliza ferramentas de terminal consolidadas, como o pacote <code>lm-sensors</code> (através do comando <code>sensors</code>), ou utilitários gráficos da sua distribuição para acompanhar as temperaturas em tempo real e diagnosticar problemas de arrefecimento.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="monitor"><a class="header" href="#monitor">Monitor</a></h1>
-<p>Cada imagem que aparece na tela passou antes por um longo caminho dentro do computador: o processador calculou, a placa de vídeo renderizou, e o monitor transformou tudo isso em luz. É o único componente com o qual o usuário interage visualmente o tempo todo, mas raramente se pensa no que acontece dentro dele para que uma imagem apareça ali.</p>
-<h2 id="o-que-é-um-monitor"><a class="header" href="#o-que-é-um-monitor">O que é um monitor?</a></h2>
 <p>O monitor é o dispositivo de saída visual do computador. Ele recebe um sinal do sistema, seja analógico ou digital, e o converte em uma imagem formada por milhões de pequenos pontos de luz chamados pixels. Cada pixel é composto por três subpixels nas cores primárias da luz: vermelho, verde e azul. A combinação dessas três intensidades em cada ponto é capaz de reproduzir uma ampla gama de cores visíveis ao olho humano.</p>
 <p>A imagem não é estática, o monitor redesenha a tela dezenas de vezes por segundo, criando a ilusão de movimento. A frequência com que isso acontece é chamada de taxa de atualização.</p>
 <h2 id="tecnologias-de-painel"><a class="header" href="#tecnologias-de-painel">Tecnologias de painel</a></h2>
 <p>A forma como os pixels são construídos e iluminados define boa parte das características do monitor. Quatro tecnologias são relevantes no mercado atual, cada uma com características e casos de uso distintos.</p>
 <p>Antes de entrar nas variações, vale entender dois termos que aparecem com frequência:</p>
 <ul>
-<li><strong>LCD (<em>Liquid Crystal Display</em>):</strong> é a base da maioria dos monitores: a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada backlight.</li>
-<li><strong>LED:</strong> refere-se ao tipo de <em>backlight</em>, não a uma tecnologia de painel separada: monitores chamados de “LED” simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. É uma forma de iluminação mais eficiente, que permite designs mais finos e melhor precisão de cores em comparação com os modelos fluorescentes.</li>
+<li><strong>LCD (<em>Liquid Crystal Display</em>):</strong> a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada <em>backlight</em>.</li>
+<li><strong>LED:</strong> monitores chamados de “LED” simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. Sendo mais eficiente, que permite designs mais finos e melhor precisão de cores.</li>
 </ul>
 <h3 id="ips"><a class="header" href="#ips">IPS</a></h3>
 <p>O painel IPS (<em>In-Plane Switching</em>) é conhecido pela qualidade de cor e pelos ângulos de visão amplos. As cores permanecem precisas mesmo quando o monitor é visto de lado ou de cima, sem o desvio perceptível que outros painéis apresentam. Por isso, é a tecnologia preferida em trabalhos que exigem fidelidade visual: edição de fotos, design gráfico e produção de vídeo.</p>
 <ul>
 <li><strong>Vantagens:</strong> cores precisas e consistentes, ângulos de visão excelentes;</li>
 <li><strong>Desvantagens:</strong> historicamente mais caro e com tempo de resposta um pouco maior que painéis TN, embora os modelos modernos tenham reduzido bastante essa diferença;</li>
-<li><strong>Uso típico:</strong> criação de conteúdo, uso profissional, consumo geral de alta qualidade.</li>
 </ul>
 <h3 id="tn"><a class="header" href="#tn">TN</a></h3>
-<p>O painel TN (<em>Twisted Nematic</em>) é a tecnologia LCD mais antiga entre as apresentadas e ainda presente principalmente em monitores voltados a jogos de entrada e intermediários. Seu diferencial é o tempo de resposta baixo, que pode chegar a 1 ms nos melhores modelos, reduzindo o borrão em cenas de movimento rápido.</p>
-<p>Em contrapartida, os ângulos de visão são ruins: as cores se distorcem visivelmente ao olhar o painel de qualquer posição que não seja diretamente de frente, a reprodução de cores também é inferior ao IPS.</p>
+<p>O painel TN (<em>Twisted Nematic</em>) é a tecnologia LCD mais antiga entre as apresentadas e ainda presente principalmente em monitores voltados a jogos de entrada e intermediários. Seu diferencial é o tempo de resposta baixo, que pode chegar a 1 ms nos melhores modelos, reduzindo o borrão em cenas de movimento rápido. Em contrapartida, os ângulos de visão são ruins: as cores se distorcem visivelmente ao olhar o painel de qualquer posição que não seja diretamente de frente, a reprodução de cores também é inferior ao IPS.</p>
 <ul>
 <li><strong>Vantagens:</strong> tempo de resposta muito baixo, custo reduzido;</li>
 <li><strong>Desvantagens:</strong> ângulos de visão limitados, qualidade de cor inferior;</li>
-<li><strong>Uso típico:</strong> jogos competitivos onde velocidade importa mais que fidelidade visual.</li>
 </ul>
 <h3 id="va"><a class="header" href="#va">VA</a></h3>
 <p>O painel VA (<em>Vertical Alignment</em>) ocupa o meio-termo entre IPS e TN, seu destaque é a taxa de contraste nativa, significativamente maior que a das outras tecnologias. Isso se traduz em pixels capazes de bloquear melhor a luz de fundo, produzindo regiões escuras com muito mais fidelidade na tela, e uma percepção de imagem mais tridimensional, especialmente em ambientes com pouca luz.</p>
@@ -985,7 +981,6 @@
 <ul>
 <li><strong>Vantagens:</strong> contraste elevado, maior capacidade de escurecer pixels e reproduzir a ausência de luz com fidelidade, boa experiência em filmes e conteúdo cinematográfico;</li>
 <li><strong>Desvantagens:</strong> <em>smearing</em> em alguns modelos, desempenho em jogos inferior ao TN e IPS modernos;</li>
-<li><strong>Uso típico:</strong> consumo de filmes e séries, uso geral com ênfase em qualidade visual.</li>
 </ul>
 <h3 id="oled"><a class="header" href="#oled">OLED</a></h3>
 <p>O OLED (<em>Organic Light-Emitting Diode</em>) representa uma mudança estrutural em relação às tecnologias anteriores. Nos painéis LCD convencionais (IPS, TN e VA), os pixels não emitem luz: eles filtram uma iluminação de fundo chamada <em>backlight</em>. No OLED, cada pixel é sua própria fonte de luz e pode ser apagado individualmente.</p>
@@ -994,9 +989,8 @@
 <ul>
 <li><strong>Vantagens:</strong> contraste infinito, pixels que se apagam completamente eliminando qualquer emissão de luz, cores excepcionais, tempo de resposta mínimo;</li>
 <li><strong>Desvantagens:</strong> custo elevado, risco de <em>burn-in</em> em uso prolongado com imagens estáticas;</li>
-<li><strong>Uso típico:</strong> entusiastas, jogos de alto nível, edição profissional de vídeo e fotografia.</li>
 </ul>
-<h3 id="hdr-high-dynamic-range"><a class="header" href="#hdr-high-dynamic-range">HDR (<em>High Dynamic Range</em>)</a></h3>
+<h3 id="hdr"><a class="header" href="#hdr">HDR</a></h3>
 <p>O HDR é uma tecnologia que amplia a gama de cores e o contraste, permitindo que as partes claras da imagem sejam mais brilhantes e as escuras mais profundas, resultando em uma imagem mais próxima da realidade.</p>
 <h2 id="resolução-e-o-ambiente-linux"><a class="header" href="#resolução-e-o-ambiente-linux">Resolução e o Ambiente Linux</a></h2>
 <p>A resolução define quantos pixels compõem a imagem. Mais pixels significam mais detalhes visíveis, mas também maior exigência da placa de vídeo para renderizar. Em sistemas Linux, o gerenciamento de múltiplos monitores e resoluções é feito diretamente por servidores gráficos como o <strong>Xorg</strong> ou o moderno <strong>Wayland</strong>, que lidam com o escalonamento da interface para que os elementos não fiquem pequenos demais em telas de alta densidade.</p>
@@ -1008,11 +1002,11 @@
 </ul>
 <h2 id="taxa-de-atualização"><a class="header" href="#taxa-de-atualização">Taxa de atualização</a></h2>
 <p>A taxa de atualização é medida em hertz (Hz) e indica quantas vezes por segundo o monitor redesenha a imagem. Um monitor de 60 Hz exibe até 60 quadros por segundo, um de 144 Hz até 144.</p>
-<p>Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos ou na própria fluidez ao arrastar janelas na interface gráfica, a diferença para 144 Hz é perceptível: o movimento parece mais suave e a resposta imediata. Monitores de 165 Hz, 240 Hz e até 360 Hz existem no mercado, voltados a jogadores competitivos.</p>
+<p>Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos ou na própria fluidez ao arrastar janelas na interface gráfica, a diferença para 144 Hz é perceptível: o movimento parece mais suave e a resposta imediata.</p>
 <p>A taxa de atualização do monitor só se traduz em benefício real se a placa de vídeo conseguir entregar quadros suficientes por segundo. Se uma placa renderiza apenas 60 quadros por segundo em um monitor de 144 Hz, o monitor repetirá os quadros captados, operando visualmente à taxa da placa.</p>
 <h2 id="tempo-de-resposta"><a class="header" href="#tempo-de-resposta">Tempo de resposta</a></h2>
 <p>O tempo de resposta indica quanto tempo um pixel leva para mudar de uma cor para outra, medido em milissegundos (ms). Tempos de resposta altos resultam em <em>ghosting</em>: um rastro visível atrás de objetos em movimento rápido.</p>
-<p>Para uso geral, qualquer valor abaixo de 5 ms é imperceptível, já para jogos rápidos, valores entre 1 e 2 ms são desejáveis. Fabricantes frequentemente divulgam o menor tempo de resposta possível nas especificações, medido em condições ideais, geralmente entre transições de cinza para cinza (GtG).</p>
+<p>Para uso geral, qualquer valor abaixo de 5 ms é imperceptível, já para jogos rápidos, valores entre 1 e 2 ms são desejáveis. Fabricantes frequentemente divulgam o menor tempo de resposta possível nas especificações, medido em condições ideais, geralmente entre transições de cinza para cinza.</p>
 <h2 id="sincronização-adaptativa"><a class="header" href="#sincronização-adaptativa">Sincronização adaptativa</a></h2>
 <p>Quando a placa de vídeo entrega quadros em ritmo variável e o monitor os exibe em intervalos fixos, o resultado pode ser o <em>tearing</em>: uma divisão horizontal visível na imagem, como se dois quadros diferentes fossem exibidos ao mesmo tempo. As tecnologias de sincronização adaptativa resolvem esse problema.</p>
 <ul>
@@ -1043,41 +1037,41 @@
 <h1 id="periféricos"><a class="header" href="#periféricos">Periféricos</a></h1>
 <p>Dispositivos que conectam o sistema ao usuário e ao ambiente ao redor, transformando ações físicas em dados e dados em saída perceptível.</p>
 <h2 id="dispositivos-de-entrada-e-saída"><a class="header" href="#dispositivos-de-entrada-e-saída">Dispositivos de entrada e saída</a></h2>
-<p>Antes de falar sobre periféricos específicos, vale entender a distinção fundamental que os organiza: a diferença entre entrada e saída.</p>
 <ul>
-<li><strong>Dispositivo de entrada:</strong> envia informação para dentro do computador, captura algo do mundo externo: um movimento, uma pressão, um som, uma imagem e converte esse estímulo em dados digitais que o sistema pode processar. O teclado é o exemplo mais direto, cada tecla pressionada gera um código que o sistema operacional interpreta como um caractere ou comando;</li>
-<li><strong>Dispositivo de saída:</strong> faz o caminho inverso, recebe dados processados pelo computador e os converte em algo perceptível ao usuário ou ao ambiente. O monitor transforma sinais digitais em luz e as caixas de som convertem dados em ondas sonoras.</li>
-<li><strong>Dispositivos de entrada e saída (E/S):</strong> alguns dispositivos operam nos dois sentidos simultaneamente. Uma tela sensível ao toque exibe imagens como dispositivo de saída e detecta toques como dispositivo de entrada.</li>
+<li>
+<p><strong>Dispositivo de entrada:</strong> envia informação para dentro do computador, captura algo do mundo externo: um movimento, uma pressão, um som, uma imagem e converte esse estímulo em dados digitais que o sistema pode processar. O teclado é o exemplo mais direto, cada tecla pressionada gera um código que o sistema operacional interpreta como um caractere ou comando;</p>
+</li>
+<li>
+<p><strong>Dispositivo de saída:</strong> faz o caminho inverso, recebe dados processados pelo computador e os converte em algo perceptível ao usuário ou ao ambiente. O monitor transforma sinais digitais em luz e as caixas de som convertem dados em ondas sonoras.</p>
+</li>
+<li>
+<p><strong>Dispositivos de entrada e saída (E/S):</strong> alguns dispositivos operam nos dois sentidos simultaneamente. Uma tela sensível ao toque exibe imagens como dispositivo de saída e detecta toques como dispositivo de entrada.</p>
+</li>
 </ul>
 <h2 id="dispositivos-de-entrada"><a class="header" href="#dispositivos-de-entrada">Dispositivos de entrada</a></h2>
-<h3 id="teclado-e-o-layout-de-teclas"><a class="header" href="#teclado-e-o-layout-de-teclas">Teclado e o Layout de Teclas</a></h3>
+<h3 id="teclado"><a class="header" href="#teclado">Teclado</a></h3>
 <p>O teclado é o periférico de entrada mais antigo ainda em uso universal. Cada tecla é um interruptor: ao ser pressionada, fecha um circuito e envia um código para o sistema operacional, que interpreta qual caractere foi digitado.</p>
-<p>No Linux, um dos primeiros passos de configuração é definir o mapa de layout correto do teclado. Os mais comuns no Brasil são o <strong>ABNT2</strong> (que possui a tecla Ç e o sotaque circunflexo junto ao número 1) e o <strong>Inglês Internacional (US)</strong>, que exige combinações de teclas para gerar acentuações.</p>
+<p>No Linux, um dos primeiros passos de configuração é definir o mapa de layout correto do teclado. Os mais comuns no Brasil são o <strong>ABNT2</strong> (que possui a tecla Ç e o circunflexo junto ao número 1), o <strong>Inglês Internacional (US)</strong>, que exige combinações de teclas para gerar acentuações.</p>
 <p>Dois tipos principais de construção dominam o mercado:</p>
 <ul>
-<li><strong>Membrana:</strong> uma camada plástica flexível que comprime ao toque. São silenciosos, baratos e presentes na maioria dos teclados de escritório;</li>
-<li><strong>Mecânico:</strong> um switch independente sob cada tecla, com feedback tátil ou sonoro mais pronunciado. Dentro dessa categoria, os switches variam conforme o comportamento:
-<ul>
-<li><strong>Linear:</strong> resistência uniforme ao longo de todo o percurso, sem ponto de clique;</li>
-<li><strong>Tátil:</strong> oferece um ponto de resistência no meio do percurso, sem som audível;</li>
-<li><strong>Clicky:</strong> adiciona um clique audível no ponto de atuação.</li>
-</ul>
-</li>
-<li><strong>Magnético:</strong> sensores detectam a posição de um magneto na tecla sem contato elétrico direto. Permitem ajustar o ponto de ativação;</li>
+<li><strong>Membrana:</strong> uma camada plástica flexível que comprime ao toque, são silenciosos e baratos;</li>
+<li><strong>Mecânico:</strong> um switch independente sob cada tecla, com feedback tátil ou sonoro mais pronunciado.</li>
+<li><strong>Magnético:</strong> sensores detectam a posição de um magneto na tecla sem contato elétrico direto.</li>
 <li><strong>Óptico:</strong> a ativação é detectada por um feixe de luz interrompido, em vez de contato elétrico;</li>
 <li><strong>Capacitivo:</strong> medem a mudança de capacitância ao toque, sem contato elétrico direto.</li>
 </ul>
-<p>A conexão com o computador é feita por USB com fio ou por radiofrequência e Bluetooth em modelos sem fio.</p>
+<p>A conexão com o computador é feita por: USB, fio, radiofrequência e Bluetooth.</p>
 <h3 id="mouse"><a class="header" href="#mouse">Mouse</a></h3>
 <p>O mouse traduz movimento físico em movimento do cursor na tela. Um sensor ilumina a superfície abaixo e fotografa microscópicas variações a milhares de vezes por segundo, calculando a direção e a velocidade do deslocamento.</p>
-<p>A precisão do sensor é medida em DPI (<em>dots per inch</em> ou pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento. A taxa de <em>polling</em> define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo.</p>
+<p>A precisão do sensor é medida em DPI (pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento. A taxa de <em>polling</em> define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo.</p>
 <h3 id="outros-dispositivos-de-entrada"><a class="header" href="#outros-dispositivos-de-entrada">Outros dispositivos de entrada</a></h3>
 <ul>
 <li><strong>Trackpad:</strong> presente em todos os notebooks, reproduz as funções do mouse por meio de gestos com os dedos sobre uma superfície sensível ao toque;</li>
-<li><strong>Mesa digitalizadora e Displays Interativos:</strong> substitui o mouse por uma caneta que detecta pressão e inclinação. Podem ser mesas tradicionais (onde você risca olhando para o monitor) ou displays interativos (telas de alta fidelidade feitas para desenhar diretamente sobre elas);</li>
+<li><strong>Mesa digitalizadora:</strong> substitui o mouse por uma caneta que detecta pressão e inclinação. Podem ser mesas tradicionais (onde você risca olhando para o monitor) ou displays interativos (telas de alta fidelidade feitas para desenhar diretamente sobre elas);</li>
 <li><strong>Microfone:</strong> captura áudio analógico e o converte em sinal digital, classificando-se como dispositivo de entrada de áudio;</li>
-<li><strong>Controles de jogo:</strong> periféricos especializados (joysticks, volantes) que enviam ao sistema os estados dos botões e eixos em tempo real. No Linux, a maior parte desses dispositivos é reconhecida nativamente pelo próprio Kernel através de drivers de código aberto.</li>
+<li><strong>Controles de jogo:</strong> periféricos especializados (joysticks, volantes) que enviam ao sistema os estados dos botões e eixos em tempo real.</li>
 </ul>
+<p>No Linux, a maior parte desses dispositivos é reconhecida nativamente pelo próprio Kernel através de drivers de código aberto.</p>
 <h2 id="dispositivos-de-saída"><a class="header" href="#dispositivos-de-saída">Dispositivos de saída</a></h2>
 <h3 id="monitor-1"><a class="header" href="#monitor-1">Monitor</a></h3>
 <p>O monitor é o dispositivo de saída visual principal, responsável por converter o sinal enviado pela placa de vídeo em imagem visível, geralmente através de interfaces como HDMI ou DisplayPort. Cada imagem é formada por milhões de pixels que combinados reproduzem uma ampla gama de cores. A qualidade dessa conversão define em grande parte a experiência visual do usuário com o sistema.</p>
@@ -1092,11 +1086,11 @@
 <p>A impressora recebe dados digitais e os transfers para um substrato físico, geralmente papel. Duas tecnologias dominam o mercado:</p>
 <ul>
 <li><strong>Jato de tinta (inkjet):</strong> projeta gotículas microscópicas de tinta colorida sobre o papel. Custo de aquisição menor, mas custo por página mais alto pelo preço dos cartuchos;</li>
-<li><strong>Laser:</strong> usa um feixe de laser para carregar eletrostaticamente um tambor, que atrai um pó fino chamado toner. O papel absorve o toner, fundido pelo calor. Mais rápida para volumes altos, com custo por página menor em uso intenso. No Linux, a comunicação com impressoras é largamente gerenciada pelo subsistema <strong>CUPS</strong> (<em>Common UNIX Printing System</em>).</li>
+<li><strong>Laser:</strong> usa um feixe de laser para carregar eletrostaticamente um tambor, que atrai um pó fino chamado toner. O papel absorve o toner, fundido pelo calor. Mais rápida para volumes altos, com custo por página menor em uso intenso. i</li>
 </ul>
+<p>No Linux, a comunicação com impressoras é largamente gerenciada pelo subsistema <strong>CUPS</strong> (<em>Common UNIX Printing System</em>).</p>
 <h2 id="armazenamento-externo"><a class="header" href="#armazenamento-externo">Armazenamento externo</a></h2>
 <p>Diferente dos dispositivos internos, fixados dentro do gabinete, o armazenamento externo conecta-se por interfaces como USB ou Thunderbolt e pode ser facilmente transportado entre máquinas. É uma categoria que une portabilidade e persistência.</p>
-<p><em>Nota de contexto Linux:</em> Ao conectar uma unidade externa no Linux, o sistema realiza a operação de <strong>montagem</strong> (<em>mount</em>) do dispositivo em um diretório do sistema para torná-lo acessível ao usuário, reconhecendo sistemas de arquivos comuns como ext4, NTFS ou exFAT.</p>
 <ul>
 <li><strong>Pendrive:</strong> a forma mais compacta e barata de armazenamento externo. Usa chips de memória flash e conecta-se por USB;</li>
 <li><strong>SSD externo:</strong> segue o mesmo princípio do pendrive, mas em formato maior e com desempenho muito superior, alcançando velocidades altíssimas via USB 3.2 ou Thunderbolt;</li>
