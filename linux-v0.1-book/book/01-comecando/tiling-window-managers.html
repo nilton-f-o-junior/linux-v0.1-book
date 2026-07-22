@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da940e3e.js";
+            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-f9a244e0.js"></script>
+        <script src="../toc-a0cfbb35.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,53 +175,35 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="tiling-window-managers"><a class="header" href="#tiling-window-managers">Tiling Window Managers</a></h1>
-<p>Existe uma categoria de interface que fica um passo além dos ambientes de trabalho tradicionais. Os gerenciadores de janelas em mosaico, ou <em>tiling window managers</em> (TWMs), não entregam uma área de trabalho no sentido convencional: sem ícones na tela, sem barra de tarefas clicável, sem mouse obrigatório. O que entregam é controle total sobre onde cada janela fica, e fazem isso de forma automática.</p>
-<p>Ao abrir um programa, ele ocupa a tela inteira. Ao abrir um segundo, a tela se divide ao meio. Um terceiro, e a divisão se reorganiza novamente. Cada janela encaixa ao lado da outra como peças de um quebra-cabeça, sem sobreposição, sem espaço vazio. O nome <em>tiling</em>, em inglês, significa azulejo, e o comportamento é exatamente esse.</p>
-<h2 id="os-mais-populares"><a class="header" href="#os-mais-populares">Os mais populares</a></h2>
-<h3 id="i3"><a class="header" href="#i3">i3</a></h3>
-<p>Provavelmente o ponto de entrada mais acessível. Sua configuração é feita por um único arquivo de texto legível, e a curva de aprendizado, apesar de real, é bem documentada. É estável, amplamente adotado e tem uma comunidade ativa. Muitos usuários que partem do i3 nunca voltam para ambientes tradicionais.</p>
-<ul>
-<li><strong>Roda sobre:</strong> X11;</li>
-<li><strong>Ideal para:</strong> quem está começando com TWMs e quer a curva de aprendizado mais suave, com bastante documentação disponível;</li>
-</ul>
-<h3 id="sway"><a class="header" href="#sway">Sway</a></h3>
-<p>O sucessor espiritual do i3: compatível com sua configuração, mas construído sobre o Wayland em vez do X11. Para quem quer modernidade por baixo sem reaprender tudo por cima, é a transição natural.</p>
-<ul>
-<li><strong>Roda sobre:</strong> Wayland;</li>
-<li><strong>Ideal para:</strong> usuários de i3 que querem migrar para Wayland sem reaprender tudo do zero;</li>
-</ul>
-<h3 id="dwm"><a class="header" href="#dwm">dwm</a></h3>
-<p>Uma filosofia de software que leva o minimalismo ao extremo. O código é extremamente enxuto, com pouco menos de duas mil linhas. Não há arquivo de configuração: você edita o código-fonte diretamente e recompila.</p>
-<ul>
-<li><strong>Roda sobre:</strong> X11;</li>
-<li><strong>Ideal para:</strong> entusiastas de minimalismo extremo, confortáveis em editar e recompilar o código-fonte para configurar o ambiente;</li>
-</ul>
-<h3 id="bspwm"><a class="header" href="#bspwm">bspwm</a></h3>
-<p>Adota uma abordagem diferente: não interpreta atalhos de teclado por conta própria. Toda interação é feita por meio de mensagens enviadas por outros programas, o que significa que um programa separado, como o <code>sxhkd</code>, precisa ser configurado para mapear os atalhos de teclado. Isso o torna extremamente flexível para quem quer montar um ambiente completamente personalizado do zero.</p>
-<ul>
-<li><strong>Roda sobre:</strong> X11;</li>
-<li><strong>Ideal para:</strong> um ambiente completamente personalizado do zero, combinando ferramentas externas;</li>
-</ul>
+<p>Os gerenciadores de janelas em mosaico, ou <em>tiling window managers</em> (TWMs), não entregam uma área de trabalho no sentido convencional: sem ícones na tela, sem barra de tarefas clicável, sem mouse obrigatório. O que entregam é controle total sobre onde cada janela fica, e fazem isso de forma automática.</p>
+<p>Ao abrir um programa, ele ocupa a tela inteira. Ao abrir um segundo, a tela se divide ao meio. Um terceiro programa faz a divisão se reorganizar novamente, e assim por diante. Cada janela encaixa ao lado da outra como peças de um quebra-cabeça, sem sobreposição, sem espaço vazio. O nome <em>tiling</em>, em inglês, significa azulejo, e o comportamento é exatamente esse.</p>
+<p>Assim como os ambientes de desktop tradicionais, os TWMs também se dividem entre os que rodam sobre o <em>Wayland</em> e os que rodam sobre o <em>X11</em>.</p>
+<h2 id="wayland"><a class="header" href="#wayland">Wayland</a></h2>
 <h3 id="hyprland"><a class="header" href="#hyprland">Hyprland</a></h3>
-<p>Um dos TWMs que mais cresceram em popularidade nos últimos anos. Trouxe algo que os TWMs clássicos evitam: animações, janelas que deslizam, bordas arredondadas, efeitos visuais. É a aposta de quem quer o melhor dos dois mundos.</p>
-<ul>
-<li><strong>Roda sobre:</strong> Wayland;</li>
-<li><strong>Ideal para:</strong> quem busca a lógica de mosaico sem abrir mão de animações e efeitos visuais modernos;</li>
-</ul>
-<h3 id="qtile"><a class="header" href="#qtile">Qtile</a></h3>
-<p>Uma proposta diferente dentro do universo dos TWMs: é configurado e estendido inteiramente em Python. Em vez de editar arquivos de texto com sintaxe própria, o usuário escreve código Python para definir layouts, atalhos, barras e comportamentos.</p>
-<ul>
-<li><strong>Roda sobre:</strong> X11 e Wayland;</li>
-<li><strong>Ideal para:</strong> programadores Python que buscam configurar o ambiente escrevendo código em vez de arquivos de configuração próprios;</li>
-</ul>
+<p>O <a href="https://hyprland.org/">hyprland</a> é um dos TWMs que mais cresceram em popularidade nos últimos anos. Trouxe algo que os TWMs clássicos evitam: animações, janelas que deslizam, bordas arredondadas, efeitos visuais. É a aposta de quem quer o melhor dos dois mundos.</p>
+<h3 id="sway"><a class="header" href="#sway">Sway</a></h3>
+<p>O sucessor espiritual do i3, <a href="https://swaywm.org/">swaywm</a> é compatível com sua configuração, mas construído sobre o Wayland em vez do X11. Para quem quer modernidade por baixo sem reaprender tudo por cima, é a transição natural.</p>
 <h3 id="niri"><a class="header" href="#niri">Niri</a></h3>
-<p>Um TWM com uma proposta distinta: em vez do layout de mosaico tradicional, organiza as janelas em colunas rolantes (<em>scrollable tiling</em>), como uma fita horizontal infinita.</p>
-<ul>
-<li><strong>Roda sobre:</strong> Wayland;</li>
-<li><strong>Ideal para:</strong> quem busca uma alternativa mais fluida ao Sway e ao Hyprland, com organização em colunas rolantes;</li>
-</ul>
+<p>Um TWM com uma proposta distinta, o <a href="https://github.com/YaLTeR/niri">niri</a> em vez do layout de mosaico tradicional, organiza as janelas em colunas rolantes (<em>scrollable tiling</em>), como uma fita horizontal infinita.</p>
+<h3 id="river"><a class="header" href="#river">River</a></h3>
+<p>Um TWM minimalista, o <a href="https://isaacfreund.com/software/river/">river</a> é um núcleo enxuto, com comportamento definido por meio de um programa externo de configuração. Isso mantém o projeto pequeno e fácil de entender, ao custo de exigir mais trabalho manual do usuário.</p>
+<h3 id="wayfire"><a class="header" href="#wayfire">Wayfire</a></h3>
+<p>O <a href="https://wayfire.org/">wayfire</a> une o conceito de tiling a um sistema de plugins que permite adicionar efeitos visuais, animações e comportamentos personalizados. É uma opção para quem vem de ambientes mais visuais e não quer abrir mão completamente desses recursos.</p>
+<h2 id="x11"><a class="header" href="#x11">X11</a></h2>
+<h3 id="i3"><a class="header" href="#i3">i3</a></h3>
+<p>Provavelmente o ponto de entrada mais acessível, o <a href="https://i3wm.org/">i3wm</a> trás uma configuração baseada em um único arquivo de texto legível, e a curva de aprendizado é bem documentada. É estável, amplamente adotado e tem uma comunidade ativa.</p>
+<h3 id="awesomewm"><a class="header" href="#awesomewm">AwesomeWM</a></h3>
+<p>Um TWM altamente configurável e estendido por meio da linguagem Lua, <a href="https://awesomewm.org/">awesomewm</a> permite criar barras de status, widgets e comportamentos personalizados com bastante liberdade, sendo uma escolha comum entre quem gosta de programar sua própria interface.</p>
+<h3 id="bspwm"><a class="header" href="#bspwm">bspwm</a></h3>
+<p>O <a href="https://github.com/baskerville/bspwm">bspwm</a> não interpreta atalhos de teclado por conta própria. Toda interação é feita por meio de mensagens enviadas por outros programas, o que significa que um programa separado, como o <code>sxhkd</code>, precisa ser configurado para mapear os atalhos de teclado. Isso o torna extremamente flexível para quem quer montar um ambiente completamente personalizado do zero.</p>
+<h3 id="qtile"><a class="header" href="#qtile">Qtile</a></h3>
+<p>Uma proposta diferente dentro do universo dos TWMs, o <a href="https://qtile.org/">qtile</a> é configurado e estendido inteiramente em Python. Em vez de editar arquivos de texto com sintaxe própria, o usuário escreve código Python para definir layouts, atalhos, barras e comportamentos.</p>
+<h3 id="dwm"><a class="header" href="#dwm">dwm</a></h3>
+<p>Uma filosofia de software que leva o minimalismo ao extremo, o <a href="https://dwm.suckless.org/">dwm</a> possui um código extremamente enxuto, com pouco menos de duas mil linhas. Não há arquivo de configuração: você edita o código-fonte diretamente e recompila.</p>
+<h3 id="xmonad"><a class="header" href="#xmonad">xmonad</a></h3>
+<p>O  <a href="https://xmonad.org/">xmonad.org</a> é escrito e configurado na linguagem Haskell. Sua configuração é, na prática, um pequeno programa, o que atrai principalmente usuários já familiarizados com programação funcional. É extremamente estável, ainda que exija uma curva de aprendizado mais acentuada para quem não conhece a linguagem.</p>
 <h2 id="o-que-esperar-da-experiência"><a class="header" href="#o-que-esperar-da-experiência">O que esperar da experiência</a></h2>
-<p>Usar um TWM pela primeira vez é desorientante, pois não há nada na tela além do que você colocou lá. Nenhuma pista visual, nenhum menu de boas-vindas. A produtividade inicial cai, e a configuração consome tempo.</p>
+<p>Usar um TWM pela primeira vez é desorientador, pois não há nada na tela além do que você colocou lá. Nenhuma pista visual, nenhum menu de boas-vindas. A produtividade inicial cai, e a configuração consome tempo.</p>
 <p>Com algumas semanas de uso, a lógica começa a fazer sentido, o teclado se torna uma extensão do pensamento, e mover o mouse para clicar em algo passa a parecer lento. Muitos usuários descrevem a transição como irreversível.</p>
 <p>É uma categoria ideal para desenvolvedores, administradores de sistemas e qualquer pessoa que passe horas por dia no terminal, mas não é recomendada para quem está começando no Linux ou precisa de uma experiência imediata sem curva de aprendizado.</p>
 

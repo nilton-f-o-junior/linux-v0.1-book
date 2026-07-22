@@ -22,7 +22,7 @@ Sem braços mecânicos, sem pratos girando, o acesso a qualquer ponto do armazen
 
 Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs mais antigos e mais baratos usam a interface SATA, a mesma criada originalmente para os HDs. Ela funciona bem, mas é um gargalo para os chips modernos de memória flash.
 
-Os SSDs NVMe (*Non-Volatile Memory Express*) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva: onde um SSD SATA lê dados a cerca de 500 MB/s, um NVMe pode ultrapassar os 7.000 MB/s nos modelos mais rápidos, sendo que modelos intermediários ficam entre 2.000 e 4.000 MB/s, ainda muito acima do SATA. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.
+Os SSDs NVMe (*Non-Volatile Memory Express*) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s, com os modelos mais recentes, que usam gerações mais novas do PCIe, indo muito além disso. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.
 
 ### HD - Hard Disk Drive
 
@@ -81,13 +81,13 @@ Um disco físico, seja ele um SSD ou um HD, chega ao sistema como um bloco bruto
 
 Para o sistema operacional, cada partição aparece como um dispositivo separado. Um único disco de 1 TB pode se comportar como se fossem dois ou três discos menores, cada um com seu próprio sistema de arquivos, suas próprias permissões e sua própria função.
 
-De forma simples: é possível dividir o espaço de um SSD e fazê-lo se comportar como se fossem dois, funcionando com sistemas diferentes, arquivos diferentes e propósitos diferentes.
-
 #### Por que particionar?
 
 A razão mais imediata é separação de responsabilidades. Em um servidor Linux, é comum isolar o sistema operacional em uma partição, os dados dos usuários em outra e os logs do sistema em uma terceira. Se os logs crescerem sem controle e preencherem o disco, apenas a partição deles é afetada. O sistema continua funcionando, e os dados dos usuários permanecem intactos.
 
 Em desktops com *dual boot* (dois sistemas operacionais no mesmo computador), o particionamento é o que permite que Windows e Linux coexistam sem interferência, cada sistema vive em sua própria região do disco e não enxerga o território do outro.
+
+Além das partições de sistema operacional e dados, existem partições com propósitos especiais, como a partição *swap*, usada pelo Linux como extensão da memória RAM em momentos de aperto. Esse e outros tipos de partição serão vistos em detalhe em capítulos futuros.
 
 #### Sistemas de arquivos
 

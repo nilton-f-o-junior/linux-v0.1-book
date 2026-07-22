@@ -8,7 +8,7 @@ RAM significa *Random Access Memory* (memória de acesso aleatório). O nome des
 
 A RAM funciona como a mesa de trabalho do computador. O armazenamento, seja um SSD ou HD, é onde os dados ficam guardados permanentemente, como arquivos em uma gaveta. Mas para trabalhar com eles, o sistema operacional os traz para a RAM, onde o processador pode acessá-los com velocidade muito maior.
 
-A diferença de velocidade é brutal. Um SSD moderno lê dados a cerca de 5 GB/s e a RAM opera na faixa de 40 a 80 GB/s. O processador, por sua vez, usa memórias internas ainda mais rápidas, chamadas caches, porém com capacidade muito pequena, medida em megabytes. A RAM vive nesse meio-termo: rápida o suficiente para não travar o processador, grande o suficiente para manter vários programas abertos simultaneamente.
+A diferença de velocidade é significativa. SSDs modernos podem ler dados a vários GB/s e a RAM opera na faixa de 40 a 80 GB/s. O processador, por sua vez, usa memórias internas ainda mais rápidas, chamadas caches, porém com capacidade muito pequena, medida em megabytes. A RAM vive nesse meio-termo: rápida o suficiente para não travar o processador, grande o suficiente para manter vários programas abertos simultaneamente.
 
 ## Volátil por natureza
 
@@ -18,7 +18,7 @@ A característica que define a RAM é sua volatilidade, ela perde todo o conteú
 
 ## DDR: gerações e velocidade
 
-Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão DDR (*Double Data Rate*), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.
+Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão DDR (*Double Data Rate*), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência. A performance final também é influenciada pela forma como os módulos são instalados (como no uso de *Dual Channel*), ampliando a velocidade de transferência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.
 
 As gerações mais relevantes hoje são a DDR4 e a DDR5. A DDR4 dominou os computadores da segunda metade da década de 2010 e ainda é comum. A DDR5, lançada em 2021, oferece largura de banda substancialmente maior e suporte a capacidades por módulo muito mais altas, mas exige plataformas mais recentes.
 
@@ -37,6 +37,16 @@ A resposta depende do uso, mas alguns parâmetros práticos ajudam a calibrar a 
 - **32 GB ou mais:** é território de edição de vídeo, virtualização, workstations e servidores.
 
 No Linux, o consumo base de RAM varia bastante conforme o ambiente gráfico escolhido. Um sistema com XFCE ou LXQt pode iniciar usando menos de 500 MB; o GNOME com extensões ativas pode facilmente ocupar mais de 1.5 GB só na área de trabalho, antes de qualquer aplicativo ser aberto.
+
+## Dual Channel
+
+O *Dual Channel* é uma tecnologia que permite ao processador comunicar-se com dois módulos de memória simultaneamente, dobrando a largura de banda de dados. Em vez de um único caminho de 64 bits, o sistema utiliza dois, o que melhora significativamente o desempenho em tarefas que exigem grande fluxo de dados, como jogos e edição de vídeo.
+
+Para que o *Dual Channel* funcione, não basta apenas ter dois pentes de memória; é preciso seguir algumas regras básicas:
+
+- **Módulos Idênticos:** O ideal é utilizar módulos de mesma capacidade, frequência e latência. Embora sistemas modernos consigam operar com memórias diferentes (em um modo chamado *Flex Mode*), a estabilidade e o desempenho máximo são alcançados com pares idênticos.
+- **Posicionamento nos Slots:** Em placas-mãe com quatro slots, os módulos geralmente não devem ser colocados lado a lado. Eles devem ser instalados em slots alternados (geralmente slots 2 e 4, ou 1 e 3), conforme indicado no manual da placa-mãe, para que cada módulo pertença a um canal diferente.
+- **Quantidade de Módulos:** O *Dual Channel* requer pares. Se você instalar três módulos, por exemplo, dois operarão em *Dual Channel* e o terceiro operará em *Single Channel*, o que pode gerar inconsistências de performance.
 
 ## Memória virtual e swap
 

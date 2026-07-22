@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da940e3e.js";
+            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-f9a244e0.js"></script>
+        <script src="../toc-a0cfbb35.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -251,10 +251,10 @@
 <p>As linhas específicas para servidores dos principais fabricantes são:</p>
 <ul>
 <li>
-<p><strong>Intel Xeon:</strong> linha da Intel para servidores. Suporta multiprocessamento (várias CPUs na mesma placa), memória ECC (corrige erros de bit automaticamente) e capacidade de RAM na casa dos terabytes, acima dos 128 GB dos desktops comun;</p>
+<p><strong>Intel Xeon:</strong> linha da Intel para servidores. Suporta multiprocessamento (várias CPUs na mesma placa), memória ECC (corrige erros de bit automaticamente) e capacidade de RAM que ultrapassa facilmente os limites usuais de um desktop comum;</p>
 </li>
 <li>
-<p><strong>AMD EPYC:</strong> resposta da AMD ao Xeon, baseada na arquitetura Zen (mesma dos Ryzen). Modelos recentes chegam a 96–128 núcleos, também com ECC e multiprocessamento. É referência em cargas paralelas intensas, como computação científica e virtualização;</p>
+<p><strong>AMD EPYC:</strong> resposta da AMD ao Xeon, baseada na arquitetura Zen (mesma dos Ryzen). Modelos recentes já ultrapassam a marca de cem núcleos, um número que cresce a cada nova geração, também com ECC e multiprocessamento. É referência em cargas paralelas intensas, como computação científica e virtualização;</p>
 </li>
 <li>
 <p><strong>ARM em data centers:</strong> alternativa mais recente ao domínio x86. O AWS Graviton (Amazon) e a Ampere Altra (usada por Google Cloud e Azure) se destacam pela melhor relação desempenho/consumo de energia, reduzindo custo operacional. A limitação é a compatibilidade: softwares feitos só para x86 precisam ser recompilados ou emulados para rodar em ARM.</p>
@@ -316,7 +316,7 @@
 <p><strong>Vulnerabilidades de hardware e mitigações:</strong> as vulnerabilidades Spectre e Meltdown, descobertas em 2018, afetaram praticamente todos os processadores x86 modernos da Intel e AMD. As correções foram aplicadas via atualizações do sistema operacional, mas introduziram perda de desempenho mensurável em certas operações, especialmente em servidores com cargas de trabalho intensas em I/O. O impacto variou conforme o processador e o sistema operacional, mas foi um lembrete de que falhas de hardware são corrigidas em software, sempre com custo;</p>
 </li>
 <li>
-<p><strong>Linux em processadores Intel muito novos:</strong> lançamentos recentes de arquiteturas Intel chegaram ao mercado com suporte incompleto no kernel Linux para funcionalidades específicas, como gerenciamento de energia e gráficos integrados. O resultado prático é que instalar uma distribuição Linux com kernel desatualizado em hardware novo pode resultar em bateria com autonomia menor, aquecimento excessivo ou recursos que simplesmente não funciona;</p>
+<p><strong>Linux em processadores Intel muito novos:</strong> lançamentos recentes de arquiteturas Intel chegaram ao mercado com suporte incompleto no kernel Linux para funcionalidades específicas, como gerenciamento de energia e gráficos integrados. O resultado prático é que instalar uma distribuição Linux com kernel desatualizado em hardware novo pode resultar em bateria com autonomia menor, aquecimento excessivo ou recursos que simplesmente não funcionam;</p>
 </li>
 <li>
 <p><strong>Windows on ARM e compatibilidade de software:</strong> apesar da camada de tradução, alguns softwares com drivers de kernel ou proteções antitrapaça em jogos não funcionam corretamente em Windows on ARM. Jogos com sistemas anti-cheat que operam em nível de kernel são um exemplo recorrente de incompatibilidade;</p>

@@ -1,6 +1,6 @@
 # Kernel
 
-Se o processador executa instruções e a memória guarda dados, o kernel é o que decide quem tem permissão para usar esses recursos, quando e em que medida. Ele não calcula o resultado de um programa nem armazena um arquivo por conta própria. Ele arbitra. É a camada de software que fica entre o hardware bruto e tudo o mais que roda em um computador, o núcleo que transforma um conjunto de componentes eletrônicos em um sistema que pode executar múltiplos programas ao mesmo tempo, de forma segura e organizada.
+Se o processador executa instruções e a memória guarda dados, o kernel é o que decide quem tem permissão para usar esses recursos, quando e em que medida. Ele não executa a lógica dos programas do usuário nem armazena um arquivo por conta própria. Ele arbitra. É a camada de software que fica entre o hardware bruto e tudo o mais que roda em um computador, o núcleo que transforma um conjunto de componentes eletrônicos em um sistema que pode executar múltiplos programas ao mesmo tempo, de forma segura e organizada.
 
 ## O que é o kernel?
 
@@ -14,7 +14,7 @@ Todo sistema operacional moderno divide a execução em dois domínios com privi
 
 No *kernel space* roda o próprio kernel, com acesso completo ao hardware e à memória do sistema. É onde vivem o escalonador de processos, o gerenciador de memória e os drivers. No *user space* rodam os programas comuns: navegadores, jogos, aplicativos de escritório. Um programa em *user space* não pode acessar diretamente o disco, a rede ou a memória de outro processo — ele precisa pedir ao kernel, por meio de uma *syscall*, que faça isso em seu nome.
 
-Essa separação é imposta pelo próprio processador, que oferece níveis de privilégio distintos em hardware (os chamados *rings* de proteção, em arquiteturas x86). Um programa em *user space* simplesmente não tem instruções disponíveis para acessar certas regiões de memória ou certas portas de hardware. Só o kernel, rodando no nível mais privilegiado, tem essa permissão.
+Essa separação é imposta pelo próprio processador, que oferece níveis de privilégio distintos em hardware — na arquitetura x86, por exemplo, são os chamados *rings* de proteção. Outras arquiteturas, como a ARM, implementam o mesmo princípio com outro nome e outra organização interna, mas o efeito é o mesmo: um programa em *user space* simplesmente não tem instruções disponíveis para acessar certas regiões de memória ou certas portas de hardware. Só o kernel, rodando no nível mais privilegiado, tem essa permissão.
 
 ## Tipos de kernel
 
@@ -22,7 +22,7 @@ Nem todo kernel organiza suas funções da mesma forma. A diferença está em qu
 
 ### Monolítico
 
-No modelo monolítico, praticamente todo o sistema operacional — escalonador, gerenciador de memória, sistema de arquivos, drivers — roda dentro do kernel, em *kernel space*. É o modelo usado pelo Linux e, historicamente, pela maioria dos Unix. A vantagem é desempenho: como tudo está no mesmo espaço de memória, a comunicação entre as partes é direta, sem a sobrecarga de trocar de contexto entre domínios de privilégio. A desvantagem é que um erro em um driver mal escrito pode derrubar o sistema inteiro, já que ele roda com os mesmos privilégios do restante do kernel.
+No modelo monolítico, praticamente todo o sistema operacional — escalonador, gerenciador de memória, sistema de arquivos, drivers — roda dentro do kernel, em *kernel space*. É o modelo usado pelo Linux e, historicamente, pela maioria dos Unix. A vantagem é desempenho: como tudo está no mesmo espaço de memória, a comunicação entre as partes é direta, sem a sobrecarga de trocar de contexto entre domínios de privilégio. A desvantagem é que um erro em um driver mal escrito pode derrubar o sistema inteiro, já que ele roda com os mesmos privilégios do restante do kernel. Embora rígido em sua concepção original, esse modelo evoluiu em kernels modernos para permitir a inclusão de novos componentes sem a necessidade de recompilar todo o sistema.
 
 ### Microkernel
 
@@ -40,7 +40,7 @@ O que um kernel faz, independentemente da arquitetura escolhida, se resume a um 
 
 ### Gerenciamento de processos
 
-O kernel cria, agenda e encerra processos. Cada programa em execução é representado internamente como um processo, com sua própria região de memória, seus próprios arquivos abertos e seu próprio estado de execução. Como o processador físico só executa uma instrução por núcleo por vez, é o kernel quem decide qual processo roda em qual instante — uma função chamada de escalonamento, tratada em mais detalhe adiante.
+O kernel cria, agenda e encerra processos. Cada programa em execução é representado internamente como um processo, com sua própria região de memória, seus próprios arquivos abertos e seu próprio estado de execução. Como o processador físico só executa uma instrução por núcleo por vez, é o kernel quem decide qual processo roda em qual instante — uma função chamada de escalonamento, assunto que será aprofundado em um capítulo futuro sobre gerenciamento de processos. Ao alternar entre esses processos em velocidades altíssimas, o kernel cria a ilusão de que múltiplos programas estão rodando simultaneamente.
 
 ### Gerenciamento de memória
 
@@ -56,7 +56,7 @@ O kernel gerencia como dados são organizados e recuperados de dispositivos de a
 
 ## Chamadas de sistema (syscalls)
 
-Uma *syscall* é o mecanismo pelo qual um programa em *user space* solicita um serviço ao kernel. Abrir um arquivo, alocar memória, enviar dados pela rede — todas essas operações exigem uma *syscall*, porque nenhuma delas pode ser feita diretamente pelo programa sem acesso privilegiado ao hardware.
+Uma *syscall* funciona como a ponte de comunicação pela qual um programa em *user space* solicita um serviço ao kernel. Abrir um arquivo, alocar memória, enviar dados pela rede — todas essas operações exigem uma *syscall*, porque nenhuma delas pode ser feita diretamente pelo programa sem acesso privilegiado ao hardware.
 
 Quando um programa faz uma *syscall*, o processador realiza uma troca de contexto: sai do modo de privilégio restrito do *user space* e entra no modo privilegiado do kernel, executa a operação solicitada, e retorna o resultado ao programa, voltando ao modo restrito. Essa troca tem um custo de desempenho pequeno, mas não nulo — por isso programas que fazem uso intensivo de I/O costumam agrupar operações para reduzir o número de *syscalls* necessárias.
 

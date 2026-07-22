@@ -10,12 +10,12 @@ Sem pasta térmica, o contato real entre chip e dissipador seria apenas nos pont
 
 ## Ventoinhas
 
-A ventoinhas movem o ar: seja puxando ar fresco para dentro do gabinete, empurrando ar quente para fora ou forçando o fluxo de ar sobre as aletas de um dissipador.
+As ventoinhas movem o ar: seja puxando ar fresco para dentro do gabinete, empurrando ar quente para fora ou forçando o fluxo de ar sobre as aletas de um dissipador.
 
 - **Tamanho:** medido em milímetros (80 mm, 120 mm, 140 mm, 200 mm). Ventoinhas maiores movem o mesmo volume de ar com menos rotações, portanto com menos ruído;
 - **RPM (rotações por minuto):** define a velocidade máxima, mais RPM significa mais fluxo de ar e mais ruído;
 - **CFM (*cubic feet per minute*):** medida do volume bruto de ar movido por minuto;
-- **mmH₂O (pressão estática):** relevante para ventoinhas que precisam empurrar ar através de obstáculos rígidos, como as aletas apertadas de um dissipador ou um radiador de water cooler;
+- **mmH₂O (pressão estática):** capacidade de empurrar o ar contra resistências, sendo relevante para ventoinhas que precisam empurrar ar através de obstáculos rígidos, como as aletas apertadas de um dissipador ou um radiador de water cooler;
 - **Nível de ruído (dBA):** medido em decibéis ponderados.
 
 ## Tipos de resfriamento

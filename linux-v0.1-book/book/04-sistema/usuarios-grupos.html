@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Tamanho dos Arquivos - Linux - eBook</title>
+        <title>Usuários e Grupos - Linux - eBook</title>
 
 
         <!-- Custom HTML head -->
@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da940e3e.js";
+            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-f9a244e0.js"></script>
+        <script src="../toc-a0cfbb35.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,16 +174,58 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="gerenciamento-de-usuários-e-grupos"><a class="header" href="#gerenciamento-de-usuários-e-grupos">Gerenciamento de Usuários e Grupos</a></h1>
+<p>O Linux é, por natureza, um sistema operacional multiusuário estruturado sob um princípio rígido de privilégios. Para garantir a segurança, o isolamento de dados e a organização do ecossistema, o administrador do sistema (root) precisa controlar quem possui acesso à máquina e a quais departamentos essas identidades pertencem.</p>
+<h2 id="criando-e-administrando-usuários"><a class="header" href="#criando-e-administrando-usuários">Criando e Administrando Usuários</a></h2>
+<p>A criação de uma nova identidade no sistema pode ser feita por duas abordagens que operam em camadas diferentes do sistema operacional:</p>
+<ul>
+<li><strong>useradd:</strong> É o utilitário nativo de baixo nível. Ele cria o usuário de forma direta e “crua”. O sistema registra a identidade binária, mas não configura um diretório pessoal (/home) ou uma senha inicial de forma automática, exigindo parametrização manual posterior.</li>
+</ul>
+<pre><code class="language-bash">useradd &lt;nome-do-usuario&gt;
+</code></pre>
+<ul>
+<li><strong>adduser:</strong> É um script de alto nível muito mais amigável e interativo. Ao ser executado, ele guia o administrador na configuração do perfil, gera automaticamente o diretório de início (/home/nome-do-usuario), copia os arquivos base de ambiente (como .bashrc) e solicita a criação da senha em tempo de execução.</li>
+</ul>
+<pre><code class="language-bash">adduser &lt;nome-do-usuario&gt;
+</code></pre>
+<h2 id="auditoria-e-exclusão-de-contas"><a class="header" href="#auditoria-e-exclusão-de-contas">Auditoria e Exclusão de Contas</a></h2>
+<p>Para validar se as contas foram criadas corretamente ou para removê-las quando um usuário desliga-se do sistema, utilizamos os seguintes comandos:</p>
+<pre><code class="language-bash"># Verifica se o usuário foi registrado no arquivo de grupos do sistema
+cat /etc/group | grep &lt;nome-do-usuario&gt;
+
+# Valida a existência do usuário e o estado do hash da sua senha (requer sudo)
+sudo cat /etc/shadow | grep &lt;nome-do-usuario&gt;
+
+# Remove a conta do usuário do sistema
+userdel &lt;nome-do-usuario&gt;
+</code></pre>
+<h2 id="gerenciando-grupos-no-linux"><a class="header" href="#gerenciando-grupos-no-linux">Gerenciando Grupos no Linux</a></h2>
+<p>Os grupos funcionam como caixas organizacionais projetadas para simplificar a atribuição de permissões em massa. Em vez de dar acesso a um arquivo para cinquenta usuários individualmente, o administrador cria um grupo, coloca os usuários lá dentro e dá a permissão apenas ao grupo.</p>
+<pre><code class="language-bash"># Cria um novo grupo de segurança no sistema (ex: projetos)
+groupadd projetos
+
+# Lista todos os grupos existentes e seus respectivos IDs (GIDs)
+cat /etc/group
+
+# Adiciona um usuário a um grupo secundário (-a de append, -G de Group)
+usermod -aG &lt;nome-do-grupo&gt; &lt;nome-do-usuario&gt;
+
+# Verifica instantaneamente a quais grupos uma determinada conta pertence
+groups &lt;nome-do-usuario&gt;
+
+# Exclui um grupo do sistema operacional
+groupdel &lt;nome-do-grupo&gt;
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../arquivos/tipos-de-arquivos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../04-sistema/raiz-de-arquivos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../visualizando-arquivos/intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../04-sistema/permissoes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -193,11 +235,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../arquivos/tipos-de-arquivos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../04-sistema/raiz-de-arquivos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../visualizando-arquivos/intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../04-sistema/permissoes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

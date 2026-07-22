@@ -48,7 +48,7 @@ A precisão do sensor é medida em DPI (*dots per inch* ou pontos por polegada):
 
 ### Monitor
 
-O monitor é o dispositivo de saída visual principal, responsável por converter o sinal enviado pela placa de vídeo em imagem visível. Cada imagem é formada por milhões de pixels que combinados reproduzem uma ampla gama de cores. A qualidade dessa conversão define em grande parte a experiência visual do usuário com o sistema.
+O monitor é o dispositivo de saída visual principal, responsável por converter o sinal enviado pela placa de vídeo em imagem visível, geralmente através de interfaces como HDMI ou DisplayPort. Cada imagem é formada por milhões de pixels que combinados reproduzem uma ampla gama de cores. A qualidade dessa conversão define em grande parte a experiência visual do usuário com o sistema.
 
 ### Caixas de som e fones de ouvido
 

@@ -29,11 +29,14 @@
   * [Kernel](./03-software/kernel.md)
   * [CLI vs. GUI vs. TUI](./03-software/cli-vs-gui-vs-tui.md)
   * [Pacotes e Repositórios](./03-software/pacotes-e-repositorios.md)
+  * [Licenças](./03-software/licencas.md)
 
-* [Arquivos](./04-arquivos/intro.md)
-  * [Arquivos](./04-arquivos/arquivos.md)
-  * [Tipos de Arquivos](./04-arquivos/tipos-de-arquivos.md)
-  * [Tamanho dos Arquivos](./04-arquivos/tamanho-dos-arquivos.md)
+* [Sistema](./04-sistema/intro.md)
+  * [Tipos de Arquivos](./04-sistema/tipos-de-arquivos.md)
+  * [Tamanho dos Arquivos](./04-sistema/tamanho-dos-arquivos.md)
+  * [Raiz do Sistema](./04-sistema/raiz-de-arquivos.md)
+  * [Usuários e Grupos](./04-sistema/usuarios-grupos.md)
+  * [Permissões](./04-sistema/permissoes.md)
 
 * [Visualizando Arquivos](./visualizando-arquivos/intro.md)
   * [cat](./visualizando-arquivos/cat.md)

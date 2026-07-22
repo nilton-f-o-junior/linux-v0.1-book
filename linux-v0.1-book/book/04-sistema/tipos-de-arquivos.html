@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da940e3e.js";
+            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-f9a244e0.js"></script>
+        <script src="../toc-a0cfbb35.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,46 +174,69 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="extensão"><a class="header" href="#extensão">Extensão</a></h1>
-<p>Anteriormente falamos que arquivos possuem um <code>nome.formato</code> esse <code>.formato</code> nada mais é que o identificador daquele aquivo, ele diz para o sistema de que forma ele deve ser usado.</p>
-<p>Imagine que você precisa guardar um pequeno texto, um formato comum usado é o <code>.txt</code>, agora imagine que você deseja salvar uma música? O <code>.txt</code> não vai poder ser usado, pois o sistema entende que esse formato é usado para guardar texto e não músicas, para isso usamos outros como <code>.mp3</code>.</p>
-<pre><code class="language-bash"># texto
-texto.txt
-
-# audio
-musica.mp3
-</code></pre>
-<p>Segue uma lista de tipos de arquivos:</p>
-<p><code>texto</code>
-Arquivos de texto são compostos por caracteres legíveis por humanos.</p>
-<pre><code class="language-bash">texto.txt   # .txt: arquivo de texto simples.
-texto.md    # .md: arquivo formatado em Markdown.
-dados.csv   # .csv: valores separados por vírgulas.
-config.json # .json: dados estruturados.
-</code></pre>
-<p><code>audio</code>
-Arquivos de áudio armazenam dados sonoros em diversos formatos de compressão e qualidade.</p>
-<pre><code class="language-bash">musica.mp3   # .mp3: áudio compactado, muito comum.
-efeito.wav   # .wav: áudio de alta qualidade, sem compressão.
-podcast.ogg  # .ogg: formato de áudio aberto e livre.
-estudio.flac # .flac: áudio compactado sem perda de qualidade.
-</code></pre>
-<p><code>script</code>
-Scripts são arquivos de texto que contêm sequências de comandos para serem executados por um interpretador.</p>
-<pre><code class="language-bash">backup.sh    # .sh: script de shell (geralmente Bash).
-processa.py  # .py: script escrito em linguagem Python.
-app.js       # .js: script escrito em JavaScript.
-</code></pre>
+                        <h1 id="tipos-de-arquivos"><a class="header" href="#tipos-de-arquivos">Tipos de arquivos</a></h1>
+<p>Se o sistema de arquivos é a malha organizacional instalada no armazenamento, os arquivos são a matéria-prima que preenche esse espaço. Para o disco rígido ou SSD, tudo não passa de uma longa sequência de bits — zeros e uns gravados magneticamente ou em chips de memória flash. A diferenciação entre o que é uma foto, um documento de texto ou um programa executável acontece na camada do sistema operacional, que precisa saber exatamente como decodificar cada uma dessas sequências.</p>
+<h2 id="o-que-define-um-tipo-de-arquivo"><a class="header" href="#o-que-define-um-tipo-de-arquivo">O que define um tipo de arquivo?</a></h2>
+<p>Um tipo de arquivo é determinado pela forma como seus dados internos são estruturados. Existem duas abordagens principais para o sistema operacional identificar essa estrutura:</p>
+<ul>
+<li>
+<p><strong>Extensão de arquivo:</strong> É o método padrão em sistemas Windows. O tipo do arquivo é indicado por um sufixo de três ou quatro letras após o ponto final no nome do arquivo (como <code>.docx</code>, <code>.jpg</code> ou <code>.mp4</code>). Se você alterar manualmente a extensão de um arquivo <code>.jpg</code> para <code>.txt</code>, o sistema tentará abri-lo em um editor de texto, resultando em uma tela cheia de caracteres ilegíveis.</p>
+</li>
+<li>
+<p><strong>Magic Numbers (Números Mágicos):</strong> É a abordagem nativa de sistemas Unix e Linux. O sistema operacional ignora a extensão do nome e lê os primeiros bytes do arquivo (o cabeçalho ou <em>header</em>). Esses bytes iniciais contêm uma assinatura única. Por exemplo, todo arquivo PDF começa estritamente com os caracteres <code>%PDF</code>, e toda imagem PNG começa com os bytes hexadecimais <code>89 50 4E 47</code>. Mesmo sem extensão nenhuma no nome, o sistema sabe exatamente o que aquele arquivo é.</p>
+</li>
+</ul>
+<h2 id="arquivos-de-texto-plano-plain-text"><a class="header" href="#arquivos-de-texto-plano-plain-text">Arquivos de texto plano (<em>Plain Text</em>)</a></h2>
+<p>São os arquivos mais simples e universais do ecossistema computacional. Eles contêm apenas caracteres numéricos e de texto puro, codificados em padrões como ASCII ou UTF-8, sem qualquer informação de formatação visual (como tamanho de fonte, cores ou margens).</p>
+<ul>
+<li><strong><code>.txt</code>:</strong> O formato básico de texto. É universalmente legível por qualquer dispositivo ou sistema operacional.</li>
+<li><strong><code>.cfg</code>, <code>.ini</code>, <code>.conf</code>:</strong> Arquivos de texto estruturados para guardar configurações de softwares e do próprio sistema operacional.</li>
+<li><strong><code>.md</code> (Markdown):</strong> Arquivos de texto que utilizam marcações simples (como asteriscos e hashes) para indicar títulos e negritos, mantendo o arquivo perfeitamente legível mesmo quando aberto em um editor de texto puro.</li>
+</ul>
+<p>A grande vantagem do texto plano é a perenidade: um arquivo gerado hoje poderá ser lido daqui a cinquenta anos sem dependência de softwares proprietários.</p>
+<h2 id="arquivos-binários"><a class="header" href="#arquivos-binários">Arquivos binários</a></h2>
+<p>Ao contrário do texto plano, os arquivos binários não foram feitos para serem lidos diretamente por humanos. Eles exigem um software específico que entenda a sua geometria interna para traduzir os bits em algo compreensível na tela. Seus principais grupos são:</p>
+<h3 id="arquivos-de-imagem"><a class="header" href="#arquivos-de-imagem">Arquivos de imagem</a></h3>
+<p>Armazenam dados visuais, dividindo-se entre mapas de bits (pixels) e vetores.</p>
+<ul>
+<li><strong><code>.jpg</code> / <code>.jpeg</code>:</strong> Formato compactado com perda de qualidade. Ideal para fotografias na web devido ao tamanho reduzido do arquivo.</li>
+<li><strong><code>.png</code>:</strong> Compactação sem perda de dados. Suporta fundos transparentes, sendo o padrão para interfaces e gráficos de alta precisão.</li>
+<li><strong><code>.svg</code>:</strong> Formato vetorial baseado em XML. Em vez de salvar pixels, ele salva equações matemáticas de linhas e formas, permitindo que a imagem seja ampliada infinitamente sem perder a nitidez.</li>
+</ul>
+<h3 id="arquivos-de-áudio-e-vídeo"><a class="header" href="#arquivos-de-áudio-e-vídeo">Arquivos de áudio e vídeo</a></h3>
+<p>Funcionam frequentemente como contêineres que abrigam fluxos de dados codificados por algoritmos chamados codecs.</p>
+<ul>
+<li><strong><code>.mp3</code>:</strong> Áudio compactado com perda de frequências imperceptíveis ao ouvido humano médio. Tornou-se o padrão de distribuição musical digital.</li>
+<li><strong><code>.wav</code>:</strong> Áudio sem compactação. Mantém a fidelidade máxima da gravação original, resultando em arquivos massivos, usados profissionalmente na edição de som.</li>
+<li><strong><code>.mp4</code> / <code>.mkv</code>:</strong> Arquivos contêineres que guardam uma faixa de vídeo, múltiplas faixas de áudio (dublagens) e legendas em um único pacote sincronizado.</li>
+</ul>
+<h2 id="arquivos-executáveis"><a class="header" href="#arquivos-executáveis">Arquivos executáveis</a></h2>
+<p>São os arquivos que contêm instruções diretas para o processador executar tarefas. Eles mudam radicalmente conforme a arquitetura e o sistema operacional.</p>
+<ul>
+<li><strong><code>.exe</code> e <code>.msi</code>:</strong> Os formatos executáveis padrão do Windows. Contêm o código binário compilado e rotinas de instalação.</li>
+<li><strong>ELF (sem extensão nativa):</strong> O padrão para executáveis em sistemas Linux. Possui uma estrutura rígida que indica ao kernel como carregar o programa na memória RAM.</li>
+<li><strong>Scripts (<code>.sh</code>, <code>.bat</code>, <code>.py</code>):</strong> Diferente dos executáveis binários, os scripts são arquivos de texto puro contendo comandos ordenados. Eles não são lidos diretamente pelo processador, mas sim interpretados linha por linha por um programa intermediário (como o terminal Bash ou o interpretador Python).</li>
+</ul>
+<h2 id="arquivos-de-arquivamento-e-compactação"><a class="header" href="#arquivos-de-arquivamento-e-compactação">Arquivos de arquivamento e compactação</a></h2>
+<p>São formatos projetados para atuar como caixas digitais. Eles cumprem duas funções frequentemente confundidas: o arquivamento (juntar várias pastas e arquivos em um só local) e a compactação (reduzir o espaço em disco usando algoritmos matemáticos que eliminam redundâncias).</p>
+<ul>
+<li><strong><code>.zip</code>:</strong> O formato de compactação mais popular do mundo. Equilibra uma velocidade de compactação rápida com um nível de redução de tamanho aceitável.</li>
+<li><strong><code>.tar</code>:</strong> Muito comum no ecossistema Linux. Ele apenas realiza o arquivamento (junta os arquivos), sem aplicar nenhuma redução de tamanho.</li>
+<li><strong><code>.tar.gz</code> ou <code>.tgz</code>:</strong> É a união do utilitário <code>.tar</code> (que junta as pastas) com a compactação do algoritmo <code>Gzip</code> (que reduz o tamanho). É o padrão para distribuição de código-fonte e backups no mundo Unix.</li>
+</ul>
+<h2 id="o-impacto-na-segurança"><a class="header" href="#o-impacto-na-segurança">O impacto na segurança</a></h2>
+<p>A distinção entre tipos de arquivos é o primeiro pilar da segurança digital. Arquivos de dados puros (como <code>.txt</code>, <code>.jpg</code> ou <code>.mp3</code>) são passivos; eles são abertos por um programa e lidos, não tendo a capacidade de executar ações sozinhos no sistema.</p>
+<p>O risco reside em arquivos ativos, ou seja, executáveis e scripts. Um arquivo nomeado falsamente como <code>foto.jpg.exe</code> pode enganar um usuário desatento em sistemas que ocultam extensões conhecidas. Ao clicar nele, o sistema operacional não abrirá uma imagem, mas sim executará as instruções binárias contidas ali, dando ao programa o poder de modificar arquivos na raiz do sistema, instalar malwares ou capturar dados do usuário.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../arquivos/arquivos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../04-sistema/intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../arquivos/tamanho-dos-arquivos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../04-sistema/tamanho-dos-arquivos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -223,11 +246,11 @@ app.js       # .js: script escrito em JavaScript.
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../arquivos/arquivos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../04-sistema/intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../arquivos/tamanho-dos-arquivos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../04-sistema/tamanho-dos-arquivos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

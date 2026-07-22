@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da940e3e.js";
+            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-f9a244e0.js"></script>
+        <script src="../toc-a0cfbb35.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -177,10 +177,10 @@
                         <h1 id="pacotes-e-repositórios"><a class="header" href="#pacotes-e-repositórios">Pacotes e repositórios</a></h1>
 <p>Se o sistema operacional é a base sobre a qual tudo roda, os pacotes são a forma como o software chega até essa base. Instalar um programa raramente significa copiar um único arquivo executável: significa trazer um conjunto de binários, bibliotecas, arquivos de configuração e metadados, tudo organizado de um jeito que o sistema saiba o que fazer com cada peça. É o gerenciador de pacotes que viabiliza isso, e é o repositório que decide de onde esse conjunto vem.</p>
 <h2 id="o-que-é-um-pacote"><a class="header" href="#o-que-é-um-pacote">O que é um pacote?</a></h2>
-<p>Um pacote é um arquivo compactado que reúne tudo o que um programa precisa para ser instalado corretamente: os binários executáveis, as bibliotecas que ele usa, os arquivos de configuração padrão, a documentação e um conjunto de metadados que descreve o próprio pacote. Esses metadados incluem o nome do software, a versão, a arquitetura para a qual foi compilado e, principalmente, as dependências, ou seja, quais outros pacotes precisam estar presentes para que ele funcione.</p>
+<p>Um pacote é um arquivo compactado que reúne tudo o que um programa precisa para ser instalado corretamente: os binários executáveis (arquivos já compilados e prontos para execução pelo computador), as bibliotecas que ele usa, os arquivos de configuração padrão, a documentação e um conjunto de metadados que descreve o próprio pacote. Esses metadados incluem o nome do software, a versão, a arquitetura para a qual foi compilado e, principalmente, as dependências, ou seja, quais outros pacotes precisam estar presentes para que ele funcione.</p>
 <p>Sem esse formato padronizado, cada instalação seria um processo manual: baixar o código-fonte, compilar, descobrir na tentativa e erro quais bibliotecas faltam, resolver cada uma delas separadamente. O pacote existe justamente para eliminar essa fricção.</p>
 <h2 id="formatos-de-pacote"><a class="header" href="#formatos-de-pacote">Formatos de pacote</a></h2>
-<p>Cada família de distribuições Linux adotou seu próprio formato de pacote, e a escolha de formato costuma ser a primeira coisa que diferencia uma distribuição da outra do ponto de vida prático:</p>
+<p>Cada família de distribuições Linux adotou seu próprio formato de pacote, e a escolha de formato costuma ser a primeira coisa que diferencia uma distribuição da outra do ponto de vista prático:</p>
 <ul>
 <li>
 <p><strong>.deb:</strong> formato usado por Debian, Ubuntu e derivados. É um arquivo <em>ar</em> que contém, internamente, os binários e os metadados de controle do pacote.</p>
@@ -220,7 +220,7 @@
 <p><strong>Zypper:</strong> gerenciador de alto nível do openSUSE, também construído sobre o rpm.</p>
 </li>
 </ul>
-<p>Na prática, é essa camada de alto nível que o usuário acessa no dia a dia. Comandos como <code>apt install</code>, <code>dnf install</code> ou <code>pacman -S</code> descrevem a intenção — instalar um programa — e deixam para o gerenciador a tarefa de descobrir tudo o que precisa ser baixado.</p>
+<p>Na prática, é essa camada de alto nível que o usuário acessa no dia a dia. Comandos como <code>sudo apt install</code>, <code>sudo dnf install</code> ou <code>sudo pacman -S</code> descrevem a intenção — instalar um programa — e deixam para o gerenciador a tarefa de descobrir tudo o que precisa ser baixado.</p>
 <h2 id="repositórios"><a class="header" href="#repositórios">Repositórios</a></h2>
 <p>Um repositório é um servidor, ou conjunto de servidores, que hospeda pacotes prontos para instalação, junto com um índice que descreve o que está disponível: nomes, versões, dependências e a localização de cada arquivo. O gerenciador de pacotes consulta esse índice antes de instalar qualquer coisa, o que permite que ele saiba, sem baixar o pacote inteiro primeiro, se a instalação é viável e o que mais precisa ser trazido junto.</p>
 <h3 id="repositórios-oficiais"><a class="header" href="#repositórios-oficiais">Repositórios oficiais</a></h3>
@@ -237,6 +237,9 @@
 <li>
 <p><strong>COPR:</strong> sistema de repositórios pessoais equivalente ao PPA, mas para o ecossistema Fedora.</p>
 </li>
+<li>
+<p><strong>AUR (Arch User Repository):</strong> repositório mantido pela comunidade Arch Linux, onde usuários compartilham scripts de construção (PKGBUILDs) para software que não está nos repositórios oficiais.</p>
+</li>
 </ul>
 <p>Adicionar um repositório de terceiros expande o que está disponível, mas também expande a superfície de confiança do sistema: o gerenciador passa a instalar pacotes de uma fonte que não passou pela mesma curadoria dos repositórios oficiais. Isso não é necessariamente um problema — muitos PPAs são mantidos pelos próprios desenvolvedores do software —, mas exige mais cautela do usuário sobre o que está habilitando.</p>
 <h3 id="mirrors"><a class="header" href="#mirrors">Mirrors</a></h3>
@@ -251,7 +254,7 @@
 <p>Ao adicionar um repositório de terceiros, é comum que o próprio processo exija importar a chave GPG daquele repositório antes que o gerenciador aceite instalar pacotes vindos dele.</p>
 <h2 id="cache-local-e-atualização-de-listas"><a class="header" href="#cache-local-e-atualização-de-listas">Cache local e atualização de listas</a></h2>
 <p>O gerenciador de pacotes mantém, localmente, uma cópia do índice de cada repositório configurado. Essa cópia é o que permite que comandos de busca e verificação de versão respondam rapidamente, sem precisar consultar o servidor remoto a cada operação.</p>
-<p>Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (<code>apt update</code>, <code>dnf makecache</code>, <code>pacman -Sy</code>), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar.</p>
+<p>Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (<code>sudo apt update</code>, <code>sudo dnf makecache</code>, <code>sudo pacman -Sy</code>), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar. No caso do APT, é importante notar que o comando <code>update</code> atualiza apenas o índice de pacotes disponíveis, e não os programas instalados no sistema. No caso do Pacman, vale uma ressalva: o recomendado é sempre sincronizar e atualizar o sistema juntos (<code>sudo pacman -Syu</code>), em vez de rodar <code>-Sy</code> isoladamente, para evitar inconsistências entre pacotes — um cuidado específico do Arch Linux que será retomado em mais detalhe em um capítulo futuro.</p>
 <h2 id="pacotes-binários-e-pacotes-de-código-fonte"><a class="header" href="#pacotes-binários-e-pacotes-de-código-fonte">Pacotes binários e pacotes de código-fonte</a></h2>
 <p>A grande maioria das instalações do dia a dia usa pacotes binários: o software já vem compilado, pronto para rodar na arquitetura correspondente. A alternativa é compilar o software a partir do código-fonte, algo que alguns gerenciadores, como o <em>Portage</em> do Gentoo, adotam como modelo padrão.</p>
 <p>Compilar a partir do código-fonte permite otimizações específicas para o hardware da máquina e maior controle sobre quais recursos do programa são incluídos, mas tem um custo real: o tempo de compilação, que pode levar de minutos a horas dependendo do software, e a necessidade de resolver dependências de compilação além das dependências de execução.</p>
@@ -278,7 +281,7 @@
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../arquivos/intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../03-software/licencas.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -292,7 +295,7 @@
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../arquivos/intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../03-software/licencas.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

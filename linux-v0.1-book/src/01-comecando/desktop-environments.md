@@ -1,59 +1,44 @@
 # Desktop Environments
 
-Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto, um fundo personalizável e um menu de aplicativos, está olhando para uma construção inteiramente separada do kernel. Equipes inteiras de desenvolvedores precisaram escrever todo aquele ambiente do zero. O kernel não entregou nada disso de bandeja. Entre o kernel e o ambiente gráfico existe ainda uma camada intermediária chamada servidor gráfico, hoje dividida entre o *Wayland*, cada vez mais adotado, e o *X11*, ainda amplamente utilizado, responsável por traduzir as instruções do sistema em imagens na tela.
+Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto e um fundo personalizável, está olhando para uma construção inteiramente separada do kernel: desenvolvedores precisaram escrever todo aquele ambiente do zero.
 
-Essa é a camada visual que fica entre você e o sistema operacional. No Linux, diferente do Windows ou do macOS, essa camada é intercambiável: você escolhe qual prefere, e cada opção tem uma filosofia própria. A seguir, um panorama dos mais populares.
+Entre o kernel e o ambiente gráfico existe ainda uma camada intermediária chamada servidor gráfico, responsável por traduzir as instruções do sistema em imagens na tela. Hoje ela está dividida entre o *Wayland*, cada vez mais adotado, e o *X11*, ainda amplamente utilizado.
+
+Vale destacar que o ambiente de desktop é independente da distribuição escolhida. A grande maioria das distribuições permite instalar e alternar entre diferentes ambientes gráficos, e muitas oferecem variações oficiais, cada uma vindo com um ambiente diferente já configurado por padrão. Escolher uma distribuição e escolher um ambiente de desktop são, na prática, decisões separadas.
 
 ## Um ecossistema, muitas filosofias
 
 ### GNOME
 
-O GNOME aposta em simplicidade e coerência. Sua filosofia é reduzir o número de decisões que o usuário precisa tomar: poucos botões expostos, fluxos bem definidos, estética limpa e moderna. A área de trabalho é quase vazia por padrão, o foco está nas "Atividades", um painel central que organiza tarefas e aplicativos abertos.
-
-Por ser visualmente rico e moderno, funciona melhor em máquinas com pelo menos 4 GB de memória RAM. O gerenciador de arquivos padrão é o Nautilus.
-
-- **Parecido com:** macOS (minimalismo e fluxo de trabalho baseado em atividades), com ressalva: a semelhança é mais estética do que funcional: o GNOME tem lógica própria;
-- **Ideal para:** quem quer algo que "simplesmente funciona", com foco em produtividade e organização sem distrações;
-- **Onde encontrar:** Ubuntu, Fedora, Debian, é o ambiente padrão em muitas das grandes distribuições.
+O [GNOME](https://www.gnome.org/) aposta em simplicidade e coerência. Sua filosofia é reduzir o número de decisões que o usuário precisa tomar: poucos botões expostos, fluxos bem definidos, estética limpa e moderna. A área de trabalho é quase vazia por padrão. O foco está nas "atividades", um painel central que organiza tarefas e aplicativos abertos.
 
 ### KDE Plasma
 
-O KDE Plasma vai na direção oposta ao GNOME. É um ambiente profundamente configurável, onde praticamente tudo pode ser ajustado: posição da barra de tarefas, comportamento dos ícones, atalhos de teclado, temas visuais e efeitos de janela. É possível adicionar widgets diretamente na área de trabalho, criar temas personalizados e muito mais.
+O [KDE Plasma](https://kde.org/plasma-desktop/) vai na direção oposta ao GNOME. É um ambiente profundamente configurável, onde praticamente tudo pode ser ajustado: posição da barra de tarefas, comportamento dos ícones, atalhos de teclado, temas visuais e efeitos de janela. É possível adicionar widgets diretamente na área de trabalho, criar temas personalizados e muito mais.
 
-Para quem gosta de controlar cada detalhe do próprio ambiente, o KDE é quase um playground. E apesar de todo esse poder, ele é surpreendentemente eficiente, funcionando bem em hardware com recursos moderados. O gerenciador de arquivos padrão é o Dolphin, completo e fácil de usar.
+### COSMIC
 
-- **Parecido com:** Windows 10/11 (em aparência e familiaridade);
-- **Ideal para:** usuários que querem uma interface familiar, porém altamente personalizável;
-- **Onde encontrar:** Kubuntu, Manjaro KDE, openSUSE.
+O [COSMIC](https://system76.com/cosmic) é um ambiente relativamente novo, desenvolvido do zero por uma empresa fabricante de computadores focada em Linux. Diferente da maioria dos ambientes tradicionais, foi escrito em uma linguagem de programação moderna voltada para segurança e desempenho. Ainda em evolução ativa, busca unir uma estética contemporânea com um modelo de configuração simples e direto.
 
 ### XFCE
 
-O XFCE nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente, sem excessos.
+O [XFCE](https://www.xfce.org/) nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente, sem excessos.
 
-Apesar da aparência mais tradicional, o XFCE é bem personalizável e pode ser ajustado conforme a necessidade. O gerenciador de arquivos padrão é o Thunar, conhecido por ser rápido e direto ao ponto.
+### MATE
 
-- **Parecido com:** interfaces tradicionais de desktop, com barra de tarefas fixa e menus convencionais, mas com consumo de recursos muito inferior;
-- **Ideal para:** máquinas mais antigas ou usuários que priorizam desempenho e leveza;
-- **Onde encontrar:** Xubuntu, MX Linux, Linux Mint (edição XFCE).
-
-### LXQt
-
-O LXQt caminha numa direção parecida com o XFCE, mas com uma base tecnológica mais moderna. É o sucessor espiritual do antigo LXDE e tornou-se a escolha preferida de distribuições voltadas para hardware de baixo desempenho.
-
-Assim como o XFCE, entrega uma experiência gráfica funcional com consumo mínimo de recursos, mas com componentes mais atuais por baixo dos panos. O gerenciador de arquivos padrão é o *PCManFM-Qt*, leve e funcional.
-
-- **Ideal para:** hardware muito limitado, máquinas antigas onde até o XFCE pode pesar;
-- **Onde encontrar:** Lubuntu, Manjaro LXQt.
+O [MATE](https://mate-desktop.org/) nasceu como uma continuação do GNOME 2, num momento em que parte da comunidade não se identificou com as mudanças trazidas pelo GNOME 3. Ele preserva a metáfora clássica de área de trabalho, com painéis, menus tradicionais e ícones na tela. É uma opção leve e familiar para quem prefere esse modelo mais convencional, e é uma das alternativas oferecidas pelo Linux Mint.
 
 ### Cinnamon
 
-O Cinnamon foi criado pelos desenvolvedores do Linux Mint com um objetivo bastante claro: oferecer uma experiência familiar para quem vem do Windows. Barra de tarefas embaixo, menu de aplicativos no canto esquerdo, janelas que se comportam de forma previsível.
+O [Cinnamon](https://projects.linuxmint.com/cinnamon/) foi criado pelos desenvolvedores do Linux Mint com um objetivo bastante claro: oferecer uma experiência familiar para quem vem do Windows. Tem barra de tarefas na parte inferior, menu de aplicativos no canto esquerdo e janelas que se comportam de forma previsível.
 
-Ele combina essa familiaridade com um visual moderno e elegante, além de boas opções de personalização. É confortável, polido e tem uma das menores curvas de adaptação para novos usuários Linux. O gerenciador de arquivos padrão é o Nemo.
+### LXQt
 
-- **Parecido com:** Windows 10 (interface intuitiva e familiar);
-- **Ideal para:** usuários migrando do Windows pela primeira vez, é uma das melhores portas de entrada para o Linux;
-- **Onde encontrar:** Linux Mint.
+O [LXQt](https://lxqt-project.org/) caminha numa direção parecida com o XFCE, mas com uma base tecnológica mais moderna. É o sucessor espiritual do antigo LXDE e tornou-se a escolha preferida de distribuições voltadas para hardware de baixo desempenho.
+
+### Budgie
+
+O [Budgie](https://buddiesofbudgie.org/) nasceu com o objetivo de oferecer uma experiência elegante e simples, sem abrir mão de recursos modernos. Foi criado originalmente para uma distribuição específica, mas hoje é mantido de forma independente para funcionar em diferentes sistemas. Sua proposta central é equilibrar praticidade visual com um conjunto enxuto de opções de configuração.
 
 ## Por que tantos?
 

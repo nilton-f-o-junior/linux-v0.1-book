@@ -12,7 +12,7 @@ A fonte converte um tipo no outro, ela retifica a corrente alternada, regula a t
 
 Nenhuma conversão de energia é perfeita, parte da eletricidade consumida da tomada se perde como calor durante o processo. A eficiência de uma fonte indica quanto dessa energia é efetivamente convertida em energia útil para os componentes.
 
-Uma fonte com 80% de eficiência, por exemplo, transforma 80 watts em energia utilizável para cada 100 watts consumidos da tomad, os 20 watts restantes viram calor, dissipado pelo ventilador interno da fonte.
+Uma fonte com 80% de eficiência, por exemplo, transforma 80 watts em energia utilizável para cada 100 watts consumidos da tomada, os 20 watts restantes viram calor, dissipado pelo ventilador interno da fonte.
 
 O programa de certificação 80 Plus classifica as fontes por faixa de eficiência em diferentes níveis: White, Bronze, Silver, Gold, Platinum e Titanium. Uma fonte 80 Plus Gold atinge no mínimo 87% de eficiência na maior parte da sua faixa de operação. Além de economizar energia, fontes mais eficientes geram menos calor e tendem a durar mais.
 
@@ -48,7 +48,7 @@ Algumas fontes possuem na parte traseira uma pequena chave com as opções 110 V
 
 Ligar a fonte com o seletor na posição errada é um erro grave, uma fonte configurada para 220 V em uma tomada de 110 V simplesmente não liga. O caminho inverso é mais perigoso, uma fonte ajustada para 110 V conectada a uma rede de 220 V recebe o dobro da tensão esperada, o que pode danificá-la permanentemente e, em alguns casos, causar curto-circuito ou incêndio.
 
-Fontes mais modernas eliminam esse risco com a tecnologia de chaveamento automático, chamada de bivolt automático ou PFC ativo, elas detectam a tensão da rede e se ajustam sozinhas, operando em qualquer tensão entre 100 V e 240 V sem nenhuma intervenção do usuário, nessas fontes, o seletor não existe.
+Fontes mais modernas eliminam esse risco com a tecnologia de chaveamento automático, chamada de bivolt automático, que detecta a tensão da rede e se ajusta sozinha, operando em qualquer tensão entre 100 V e 240 V sem nenhuma intervenção do usuário. Nessas fontes, o seletor não existe. Esse recurso costuma vir acompanhado do PFC ativo (*Power Factor Correction*), uma tecnologia relacionada que melhora a qualidade elétrica da fonte, mas trata-se de um conceito distinto, que será visto com mais detalhe em capítulo próprio.
 
 ## Conectores
 
@@ -63,4 +63,3 @@ A fonte distribui energia pelo sistema por meio de cabos com conectores específ
 - **SATA:** padrão atual para alimentação de SSDs e HDs. O conector tem formato fino e encaixe em L, o que facilita a identificação e a inserção correta.
 
 - **Molex:** formato mais antigo, ainda presente em alguns componentes como controladores de fan hub e fitas de LED. Possui quatro pinos e encaixe por pressão.
-

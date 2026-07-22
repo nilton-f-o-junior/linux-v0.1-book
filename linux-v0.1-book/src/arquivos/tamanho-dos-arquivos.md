@@ -1,1 +1,0 @@
-# Tamanho dos Arquivos

@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-da940e3e.js";
+            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-f9a244e0.js"></script>
+        <script src="../toc-a0cfbb35.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -189,7 +189,7 @@
 </ul>
 <h4 id="nvme-ssds-ainda-mais-rápidos"><a class="header" href="#nvme-ssds-ainda-mais-rápidos">NVMe: SSDs ainda mais rápidos</a></h4>
 <p>Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs mais antigos e mais baratos usam a interface SATA, a mesma criada originalmente para os HDs. Ela funciona bem, mas é um gargalo para os chips modernos de memória flash.</p>
-<p>Os SSDs NVMe (<em>Non-Volatile Memory Express</em>) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva: onde um SSD SATA lê dados a cerca de 500 MB/s, um NVMe pode ultrapassar os 7.000 MB/s nos modelos mais rápidos, sendo que modelos intermediários ficam entre 2.000 e 4.000 MB/s, ainda muito acima do SATA. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.</p>
+<p>Os SSDs NVMe (<em>Non-Volatile Memory Express</em>) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s, com os modelos mais recentes, que usam gerações mais novas do PCIe, indo muito além disso. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.</p>
 <h3 id="hd---hard-disk-drive"><a class="header" href="#hd---hard-disk-drive">HD - Hard Disk Drive</a></h3>
 <p>O HD é a tecnologia mais antiga ainda em uso comum. Dentro da carcaça metálica há pratos magnéticos girando em alta velocidade, normalmente entre 5.400 e 7.200 rotações por minuto, e um braço mecânico com uma cabeça de leitura e escrita que se move sobre eles para acessar os dados.</p>
 <p>O HD é mais barato de se produzir e capaz de armazenar grandes volumes de dados, mas é limitado pela velocidade da mecânica. Cada leitura depende de o prato estar na posição certa e de o braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se acumula e se torna perceptível.</p>
@@ -252,10 +252,10 @@
 <h3 id="particionamento-de-disco"><a class="header" href="#particionamento-de-disco">Particionamento de disco</a></h3>
 <p>Um disco físico, seja ele um SSD ou um HD, chega ao sistema como um bloco bruto. Antes de guardar qualquer dado, esse espaço precisa ser organizado. O particionamento é o processo de dividir esse bloco em regiões independentes, cada uma com início, fim e propósito definidos.</p>
 <p>Para o sistema operacional, cada partição aparece como um dispositivo separado. Um único disco de 1 TB pode se comportar como se fossem dois ou três discos menores, cada um com seu próprio sistema de arquivos, suas próprias permissões e sua própria função.</p>
-<p>De forma simples: é possível dividir o espaço de um SSD e fazê-lo se comportar como se fossem dois, funcionando com sistemas diferentes, arquivos diferentes e propósitos diferentes.</p>
 <h4 id="por-que-particionar"><a class="header" href="#por-que-particionar">Por que particionar?</a></h4>
 <p>A razão mais imediata é separação de responsabilidades. Em um servidor Linux, é comum isolar o sistema operacional em uma partição, os dados dos usuários em outra e os logs do sistema em uma terceira. Se os logs crescerem sem controle e preencherem o disco, apenas a partição deles é afetada. O sistema continua funcionando, e os dados dos usuários permanecem intactos.</p>
 <p>Em desktops com <em>dual boot</em> (dois sistemas operacionais no mesmo computador), o particionamento é o que permite que Windows e Linux coexistam sem interferência, cada sistema vive em sua própria região do disco e não enxerga o território do outro.</p>
+<p>Além das partições de sistema operacional e dados, existem partições com propósitos especiais, como a partição <em>swap</em>, usada pelo Linux como extensão da memória RAM em momentos de aperto. Esse e outros tipos de partição serão vistos em detalhe em capítulos futuros.</p>
 <h4 id="sistemas-de-arquivos"><a class="header" href="#sistemas-de-arquivos">Sistemas de arquivos</a></h4>
 <p>Criar uma partição é apenas o primeiro passo. Para que o sistema operacional consiga gravar e ler dados nela, é preciso formatá-la com um sistema de arquivos, uma estrutura que define como arquivos são nomeados, organizados e localizados dentro daquele espaço.</p>
 <ul>
