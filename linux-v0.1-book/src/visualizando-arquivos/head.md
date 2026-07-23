@@ -1,16 +1,16 @@
-# head.md
+# head
 
 Exibe as primeiras linhas de um arquivo (10 por padrão).
 
 ```bash
-head [opções] [diretório/arquivo] [diretório1/arquivo1]
+head [opções] [arquivo] [arquivo1]
 ```
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `diretório/arquivo` | Localização do arquivo a ser visualizado |
-| `-n`, `--lines=N` | Exibe as primeiras `N` linhas (padrão: 10) |
-| `-c`, `--bytes=N` | Exibe os primeiros `N` bytes do arquivo |
+| arquivo | Localização do arquivo a ser visualizado |
+| -n, --lines=N | Exibe as primeiras `N` linhas (padrão: 10) |
+| -c, --bytes=N | Exibe os primeiros `N` bytes do arquivo |
 
 **Exemplos**
 

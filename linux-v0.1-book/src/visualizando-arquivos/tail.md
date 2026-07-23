@@ -3,15 +3,15 @@
 Exibe as últimas linhas de um arquivo (10 por padrão).
 
 ```bash
-tail [opções] [diretório/arquivo] [diretório1/arquivo1]
+tail [opções] [arquivo] [arquivo1]
 ```
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `diretório/arquivo` | Localização do arquivo a ser visualizado |
-| `-n`, `--lines=N` | Exibe as últimas `N` linhas (padrão: 10) |
-| `-c`, `--bytes=N` | Exibe os últimos `N` bytes do arquivo |
-| `-f`, `--follow` | Mantém o arquivo aberto e exibe novas linhas em tempo real |
+| arquivo | Localização do arquivo a ser visualizado |
+| -n, --lines=N | Exibe as últimas `N` linhas (padrão: 10) |
+| -c, --bytes=N | Exibe os últimos `N` bytes do arquivo |
+| -f, --follow | Mantém o arquivo aberto e exibe novas linhas em tempo real |
 
 **Exemplos**
 

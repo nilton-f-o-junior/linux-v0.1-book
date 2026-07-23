@@ -8,12 +8,12 @@ touch [opções] [arquivos]
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `arquivos` | Arquivos que terão sua data e hora modificados |
-| `-t MMDDhhmm[ANO.ss]` | Define data/hora manualmente: mês, dia, hora, minuto e opcionalmente ano e segundos |
-| `-a`, `--time=atime` | Altera somente a data e hora de acesso |
-| `-m`, `--time=mtime` | Altera somente a data e hora de modificação |
-| `-c`, `--no-create` | Não cria o arquivo caso ele não exista |
-| `-r arquivo` | Usa a data e hora de outro arquivo como referência |
+| arquivos | Arquivos que terão sua data e hora modificados |
+| -t [ANO]MMDDhhmm[.ss] | Define data/hora manualmente: ano (opcional), mês, dia, hora, minuto e, opcionalmente, segundos |
+| -a, --time=atime | Altera somente a data e hora de acesso |
+| -m, --time=mtime | Altera somente a data e hora de modificação |
+| -c, --no-create | Não cria o arquivo caso ele não exista |
+| -r arquivo | Usa a data e hora de outro arquivo como referência |
 
 **Exemplos**
 

@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-7d1ffa46.js";
+            window.path_to_searchindex_js = "../searchindex-b443058c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-a0cfbb35.js"></script>
+        <script src="../toc-37ca00fe.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -184,15 +184,18 @@
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>origem</code></td><td>Arquivo ou diretório a ser movido ou renomeado</td></tr>
-<tr><td><code>destino</code></td><td>Caminho de destino ou novo nome do arquivo/diretório</td></tr>
-<tr><td><code>-f</code>, <code>--force</code></td><td>Substitui o arquivo de destino sem perguntar</td></tr>
-<tr><td><code>-i</code>, <code>--interactive</code></td><td>Pergunta antes de substituir (padrão)</td></tr>
-<tr><td><code>-v</code>, <code>--verbose</code></td><td>Exibe os arquivos enquanto são movidos</td></tr>
-<tr><td><code>-u</code>, <code>--update</code></td><td>Move somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>origem</td><td>Arquivo ou diretório a ser movido ou renomeado</td></tr>
+<tr><td>destino</td><td>Caminho de destino ou novo nome do arquivo/diretório</td></tr>
+<tr><td>-f, –force</td><td>Substitui o arquivo de destino sem perguntar</td></tr>
+<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são movidos</td></tr>
+<tr><td>-u, –update</td><td>Move somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
 </tbody>
 </table>
 </div>
+<blockquote>
+<p>Por padrão, o <code>mv</code> substitui um arquivo de destino existente sem perguntar. Use <code>-i</code> quando quiser uma confirmação antes de sobrescrever.</p>
+</blockquote>
 <blockquote>
 <p>Diferente do <code>cp</code>, o <code>mv</code> apaga o arquivo de origem após a cópia — o resultado é semelhante a recortar e colar.</p>
 </blockquote>

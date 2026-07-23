@@ -8,12 +8,14 @@ rm [opções] [caminho/arquivo] [caminho1/arquivo1]
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `caminho/arquivo` | Localização e nome do arquivo ou diretório a ser apagado |
-| `-i`, `--interactive` | Pergunta antes de remover (padrão) |
-| `-v`, `--verbose` | Exibe os arquivos enquanto são removidos |
-| `-r`, `--recursive` | Remove arquivos em subdiretórios e os próprios subdiretórios |
-| `-f`, `--force` | Remove sem perguntar, ignorando arquivos inexistentes |
-| `-- arquivo` | Remove arquivos cujo nome contém caracteres especiais (`*`, `?`, `-`, etc.) |
+| caminho/arquivo | Localização e nome do arquivo ou diretório a ser apagado |
+| -i, --interactive | Pergunta antes de remover cada arquivo |
+| -v, --verbose | Exibe os arquivos enquanto são removidos |
+| -r, --recursive | Remove arquivos em subdiretórios e os próprios subdiretórios |
+| -f, --force | Remove sem perguntar, ignorando arquivos inexistentes |
+| -- | Indica o fim das opções da linha de comando; útil para apagar arquivos cujo nome comece com traço (`-`) |
+
+> Por padrão, o `rm` apaga os arquivos sem pedir confirmação. Use `-i` quando quiser que ele pergunte antes de remover.
 
 > **Atenção:** arquivos removidos com `rm` não vão para a lixeira e não podem ser recuperados.
 

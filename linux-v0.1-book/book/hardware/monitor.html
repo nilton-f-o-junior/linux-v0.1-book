@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Monitor - Linux - eBook</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex-b443058c.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-37ca00fe.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Linux - eBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="monitor"><a class="header" href="#monitor">Monitor</a></h1>
+<p>O monitor é o dispositivo de saída visual do computador. Ele recebe um sinal do sistema, seja analógico ou digital, e o converte em uma imagem formada por milhões de pequenos pontos de luz chamados pixels. Cada pixel é composto por três subpixels nas cores primárias da luz: vermelho, verde e azul. A combinação dessas três intensidades em cada ponto é capaz de reproduzir uma ampla gama de cores visíveis ao olho humano.</p>
+<p>A imagem não é estática, o monitor redesenha a tela dezenas de vezes por segundo, criando a ilusão de movimento. A frequência com que isso acontece é chamada de taxa de atualização.</p>
+<h2 id="tecnologias-de-painel"><a class="header" href="#tecnologias-de-painel">Tecnologias de painel</a></h2>
+<p>A forma como os pixels são construídos e iluminados define boa parte das características do monitor. Quatro tecnologias são relevantes no mercado atual, cada uma com características e casos de uso distintos.</p>
+<p>Antes de entrar nas variações, vale entender dois termos que aparecem com frequência:</p>
+<ul>
+<li><strong>LCD (<em>Liquid Crystal Display</em>):</strong> a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada <em>backlight</em>.</li>
+<li><strong>LED:</strong> monitores chamados de “LED” simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. Sendo mais eficiente, que permite designs mais finos e melhor precisão de cores.</li>
+</ul>
+<h3 id="ips"><a class="header" href="#ips">IPS</a></h3>
+<p>O painel IPS (<em>In-Plane Switching</em>) é conhecido pela qualidade de cor e pelos ângulos de visão amplos. As cores permanecem precisas mesmo quando o monitor é visto de lado ou de cima, sem o desvio perceptível que outros painéis apresentam. Por isso, é a tecnologia preferida em trabalhos que exigem fidelidade visual: edição de fotos, design gráfico e produção de vídeo.</p>
+<ul>
+<li><strong>Vantagens:</strong> cores precisas e consistentes, ângulos de visão excelentes;</li>
+<li><strong>Desvantagens:</strong> historicamente mais caro e com tempo de resposta um pouco maior que painéis TN, embora os modelos modernos tenham reduzido bastante essa diferença;</li>
+</ul>
+<h3 id="tn"><a class="header" href="#tn">TN</a></h3>
+<p>O painel TN (<em>Twisted Nematic</em>) é a tecnologia LCD mais antiga entre as apresentadas e ainda presente principalmente em monitores voltados a jogos de entrada e intermediários. Seu diferencial é o tempo de resposta baixo, que pode chegar a 1 ms nos melhores modelos, reduzindo o borrão em cenas de movimento rápido. Em contrapartida, os ângulos de visão são ruins: as cores se distorcem visivelmente ao olhar o painel de qualquer posição que não seja diretamente de frente, a reprodução de cores também é inferior ao IPS.</p>
+<ul>
+<li><strong>Vantagens:</strong> tempo de resposta muito baixo, custo reduzido;</li>
+<li><strong>Desvantagens:</strong> ângulos de visão limitados, qualidade de cor inferior;</li>
+</ul>
+<h3 id="va"><a class="header" href="#va">VA</a></h3>
+<p>O painel VA (<em>Vertical Alignment</em>) ocupa o meio-termo entre IPS e TN, seu destaque é a taxa de contraste nativa, significativamente maior que a das outras tecnologias. Isso se traduz em pixels capazes de bloquear melhor a luz de fundo, produzindo regiões escuras com muito mais fidelidade na tela, e uma percepção de imagem mais tridimensional, especialmente em ambientes com pouca luz.</p>
+<p>Os ângulos de visão são melhores que o TN mas inferiores ao IPS, o tempo de resposta pode apresentar um problema específico chamado <em>smearing</em>, um rastro perceptível em cenas com transições entre tons escuros e claros durante movimentos rápidos, embora painéis VA mais modernos tenham atenuado esse comportamento.</p>
+<ul>
+<li><strong>Vantagens:</strong> contraste elevado, maior capacidade de escurecer pixels e reproduzir a ausência de luz com fidelidade, boa experiência em filmes e conteúdo cinematográfico;</li>
+<li><strong>Desvantagens:</strong> <em>smearing</em> em alguns modelos, desempenho em jogos inferior ao TN e IPS modernos;</li>
+</ul>
+<h3 id="oled"><a class="header" href="#oled">OLED</a></h3>
+<p>O OLED (<em>Organic Light-Emitting Diode</em>) representa uma mudança estrutural em relação às tecnologias anteriores. Nos painéis LCD convencionais (IPS, TN e VA), os pixels não emitem luz: eles filtram uma iluminação de fundo chamada <em>backlight</em>. No OLED, cada pixel é sua própria fonte de luz e pode ser apagado individualmente.</p>
+<p>O resultado é um preto absoluto: quando um pixel está apagado, ele não emite nenhuma luz. O contraste é, na prática, muito superior ao de qualquer painel LCD, já que pixels completamente apagados não emitem luz alguma, algo que nenhum LCD consegue replicar. As cores são vibrantes e o tempo de resposta é extremamente baixo, monitores OLED costumam atingir picos elevados de brilho (medidos em nits), o que favorece o uso em ambientes com bastante luz ambiente.</p>
+<p>A principal preocupação com monitores OLED é a queima de tela (<em>burn-in</em>): pixels que exibem imagens estáticas por períodos muito longos podem degradar de forma permanente, deixando uma sombra visível. Fabricantes têm implementado mecanismos de mitigação, mas o cuidado ainda é relevante para usos que envolvam elementos fixos na tela, como barras de tarefas ou HUDs de jogos.</p>
+<ul>
+<li><strong>Vantagens:</strong> contraste infinito, pixels que se apagam completamente eliminando qualquer emissão de luz, cores excepcionais, tempo de resposta mínimo;</li>
+<li><strong>Desvantagens:</strong> custo elevado, risco de <em>burn-in</em> em uso prolongado com imagens estáticas;</li>
+</ul>
+<h3 id="hdr"><a class="header" href="#hdr">HDR</a></h3>
+<p>O HDR é uma tecnologia que amplia a gama de cores e o contraste, permitindo que as partes claras da imagem sejam mais brilhantes e as escuras mais profundas, resultando em uma imagem mais próxima da realidade.</p>
+<h2 id="resolução-e-o-ambiente-linux"><a class="header" href="#resolução-e-o-ambiente-linux">Resolução e o Ambiente Linux</a></h2>
+<p>A resolução define quantos pixels compõem a imagem. Mais pixels significam mais detalhes visíveis, mas também maior exigência da placa de vídeo para renderizar. Em sistemas Linux, o gerenciamento de múltiplos monitores e resoluções é feito diretamente por servidores gráficos como o <strong>Xorg</strong> ou o moderno <strong>Wayland</strong>, que lidam com o escalonamento da interface para que os elementos não fiquem pequenos demais em telas de alta densidade.</p>
+<p>As resoluções mais comuns no mercado atual:</p>
+<ul>
+<li><strong>Full HD (1920 × 1080):</strong> padrão dominante por anos, ainda presente na maioria dos monitores de entrada e meio de gama. Adequado para telas de até 27 polegadas; em tamanhos maiores, a densidade de pixels começa a ser percebida;</li>
+<li><strong>QHD (2560 × 1440):</strong> equilíbrio entre nitidez e desempenho, indicado para monitores de 27 a 32 polegadas, exige mais da placa de vídeo que o Full HD mas sem o custo total do 4K. O termo “2K” é usado informalmente no mercado para se referir a essa resolução, embora tecnicamente 2K corresponda ao padrão de cinema digital (2048×1080);</li>
+<li><strong>4K / UHD (3840 × 2160):</strong> quatro vezes mais pixels que o Full HD, a nitidez é notável em telas maiores, especialmente para edição de imagem e vídeo. Exige hardware potente para jogos nessa resolução com desempenho fluido.</li>
+</ul>
+<h2 id="taxa-de-atualização"><a class="header" href="#taxa-de-atualização">Taxa de atualização</a></h2>
+<p>A taxa de atualização é medida em hertz (Hz) e indica quantas vezes por segundo o monitor redesenha a imagem. Um monitor de 60 Hz exibe até 60 quadros por segundo, um de 144 Hz até 144.</p>
+<p>Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos ou na própria fluidez ao arrastar janelas na interface gráfica, a diferença para 144 Hz é perceptível: o movimento parece mais suave e a resposta imediata.</p>
+<p>A taxa de atualização do monitor só se traduz em benefício real se a placa de vídeo conseguir entregar quadros suficientes por segundo. Se uma placa renderiza apenas 60 quadros por segundo em um monitor de 144 Hz, o monitor repetirá os quadros captados, operando visualmente à taxa da placa.</p>
+<h2 id="tempo-de-resposta"><a class="header" href="#tempo-de-resposta">Tempo de resposta</a></h2>
+<p>O tempo de resposta indica quanto tempo um pixel leva para mudar de uma cor para outra, medido em milissegundos (ms). Tempos de resposta altos resultam em <em>ghosting</em>: um rastro visível atrás de objetos em movimento rápido.</p>
+<p>Para uso geral, qualquer valor abaixo de 5 ms é imperceptível, já para jogos rápidos, valores entre 1 e 2 ms são desejáveis. Fabricantes frequentemente divulgam o menor tempo de resposta possível nas especificações, medido em condições ideais, geralmente entre transições de cinza para cinza.</p>
+<h2 id="sincronização-adaptativa"><a class="header" href="#sincronização-adaptativa">Sincronização adaptativa</a></h2>
+<p>Quando a placa de vídeo entrega quadros em ritmo variável e o monitor os exibe em intervalos fixos, o resultado pode ser o <em>tearing</em>: uma divisão horizontal visível na imagem, como se dois quadros diferentes fossem exibidos ao mesmo tempo. As tecnologias de sincronização adaptativa resolvem esse problema.</p>
+<ul>
+<li><strong>G-Sync (NVIDIA):</strong> Sincroniza o monitor com a saída da placa de vídeo NVIDIA. Originalmente exigia um módulo de hardware proprietário embutido no monitor (o que elevava seu custo), mas hoje também funciona via software em telas certificadas como <em>G-Sync Compatible</em>.</li>
+<li><strong>FreeSync (AMD):</strong> padrão aberto baseado em Adaptive-Sync, suportado pela maioria dos monitores modernos. Funciona nativamente com placas AMD e também com placas NVIDIA em monitores compatíveis. Ambas as tecnologias são suportadas no Linux, especialmente sob o servidor gráfico Wayland.</li>
+</ul>
+<h2 id="conexões"><a class="header" href="#conexões">Conexões</a></h2>
+<p>O monitor se comunica com o computador por meio de cabos que transportam o sinal de vídeo digital. Cada padrão tem capacidades diferentes em termos de resolução e taxa de atualização suportadas, os mesmos conectores se aplicam tanto a desktops quanto a notebooks.</p>
+<ul>
+<li><strong>HDMI:</strong> o conector mais universal, presente em monitores, televisores, consoles e placas de vídeo. Versões mais recentes suportam 4K a 120 Hz ou mais, mas é preciso atentar à versão do cabo e das portas envolvidas;</li>
+<li><strong>DisplayPort:</strong> padrão preferido em ambientes de PC desktop, especialmente para altas taxas de atualização. Suporta encadeamento de monitores em equipamentos compatíveis;</li>
+<li><strong>USB-C / Thunderbolt:</strong> presente em notebooks modernos e monitores mais recentes. Um único cabo pode transmitir vídeo, dados e energia ao mesmo tempo, simplificando a conexão;</li>
+<li><strong>VGA:</strong> conector analógico antigo, ainda encontrado em monitores e computadores mais velhos. Transmite sinal analógico, com qualidade inferior aos padrões digitais atuais.</li>
+</ul>
+<h2 id="proporção-de-tela"><a class="header" href="#proporção-de-tela">Proporção de tela</a></h2>
+<p>A proporção de tela é a relação entre a largura e a altura do painel, expressa no formato largura:altura. Ela define o formato da imagem exibida e influencia tanto a experiência visual quanto a compatibilidade com diferentes tipos de conteúdo.</p>
+<ul>
+<li><strong>16:9:</strong> é a mais comum no mercado atual e o padrão para a maioria dos vídeos, jogos e interfaces de sistema operacional. Monitores Full HD, QHD e 4K seguem essa proporção;</li>
+<li><strong>16:10:</strong> ligeiramente mais alta que o 16:9, tem ganhado espaço em monitores voltados a produtividade e em notebooks, oferecendo mais área vertical para documentos e códigos de programação;</li>
+<li><strong>21:9:</strong> chamada de ultrawide, oferece uma tela significativamente mais larga. Em produtividade, permite exibir dois documentos ou janelas lado a lado sem a necessidade de um segundo monitor;</li>
+<li><strong>32:9:</strong> existem no segmento entusiasta e equivalem a dois monitores 16:9 fundidos em uma única tela, sem a divisão física entre eles.</li>
+</ul>
+<h2 id="ergonomia-e-ajustes-físicos"><a class="header" href="#ergonomia-e-ajustes-físicos">Ergonomia e ajustes físicos</a></h2>
+<p>A posição do monitor afeta diretamente o conforto em uso prolongado. Monitores com suporte ajustável permitem regular altura, inclinação e, em alguns modelos, rotação (pivot), o que possibilita usar o monitor em orientação vertical, útil para leitura de código, documentos longos ou feeds de redes sociais.</p>
+<p>A distância recomendada entre os olhos e a tela varia conforme o tamanho do monitor, mas em geral fica entre 50 e 80 cm. A parte superior da tela deve estar aproximadamente na altura dos olhos ou levemente abaixo, para reduzir a tensão no pescoço.</p>
+<p>Monitores com certificação de baixa emissão de luz azul ou com modo de filtragem de luz azul ativável no software podem reduzir o cansaço visual em sessões longas, embora os estudos sobre o impacto real da luz azul de monitores ainda não sejam concluivos.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../hardware/resfriamento.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../hardware/perifericos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../hardware/resfriamento.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../hardware/perifericos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-09f2665d.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

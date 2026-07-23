@@ -1,17 +1,17 @@
-# cat.md
+# cat
 
-Mostra o conteúdo de um arquivo de texto ou binário.
+Mostra o conteúdo de um arquivo de texto.
 
 ```bash
-cat [opções] [diretório/arquivo] [diretório1/arquivo1]
+cat [opções] [arquivo] [arquivo1]
 ```
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `diretório/arquivo` | Localização do arquivo a ser visualizado |
-| `-n`, `--number` | Exibe o número de cada linha |
-| `-s`, `--squeeze-blank` | Suprime linhas em branco consecutivas, exibindo no máximo uma |
-| `-` | Lê a entrada padrão (`stdin`) |
+| arquivo | Localização do arquivo a ser visualizado |
+| -n, --number | Exibe o número de cada linha |
+| -s, --squeeze-blank | Suprime linhas em branco consecutivas, exibindo no máximo uma |
+| - | Lê a entrada padrão (`stdin`), ou seja, o que é digitado ou enviado por outro comando via pipe |
 
 > Use `zcat` para visualizar diretamente arquivos compactados com gzip.
 

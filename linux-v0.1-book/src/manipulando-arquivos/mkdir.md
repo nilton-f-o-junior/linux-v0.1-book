@@ -8,10 +8,10 @@ mkdir [opções] [caminho/diretório] [caminho1/diretório1]
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `caminho` | Caminho onde o diretório será criado |
-| `diretório` | Nome do diretório que será criado |
-| `-p` | Cria os diretórios intermediários que ainda não existem |
-| `--verbose` | Exibe uma mensagem para cada diretório criado |
+| caminho | Caminho onde o diretório será criado |
+| diretório | Nome do diretório que será criado |
+| -p | Cria os diretórios intermediários que ainda não existem |
+| --verbose | Exibe uma mensagem para cada diretório criado |
 
 **Exemplos**
 

@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-7d1ffa46.js";
+            window.path_to_searchindex_js = "searchindex-b443058c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-a0cfbb35.js"></script>
+        <script src="toc-37ca00fe.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -1109,7 +1109,7 @@
 </ul>
 <p>Se um programa priva o usuário de qualquer uma dessas liberdades, ele é classificado como software proprietário ou privativo. Nesse modelo, o desenvolvedor detém o controle sobre o software e, por extensão, sobre o que os usuários podem fazer com ele. No modelo livre, o controle pertence inteiramente aos usuários, individual e coletivamente.</p>
 <h2 id="a-filosofia-gnu-e-richard-stallman"><a class="header" href="#a-filosofia-gnu-e-richard-stallman">A Filosofia GNU e Richard Stallman</a></h2>
-<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a <strong>FSH</strong> (<em>Free Software Foundation</em>).</p>
+<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a <strong>FSF</strong> (<em>Free Software Foundation</em>).</p>
 <p>O objetivo do projeto era ambicioso: criar um sistema operacional inteiramente livre, de modo que ninguém precisasse usar software proprietário para operar um computador. O nome GNU é um acrônimo recursivo para <em>“GNU’s Not Unix”</em> (GNU não é Unix), uma homenagem técnica ao sistema que serviu de inspiração arquitetônica, mas cujas restrições de licença a filosofia GNU rejeitava.</p>
 <p>Para a filosofia GNU, o compartilhamento de software é um imperativo ético. Negar a alguém o direito de entender ou modificar um programa que ele utiliza é visto como uma violação da autonomia individual e um obstáculo à cooperação social.</p>
 <h2 id="o-mecanismo-do-copyleft-e-a-gpl"><a class="header" href="#o-mecanismo-do-copyleft-e-a-gpl">O mecanismo do Copyleft e a GPL</a></h2>
@@ -1349,117 +1349,117 @@
 <p>Para garantir que todas as versões do software permaneçam livres, a GPL é o mecanismo mais forte disponível.</p>
 <p>Para projetos híbridos que precisam de flexibilidade parcial, a MPL ou a LGPL oferecem caminhos intermediários. Não existe licença “melhor”,existe a licença mais adequada para o que o autor pretende proteger e para como ele deseja que o código seja usado.</p>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="sistema-de-janelas"><a class="header" href="#sistema-de-janelas">Sistema de Janelas</a></h1>
+<p>Antes que qualquer elemento gráfico apareça na tela, algo precisa decidir onde cada janela fica, como o mouse e o teclado se comunicam com os programas e como as imagens chegam até a placa de vídeo. Esse “algo” é o <strong>protocolo de exibição gráfica</strong>, e no Linux os dois protocolos mais relevantes são o X11 e o Wayland.</p>
+<h2 id="o-que-é-um-protocolo-de-exibição"><a class="header" href="#o-que-é-um-protocolo-de-exibição">O que é um protocolo de exibição</a></h2>
+<p>Um protocolo de exibição define as regras de comunicação entre os aplicativos gráficos e o hardware de vídeo. Ele é responsável por desenhar janelas, capturar eventos de entrada (cliques, toques de teclado) e entregar tudo isso de forma organizada na tela. Sem esse intermediário, cada aplicativo teria que conversar diretamente com a placa de vídeo, algo inviável e inseguro.</p>
+<h2 id="x11-1"><a class="header" href="#x11-1">X11</a></h2>
+<p>O <strong>X11</strong> (X Window System) é o protocolo de exibição mais antigo ainda em uso no Linux. Sua arquitetura é dividida em duas partes:</p>
+<ul>
+<li><strong>Servidor X:</strong> o processo que efetivamente controla o hardware, desenha na tela e recebe eventos de entrada;</li>
+<li><strong>Cliente X:</strong> cada aplicativo gráfico que solicita ao servidor a renderização de suas janelas.</li>
+</ul>
+<p>Essa separação permite algo pouco comum: um cliente pode rodar em uma máquina e o servidor X em outra, exibindo a interface gráfica remotamente pela rede. Foi um recurso valioso nas décadas em que o X11 foi criado, quando terminais gráficos remotos eram comuns em ambientes corporativos e acadêmicos.</p>
+<p>Com o tempo, no entanto, essa arquitetura em camadas passou a ser vista como uma limitação. Cada clique de mouse ou tecla precisa passar por várias etapas intermediárias antes de chegar ao aplicativo, o que gera latência. Além disso, o modelo de segurança do X11 é permissivo: qualquer cliente conectado ao servidor pode, em teoria, capturar o que outro cliente está desenhando na tela, o que dificulta o isolamento entre aplicativos.</p>
+<h2 id="wayland-1"><a class="header" href="#wayland-1">Wayland</a></h2>
+<p>O <strong>Wayland</strong> nasceu como uma tentativa de repensar esse modelo do zero, eliminando camadas desnecessárias. Diferente do X11, no Wayland o <strong>compositor</strong> (o programa que organiza as janelas na tela) e o servidor de exibição são a mesma coisa. O aplicativo desenha diretamente em um buffer de memória, e o compositor apenas exibe esse conteúdo, sem etapas intermediárias de repasse.</p>
+<p>Essa simplificação traz benefícios diretos:</p>
+<ul>
+<li><strong>Menor latência:</strong> menos camadas entre o clique do usuário e a resposta na tela;</li>
+<li><strong>Isolamento de segurança:</strong> um aplicativo não tem acesso automático ao que outros aplicativos estão desenhando, o que reduz riscos de captura indevida de tela ou de entrada;</li>
+<li><strong>Renderização mais previsível:</strong> cada janela é responsável por seu próprio desenho, reduzindo problemas de sincronização visual (como o rasgamento de tela, conhecido como <em>tearing</em>).</li>
+</ul>
+<p>Em contrapartida, o Wayland exige que cada compositor implemente funcionalidades que antes eram centralizadas no servidor X, como o compartilhamento remoto de tela. Isso fez com que, por um período, alguns recursos antigos e específicos do X11 ainda não tivessem equivalente direto em todas as implementações Wayland, embora esse cenário venha evoluindo constantemente.</p>
+<h2 id="convivência-entre-os-dois"><a class="header" href="#convivência-entre-os-dois">Convivência entre os dois</a></h2>
+<p>Grande parte das distribuições Linux atuais já utiliza o Wayland como padrão, mas mantém suporte ao X11 por compatibilidade. Isso é possível graças a uma camada de compatibilidade chamada <strong>XWayland</strong>, que permite que aplicativos escritos exclusivamente para X11 continuem funcionando normalmente dentro de uma sessão Wayland, sem que o usuário perceba a diferença.</p>
+<p>Na prática, para o usuário final, a escolha entre X11 e Wayland costuma ser transparente: ambos permitem abrir janelas, mover o mouse e digitar normalmente. A diferença fica mais evidente em cenários específicos, como compartilhamento de tela, uso de múltiplos monitores com taxas de atualização diferentes ou configurações avançadas de acessibilidade.</p>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="arquivos"><a class="header" href="#arquivos">Arquivos</a></h1>
+<p>Aos poucos, o livro vai se aprofundando no funcionamento do Linux. Porém, antes de avançar, alguns conceitos iniciais precisam estar bem definidos. Entender os diversos tipos de arquivos e o espaço que eles ocupam é fundamental, já que no Linux tudo é arquivo — e é inevitável ter que interagir com eles ao longo do tempo. Este capítulo tem como objetivo apresentar esses conhecimentos básicos, necessários para avançar aos próximos temas.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tipos-de-arquivos"><a class="header" href="#tipos-de-arquivos">Tipos de arquivos</a></h1>
-<p>Se o sistema de arquivos é a malha organizacional instalada no armazenamento, os arquivos são a matéria-prima que preenche esse espaço. Para o disco rígido ou SSD, tudo não passa de uma longa sequência de bits — zeros e uns gravados magneticamente ou em chips de memória flash. A diferenciação entre o que é uma foto, um documento de texto ou um programa executável acontece na camada do sistema operacional, que precisa saber exatamente como decodificar cada uma dessas sequências.</p>
-<h2 id="o-que-define-um-tipo-de-arquivo"><a class="header" href="#o-que-define-um-tipo-de-arquivo">O que define um tipo de arquivo?</a></h2>
 <p>Um tipo de arquivo é determinado pela forma como seus dados internos são estruturados. Existem duas abordagens principais para o sistema operacional identificar essa estrutura:</p>
 <ul>
 <li>
-<p><strong>Extensão de arquivo:</strong> É o método padrão em sistemas Windows. O tipo do arquivo é indicado por um sufixo de três ou quatro letras após o ponto final no nome do arquivo (como <code>.docx</code>, <code>.jpg</code> ou <code>.mp4</code>). Se você alterar manualmente a extensão de um arquivo <code>.jpg</code> para <code>.txt</code>, o sistema tentará abri-lo em um editor de texto, resultando em uma tela cheia de caracteres ilegíveis.</p>
+<p><strong>Extensão de arquivo:</strong> é o método padrão em sistemas Windows. O tipo do arquivo é indicado por um sufixo de três ou quatro letras após o ponto final no nome do arquivo (como <code>.docx</code>, <code>.jpg</code> ou <code>.mp4</code>). Se você alterar manualmente a extensão de um arquivo <code>.jpg</code> para <code>.txt</code>, o sistema tentará abri-lo em um editor de texto, resultando em uma tela cheia de caracteres ilegíveis.</p>
 </li>
 <li>
-<p><strong>Magic Numbers (Números Mágicos):</strong> É a abordagem nativa de sistemas Unix e Linux. O sistema operacional ignora a extensão do nome e lê os primeiros bytes do arquivo (o cabeçalho ou <em>header</em>). Esses bytes iniciais contêm uma assinatura única. Por exemplo, todo arquivo PDF começa estritamente com os caracteres <code>%PDF</code>, e toda imagem PNG começa com os bytes hexadecimais <code>89 50 4E 47</code>. Mesmo sem extensão nenhuma no nome, o sistema sabe exatamente o que aquele arquivo é.</p>
+<p><strong>Números Mágicos:</strong> é a abordagem nativa de sistemas Unix e Linux. O sistema operacional ignora a extensão do nome e lê os primeiros bytes do arquivo (o cabeçalho ou <em>header</em>). Esses bytes iniciais contêm uma assinatura única. Por exemplo, todo arquivo PDF começa estritamente com os caracteres <code>%PDF</code>, e toda imagem PNG começa com os bytes hexadecimais <code>89 50 4E 47</code>. Mesmo sem extensão nenhuma no nome, o sistema sabe exatamente o que aquele arquivo é.</p>
 </li>
 </ul>
-<h2 id="arquivos-de-texto-plano-plain-text"><a class="header" href="#arquivos-de-texto-plano-plain-text">Arquivos de texto plano (<em>Plain Text</em>)</a></h2>
+<h2 id="plain-text"><a class="header" href="#plain-text">Plain Text</a></h2>
 <p>São os arquivos mais simples e universais do ecossistema computacional. Eles contêm apenas caracteres numéricos e de texto puro, codificados em padrões como ASCII ou UTF-8, sem qualquer informação de formatação visual (como tamanho de fonte, cores ou margens).</p>
 <ul>
-<li><strong><code>.txt</code>:</strong> O formato básico de texto. É universalmente legível por qualquer dispositivo ou sistema operacional.</li>
-<li><strong><code>.cfg</code>, <code>.ini</code>, <code>.conf</code>:</strong> Arquivos de texto estruturados para guardar configurações de softwares e do próprio sistema operacional.</li>
-<li><strong><code>.md</code> (Markdown):</strong> Arquivos de texto que utilizam marcações simples (como asteriscos e hashes) para indicar títulos e negritos, mantendo o arquivo perfeitamente legível mesmo quando aberto em um editor de texto puro.</li>
+<li><strong><code>.txt</code>:</strong> o formato básico de texto, sendo universalmente legível por qualquer dispositivo ou sistema operacional;</li>
+<li><strong><code>.cfg</code>, <code>.ini</code>, <code>.conf</code>:</strong> arquivos de texto estruturados para guardar configurações de softwares e do próprio sistema operacional;</li>
+<li><strong><code>.md</code>:</strong> arquivos de texto que utilizam marcações simples (como asteriscos e hashes) para indicar títulos e negritos, mantendo o arquivo perfeitamente legível mesmo quando aberto em um editor de texto puro.</li>
 </ul>
-<p>A grande vantagem do texto plano é a perenidade: um arquivo gerado hoje poderá ser lido daqui a cinquenta anos sem dependência de softwares proprietários.</p>
 <h2 id="arquivos-binários"><a class="header" href="#arquivos-binários">Arquivos binários</a></h2>
-<p>Ao contrário do texto plano, os arquivos binários não foram feitos para serem lidos diretamente por humanos. Eles exigem um software específico que entenda a sua geometria interna para traduzir os bits em algo compreensível na tela. Seus principais grupos são:</p>
+<p>Ao contrário do anterior, os arquivos binários não foram feitos para serem lidos diretamente por humanos. Eles exigem um software específico que entenda a sua geometria interna para traduzir os bits em algo compreensível na tela. Seus principais grupos são:</p>
 <h3 id="arquivos-de-imagem"><a class="header" href="#arquivos-de-imagem">Arquivos de imagem</a></h3>
 <p>Armazenam dados visuais, dividindo-se entre mapas de bits (pixels) e vetores.</p>
 <ul>
-<li><strong><code>.jpg</code> / <code>.jpeg</code>:</strong> Formato compactado com perda de qualidade. Ideal para fotografias na web devido ao tamanho reduzido do arquivo.</li>
-<li><strong><code>.png</code>:</strong> Compactação sem perda de dados. Suporta fundos transparentes, sendo o padrão para interfaces e gráficos de alta precisão.</li>
-<li><strong><code>.svg</code>:</strong> Formato vetorial baseado em XML. Em vez de salvar pixels, ele salva equações matemáticas de linhas e formas, permitindo que a imagem seja ampliada infinitamente sem perder a nitidez.</li>
+<li><strong><code>.jpg</code> / <code>.jpeg</code>:</strong> formato compactado com perda de qualidade, porém ideal para fotografias na web devido ao tamanho reduzido do arquivo;</li>
+<li><strong><code>.png</code>:</strong> compactação sem perda de dados, possui suporte a fundos transparentes;</li>
+<li><strong><code>.svg</code>:</strong> formato vetorial baseado em XML, mas em vez de salvar pixels, ele salva equações matemáticas de linhas e formas, permitindo que a imagem seja ampliada infinitamente sem perder a nitidez.</li>
 </ul>
 <h3 id="arquivos-de-áudio-e-vídeo"><a class="header" href="#arquivos-de-áudio-e-vídeo">Arquivos de áudio e vídeo</a></h3>
 <p>Funcionam frequentemente como contêineres que abrigam fluxos de dados codificados por algoritmos chamados codecs.</p>
 <ul>
-<li><strong><code>.mp3</code>:</strong> Áudio compactado com perda de frequências imperceptíveis ao ouvido humano médio. Tornou-se o padrão de distribuição musical digital.</li>
-<li><strong><code>.wav</code>:</strong> Áudio sem compactação. Mantém a fidelidade máxima da gravação original, resultando em arquivos massivos, usados profissionalmente na edição de som.</li>
-<li><strong><code>.mp4</code> / <code>.mkv</code>:</strong> Arquivos contêineres que guardam uma faixa de vídeo, múltiplas faixas de áudio (dublagens) e legendas em um único pacote sincronizado.</li>
+<li><strong><code>.mp3</code>:</strong> áudio compactado com perda de frequências imperceptíveis ao ouvido humano médio, mas tornou-se o padrão de distribuição musical digital;</li>
+<li><strong><code>.wav</code>:</strong> áudio sem compactação, consegue manter a fidelidade máxima da gravação original, resultando em arquivos massivos, usados profissionalmente na edição de som;</li>
+<li><strong><code>.mp4</code> / <code>.mkv</code>:</strong> arquivos contêineres que guardam uma faixa de vídeo, múltiplas faixas de áudio (dublagens) e legendas em um único pacote sincronizado.</li>
 </ul>
 <h2 id="arquivos-executáveis"><a class="header" href="#arquivos-executáveis">Arquivos executáveis</a></h2>
 <p>São os arquivos que contêm instruções diretas para o processador executar tarefas. Eles mudam radicalmente conforme a arquitetura e o sistema operacional.</p>
 <ul>
-<li><strong><code>.exe</code> e <code>.msi</code>:</strong> Os formatos executáveis padrão do Windows. Contêm o código binário compilado e rotinas de instalação.</li>
-<li><strong>ELF (sem extensão nativa):</strong> O padrão para executáveis em sistemas Linux. Possui uma estrutura rígida que indica ao kernel como carregar o programa na memória RAM.</li>
-<li><strong>Scripts (<code>.sh</code>, <code>.bat</code>, <code>.py</code>):</strong> Diferente dos executáveis binários, os scripts são arquivos de texto puro contendo comandos ordenados. Eles não são lidos diretamente pelo processador, mas sim interpretados linha por linha por um programa intermediário (como o terminal Bash ou o interpretador Python).</li>
+<li><strong><code>.exe</code> e <code>.msi</code>:</strong> os formatos executáveis padrão do Windows, possuindo o código binário compilado e rotinas de instalação;</li>
+<li><strong>ELF (sem extensão nativa):</strong> o padrão para executáveis em sistemas Linux, possuindo uma estrutura rígida que indica ao kernel como carregar o programa na memória RAM;</li>
+<li><strong>Scripts (<code>.sh</code>, <code>.bat</code>, <code>.py</code>):</strong> diferente dos executáveis binários, os scripts são arquivos de texto puro contendo comandos ordenados. Eles não são lidos diretamente pelo processador, mas sim interpretados linha por linha por um programa intermediário (como o terminal Bash ou o interpretador Python).</li>
 </ul>
-<h2 id="arquivos-de-arquivamento-e-compactação"><a class="header" href="#arquivos-de-arquivamento-e-compactação">Arquivos de arquivamento e compactação</a></h2>
+<h2 id="arquivamento-e-compactação"><a class="header" href="#arquivamento-e-compactação">Arquivamento e compactação</a></h2>
 <p>São formatos projetados para atuar como caixas digitais. Eles cumprem duas funções frequentemente confundidas: o arquivamento (juntar várias pastas e arquivos em um só local) e a compactação (reduzir o espaço em disco usando algoritmos matemáticos que eliminam redundâncias).</p>
 <ul>
-<li><strong><code>.zip</code>:</strong> O formato de compactação mais popular do mundo. Equilibra uma velocidade de compactação rápida com um nível de redução de tamanho aceitável.</li>
-<li><strong><code>.tar</code>:</strong> Muito comum no ecossistema Linux. Ele apenas realiza o arquivamento (junta os arquivos), sem aplicar nenhuma redução de tamanho.</li>
-<li><strong><code>.tar.gz</code> ou <code>.tgz</code>:</strong> É a união do utilitário <code>.tar</code> (que junta as pastas) com a compactação do algoritmo <code>Gzip</code> (que reduz o tamanho). É o padrão para distribuição de código-fonte e backups no mundo Unix.</li>
+<li><strong><code>.zip</code>:</strong> o formato de compactação mais popular do mundo. Equilibra uma velocidade de compactação rápida com um nível de redução de tamanho aceitável;</li>
+<li><strong><code>.tar</code>:</strong> apenas realiza o arquivamento (junta os arquivos), sem aplicar nenhuma redução de tamanho;</li>
+<li><strong><code>.tar.gz</code> ou <code>.tgz</code>:</strong> a união do utilitário <code>.tar</code> (que junta as pastas) com a compactação do algoritmo <code>Gzip</code> (que reduz o tamanho). É o padrão para distribuição de código-fonte e backups no mundo Unix.</li>
 </ul>
-<h2 id="o-impacto-na-segurança"><a class="header" href="#o-impacto-na-segurança">O impacto na segurança</a></h2>
-<p>A distinção entre tipos de arquivos é o primeiro pilar da segurança digital. Arquivos de dados puros (como <code>.txt</code>, <code>.jpg</code> ou <code>.mp3</code>) são passivos; eles são abertos por um programa e lidos, não tendo a capacidade de executar ações sozinhos no sistema.</p>
-<p>O risco reside em arquivos ativos, ou seja, executáveis e scripts. Um arquivo nomeado falsamente como <code>foto.jpg.exe</code> pode enganar um usuário desatento em sistemas que ocultam extensões conhecidas. Ao clicar nele, o sistema operacional não abrirá uma imagem, mas sim executará as instruções binárias contidas ali, dando ao programa o poder de modificar arquivos na raiz do sistema, instalar malwares ou capturar dados do usuário.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="o-tamanho-dos-arquivos-digitais"><a class="header" href="#o-tamanho-dos-arquivos-digitais">O tamanho dos arquivos digitais</a></h1>
-<p>Se os tipos de arquivos determinam a forma dos dados e o sistema de arquivos organiza a sua localização na árvore de diretórios, o tamanho dos arquivos é a medida do seu “peso” no mundo digital. No universo físico, pesamos objetos em gramas ou medimos em metros; na computação, tudo se resume à quantidade de espaço que uma sequência de zeros e uns ocupa fisicamente em um dispositivo de armazenamento, seja ele um SSD, um HD ou uma fita magnética.</p>
-<h2 id="a-unidade-fundamental-bits-e-bytes"><a class="header" href="#a-unidade-fundamental-bits-e-bytes">A unidade fundamental: Bits e Bytes</a></h2>
 <p>No nível mais baixo da computação, a menor unidade de informação possível é o <strong>bit</strong> (acrônimo para <em>Binary Digit</em>). Um bit representa um estado elétrico ou magnético simples: ou ele está desligado (0) ou está ligado (1). Sozinho, um bit não consegue carregar muita informação, funcionando apenas como uma resposta de “sim” ou “não”.</p>
 <p>Para criar dados complexos, os computadores agrupam esses bits em conjuntos de 8. Esse grupo de 8 bits recebe o nome de <strong>Byte</strong>.</p>
 <ul>
-<li><strong>1 Bit:</strong> A menor unidade (0 ou 1).</li>
-<li><strong>1 Byte:</strong> Um conjunto de 8 bits.</li>
+<li><strong>1 Bit:</strong> a menor unidade (0 ou 1);</li>
+<li><strong>1 Byte:</strong> um conjunto de 8 bits.</li>
 </ul>
-<p>O Byte é considerado a unidade fundamental de armazenamento prático porque, historicamente, 1 Byte era o espaço exato necessário para armazenar um único caractere de texto (como a letra “A”, o número “7” ou um ponto final) no padrão de codificação ASCII. Portanto, se você criar um arquivo de texto simples contendo apenas a palavra <code>computador</code>, esse arquivo terá exatamente 10 Bytes de tamanho.</p>
 <h2 id="a-escala-de-grandezas-digitais"><a class="header" href="#a-escala-de-grandezas-digitais">A escala de grandezas digitais</a></h2>
-<p>À medida que os arquivos incorporam elementos mais complexos do que texto puro — como imagens de alta resolução, áudios e vídeos em alta definição —, o número de Bytes necessários para contê-los cresce exponencialmente. Para evitar lidar com números astronômicos na casa dos bilhões ou trilhões, utilizamos prefixos multiplicadores padronizados:</p>
+<p>À medida que os arquivos incorporam elementos mais complexos do que texto puro, o número de bytes necessários para contê-los cresce exponencialmente. Para evitar lidar com números astronômicos na casa dos bilhões ou trilhões, utilizamos prefixos multiplicadores padronizados:</p>
 <ul>
-<li><strong>Kilobyte (KB):</strong> Tradicionalmente equivale a 1.000 Bytes. É o peso aproximado de uma página de texto digitada sem imagens.</li>
-<li><strong>Megabyte (MB):</strong> Equivale a 1.000 Kilobytes (ou 1 milhão de Bytes). É a escala usada para músicas em MP3 (uma canção média tem de 4 a 8 MB) e fotos tiradas pelo celular (geralmente entre 2 e 1ú MB).</li>
-<li><strong>Gigabyte (GB):</strong> Equivale a 1.000 Megabytes (ou 1 bilhão de Bytes). É a unidade de medida para filmes em alta definição, capacidade de memória RAM e instaladores de sistemas operacionais.</li>
-<li><strong>Terabyte (TB):</strong> Equivale a 1.000 Gigabytes (ou 1 trilhão de Bytes). É a escala utilizada para medir a capacidade total de armazenamento de HDs externos e SSDs modernos voltados para o consumidor.</li>
-<li><strong>Petabyte (PB):</strong> Equivale a 1.000 Terabytes. Uma escala gigantesca, utilizada por servidores de nuvem, data centers de empresas como Google e Netflix, e pesquisas científicas de grande porte.</li>
+<li><strong>Kilobyte (KB):</strong> tradicionalmente equivale a 1.000 Bytes;</li>
+<li><strong>Megabyte (MB):</strong> equivale a 1.000 Kilobytes (ou 1 milhão de bytes);</li>
+<li><strong>Gigabyte (GB):</strong> equivale a 1.000 Megabytes (ou 1 bilhão de bytes);</li>
+<li><strong>Terabyte (TB):</strong> equivale a 1.000 Gigabytes (ou 1 trilhão de bytes);</li>
+<li><strong>Petabyte (PB):</strong> equivale a 1.000 Terabytes.</li>
 </ul>
-<h2 id="o-mistério-dos-gigabytes-desaparecidos-decimal-vs-binário"><a class="header" href="#o-mistério-dos-gigabytes-desaparecidos-decimal-vs-binário">O mistério dos “Gigabytes desaparecidos”: Decimal vs. Binário</a></h2>
-<p>Uma das maiores dúvidas no mundo da tecnologia ocorre quando alguém compra um HD ou SSD de “1 TB” e, ao conectá-lo ao computador, o sistema operacional exibe que o disco possui apenas cerca de <strong>931 GB</strong> de espaço disponível. Onde foram parar os quase 70 GB restantes?</p>
-<p>Esse fenômeno não é um defeito, mas sim uma divergência matemática entre duas formas de contagem: a <strong>decimal</strong> (base 10) e a <strong>binária</strong> (base 2).</p>
-<h3 id="a-visão-dos-fabricantes-sistema-decimal--si"><a class="header" href="#a-visão-dos-fabricantes-sistema-decimal--si">A visão dos fabricantes (Sistema Decimal / SI)</a></h3>
-<p>Os fabricantes de hardware seguem o Sistema Internacional de Unidades (SI). Para eles, os prefixos funcionam estritamente em potências de 10, exatamente como no mundo físico (onde 1 quilômetro são 1.000 metros).</p>
-<ul>
-<li>$1\text{ KB} = 10^3 = 1.000\text{ Bytes}$</li>
-<li>$1\text{ MB} = 10^6 = 1.000.000\text{ Bytes}$</li>
-<li>$1\text{ GB} = 10^9 = 1.000.000.000\text{ Bytes}$</li>
-<li>$1\text{ TB} = 10^{12} = 1.000.000.000.000\text{ Bytes}$</li>
-</ul>
-<h3 id="a-visão-do-sistema-operacional-sistema-binário--iec"><a class="header" href="#a-visão-do-sistema-operacional-sistema-binário--iec">A visão do sistema operacional (Sistema Binário / IEC)</a></h3>
-<p>Os computadores pensam de forma binária. Para a arquitetura de processadores e memórias, trabalhar com potências de 2 é muito mais eficiente do que usar a base decimal. Por isso, historicamente, os sistemas operacionais adotaram o valor de $2^{10}$ ($1.024$) como multiplicador.</p>
-<ul>
-<li>$1\text{ KiB} = 2^{10} = 1.024\text{ Bytes}$</li>
-<li>$1\text{ MiB} = 2^{20} = 1.048.576\text{ Bytes}$</li>
-<li>$1\text{ GiB} = 2^{30} = 1.073.741.824\text{ Bytes}$</li>
-</ul>
-<p>Para corrigir essa confusão, a IEC (<em>International Electrotechnical Commission</em>) criou os prefixos binários: <strong>Kibibyte (KiB)</strong>, <strong>Mebibyte (MiB)</strong> e <strong>Gibibyte (GiB)</strong>.</p>
-<p>Quando você compra um disco de 1.000.000.000.000 de Bytes (1 TB comercial), o sistema operacional divide esse valor por $1.073.741.824$ para descobrir o tamanho em GiB. O resultado matemático é exatamente <strong>931,3 GiB</strong>. O Windows, por uma questão de legado, faz essa conta binária mas continua exibindo a sigla “GB” na tela, gerando a falsa impressão de que há espaço faltando.</p>
-<h2 id="tamanho-real-vs-tamanho-em-disco-size-on-disk"><a class="header" href="#tamanho-real-vs-tamanho-em-disco-size-on-disk">Tamanho Real vs. Tamanho em Disco (<em>Size on Disk</em>)</a></h2>
+<h2 id="tamanho-real-vs-tamanho-em-disco"><a class="header" href="#tamanho-real-vs-tamanho-em-disco">Tamanho Real vs. Tamanho em Disco</a></h2>
 <p>Ao clicar com o botão direito sobre qualquer arquivo e acessar suas propriedades, você notará duas informações distintas: o <strong>Tamanho</strong> (Tamanho Real) e o <strong>Tamanho em disco</strong>. Quase sempre, o tamanho em disco é ligeiramente maior do que o tamanho real do arquivo.</p>
 <p>Isso acontece devido à forma como os sistemas de arquivos (como NTFS no Windows, ou EXT4 no Linux) gerenciam o espaço físico do HD ou SSD. O sistema de arquivos não grava os dados bit a bit de forma contínua; ele divide o disco em pequenos blocos de tamanho fixo chamados <strong>clusters</strong> ou <strong>unidades de alocação</strong>. O padrão da indústria para a maioria dos sistemas é adotar clusters de <strong>4 KB</strong> (4.096 Bytes).</p>
-<p>Cada cluster só pode conter dados de um único arquivo por vez. Portanto, se você criar um arquivo de texto que pesa apenas <strong>100 Bytes</strong> (Tamanho Real), o sistema operacional será obrigado a dedicar <strong>1 cluster inteiro</strong> para ele no disco. Consequentemente, o “Tamanho em disco” desse arquivo passará a ser de <strong>4 KB</strong>. O espaço restante daquele bloco (3.996 Bytes) é chamado de <em>Slack Space</em> (espaço frouxo) e fica inutilizado até que o arquivo cresça ou seja deletado.</p>
-<p>Se você tiver uma pasta com 10.000 arquivos minúsculos de texto, a diferença entre o tamanho real somado e o tamanho que eles ocupam fisicamente no disco pode chegar a dezenas de Megabytes desperdiçados devido a essa fragmentação em blocos.</p>
+<p>Cada cluster só pode conter dados de um único arquivo por vez. Portanto, se você criar um arquivo de texto que pesa apenas <strong>100 Bytes</strong> (Tamanho Real), o sistema operacional será obrigado a dedicar <strong>1 cluster inteiro</strong> para ele no disco. Consequentemente, o “Tamanho em disco” desse arquivo passará a ser de <strong>4 KB</strong>. O espaço restante daquele bloco (3.996 Bytes) é chamado de <em>Slack Space</em> e fica inutilizado até que o arquivo cresça ou seja deletado.</p>
 <h2 id="o-impacto-prático-do-tamanho-na-computação"><a class="header" href="#o-impacto-prático-do-tamanho-na-computação">O impacto prático do tamanho na computação</a></h2>
 <p>O tamanho de um arquivo dita o comportamento de toda a infraestrutura computacional ao seu redor:</p>
 <ul>
-<li><strong>Velocidade de carregamento:</strong> Quando você abre um arquivo, o processador ordena que ele seja copiado do armazenamento local (SSD/HD) para a memória RAM. Um documento de 50 KB abre instantaneamente; um banco de dados de 50 GB pode levar minutos para ser carregado na memória, dependendo da velocidade de leitura do hardware.</li>
-<li><strong>Largura de banda na rede:</strong> No tráfego de internet, o tamanho do arquivo determina o tempo de download e upload. Transmitir um arquivo de vídeo não compactado via rede consome muita banda, o que justifica a existência de algoritmos de compressão (como <code>.zip</code> ou formatos de streaming) para encolher o peso digital dos arquivos antes do envio.</li>
-<li><strong>Limitações arquitetônicas:</strong> Sistemas de arquivos antigos possuem limites severos de tamanho. O antigo formato FAT32 (muito usado ainda em pendrives antigos) possui uma limitação matemática rígida: ele é incapaz de armazenar qualquer arquivo individual que seja maior do que <strong>4 GB</strong>, independentemente de o pendrive ter 64 GB de espaço total livre. Tentar copiar um arquivo de vídeo de 5 GB para um disco em FAT32 resultará em um erro de sistema instantâneo.</li>
+<li>
+<p><strong>Velocidade de carregamento:</strong> quando você abre um arquivo, o processador ordena que ele seja copiado do armazenamento local (SSD/HD) para a memória RAM. Um documento de 50 KB abre instantaneamente; um banco de dados de 50 GB pode levar minutos para ser carregado na memória, dependendo da velocidade de leitura do hardware;</p>
+</li>
+<li>
+<p><strong>Largura de banda na rede:</strong> no tráfego de internet, o tamanho do arquivo determina o tempo de download e upload. Transmitir um arquivo de vídeo não compactado via rede consome muita banda, o que justifica a existência de algoritmos de compressão (como <code>.zip</code> ou formatos de streaming) para encolher o peso digital dos arquivos antes do envio;</p>
+</li>
+<li>
+<p><strong>Limitações arquitetônicas:</strong> sistemas de arquivos antigos possuem limites severos de tamanho. O antigo formato FAT32 (muito usado ainda em pendrives antigos) possui uma limitação matemática rígida: ele é incapaz de armazenar qualquer arquivo individual que seja maior do que <strong>4 GB</strong>, independentemente de o pendrive ter 64 GB de espaço total livre. Tentar copiar um arquivo de vídeo de 5 GB para um disco em FAT32 resultará em um erro de sistema instantâneo.</p>
+</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="a-raiz-de-arquivos-do-linux"><a class="header" href="#a-raiz-de-arquivos-do-linux">A raiz de arquivos do Linux</a></h1>
-<p>Se a interface gráfica é a pele do sistema e o kernel é o coração que pulsa o hardware, a estrutura de diretórios do Linux é o esqueleto que sustenta tudo. Diferente do ecossistema Windows, onde cada disco rígido ou partição recebe uma letra própria (<code>C:</code>, <code>D:</code>, etc.), no Linux tudo nasce de um único lugar. É o conceito de árvore unificada, onde qualquer dispositivo de armazenamento, arquivo ou processo faz parte de uma única e grande ramificação.</p>
-<h2 id="o-que-é-o-diretório-raiz"><a class="header" href="#o-que-é-o-diretório-raiz">O que é o diretório raiz?</a></h2>
 <p>O diretório raiz, representado graficamente por uma única barra para a frente (<code>/</code>), é o nível mais alto da hierarquia do Linux. Não existe nada acima dele. Todos os outros diretórios, subdiretórios e arquivos estão contidos dentro da raiz. Quando um SSD ou um pendrive é conectado ao sistema, ele não ganha uma nova letra de unidade; ele é “montado” como uma pasta sob essa mesma estrutura.</p>
 <p>Essa organização segue um padrão estrito chamado <strong>FHS</strong> (<em>Filesystem Hierarchy Standard</em>), que define exatamente onde cada tipo de arquivo deve morar. Isso garante que, independentemente da distribuição Linux que você esteja usando (seja Ubuntu, Fedora, Debian ou Arch), a lógica de funcionamento interno seja previsível e consistente.</p>
 <p>Visualmente, a árvore padrão do sistema se ramifica da seguinte forma a partir da raiz:</p>
@@ -1489,45 +1489,45 @@
 <h3 id="bin-e-sbin-os-executáveis-do-sistema"><a class="header" href="#bin-e-sbin-os-executáveis-do-sistema">/bin e /sbin: os executáveis do sistema</a></h3>
 <p>Esses diretórios guardam os comandos que você digita no terminal para interagir com a máquina.</p>
 <ul>
-<li><strong><code>/bin</code> (Binaries):</strong> Contém os comandos binários essenciais que podem ser usados por qualquer usuário do sistema, como o <code>ls</code> (listar arquivos), <code>cp</code> (copiar) e <code>mv</code> (mover).</li>
-<li><strong><code>/sbin</code> (System Binaries):</strong> Guarda os executáveis destinados à administração do sistema. Geralmente, exigem privilégios de superusuário (<em>root</em>) para serem executados. Exemplos comuns são o <code>iptables</code> (configuração de firewall) e o <code>fdisk</code> (gerenciamento de partições).</li>
+<li><strong><code>/bin</code> (Binaries):</strong> contém os comandos binários essenciais que podem ser usados por qualquer usuário do sistema;</li>
+<li><strong><code>/sbin</code> (System Binaries):</strong> guarda os executáveis destinados à administração do sistema. Geralmente, exigem privilégios de superusuário (<em>root</em>) para serem executados.</li>
 </ul>
 <h3 id="boot-a-inicialização"><a class="header" href="#boot-a-inicialização">/boot: a inicialização</a></h3>
 <p>Aqui ficam os arquivos necessários para o computador ligar. É onde reside o carregador de inicialização (geralmente o GRUB), o próprio kernel do Linux (<code>vmlinuz</code>) e o <code>initramfs</code>, que prepara o terreno e carrega os drivers básicos antes de o sistema principal assumir o controle do hardware. Modificações incorretas neste diretório podem impedir a máquina de iniciar.</p>
 <h3 id="dev-os-dispositivos-como-arquivos"><a class="header" href="#dev-os-dispositivos-como-arquivos">/dev: os dispositivos como arquivos</a></h3>
 <p>No Linux, há uma máxima famosa: <em>“Tudo é um arquivo”</em>. O diretório <code>/dev</code> (Devices) é a aplicação prática desse conceito. Ele não armazena arquivos reais no disco, mas sim pontos de acesso aos hardwares da máquina.</p>
 <ul>
-<li><strong><code>/dev/sda</code> ou <code>/dev/nvme0n1</code>:</strong> Representam os discos de armazenamento físicos.</li>
-<li><strong><code>/dev/null</code>:</strong> Um dispositivo virtual conhecido como o “buraco negro” do Linux. Tudo o que é enviado para ele desaparece instantaneamente, sendo muito utilizado para descartar saídas de comandos indesejadas.</li>
+<li><strong><code>/dev/sda</code> ou <code>/dev/nvme0n1</code>:</strong> representam os discos de armazenamento físicos;</li>
+<li><strong><code>/dev/null</code>:</strong> tudo o que é enviado para ele desaparece instantaneamente, sendo muito utilizado para descartar saídas de comandos indesejadas.</li>
 </ul>
 <h3 id="etc-o-painel-de-controle-em-texto"><a class="header" href="#etc-o-painel-de-controle-em-texto">/etc: o painel de controle em texto</a></h3>
-<p>Se você precisa mudar a configuração de um programa, do sistema de rede ou dos usuários, o <code>/etc</code> (Editable Text Configuration) é o lugar. Ele guarda os arquivos de configuração de praticamente todos os serviços globais do sistema. Quase todos esses arquivos são em formato de texto puro, permitindo que o administrador altere o comportamento do sistema editando apenas algumas linhas em um editor de texto simples, dispensando painéis gráficos complexos.</p>
+<p>Se você precisa mudar a configuração de um programa, do sistema de rede ou dos usuários, o <code>/etc</code> (<em>Editable Text Configuration</em>) é o lugar. Ele guarda os arquivos de configuração de praticamente todos os serviços globais do sistema. Quase todos esses arquivos são em formato de texto puro, permitindo que o administrador altere o comportamento do sistema editando apenas algumas linhas.</p>
 <h3 id="home-e-root-os-territórios-dos-usuários"><a class="header" href="#home-e-root-os-territórios-dos-usuários">/home e /root: os territórios dos usuários</a></h3>
 <p>O Linux separa rigidamente o espaço do administrador geral dos usuários comuns.</p>
 <ul>
-<li><strong><code>/home</code>:</strong> É onde ficam as pastas pessoais de cada usuário cadastrado na máquina (ex: <code>/home/felipe</code>). Seus documentos, downloads, imagens e até as configurações personalizadas de seus programas ficam guardados aqui.</li>
-<li><strong><code>/root</code>:</strong> É a pasta pessoal exclusiva do superusuário do sistema. Ela fica separada do <code>/home</code> por questões de segurança, garantindo que o administrador tenha seu próprio espaço isolado e protegido de falhas comuns.</li>
+<li><strong><code>/home</code>:</strong> é onde ficam as pastas pessoais de cada usuário cadastrado na máquina (ex: <code>/home/felipe</code>). Seus documentos, downloads, imagens e até as configurações personalizadas de seus programas ficam guardados aqui;</li>
+<li><strong><code>/root</code>:</strong> é a pasta pessoal exclusiva do superusuário do sistema. Ela fica separada do <code>/home</code> por questões de segurança, garantindo que o administrador tenha seu próprio espaço isolado e protegido de falhas comuns.</li>
 </ul>
 <h3 id="lib-lib32-e-lib64-as-bibliotecas"><a class="header" href="#lib-lib32-e-lib64-as-bibliotecas">/lib, /lib32 e /lib64: as bibliotecas</a></h3>
-<p>Programas não funcionam solos; eles dependem de pedaços de código compartilhados para executar tarefas comuns (como desenhar uma interface na tela ou criptografar uma senha). Essas coleções de código são chamadas de bibliotecas e ficam guardadas nos diretórios <code>/lib</code>. Elas equivalem funcionalmente aos arquivos <code>.dll</code> do ecossistema Windows.</p>
+<p>Programas dependem de pedaços de código compartilhados para executar tarefas comuns (como desenhar uma interface na tela ou criptografar uma senha). Essas coleções de código são chamadas de bibliotecas e ficam guardadas nos diretórios <code>/lib</code>. Elas equivalem funcionalmente aos arquivos <code>.dll</code> do ecossistema Windows.</p>
 <h3 id="media-e-mnt-encaixando-novos-discos"><a class="header" href="#media-e-mnt-encaixando-novos-discos">/media e /mnt: encaixando novos discos</a></h3>
 <p>Quando você pluga um dispositivo de armazenamento externo, ele precisa ser “montado” na árvore de diretórios para se tornar acessível.</p>
 <ul>
-<li><strong><code>/media</code>:</strong> É gerenciado automaticamente pelo sistema. Quando você pluga um pendrive ou HD externo, o Linux cria uma pasta automática aqui dentro para dar acesso imediato aos arquivos.</li>
-<li><strong><code>/mnt</code> (Mount):</strong> É um espaço reservado para montagens manuais feitas pelo administrador. Se você precisa fixar temporariamente uma partição de rede ou outro disco rígido específico no sistema, o <code>/mnt</code> é o local padrão para isso.</li>
+<li><strong><code>/media</code>:</strong> é gerenciado automaticamente pelo sistema. Quando você pluga um pendrive ou HD externo, o Linux cria uma pasta automática aqui dentro para dar acesso imediato aos arquivos;</li>
+<li><strong><code>/mnt</code>:</strong> é um espaço reservado para montagens manuais feitas pelo administrador. Se você precisa fixar temporariamente uma partição de rede ou outro disco rígido específico no sistema, o <code>/mnt</code> é o local padrão para isso.</li>
 </ul>
 <h3 id="opt-softwares-de-terceiros"><a class="header" href="#opt-softwares-de-terceiros">/opt: softwares de terceiros</a></h3>
-<p>O diretório <code>/opt</code> (Optional) serve para a instalação de aplicativos proprietários ou que não seguem o gerenciador de pacotes padrão da distribuição. Softwares corporativos ou de grande porte que vêm em pacotes fechados (como o Google Chrome, Discord ou ferramentas específicas de desenvolvimento) costumam se instalar em subpastas próprias dentro do <code>/opt</code> para não misturar seus arquivos com a estrutura padrão do sistema.</p>
+<p>O diretório <code>/opt</code> serve para a instalação de aplicativos proprietários ou que não seguem o gerenciador de pacotes padrão da distribuição. Softwares corporativos ou de grande porte que vêm em pacotes fechados (como o Google Chrome, Discord ou ferramentas específicas de desenvolvimento) costumam se instalar em subpastas próprias dentro do <code>/opt</code> para não misturar seus arquivos com a estrutura padrão do sistema.</p>
 <h3 id="proc-e-sys-as-janelas-do-kernel"><a class="header" href="#proc-e-sys-as-janelas-do-kernel">/proc e /sys: as janelas do kernel</a></h3>
 <p>Assim como o <code>/dev</code>, os diretórios <code>/proc</code> (Processes) e <code>/sys</code> (System) não ocupam espaço físico no seu SSD ou HD. Eles são os chamados sistemas de arquivos virtuais, criados dinamicamente na memória RAM pelo kernel do Linux.</p>
 <ul>
-<li><strong><code>/proc</code>:</strong> Contém informações em tempo real sobre os processos que estão rodando na máquina e o status do hardware (como consumo de memória atual e informações detalhadas da CPU).</li>
-<li><strong><code>/sys</code>:</strong> Organiza e expõe informações sobre os drivers, barramentos e dispositivos do computador, permitindo ler e interagir diretamente com as configurações em tempo real do kernel.</li>
+<li><strong><code>/proc</code>:</strong> contém informações em tempo real sobre os processos que estão rodando na máquina e o status do hardware;</li>
+<li><strong><code>/sys</code>:</strong> organiza e expõe informações sobre os drivers, barramentos e dispositivos do computador, permitindo ler e interagir diretamente com as configurações em tempo real do kernel.</li>
 </ul>
 <h3 id="usr-a-central-de-aplicativos"><a class="header" href="#usr-a-central-de-aplicativos">/usr: a central de aplicativos</a></h3>
-<p>O <code>/usr</code> (Universal System Resources) é uma das maiores pastas do sistema. Ela funciona como uma “segunda raiz” e guarda a grande maioria dos programas instalados e utilizados no dia a dia, junto com seus ícones, arquivos de tradução, documentações e fontes. Dentro dele, existem réplicas da estrutura principal voltadas para o usuário comum, como <code>/usr/bin</code> e <code>/usr/lib</code>.</p>
+<p>O <code>/usr</code> é uma das maiores pastas do sistema. Ela funciona como uma “segunda raiz” e guarda a grande maioria dos programas instalados e utilizados no dia a dia, junto com seus ícones, arquivos de tradução, documentações e fontes. Dentro dele, existem réplicas da estrutura principal voltadas para o usuário comum, como <code>/usr/bin</code> e <code>/usr/lib</code>.</p>
 <h3 id="var-os-dados-voláteis"><a class="header" href="#var-os-dados-voláteis">/var: os dados voláteis</a></h3>
-<p>O diretório <code>/var</code> (Variable) abriga arquivos cujo tamanho e conteúdo mudam constantemente à medida que o sistema opera. É o lugar onde ficam guardados os logs do sistema (o histórico detalhado de tudo o que acontece na máquina, em <code>/var/log</code>), as filas de impressão, as bases de dados e os arquivos temporários de servidores web.</p>
+<p>O diretório <code>/var</code> abriga arquivos cujo tamanho e conteúdo mudam constantemente à medida que o sistema opera. É o lugar onde ficam guardados os logs do sistema (o histórico detalhado de tudo o que acontece na máquina, em <code>/var/log</code>), as filas de impressão, as bases de dados e os arquivos temporários de servidores web.</p>
 <h2 id="a-lixeira-no-linux-onde-ficam-os-arquivos-apagados"><a class="header" href="#a-lixeira-no-linux-onde-ficam-os-arquivos-apagados">A lixeira no Linux: onde ficam os arquivos apagados?</a></h2>
 <p>Ao contrário do ecossistema Windows, que centraliza os itens deletados em uma pasta oculta na raiz de cada unidade física (<code>$Recycle.Bin</code>), o Linux adota um gerenciamento descentralizado da lixeira. Ele é baseado nas especificações da Freedesktop.org (padrão XDG) e funciona de maneira intimamente ligada a quem está logado e ao local onde o arquivo estava armazenado. Além disso, a lixeira é um recurso mantido pela interface gráfica, e não pelo sistema de arquivos em si.</p>
 <h3 id="a-lixeira-do-usuário-local"><a class="header" href="#a-lixeira-do-usuário-local">A lixeira do usuário local</a></h3>
@@ -1535,8 +1535,8 @@
 <p><code>/home/usuario/.local/share/Trash/</code></p>
 <p>Internamente, essa estrutura oculta é dividida em duas subpastas vitais para a segurança do processo:</p>
 <ul>
-<li><strong><code>files/</code>:</strong> É o local onde os arquivos e pastas deletados residem fisicamente. O sistema pode alterar ligeiramente seus nomes originais caso ocorram duplicatas durante a remoção.</li>
-<li><strong><code>info/</code>:</strong> Contém pequenos arquivos de texto com metadados cruciais de cada item excluído. Nesses arquivos são registrados o caminho original de onde o item foi retirado e a data/hora exata em que ele foi enviado à lixeira. É essa pasta de metadaos que torna o botão “Restaurar” funcional no sistema.</li>
+<li><strong><code>files/</code>:</strong> é o local onde os arquivos e pastas deletados residem fisicamente. O sistema pode alterar ligeiramente seus nomes originais caso ocorram duplicatas durante a remoção;</li>
+<li><strong><code>info/</code>:</strong> contém pequenos arquivos de texto com metadados cruciais de cada item excluído. Nesses arquivos são registrados o caminho original de onde o item foi retirado e a data/hora exata em que ele foi enviado à lixeira. É essa pasta de metadaos que torna o botão “Restaurar” funcional no sistema.</li>
 </ul>
 <h3 id="discos-externos-e-a-pasta-trash-uid"><a class="header" href="#discos-externos-e-a-pasta-trash-uid">Discos externos e a pasta <code>.Trash-$UID</code></a></h3>
 <p>O mecanismo muda quando lidamos com mídias removíveis, como pendrives ou partições secundárias de HDs montadas em <code>/media</code> ou <code>/mnt</code>. Mover um arquivo de 20 GB de um pendrive diretamente para a lixeira do <code>/home</code> exigiria que o sistema copiasse fisicamente todos esses dados através do barramento, tornando o processo demorado e ineficiente.</p>
@@ -1550,49 +1550,51 @@
 <h2 id="criando-e-administrando-usuários"><a class="header" href="#criando-e-administrando-usuários">Criando e Administrando Usuários</a></h2>
 <p>A criação de uma nova identidade no sistema pode ser feita por duas abordagens que operam em camadas diferentes do sistema operacional:</p>
 <ul>
-<li><strong>useradd:</strong> É o utilitário nativo de baixo nível. Ele cria o usuário de forma direta e “crua”. O sistema registra a identidade binária, mas não configura um diretório pessoal (/home) ou uma senha inicial de forma automática, exigindo parametrização manual posterior.</li>
-</ul>
+<li>
+<p><strong>useradd:</strong> é o utilitário nativo de baixo nível. Ele cria o usuário de forma direta e “crua”: o sistema apenas registra a entrada do usuário no arquivo <code>/etc/passwd</code>, sem configurar automaticamente um diretório pessoal (<code>/home</code>) ou uma senha inicial, exigindo parametrização manual posterior.</p>
 <pre><code class="language-bash">useradd &lt;nome-do-usuario&gt;
 </code></pre>
-<ul>
-<li><strong>adduser:</strong> É um script de alto nível muito mais amigável e interativo. Ao ser executado, ele guia o administrador na configuração do perfil, gera automaticamente o diretório de início (/home/nome-do-usuario), copia os arquivos base de ambiente (como .bashrc) e solicita a criação da senha em tempo de execução.</li>
-</ul>
+</li>
+<li>
+<p><strong>adduser:</strong> é um script de alto nível muito mais amigável e interativo. Ao ser executado, ele guia o administrador na configuração do perfil, gera automaticamente o diretório de início (<code>/home/nome-do-usuario</code>), copia os arquivos base de ambiente (como <code>.bashrc</code>) e solicita a criação da senha em tempo de execução.</p>
 <pre><code class="language-bash">adduser &lt;nome-do-usuario&gt;
 </code></pre>
+</li>
+</ul>
 <h2 id="auditoria-e-exclusão-de-contas"><a class="header" href="#auditoria-e-exclusão-de-contas">Auditoria e Exclusão de Contas</a></h2>
-<p>Para validar se as contas foram criadas corretamente ou para removê-las quando um usuário desliga-se do sistema, utilizamos os seguintes comandos:</p>
-<pre><code class="language-bash"># Verifica se o usuário foi registrado no arquivo de grupos do sistema
-cat /etc/group | grep &lt;nome-do-usuario&gt;
+<p>Para validar se as contas foram criadas corretamente ou para removê-las quando um usuário deixa de fazer parte do sistema, utilizamos os seguintes comandos:</p>
+<pre><code class="language-bash"># verifica se o usuário foi registrado no arquivo central de contas do sistema
+cat /etc/passwd | grep &lt;nome-do-usuario&gt;
 
-# Valida a existência do usuário e o estado do hash da sua senha (requer sudo)
+# valida a existência do usuário e o estado do hash da sua senha (requer sudo)
 sudo cat /etc/shadow | grep &lt;nome-do-usuario&gt;
 
-# Remove a conta do usuário do sistema
+# remove a conta do usuário do sistema
 userdel &lt;nome-do-usuario&gt;
 </code></pre>
 <h2 id="gerenciando-grupos-no-linux"><a class="header" href="#gerenciando-grupos-no-linux">Gerenciando Grupos no Linux</a></h2>
 <p>Os grupos funcionam como caixas organizacionais projetadas para simplificar a atribuição de permissões em massa. Em vez de dar acesso a um arquivo para cinquenta usuários individualmente, o administrador cria um grupo, coloca os usuários lá dentro e dá a permissão apenas ao grupo.</p>
-<pre><code class="language-bash"># Cria um novo grupo de segurança no sistema (ex: projetos)
+<pre><code class="language-bash"># cria um novo grupo de segurança no sistema (ex: projetos)
 groupadd projetos
 
-# Lista todos os grupos existentes e seus respectivos IDs (GIDs)
+# lista todos os grupos existentes e seus respectivos IDs (GIDs)
 cat /etc/group
 
-# Adiciona um usuário a um grupo secundário (-a de append, -G de Group)
+# adiciona um usuário a um grupo secundário (-a de append, -G de Group)
 usermod -aG &lt;nome-do-grupo&gt; &lt;nome-do-usuario&gt;
 
-# Verifica instantaneamente a quais grupos uma determinada conta pertence
+# verifica instantaneamente a quais grupos uma determinada conta pertence
 groups &lt;nome-do-usuario&gt;
 
-# Exclui um grupo do sistema operacional
+# exclui um grupo do sistema operacional
 groupdel &lt;nome-do-grupo&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="o-sistema-de-permissões-de-arquivos-e-diretórios"><a class="header" href="#o-sistema-de-permissões-de-arquivos-e-diretórios">O Sistema de Permissões de Arquivos e Diretórios</a></h1>
-<p>Se os arquivos e pastas são a matéria-prima do armazenamento, as permissões são as regras de tráfego que ditam quem pode ler, modificar ou executar esse conteúdo. Toda ação no terminal Linux depende estritamente do nível de privilégio que o usuário possui sobre o arquivo que tenta manipular.</p>
+<h1 id="permissões"><a class="header" href="#permissões">Permissões</a></h1>
+<p>As permissões são as regras que ditam quem pode ler, modificar ou executar um conteúdo. Toda ação no terminal Linux depende estritamente do nível de privilégio que o usuário possui sobre o arquivo que tenta manipular.</p>
 <p>Regra de Ouro da Propriedade:</p>
 <p>No ecossistema Linux, um arquivo ou diretório só pode pertencer a um único usuário dono e a um único grupo dono por vez.</p>
-<h2 id="a-anatomia-das-permissões"><a class="header" href="#a-anatomia-das-permissões">A Anatomia das Permissões</a></h2>
+<h2 id="significado"><a class="header" href="#significado">Significado</a></h2>
 <p>Ao listar os detalhes de um arquivo no terminal com o comando <code>ls -l</code>, a primeira coluna exibe uma string de 10 caracteres (como <code>drwxr-xr-x</code>). Essa string indica exatamente quem pode fazer o que com o arquivo.</p>
 <ul>
 <li>
@@ -1605,21 +1607,21 @@ groupdel &lt;nome-do-grupo&gt;
 <li>
 <p>Os 9 caracteres seguintes são divididos em 3 blocos de 3, representando as categorias de agentes:</p>
 <ul>
-<li>u (User): O usuário proprietário (dono) do arquivo;</li>
-<li>g (Group): O grupo associado ao arquivo;</li>
-<li>o (Others): Todos os demais usuários do sistema (o resto do mundo).</li>
+<li>u (user): o usuário proprietário (dono) do arquivo;</li>
+<li>g (group): o grupo associado ao arquivo;</li>
+<li>o (others): todos os demais usuários do sistema (o resto do mundo).</li>
 </ul>
 </li>
 <li>
 <p>Dentro de cada bloco, existem três tipos de direitos fundamentais:</p>
 <ul>
-<li>r (Read): Permissão de leitura. Permite ver o conteúdo de um arquivo ou listar os itens de uma pasta;</li>
-<li>w (Write): Permissão de escrita. Permite modificar/deletar um arquivo ou criar itens dentro de uma pasta;</li>
-<li>x (Execute): Permissão de execução. Permite rodar um script/programa ou entrar e navegar em uma pasta.</li>
+<li>r (read): permissão de leitura. Permite ver o conteúdo de um arquivo ou listar os itens de uma pasta;</li>
+<li>w (write): permissão de escrita. Permite modificar/deletar um arquivo ou criar itens dentro de uma pasta;</li>
+<li>x (execute): permissão de execução. Permite rodar um script/programa ou entrar e navegar em uma pasta.</li>
 </ul>
 </li>
 </ul>
-<h2 id="representação-numérica-octal"><a class="header" href="#representação-numérica-octal">Representação Numérica (Octal)</a></h2>
+<h2 id="representação-numérica"><a class="header" href="#representação-numérica">Representação Numérica</a></h2>
 <p>Para otimizar a atribuição de permissões, o Linux traduz os bits de leitura (r = 4), escrita (w = 2) e execução (x = 1) em um sistema somatório de base octal (valores de 0 a 7):</p>
 <div class="table-wrapper">
 <table>
@@ -1638,35 +1640,37 @@ groupdel &lt;nome-do-grupo&gt;
 </tbody>
 </table>
 </div>
-<h3 id="o-exemplo-clássico-permissão-755"><a class="header" href="#o-exemplo-clássico-permissão-755">O Exemplo Clássico: Permissão 755</a></h3>
+<h3 id="permissão-755"><a class="header" href="#permissão-755">Permissão 755</a></h3>
+<pre><code class="language-bash">  chmod 755 nome_do_arquivo.sh
+</code></pre>
 <ul>
 <li>Ao aplicar a configuração 755 de forma recursiva (-R) em uma pasta, você está definindo:
 <ul>
-<li>7 (rwx) para o User (O dono pode ler, alterar e entrar na pasta);</li>
-<li>5 (r-x) para o Group (Os membros do grupo podem ler e entrar, mas não apagar nada);</li>
-<li>5 (r-x) para Others (Qualquer outro usuário do sistema pode ler e entrar, mas não alterar).</li>
+<li>7 (rwx) para o <em>user</em> (o dono pode ler, alterar e entrar na pasta);</li>
+<li>5 (r-x) para o <em>group</em> (os membros do grupo podem ler e entrar, mas não apagar nada);</li>
+<li>5 (r-x) para <em>others</em> (qualquer outro usuário do sistema pode ler e entrar, mas não alterar).</li>
 </ul>
 </li>
 </ul>
-<h2 id="modificando-acessos-e-propriedades-na-prática"><a class="header" href="#modificando-acessos-e-propriedades-na-prática">Modificando Acessos e Propriedades na Prática</a></h2>
+<h2 id="modificando-acessos"><a class="header" href="#modificando-acessos">Modificando Acessos</a></h2>
 <h3 id="alteração-de-permissões-com-chmod"><a class="header" href="#alteração-de-permissões-com-chmod">Alteração de permissões com chmod</a></h3>
 <p>O comando <code>chmod</code> altera o comportamento dos bits de acesso usando a lógica numérica ou a simbólica:</p>
-<pre><code class="language-bash"># Restringe o arquivo/diretório para uso exclusivo do proprietário (700)
-chmod 700 &lt;nome-do-alvo&gt;
+<pre><code class="language-bash"># restringe o arquivo/diretório para uso exclusivo do proprietário (700)
+chmod 700 &lt;nome-do-arquivo&gt;
 
-# Remove de forma simbólica o direito de leitura (r) da categoria de outros (o)
-chmod o-r &lt;nome-do-alvo&gt;
+# remove de forma simbólica o direito de leitura (r) da categoria de outros (o)
+chmod o-r &lt;nome-do-arquivo&gt;
 </code></pre>
 <h3 id="alteração-de-propriedade-com-chown-e-chgrp"><a class="header" href="#alteração-de-propriedade-com-chown-e-chgrp">Alteração de propriedade com chown e chgrp</a></h3>
 <p>Para transferir a posse de um recurso para outro responsável ou setor do sistema:</p>
-<pre><code class="language-bash"># Define um novo usuário dono para o arquivo ou diretório
-chown &lt;nome-do-usuario&gt; &lt;nome-do-alvo&gt;
+<pre><code class="language-bash"># define um novo usuário dono para o arquivo ou diretório
+chown &lt;nome-do-usuario&gt; &lt;nome-do-arquivo&gt;
 
-# Define unicamente um novo grupo proprietário para o alvo
-chgrp &lt;nome-do-grupo&gt; &lt;nome-do-alvo&gt;
+# define unicamente um novo grupo proprietário para o alvo
+chgrp &lt;nome-do-grupo&gt; &lt;nome-do-arquivo&gt;
 
-# Altera simultaneamente o usuário dono E o grupo associado (usando o separador ":")
-chown &lt;nome-do-usuario&gt;:&lt;nome-do-grupo&gt; &lt;nome-do-alvo&gt;
+# altera simultaneamente o usuário dono e o grupo associado (usando o separador ":")
+chown &lt;nome-do-usuario&gt;:&lt;nome-do-grupo&gt; &lt;nome-do-arquivo&gt;
 </code></pre>
 <h2 id="permissões-especiais-o-sgid-gs"><a class="header" href="#permissões-especiais-o-sgid-gs">Permissões Especiais: O SGID (g+s)</a></h2>
 <p>Em ambientes de trabalho colaborativos onde múltiplos usuários modificam a mesma estrutura de diretórios (uma pasta compartilhada de um projeto, por exemplo), surge um problema operacional: por padrão, novos arquivos criados herdam o grupo primário de quem os criou, o que pode bloquear o acesso do restante da equipe.</p>
@@ -1674,11 +1678,14 @@ chown &lt;nome-do-usuario&gt;:&lt;nome-do-grupo&gt; &lt;nome-do-alvo&gt;
 <pre><code class="language-bash">chmod g+s &lt;nome-do-diretorio&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="visualizando-arquivos"><a href="#visualizando-arquivos" class="header">Visualizando Arquivos</a></h1>
+<h1 id="terminal"><a href="#terminal" class="header">Terminal</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="catmd"><a class="header" href="#catmd">cat.md</a></h1>
-<p>Mostra o conteúdo de um arquivo de texto ou binário.</p>
-<pre><code class="language-bash">cat [opções] [diretório/arquivo] [diretório1/arquivo1]
+<h1 id="visualização-de-arquivos"><a class="header" href="#visualização-de-arquivos">Visualização de Arquivos</a></h1>
+<p>Um dos primeiros passos ao trabalhar no terminal Linux é aprender a visualizar o conteúdo de arquivos de texto. Seja para conferir um arquivo de configuração, ler um log ou apenas dar uma olhada rápida em um documento, existem alguns comandos essenciais para essa tarefa. A seguir, veremos cat, head, tail, less e more, cada um com suas particularidades e melhor aplicação dependendo da situação.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cat"><a class="header" href="#cat">cat</a></h1>
+<p>Mostra o conteúdo de um arquivo de texto.</p>
+<pre><code class="language-bash">cat [opções] [arquivo] [arquivo1]
 </code></pre>
 <div class="table-wrapper">
 <table>
@@ -1686,10 +1693,10 @@ chown &lt;nome-do-usuario&gt;:&lt;nome-do-grupo&gt; &lt;nome-do-alvo&gt;
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>diretório/arquivo</code></td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td><code>-n</code>, <code>--number</code></td><td>Exibe o número de cada linha</td></tr>
-<tr><td><code>-s</code>, <code>--squeeze-blank</code></td><td>Suprime linhas em branco consecutivas, exibindo no máximo uma</td></tr>
-<tr><td><code>-</code></td><td>Lê a entrada padrão (<code>stdin</code>)</td></tr>
+<tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
+<tr><td>-n, –number</td><td>Exibe o número de cada linha</td></tr>
+<tr><td>-s, –squeeze-blank</td><td>Suprime linhas em branco consecutivas, exibindo no máximo uma</td></tr>
+<tr><td>-</td><td>Lê a entrada padrão (<code>stdin</code>), ou seja, o que é digitado ou enviado por outro comando via pipe</td></tr>
 </tbody>
 </table>
 </div>
@@ -1706,9 +1713,9 @@ cat -n -s arquivo.txt               # combina numeração de linhas e supressão
 cat -                               # lê e exibe o que for digitado na entrada padrão (stdin)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="headmd"><a class="header" href="#headmd">head.md</a></h1>
+<h1 id="head"><a class="header" href="#head">head</a></h1>
 <p>Exibe as primeiras linhas de um arquivo (10 por padrão).</p>
-<pre><code class="language-bash">head [opções] [diretório/arquivo] [diretório1/arquivo1]
+<pre><code class="language-bash">head [opções] [arquivo] [arquivo1]
 </code></pre>
 <div class="table-wrapper">
 <table>
@@ -1716,9 +1723,9 @@ cat -                               # lê e exibe o que for digitado na entrada 
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>diretório/arquivo</code></td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td><code>-n</code>, <code>--lines=N</code></td><td>Exibe as primeiras <code>N</code> linhas (padrão: 10)</td></tr>
-<tr><td><code>-c</code>, <code>--bytes=N</code></td><td>Exibe os primeiros <code>N</code> bytes do arquivo</td></tr>
+<tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
+<tr><td>-n, –lines=N</td><td>Exibe as primeiras <code>N</code> linhas (padrão: 10)</td></tr>
+<tr><td>-c, –bytes=N</td><td>Exibe os primeiros <code>N</code> bytes do arquivo</td></tr>
 </tbody>
 </table>
 </div>
@@ -1732,7 +1739,7 @@ ps aux | head -n 5                  # exibe os 5 primeiros processos listados
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tail"><a class="header" href="#tail">tail</a></h1>
 <p>Exibe as últimas linhas de um arquivo (10 por padrão).</p>
-<pre><code class="language-bash">tail [opções] [diretório/arquivo] [diretório1/arquivo1]
+<pre><code class="language-bash">tail [opções] [arquivo] [arquivo1]
 </code></pre>
 <div class="table-wrapper">
 <table>
@@ -1740,10 +1747,10 @@ ps aux | head -n 5                  # exibe os 5 primeiros processos listados
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>diretório/arquivo</code></td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td><code>-n</code>, <code>--lines=N</code></td><td>Exibe as últimas <code>N</code> linhas (padrão: 10)</td></tr>
-<tr><td><code>-c</code>, <code>--bytes=N</code></td><td>Exibe os últimos <code>N</code> bytes do arquivo</td></tr>
-<tr><td><code>-f</code>, <code>--follow</code></td><td>Mantém o arquivo aberto e exibe novas linhas em tempo real</td></tr>
+<tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
+<tr><td>-n, –lines=N</td><td>Exibe as últimas <code>N</code> linhas (padrão: 10)</td></tr>
+<tr><td>-c, –bytes=N</td><td>Exibe os últimos <code>N</code> bytes do arquivo</td></tr>
+<tr><td>-f, –follow</td><td>Mantém o arquivo aberto e exibe novas linhas em tempo real</td></tr>
 </tbody>
 </table>
 </div>
@@ -1765,10 +1772,10 @@ tail -n +5 arquivo.txt              # exibe o arquivo a partir da 5ª linha até
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>diretório/arquivo</code></td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td><code>-N</code></td><td>Define o número de linhas exibidas por página</td></tr>
-<tr><td><code>+N</code></td><td>Inicia a exibição a partir da linha <code>N</code></td></tr>
-<tr><td><code>zmore</code></td><td>Variante para visualizar arquivos compactados com gzip</td></tr>
+<tr><td>diretório/arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
+<tr><td>-N</td><td>Define o número de linhas exibidas por página</td></tr>
+<tr><td>+N</td><td>Inicia a exibição a partir da linha <code>N</code></td></tr>
+<tr><td>zmore</td><td>Variante para visualizar arquivos compactados com gzip</td></tr>
 </tbody>
 </table>
 </div>
@@ -1787,7 +1794,7 @@ zmore arquivo.txt.gz                # exibe um arquivo compactado com gzip de fo
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="less"><a class="header" href="#less">less</a></h1>
 <p>Exibe o conteúdo de um arquivo de forma paginada, permitindo rolar para frente e para trás.</p>
-<pre><code class="language-bash">less [opções] [diretório/arquivo]
+<pre><code class="language-bash">less [opções] [arquivo]
 </code></pre>
 <div class="table-wrapper">
 <table>
@@ -1795,11 +1802,11 @@ zmore arquivo.txt.gz                # exibe um arquivo compactado com gzip de fo
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>diretório/arquivo</code></td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td><code>-N</code>, <code>--LINE-NUMBERS</code></td><td>Exibe o número de cada linha</td></tr>
-<tr><td><code>-S</code>, <code>--chop-long-lines</code></td><td>Trunca linhas longas em vez de quebrá-las</td></tr>
-<tr><td><code>+N</code></td><td>Inicia a exibição a partir da linha <code>N</code></td></tr>
-<tr><td><code>zless</code></td><td>Variante para visualizar arquivos compactados com gzip</td></tr>
+<tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
+<tr><td>-N, –LINE-NUMBERS</td><td>Exibe o número de cada linha</td></tr>
+<tr><td>-S, –chop-long-lines</td><td>Trunca linhas longas em vez de quebrá-las</td></tr>
+<tr><td>+N</td><td>Inicia a exibição a partir da linha <code>N</code></td></tr>
+<tr><td>zless</td><td>Variante para visualizar arquivos compactados com gzip</td></tr>
 </tbody>
 </table>
 </div>
@@ -1817,7 +1824,8 @@ ls -la /etc | less                  # pagina a listagem de um diretório longo
 zless arquivo.txt.gz                # exibe um arquivo compactado com gzip de forma paginada
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="manipulando-arquivos"><a href="#manipulando-arquivos" class="header">Manipulando Arquivos</a></h1>
+<h1 id="manipulando-arquivos"><a class="header" href="#manipulando-arquivos">Manipulando Arquivos</a></h1>
+<p>Depois de aprender a visualizar o conteúdo de arquivos, o próximo passo natural é entender como organizá-los. No dia a dia do terminal, é comum precisar listar o que existe em uma pasta, criar novos diretórios, copiar ou mover arquivos de um lugar para outro, apagar o que não é mais necessário e até ajustar a data de um arquivo. A seguir, veremos ls, mkdir, cp, mv, rm e touch, comandos que formam a base para organizar e manter seus arquivos no Linux.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ls"><a class="header" href="#ls">ls</a></h1>
 <p>Lista os arquivos de um diretório.</p>
@@ -1829,32 +1837,35 @@ zless arquivo.txt.gz                # exibe um arquivo compactado com gzip de fo
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>caminho/arquivo</code></td><td>Diretório ou arquivo a ser listado</td></tr>
-<tr><td><code>-a</code>, <code>--all</code></td><td>Lista todos os arquivos, inclusive os ocultos</td></tr>
-<tr><td><code>-A</code>, <code>--almost-all</code></td><td>Lista arquivos ocultos, exceto <code>.</code> e <code>..</code></td></tr>
-<tr><td><code>-B</code>, <code>--ignore-backups</code></td><td>Não lista arquivos que terminam com <code>~</code> (backup)</td></tr>
-<tr><td><code>--color=PARAM</code></td><td>Coloriza a listagem: <code>never</code>, <code>always</code> ou <code>auto</code></td></tr>
-<tr><td><code>-d</code>, <code>--directory</code></td><td>Lista o nome do diretório em vez do seu conteúdo</td></tr>
-<tr><td><code>-f</code></td><td>Não classifica a listagem</td></tr>
-<tr><td><code>-F</code></td><td>Acrescenta um caractere identificador ao nome: <code>*</code> executável, <code>/</code> diretório, <code>=</code> socket, <code>@</code> link simbólico, <code>|</code> pipe</td></tr>
-<tr><td><code>-G</code>, <code>--no-group</code></td><td>Oculta a coluna de grupo</td></tr>
-<tr><td><code>-h</code>, <code>--human-readable</code></td><td>Exibe tamanhos em KB, MB, GB (base 1024)</td></tr>
-<tr><td><code>-H</code></td><td>Igual a <code>-h</code>, mas usa base 1000</td></tr>
-<tr><td><code>-l</code></td><td>Formato longo: exibe permissões, dono, grupo, tamanho e data</td></tr>
-<tr><td><code>-n</code></td><td>Usa IDs numéricos de usuário e grupo em vez dos nomes</td></tr>
-<tr><td><code>-L</code>, <code>--dereference</code></td><td>Lista o arquivo original em vez do link simbólico</td></tr>
-<tr><td><code>-o</code></td><td>Listagem longa sem a coluna de dono (equivale a <code>-lG</code>)</td></tr>
-<tr><td><code>-p</code></td><td>Igual a <code>-F</code>, mas sem o <code>*</code> em executáveis</td></tr>
-<tr><td><code>-R</code></td><td>Lista diretórios e subdiretórios recursivamente</td></tr>
-<tr><td><code>-r</code></td><td>Inverte a ordem de classificação</td></tr>
-<tr><td><code>-c</code></td><td>Classifica pela data de alteração</td></tr>
-<tr><td><code>-X</code></td><td>Classifica pela extensão</td></tr>
-<tr><td><code>-U</code></td><td>Lista na ordem do diretório, sem classificar</td></tr>
-<tr><td><code>-Z</code></td><td>Exibe o contexto SELinux de cada arquivo</td></tr>
-<tr><td><code>--full-time</code></td><td>Exibe data e hora completas</td></tr>
+<tr><td>caminho/arquivo</td><td>Diretório ou arquivo a ser listado</td></tr>
+<tr><td>-a, –all</td><td>Lista todos os arquivos, inclusive os ocultos</td></tr>
+<tr><td>-A, –almost-all</td><td>Lista arquivos ocultos, exceto <code>.</code> e <code>..</code></td></tr>
+<tr><td>-B, –ignore-backups</td><td>Não lista arquivos que terminam com <code>~</code> (backup)</td></tr>
+<tr><td>–color=PARAM</td><td>Coloriza a listagem: <code>never</code>, <code>always</code> ou <code>auto</code></td></tr>
+<tr><td>-d, –directory</td><td>Lista o nome do diretório em vez do seu conteúdo</td></tr>
+<tr><td>-f</td><td>Não classifica a listagem</td></tr>
+<tr><td>-F</td><td>Acrescenta um caractere identificador ao nome</td></tr>
+<tr><td>-G, –no-group</td><td>Oculta a coluna de grupo</td></tr>
+<tr><td>-h, –human-readable</td><td>Exibe tamanhos em KB, MB, GB (base 1024)</td></tr>
+<tr><td>-H</td><td>Igual a <code>-h</code>, mas usa base 1000</td></tr>
+<tr><td>-l</td><td>Formato longo: exibe permissões, dono, grupo, tamanho e data</td></tr>
+<tr><td>-n</td><td>Usa IDs numéricos de usuário e grupo em vez dos nomes</td></tr>
+<tr><td>-L, –dereference</td><td>Lista o arquivo original em vez do link simbólico</td></tr>
+<tr><td>-o</td><td>Listagem longa sem a coluna de grupo (equivale a <code>-lG</code>)</td></tr>
+<tr><td>-p</td><td>Acrescenta uma <code>/</code> ao final de diretórios listados</td></tr>
+<tr><td>-R</td><td>Lista diretórios e subdiretórios recursivamente</td></tr>
+<tr><td>-r</td><td>Inverte a ordem de classificação</td></tr>
+<tr><td>-c</td><td>Classifica pela data de alteração</td></tr>
+<tr><td>-X</td><td>Classifica pela extensão</td></tr>
+<tr><td>-U</td><td>Lista na ordem do diretório, sem classificar</td></tr>
+<tr><td>-Z</td><td>Exibe o contexto SELinux de cada arquivo</td></tr>
+<tr><td>–full-time</td><td>Exibe data e hora completas</td></tr>
 </tbody>
 </table>
 </div>
+<blockquote>
+<p>Caractere identificador: <code>*</code> executável, <code>/</code> diretório, <code>=</code> socket, <code>@</code> link simbólico, <code>\|</code> pipe</p>
+</blockquote>
 <blockquote>
 <p>A saída de <code>ls -la</code> segue o formato:
 <code>[permissões] [links] [dono] [grupo] [tamanho] [data] [nome]</code>
@@ -1883,18 +1894,18 @@ ls --color=auto                     # coloriza a listagem conforme o tipo de arq
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>origem</code></td><td>Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas</td></tr>
-<tr><td><code>destino</code></td><td>Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele</td></tr>
-<tr><td><code>-i</code>, <code>--interactive</code></td><td>Pergunta antes de substituir um arquivo existente</td></tr>
-<tr><td><code>-f</code>, <code>--force</code></td><td>Substitui arquivos existentes sem perguntar</td></tr>
-<tr><td><code>-r</code></td><td>Copia arquivos de diretórios e subdiretórios; prefira <code>-R</code></td></tr>
-<tr><td><code>-R</code>, <code>--recursive</code></td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
-<tr><td><code>-v</code>, <code>--verbose</code></td><td>Exibe os arquivos enquanto são copiados</td></tr>
-<tr><td><code>-s</code>, <code>--symbolic-link</code></td><td>Cria link simbólico no destino em vez de copiar</td></tr>
-<tr><td><code>-l</code>, <code>--link</code></td><td>Cria hard link no destino em vez de copiar</td></tr>
-<tr><td><code>-p</code>, <code>--preserve</code></td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
-<tr><td><code>-u</code>, <code>--update</code></td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
-<tr><td><code>-x</code></td><td>Não copia arquivos localizados em um sistema de arquivos diferente do de origem</td></tr>
+<tr><td>origem</td><td>Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas</td></tr>
+<tr><td>destino</td><td>Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele</td></tr>
+<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-f, –force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
+<tr><td>-r</td><td>Copia arquivos de diretórios e subdiretórios; prefira <code>-R</code></td></tr>
+<tr><td>-R, –recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
+<tr><td>-s, –symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
+<tr><td>-l, –link</td><td>Cria hard link no destino em vez de copiar</td></tr>
+<tr><td>-p, –preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
+<tr><td>-u, –update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>-x</td><td>Não copia arquivos localizados em um sistema de arquivos diferente do de origem</td></tr>
 </tbody>
 </table>
 </div>
@@ -1921,10 +1932,10 @@ cp -p teste.txt /tmp                # copia preservando permissões e datas do a
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>caminho</code></td><td>Caminho onde o diretório será criado</td></tr>
-<tr><td><code>diretório</code></td><td>Nome do diretório que será criado</td></tr>
-<tr><td><code>-p</code></td><td>Cria os diretórios intermediários que ainda não existem</td></tr>
-<tr><td><code>--verbose</code></td><td>Exibe uma mensagem para cada diretório criado</td></tr>
+<tr><td>caminho</td><td>Caminho onde o diretório será criado</td></tr>
+<tr><td>diretório</td><td>Nome do diretório que será criado</td></tr>
+<tr><td>-p</td><td>Cria os diretórios intermediários que ainda não existem</td></tr>
+<tr><td>–verbose</td><td>Exibe uma mensagem para cada diretório criado</td></tr>
 </tbody>
 </table>
 </div>
@@ -1947,15 +1958,18 @@ mkdir -p --verbose a/b/c            # cria os diretórios intermediários e exib
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>origem</code></td><td>Arquivo ou diretório a ser movido ou renomeado</td></tr>
-<tr><td><code>destino</code></td><td>Caminho de destino ou novo nome do arquivo/diretório</td></tr>
-<tr><td><code>-f</code>, <code>--force</code></td><td>Substitui o arquivo de destino sem perguntar</td></tr>
-<tr><td><code>-i</code>, <code>--interactive</code></td><td>Pergunta antes de substituir (padrão)</td></tr>
-<tr><td><code>-v</code>, <code>--verbose</code></td><td>Exibe os arquivos enquanto são movidos</td></tr>
-<tr><td><code>-u</code>, <code>--update</code></td><td>Move somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>origem</td><td>Arquivo ou diretório a ser movido ou renomeado</td></tr>
+<tr><td>destino</td><td>Caminho de destino ou novo nome do arquivo/diretório</td></tr>
+<tr><td>-f, –force</td><td>Substitui o arquivo de destino sem perguntar</td></tr>
+<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são movidos</td></tr>
+<tr><td>-u, –update</td><td>Move somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
 </tbody>
 </table>
 </div>
+<blockquote>
+<p>Por padrão, o <code>mv</code> substitui um arquivo de destino existente sem perguntar. Use <code>-i</code> quando quiser uma confirmação antes de sobrescrever.</p>
+</blockquote>
 <blockquote>
 <p>Diferente do <code>cp</code>, o <code>mv</code> apaga o arquivo de origem após a cópia — o resultado é semelhante a recortar e colar.</p>
 </blockquote>
@@ -1979,15 +1993,18 @@ mv -u teste.txt /tmp                # move somente se `teste.txt` for mais recen
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>caminho/arquivo</code></td><td>Localização e nome do arquivo ou diretório a ser apagado</td></tr>
-<tr><td><code>-i</code>, <code>--interactive</code></td><td>Pergunta antes de remover (padrão)</td></tr>
-<tr><td><code>-v</code>, <code>--verbose</code></td><td>Exibe os arquivos enquanto são removidos</td></tr>
-<tr><td><code>-r</code>, <code>--recursive</code></td><td>Remove arquivos em subdiretórios e os próprios subdiretórios</td></tr>
-<tr><td><code>-f</code>, <code>--force</code></td><td>Remove sem perguntar, ignorando arquivos inexistentes</td></tr>
-<tr><td><code>-- arquivo</code></td><td>Remove arquivos cujo nome contém caracteres especiais (<code>*</code>, <code>?</code>, <code>-</code>, etc.)</td></tr>
+<tr><td>caminho/arquivo</td><td>Localização e nome do arquivo ou diretório a ser apagado</td></tr>
+<tr><td>-i, –interactive</td><td>Pergunta antes de remover cada arquivo</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são removidos</td></tr>
+<tr><td>-r, –recursive</td><td>Remove arquivos em subdiretórios e os próprios subdiretórios</td></tr>
+<tr><td>-f, –force</td><td>Remove sem perguntar, ignorando arquivos inexistentes</td></tr>
+<tr><td>–</td><td>Indica o fim das opções da linha de comando; útil para apagar arquivos cujo nome comece com traço (<code>-</code>)</td></tr>
 </tbody>
 </table>
 </div>
+<blockquote>
+<p>Por padrão, o <code>rm</code> apaga os arquivos sem pedir confirmação. Use <code>-i</code> quando quiser que ele pergunte antes de remover.</p>
+</blockquote>
 <blockquote>
 <p><strong>Atenção:</strong> arquivos removidos com <code>rm</code> não vão para a lixeira e não podem ser recuperados.</p>
 </blockquote>
@@ -2012,12 +2029,12 @@ rm -f -- --arquivo--                # remove o arquivo de nome `--arquivo--`
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>arquivos</code></td><td>Arquivos que terão sua data e hora modificados</td></tr>
-<tr><td><code>-t MMDDhhmm[ANO.ss]</code></td><td>Define data/hora manualmente: mês, dia, hora, minuto e opcionalmente ano e segundos</td></tr>
-<tr><td><code>-a</code>, <code>--time=atime</code></td><td>Altera somente a data e hora de acesso</td></tr>
-<tr><td><code>-m</code>, <code>--time=mtime</code></td><td>Altera somente a data e hora de modificação</td></tr>
-<tr><td><code>-c</code>, <code>--no-create</code></td><td>Não cria o arquivo caso ele não exista</td></tr>
-<tr><td><code>-r arquivo</code></td><td>Usa a data e hora de outro arquivo como referência</td></tr>
+<tr><td>arquivos</td><td>Arquivos que terão sua data e hora modificados</td></tr>
+<tr><td>-t [ANO]MMDDhhmm[.ss]</td><td>Define data/hora manualmente: ano (opcional), mês, dia, hora, minuto e, opcionalmente, segundos</td></tr>
+<tr><td>-a, –time=atime</td><td>Altera somente a data e hora de acesso</td></tr>
+<tr><td>-m, –time=mtime</td><td>Altera somente a data e hora de modificação</td></tr>
+<tr><td>-c, –no-create</td><td>Não cria o arquivo caso ele não exista</td></tr>
+<tr><td>-r arquivo</td><td>Usa a data e hora de outro arquivo como referência</td></tr>
 </tbody>
 </table>
 </div>
@@ -2031,6 +2048,103 @@ touch -t 12311830 arquivo.txt         # define a data/hora para 31 de dezembro �
 touch -t 202312311830.00 arquivo.txt  # define para 31/12/2023 às 18:30:00
 touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arquivo.txt`
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="utilitários"><a href="#utilitários" class="header">Utilitários</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="df"><a href="#df" class="header">df</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="du"><a href="#du" class="header">du</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="find"><a href="#find" class="header">find</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="free"><a href="#free" class="header">free</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ln"><a href="#ln" class="header">ln</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="nl"><a href="#nl" class="header">nl</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pwd"><a href="#pwd" class="header">pwd</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="reboot"><a href="#reboot" class="header">reboot</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="shutdown--power-off"><a href="#shutdown--power-off" class="header">shutdown / power-off</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="sort"><a href="#sort" class="header">sort</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="rede"><a class="header" href="#rede">Rede</a></h1>
+<p>Uma rede é uma conexão entre dois ou mais dispositivos, com o objetivo de compartilhar dados entre si. O compartilhamento pode ser feito de várias formas:</p>
+<ul>
+<li><strong>Servidor de arquivos</strong>: um ou mais usuários têm acesso ao conteúdo presente em um disco;</li>
+<li><strong>Servidor de impressão</strong>: os usuários podem enviar dados para uma impressora na rede;</li>
+<li><strong>Servidor de internet/intranet</strong>: os usuários têm acesso a páginas hospedadas em uma máquina da rede;</li>
+<li><strong>Servidor proxy</strong>: os usuários têm acesso à internet.</li>
+</ul>
+<p>Todos os acessos podem ser criados e controlados com base nas permissões definidas.</p>
+<h2 id="protocolo-de-rede"><a class="header" href="#protocolo-de-rede">Protocolo de Rede</a></h2>
+<p>Um protocolo de rede é o conjunto de regras usado para permitir a comunicação entre dois ou mais dispositivos — como uma linguagem comum que ambos os lados entendem. O protocolo mais conhecido é o TCP/IP, que passou a ser adotado mundialmente.</p>
+<h3 id="endereço-de-ip"><a class="header" href="#endereço-de-ip">Endereço de IP</a></h3>
+<p>O IP é um número usado para identificar um dispositivo dentro de uma rede, de forma parecida com um CPF que identifica uma pessoa.</p>
+<p>De modo geral, existem dois contextos de IP:</p>
+<ul>
+<li>O <strong>roteador</strong> possui um IP que o identifica perante a internet (o IP público da sua conexão);</li>
+<li>Cada <strong>dispositivo</strong> dentro da sua rede local (computador, celular, impressora etc.) possui seu próprio endereço para ser identificado dentro dessa rede interna.</li>
+</ul>
+<h3 id="números"><a class="header" href="#números">Números</a></h3>
+<p>Um endereço IP é formado por quatro grupos de números (octetos), no formato x.x.x.x, onde cada x pode ir de 0 a 255.</p>
+<p>Na prática, ao atribuir um endereço a um dispositivo dentro de uma rede, evita-se usar os valores 0 e 255 nos octetos finais, pois eles costumam ter significados especiais — como veremos mais adiante, na seção sobre máscara de rede.</p>
+<h4 id="classes-de-rede-ip"><a class="header" href="#classes-de-rede-ip">Classes de Rede IP</a></h4>
+<p>A “classe” define o tamanho de uma rede, com base no valor do primeiro octeto do endereço IP:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Classe</th><th>Primeiro octeto</th><th>Exemplo</th><th>Uso típico</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>1 a 126</td><td>10.0.0.1</td><td>redes gigantes (ex: grandes provedores)</td></tr>
+<tr><td>B</td><td>128 a 191</td><td>172.16.50.10</td><td>redes médias (ex: universidades)</td></tr>
+<tr><td>C</td><td>192 a 223</td><td>192.168.1.24</td><td>redes pequenas (ex: casa, escritório)</td></tr>
+<tr><td>D</td><td>224 a 239</td><td>224.0.0.5</td><td>multicast (ex: streaming para grupos)</td></tr>
+<tr><td>E</td><td>240 a 255</td><td>240.0.0.1</td><td>reservada, não usada em redes comuns</td></tr>
+</tbody>
+</table>
+</div>
+<p>As classes A, B e C são as usadas para identificar dispositivos comuns em uma rede. As classes D e E têm propósitos especiais e não fazem parte do dia a dia de configuração de uma rede doméstica ou de escritório.</p>
+<h5 id="faixas-privadas"><a class="header" href="#faixas-privadas">Faixas privadas</a></h5>
+<p>Dentro das classes A, B e C, existem faixas de endereços reservadas exclusivamente para uso em redes privadas (locais), ou seja, que não circulam diretamente pela internet:</p>
+<ul>
+<li><strong>Classe A privada</strong>: <code>10.x.x.x</code></li>
+<li><strong>Classe B privada</strong>: <code>172.16.x.x</code> a <code>172.31.x.x</code></li>
+<li><strong>Classe C privada</strong>: <code>192.168.x.x</code></li>
+</ul>
+<p>São justamente esses endereços que costumam aparecer nas redes domésticas, atribuídos pelo roteador aos dispositivos conectados.</p>
+<h4 id="máscara-de-rede"><a class="header" href="#máscara-de-rede">Máscara de Rede</a></h4>
+<p>Uma rede conecta diversos dispositivos para que seja possível trocar dados entre si. A máscara de rede é a forma usada para organizar esses endereços, definindo qual parte do IP identifica a rede e qual parte identifica cada dispositivo dentro dela.</p>
+<ul>
+<li><strong>Porção da Rede</strong> (192.168.110.): a parte do endereço que é fixa para todos os dispositivos daquela rede;</li>
+<li><strong>Porção do Host</strong> (.24): a parte que muda de dispositivo para dispositivo, possibilitando diferenciar uma máquina da outra;</li>
+<li><strong>Endereço de Host</strong> (192.168.110.24): a junção das duas porções acima — é o IP completo atribuído a um dispositivo específico da rede;</li>
+<li><strong>Endereço da Rede</strong> (192.168.110.0): representa a rede como um todo, não um dispositivo específico;</li>
+<li><strong>Máscara de Rede</strong> (255.255.255.0): define quantos bits do endereço IP pertencem à rede e quantos pertencem ao host;</li>
+<li><strong>Endereço de Broadcast</strong> (192.168.110.255): usado quando um dispositivo quer enviar uma mensagem para todos os outros dispositivos da rede ao mesmo tempo, em vez de para um host específico.</li>
+</ul>
+<h5 id="exemplo-prático"><a class="header" href="#exemplo-prático">Exemplo prático</a></h5>
+<p>Imagine a internet de uma casa comum, onde o roteador distribui a conexão para os dispositivos da família:</p>
+<pre><code>Internet
+│
+Roteador (192.168.110.1)
+│
+├── Ana     (celular)  → 192.168.110.10
+├── Carlos  (TV)       → 192.168.110.11
+├── Lucia   (notebook) → 192.168.110.12
+└── Antonio (tablet)   → 192.168.110.13
+</code></pre>
+<p>Nessa rede local:</p>
+<ul>
+<li>Todos os dispositivos compartilham a mesma <strong>porção de rede</strong>: <code>192.168.110.</code></li>
+<li>Cada dispositivo tem sua própria <strong>porção de host</strong>, que o diferencia dos demais: <code>.1</code>, <code>.10</code>, <code>.11</code>, <code>.12</code>, <code>.13</code>;</li>
+<li>O <strong>endereço da rede</strong> é <code>192.168.110.0</code>. Representa a rede em si, e nenhum dispositivo pode usá-lo;</li>
+<li>O <strong>endereço de broadcast</strong> é <code>192.168.110.255</code>. Se o roteador precisar enviar um aviso para todos os dispositivos ao mesmo tempo (por exemplo, “a rede vai reiniciar”), ele usa esse endereço, e todos recebem a mensagem simultaneamente.</li>
+</ul>
 
                     </main>
 
