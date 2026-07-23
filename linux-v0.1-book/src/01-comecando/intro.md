@@ -1,9 +1,3 @@
-# Do Hardware ao Sistema
+# Básico
 
-Antes de entender melhor como o sistema funciona e escrever os primeiros comandos no terminal, temos que construir uma base conceitual que sustentará tudo que vem depois.
-
-Começamos pelos dispositivos, como desktops, smartphones, servidores e sistemas embarcados; em seguida, vemos o que é software e como ele se organiza, para depois explorarmos os principais sistemas operacionais.
-
-Com essa base, entramos nas distribuições Linux: o que são, por que existem tantas e como se organizam nas três grandes famílias: Debian, Red Hat e Arch.
-
-Olhamos, por fim, para a camada visual do Linux: os ambientes de desktop e os gerenciadores de janelas em mosaico.
+Inicialmente, alguns temas precisam ser explicados. Antes de entender os componentes do computador e do software, precisamos dar uma olhada inicial em outros conceitos comuns ao Linux que são bem recorrentes, independentemente do seu nível de conhecimento. É importante salientar que esta é apenas uma introdução básica para que você possa começar seus estudos e se familiarizar com o ambiente.

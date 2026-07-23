@@ -12,13 +12,13 @@ Sem esse formato padronizado, cada instalação seria um processo manual: baixar
 
 Cada família de distribuições Linux adotou seu próprio formato de pacote, e a escolha de formato costuma ser a primeira coisa que diferencia uma distribuição da outra do ponto de vista prático:
 
-- **.deb:** formato usado por Debian, Ubuntu e derivados. É um arquivo *ar* que contém, internamente, os binários e os metadados de controle do pacote.
+- **.deb:** formato usado por Debian, Ubuntu e derivados. É um arquivo *ar* que contém, internamente, os binários e os metadados de controle do pacote;
 
-- **.rpm:** formato usado por Red Hat, Fedora, openSUSE e derivados. Cumpre o mesmo papel do .deb, mas com estrutura interna e ferramentas de gerenciamento diferentes.
+- **.rpm:** formato usado por Red Hat, Fedora, openSUSE e derivados. Cumpre o mesmo papel do `.deb`, mas com estrutura interna e ferramentas de gerenciamento diferentes;
 
 - **.pkg.tar.zst:** formato usado pelo Arch Linux, compactado com Zstandard. Segue uma filosofia mais enxuta, com menos camadas de abstração sobre o conteúdo do pacote.
 
-Nenhum desses formatos é compatível com os outros. Um .deb não instala em um sistema baseado em RPM sem conversão, e mesmo quando a conversão é possível (com ferramentas como o *alien*), o resultado nem sempre é confiável, porque as convenções de cada distribuição — caminhos de arquivos, nomes de dependências, scripts de pós-instalação — não se traduzem de forma direta.
+Nenhum desses formatos é compatível com os outros. Um `.deb` não instala em um sistema baseado em `.rpm` sem conversão, e mesmo quando a conversão é possível, o resultado nem sempre é confiável.
 
 ## Gerenciadores de pacote
 
@@ -26,23 +26,21 @@ O gerenciador de pacotes é o programa responsável por instalar, atualizar, rem
 
 ### Camada de baixo nível
 
-- **dpkg:** ferramenta de baixo nível para sistemas baseados em Debian. Instala e remove arquivos .deb individuais, mas não resolve dependências nem consulta repositórios remotos.
+- **dpkg:** ferramenta de baixo nível para sistemas baseados em Debian. Instala e remove arquivos `.deb` individuais, mas não resolve dependências nem consulta repositórios remotos;
 
-- **rpm:** equivalente ao dpkg no mundo Red Hat. Instala pacotes .rpm diretamente, sem lidar com dependências externas ao próprio arquivo.
+- **rpm:** equivalente ao `dpkg` no mundo Red Hat. Instala pacotes `.rpm` diretamente, sem lidar com dependências externas ao próprio arquivo.
 
 Usar essas ferramentas diretamente é possível, mas pouco prático: se o pacote depende de outro que não está instalado, a instalação falha e cabe ao usuário resolver manualmente.
 
 ### Camada de alto nível
 
-- **APT (Advanced Package Tool):** camada sobre o dpkg usada por Debian, Ubuntu e derivados. Resolve dependências automaticamente, consulta repositórios configurados e baixa tudo o que for necessário para completar a instalação.
+- **APT:** camada sobre o `dpkg` usada por Debian, Ubuntu e derivados. Resolve dependências automaticamente, consulta repositórios configurados e baixa tudo o que for necessário para completar a instalação;
 
-- **DNF (Dandified YUM):** camada sobre o rpm usada por Fedora e distribuições relacionadas. Sucessor do YUM, com resolução de dependências mais rápida e melhor tratamento de conflitos.
+- **DNF:** camada sobre o `rpm` usada por Fedora e distribuições relacionadas. Sucessor do YUM, com resolução de dependências mais rápida e melhor tratamento de conflitos;
 
-- **Pacman:** gerenciador do Arch Linux, que combina as duas camadas em uma única ferramenta. É conhecido pela sintaxe direta e pela velocidade das operações.
+- **Pacman:** gerenciador do Arch Linux, que combina as duas camadas em uma única ferramenta. É conhecido pela sintaxe direta e pela velocidade das operações;
 
-- **Zypper:** gerenciador de alto nível do openSUSE, também construído sobre o rpm.
-
-Na prática, é essa camada de alto nível que o usuário acessa no dia a dia. Comandos como `sudo apt install`, `sudo dnf install` ou `sudo pacman -S` descrevem a intenção — instalar um programa — e deixam para o gerenciador a tarefa de descobrir tudo o que precisa ser baixado.
+Na prática, é essa camada de alto nível que o usuário acessa no dia a dia. Comandos como `sudo apt install`, `sudo dnf install` ou `sudo pacman -S`, descrevem a intenção: instalar um programa e deixar para o gerenciador de tarefas descobrir tudo o que precisa ser baixado.
 
 ## Repositórios
 
@@ -50,21 +48,21 @@ Um repositório é um servidor, ou conjunto de servidores, que hospeda pacotes p
 
 ### Repositórios oficiais
 
-Toda distribuição mantém repositórios oficiais, mantidos pela própria organização por trás dela. Esses repositórios passam por um processo de curadoria: os pacotes são testados, empacotados segundo convenções específicas da distribuição e, em muitos casos, assinados digitalmente antes de ficarem disponíveis. É a fonte mais confiável, mas também a mais conservadora — nem sempre tem a versão mais recente de um software, porque prioriza estabilidade sobre novidade.
+Toda distribuição mantém repositórios oficiais, mantidos pela própria organização por trás dela. Esses repositórios passam por um processo de curadoria: os pacotes são testados, empacotados segundo convenções específicas da distribuição e, em muitos casos, assinados digitalmente antes de ficarem disponíveis. É a fonte mais confiável, mas nem sempre tem a versão mais recente de um software, porque prioriza estabilidade sobre novidade.
 
 ### Repositórios de terceiros
 
 Quando um pacote não está nos repositórios oficiais, ou está em uma versão desatualizada, é comum recorrer a repositórios de terceiros:
 
-- **PPA (Personal Package Archive):** repositórios individuais no Ubuntu, mantidos por desenvolvedores ou equipes de projeto fora da estrutura oficial da distribuição.
+- **PPA:** repositórios individuais no Ubuntu, mantidos por desenvolvedores ou equipes de projeto fora da estrutura oficial da distribuição;
 
-- **EPEL (Extra Packages for Enterprise Linux):** repositório mantido pela comunidade Fedora, com pacotes adicionais para distribuições baseadas em Red Hat Enterprise Linux.
+- **EPEL:** repositório mantido pela comunidade Fedora, com pacotes adicionais para distribuições baseadas em Red Hat Enterprise Linux;
 
-- **COPR:** sistema de repositórios pessoais equivalente ao PPA, mas para o ecossistema Fedora.
+- **COPR:** sistema de repositórios pessoais equivalente ao PPA, mas para o ecossistema Fedora;
 
-- **AUR (Arch User Repository):** repositório mantido pela comunidade Arch Linux, onde usuários compartilham scripts de construção (PKGBUILDs) para software que não está nos repositórios oficiais.
+- **AUR:** repositório mantido pela comunidade Arch Linux, onde usuários compartilham scripts de construção (PKGBUILDs) para software que não está nos repositórios oficiais.
 
-Adicionar um repositório de terceiros expande o que está disponível, mas também expande a superfície de confiança do sistema: o gerenciador passa a instalar pacotes de uma fonte que não passou pela mesma curadoria dos repositórios oficiais. Isso não é necessariamente um problema — muitos PPAs são mantidos pelos próprios desenvolvedores do software —, mas exige mais cautela do usuário sobre o que está habilitando.
+Adicionar um repositório de terceiros expande o que está disponível, mas também expande a superfície de confiança do sistema: o gerenciador passa a instalar pacotes de uma fonte que não passou pela mesma curadoria dos repositórios oficiais. 
 
 ### Mirrors
 
@@ -75,8 +73,6 @@ Os repositórios oficiais raramente ficam em um único servidor. Eles são repli
 O maior valor prático de um gerenciador de pacotes de alto nível está na resolução de dependências. Um programa raramente é autossuficiente: ele depende de bibliotecas compartilhadas, que por sua vez podem depender de outras bibliotecas. Instalar um único pacote pode, na prática, significar instalar uma dezena de outros pacotes que ele exige para funcionar.
 
 O gerenciador constrói uma árvore de dependências antes de iniciar qualquer instalação, verifica o que já está presente no sistema e baixa apenas o que falta. Quando duas dependências exigem versões incompatíveis de um mesmo pacote, ocorre um conflito de dependências, e é papel do gerenciador reportar isso ao usuário em vez de deixar o sistema em um estado inconsistente.
-
-Esse processo é o que torna comandos simples como `apt install pacote` confiáveis: por trás de uma única linha, há uma verificação completa de compatibilidade entre dezenas de componentes.
 
 ## Assinatura e verificação de pacotes
 
@@ -90,7 +86,9 @@ Ao adicionar um repositório de terceiros, é comum que o próprio processo exij
 
 O gerenciador de pacotes mantém, localmente, uma cópia do índice de cada repositório configurado. Essa cópia é o que permite que comandos de busca e verificação de versão respondam rapidamente, sem precisar consultar o servidor remoto a cada operação.
 
-Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (`sudo apt update`, `sudo dnf makecache`, `sudo pacman -Sy`), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar. No caso do APT, é importante notar que o comando `update` atualiza apenas o índice de pacotes disponíveis, e não os programas instalados no sistema. No caso do Pacman, vale uma ressalva: o recomendado é sempre sincronizar e atualizar o sistema juntos (`sudo pacman -Syu`), em vez de rodar `-Sy` isoladamente, para evitar inconsistências entre pacotes — um cuidado específico do Arch Linux que será retomado em mais detalhe em um capítulo futuro.
+Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (`sudo apt update`, `sudo dnf makecache`, `sudo pacman -Sy`), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar.
+
+No caso do APT, é importante notar que o comando `update` atualiza apenas o índice de pacotes disponíveis, e não os programas instalados no sistema. No caso do Pacman, vale uma ressalva: o recomendado é sempre sincronizar e atualizar o sistema juntos (`sudo pacman -Syu`), em vez de rodar `-Sy` isoladamente, para evitar inconsistências entre pacotes.
 
 ## Pacotes binários e pacotes de código-fonte
 
@@ -102,10 +100,10 @@ Compilar a partir do código-fonte permite otimizações específicas para o har
 
 Nos últimos anos, surgiram formatos de pacote que tentam contornar a fragmentação entre distribuições, empacotando o software junto com todas as suas dependências em um único arquivo autocontido:
 
-- **Flatpak:** empacota o aplicativo junto com um runtime compartilhado, isolado do sistema por meio de sandboxing. Mantido por um projeto independente, com foco em aplicações de desktop.
+- **Flatpak:** empacota o aplicativo junto com um runtime compartilhado, isolado do sistema por meio de sandboxing. Mantido por um projeto independente, com foco em aplicações de desktop;
 
-- **Snap:** formato equivalente, mantido pela Canonical, com atualização automática integrada e forte presença no ecossistema Ubuntu.
+- **Snap:** formato equivalente, mantido pela Canonical, com atualização automática integrada e forte presença no ecossistema Ubuntu;
 
-- **AppImage:** o mais simples dos três — um único arquivo executável que não exige instalação nem privilégios administrativos, mas também não compartilha dependências entre diferentes AppImages instalados.
+- **AppImage:** um único arquivo executável que não exige instalação nem privilégios administrativos, mas também não compartilha dependências entre diferentes AppImages instalados.
 
-A vantagem desses formatos é a portabilidade: o mesmo pacote funciona, em teoria, em qualquer distribuição, sem depender do formato ou do repositório nativo dela. A desvantagem é o tamanho — como cada aplicativo carrega suas próprias dependências, o espaço em disco ocupado tende a ser maior do que o de um pacote tradicional que compartilha bibliotecas já instaladas no sistema.
+A vantagem desses formatos é o fato de que o mesmo pacote funciona, em teoria, em qualquer distribuição, sem depender do formato ou do repositório nativo dela. A desvantagem é o tamanho: como ele traz o software e suas próprias dependências, acaba ocupando mais espaço em disco já que não reaproveita o que está instalado no sistema.
