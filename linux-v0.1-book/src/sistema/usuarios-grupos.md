@@ -6,31 +6,33 @@ O Linux é, por natureza, um sistema operacional multiusuário estruturado sob u
 
 A criação de uma nova identidade no sistema pode ser feita por duas abordagens que operam em camadas diferentes do sistema operacional:
 
-- **useradd:** É o utilitário nativo de baixo nível. Ele cria o usuário de forma direta e "crua". O sistema registra a identidade binária, mas não configura um diretório pessoal (/home) ou uma senha inicial de forma automática, exigindo parametrização manual posterior.
+
+**useradd:** é o utilitário nativo de baixo nível. Ele cria o usuário de forma direta e “crua”: o sistema apenas registra a entrada do usuário no arquivo `/etc/passwd`, sem configurar automaticamente um diretório pessoal (`/home`) ou uma senha inicial, exigindo parametrização manual posterior.
 
 ```bash
-useradd <nome-do-usuario>
+useradd 
 ```
 
-- **adduser:** É um script de alto nível muito mais amigável e interativo. Ao ser executado, ele guia o administrador na configuração do perfil, gera automaticamente o diretório de início (/home/nome-do-usuario), copia os arquivos base de ambiente (como .bashrc) e solicita a criação da senha em tempo de execução.
+
+**adduser:** é um script de alto nível muito mais amigável e interativo. Ao ser executado, ele guia o administrador na configuração do perfil, gera automaticamente o diretório de início (`/home/nome-do-usuario`), copia os arquivos base de ambiente (como `.bashrc`) e solicita a criação da senha em tempo de execução.
 
 ```bash
-adduser <nome-do-usuario>
+adduser 
 ```
 
 ## Auditoria e Exclusão de Contas
 
-Para validar se as contas foram criadas corretamente ou para removê-las quando um usuário desliga-se do sistema, utilizamos os seguintes comandos:
+Para validar se as contas foram criadas corretamente ou para removê-las quando um usuário deixa de fazer parte do sistema, utilizamos os seguintes comandos:
 
 ```bash
-# Verifica se o usuário foi registrado no arquivo de grupos do sistema
-cat /etc/group | grep <nome-do-usuario>
+# verifica se o usuário foi registrado no arquivo central de contas do sistema
+cat /etc/passwd | grep 
 
-# Valida a existência do usuário e o estado do hash da sua senha (requer sudo)
-sudo cat /etc/shadow | grep <nome-do-usuario>
+# valida a existência do usuário e o estado do hash da sua senha (requer sudo)
+sudo cat /etc/shadow | grep 
 
-# Remove a conta do usuário do sistema
-userdel <nome-do-usuario>
+# remove a conta do usuário do sistema
+userdel 
 ```
 
 ## Gerenciando Grupos no Linux
@@ -38,18 +40,18 @@ userdel <nome-do-usuario>
 Os grupos funcionam como caixas organizacionais projetadas para simplificar a atribuição de permissões em massa. Em vez de dar acesso a um arquivo para cinquenta usuários individualmente, o administrador cria um grupo, coloca os usuários lá dentro e dá a permissão apenas ao grupo.
 
 ```bash
-# Cria um novo grupo de segurança no sistema (ex: projetos)
+# cria um novo grupo de segurança no sistema (ex: projetos)
 groupadd projetos
 
-# Lista todos os grupos existentes e seus respectivos IDs (GIDs)
+# lista todos os grupos existentes e seus respectivos IDs (GIDs)
 cat /etc/group
 
-# Adiciona um usuário a um grupo secundário (-a de append, -G de Group)
-usermod -aG <nome-do-grupo> <nome-do-usuario>
+# adiciona um usuário a um grupo secundário (-a de append, -G de Group)
+usermod -aG 
 
-# Verifica instantaneamente a quais grupos uma determinada conta pertence
-groups <nome-do-usuario>
+# verifica instantaneamente a quais grupos uma determinada conta pertence
+groups 
 
-# Exclui um grupo do sistema operacional
-groupdel <nome-do-grupo>
+# exclui um grupo do sistema operacional
+groupdel 
 ```

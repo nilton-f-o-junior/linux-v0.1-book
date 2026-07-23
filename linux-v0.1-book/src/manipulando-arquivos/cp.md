@@ -8,18 +8,18 @@ cp [opções] [origem] [destino]
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `origem` | Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas |
-| `destino` | Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele |
-| `-i`, `--interactive` | Pergunta antes de substituir um arquivo existente |
-| `-f`, `--force` | Substitui arquivos existentes sem perguntar |
-| `-r` | Copia arquivos de diretórios e subdiretórios; prefira `-R` |
-| `-R`, `--recursive` | Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos |
-| `-v`, `--verbose` | Exibe os arquivos enquanto são copiados |
-| `-s`, `--symbolic-link` | Cria link simbólico no destino em vez de copiar |
-| `-l`, `--link` | Cria hard link no destino em vez de copiar |
-| `-p`, `--preserve` | Preserva atributos do arquivo (permissões, datas, etc.) |
-| `-u`, `--update` | Copia somente se a origem é mais recente que o destino ou se o destino não existe |
-| `-x` | Não copia arquivos localizados em um sistema de arquivos diferente do de origem |
+| origem | Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas |
+| destino | Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele |
+| -i, --interactive | Pergunta antes de substituir um arquivo existente |
+| -f, --force | Substitui arquivos existentes sem perguntar |
+| -r | Copia arquivos de diretórios e subdiretórios; prefira `-R` |
+| -R, --recursive | Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos |
+| -v, --verbose | Exibe os arquivos enquanto são copiados |
+| -s, --symbolic-link | Cria link simbólico no destino em vez de copiar |
+| -l, --link | Cria hard link no destino em vez de copiar |
+| -p, --preserve | Preserva atributos do arquivo (permissões, datas, etc.) |
+| -u, --update | Copia somente se a origem é mais recente que o destino ou se o destino não existe |
+| -x | Não copia arquivos localizados em um sistema de arquivos diferente do de origem |
 
 **Exemplos**
 

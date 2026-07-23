@@ -8,12 +8,14 @@ mv [opções] [origem] [destino]
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `origem` | Arquivo ou diretório a ser movido ou renomeado |
-| `destino` | Caminho de destino ou novo nome do arquivo/diretório |
-| `-f`, `--force` | Substitui o arquivo de destino sem perguntar |
-| `-i`, `--interactive` | Pergunta antes de substituir (padrão) |
-| `-v`, `--verbose` | Exibe os arquivos enquanto são movidos |
-| `-u`, `--update` | Move somente se a origem é mais recente que o destino ou se o destino não existe |
+| origem | Arquivo ou diretório a ser movido ou renomeado |
+| destino | Caminho de destino ou novo nome do arquivo/diretório |
+| -f, --force | Substitui o arquivo de destino sem perguntar |
+| -i, --interactive | Pergunta antes de substituir um arquivo existente |
+| -v, --verbose | Exibe os arquivos enquanto são movidos |
+| -u, --update | Move somente se a origem é mais recente que o destino ou se o destino não existe |
+
+> Por padrão, o `mv` substitui um arquivo de destino existente sem perguntar. Use `-i` quando quiser uma confirmação antes de sobrescrever.
 
 > Diferente do `cp`, o `mv` apaga o arquivo de origem após a cópia — o resultado é semelhante a recortar e colar.
 

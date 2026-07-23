@@ -3,16 +3,16 @@
 Exibe o conteúdo de um arquivo de forma paginada, permitindo rolar para frente e para trás.
 
 ```bash
-less [opções] [diretório/arquivo]
+less [opções] [arquivo]
 ```
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `diretório/arquivo` | Localização do arquivo a ser visualizado |
-| `-N`, `--LINE-NUMBERS` | Exibe o número de cada linha |
-| `-S`, `--chop-long-lines` | Trunca linhas longas em vez de quebrá-las |
-| `+N` | Inicia a exibição a partir da linha `N` |
-| `zless` | Variante para visualizar arquivos compactados com gzip |
+| arquivo | Localização do arquivo a ser visualizado |
+| -N, --LINE-NUMBERS | Exibe o número de cada linha |
+| -S, --chop-long-lines | Trunca linhas longas em vez de quebrá-las |
+| +N | Inicia a exibição a partir da linha `N` |
+| zless | Variante para visualizar arquivos compactados com gzip |
 
 > Durante a leitura: `espaço` avança uma página, `b` volta uma página, `/texto` busca, `q` encerra.
 > Ao contrário de `more`, o `less` não carrega o arquivo inteiro na memória — ideal para arquivos grandes.

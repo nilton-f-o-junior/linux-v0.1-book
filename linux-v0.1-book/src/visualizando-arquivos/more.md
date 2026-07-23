@@ -8,10 +8,10 @@ more [opções] [diretório/arquivo]
 
 | Argumento / Opção | Descrição |
 |---|---|
-| `diretório/arquivo` | Localização do arquivo a ser visualizado |
-| `-N` | Define o número de linhas exibidas por página |
-| `+N` | Inicia a exibição a partir da linha `N` |
-| `zmore` | Variante para visualizar arquivos compactados com gzip |
+| diretório/arquivo | Localização do arquivo a ser visualizado |
+| -N | Define o número de linhas exibidas por página |
+| +N | Inicia a exibição a partir da linha `N` |
+| zmore | Variante para visualizar arquivos compactados com gzip |
 
 > Durante a leitura: `espaço` avança uma página, `Enter` avança uma linha, `q` encerra.
 > Para navegação bidirecional (rolar para cima), prefira `less`.
