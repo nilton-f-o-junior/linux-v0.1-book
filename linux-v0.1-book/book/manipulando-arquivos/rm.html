@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-7d1ffa46.js";
+            window.path_to_searchindex_js = "../searchindex-b443058c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-a0cfbb35.js"></script>
+        <script src="../toc-37ca00fe.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -184,15 +184,18 @@
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td><code>caminho/arquivo</code></td><td>Localização e nome do arquivo ou diretório a ser apagado</td></tr>
-<tr><td><code>-i</code>, <code>--interactive</code></td><td>Pergunta antes de remover (padrão)</td></tr>
-<tr><td><code>-v</code>, <code>--verbose</code></td><td>Exibe os arquivos enquanto são removidos</td></tr>
-<tr><td><code>-r</code>, <code>--recursive</code></td><td>Remove arquivos em subdiretórios e os próprios subdiretórios</td></tr>
-<tr><td><code>-f</code>, <code>--force</code></td><td>Remove sem perguntar, ignorando arquivos inexistentes</td></tr>
-<tr><td><code>-- arquivo</code></td><td>Remove arquivos cujo nome contém caracteres especiais (<code>*</code>, <code>?</code>, <code>-</code>, etc.)</td></tr>
+<tr><td>caminho/arquivo</td><td>Localização e nome do arquivo ou diretório a ser apagado</td></tr>
+<tr><td>-i, –interactive</td><td>Pergunta antes de remover cada arquivo</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são removidos</td></tr>
+<tr><td>-r, –recursive</td><td>Remove arquivos em subdiretórios e os próprios subdiretórios</td></tr>
+<tr><td>-f, –force</td><td>Remove sem perguntar, ignorando arquivos inexistentes</td></tr>
+<tr><td>–</td><td>Indica o fim das opções da linha de comando; útil para apagar arquivos cujo nome comece com traço (<code>-</code>)</td></tr>
 </tbody>
 </table>
 </div>
+<blockquote>
+<p>Por padrão, o <code>rm</code> apaga os arquivos sem pedir confirmação. Use <code>-i</code> quando quiser que ele pergunte antes de remover.</p>
+</blockquote>
 <blockquote>
 <p><strong>Atenção:</strong> arquivos removidos com <code>rm</code> não vão para a lixeira e não podem ser recuperados.</p>
 </blockquote>
