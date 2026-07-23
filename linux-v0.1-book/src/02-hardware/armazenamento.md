@@ -1,44 +1,34 @@
 # Armazenamento
 
-Antes de ligar o computador, antes de o sistema operacional existir em memória, antes de qualquer processo rodar, há um lugar onde tudo está guardado permanentemente, o dispositivo de armazenamento. É nele que o sistema operacional vive quando o computador está desligado, e é de lá que ele é carregado toda vez que a máquina é iniciada.
-
-## O que é armazenamento?
-
 A memória RAM, vista anteriormente, é rápida mas volátil: perde tudo quando a energia cai. O armazenamento é o oposto. É persistente, os dados ficam gravados mesmo sem energia, e é onde o sistema coloca tudo que precisa sobreviver entre uma sessão e outra: o próprio sistema operacional, os programas instalados, os arquivos do usuário.
 
-Dois tipos dominam esse papel nos computadores modernos.
-
-### SSD - Solid State Drive
+## SSD 
 
 O SSD não tem partes móveis. Armazena dados em chips de memória flash, a mesma tecnologia base usada em celulares e câmeras, mas em versões otimizadas para desempenho e durabilidade.
 
 Sem braços mecânicos, sem pratos girando, o acesso a qualquer ponto do armazenamento é quase instantâneo. Um computador com SSD inicializa o sistema operacional em segundos. Programas abrem antes de o usuário piscar.
 
-- **Vantagens:** velocidade muito superior ao HD, resistente a impactos, silencioso e com menor consumo de energia.
+- **Vantagens:** velocidade muito superior ao HD, resistente a impactos, silencioso e com menor consumo de energia;
 - **Desvantagens:** custo por gigabyte mais alto que o HD, embora essa diferença venha caindo progressivamente nos últimos anos.
-- **Uso típico:** sistema operacional, programas e qualquer dado que se beneficie de acesso rápido.
 
-#### NVMe: SSDs ainda mais rápidos
+### NVMe: SSDs ainda mais rápidos
 
 Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs mais antigos e mais baratos usam a interface SATA, a mesma criada originalmente para os HDs. Ela funciona bem, mas é um gargalo para os chips modernos de memória flash.
 
-Os SSDs NVMe (*Non-Volatile Memory Express*) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s, com os modelos mais recentes, que usam gerações mais novas do PCIe, indo muito além disso. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.
+Os SSDs **NVMe** (*Non-Volatile Memory Express*) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s.
 
-### HD - Hard Disk Drive
-
-O HD é a tecnologia mais antiga ainda em uso comum. Dentro da carcaça metálica há pratos magnéticos girando em alta velocidade, normalmente entre 5.400 e 7.200 rotações por minuto, e um braço mecânico com uma cabeça de leitura e escrita que se move sobre eles para acessar os dados.
+## HD
 
 O HD é mais barato de se produzir e capaz de armazenar grandes volumes de dados, mas é limitado pela velocidade da mecânica. Cada leitura depende de o prato estar na posição certa e de o braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se acumula e se torna perceptível.
 
-- **Vantagens:** custo por gigabyte muito baixo, ideal para armazenar grandes volumes de dados.
+- **Vantagens:** custo por gigabyte muito baixo, ideal para armazenar grandes volumes de dados;
 - **Desvantagens:** mais lento, sensível a impactos físicos (a mecânica interna pode ser danificada) e consome mais energia.
-- **Uso típico:** armazenamento em massa, backups, arquivos que não precisam de acesso rápido.
 
 ### Armazenamento em servidores
 
 #### RAID
 
-Um servidor que guarda dados importantes raramente confia em um único disco. O RAID (*Redundant Array of Independent Disks* ou Conjunto Redundante de Discos Independentes) é uma técnica que combina múltiplos discos para funcionar como uma unidade só. Cada configuração equilibra de forma diferente velocidade, redundância e capacidade útil:
+Um servidor que guarda dados importantes raramente confia em um único disco. O **RAID** (*Redundant Array of Independent Disks*) é uma técnica que combina múltiplos discos para funcionar como uma unidade só. Cada configuração equilibra de forma diferente velocidade, redundância e capacidade útil:
 
 - **RAID 0:** os dados são divididos entre dois ou mais discos, o que aumenta a velocidade de leitura e escrita.
   - Não há redundância, se um disco falhar, todos os dados são perdidos;
@@ -62,18 +52,13 @@ O resultado prático é que um servidor bem configurado pode perder um disco fí
 
 Em ambientes corporativos ou de nuvem, o armazenamento frequentemente não está na mesma máquina que o sistema que o usa. Dois protocolos dominam esse cenário.
 
-- **NAS (*Network Attached Storage* ou Armazenamento Conectado em Rede):** expõe o armazenamento pela rede como se fosse um sistema de arquivos comum: o servidor acessa pastas remotas da mesma forma que acessaria um disco local. É simples de configurar e suficiente para muitos cenários;
+- **NAS (*Network Attached Storage*):** expõe o armazenamento pela rede como se fosse um sistema de arquivos comum: o servidor acessa pastas remotas da mesma forma que acessaria um disco local. É simples de configurar e suficiente para muitos cenários;
  
-- **SAN (*Storage Area Network* ou Rede de Área de Armazenamento):** cria uma rede dedicada exclusivamente ao tráfego de armazenamento, separada da rede comum de dados. O servidor enxerga o armazenamento remoto como se fosse um disco diretamente conectado. É uma solução mais complexa e cara, usada em ambientes que exigem altíssimo desempenho e baixa latência, como bancos de dados críticos e sistemas financeiros.
+- **SAN (*Storage Area Network*):** cria uma rede dedicada exclusivamente ao tráfego de armazenamento, separada da rede comum de dados. O servidor enxerga o armazenamento remoto como se fosse um disco diretamente conectado. É uma solução mais complexa e cara, usada em ambientes que exigem altíssimo desempenho e baixa latência, como bancos de dados críticos e sistemas financeiros.
 
 #### A escala da nuvem
 
 Provedores como AWS, Google Cloud e Azure abstraem toda essa complexidade em serviços gerenciados. O sistema operacional de uma instância de servidor na nuvem geralmente reside em um volume virtual, como o EBS da AWS, que por baixo dos panos é armazenamento em rede com redundância automática, sem que o administrador precise configurar RAID ou gerenciar discos físicos manualmente.
-
-Essa abstração tem impactos práticos diretos:
-
-- **Custo:** menos controle direto sobre o hardware subjacente;
-- **Vantagem:** um volume pode ser ampliado, movido ou replicado para outra região geográfica com poucos comandos, algo impraticável com hardware físico.
 
 ### Particionamento de disco
 
@@ -87,7 +72,7 @@ A razão mais imediata é separação de responsabilidades. Em um servidor Linux
 
 Em desktops com *dual boot* (dois sistemas operacionais no mesmo computador), o particionamento é o que permite que Windows e Linux coexistam sem interferência, cada sistema vive em sua própria região do disco e não enxerga o território do outro.
 
-Além das partições de sistema operacional e dados, existem partições com propósitos especiais, como a partição *swap*, usada pelo Linux como extensão da memória RAM em momentos de aperto. Esse e outros tipos de partição serão vistos em detalhe em capítulos futuros.
+Além das partições de sistema operacional e dados, existem partições com propósitos especiais, como a partição *swap*, usada pelo Linux como extensão da memória RAM em momentos de aperto. 
 
 #### Sistemas de arquivos
 

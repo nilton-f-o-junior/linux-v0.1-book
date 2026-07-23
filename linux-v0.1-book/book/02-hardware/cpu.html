@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
+            window.path_to_searchindex_js = "../searchindex-7d1ffa46.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-a0cfbb35.js"></script>
@@ -175,9 +175,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="processador-cpu"><a class="header" href="#processador-cpu">Processador (CPU)</a></h1>
-<p>Se há um componente que define o que um computador é capaz de fazer, é o processador. Tudo o que acontece dentro de uma máquina (abrir um programa, compilar código, renderizar uma imagem, executar um jogo) passa, em algum momento, pelo processador. Ele não armazena dados permanentemente como o SSD, nem exibe resultados como o monitor: ele calcula. É o componente que transforma instruções em resultados.</p>
-<h2 id="o-que-é-a-cpu"><a class="header" href="#o-que-é-a-cpu">O que é a CPU?</a></h2>
-<p>CPU significa <em>Central Processing Unit</em>, Unidade Central de Processamento. É um chip de silício, fabricado com transistores em escala nanométrica, capaz de executar bilhões de operações por segundo. Cada operação é simples: somar dois números, comparar valores, mover dados de um lugar para outro. A complexidade emerge da velocidade e da quantidade: bilhões dessas operações simples por segundo produzem tudo o que se vê na tela.</p>
+<p>CPU significa Unidade Central de Processamento. É um chip de silício, fabricado com transistores em escala nanométrica, capaz de executar bilhões de operações por segundo. Cada operação é simples: somar dois números, comparar valores, mover dados de um lugar para outro. A complexidade emerge da velocidade e da quantidade: bilhões dessas operações simples por segundo produzem tudo o que se vê na tela.</p>
 <p>O processador trabalha em ciclos. A cada ciclo, ele busca uma instrução na memória, decodifica o que ela significa, executa a operação correspondente e grava o resultado. Esse fluxo (buscar, decodificar, executar, gravar) é repetido incessantemente, bilhões de vezes por segundo em cada núcleo, a uma frequência medida em gigahertz.</p>
 <h2 id="frequência-e-núcleos"><a class="header" href="#frequência-e-núcleos">Frequência e núcleos</a></h2>
 <p>Dois parâmetros aparecem sempre nas especificações de qualquer processador: a frequência de clock e o número de núcleos.</p>
@@ -204,7 +202,7 @@
 </ul>
 <p>A eficiência do cache depende da localidade dos dados: programas que acessam os mesmos dados repetidamente ou em sequência se beneficiam muito mais do que aqueles com acesso aleatório a grandes volumes.</p>
 <h2 id="tdp-e-consumo-de-energia"><a class="header" href="#tdp-e-consumo-de-energia">TDP e consumo de energia</a></h2>
-<p>Todo processador tem um TDP (<em>Thermal Design Power</em>), que expressa quanto calor o componente dissipa sob carga típica, medido em watts. É o parâmetro que orienta a escolha do sistema de resfriamento: um processador com TDP de 65 W precisa de um cooler diferente de um com TDP de 125 W.</p>
+<p>Todo processador tem um <strong>TDP</strong> (<em>Thermal Design Power</em>), que expressa quanto calor o componente dissipa sob carga típica, medido em watts. É o parâmetro que orienta a escolha do sistema de resfriamento: um processador com TDP de 65 W precisa de um cooler diferente de um com TDP de 125 W.</p>
 <p>Processadores para desktops têm TDPs mais altos porque operam conectados à tomada e com espaço para dissipadores maiores. Processadores para notebooks precisam operar com TDPs muito menores, frequentemente entre 15 W e 45 W, para preservar a bateria e caber em designs finos. Essa restrição energética é o que define, em grande parte, a diferença de desempenho entre um processador de notebook e o equivalente para desktop da mesma geração.</p>
 <h2 id="fabricantes-e-arquiteturas"><a class="header" href="#fabricantes-e-arquiteturas">Fabricantes e arquiteturas</a></h2>
 <p>Vale entender primeiro uma distinção importante: <strong>arquitetura</strong> e <strong>fabricante</strong> não são a mesma coisa. A arquitetura define o conjunto de instruções que o processador entende, isto é, a linguagem que ele fala. O fabricante é quem projeta e produz o chip. Dois processadores de fabricantes diferentes podem compartilhar a mesma arquitetura; dois processadores do mesmo fabricante podem ter arquiteturas distintas.</p>
@@ -221,9 +219,6 @@
 <li><strong>Core i9:</strong> topo de linha para desktops, <em>workstations</em> e notebooks premium.</li>
 </ul>
 </li>
-</ul>
-<p>As gerações recentes adotaram o design híbrido com núcleos de desempenho e núcleos de eficiência no mesmo chip.</p>
-<ul>
 <li>
 <p><strong>AMD:</strong> também fabrica processadores x86 e recuperou competitividade significativa a partir de 2017 com a arquitetura Zen. Suas linhas principais são:</p>
 <ul>
@@ -247,7 +242,7 @@
 </li>
 </ul>
 <h3 id="processadores-para-servidores"><a class="header" href="#processadores-para-servidores">Processadores para servidores</a></h3>
-<p>Servidores têm exigências diferentes de desktops e notebooks. Não se trata apenas de mais desempenho: servidores precisam operar continuamente por anos, lidar com dezenas ou centenas de tarefas simultâneas, suportar grandes volumes de memória RAM e, em muitos casos, funcionar em pares para garantir disponibilidade mesmo em caso de falha de hardware. Os processadores voltados a esse mercado são projetados com essas prioridades em mente, e diferem dos chips para uso pessoal em vários aspectos além da contagem de núcleos.</p>
+<p>Servidores têm exigências diferentes de desktops e notebooks. Não se trata apenas de mais desempenho: servidores precisam operar continuamente por anos, lidar com dezenas ou centenas de tarefas simultâneas, suportar grandes volumes de memória RAM e, em muitos casos, funcionar em pares para garantir disponibilidade mesmo em caso de falha de hardware.</p>
 <p>As linhas específicas para servidores dos principais fabricantes são:</p>
 <ul>
 <li>
@@ -262,17 +257,6 @@
 </ul>
 <h2 id="tempo-de-vida-de-um-processador"><a class="header" href="#tempo-de-vida-de-um-processador">Tempo de vida de um processador</a></h2>
 <p>Processadores são um dos componentes mais duráveis de um computador. Diferente de discos mecânicos, que têm partes em movimento sujeitas a desgaste, ou de baterias, que degradam quimicamente com o uso, um processador não tem partes móveis e não se desgasta da mesma forma. Na prática, é comum ver Xeons de dez ou quinze anos rodando 24 horas por dia, sete dias por semana, sem falhas, e isso não é exceção, é o esperado para esse segmento.</p>
-<h3 id="longevidade-física"><a class="header" href="#longevidade-física">Longevidade física</a></h3>
-<p>O que efetivamente limita a vida útil de um processador no nível do hardware são dois fenômenos:</p>
-<ul>
-<li>
-<p><strong>Eletromigração:</strong> ao longo de anos de uso intenso, os átomos dos condutores metálicos dentro do chip migram lentamente sob o efeito da corrente elétrica. Em escala de tempo suficientemente longa, isso pode criar falhas nos circuitos;</p>
-</li>
-<li>
-<p><strong>Calor acumulado:</strong> o maior inimigo real de qualquer componente eletrônico é o calor constante e elevado. Um processador que opera próximo ao limite de temperatura por anos acumula estresse térmico nos materiais.</p>
-</li>
-</ul>
-<p>Operando dentro das especificações, com resfriamento adequado e tensões estáveis fornecidas por uma boa fonte de alimentação, um processador pode durar décadas. Falhas prematuras quase sempre têm causa identificável: superaquecimento, sobrecargas de tensão ou defeitos de fabricação que se manifestam nos primeiros meses de uso.</p>
 <h3 id="obsolescência-de-software"><a class="header" href="#obsolescência-de-software">Obsolescência de software</a></h3>
 <p>A durabilidade física, porém, não é o único limite. Um Xeon de 2010 pode estar eletricamente perfeito hoje e ainda assim ser inutilizável para certas tarefas, não porque o hardware falhou, mas porque o software parou de suportá-lo.</p>
 <p>Esse processo acontece em camadas:</p>
@@ -289,17 +273,16 @@
 </ul>
 <h3 id="o-caso-dos-xeons-antigos"><a class="header" href="#o-caso-dos-xeons-antigos">O caso dos Xeons antigos</a></h3>
 <p>O uso de Xeons antigos em servidores caseiros e pequenas infraestruturas é um fenômeno real e economicamente racional. Um Xeon E5 de 2013, por exemplo, pode ser encontrado por poucos dólares no mercado de usados, oferece múltiplos núcleos, suporte a grandes volumes de ECC RAM e funciona perfeitamente com Linux atual para tarefas como armazenamento em rede, virtualização leve e serviços de homelabs.</p>
-<p>O que esses usuários abrem mão é previsível: eficiência energética muito inferior aos processadores modernos, ausência das instruções mais recentes e nenhuma garantia de correções de segurança. Para uma máquina isolada rodando serviços internos, esses trade-offs frequentemente são aceitáveis. Para infraestrutura exposta à internet com dados sensíveis, o risco de vulnerabilidades sem correção é um fator que precisa ser avaliado com cuidado.</p>
 <h2 id="processadores-e-sistemas-operacionais"><a class="header" href="#processadores-e-sistemas-operacionais">Processadores e sistemas operacionais</a></h2>
 <p>A relação entre processador e sistema operacional vai além de simplesmente “ligar e funcionar”. O sistema operacional precisa ser construído para entender a linguagem do processador, e quando essa correspondência falha ou é imperfeita, os problemas aparecem em camadas diferentes.</p>
 <h3 id="compatibilidade-de-arquitetura"><a class="header" href="#compatibilidade-de-arquitetura">Compatibilidade de arquitetura</a></h3>
-<p>Um sistema operacional é um software como qualquer outro: precisa ser compilado para a arquitetura do processador que vai executá-lo. Um sistema compilado para x86 não roda nativamente em ARM sem emulação ou tradução, e vice-versa. Isso tem implicações práticas diretas dependendo do sistema:</p>
+<p>Um sistema operacional é um software como qualquer outro: precisa ser compilado para a arquitetura do processador que vai executá-lo.</p>
 <ul>
 <li>
 <p><strong>Linux:</strong> por ser open source, o kernel Linux é compilado para dezenas de arquiteturas diferentes. Rodar Linux em ARM, x86, RISC-V ou outros processadores é uma questão de usar a versão correta da distribuição. Essa flexibilidade é uma das razões pelas quais o Linux domina servidores ARM e dispositivos embarcados;</p>
 </li>
 <li>
-<p><strong>Windows:</strong> historicamente exclusivo do x86, o Windows on ARM existe e funciona em processadores como o Qualcomm Snapdragon. A Microsoft desenvolveu uma camada de tradução que permite rodar aplicativos x86 em hardware ARM, mas com custo de desempenho variável. A compatibilidade melhorou ao longo dos anos, mas ainda não é total para todos os softwares;</p>
+<p><strong>Windows:</strong> historicamente exclusivo do x86, o Windows em ARM existe e funciona em processadores como o Qualcomm Snapdragon. A Microsoft desenvolveu uma camada de tradução que permite rodar aplicativos x86 em hardware ARM, mas com custo de desempenho variável.</p>
 </li>
 <li>
 <p><strong>macOS:</strong> até 2020, rodava exclusivamente em x86 (Intel). Com a transição para o Apple Silicon, a Apple desenvolveu o Rosetta 2, uma camada de tradução que converte código x86 para ARM em tempo real. A transição foi tecnicamente bem-sucedida, mas aplicativos não recompilados nativamente para ARM rodam com desempenho levemente inferior.</p>
@@ -309,39 +292,23 @@
 <p>O driver é o software que permite ao sistema operacional conversar com um componente de hardware. Processadores muito novos, ou plataformas de nicho, às vezes chegam ao mercado antes de os sistemas operacionais terem suporte completo.</p>
 <p>No Linux, esse fenômeno é mais visível. O suporte a novos processadores e chipsets depende de contribuições ao kernel, que seguem um ciclo de lançamento próprio. Um processador lançado hoje pode ter suporte completo no kernel apenas meses depois. Distribuições que seguem o kernel de perto, como o Arch Linux ou o Fedora, tendem a receber esse suporte antes de distribuições mais conservadoras, como o Debian estável.</p>
 <p>No Windows, a Microsoft e os fabricantes de processadores costumam coordenar o lançamento de drivers com o lançamento do hardware, tornando o processo mais transparente para o usuário final. O problema aparece mais em hardware corporativo antigo ou em processadores de nicho sem suporte ativo do fabricante.</p>
-<h3 id="problemas-reais-e-conhecidos"><a class="header" href="#problemas-reais-e-conhecidos">Problemas reais e conhecidos</a></h3>
-<p>Alguns problemas entre processadores e sistemas operacionais são bem documentados e vale conhecer:</p>
-<ul>
-<li>
-<p><strong>Vulnerabilidades de hardware e mitigações:</strong> as vulnerabilidades Spectre e Meltdown, descobertas em 2018, afetaram praticamente todos os processadores x86 modernos da Intel e AMD. As correções foram aplicadas via atualizações do sistema operacional, mas introduziram perda de desempenho mensurável em certas operações, especialmente em servidores com cargas de trabalho intensas em I/O. O impacto variou conforme o processador e o sistema operacional, mas foi um lembrete de que falhas de hardware são corrigidas em software, sempre com custo;</p>
-</li>
-<li>
-<p><strong>Linux em processadores Intel muito novos:</strong> lançamentos recentes de arquiteturas Intel chegaram ao mercado com suporte incompleto no kernel Linux para funcionalidades específicas, como gerenciamento de energia e gráficos integrados. O resultado prático é que instalar uma distribuição Linux com kernel desatualizado em hardware novo pode resultar em bateria com autonomia menor, aquecimento excessivo ou recursos que simplesmente não funcionam;</p>
-</li>
-<li>
-<p><strong>Windows on ARM e compatibilidade de software:</strong> apesar da camada de tradução, alguns softwares com drivers de kernel ou proteções antitrapaça em jogos não funcionam corretamente em Windows on ARM. Jogos com sistemas anti-cheat que operam em nível de kernel são um exemplo recorrente de incompatibilidade;</p>
-</li>
-<li>
-<p><strong>Processadores AMD e Linux:</strong> historicamente, alguns chipsets AMD tiveram suporte mais lento no kernel Linux do que os equivalentes Intel, especialmente em funcionalidades de gerenciamento de energia. Essa diferença diminuiu bastante nos últimos anos, mas ainda aparece em lançamentos muito recentes.</p>
-</li>
-</ul>
 <h2 id="o-soquete-e-a-compatibilidade-com-a-placa-mãe"><a class="header" href="#o-soquete-e-a-compatibilidade-com-a-placa-mãe">O soquete e a compatibilidade com a placa-mãe</a></h2>
-<p>Além da compatibilidade com software, o processador precisa ser fisicamente compatível com a placa-mãe. Ele não se encaixa em qualquer modelo: precisa de um soquete compatível, ou seja, um conector físico com centenas ou milhares de pinos e contatos, projetado especificamente para aquela família de processadores. Soquetes de fabricantes diferentes são fisicamente incompatíveis entre si: um processador AMD não cabe em uma placa Intel, e vice-versa. Isso não é apenas uma questão de formato: a disposição elétrica dos pinos também é diferente.</p>
+<p>Além da compatibilidade com software, o processador precisa ser fisicamente compatível com a placa-mãe. Soquetes de fabricantes diferentes são fisicamente incompatíveis entre si: um processador AMD não cabe em uma placa Intel, e vice-versa.</p>
 <h3 id="o-que-define-a-compatibilidade"><a class="header" href="#o-que-define-a-compatibilidade">O que define a compatibilidade</a></h3>
 <p>Dois fatores determinam se um processador funciona em uma placa-mãe:</p>
 <ul>
 <li>
-<p><strong>O soquete físico:</strong> precisa ser idêntico. Os soquetes atuais mais comuns são o LGA1700 e o LGA1851 para processadores Intel, e o AM4 e o AM5 para processadores AMD. Tentar encaixar um processador no soquete errado é impossível sem força, e forçar danifica ambos;</p>
+<p><strong>Soquete físico:</strong> precisa ser idêntico. Tentar encaixar um processador no soquete errado é impossível sem força, e forçar danifica ambos;</p>
 </li>
 <li>
-<p><strong>O chipset da placa-mãe:</strong> mesmo com o soquete correto, nem toda placa suporta todos os processadores daquele soquete. O chipset é o conjunto de circuitos da placa que gerencia a comunicação entre os componentes, e cada chipset tem uma lista oficial de processadores suportados, chamada QVL (<em>Qualified Vendor List</em>). Um processador lançado depois da placa pode não constar nessa lista sem uma atualização de firmware.</p>
+<p><strong>Chipset da placa-mãe:</strong> mesmo com o soquete correto, nem toda placa suporta todos os processadores daquele soquete e cada chipset tem uma lista oficial de processadores suportados..</p>
 </li>
 </ul>
 <h3 id="compatibilidade-entre-gerações"><a class="header" href="#compatibilidade-entre-gerações">Compatibilidade entre gerações</a></h3>
 <p>A política de compatibilidade entre gerações varia bastante entre os fabricantes:</p>
 <ul>
 <li>
-<p><strong>AMD:</strong> manteve o soquete AM4 por cinco anos e múltiplas gerações de processadores Ryzen, do Ryzen 1000 ao Ryzen 5000. Isso significou que era possível trocar um processador de geração mais antiga por um mais novo na mesma placa, com ou sem atualização de firmware, dependendo do chipset. O AM5, lançado em 2022, iniciou um novo ciclo com a mesma promessa de longevidade;</p>
+<p><strong>AMD:</strong> manteve o soquete AM4 por cinco anos e múltiplas gerações de processadores Ryzen, do Ryzen 1000 ao Ryzen 5000. Isso significou que era possível trocar um processador de geração mais antiga por um mais novo na mesma placa, com ou sem atualização de firmware, dependendo do chipset.</p>
 </li>
 <li>
 <p><strong>Intel:</strong> historicamente troca de soquete com mais frequência, às vezes a cada uma ou duas gerações. Isso significa que trocar de processador Intel frequentemente implica trocar também a placa-mãe.</p>
@@ -349,7 +316,6 @@
 </ul>
 <h3 id="a-armadilha-do-firmware"><a class="header" href="#a-armadilha-do-firmware">A armadilha do firmware</a></h3>
 <p>Mesmo quando o soquete é compatível, há um detalhe que pega muitos usuários de surpresa: ao combinar uma placa-mãe mais antiga com um processador mais novo, o firmware da placa pode precisar de atualização para reconhecer o novo chip. Uma placa com soquete AM5, por exemplo, pode não inicializar com um Ryzen de geração mais recente se o firmware estiver desatualizado.</p>
-<p>O problema é que atualizar o firmware normalmente exige que o computador já esteja funcionando, o que cria um impasse quando o único processador disponível é justamente o que a placa ainda não reconhece. Algumas placas-mãe oferecem um recurso chamado BIOS Flashback, que permite atualizar o firmware com apenas um pendrive e energia, sem precisar de processador ou memória instalados. É um recurso valioso em montagens novas que combinam placa mais antiga com processador mais recente.</p>
 
                     </main>
 

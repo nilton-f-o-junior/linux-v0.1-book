@@ -2,27 +2,25 @@
 
 Quando você abre um navegador, um editor de texto e um player de música ao mesmo tempo, há algo no computador equilibrando tudo isso sem que você precise pensar no assunto. Esse algo é a memória RAM.
 
-RAM significa *Random Access Memory* (memória de acesso aleatório). O nome descreve sua característica mais importante: qualquer posição de memória pode ser lida ou escrita diretamente, em tempo constante, sem precisar percorrer o conteúdo do início até chegar ao dado desejado, como acontece em uma fita magnética.
+RAM significa memória de acesso aleatório. O nome descreve sua característica mais importante: qualquer posição de memória pode ser lida ou escrita diretamente, em tempo constante, sem precisar percorrer o conteúdo do início até chegar ao dado desejado, como acontece em uma fita magnética.
 
 ## O que ela faz
 
 A RAM funciona como a mesa de trabalho do computador. O armazenamento, seja um SSD ou HD, é onde os dados ficam guardados permanentemente, como arquivos em uma gaveta. Mas para trabalhar com eles, o sistema operacional os traz para a RAM, onde o processador pode acessá-los com velocidade muito maior.
 
-A diferença de velocidade é significativa. SSDs modernos podem ler dados a vários GB/s e a RAM opera na faixa de 40 a 80 GB/s. O processador, por sua vez, usa memórias internas ainda mais rápidas, chamadas caches, porém com capacidade muito pequena, medida em megabytes. A RAM vive nesse meio-termo: rápida o suficiente para não travar o processador, grande o suficiente para manter vários programas abertos simultaneamente.
-
 ## Volátil por natureza
 
-A característica que define a RAM é sua volatilidade, ela perde todo o conteúdo quando a energia é cortada. Não é uma limitação acidental, é consequência direta de como ela é construída. Cada bit é armazenado como uma carga elétrica em um capacitor minúsculo. Sem corrente elétrica contínua, essa carga se dissipa e a informação desaparece. A RAM dos computadores é do tipo dinâmica, conhecida como DRAM, justamente por precisar ser constantemente atualizada para manter os dados.
+A característica que define a RAM é sua volatilidade, ela perde todo o conteúdo quando a energia é cortada. Não é uma limitação acidental, é consequência direta de como ela é construída. Cada bit é armazenado como uma carga elétrica em um capacitor minúsculo. Sem corrente elétrica contínua, essa carga se dissipa e a informação desaparece.
 
 É por isso que ao desligar o computador, o que estava aberto some, e ao ligá-lo novamente, o sistema operacional precisa ser carregado do armazenamento de volta para a memória.
 
 ## DDR: gerações e velocidade
 
-Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão DDR (*Double Data Rate*), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência. A performance final também é influenciada pela forma como os módulos são instalados (como no uso de *Dual Channel*), ampliando a velocidade de transferência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.
+Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão **DDR** (*Double Data Rate*), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência.
 
-As gerações mais relevantes hoje são a DDR4 e a DDR5. A DDR4 dominou os computadores da segunda metade da década de 2010 e ainda é comum. A DDR5, lançada em 2021, oferece largura de banda substancialmente maior e suporte a capacidades por módulo muito mais altas, mas exige plataformas mais recentes.
+A performance final também é influenciada pela forma como os módulos são instalados (como no uso de *Dual Channel*), ampliando a velocidade de transferência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.
 
-Em dispositivos móveis, a RAM segue padrões próprios como LPDDR (*Low Power DDR*), otimizados para consumo de energia reduzido, essencial quando a bateria é o único recurso disponível.
+Em dispositivos móveis, a RAM segue padrões próprios como **LPDDR** (*Low Power DDR*), otimizados para consumo de energia reduzido, essencial quando a bateria é o único recurso disponível.
 
 ## Quanto é suficiente?
 
@@ -44,9 +42,9 @@ O *Dual Channel* é uma tecnologia que permite ao processador comunicar-se com d
 
 Para que o *Dual Channel* funcione, não basta apenas ter dois pentes de memória; é preciso seguir algumas regras básicas:
 
-- **Módulos Idênticos:** O ideal é utilizar módulos de mesma capacidade, frequência e latência. Embora sistemas modernos consigam operar com memórias diferentes (em um modo chamado *Flex Mode*), a estabilidade e o desempenho máximo são alcançados com pares idênticos.
-- **Posicionamento nos Slots:** Em placas-mãe com quatro slots, os módulos geralmente não devem ser colocados lado a lado. Eles devem ser instalados em slots alternados (geralmente slots 2 e 4, ou 1 e 3), conforme indicado no manual da placa-mãe, para que cada módulo pertença a um canal diferente.
-- **Quantidade de Módulos:** O *Dual Channel* requer pares. Se você instalar três módulos, por exemplo, dois operarão em *Dual Channel* e o terceiro operará em *Single Channel*, o que pode gerar inconsistências de performance.
+- **Módulos Idênticos:** o ideal é utilizar módulos de mesma capacidade, frequência e latência;
+- **Posicionamento nos Slots:** em placas-mãe com quatro slots, eles devem ser instalados em slots alternados;
+- **Quantidade de Módulos:** requer pares, se você instalar três módulos, por exemplo, dois operarão em *dual channel* e o terceiro operará em *single channel*.
 
 ## Memória virtual e swap
 

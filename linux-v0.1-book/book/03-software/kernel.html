@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
+            window.path_to_searchindex_js = "../searchindex-7d1ffa46.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-a0cfbb35.js"></script>
@@ -175,42 +175,65 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="kernel"><a class="header" href="#kernel">Kernel</a></h1>
-<p>Se o processador executa instruções e a memória guarda dados, o kernel é o que decide quem tem permissão para usar esses recursos, quando e em que medida. Ele não executa a lógica dos programas do usuário nem armazena um arquivo por conta própria. Ele arbitra. É a camada de software que fica entre o hardware bruto e tudo o mais que roda em um computador, o núcleo que transforma um conjunto de componentes eletrônicos em um sistema que pode executar múltiplos programas ao mesmo tempo, de forma segura e organizada.</p>
-<h2 id="o-que-é-o-kernel"><a class="header" href="#o-que-é-o-kernel">O que é o kernel?</a></h2>
-<p>O kernel é a parte central do sistema operacional, carregada na memória assim que o computador liga e mantida em execução até o desligamento. Ele é o único software com acesso irrestrito ao hardware: processador, memória RAM, discos, placas de rede, periféricos. Todo programa que roda no sistema — do navegador ao editor de texto — depende do kernel para fazer qualquer coisa que envolva hardware, desde ler um arquivo até desenhar um pixel na tela.</p>
+<p>O kernel é a parte central do sistema operacional, carregada na memória assim que o computador liga e mantida em execução até o desligamento. Ele é o único software com acesso irrestrito ao hardware: processador, memória RAM, discos, placas de rede, periféricos e todos os programas que rodam no sistema.</p>
 <p>Essa centralização não é acidental. Se cada programa pudesse acessar o hardware diretamente, dois programas poderiam tentar escrever no mesmo endereço de memória ao mesmo tempo, ou um programa mal escrito poderia travar a máquina inteira. O kernel existe para impedir exatamente isso: ele intermedeia o acesso, garante que cada programa opere isolado dos demais, e distribui os recursos físicos entre todos que precisam deles.</p>
 <h2 id="kernel-space-e-user-space"><a class="header" href="#kernel-space-e-user-space">Kernel space e user space</a></h2>
 <p>Todo sistema operacional moderno divide a execução em dois domínios com privilégios diferentes: o <em>kernel space</em> e o <em>user space</em>.</p>
-<p>No <em>kernel space</em> roda o próprio kernel, com acesso completo ao hardware e à memória do sistema. É onde vivem o escalonador de processos, o gerenciador de memória e os drivers. No <em>user space</em> rodam os programas comuns: navegadores, jogos, aplicativos de escritório. Um programa em <em>user space</em> não pode acessar diretamente o disco, a rede ou a memória de outro processo — ele precisa pedir ao kernel, por meio de uma <em>syscall</em>, que faça isso em seu nome.</p>
-<p>Essa separação é imposta pelo próprio processador, que oferece níveis de privilégio distintos em hardware — na arquitetura x86, por exemplo, são os chamados <em>rings</em> de proteção. Outras arquiteturas, como a ARM, implementam o mesmo princípio com outro nome e outra organização interna, mas o efeito é o mesmo: um programa em <em>user space</em> simplesmente não tem instruções disponíveis para acessar certas regiões de memória ou certas portas de hardware. Só o kernel, rodando no nível mais privilegiado, tem essa permissão.</p>
+<ul>
+<li>
+<p><strong>kernel space:</strong> roda o próprio kernel, com acesso completo ao hardware e à memória do sistema. É onde vivem o escalonador de processos, o gerenciador de memória e os drivers.</p>
+</li>
+<li>
+<p><strong>user space:</strong> rodam os programas comuns, sendo eles: navegadores, jogos, aplicativos no geral. Um programa em <em>user space</em> não pode acessar diretamente o disco, a rede ou a memória de outro processo.</p>
+</li>
+</ul>
 <h2 id="tipos-de-kernel"><a class="header" href="#tipos-de-kernel">Tipos de kernel</a></h2>
 <p>Nem todo kernel organiza suas funções da mesma forma. A diferença está em quanto do sistema roda dentro do próprio kernel, com acesso total ao hardware, e quanto roda fora dele, isolado como qualquer outro programa.</p>
 <h3 id="monolítico"><a class="header" href="#monolítico">Monolítico</a></h3>
-<p>No modelo monolítico, praticamente todo o sistema operacional — escalonador, gerenciador de memória, sistema de arquivos, drivers — roda dentro do kernel, em <em>kernel space</em>. É o modelo usado pelo Linux e, historicamente, pela maioria dos Unix. A vantagem é desempenho: como tudo está no mesmo espaço de memória, a comunicação entre as partes é direta, sem a sobrecarga de trocar de contexto entre domínios de privilégio. A desvantagem é que um erro em um driver mal escrito pode derrubar o sistema inteiro, já que ele roda com os mesmos privilégios do restante do kernel. Embora rígido em sua concepção original, esse modelo evoluiu em kernels modernos para permitir a inclusão de novos componentes sem a necessidade de recompilar todo o sistema.</p>
+<p>Praticamente tudo roda dentro do próprio kernel (<em>kernel space</em>).</p>
+<ul>
+<li>
+<p><strong>Vantagem:</strong> como tudo está no mesmo espaço de memória, a comunicação entre as partes é direta, sem a sobrecarga de trocar contexto entre domínios de privilégio, o que garante um desempenho muito rápido;</p>
+</li>
+<li>
+<p><strong>Desvantagem:</strong> um erro em um driver mal escrito pode derrubar o sistema inteiro, já que ele roda com os mesmos privilégios do restante do kernel.</p>
+</li>
+</ul>
 <h3 id="microkernel"><a class="header" href="#microkernel">Microkernel</a></h3>
-<p>No modelo microkernel, o kernel propriamente dito faz o mínimo possível: comunicação entre processos, escalonamento básico e gerenciamento de memória. Drivers, sistemas de arquivos e outros serviços rodam em <em>user space</em>, como processos isolados. O QNX e o MINIX seguem essa filosofia. A vantagem é isolamento: se um driver falha, ele pode ser reiniciado sem derrubar o sistema. A desvantagem é desempenho — cada operação que envolveria uma chamada direta em um kernel monolítico agora exige comunicação entre processos, o que tem custo.</p>
+<p>No modelo microkernel, o kernel propriamente dito faz o mínimo possível: comunicação entre processos, escalonamento básico e gerenciamento de memória. Os demais serviços (como drivers e sistemas de arquivos) rodam no espaço do usuário (user space).</p>
+<ul>
+<li>
+<p><strong>Vantagem:</strong> se um driver falha, ele pode ser reiniciado sem derrubar o sistema, pois continua isolado do núcleo;</p>
+</li>
+<li>
+<p><strong>Desvantagem:</strong> cada operação que exige comunicação entre componentes precisa passar pelo espaço do usuário e voltar, gerando uma troca constante de contexto que impacta o desempenho.</p>
+</li>
+</ul>
 <h3 id="híbrido"><a class="header" href="#híbrido">Híbrido</a></h3>
-<p>O modelo híbrido tenta equilibrar os dois extremos. Mantém no <em>kernel space</em> os componentes mais sensíveis a desempenho, mas isola em <em>user space</em> partes que se beneficiam de maior segurança. O Windows NT e o macOS (baseado no XNU) seguem essa abordagem, cada um com seu próprio equilíbrio entre o que fica dentro e o que fica fora do núcleo.</p>
-<p>Para o usuário final, a escolha de qual sistema operacional usar raramente passa pela arquitetura do kernel em si — mas ela explica boa parte das diferenças de comportamento entre sistemas quando um driver falha ou quando o desempenho bruto é comparado.</p>
+<p>O modelo híbrido tenta equilibrar os dois extremos. Ele mantém no kernel space os componentes mais sensíveis para garantir desempenho, mas isola em user space partes que se beneficiam de maior estabilidade e segurança (usado por sistemas como o Windows e o macOS).</p>
+<ul>
+<li>
+<p><strong>Vantagem:</strong> oferece um bom equilíbrio entre a velocidade do modelo monolítico e a segurança do microkernel, permitindo que o sistema seja flexível sem perder tanta performance;</p>
+</li>
+<li>
+<p><strong>Desvantagem:</strong> a arquitetura é mais complexa de projetar e manter, e ainda pode cair por falhas em serviços críticos que continuam rodando no kernel space.</p>
+</li>
+</ul>
+<h3 id="monolítico-com-módulos"><a class="header" href="#monolítico-com-módulos">Monolítico com módulos</a></h3>
+<p>O linux, segue o modelo monolítico, mas permite carregar e remover módulos dinamicamente sem reiniciar o sistema. Por exemplo, existe um módulo (<code>.ko</code>) e só é carregado quando o hardware correspondente é detectado. Isso soma parte da flexibilidade de um microkernel ao desempenho do modelo monolítico.</p>
+<p>Para o usuário final, a escolha de qual sistema operacional usar raramente passa pela arquitetura do kernel em si. No entanto, entender essa estrutura explica boa parte das diferenças de comportamento entre os sistemas quando um driver falha ou quando o desempenho bruto é comparado.</p>
 <h2 id="funções-principais-do-kernel"><a class="header" href="#funções-principais-do-kernel">Funções principais do kernel</a></h2>
-<p>O que um kernel faz, independentemente da arquitetura escolhida, se resume a um conjunto de responsabilidades que todo sistema operacional precisa cobrir.</p>
 <h3 id="gerenciamento-de-processos"><a class="header" href="#gerenciamento-de-processos">Gerenciamento de processos</a></h3>
-<p>O kernel cria, agenda e encerra processos. Cada programa em execução é representado internamente como um processo, com sua própria região de memória, seus próprios arquivos abertos e seu próprio estado de execução. Como o processador físico só executa uma instrução por núcleo por vez, é o kernel quem decide qual processo roda em qual instante — uma função chamada de escalonamento, assunto que será aprofundado em um capítulo futuro sobre gerenciamento de processos. Ao alternar entre esses processos em velocidades altíssimas, o kernel cria a ilusão de que múltiplos programas estão rodando simultaneamente.</p>
+<p>O kernel cria, agenda e encerra processos. Cada programa em execução é representado internamente como um processo, com sua própria região de memória, seus próprios arquivos abertos e seu próprio estado de execução.</p>
 <h3 id="gerenciamento-de-memória"><a class="header" href="#gerenciamento-de-memória">Gerenciamento de memória</a></h3>
-<p>O kernel controla o acesso de cada processo à memória RAM, garantindo que um processo não leia ou escreva na área de memória de outro. Ele faz isso por meio de memória virtual: cada processo enxerga um espaço de endereços próprio, que o kernel traduz para endereços físicos reais com a ajuda de um componente do processador chamado MMU (<em>Memory Management Unit</em>). Essa tradução também permite que o sistema use mais memória do que fisicamente existe, movendo partes menos usadas para o disco — a chamada memória de troca ou <em>swap</em>.</p>
+<p>O kernel controla o acesso de cada processo à memória RAM, garantindo que um processo não leia ou escreva na área de memória de outro.</p>
 <h3 id="comunicação-com-hardware-drivers"><a class="header" href="#comunicação-com-hardware-drivers">Comunicação com hardware: drivers</a></h3>
-<p>Cada dispositivo de hardware — placa de vídeo, controlador de rede, SSD — tem particularidades próprias de fabricante e modelo. Os drivers são o código que traduz comandos genéricos do kernel em instruções específicas que aquele hardware entende, e vice-versa. Em kernels monolíticos, a maioria dos drivers roda dentro do próprio kernel; em microkernels, rodam isolados em <em>user space</em>.</p>
+<p>Os drivers são o código que traduz comandos genéricos do kernel em instruções específicas que aquele hardware entende, e vice-versa.</p>
 <h3 id="sistema-de-arquivos"><a class="header" href="#sistema-de-arquivos">Sistema de arquivos</a></h3>
 <p>O kernel gerencia como dados são organizados e recuperados de dispositivos de armazenamento, abstraindo a complexidade física do disco em uma estrutura de arquivos e diretórios que os programas conseguem usar sem precisar saber onde, fisicamente, cada bit está gravado.</p>
-<h2 id="chamadas-de-sistema-syscalls"><a class="header" href="#chamadas-de-sistema-syscalls">Chamadas de sistema (syscalls)</a></h2>
-<p>Uma <em>syscall</em> funciona como a ponte de comunicação pela qual um programa em <em>user space</em> solicita um serviço ao kernel. Abrir um arquivo, alocar memória, enviar dados pela rede — todas essas operações exigem uma <em>syscall</em>, porque nenhuma delas pode ser feita diretamente pelo programa sem acesso privilegiado ao hardware.</p>
-<p>Quando um programa faz uma <em>syscall</em>, o processador realiza uma troca de contexto: sai do modo de privilégio restrito do <em>user space</em> e entra no modo privilegiado do kernel, executa a operação solicitada, e retorna o resultado ao programa, voltando ao modo restrito. Essa troca tem um custo de desempenho pequeno, mas não nulo — por isso programas que fazem uso intensivo de I/O costumam agrupar operações para reduzir o número de <em>syscalls</em> necessárias.</p>
-<h2 id="o-kernel-linux"><a class="header" href="#o-kernel-linux">O kernel Linux</a></h2>
-<p>Criado por Linus Torvalds em 1991, o Linux é o kernel monolítico mais usado do mundo, presente em servidores, Android, supercomputadores e parte dos desktops.</p>
-<h3 id="monolítico-com-módulos"><a class="header" href="#monolítico-com-módulos">Monolítico com módulos</a></h3>
-<p>Segue o modelo monolítico, mas permite carregar e remover módulos dinamicamente sem reiniciar o sistema — um driver de rede, por exemplo, existe como módulo (<code>.ko</code>) e só é carregado quando o hardware correspondente é detectado. Isso soma parte da flexibilidade de um microkernel ao desempenho do modelo monolítico.</p>
-<h3 id="kernel-não-é-distribuição"><a class="header" href="#kernel-não-é-distribuição">Kernel não é distribuição</a></h3>
-<p>O kernel é só o núcleo: escalonador, memória, drivers, sistema de arquivos. Interface gráfica, gerenciador de pacotes e demais utilitários vêm de fora dele, empacotados por distribuições como Ubuntu, Fedora ou Arch — que, apesar das diferenças entre si, rodam essencialmente o mesmo kernel.</p>
+<h2 id="chamadas-de-sistema"><a class="header" href="#chamadas-de-sistema">Chamadas de sistema</a></h2>
+<p>Uma <em>syscall</em> funciona como a ponte de comunicação pela qual um programa em <em>user space</em> solicita um serviço ao kernel. Podemos citar: abrir um arquivo, alocar memória, enviar dados pela rede. Todas essas operações exigem uma <em>syscall</em>, porque nenhuma delas pode ser feita diretamente pelo programa sem acesso privilegiado ao hardware.</p>
+<p>Quando um programa faz uma <em>syscall</em>, o processador realiza uma troca de contexto: sai do modo de privilégio restrito do <em>user space</em> e entra no modo privilegiado do kernel, executa a operação solicitada, e retorna o resultado ao programa, voltando ao modo restrito.</p>
 
                     </main>
 

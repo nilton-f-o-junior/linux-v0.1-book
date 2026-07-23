@@ -1,12 +1,6 @@
 # Resfriamento
 
-Todo componente eletrônico que realiza trabalho gera calor como subproduto. Se esse calor não for removido, os componentes esquentam além dos limites projetados, causando travamentos, danos permanentes ou falhas. O resfriamento é o sistema responsável por manter cada componente dentro da sua faixa segura de temperatura.
-
-## Como o calor sai do componente
-
-O primeiro elo da cadeia é o contato físico entre o componente e o sistema de resfriamento. O processador possui uma tampa metálica chamada IHS (*Integrated Heat Spreader*) que distribui o calor da área ativa do chip por uma superfície maior. Sobre essa tampa vai uma camada fina de pasta térmica, um material com alta condutividade que preenche as microscópicas imperfeições entre as superfícies metálicas, eliminando bolsas de ar que agiriam como isolante.
-
-Sem pasta térmica, o contato real entre chip e dissipador seria apenas nos pontos mais altos das duas superfícies. O uso deste composto reduz drasticamente a resistência térmica e tem impacto direto nas temperaturas de operação.
+Todo componente eletrônico converte parte da energia em calor. À medida que diversos componentes são instalados dentro de um mesmo espaço, esse calor se acumula e pode diminuir a vida útil desses equipamentos; portanto, o uso de resfriamento é extremamente necessário
 
 ## Ventoinhas
 
@@ -22,14 +16,9 @@ As ventoinhas movem o ar: seja puxando ar fresco para dentro do gabinete, empurr
 
 ### Resfriamento a ar
 
-É o modelo mais comum e suficiente para a maioria dos sistemas. Um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.
+É o modelo mais comum e suficiente para a maioria dos sistemas. O cooler é um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.
 
 Dentro do dissipador, é comum encontrar *heat pipes*: tubos selados contendo um fluido que evapora na parte quente, migra para a parte fria pelas aletas, condensa e retorna pela parede interna do tubo por capilaridade.
-
-
-
-[Image of heat pipe working principle]
-
 
 Os principais formatos de cooler a ar:
 - **Baixo perfil:** compacto e plano, adequado para gabinetes pequenos (ITX);
@@ -38,7 +27,7 @@ Os principais formatos de cooler a ar:
 
 ### Resfriamento a líquido
 
-Em vez de depender apenas do ar, o water cooling usa um líquido (geralmente água com aditivos antialga e anticorrosivo). Um bloco metálico (waterblock) fica em contato direto com o componente; o líquido circula por ele, absorve o calor e é bombeado até um radiador, onde é dissipado para o ar pelas ventoinhas.
+Em vez de depender apenas do ar, o water cooler usa um líquido (geralmente água com aditivos antialga e anticorrosivo). Um bloco metálico (water block) fica em contato direto com o componente; o líquido circula por ele, absorve o calor e é bombeado até um radiador, onde é dissipado para o ar pelas ventoinhas.
 
 - **AIO (*All-In-One*):** circuito fechado, com bomba e reservatório integrados no cabeçote; fácil de instalar e sem manutenção.
 - **Loop customizado:** cada componente é escolhido e montado separadamente (reservatório, bomba, tubos, bloco e radiador). Exige conhecimento técnico maior, é mais caro e necessita de manutenções periódicas.
@@ -57,6 +46,6 @@ As regiões críticas em um gabinete típico incluem a área da CPU (topo da pla
 
 ## Temperaturas e Monitoramento no Linux
 
-Quando o processador se aproxima do seu limite térmico de fábrica (Tjunction ou Tmax), ele reduz automaticamente sua velocidade de operação para gerar menos calor e evitar a queima, um mecanismo de proteção chamado *thermal throttling*.
+Quando o processador se aproxima do seu limite térmico de fábrica, ele reduz automaticamente sua velocidade de operação para gerar menos calor e evitar a queima, um mecanismo de proteção chamado *thermal throttling*.
 
 No Linux, o monitoramento dessas métricas não depende de softwares pesados proprietários. O próprio sistema operacional expõe esses dados diretamente através do sistema de arquivos virtual `/sys/class/hwmon/`. Na prática, o administrador ou usuário utiliza ferramentas de terminal consolidadas, como o pacote `lm-sensors` (através do comando `sensors`), ou utilitários gráficos da sua distribuição para acompanhar as temperaturas em tempo real e diagnosticar problemas de arrefecimento.

@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-41f7e1a4.js";
+            window.path_to_searchindex_js = "searchindex-7d1ffa46.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-a0cfbb35.js"></script>
@@ -189,11 +189,8 @@
 <p>O Linux foi criado por Linus Torvalds na Universidade de Helsinki em 1991, inicialmente como o núcleo (kernel) de um sistema operacional tipo Unix. A primeira versão estável (1.0) foi lançada em março de 1994, marcando o início de sua popularidade e adoção mais ampla na indústria.</p>
 <p>Ele é um sistema operacional livre e de código aberto (<em>open-source</em>), o que significa que qualquer pessoa tem a liberdade de executar, estudar, modificar e distribuir seu código-fonte. Isso o torna extremamente versátil, podendo ser executado em uma ampla variedade de dispositivos, desde servidores e <em>mainframes</em> até <em>smartphones</em> e dispositivos <em>IoT</em> (internet das coisas). O Linux se posiciona como uma alternativa a plataformas proprietárias como Windows e macOS, amplamente adotadas, mas mais restritivas em termos de customização e custos de licença.</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="do-hardware-ao-sistema"><a class="header" href="#do-hardware-ao-sistema">Do Hardware ao Sistema</a></h1>
-<p>Antes de entender melhor como o sistema funciona e escrever os primeiros comandos no terminal, temos que construir uma base conceitual que sustentará tudo que vem depois.</p>
-<p>Começamos pelos dispositivos, como desktops, smartphones, servidores e sistemas embarcados; em seguida, vemos o que é software e como ele se organiza, para depois explorarmos os principais sistemas operacionais.</p>
-<p>Com essa base, entramos nas distribuições Linux: o que são, por que existem tantas e como se organizam nas três grandes famílias: Debian, Red Hat e Arch.</p>
-<p>Olhamos, por fim, para a camada visual do Linux: os ambientes de desktop e os gerenciadores de janelas em mosaico.</p>
+<h1 id="básico"><a class="header" href="#básico">Básico</a></h1>
+<p>Inicialmente, alguns temas precisam ser explicados. Antes de entender os componentes do computador e do software, precisamos dar uma olhada inicial em outros conceitos comuns ao Linux que são bem recorrentes, independentemente do seu nível de conhecimento. É importante salientar que esta é apenas uma introdução básica para que você possa começar seus estudos e se familiarizar com o ambiente.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="dispositivos"><a class="header" href="#dispositivos">Dispositivos</a></h1>
 <h2 id="computadores-de-uso-geral-desktoplaptop"><a class="header" href="#computadores-de-uso-geral-desktoplaptop">Computadores de Uso Geral (Desktop/Laptop)</a></h2>
@@ -407,29 +404,17 @@
 <p>Com algumas semanas de uso, a lógica começa a fazer sentido, o teclado se torna uma extensão do pensamento, e mover o mouse para clicar em algo passa a parecer lento. Muitos usuários descrevem a transição como irreversível.</p>
 <p>É uma categoria ideal para desenvolvedores, administradores de sistemas e qualquer pessoa que passe horas por dia no terminal, mas não é recomendada para quem está começando no Linux ou precisa de uma experiência imediata sem curva de aprendizado.</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="do-componente-ao-computador"><a class="header" href="#do-componente-ao-computador">Do Componente ao Computador</a></h1>
-<p>Antes de instalar um sistema operacional ou abrir um terminal, é preciso entender sobre o que ele vai rodar. Este capítulo constrói a base física que sus
-tenta tudo o que vem depois.</p>
-<p>Começamos pela placa-mãe, o esqueleto que conecta e organiza todos os outros componentes. Em seguida, vemos como a BIOS e a UEFI atuam no primeiro instan
-te, antes mesmo do sistema operacional carregar, inicializando o hardware e decidindo de onde o computador vai partir.</p>
-<p>Depois, chegamos ao par que dá vida ao sistema: a CPU, responsável pelo processamento, e a memória RAM, que guarda o que está em uso no momento. Na sequê
-ncia, vemos o armazenamento, onde os dados permanecem quando a máquina é desligada, e a GPU, essencial tanto para exibir qualquer coisa na tela quanto pa
-ra tarefas pesadas de processamento gráfico e paralelo.</p>
-<p>Com essa base, olhamos para o que sustenta e possibilita o funcionamento de tudo isso: a fonte de alimentação, que entrega energia estável para cada comp
-onente, e o resfriamento, que impede que o calor gerado pelo esforço da CPU e da GPU comprometa o sistema.</p>
-<p>Por fim, tratamos da camada de interação: o monitor, por onde tudo é visto, e os periféricos, como teclado, mouse e outros dispositivos que conectam o us
-uário à máquina.</p>
+<h1 id="hardware"><a class="header" href="#hardware">Hardware</a></h1>
+<p>Um computador, independente do seu tamanho ou formato, é composto por peças físicas que, em conjunto com o software, permitem que você o utilize da forma como desejar. Este capítulo foi escrito para explicar os componentes principais que formam um computador convencional, abordando cada peça separadamente.</p>
+<p>Os textos foram escritos de forma a simplificar a explicação e facilitar o entendimento do conceito em si. É importante ressaltar que, caso seja de seu interesse, não deixe de consultar outros materiais e se aprofundar em alguns dos pontos abordados.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="placa-mãe"><a class="header" href="#placa-mãe">Placa-mãe</a></h1>
-<p>Se o processador é o componente que calcula, e o armazenamento é onde os dados vivem, a placa-mãe é o que faz todos esses componentes existirem juntos como um sistema. Ela não processa, não armazena, não exibe. Ela conecta. É o substrato físico e elétrico sobre o qual tudo o mais opera, a estrutura que transforma peças separadas em um computador.</p>
-<h2 id="o-que-é-a-placa-mãe"><a class="header" href="#o-que-é-a-placa-mãe">O que é a placa-mãe?</a></h2>
-<p>A placa-mãe é uma placa de circuito impresso que ocupa a maior parte do interior de qualquer computador. Nela estão soldados ou conectados praticamente todos os componentes que fazem a máquina funcionar: o processador senta em seu soquete, os pentes de RAM encaixam em seus slots, o SSD ou HD se conecta por meio de um conector SATA ou diretamente em um slot M.2, e a GPU ocupa um slot PCIe. A fonte de alimentação entrega energia à placa, e ela distribui essa energia para cada componente conforme a necessidade.</p>
-<p>Além de conectar fisicamente, a placa-mãe gerencia a comunicação entre os componentes. Quando o processador precisa de dados que estão na RAM, é a placa-mãe que fornece os caminhos elétricos por onde esses dados trafegam. Quando um SSD NVMe precisa conversar diretamente com a CPU pelo barramento PCIe, é a placa que viabiliza esse canal.</p>
-<h2 id="o-chipset"><a class="header" href="#o-chipset">O chipset</a></h2>
+<p>Ela não processa, não armazena e não exibe: ela conecta. A placa-mãe é uma placa de circuito impresso que ocupa a maior parte do interior de qualquer computador, nela estão soldados ou conectados praticamente todos os componentes que fazem a máquina funcionar. Além de conectar fisicamente, a placa-mãe gerencia a comunicação entre os componentes.</p>
+<h2 id="chipset"><a class="header" href="#chipset">Chipset</a></h2>
 <p>Dentro da placa-mãe há um conjunto de circuitos chamado chipset. Ele funciona como um intermediário entre o processador e os demais componentes, gerenciando conexões que não saem diretamente da CPU: portas USB, conectores SATA, slots PCIe adicionais e outras interfaces.</p>
 <p>Processadores modernos integram parte das funções que antes eram exclusivas do chipset, como o controlador de memória e algumas linhas PCIe diretas. O que o chipset ainda gerencia varia conforme a plataforma, mas o princípio se mantém: ele complementa o processador em tudo que não passa diretamente por ele.</p>
-<p>A escolha do chipset define em grande parte o que a placa-mãe suporta. Chipsets de linha mais alta permitem <em>overclocking</em>, oferecem mais linhas PCIe e mais portas USB. Chipsets de entrada restringem algumas dessas opções para reduzir custo. Para o usuário final, a escolha prática é sempre entre a placa e o conjunto de recursos que ela oferece, não o chipset em si.</p>
-<h2 id="form-factor-o-tamanho-importa"><a class="header" href="#form-factor-o-tamanho-importa">Form factor: o tamanho importa</a></h2>
+<p>A escolha do chipset define em grande parte o que a placa-mãe suporta. Chipsets de linha mais alta permitem <em>overclocking</em>, oferecem mais linhas PCIe e mais portas USB. Chipsets de entrada restringem algumas dessas opções para reduzir custo.</p>
+<h2 id="tamanho"><a class="header" href="#tamanho">Tamanho</a></h2>
 <p>Placa-mãe não vem em um tamanho só. O <em>form factor</em> define as dimensões físicas da placa, a disposição dos furos de fixação e, consequentemente, quais gabinetes a aceitam. Os três formatos mais comuns no mercado atual são:</p>
 <ul>
 <li>
@@ -442,15 +427,14 @@ uário à máquina.</p>
 <p><strong>Mini-ITX:</strong> o menor dos três, com apenas 170 × 170 mm. Cabe em gabinetes extremamente compactos, mas em geral possui apenas um slot PCIe e dois slots de RAM. A escolha para quem prioriza tamanho acima de qualquer coisa.</p>
 </li>
 </ul>
-<p>A escolha do form factor delimita não apenas o gabinete, mas toda a montagem. Uma placa Mini-ITX em um gabinete compacto pode dificultar a refrigeração e limitar a expansão futura. Uma ATX em um gabinete grande oferece mais espaço mas ocupa mais mesa ou chão.</p>
+<p>A escolha do <em>form factor</em> delimita não apenas o gabinete, mas toda a montagem. Uma placa Mini-ITX em um gabinete compacto pode dificultar a refrigeração e limitar a expansão futura. Uma ATX em um gabinete grande oferece mais espaço mas ocupa mais mesa ou chão.</p>
 <h2 id="slots-e-conectores"><a class="header" href="#slots-e-conectores">Slots e conectores</a></h2>
-<p>A placa-mãe é, em grande parte, definida pelo que ela oferece para conectar. Os principais elementos são:</p>
 <h3 id="soquete-do-processador"><a class="header" href="#soquete-do-processador">Soquete do processador</a></h3>
 <p>O soquete é o ponto de encaixe do processador, e é o que determina quais CPUs a placa aceita. Cada fabricante e cada geração de processadores usa um soquete específico. Os mais comuns hoje são o LGA1700 e o LGA1851 para processadores Intel, e o AM4 e o AM5 para AMD.</p>
 <p>Um detalhe relevante sobre o manuseio:</p>
 <ul>
-<li><strong>Intel:</strong> os pinos ficam na placa-mãe, e o processador tem apenas contatos planos.</li>
-<li><strong>AMD:</strong> os pinos ficam no processador. Pinos dobrados são um problema que pode inutilizar o chip.</li>
+<li><strong>Intel:</strong> os pinos ficam na placa-mãe, e o processador tem apenas contatos planos;</li>
+<li><strong>AMD:</strong> os pinos ficam no processador, a falta de cuidado durante a instalação pode dobrar alguns pinos e danificar.</li>
 </ul>
 <h3 id="slots-de-memória"><a class="header" href="#slots-de-memória">Slots de memória</a></h3>
 <p>A maioria das placas-mãe tem dois ou quatro slots de RAM. A quantidade de slots define quanto de memória o sistema pode ter no total e se é possível operar em <em>dual channel</em>, uma configuração que aumenta a largura de banda da memória ao usar dois pentes simultaneamente em vez de um.</p>
@@ -458,38 +442,19 @@ uário à máquina.</p>
 <h4 id="gerações-de-ddr-e-o-encaixe-na-placa-mãe"><a class="header" href="#gerações-de-ddr-e-o-encaixe-na-placa-mãe">Gerações de DDR e o encaixe na placa-mãe</a></h4>
 <p>Cada geração de DDR tem um encaixe físico diferente. O pente muda de tamanho, a posição do entalhe que guia a instalação muda, e o slot da placa-mãe muda junto. Isso torna impossível instalar uma geração errada por acidente: um pente DDR5 simplesmente não entra em um slot DDR4, e vice-versa.</p>
 <ul>
-<li>
-<p><strong>DDR1:</strong> 184 pinos, entalhe próximo ao centro do pente, levemente deslocado para um lado.</p>
-</li>
-<li>
-<p><strong>DDR2:</strong> 240 pinos, entalhe reposicionado em relação ao DDR1. Mesmo número de pinos que o DDR3, mas em posição diferente, o que impede a troca entre os dois.</p>
-</li>
-<li>
-<p><strong>DDR3:</strong> 240 pinos, entalhe em posição distinta do DDR2. Presente em plataformas mais antigas que ainda circulam no mercado usado.</p>
-</li>
-<li>
-<p><strong>DDR4:</strong> 288 pinos, entalhe deslocado novamente. É o padrão mais encontrado em máquinas em uso hoje.</p>
-</li>
-<li>
-<p><strong>DDR5:</strong> 288 pinos, mesmo número que o DDR4, mas com o entalhe em posição diferente e altura do conector ligeiramente maior. Incompatível com slots DDR4 apesar da semelhança visual.</p>
-</li>
+<li><strong>DDR1:</strong> 184 pinos;</li>
+<li><strong>DDR2:</strong> 240 pinos;</li>
+<li><strong>DDR3:</strong> 240 pinos;</li>
+<li><strong>DDR4:</strong> 288 pinos;</li>
+<li><strong>DDR5:</strong> 288 pinos;</li>
 </ul>
-<h4 id="dual-channel-e-quad-channel"><a class="header" href="#dual-channel-e-quad-channel">Dual channel e quad channel</a></h4>
+<h4 id="dual-channel"><a class="header" href="#dual-channel">Dual channel</a></h4>
 <p>Quando dois pentes de RAM idênticos são instalados nos slots corretos, a placa-mãe ativa o modo <em>dual channel</em>, que dobra a largura de banda disponível para o processador ao acessar a memória. A diferença é perceptível especialmente em processadores com GPU integrada, que compartilham a memória RAM com os gráficos, e em tarefas que movimentam grandes volumes de dados entre CPU e memória.</p>
 <p>Os slots de <em>dual channel</em> na placa são identificados por cores: instalar os pentes nos dois slots da mesma cor ativa o modo. O manual da placa sempre indica a combinação correta.</p>
-<p>Placas de servidor com múltiplos processadores podem operar em quad channel ou até oito canais, aumentando ainda mais a largura de banda total disponível.</p>
-<h4 id="velocidade-e-latência"><a class="header" href="#velocidade-e-latência">Velocidade e latência</a></h4>
-<p>Dois números aparecem sempre nas especificações de memória: a frequência, em MHz, e a latência CL, que indica quantos ciclos o módulo leva para responder a uma solicitação. Um módulo DDR5-6000 CL30 e um DDR5-6000 CL36 operam na mesma frequência, mas o primeiro responde mais rápido por ter latência menor.</p>
-<p>Na prática, para uso geral, a diferença entre frequências e latências próximas é pequena. O ganho real aparece em cenários específicos: edição de vídeo, compilação de código, simulações e, novamente, GPUs integradas, que dependem diretamente da velocidade da RAM para renderizar.</p>
-<h4 id="como-a-ram-aparece-na-placa-mãe"><a class="header" href="#como-a-ram-aparece-na-placa-mãe">Como a RAM aparece na placa-mãe</a></h4>
-<p>Os slots de memória ficam sempre próximos ao soquete do processador, já que o controlador de memória está dentro da própria CPU nas arquiteturas modernas. Quanto menor a distância entre os dois, menor a latência das trilhas que os conectam.</p>
-<p>Nas placas com quatro slots, a ordem de instalação importa. Instalar um único pente no slot errado pode impedir o <em>dual channel</em> ou, em alguns casos, fazer o sistema não inicializar. A regra geral é: dois pentes vão nos slots 2 e 4 (ou A2 e B2, conforme a nomenclatura da placa). O manual sempre especifica, e a placa costuma ter a indicação impressa na própria PCB ao lado dos slots.</p>
 <h3 id="slots-pcie"><a class="header" href="#slots-pcie">Slots PCIe</a></h3>
-<p>O <em>PCIe</em> (Peripheral Component Interconnect Express) é o barramento de alta velocidade da placa-mãe. É por ele que a GPU se conecta, geralmente em um slot PCIe x16, o maior e mais rápido. Outros slots menores, PCIe x4 ou x1, servem para placas de rede, captura de vídeo, SSDs adicionais e outros dispositivos.</p>
-<p>A versão do PCIe importa: o PCIe 5.0, presente em plataformas mais recentes, oferece o dobro da largura de banda do PCIe 4.0. Na prática, para a maioria dos usos hoje, a versão ainda não é um gargalo visível, mas em SSDs NVMe de última geração a diferença começa a aparecer.</p>
+<p>Pense no PCIe como os encaixes da placa-mãe para conectar outras peças no computador. O encaixe maior (x16) é feito sob medida para a placa de vídeo, garantindo a velocidade máxima. Os encaixes menores (x4 e x1) servem para coisas mais simples, como placas de rede, som ou espaço extra de armazenamento.</p>
 <h3 id="slots-m2"><a class="header" href="#slots-m2">Slots M.2</a></h3>
 <p>Os slots M.2 são conectores compactos usados principalmente para SSDs NVMe. Um slot M.2 no formato físico correto pode operar tanto via PCIe quanto via SATA, dependendo da placa e do SSD. É importante verificar qual protocolo cada slot suporta, porque um SSD NVMe não vai funcionar em sua velocidade máxima em um slot M.2 que opera apenas em SATA.</p>
-<p>Placas de entrada costumam ter um ou dois slots M.2. Modelos de alto desempenho podem ter quatro ou mais.</p>
 <h3 id="conectores-sata"><a class="header" href="#conectores-sata">Conectores SATA</a></h3>
 <p>Apesar da popularidade crescente dos SSDs M.2, os conectores SATA ainda estão presentes na maioria das placas-mãe para quem usa HDs ou SSDs do tipo 2.5“. Cada conector SATA alimenta um dispositivo, e a quantidade disponível varia conforme o modelo da placa.</p>
 <h3 id="conectores-de-energia"><a class="header" href="#conectores-de-energia">Conectores de energia</a></h3>
@@ -505,9 +470,8 @@ uário à máquina.</p>
 </ul>
 <p>Placas mais recentes frequentemente incluem o painel de I/O já pré-instalado, o que simplifica a montagem e evita um passo extra no processo de encaixar o gabinete.</p>
 <h2 id="vrm-a-alimentação-do-processador"><a class="header" href="#vrm-a-alimentação-do-processador">VRM: a alimentação do processador</a></h2>
-<p>Entre os componentes da placa-mãe que menos aparecem nas especificações de marketing e mais importam no desempenho real estão os VRMs, <em>Voltage Regulator Modules</em>. Eles são os circuitos responsáveis por converter a tensão que vem da fonte de alimentação em uma tensão estável e adequada para o processador.</p>
+<p>Entre os componentes da placa-mãe que menos aparecem nas especificações de marketing e mais importam no desempenho real estão os VRMs (<em>Voltage Regulator Modules</em>). Eles são os circuitos responsáveis por converter a tensão que vem da fonte de alimentação em uma tensão estável e adequada para o processador.</p>
 <p>O processador não consome energia de forma constante. Em momentos de carga intensa, a demanda sobe abruptamente. VRMs de qualidade inferior esquentam mais, são menos eficientes e, em casos extremos, limitam o desempenho do processador ao não conseguir entregar energia suficiente de forma estável.</p>
-<p>Em montagens simples com processadores de consumo moderado, VRMs medianos cumprem seu papel sem dificuldade. O problema aparece quando processadores de alto TDP, especialmente os que permitem <em>overclocking</em>, são instalados em placas com VRMs subdimensionados para aquela carga.</p>
 <h2 id="conectividade-integrada"><a class="header" href="#conectividade-integrada">Conectividade integrada</a></h2>
 <p>As placas-mãe modernas tendem a integrar cada vez mais funcionalidades que antes exigiam placas adicionais:</p>
 <ul>
@@ -518,7 +482,7 @@ uário à máquina.</p>
 <p><strong>Rede com fio:</strong> praticamente todas as placas incluem ao menos uma porta Ethernet. Modelos de alto desempenho trazem portas de 2,5 Gbps ou até 10 Gbps em vez do padrão de 1 Gbps.</p>
 </li>
 <li>
-<p><strong>Áudio:</strong> o codec de áudio integrado cobre com folga as necessidades da maioria dos usuários. Quem exige qualidade maior para produção musical ou audiofilia pode preferir uma placa de som dedicada, mas para uso geral o áudio integrado é mais do que suficiente.</p>
+<p><strong>Áudio:</strong> o codec de áudio integrado cobre com folga as necessidades da maioria dos usuários. Quem exige qualidade maior para produção musical pode preferir uma placa de som dedicada, mas para uso geral o áudio integrado é mais do que suficiente.</p>
 </li>
 </ul>
 <h2 id="placas-mãe-de-servidor"><a class="header" href="#placas-mãe-de-servidor">Placas-mãe de servidor</a></h2>
@@ -526,10 +490,9 @@ uário à máquina.</p>
 <h3 id="suporte-a-múltiplos-processadores"><a class="header" href="#suporte-a-múltiplos-processadores">Suporte a múltiplos processadores</a></h3>
 <p>Placas de servidor de médio e grande porte frequentemente têm dois soquetes de processador. Isso permite que dois chips operem em conjunto sobre a mesma memória e os mesmos recursos de I/O, aumentando a capacidade de processamento paralelo sem precisar de dois servidores separados. Essa arquitetura é comum em servidores de banco de dados, virtualização e computação científica.</p>
 <h3 id="memória-ecc"><a class="header" href="#memória-ecc">Memória ECC</a></h3>
-<p>Em desktops, um erro de memória pode causar uma tela azul ou um travamento. Em um servidor de banco de dados ou sistema financeiro, o mesmo erro pode corromper dados silenciosamente. A memória ECC (Error-Correcting Code) detecta e corrige automaticamente erros de um único bit antes que cheguem ao processador, sem interromper a operação.</p>
-<p>Placas de servidor são projetadas para usar exclusivamente memória ECC. Além disso, suportam módulos do tipo RDIMM (Registered DIMM) e LRDIMM (Load-Reduced DIMM), que permitem instalar volumes de memória muito maiores do que os suportados por plataformas de desktop, chegando a terabytes em configurações de alto desempenho.</p>
+<p>Em desktops, um erro de memória pode causar uma tela azul ou um travamento. Em um servidor de banco de dados ou sistema financeiro, o mesmo erro pode corromper dados silenciosamente. A memória ECC (<em>Error-Correcting Code</em>) detecta e corrige automaticamente erros de um único bit antes que cheguem ao processador, sem interromper a operação.</p>
 <h3 id="bmc-e-ipmi-gerenciamento-fora-de-banda"><a class="header" href="#bmc-e-ipmi-gerenciamento-fora-de-banda">BMC e IPMI: gerenciamento fora de banda</a></h3>
-<p>Uma das diferenças mais marcantes entre placas de servidor e placas de desktop é a presença do BMC (Baseboard Management Controller), um microcontrolador independente soldado na placa com seu próprio firmware, sua própria memória e sua própria interface de rede.</p>
+<p>Uma das diferenças mais marcantes entre placas de servidor e placas de desktop é a presença do BMC (<em>Baseboard Management Controller</em>), um microcontrolador independente soldado na placa com seu próprio firmware, sua própria memória e sua própria interface de rede.</p>
 <p>O BMC opera de forma completamente autônoma em relação ao sistema principal. Isso significa que um administrador pode se conectar ao servidor e gerenciá-lo mesmo que ele esteja desligado, travado ou sem sistema operacional instalado. Essa capacidade é chamada de gerenciamento fora de banda, e o protocolo que a padroniza entre fabricantes é o IPMI (Intelligent Platform Management Interface).</p>
 <p>Na prática, pelo IPMI é possível:</p>
 <ul>
@@ -539,57 +502,44 @@ uário à máquina.</p>
 <li>Receber alertas automáticos quando algum sensor ultrapassa o limite configurado;</li>
 <li>Atualizar o firmware de componentes sem acesso físico à máquina.</li>
 </ul>
-<p>Cada fabricante implementa o BMC sob um nome próprio: a Dell chama de iDRAC, a HPE de iLO, a Lenovo de XClarity. O protocolo IPMI por baixo é o mesmo, mas as interfaces e recursos adicionais variam.</p>
 <h3 id="form-factor-de-servidor"><a class="header" href="#form-factor-de-servidor">Form factor de servidor</a></h3>
 <p>Placas de servidor seguem padrões de form factor próprios, pensados para instalação em racks, os armários padronizados usados em data centers. Os formatos mais comuns são:</p>
 <ul>
-<li>
-<p><strong>EATX:</strong> variação estendida do ATX, comum em servidores tower e workstations de alto desempenho;</p>
-</li>
-<li>
-<p><strong>EEB (Extended E-ATX):</strong> formato maior, usado em placas dual socket com muitos slots de expansão;</p>
-</li>
-<li>
-<p><strong>Formatos proprietários:</strong> fabricantes como Supermicro e Dell desenvolvem placas com dimensões customizadas para caber exatamente em seus próprios chassis de rack.</p>
-</li>
+<li><strong>EATX:</strong> variação estendida do ATX;</li>
+<li><strong>EEB:</strong> formato maior, usado em placas dual socket com muitos slots de expansão;</li>
+<li><strong>Formatos proprietários:</strong> fabricantes como Supermicro e Dell desenvolvem placas com dimensões customizadas.</li>
 </ul>
 <h3 id="chipsets-de-servidor"><a class="header" href="#chipsets-de-servidor">Chipsets de servidor</a></h3>
-<p>Os chipsets de servidor vêm de linhas diferentes das de desktop. A Intel usa chipsets da série C, como o C621 e o C741, projetados para as plataformas Xeon Scalable. A AMD oferece as plataformas EPYC, com chipsets próprios que suportam um número muito maior de linhas PCIe e canais de memória do que qualquer plataforma de desktop. A quantidade de linhas PCIe em um servidor de alto desempenho pode passar de cem, o que permite conectar dezenas de SSDs NVMe, GPUs e placas de rede de alta velocidade simultaneamente.</p>
+<p>Os chipsets de servidor vêm de linhas diferentes das de desktop. A Intel usa chipsets da série C, como o C621 e o C741, projetados para as plataformas Xeon Scalable. A AMD oferece as plataformas EPYC, com chipsets próprios que suportam um número muito maior de linhas PCIe e canais de memória do que qualquer plataforma de desktop.</p>
 <h3 id="confiabilidade-como-projeto"><a class="header" href="#confiabilidade-como-projeto">Confiabilidade como projeto</a></h3>
 <p>Placas de servidor são validadas para operação contínua 24 horas por dia, 7 dias por semana, durante anos. Isso se reflete nos componentes usados, nos ciclos de teste antes do lançamento e no suporte de longo prazo que os fabricantes oferecem. Um modelo de servidor pode receber atualizações de firmware por cinco a dez anos após o lançamento, algo incomum no mercado de desktops.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="firmware-bios-uefi-e-bootloader"><a class="header" href="#firmware-bios-uefi-e-bootloader">Firmware, BIOS, UEFI e Bootloader</a></h1>
-<p>Quando você pressiona o botão de ligar o computador, a primeira coisa que acontece não é o Windows subindo, nem o Linux carregando. Antes de qualquer
-sistema operacional entrar em cena, existe um processo de inicialização inteiro que acontece em camadas, cada uma preparando o terreno para a próxima.</p>
-<h2 id="o-firmware-o-primeiro-código-a-rodar"><a class="header" href="#o-firmware-o-primeiro-código-a-rodar">O firmware: o primeiro código a rodar</a></h2>
+<p>Quando você pressiona o botão de ligar o computador, a primeira coisa que acontece não é o Windows subindo, nem o Linux carregando. Antes de qualquer sistema operacional entrar em cena, existe um processo de inicialização inteiro que acontece em camadas, cada uma preparando o terreno para a próxima.</p>
+<h2 id="firmware"><a class="header" href="#firmware">Firmware</a></h2>
 <p>Quando seu computador inicia, um chip soldado diretamente na placa-mãe contém o <em>firmware</em>: um software gravado em memória não volátil, que persiste mesmo sem energia e que o processador é projetado para executar automaticamente ao ligar. O firmware é, literalmente, o primeiro programa que o computador executa.</p>
-<p>A primeira coisa que o firmware faz é o <em>POST</em> (Power-On Self Test): uma varredura rápida pelo hardware presente. Ele verifica se a memória RAM responde, se o processador está funcional, se há dispositivos de armazenamento conectados. Se algo falhar nessa etapa, o computador pode emitir bipes, um código sonoro que técnicos usam para diagnosticar problemas antes mesmo de uma imagem aparecer na tela.</p>
-<h2 id="bios-e-uefi-dois-momentos-de-uma-mesma-ideia"><a class="header" href="#bios-e-uefi-dois-momentos-de-uma-mesma-ideia">BIOS e UEFI: dois momentos de uma mesma ideia</a></h2>
-<p>Durante décadas, esse firmware foi chamado de <em>BIOS</em> (Basic Input/Output System). A interface era simples, navegada com o teclado, exibida em texto puro. O BIOS tinha uma limitação estrutural importante: ele só conseguia reconhecer partições de disco seguindo um padrão chamado MBR (Master Boot Record), que limitava discos a 2 TB e suportava no máximo quatro partições primárias.</p>
-<p>Com o tempo, essas restrições foram se tornando um problema real. A indústria desenvolveu então o <em>UEFI</em> (Unified Extensible Firmware Interface), que substituiu o BIOS na maioria dos computadores fabricados a partir do início dos anos 2010. O UEFI trouxe uma interface gráfica navegável com mouse, suporte a discos maiores por meio do padrão GPT (GUID Partition Table), inicialização mais rápida e um recurso chamado <em>Secure Boot</em> que verifica criptograficamente se o bootloader a ser carregado é confiável, bloqueando softwares maliciosos que tentariam se inserir nessa etapa.</p>
-<p>Na prática, UEFI é o BIOS moderno. A maioria das pessoas ainda chama de “entrar na BIOS” a ação de acessar as configurações de firmware, mesmo que o
-sistema seja UEFI, e os fabricantes de placas-mãe mantêm essa terminologia nas interfaces para não confundir os usuários.</p>
-<p>Para acessar essas configurações, é preciso pressionar uma tecla específica logo nos primeiros segundos após ligar o computador, antes que o bootloader assuma o controle. Não existe um padrão único: a tecla varia conforme o fabricante e até mesmo entre modelos de uma mesma marca, sendo <code>Del</code>, <code>F2</code>, <code>F1</code>, <code>F10</code> e <code>F12</code> algumas das mais comuns. Na dúvida, o manual do fabricante ou uma busca pelo modelo exato da placa-mãe ou do notebook é o caminho mais confiável para descobrir a tecla certa.</p>
+<p>A primeira coisa que o firmware faz é o <strong>POST</strong> (<em>Power-On Self Test</em>): uma varredura rápida pelo hardware presente. Ele verifica se a memória RAM responde, se o processador está funcional, se há dispositivos de armazenamento conectados. Se algo falhar nessa etapa, o computador pode emitir bipes, um código sonoro que técnicos usam para diagnosticar problemas antes mesmo de uma imagem aparecer na tela.</p>
+<h2 id="bios-e-uefi"><a class="header" href="#bios-e-uefi">BIOS e UEFI</a></h2>
+<p>Durante décadas, esse firmware foi chamado de <strong>BIOS</strong> (<em>Basic Input/Output System</em>). A interface era simples, navegada com o teclado, exibida em texto puro. O BIOS tinha uma limitação estrutural importante: ele só conseguia reconhecer partições de disco seguindo um padrão chamado <strong>MBR</strong> (<em>Master Boot Record</em>), que limitava discos a 2 TB e suportava no máximo quatro partições primárias.</p>
+<p>A indústria desenvolveu o <strong>UEFI</strong> (<em>Unified Extensible Firmware Interface</em>), que substituiu o BIOS na maioria dos computadores fabricados a partir do início dos anos 2010. O UEFI trouxe uma interface gráfica navegável com mouse, suporte a discos maiores por meio do padrão <strong>GPT</strong> (<em>GUID Partition Table</em>), inicialização mais rápida e um recurso chamado <em><strong>Secure Boot</strong></em> que verifica criptograficamente se o bootloader a ser carregado é confiável, bloqueando softwares maliciosos que tentariam se inserir nessa etapa.</p>
+<p>Na prática, UEFI é o BIOS moderno. A maioria das pessoas ainda chama de “entrar na BIOS” a ação de acessar as configurações de firmware, mesmo que o sistema seja UEFI, e os fabricantes de placas-mãe mantêm essa terminologia nas interfaces para não confundir os usuários.</p>
+<p>Para acessar essas configurações, é preciso pressionar uma tecla específica logo nos primeiros segundos após ligar o computador, antes que o bootloader assuma o controle.</p>
+<p>A tecla varia conforme o fabricante e até mesmo entre modelos de uma mesma marca, sendo <code>Del</code>, <code>F2</code>, <code>F1</code>, <code>F10</code> e <code>F12</code> algumas das mais comuns. Na dúvida, o manual do fabricante ou uma busca pelo modelo exato da placa-mãe ou do notebook é o caminho mais confiável..</p>
 <p>Muitos fabricantes exibem brevemente essa informação na tela durante o POST, uma linha discreta como “Press DEL to enter setup”, mas ela desaparece rápido. Além disso, muitos computadores modernos vêm com um recurso de inicialização rápida (<em>Fast Boot</em>) habilitado por padrão no UEFI, que reduz ainda mais essa janela de tempo. Se não houver tempo de reagir, basta reiniciar e tentar novamente.</p>
 <h2 id="o-bootloader-a-ponte-entre-o-firmware-e-o-kernel"><a class="header" href="#o-bootloader-a-ponte-entre-o-firmware-e-o-kernel">O bootloader: a ponte entre o firmware e o kernel</a></h2>
-<p>Após o POST, o firmware localiza um dispositivo de armazenamento inicializável, geralmente o SSD ou HD onde o sistema operacional está instalado, e transfere o controle para um programa específico gravado no início desse dispositivo. Esse programa é o <em>bootloader</em>.</p>
-<p>O bootloader tem uma função muito precisa: encontrar o kernel do sistema operacional no disco, carregá-lo na memória e inicializá-lo. Ele é uma camada
-necessária porque o kernel não pode simplesmente “se carregar sozinho”, ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware, da mesma forma que alguém precisa abrir a porta de uma sala antes de qualquer pessoa entrar nela. Isso acontece porque, nesse ponto, ainda não há nenhum sistema operacional ativo para fazer esse trabalho.</p>
-<p>No Linux, o bootloader mais comum é o <em>GRUB</em> (Grand Unified Bootloader), que consegue localizar kernels em partições diferentes, passar parâmetros de
-configuração para o kernel e lidar com múltiplos sistemas no mesmo computador, o que os usuários chamam de <em>dual boot</em>.</p>
-<p>Uma alternativa mais simples e moderna é o <em>systemd-boot</em>, que integra ao ecossistema do systemd (o gerenciador de serviços padrão em boa parte das
-distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais direto e com menos configuração manual envolvida.</p>
+<p>Após o POST, o firmware localiza um dispositivo de armazenamento inicializável, geralmente o SSD ou HD onde o sistema operacional está instalado, e transfere o controle para um programa específico chamado <em>bootloader</em>.</p>
+<p>O bootloader tem uma função muito precisa: encontrar o kernel do sistema operacional no disco, carregá-lo na memória e inicializá-lo. Ele é uma camada necessária porque o kernel não pode simplesmente “se carregar sozinho”, ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware.</p>
+<p>No Linux, o bootloader mais comum é o <strong>GRUB</strong> (<em>Grand Unified Bootloader</em>), que consegue localizar kernels em partições diferentes, passar parâmetros de configuração para o kernel e lidar com múltiplos sistemas no mesmo computador, o que os usuários chamam de <em><strong>dual boot</strong></em>.</p>
+<p>Uma alternativa mais simples e moderna é o <strong>systemd-boot</strong>, que integra ao ecossistema do <strong>systemd</strong> (o gerenciador de serviços padrão em boa parte das distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais direto e com menos configuração manual envolvida.</p>
 <p>O comportamento do bootloader varia conforme o sistema operacional:</p>
 <ul>
 <li><strong>Linux:</strong> configurável, personalizável e visível ao usuário, especialmente no GRUB;</li>
 <li><strong>Windows:</strong> proprietário e transparente, sem interação direta pelo usuário;</li>
-<li><strong>macOS (Apple Silicon, a partir de 2020):</strong> gerenciado pelo próprio chip, de forma integrada e invisível ao usuário.</li>
+<li><strong>macOS:</strong> gerenciado pelo próprio chip, de forma integrada e invisível ao usuário.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="processador-cpu"><a class="header" href="#processador-cpu">Processador (CPU)</a></h1>
-<p>Se há um componente que define o que um computador é capaz de fazer, é o processador. Tudo o que acontece dentro de uma máquina (abrir um programa, compilar código, renderizar uma imagem, executar um jogo) passa, em algum momento, pelo processador. Ele não armazena dados permanentemente como o SSD, nem exibe resultados como o monitor: ele calcula. É o componente que transforma instruções em resultados.</p>
-<h2 id="o-que-é-a-cpu"><a class="header" href="#o-que-é-a-cpu">O que é a CPU?</a></h2>
-<p>CPU significa <em>Central Processing Unit</em>, Unidade Central de Processamento. É um chip de silício, fabricado com transistores em escala nanométrica, capaz de executar bilhões de operações por segundo. Cada operação é simples: somar dois números, comparar valores, mover dados de um lugar para outro. A complexidade emerge da velocidade e da quantidade: bilhões dessas operações simples por segundo produzem tudo o que se vê na tela.</p>
+<p>CPU significa Unidade Central de Processamento. É um chip de silício, fabricado com transistores em escala nanométrica, capaz de executar bilhões de operações por segundo. Cada operação é simples: somar dois números, comparar valores, mover dados de um lugar para outro. A complexidade emerge da velocidade e da quantidade: bilhões dessas operações simples por segundo produzem tudo o que se vê na tela.</p>
 <p>O processador trabalha em ciclos. A cada ciclo, ele busca uma instrução na memória, decodifica o que ela significa, executa a operação correspondente e grava o resultado. Esse fluxo (buscar, decodificar, executar, gravar) é repetido incessantemente, bilhões de vezes por segundo em cada núcleo, a uma frequência medida em gigahertz.</p>
 <h2 id="frequência-e-núcleos"><a class="header" href="#frequência-e-núcleos">Frequência e núcleos</a></h2>
 <p>Dois parâmetros aparecem sempre nas especificações de qualquer processador: a frequência de clock e o número de núcleos.</p>
@@ -616,7 +566,7 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </ul>
 <p>A eficiência do cache depende da localidade dos dados: programas que acessam os mesmos dados repetidamente ou em sequência se beneficiam muito mais do que aqueles com acesso aleatório a grandes volumes.</p>
 <h2 id="tdp-e-consumo-de-energia"><a class="header" href="#tdp-e-consumo-de-energia">TDP e consumo de energia</a></h2>
-<p>Todo processador tem um TDP (<em>Thermal Design Power</em>), que expressa quanto calor o componente dissipa sob carga típica, medido em watts. É o parâmetro que orienta a escolha do sistema de resfriamento: um processador com TDP de 65 W precisa de um cooler diferente de um com TDP de 125 W.</p>
+<p>Todo processador tem um <strong>TDP</strong> (<em>Thermal Design Power</em>), que expressa quanto calor o componente dissipa sob carga típica, medido em watts. É o parâmetro que orienta a escolha do sistema de resfriamento: um processador com TDP de 65 W precisa de um cooler diferente de um com TDP de 125 W.</p>
 <p>Processadores para desktops têm TDPs mais altos porque operam conectados à tomada e com espaço para dissipadores maiores. Processadores para notebooks precisam operar com TDPs muito menores, frequentemente entre 15 W e 45 W, para preservar a bateria e caber em designs finos. Essa restrição energética é o que define, em grande parte, a diferença de desempenho entre um processador de notebook e o equivalente para desktop da mesma geração.</p>
 <h2 id="fabricantes-e-arquiteturas"><a class="header" href="#fabricantes-e-arquiteturas">Fabricantes e arquiteturas</a></h2>
 <p>Vale entender primeiro uma distinção importante: <strong>arquitetura</strong> e <strong>fabricante</strong> não são a mesma coisa. A arquitetura define o conjunto de instruções que o processador entende, isto é, a linguagem que ele fala. O fabricante é quem projeta e produz o chip. Dois processadores de fabricantes diferentes podem compartilhar a mesma arquitetura; dois processadores do mesmo fabricante podem ter arquiteturas distintas.</p>
@@ -633,9 +583,6 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <li><strong>Core i9:</strong> topo de linha para desktops, <em>workstations</em> e notebooks premium.</li>
 </ul>
 </li>
-</ul>
-<p>As gerações recentes adotaram o design híbrido com núcleos de desempenho e núcleos de eficiência no mesmo chip.</p>
-<ul>
 <li>
 <p><strong>AMD:</strong> também fabrica processadores x86 e recuperou competitividade significativa a partir de 2017 com a arquitetura Zen. Suas linhas principais são:</p>
 <ul>
@@ -659,7 +606,7 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </li>
 </ul>
 <h3 id="processadores-para-servidores"><a class="header" href="#processadores-para-servidores">Processadores para servidores</a></h3>
-<p>Servidores têm exigências diferentes de desktops e notebooks. Não se trata apenas de mais desempenho: servidores precisam operar continuamente por anos, lidar com dezenas ou centenas de tarefas simultâneas, suportar grandes volumes de memória RAM e, em muitos casos, funcionar em pares para garantir disponibilidade mesmo em caso de falha de hardware. Os processadores voltados a esse mercado são projetados com essas prioridades em mente, e diferem dos chips para uso pessoal em vários aspectos além da contagem de núcleos.</p>
+<p>Servidores têm exigências diferentes de desktops e notebooks. Não se trata apenas de mais desempenho: servidores precisam operar continuamente por anos, lidar com dezenas ou centenas de tarefas simultâneas, suportar grandes volumes de memória RAM e, em muitos casos, funcionar em pares para garantir disponibilidade mesmo em caso de falha de hardware.</p>
 <p>As linhas específicas para servidores dos principais fabricantes são:</p>
 <ul>
 <li>
@@ -674,17 +621,6 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </ul>
 <h2 id="tempo-de-vida-de-um-processador"><a class="header" href="#tempo-de-vida-de-um-processador">Tempo de vida de um processador</a></h2>
 <p>Processadores são um dos componentes mais duráveis de um computador. Diferente de discos mecânicos, que têm partes em movimento sujeitas a desgaste, ou de baterias, que degradam quimicamente com o uso, um processador não tem partes móveis e não se desgasta da mesma forma. Na prática, é comum ver Xeons de dez ou quinze anos rodando 24 horas por dia, sete dias por semana, sem falhas, e isso não é exceção, é o esperado para esse segmento.</p>
-<h3 id="longevidade-física"><a class="header" href="#longevidade-física">Longevidade física</a></h3>
-<p>O que efetivamente limita a vida útil de um processador no nível do hardware são dois fenômenos:</p>
-<ul>
-<li>
-<p><strong>Eletromigração:</strong> ao longo de anos de uso intenso, os átomos dos condutores metálicos dentro do chip migram lentamente sob o efeito da corrente elétrica. Em escala de tempo suficientemente longa, isso pode criar falhas nos circuitos;</p>
-</li>
-<li>
-<p><strong>Calor acumulado:</strong> o maior inimigo real de qualquer componente eletrônico é o calor constante e elevado. Um processador que opera próximo ao limite de temperatura por anos acumula estresse térmico nos materiais.</p>
-</li>
-</ul>
-<p>Operando dentro das especificações, com resfriamento adequado e tensões estáveis fornecidas por uma boa fonte de alimentação, um processador pode durar décadas. Falhas prematuras quase sempre têm causa identificável: superaquecimento, sobrecargas de tensão ou defeitos de fabricação que se manifestam nos primeiros meses de uso.</p>
 <h3 id="obsolescência-de-software"><a class="header" href="#obsolescência-de-software">Obsolescência de software</a></h3>
 <p>A durabilidade física, porém, não é o único limite. Um Xeon de 2010 pode estar eletricamente perfeito hoje e ainda assim ser inutilizável para certas tarefas, não porque o hardware falhou, mas porque o software parou de suportá-lo.</p>
 <p>Esse processo acontece em camadas:</p>
@@ -701,17 +637,16 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </ul>
 <h3 id="o-caso-dos-xeons-antigos"><a class="header" href="#o-caso-dos-xeons-antigos">O caso dos Xeons antigos</a></h3>
 <p>O uso de Xeons antigos em servidores caseiros e pequenas infraestruturas é um fenômeno real e economicamente racional. Um Xeon E5 de 2013, por exemplo, pode ser encontrado por poucos dólares no mercado de usados, oferece múltiplos núcleos, suporte a grandes volumes de ECC RAM e funciona perfeitamente com Linux atual para tarefas como armazenamento em rede, virtualização leve e serviços de homelabs.</p>
-<p>O que esses usuários abrem mão é previsível: eficiência energética muito inferior aos processadores modernos, ausência das instruções mais recentes e nenhuma garantia de correções de segurança. Para uma máquina isolada rodando serviços internos, esses trade-offs frequentemente são aceitáveis. Para infraestrutura exposta à internet com dados sensíveis, o risco de vulnerabilidades sem correção é um fator que precisa ser avaliado com cuidado.</p>
 <h2 id="processadores-e-sistemas-operacionais"><a class="header" href="#processadores-e-sistemas-operacionais">Processadores e sistemas operacionais</a></h2>
 <p>A relação entre processador e sistema operacional vai além de simplesmente “ligar e funcionar”. O sistema operacional precisa ser construído para entender a linguagem do processador, e quando essa correspondência falha ou é imperfeita, os problemas aparecem em camadas diferentes.</p>
 <h3 id="compatibilidade-de-arquitetura"><a class="header" href="#compatibilidade-de-arquitetura">Compatibilidade de arquitetura</a></h3>
-<p>Um sistema operacional é um software como qualquer outro: precisa ser compilado para a arquitetura do processador que vai executá-lo. Um sistema compilado para x86 não roda nativamente em ARM sem emulação ou tradução, e vice-versa. Isso tem implicações práticas diretas dependendo do sistema:</p>
+<p>Um sistema operacional é um software como qualquer outro: precisa ser compilado para a arquitetura do processador que vai executá-lo.</p>
 <ul>
 <li>
 <p><strong>Linux:</strong> por ser open source, o kernel Linux é compilado para dezenas de arquiteturas diferentes. Rodar Linux em ARM, x86, RISC-V ou outros processadores é uma questão de usar a versão correta da distribuição. Essa flexibilidade é uma das razões pelas quais o Linux domina servidores ARM e dispositivos embarcados;</p>
 </li>
 <li>
-<p><strong>Windows:</strong> historicamente exclusivo do x86, o Windows on ARM existe e funciona em processadores como o Qualcomm Snapdragon. A Microsoft desenvolveu uma camada de tradução que permite rodar aplicativos x86 em hardware ARM, mas com custo de desempenho variável. A compatibilidade melhorou ao longo dos anos, mas ainda não é total para todos os softwares;</p>
+<p><strong>Windows:</strong> historicamente exclusivo do x86, o Windows em ARM existe e funciona em processadores como o Qualcomm Snapdragon. A Microsoft desenvolveu uma camada de tradução que permite rodar aplicativos x86 em hardware ARM, mas com custo de desempenho variável.</p>
 </li>
 <li>
 <p><strong>macOS:</strong> até 2020, rodava exclusivamente em x86 (Intel). Com a transição para o Apple Silicon, a Apple desenvolveu o Rosetta 2, uma camada de tradução que converte código x86 para ARM em tempo real. A transição foi tecnicamente bem-sucedida, mas aplicativos não recompilados nativamente para ARM rodam com desempenho levemente inferior.</p>
@@ -721,39 +656,23 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <p>O driver é o software que permite ao sistema operacional conversar com um componente de hardware. Processadores muito novos, ou plataformas de nicho, às vezes chegam ao mercado antes de os sistemas operacionais terem suporte completo.</p>
 <p>No Linux, esse fenômeno é mais visível. O suporte a novos processadores e chipsets depende de contribuições ao kernel, que seguem um ciclo de lançamento próprio. Um processador lançado hoje pode ter suporte completo no kernel apenas meses depois. Distribuições que seguem o kernel de perto, como o Arch Linux ou o Fedora, tendem a receber esse suporte antes de distribuições mais conservadoras, como o Debian estável.</p>
 <p>No Windows, a Microsoft e os fabricantes de processadores costumam coordenar o lançamento de drivers com o lançamento do hardware, tornando o processo mais transparente para o usuário final. O problema aparece mais em hardware corporativo antigo ou em processadores de nicho sem suporte ativo do fabricante.</p>
-<h3 id="problemas-reais-e-conhecidos"><a class="header" href="#problemas-reais-e-conhecidos">Problemas reais e conhecidos</a></h3>
-<p>Alguns problemas entre processadores e sistemas operacionais são bem documentados e vale conhecer:</p>
-<ul>
-<li>
-<p><strong>Vulnerabilidades de hardware e mitigações:</strong> as vulnerabilidades Spectre e Meltdown, descobertas em 2018, afetaram praticamente todos os processadores x86 modernos da Intel e AMD. As correções foram aplicadas via atualizações do sistema operacional, mas introduziram perda de desempenho mensurável em certas operações, especialmente em servidores com cargas de trabalho intensas em I/O. O impacto variou conforme o processador e o sistema operacional, mas foi um lembrete de que falhas de hardware são corrigidas em software, sempre com custo;</p>
-</li>
-<li>
-<p><strong>Linux em processadores Intel muito novos:</strong> lançamentos recentes de arquiteturas Intel chegaram ao mercado com suporte incompleto no kernel Linux para funcionalidades específicas, como gerenciamento de energia e gráficos integrados. O resultado prático é que instalar uma distribuição Linux com kernel desatualizado em hardware novo pode resultar em bateria com autonomia menor, aquecimento excessivo ou recursos que simplesmente não funcionam;</p>
-</li>
-<li>
-<p><strong>Windows on ARM e compatibilidade de software:</strong> apesar da camada de tradução, alguns softwares com drivers de kernel ou proteções antitrapaça em jogos não funcionam corretamente em Windows on ARM. Jogos com sistemas anti-cheat que operam em nível de kernel são um exemplo recorrente de incompatibilidade;</p>
-</li>
-<li>
-<p><strong>Processadores AMD e Linux:</strong> historicamente, alguns chipsets AMD tiveram suporte mais lento no kernel Linux do que os equivalentes Intel, especialmente em funcionalidades de gerenciamento de energia. Essa diferença diminuiu bastante nos últimos anos, mas ainda aparece em lançamentos muito recentes.</p>
-</li>
-</ul>
 <h2 id="o-soquete-e-a-compatibilidade-com-a-placa-mãe"><a class="header" href="#o-soquete-e-a-compatibilidade-com-a-placa-mãe">O soquete e a compatibilidade com a placa-mãe</a></h2>
-<p>Além da compatibilidade com software, o processador precisa ser fisicamente compatível com a placa-mãe. Ele não se encaixa em qualquer modelo: precisa de um soquete compatível, ou seja, um conector físico com centenas ou milhares de pinos e contatos, projetado especificamente para aquela família de processadores. Soquetes de fabricantes diferentes são fisicamente incompatíveis entre si: um processador AMD não cabe em uma placa Intel, e vice-versa. Isso não é apenas uma questão de formato: a disposição elétrica dos pinos também é diferente.</p>
+<p>Além da compatibilidade com software, o processador precisa ser fisicamente compatível com a placa-mãe. Soquetes de fabricantes diferentes são fisicamente incompatíveis entre si: um processador AMD não cabe em uma placa Intel, e vice-versa.</p>
 <h3 id="o-que-define-a-compatibilidade"><a class="header" href="#o-que-define-a-compatibilidade">O que define a compatibilidade</a></h3>
 <p>Dois fatores determinam se um processador funciona em uma placa-mãe:</p>
 <ul>
 <li>
-<p><strong>O soquete físico:</strong> precisa ser idêntico. Os soquetes atuais mais comuns são o LGA1700 e o LGA1851 para processadores Intel, e o AM4 e o AM5 para processadores AMD. Tentar encaixar um processador no soquete errado é impossível sem força, e forçar danifica ambos;</p>
+<p><strong>Soquete físico:</strong> precisa ser idêntico. Tentar encaixar um processador no soquete errado é impossível sem força, e forçar danifica ambos;</p>
 </li>
 <li>
-<p><strong>O chipset da placa-mãe:</strong> mesmo com o soquete correto, nem toda placa suporta todos os processadores daquele soquete. O chipset é o conjunto de circuitos da placa que gerencia a comunicação entre os componentes, e cada chipset tem uma lista oficial de processadores suportados, chamada QVL (<em>Qualified Vendor List</em>). Um processador lançado depois da placa pode não constar nessa lista sem uma atualização de firmware.</p>
+<p><strong>Chipset da placa-mãe:</strong> mesmo com o soquete correto, nem toda placa suporta todos os processadores daquele soquete e cada chipset tem uma lista oficial de processadores suportados..</p>
 </li>
 </ul>
 <h3 id="compatibilidade-entre-gerações"><a class="header" href="#compatibilidade-entre-gerações">Compatibilidade entre gerações</a></h3>
 <p>A política de compatibilidade entre gerações varia bastante entre os fabricantes:</p>
 <ul>
 <li>
-<p><strong>AMD:</strong> manteve o soquete AM4 por cinco anos e múltiplas gerações de processadores Ryzen, do Ryzen 1000 ao Ryzen 5000. Isso significou que era possível trocar um processador de geração mais antiga por um mais novo na mesma placa, com ou sem atualização de firmware, dependendo do chipset. O AM5, lançado em 2022, iniciou um novo ciclo com a mesma promessa de longevidade;</p>
+<p><strong>AMD:</strong> manteve o soquete AM4 por cinco anos e múltiplas gerações de processadores Ryzen, do Ryzen 1000 ao Ryzen 5000. Isso significou que era possível trocar um processador de geração mais antiga por um mais novo na mesma placa, com ou sem atualização de firmware, dependendo do chipset.</p>
 </li>
 <li>
 <p><strong>Intel:</strong> historicamente troca de soquete com mais frequência, às vezes a cada uma ou duas gerações. Isso significa que trocar de processador Intel frequentemente implica trocar também a placa-mãe.</p>
@@ -761,21 +680,19 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </ul>
 <h3 id="a-armadilha-do-firmware"><a class="header" href="#a-armadilha-do-firmware">A armadilha do firmware</a></h3>
 <p>Mesmo quando o soquete é compatível, há um detalhe que pega muitos usuários de surpresa: ao combinar uma placa-mãe mais antiga com um processador mais novo, o firmware da placa pode precisar de atualização para reconhecer o novo chip. Uma placa com soquete AM5, por exemplo, pode não inicializar com um Ryzen de geração mais recente se o firmware estiver desatualizado.</p>
-<p>O problema é que atualizar o firmware normalmente exige que o computador já esteja funcionando, o que cria um impasse quando o único processador disponível é justamente o que a placa ainda não reconhece. Algumas placas-mãe oferecem um recurso chamado BIOS Flashback, que permite atualizar o firmware com apenas um pendrive e energia, sem precisar de processador ou memória instalados. É um recurso valioso em montagens novas que combinam placa mais antiga com processador mais recente.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="memória-ram"><a class="header" href="#memória-ram">Memória RAM</a></h1>
 <p>Quando você abre um navegador, um editor de texto e um player de música ao mesmo tempo, há algo no computador equilibrando tudo isso sem que você precise pensar no assunto. Esse algo é a memória RAM.</p>
-<p>RAM significa <em>Random Access Memory</em> (memória de acesso aleatório). O nome descreve sua característica mais importante: qualquer posição de memória pode ser lida ou escrita diretamente, em tempo constante, sem precisar percorrer o conteúdo do início até chegar ao dado desejado, como acontece em uma fita magnética.</p>
+<p>RAM significa memória de acesso aleatório. O nome descreve sua característica mais importante: qualquer posição de memória pode ser lida ou escrita diretamente, em tempo constante, sem precisar percorrer o conteúdo do início até chegar ao dado desejado, como acontece em uma fita magnética.</p>
 <h2 id="o-que-ela-faz"><a class="header" href="#o-que-ela-faz">O que ela faz</a></h2>
 <p>A RAM funciona como a mesa de trabalho do computador. O armazenamento, seja um SSD ou HD, é onde os dados ficam guardados permanentemente, como arquivos em uma gaveta. Mas para trabalhar com eles, o sistema operacional os traz para a RAM, onde o processador pode acessá-los com velocidade muito maior.</p>
-<p>A diferença de velocidade é significativa. SSDs modernos podem ler dados a vários GB/s e a RAM opera na faixa de 40 a 80 GB/s. O processador, por sua vez, usa memórias internas ainda mais rápidas, chamadas caches, porém com capacidade muito pequena, medida em megabytes. A RAM vive nesse meio-termo: rápida o suficiente para não travar o processador, grande o suficiente para manter vários programas abertos simultaneamente.</p>
 <h2 id="volátil-por-natureza"><a class="header" href="#volátil-por-natureza">Volátil por natureza</a></h2>
-<p>A característica que define a RAM é sua volatilidade, ela perde todo o conteúdo quando a energia é cortada. Não é uma limitação acidental, é consequência direta de como ela é construída. Cada bit é armazenado como uma carga elétrica em um capacitor minúsculo. Sem corrente elétrica contínua, essa carga se dissipa e a informação desaparece. A RAM dos computadores é do tipo dinâmica, conhecida como DRAM, justamente por precisar ser constantemente atualizada para manter os dados.</p>
+<p>A característica que define a RAM é sua volatilidade, ela perde todo o conteúdo quando a energia é cortada. Não é uma limitação acidental, é consequência direta de como ela é construída. Cada bit é armazenado como uma carga elétrica em um capacitor minúsculo. Sem corrente elétrica contínua, essa carga se dissipa e a informação desaparece.</p>
 <p>É por isso que ao desligar o computador, o que estava aberto some, e ao ligá-lo novamente, o sistema operacional precisa ser carregado do armazenamento de volta para a memória.</p>
 <h2 id="ddr-gerações-e-velocidade"><a class="header" href="#ddr-gerações-e-velocidade">DDR: gerações e velocidade</a></h2>
-<p>Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão DDR (<em>Double Data Rate</em>), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência. A performance final também é influenciada pela forma como os módulos são instalados (como no uso de <em>Dual Channel</em>), ampliando a velocidade de transferência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.</p>
-<p>As gerações mais relevantes hoje são a DDR4 e a DDR5. A DDR4 dominou os computadores da segunda metade da década de 2010 e ainda é comum. A DDR5, lançada em 2021, oferece largura de banda substancialmente maior e suporte a capacidades por módulo muito mais altas, mas exige plataformas mais recentes.</p>
-<p>Em dispositivos móveis, a RAM segue padrões próprios como LPDDR (<em>Low Power DDR</em>), otimizados para consumo de energia reduzido, essencial quando a bateria é o único recurso disponível.</p>
+<p>Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão <strong>DDR</strong> (<em>Double Data Rate</em>), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência.</p>
+<p>A performance final também é influenciada pela forma como os módulos são instalados (como no uso de <em>Dual Channel</em>), ampliando a velocidade de transferência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.</p>
+<p>Em dispositivos móveis, a RAM segue padrões próprios como <strong>LPDDR</strong> (<em>Low Power DDR</em>), otimizados para consumo de energia reduzido, essencial quando a bateria é o único recurso disponível.</p>
 <h2 id="quanto-é-suficiente"><a class="header" href="#quanto-é-suficiente">Quanto é suficiente?</a></h2>
 <p>A resposta depende do uso, mas alguns parâmetros práticos ajudam a calibrar a expectativa:</p>
 <ul>
@@ -793,13 +710,13 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </li>
 </ul>
 <p>No Linux, o consumo base de RAM varia bastante conforme o ambiente gráfico escolhido. Um sistema com XFCE ou LXQt pode iniciar usando menos de 500 MB; o GNOME com extensões ativas pode facilmente ocupar mais de 1.5 GB só na área de trabalho, antes de qualquer aplicativo ser aberto.</p>
-<h2 id="dual-channel"><a class="header" href="#dual-channel">Dual Channel</a></h2>
+<h2 id="dual-channel-1"><a class="header" href="#dual-channel-1">Dual Channel</a></h2>
 <p>O <em>Dual Channel</em> é uma tecnologia que permite ao processador comunicar-se com dois módulos de memória simultaneamente, dobrando a largura de banda de dados. Em vez de um único caminho de 64 bits, o sistema utiliza dois, o que melhora significativamente o desempenho em tarefas que exigem grande fluxo de dados, como jogos e edição de vídeo.</p>
 <p>Para que o <em>Dual Channel</em> funcione, não basta apenas ter dois pentes de memória; é preciso seguir algumas regras básicas:</p>
 <ul>
-<li><strong>Módulos Idênticos:</strong> O ideal é utilizar módulos de mesma capacidade, frequência e latência. Embora sistemas modernos consigam operar com memórias diferentes (em um modo chamado <em>Flex Mode</em>), a estabilidade e o desempenho máximo são alcançados com pares idênticos.</li>
-<li><strong>Posicionamento nos Slots:</strong> Em placas-mãe com quatro slots, os módulos geralmente não devem ser colocados lado a lado. Eles devem ser instalados em slots alternados (geralmente slots 2 e 4, ou 1 e 3), conforme indicado no manual da placa-mãe, para que cada módulo pertença a um canal diferente.</li>
-<li><strong>Quantidade de Módulos:</strong> O <em>Dual Channel</em> requer pares. Se você instalar três módulos, por exemplo, dois operarão em <em>Dual Channel</em> e o terceiro operará em <em>Single Channel</em>, o que pode gerar inconsistências de performance.</li>
+<li><strong>Módulos Idênticos:</strong> o ideal é utilizar módulos de mesma capacidade, frequência e latência;</li>
+<li><strong>Posicionamento nos Slots:</strong> em placas-mãe com quatro slots, eles devem ser instalados em slots alternados;</li>
+<li><strong>Quantidade de Módulos:</strong> requer pares, se você instalar três módulos, por exemplo, dois operarão em <em>dual channel</em> e o terceiro operará em <em>single channel</em>.</li>
 </ul>
 <h2 id="memória-virtual-e-swap"><a class="header" href="#memória-virtual-e-swap">Memória virtual e swap</a></h2>
 <p>Quando a RAM se esgota, o sistema operacional recorre a um mecanismo de emergência, sendo ele o <em>swap</em>. Uma parte do armazenamento em disco é usada como extensão da memória, movendo dados menos usados para lá e liberando espaço na RAM para o que está sendo processado.</p>
@@ -807,32 +724,26 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <p>No Linux, o <em>swap</em> pode ser configurado como uma partição dedicada ou como um arquivo dentro do sistema de arquivos comum. Distribuições modernas como o Ubuntu configuram um arquivo de <em>swap</em> por padrão, o que facilita ajustes sem reparticionar o disco, mais na frente estaremos explicando melhor sobre como usar <em>swap</em> na prática.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="armazenamento"><a class="header" href="#armazenamento">Armazenamento</a></h1>
-<p>Antes de ligar o computador, antes de o sistema operacional existir em memória, antes de qualquer processo rodar, há um lugar onde tudo está guardado permanentemente, o dispositivo de armazenamento. É nele que o sistema operacional vive quando o computador está desligado, e é de lá que ele é carregado toda vez que a máquina é iniciada.</p>
-<h2 id="o-que-é-armazenamento"><a class="header" href="#o-que-é-armazenamento">O que é armazenamento?</a></h2>
 <p>A memória RAM, vista anteriormente, é rápida mas volátil: perde tudo quando a energia cai. O armazenamento é o oposto. É persistente, os dados ficam gravados mesmo sem energia, e é onde o sistema coloca tudo que precisa sobreviver entre uma sessão e outra: o próprio sistema operacional, os programas instalados, os arquivos do usuário.</p>
-<p>Dois tipos dominam esse papel nos computadores modernos.</p>
-<h3 id="ssd---solid-state-drive"><a class="header" href="#ssd---solid-state-drive">SSD - Solid State Drive</a></h3>
+<h2 id="ssd"><a class="header" href="#ssd">SSD</a></h2>
 <p>O SSD não tem partes móveis. Armazena dados em chips de memória flash, a mesma tecnologia base usada em celulares e câmeras, mas em versões otimizadas para desempenho e durabilidade.</p>
 <p>Sem braços mecânicos, sem pratos girando, o acesso a qualquer ponto do armazenamento é quase instantâneo. Um computador com SSD inicializa o sistema operacional em segundos. Programas abrem antes de o usuário piscar.</p>
 <ul>
-<li><strong>Vantagens:</strong> velocidade muito superior ao HD, resistente a impactos, silencioso e com menor consumo de energia.</li>
+<li><strong>Vantagens:</strong> velocidade muito superior ao HD, resistente a impactos, silencioso e com menor consumo de energia;</li>
 <li><strong>Desvantagens:</strong> custo por gigabyte mais alto que o HD, embora essa diferença venha caindo progressivamente nos últimos anos.</li>
-<li><strong>Uso típico:</strong> sistema operacional, programas e qualquer dado que se beneficie de acesso rápido.</li>
 </ul>
-<h4 id="nvme-ssds-ainda-mais-rápidos"><a class="header" href="#nvme-ssds-ainda-mais-rápidos">NVMe: SSDs ainda mais rápidos</a></h4>
+<h3 id="nvme-ssds-ainda-mais-rápidos"><a class="header" href="#nvme-ssds-ainda-mais-rápidos">NVMe: SSDs ainda mais rápidos</a></h3>
 <p>Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs mais antigos e mais baratos usam a interface SATA, a mesma criada originalmente para os HDs. Ela funciona bem, mas é um gargalo para os chips modernos de memória flash.</p>
-<p>Os SSDs NVMe (<em>Non-Volatile Memory Express</em>) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s, com os modelos mais recentes, que usam gerações mais novas do PCIe, indo muito além disso. No uso do dia a dia a diferença é menos dramática do que os números sugerem, mas em tarefas intensas como edição de vídeo, compilação de código ou movimentação de arquivos grandes, ela aparece.</p>
-<h3 id="hd---hard-disk-drive"><a class="header" href="#hd---hard-disk-drive">HD - Hard Disk Drive</a></h3>
-<p>O HD é a tecnologia mais antiga ainda em uso comum. Dentro da carcaça metálica há pratos magnéticos girando em alta velocidade, normalmente entre 5.400 e 7.200 rotações por minuto, e um braço mecânico com uma cabeça de leitura e escrita que se move sobre eles para acessar os dados.</p>
+<p>Os SSDs <strong>NVMe</strong> (<em>Non-Volatile Memory Express</em>) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s.</p>
+<h2 id="hd"><a class="header" href="#hd">HD</a></h2>
 <p>O HD é mais barato de se produzir e capaz de armazenar grandes volumes de dados, mas é limitado pela velocidade da mecânica. Cada leitura depende de o prato estar na posição certa e de o braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se acumula e se torna perceptível.</p>
 <ul>
-<li><strong>Vantagens:</strong> custo por gigabyte muito baixo, ideal para armazenar grandes volumes de dados.</li>
+<li><strong>Vantagens:</strong> custo por gigabyte muito baixo, ideal para armazenar grandes volumes de dados;</li>
 <li><strong>Desvantagens:</strong> mais lento, sensível a impactos físicos (a mecânica interna pode ser danificada) e consome mais energia.</li>
-<li><strong>Uso típico:</strong> armazenamento em massa, backups, arquivos que não precisam de acesso rápido.</li>
 </ul>
 <h3 id="armazenamento-em-servidores"><a class="header" href="#armazenamento-em-servidores">Armazenamento em servidores</a></h3>
 <h4 id="raid"><a class="header" href="#raid">RAID</a></h4>
-<p>Um servidor que guarda dados importantes raramente confia em um único disco. O RAID (<em>Redundant Array of Independent Disks</em> ou Conjunto Redundante de Discos Independentes) é uma técnica que combina múltiplos discos para funcionar como uma unidade só. Cada configuração equilibra de forma diferente velocidade, redundância e capacidade útil:</p>
+<p>Um servidor que guarda dados importantes raramente confia em um único disco. O <strong>RAID</strong> (<em>Redundant Array of Independent Disks</em>) é uma técnica que combina múltiplos discos para funcionar como uma unidade só. Cada configuração equilibra de forma diferente velocidade, redundância e capacidade útil:</p>
 <ul>
 <li>
 <p><strong>RAID 0:</strong> os dados são divididos entre dois ou mais discos, o que aumenta a velocidade de leitura e escrita.</p>
@@ -868,26 +779,21 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <p>Em ambientes corporativos ou de nuvem, o armazenamento frequentemente não está na mesma máquina que o sistema que o usa. Dois protocolos dominam esse cenário.</p>
 <ul>
 <li>
-<p><strong>NAS (<em>Network Attached Storage</em> ou Armazenamento Conectado em Rede):</strong> expõe o armazenamento pela rede como se fosse um sistema de arquivos comum: o servidor acessa pastas remotas da mesma forma que acessaria um disco local. É simples de configurar e suficiente para muitos cenários;</p>
+<p><strong>NAS (<em>Network Attached Storage</em>):</strong> expõe o armazenamento pela rede como se fosse um sistema de arquivos comum: o servidor acessa pastas remotas da mesma forma que acessaria um disco local. É simples de configurar e suficiente para muitos cenários;</p>
 </li>
 <li>
-<p><strong>SAN (<em>Storage Area Network</em> ou Rede de Área de Armazenamento):</strong> cria uma rede dedicada exclusivamente ao tráfego de armazenamento, separada da rede comum de dados. O servidor enxerga o armazenamento remoto como se fosse um disco diretamente conectado. É uma solução mais complexa e cara, usada em ambientes que exigem altíssimo desempenho e baixa latência, como bancos de dados críticos e sistemas financeiros.</p>
+<p><strong>SAN (<em>Storage Area Network</em>):</strong> cria uma rede dedicada exclusivamente ao tráfego de armazenamento, separada da rede comum de dados. O servidor enxerga o armazenamento remoto como se fosse um disco diretamente conectado. É uma solução mais complexa e cara, usada em ambientes que exigem altíssimo desempenho e baixa latência, como bancos de dados críticos e sistemas financeiros.</p>
 </li>
 </ul>
 <h4 id="a-escala-da-nuvem"><a class="header" href="#a-escala-da-nuvem">A escala da nuvem</a></h4>
 <p>Provedores como AWS, Google Cloud e Azure abstraem toda essa complexidade em serviços gerenciados. O sistema operacional de uma instância de servidor na nuvem geralmente reside em um volume virtual, como o EBS da AWS, que por baixo dos panos é armazenamento em rede com redundância automática, sem que o administrador precise configurar RAID ou gerenciar discos físicos manualmente.</p>
-<p>Essa abstração tem impactos práticos diretos:</p>
-<ul>
-<li><strong>Custo:</strong> menos controle direto sobre o hardware subjacente;</li>
-<li><strong>Vantagem:</strong> um volume pode ser ampliado, movido ou replicado para outra região geográfica com poucos comandos, algo impraticável com hardware físico.</li>
-</ul>
 <h3 id="particionamento-de-disco"><a class="header" href="#particionamento-de-disco">Particionamento de disco</a></h3>
 <p>Um disco físico, seja ele um SSD ou um HD, chega ao sistema como um bloco bruto. Antes de guardar qualquer dado, esse espaço precisa ser organizado. O particionamento é o processo de dividir esse bloco em regiões independentes, cada uma com início, fim e propósito definidos.</p>
 <p>Para o sistema operacional, cada partição aparece como um dispositivo separado. Um único disco de 1 TB pode se comportar como se fossem dois ou três discos menores, cada um com seu próprio sistema de arquivos, suas próprias permissões e sua própria função.</p>
 <h4 id="por-que-particionar"><a class="header" href="#por-que-particionar">Por que particionar?</a></h4>
 <p>A razão mais imediata é separação de responsabilidades. Em um servidor Linux, é comum isolar o sistema operacional em uma partição, os dados dos usuários em outra e os logs do sistema em uma terceira. Se os logs crescerem sem controle e preencherem o disco, apenas a partição deles é afetada. O sistema continua funcionando, e os dados dos usuários permanecem intactos.</p>
 <p>Em desktops com <em>dual boot</em> (dois sistemas operacionais no mesmo computador), o particionamento é o que permite que Windows e Linux coexistam sem interferência, cada sistema vive em sua própria região do disco e não enxerga o território do outro.</p>
-<p>Além das partições de sistema operacional e dados, existem partições com propósitos especiais, como a partição <em>swap</em>, usada pelo Linux como extensão da memória RAM em momentos de aperto. Esse e outros tipos de partição serão vistos em detalhe em capítulos futuros.</p>
+<p>Além das partições de sistema operacional e dados, existem partições com propósitos especiais, como a partição <em>swap</em>, usada pelo Linux como extensão da memória RAM em momentos de aperto.</p>
 <h4 id="sistemas-de-arquivos"><a class="header" href="#sistemas-de-arquivos">Sistemas de arquivos</a></h4>
 <p>Criar uma partição é apenas o primeiro passo. Para que o sistema operacional consiga gravar e ler dados nela, é preciso formatá-la com um sistema de arquivos, uma estrutura que define como arquivos são nomeados, organizados e localizados dentro daquele espaço.</p>
 <ul>
@@ -900,61 +806,54 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="gpu"><a class="header" href="#gpu">GPU</a></h1>
-<p>Por muito tempo, a GPU ficou nos bastidores. Era o componente que desenhava pixels na tela, útil para jogos e pouco mais. Isso mudou. Hoje a GPU é protagonista em <em>machine learning</em>, edição de vídeo, simulações científicas e renderização profissional. Entender o que ela faz e por que importa deixou de ser assunto exclusivo de quem monta computadores para jogos.</p>
-<h2 id="o-que-é-a-gpu"><a class="header" href="#o-que-é-a-gpu">O que é a GPU?</a></h2>
-<p>GPU significa <em>Graphics Processing Unit</em> ou Unidade de Processamento Gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.</p>
-<p>A razão para esse design é a natureza do trabalho gráfico. Para exibir uma cena em 3D na tela, a GPU precisa calcular a cor e posição de cada pixel, levando em conta luzes, sombras, texturas e a geometria dos objetos. Um monitor Full HD tem mais de dois milhões de pixels, a 60 quadros por segundo. Isso são mais de 120 milhões de cálculos de pixels por segundo, e cada um com várias operações matemáticas envolvidas. Nenhum processador de uso geral com poucos núcleos consegue fazer isso em tempo real. A GPU resolve o problema com paralelismo: ela divide esse trabalho em milhares de tarefas idênticas e as executa simultaneamente.</p>
+<p>GPU significa unidade de processamento gráfico. É um chip dedicado ao processamento paralelo massivo, em vez de poucos núcleos poderosos, como na CPU. A GPU tem centenas ou milhares de núcleos menores, todos operando simultaneamente.</p>
+<p>Para exibir uma cena em 3D na tela, a GPU precisa calcular a cor e posição de cada pixel, levando em conta luzes, sombras, texturas e a geometria dos objetos. Um monitor Full HD tem mais de dois milhões de pixels, a 60 quadros por segundo. Isso são mais de 120 milhões de cálculos de pixels por segundo, e cada um com várias operações matemáticas envolvidas.</p>
+<p>Nenhum processador de uso geral com poucos núcleos consegue fazer isso em tempo real. A GPU resolve o problema com paralelismo: ela divide esse trabalho em milhares de tarefas idênticas e as executa simultaneamente.</p>
 <h2 id="como-ela-processa-imagens"><a class="header" href="#como-ela-processa-imagens">Como ela processa imagens</a></h2>
 <p>O caminho de uma cena 3D até os pixels na tela segue um processo chamado <em>pipeline gráfico</em>, e entendê-lo ajuda a entender o que a GPU realmente faz.</p>
 <p>O ponto de partida são os dados brutos da cena: a posição dos vértices que formam os objetos, as fontes de luz, as texturas das superfícies e a posição da câmera virtual. A GPU pega tudo isso e o transforma em uma imagem bidimensional através de estágios sucessivos.</p>
 <ul>
-<li>No estágio de geometria, a GPU transforma as coordenadas tridimensionais dos objetos em coordenadas de tela, descartando o que está fora do campo de visão.</li>
-<li>No estágio de rasterização, ela converte as formas geométricas em fragmentos — conjuntos de pixels candidatos a aparecer na tela.</li>
-<li>No estágio de sombreamento, ela calcula a cor final de cada fragmento, levando em conta iluminação, texturas e efeitos especiais.</li>
+<li>Geometria: transforma as coordenadas tridimensionais dos objetos em coordenadas de tela, descartando o que está fora do campo de visão;</li>
+<li>Rasterização: converte as formas geométricas em fragmentos ou conjuntos de pixels candidatos a aparecer na tela;</li>
+<li>Sombreamento: calcula a cor final de cada fragmento, levando em conta iluminação, texturas e efeitos especiais.</li>
 </ul>
-<p>No final, o resultado é enviado para o <em>framebuffer</em> — uma área de memória que armazena a imagem final antes de ser exibida — e então enviado ao monitor.</p>
+<p>O resultado é enviado para o <em>framebuffer</em>: uma área de memória que armazena a imagem final antes de ser exibida, então enviado ao monitor.</p>
 <p>Para que os softwares consigam conversar com a GPU, eles utilizam APIs gráficas (<em>Application Programming Interfaces</em>), como o OpenGL e o Vulkan. Essas interfaces funcionam como tradutores, permitindo que o desenvolvedor envie instruções de renderização que a GPU consiga processar, independentemente do modelo da placa.</p>
-<p>Dois tipos de programas rodam durante esse processo: os <em>vertex shaders</em>, que processam vértices e transformações geométricas, e os <em>fragment shaders</em> (ou pixel shaders), que determinam a cor de cada pixel. A programação desses shaders é o que permite efeitos visuais sofisticados, de reflexos realistas a sombras dinâmicas e profundidade de campo.</p>
 <h3 id="ray-tracing"><a class="header" href="#ray-tracing">Ray tracing</a></h3>
 <p>O modelo de rasterização descrito acima é eficiente, mas demanda um trabalho maior para se aproxima da iluminação real, o <em>ray tracing</em> é uma abordagem diferente: simula o comportamento físico da luz traçando raios virtuais a partir da câmera, calculando com o que cada raio colide, qual luz reflete e como os efeitos se propagam pela cena. O resultado é iluminação significativamente mais realista, com reflexos precisos, sombras suaves e iluminação global que leva em conta a luz que ricocheia entre superfícies.</p>
-<p>O Ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.</p>
+<p>O ray tracing puro é computacionalmente intenso demais para tempo real sem hardware dedicado, GPUs modernas incluem unidades específicas para acelerar esses cálculos e abordagens de reconstrução de imagem, algumas apoiadas em inteligência artificial, como o DLSS da NVIDIA e o FSR da AMD, permitem renderizar em resoluções menores e ampliar a imagem com qualidade preservada, economizando processamento.</p>
 <h2 id="vram-a-memória-da-gpu"><a class="header" href="#vram-a-memória-da-gpu">VRAM: a memória da GPU</a></h2>
 <p>A GPU tem sua própria memória, a <em>VRAM</em> (<em>Video RAM</em>). É nela que ficam as texturas, os buffers de geometria, os shaders compilados e o framebuffer com a imagem sendo construída. A VRAM é fisicamente integrada à placa de vídeo, conectada à GPU por um barramento muito mais largo do que a RAM principal. Enquanto a memória convencional usa canais de 64 ou 128 bits, a VRAM pode usar 192, 256 ou até 384 bits, o que se traduz em largura de banda muito superior.</p>
 <p>A quantidade de VRAM importa diretamente: texturas de alta resolução em jogos modernos, cenas 3D complexas e modelos de linguagem carregados localmente consomem VRAM rapidamente. Quando a VRAM se esgota, o sistema começa a mover dados para a RAM principal ou para o armazenamento, com queda de desempenho perceptível ou erros de execução.</p>
-<p>Os padrões de VRAM mais usados hoje são o GDDR6 e o GDDR6X, memórias otimizadas para largura de banda. GPUs de alto desempenho para aprendizado de máquina usam o HBM (<em>High Bandwidth Memory</em>), empilhado diretamente sobre o chip da GPU, com largura de banda muito superior ao GDDR, mas a custo e complexidade de fabricação muito maiores.</p>
 <h2 id="gpu-discreta-e-gpu-integrada"><a class="header" href="#gpu-discreta-e-gpu-integrada">GPU discreta e GPU integrada</a></h2>
 <p>Nem toda GPU é uma placa separada dentro do computador. Existem dois tipos fundamentais:</p>
 <ul>
 <li>
-<p><strong>GPU integrada:</strong> vive dentro do mesmo chip que a CPU, compartilhando a memória RAM do sistema, não tem VRAM própria: reserva uma porção da RAM para seu uso gráfico. O resultado é suficiente para uso cotidiano, reprodução de vídeo e aplicações de produtividade, mas fica aquém em jogos exigentes e tarefas de renderização pesada. A vantagem é o consumo de energia muito baixo, o que a torna a solução padrão em notebooks finos e computadores que priorizam autonomia.</p>
+<p><strong>GPU integrada:</strong> vive dentro do mesmo chip que a CPU, compartilhando a memória RAM do sistema, não tem VRAM própria: reserva uma porção da RAM para seu uso gráfico. O resultado é suficiente para uso cotidiano, mas fica aquém em jogos exigentes e tarefas pesadas. A vantagem é o consumo de energia muito baixo, o que a torna a solução padrão em notebooks finos e computadores de entrada;</p>
 </li>
 <li>
 <p><strong>GPU discreta:</strong> é um componente separado, com seu próprio chip, sua própria VRAM e seu próprio sistema de resfriamento. Conecta-se à placa-mãe pelo barramento PCIe, que fornece a largura de banda necessária para a troca de dados com a CPU. É o que vai dentro de um desktop gamer, de uma workstation de edição de vídeo e dos servidores usados para treinar modelos de inteligência artificial.</p>
 </li>
 </ul>
-<p>Notebooks mais avançados combinam os dois: a GPU integrada cuida do uso cotidiano, e a discreta entra em ação quando a tarefa exige mais potência. O sistema operacional alterna entre as duas automaticamente ou conforme configuração do usuário, equilibrando desempenho e consumo de energia.</p>
 <h2 id="fabricantes-e-arquiteturas-1"><a class="header" href="#fabricantes-e-arquiteturas-1">Fabricantes e arquiteturas</a></h2>
 <p>O mercado de GPUs discretas é dominado por dois fabricantes, com um terceiro entrando com força crescente.</p>
-<p>A <strong>NVIDIA</strong> lidera em desempenho absoluto e no mercado de computação acelerada. Suas GPUs para consumidores seguem a linha GeForce, dividida em faixas — os exemplos abaixo refletem a geração disponível no momento em que este livro foi escrito, mas a NVIDIA renova sua linha a cada um ou dois anos. Portanto, vale sempre checar qual é a geração atual:</p>
 <ul>
-<li><strong>Entrada e uso intermediário:</strong> jogos em 1080p e 1440p;</li>
-<li><strong>Desempenho alto:</strong> jogos em 1440p e 4K com ray tracing;</li>
-<li><strong>Topo de linha para consumidores:</strong> renderização profissional e AI local.</li>
+<li>
+<p><strong>NVIDIA:</strong> lidera em desempenho absoluto e no mercado de computação acelerada, as GPUs para consumidores seguem a linha GeForce;</p>
+</li>
+<li>
+<p><strong>AMD:</strong> compete com a linha Radeon para consumidores, possui drivers de código aberto integrados ao kernel do Linux, facilitando a instalação e a estabilidade do sistema;</p>
+</li>
+<li>
+<p><strong>Intel:</strong> voltou ao mercado de GPUs discretas em 2022 com a linha Arc, após décadas vendendo apenas gráficos integrados.</p>
+</li>
 </ul>
-<p>Para servidores e machine learning, a NVIDIA oferece GPUs dedicadas a data center que dominam os laboratórios de IA de grande porte, com sucessivas gerações lançadas nos últimos anos. O ecossistema de software da NVIDIA, o <em>CUDA</em>, é a plataforma mais madura para computação em GPU e a principal razão pela qual a empresa mantém vantagem no mercado profissional. No ecossistema Linux, a NVIDIA é conhecida por seus drivers proprietários, que oferecem a melhor performance, mas podem exigir configurações manuais.</p>
-<p>A <strong>AMD</strong> compete com a linha Radeon para consumidores e com as GPUs Instinct para servidores. Suas GPUs oferecem boa relação custo-desempenho em jogos, e a AMD investiu nos últimos anos em construir um ecossistema de software alternativo ao CUDA, chamado ROCm. Já a AMD possui drivers de código aberto integrados ao kernel do Linux, facilitando a instalação e a estabilidade do sistema.</p>
-<p>A <strong>Intel</strong> voltou ao mercado de GPUs discretas em 2022 com a linha Arc, após décadas vendendo apenas gráficos integrados. Os primeiros lançamentos tiveram desempenho inconsistente, mas melhorias de driver estabilizaram as placas ao longo do tempo, o Arc ainda não compete com o topo das linhas NVIDIA e AMD, mas é uma opção legítima em faixas de entrada e intermediário.</p>
 <h2 id="tdp-e-resfriamento"><a class="header" href="#tdp-e-resfriamento">TDP e resfriamento</a></h2>
 <p>A GPU é frequentemente o componente que mais consome energia dentro de um computador. GPUs de alto desempenho para consumidores têm TDPs entre 150 W e 450 W. GPUs de data center de ponta já ultrapassam a marca de 700 W, e essa tendência de alta segue a cada nova geração.</p>
-<p>Esse calor precisa ser dissipado. Placas de vídeo discretas vêm com sistemas de resfriamento próprios: coolers com dois ou três ventiladores são o padrão em GPUs de médio e alto desempenho. Em servidores, as GPUs são refrigeradas por fluxo de ar forçado pelo gabinete ou, em instalações de grande escala, por resfriamento líquido.</p>
+<p>Esse calor precisa ser dissipado. Placas de vídeo discretas vêm com sistemas de resfriamento próprios: coolers com dois ou três ventiladores são o padrão em GPUs de médio e alto desempenho.</p>
 <p>O consumo de energia da GPU também é o principal fator na escolha da fonte de alimentação. Montar um computador com uma GPU de alta performance exige uma fonte com potência suficiente e, muitas vezes, conectores de alimentação específicos para a placa, além dos que já vão para o processador e os demais componentes.</p>
-<h2 id="a-gpu-no-contexto-do-sistema"><a class="header" href="#a-gpu-no-contexto-do-sistema">A GPU no contexto do sistema</a></h2>
-<p>Assim como o processador raramente é o único gargalo, a GPU também não opera no vácuo. Uma GPU potente alimentada por um processador antigo pode desperdiçar seu potencial em jogos que dependem de cálculos de física e inteligência artificial na CPU. Pouca VRAM limita a resolução das texturas que podem ser carregadas. Uma fonte de alimentação subdimensionada pode causar instabilidade sob carga total.</p>
-<p>O desempenho real é sempre o resultado do sistema como um todo, a GPU define o teto do que é possível renderizar e calcular em paralelo, mas são os outros componentes que determinam se esse teto será alcançado na prática.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="fonte-de-alimentação"><a class="header" href="#fonte-de-alimentação">Fonte de Alimentação</a></h1>
-<p>Cada componente dentro do computador precisa de energia elétrica para funcionar: o processador, a memória RAM, o armazenamento e os dispositivos conectados dependem de tensões específicas, estáveis e contínuas. A fonte de alimentação é o componente responsável por pegar a corrente da tomada e transformá-la em algo que o hardware entende.</p>
-<h2 id="o-que-ela-faz-1"><a class="header" href="#o-que-ela-faz-1">O que ela faz</a></h2>
 <p>A tomada elétrica fornece corrente alternada (CA), o tipo de energia que oscila de direção dezenas de vezes por segundo e que chega às casas em tensões de 110 V ou 220 V conforme a região. O hardware do computador, porém, opera com corrente contínua (CC), em tensões muito mais baixas: 3,3 V, 5 V e 12 V, dependendo do componente.</p>
 <p>A fonte converte um tipo no outro, ela retifica a corrente alternada, regula a tensão de saída para os valores esperados e distribui energia pelos cabos que alimentam a placa-mãe, o processador e outros componentes.</p>
 <h2 id="eficiência-e-o-selo-80-plus"><a class="header" href="#eficiência-e-o-selo-80-plus">Eficiência e o selo 80 Plus</a></h2>
@@ -993,7 +892,7 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <h2 id="seletor-de-voltagem"><a class="header" href="#seletor-de-voltagem">Seletor de voltagem</a></h2>
 <p>Algumas fontes possuem na parte traseira uma pequena chave com as opções 110 V e 220 V. Esse seletor indica a tensão da rede elétrica à qual a fonte será conectada, e deve ser ajustado conforme a tensão disponível na tomada da região.</p>
 <p>Ligar a fonte com o seletor na posição errada é um erro grave, uma fonte configurada para 220 V em uma tomada de 110 V simplesmente não liga. O caminho inverso é mais perigoso, uma fonte ajustada para 110 V conectada a uma rede de 220 V recebe o dobro da tensão esperada, o que pode danificá-la permanentemente e, em alguns casos, causar curto-circuito ou incêndio.</p>
-<p>Fontes mais modernas eliminam esse risco com a tecnologia de chaveamento automático, chamada de bivolt automático, que detecta a tensão da rede e se ajusta sozinha, operando em qualquer tensão entre 100 V e 240 V sem nenhuma intervenção do usuário. Nessas fontes, o seletor não existe. Esse recurso costuma vir acompanhado do PFC ativo (<em>Power Factor Correction</em>), uma tecnologia relacionada que melhora a qualidade elétrica da fonte, mas trata-se de um conceito distinto, que será visto com mais detalhe em capítulo próprio.</p>
+<p>Fontes mais modernas eliminam esse risco com a tecnologia de chaveamento automático, chamada de bivolt automático, que detecta a tensão da rede e se ajusta sozinha, operando em qualquer tensão entre 100 V e 240 V sem nenhuma intervenção do usuário. Nessas fontes, o seletor não existe.</p>
 <h2 id="conectores"><a class="header" href="#conectores">Conectores</a></h2>
 <p>A fonte distribui energia pelo sistema por meio de cabos com conectores específicos para cada tipo de componente, cada conector tem formato, número de pinos e tensões fornecidas diferentes, o que reduz a chance de ligações incorretas por engano.</p>
 <ul>
@@ -1015,10 +914,7 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="resfriamento"><a class="header" href="#resfriamento">Resfriamento</a></h1>
-<p>Todo componente eletrônico que realiza trabalho gera calor como subproduto. Se esse calor não for removido, os componentes esquentam além dos limites projetados, causando travamentos, danos permanentes ou falhas. O resfriamento é o sistema responsável por manter cada componente dentro da sua faixa segura de temperatura.</p>
-<h2 id="como-o-calor-sai-do-componente"><a class="header" href="#como-o-calor-sai-do-componente">Como o calor sai do componente</a></h2>
-<p>O primeiro elo da cadeia é o contato físico entre o componente e o sistema de resfriamento. O processador possui uma tampa metálica chamada IHS (<em>Integrated Heat Spreader</em>) que distribui o calor da área ativa do chip por uma superfície maior. Sobre essa tampa vai uma camada fina de pasta térmica, um material com alta condutividade que preenche as microscópicas imperfeições entre as superfícies metálicas, eliminando bolsas de ar que agiriam como isolante.</p>
-<p>Sem pasta térmica, o contato real entre chip e dissipador seria apenas nos pontos mais altos das duas superfícies. O uso deste composto reduz drasticamente a resistência térmica e tem impacto direto nas temperaturas de operação.</p>
+<p>Todo componente eletrônico converte parte da energia em calor. À medida que diversos componentes são instalados dentro de um mesmo espaço, esse calor se acumula e pode diminuir a vida útil desses equipamentos; portanto, o uso de resfriamento é extremamente necessário</p>
 <h2 id="ventoinhas"><a class="header" href="#ventoinhas">Ventoinhas</a></h2>
 <p>As ventoinhas movem o ar: seja puxando ar fresco para dentro do gabinete, empurrando ar quente para fora ou forçando o fluxo de ar sobre as aletas de um dissipador.</p>
 <ul>
@@ -1030,9 +926,8 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </ul>
 <h2 id="tipos-de-resfriamento"><a class="header" href="#tipos-de-resfriamento">Tipos de resfriamento</a></h2>
 <h3 id="resfriamento-a-ar"><a class="header" href="#resfriamento-a-ar">Resfriamento a ar</a></h3>
-<p>É o modelo mais comum e suficiente para a maioria dos sistemas. Um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.</p>
+<p>É o modelo mais comum e suficiente para a maioria dos sistemas. O cooler é um dissipador metálico é fixado sobre o componente, e uma ou duas ventoinhas forçam ar pelas suas aletas.</p>
 <p>Dentro do dissipador, é comum encontrar <em>heat pipes</em>: tubos selados contendo um fluido que evapora na parte quente, migra para a parte fria pelas aletas, condensa e retorna pela parede interna do tubo por capilaridade.</p>
-<p>[Image of heat pipe working principle]</p>
 <p>Os principais formatos de cooler a ar:</p>
 <ul>
 <li><strong>Baixo perfil:</strong> compacto e plano, adequado para gabinetes pequenos (ITX);</li>
@@ -1040,7 +935,7 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <li><strong>Torre dupla (<em>push-pull</em>):</strong> duas torres de aletas com ventoinhas em ambos os lados, maximizando o fluxo através das aletas.</li>
 </ul>
 <h3 id="resfriamento-a-líquido"><a class="header" href="#resfriamento-a-líquido">Resfriamento a líquido</a></h3>
-<p>Em vez de depender apenas do ar, o water cooling usa um líquido (geralmente água com aditivos antialga e anticorrosivo). Um bloco metálico (waterblock) fica em contato direto com o componente; o líquido circula por ele, absorve o calor e é bombeado até um radiador, onde é dissipado para o ar pelas ventoinhas.</p>
+<p>Em vez de depender apenas do ar, o water cooler usa um líquido (geralmente água com aditivos antialga e anticorrosivo). Um bloco metálico (water block) fica em contato direto com o componente; o líquido circula por ele, absorve o calor e é bombeado até um radiador, onde é dissipado para o ar pelas ventoinhas.</p>
 <ul>
 <li><strong>AIO (<em>All-In-One</em>):</strong> circuito fechado, com bomba e reservatório integrados no cabeçote; fácil de instalar e sem manutenção.</li>
 <li><strong>Loop customizado:</strong> cada componente é escolhido e montado separadamente (reservatório, bomba, tubos, bloco e radiador). Exige conhecimento técnico maior, é mais caro e necessita de manutenções periódicas.</li>
@@ -1052,35 +947,30 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <h2 id="mapa-de-calor"><a class="header" href="#mapa-de-calor">Mapa de calor</a></h2>
 <p>As regiões críticas em um gabinete típico incluem a área da CPU (topo da placa-mãe), área da placa de vídeo, fonte de alimentação e a região traseira superior. Entender este mapa orienta o posicionamento estratégico de ventoinhas adicionais.</p>
 <h2 id="temperaturas-e-monitoramento-no-linux"><a class="header" href="#temperaturas-e-monitoramento-no-linux">Temperaturas e Monitoramento no Linux</a></h2>
-<p>Quando o processador se aproxima do seu limite térmico de fábrica (Tjunction ou Tmax), ele reduz automaticamente sua velocidade de operação para gerar menos calor e evitar a queima, um mecanismo de proteção chamado <em>thermal throttling</em>.</p>
+<p>Quando o processador se aproxima do seu limite térmico de fábrica, ele reduz automaticamente sua velocidade de operação para gerar menos calor e evitar a queima, um mecanismo de proteção chamado <em>thermal throttling</em>.</p>
 <p>No Linux, o monitoramento dessas métricas não depende de softwares pesados proprietários. O próprio sistema operacional expõe esses dados diretamente através do sistema de arquivos virtual <code>/sys/class/hwmon/</code>. Na prática, o administrador ou usuário utiliza ferramentas de terminal consolidadas, como o pacote <code>lm-sensors</code> (através do comando <code>sensors</code>), ou utilitários gráficos da sua distribuição para acompanhar as temperaturas em tempo real e diagnosticar problemas de arrefecimento.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="monitor"><a class="header" href="#monitor">Monitor</a></h1>
-<p>Cada imagem que aparece na tela passou antes por um longo caminho dentro do computador: o processador calculou, a placa de vídeo renderizou, e o monitor transformou tudo isso em luz. É o único componente com o qual o usuário interage visualmente o tempo todo, mas raramente se pensa no que acontece dentro dele para que uma imagem apareça ali.</p>
-<h2 id="o-que-é-um-monitor"><a class="header" href="#o-que-é-um-monitor">O que é um monitor?</a></h2>
 <p>O monitor é o dispositivo de saída visual do computador. Ele recebe um sinal do sistema, seja analógico ou digital, e o converte em uma imagem formada por milhões de pequenos pontos de luz chamados pixels. Cada pixel é composto por três subpixels nas cores primárias da luz: vermelho, verde e azul. A combinação dessas três intensidades em cada ponto é capaz de reproduzir uma ampla gama de cores visíveis ao olho humano.</p>
 <p>A imagem não é estática, o monitor redesenha a tela dezenas de vezes por segundo, criando a ilusão de movimento. A frequência com que isso acontece é chamada de taxa de atualização.</p>
 <h2 id="tecnologias-de-painel"><a class="header" href="#tecnologias-de-painel">Tecnologias de painel</a></h2>
 <p>A forma como os pixels são construídos e iluminados define boa parte das características do monitor. Quatro tecnologias são relevantes no mercado atual, cada uma com características e casos de uso distintos.</p>
 <p>Antes de entrar nas variações, vale entender dois termos que aparecem com frequência:</p>
 <ul>
-<li><strong>LCD (<em>Liquid Crystal Display</em>):</strong> é a base da maioria dos monitores: a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada backlight.</li>
-<li><strong>LED:</strong> refere-se ao tipo de <em>backlight</em>, não a uma tecnologia de painel separada: monitores chamados de “LED” simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. É uma forma de iluminação mais eficiente, que permite designs mais finos e melhor precisão de cores em comparação com os modelos fluorescentes.</li>
+<li><strong>LCD (<em>Liquid Crystal Display</em>):</strong> a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada <em>backlight</em>.</li>
+<li><strong>LED:</strong> monitores chamados de “LED” simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. Sendo mais eficiente, que permite designs mais finos e melhor precisão de cores.</li>
 </ul>
 <h3 id="ips"><a class="header" href="#ips">IPS</a></h3>
 <p>O painel IPS (<em>In-Plane Switching</em>) é conhecido pela qualidade de cor e pelos ângulos de visão amplos. As cores permanecem precisas mesmo quando o monitor é visto de lado ou de cima, sem o desvio perceptível que outros painéis apresentam. Por isso, é a tecnologia preferida em trabalhos que exigem fidelidade visual: edição de fotos, design gráfico e produção de vídeo.</p>
 <ul>
 <li><strong>Vantagens:</strong> cores precisas e consistentes, ângulos de visão excelentes;</li>
 <li><strong>Desvantagens:</strong> historicamente mais caro e com tempo de resposta um pouco maior que painéis TN, embora os modelos modernos tenham reduzido bastante essa diferença;</li>
-<li><strong>Uso típico:</strong> criação de conteúdo, uso profissional, consumo geral de alta qualidade.</li>
 </ul>
 <h3 id="tn"><a class="header" href="#tn">TN</a></h3>
-<p>O painel TN (<em>Twisted Nematic</em>) é a tecnologia LCD mais antiga entre as apresentadas e ainda presente principalmente em monitores voltados a jogos de entrada e intermediários. Seu diferencial é o tempo de resposta baixo, que pode chegar a 1 ms nos melhores modelos, reduzindo o borrão em cenas de movimento rápido.</p>
-<p>Em contrapartida, os ângulos de visão são ruins: as cores se distorcem visivelmente ao olhar o painel de qualquer posição que não seja diretamente de frente, a reprodução de cores também é inferior ao IPS.</p>
+<p>O painel TN (<em>Twisted Nematic</em>) é a tecnologia LCD mais antiga entre as apresentadas e ainda presente principalmente em monitores voltados a jogos de entrada e intermediários. Seu diferencial é o tempo de resposta baixo, que pode chegar a 1 ms nos melhores modelos, reduzindo o borrão em cenas de movimento rápido. Em contrapartida, os ângulos de visão são ruins: as cores se distorcem visivelmente ao olhar o painel de qualquer posição que não seja diretamente de frente, a reprodução de cores também é inferior ao IPS.</p>
 <ul>
 <li><strong>Vantagens:</strong> tempo de resposta muito baixo, custo reduzido;</li>
 <li><strong>Desvantagens:</strong> ângulos de visão limitados, qualidade de cor inferior;</li>
-<li><strong>Uso típico:</strong> jogos competitivos onde velocidade importa mais que fidelidade visual.</li>
 </ul>
 <h3 id="va"><a class="header" href="#va">VA</a></h3>
 <p>O painel VA (<em>Vertical Alignment</em>) ocupa o meio-termo entre IPS e TN, seu destaque é a taxa de contraste nativa, significativamente maior que a das outras tecnologias. Isso se traduz em pixels capazes de bloquear melhor a luz de fundo, produzindo regiões escuras com muito mais fidelidade na tela, e uma percepção de imagem mais tridimensional, especialmente em ambientes com pouca luz.</p>
@@ -1088,7 +978,6 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <ul>
 <li><strong>Vantagens:</strong> contraste elevado, maior capacidade de escurecer pixels e reproduzir a ausência de luz com fidelidade, boa experiência em filmes e conteúdo cinematográfico;</li>
 <li><strong>Desvantagens:</strong> <em>smearing</em> em alguns modelos, desempenho em jogos inferior ao TN e IPS modernos;</li>
-<li><strong>Uso típico:</strong> consumo de filmes e séries, uso geral com ênfase em qualidade visual.</li>
 </ul>
 <h3 id="oled"><a class="header" href="#oled">OLED</a></h3>
 <p>O OLED (<em>Organic Light-Emitting Diode</em>) representa uma mudança estrutural em relação às tecnologias anteriores. Nos painéis LCD convencionais (IPS, TN e VA), os pixels não emitem luz: eles filtram uma iluminação de fundo chamada <em>backlight</em>. No OLED, cada pixel é sua própria fonte de luz e pode ser apagado individualmente.</p>
@@ -1097,9 +986,8 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <ul>
 <li><strong>Vantagens:</strong> contraste infinito, pixels que se apagam completamente eliminando qualquer emissão de luz, cores excepcionais, tempo de resposta mínimo;</li>
 <li><strong>Desvantagens:</strong> custo elevado, risco de <em>burn-in</em> em uso prolongado com imagens estáticas;</li>
-<li><strong>Uso típico:</strong> entusiastas, jogos de alto nível, edição profissional de vídeo e fotografia.</li>
 </ul>
-<h3 id="hdr-high-dynamic-range"><a class="header" href="#hdr-high-dynamic-range">HDR (<em>High Dynamic Range</em>)</a></h3>
+<h3 id="hdr"><a class="header" href="#hdr">HDR</a></h3>
 <p>O HDR é uma tecnologia que amplia a gama de cores e o contraste, permitindo que as partes claras da imagem sejam mais brilhantes e as escuras mais profundas, resultando em uma imagem mais próxima da realidade.</p>
 <h2 id="resolução-e-o-ambiente-linux"><a class="header" href="#resolução-e-o-ambiente-linux">Resolução e o Ambiente Linux</a></h2>
 <p>A resolução define quantos pixels compõem a imagem. Mais pixels significam mais detalhes visíveis, mas também maior exigência da placa de vídeo para renderizar. Em sistemas Linux, o gerenciamento de múltiplos monitores e resoluções é feito diretamente por servidores gráficos como o <strong>Xorg</strong> ou o moderno <strong>Wayland</strong>, que lidam com o escalonamento da interface para que os elementos não fiquem pequenos demais em telas de alta densidade.</p>
@@ -1111,11 +999,11 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 </ul>
 <h2 id="taxa-de-atualização"><a class="header" href="#taxa-de-atualização">Taxa de atualização</a></h2>
 <p>A taxa de atualização é medida em hertz (Hz) e indica quantas vezes por segundo o monitor redesenha a imagem. Um monitor de 60 Hz exibe até 60 quadros por segundo, um de 144 Hz até 144.</p>
-<p>Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos ou na própria fluidez ao arrastar janelas na interface gráfica, a diferença para 144 Hz é perceptível: o movimento parece mais suave e a resposta imediata. Monitores de 165 Hz, 240 Hz e até 360 Hz existem no mercado, voltados a jogadores competitivos.</p>
+<p>Para tarefas de escritório, navegação e consumo de conteúdo, 60 Hz é suficiente. Em jogos ou na própria fluidez ao arrastar janelas na interface gráfica, a diferença para 144 Hz é perceptível: o movimento parece mais suave e a resposta imediata.</p>
 <p>A taxa de atualização do monitor só se traduz em benefício real se a placa de vídeo conseguir entregar quadros suficientes por segundo. Se uma placa renderiza apenas 60 quadros por segundo em um monitor de 144 Hz, o monitor repetirá os quadros captados, operando visualmente à taxa da placa.</p>
 <h2 id="tempo-de-resposta"><a class="header" href="#tempo-de-resposta">Tempo de resposta</a></h2>
 <p>O tempo de resposta indica quanto tempo um pixel leva para mudar de uma cor para outra, medido em milissegundos (ms). Tempos de resposta altos resultam em <em>ghosting</em>: um rastro visível atrás de objetos em movimento rápido.</p>
-<p>Para uso geral, qualquer valor abaixo de 5 ms é imperceptível, já para jogos rápidos, valores entre 1 e 2 ms são desejáveis. Fabricantes frequentemente divulgam o menor tempo de resposta possível nas especificações, medido em condições ideais, geralmente entre transições de cinza para cinza (GtG).</p>
+<p>Para uso geral, qualquer valor abaixo de 5 ms é imperceptível, já para jogos rápidos, valores entre 1 e 2 ms são desejáveis. Fabricantes frequentemente divulgam o menor tempo de resposta possível nas especificações, medido em condições ideais, geralmente entre transições de cinza para cinza.</p>
 <h2 id="sincronização-adaptativa"><a class="header" href="#sincronização-adaptativa">Sincronização adaptativa</a></h2>
 <p>Quando a placa de vídeo entrega quadros em ritmo variável e o monitor os exibe em intervalos fixos, o resultado pode ser o <em>tearing</em>: uma divisão horizontal visível na imagem, como se dois quadros diferentes fossem exibidos ao mesmo tempo. As tecnologias de sincronização adaptativa resolvem esse problema.</p>
 <ul>
@@ -1146,41 +1034,41 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <h1 id="periféricos"><a class="header" href="#periféricos">Periféricos</a></h1>
 <p>Dispositivos que conectam o sistema ao usuário e ao ambiente ao redor, transformando ações físicas em dados e dados em saída perceptível.</p>
 <h2 id="dispositivos-de-entrada-e-saída"><a class="header" href="#dispositivos-de-entrada-e-saída">Dispositivos de entrada e saída</a></h2>
-<p>Antes de falar sobre periféricos específicos, vale entender a distinção fundamental que os organiza: a diferença entre entrada e saída.</p>
 <ul>
-<li><strong>Dispositivo de entrada:</strong> envia informação para dentro do computador, captura algo do mundo externo: um movimento, uma pressão, um som, uma imagem e converte esse estímulo em dados digitais que o sistema pode processar. O teclado é o exemplo mais direto, cada tecla pressionada gera um código que o sistema operacional interpreta como um caractere ou comando;</li>
-<li><strong>Dispositivo de saída:</strong> faz o caminho inverso, recebe dados processados pelo computador e os converte em algo perceptível ao usuário ou ao ambiente. O monitor transforma sinais digitais em luz e as caixas de som convertem dados em ondas sonoras.</li>
-<li><strong>Dispositivos de entrada e saída (E/S):</strong> alguns dispositivos operam nos dois sentidos simultaneamente. Uma tela sensível ao toque exibe imagens como dispositivo de saída e detecta toques como dispositivo de entrada.</li>
+<li>
+<p><strong>Dispositivo de entrada:</strong> envia informação para dentro do computador, captura algo do mundo externo: um movimento, uma pressão, um som, uma imagem e converte esse estímulo em dados digitais que o sistema pode processar. O teclado é o exemplo mais direto, cada tecla pressionada gera um código que o sistema operacional interpreta como um caractere ou comando;</p>
+</li>
+<li>
+<p><strong>Dispositivo de saída:</strong> faz o caminho inverso, recebe dados processados pelo computador e os converte em algo perceptível ao usuário ou ao ambiente. O monitor transforma sinais digitais em luz e as caixas de som convertem dados em ondas sonoras.</p>
+</li>
+<li>
+<p><strong>Dispositivos de entrada e saída (E/S):</strong> alguns dispositivos operam nos dois sentidos simultaneamente. Uma tela sensível ao toque exibe imagens como dispositivo de saída e detecta toques como dispositivo de entrada.</p>
+</li>
 </ul>
 <h2 id="dispositivos-de-entrada"><a class="header" href="#dispositivos-de-entrada">Dispositivos de entrada</a></h2>
-<h3 id="teclado-e-o-layout-de-teclas"><a class="header" href="#teclado-e-o-layout-de-teclas">Teclado e o Layout de Teclas</a></h3>
+<h3 id="teclado"><a class="header" href="#teclado">Teclado</a></h3>
 <p>O teclado é o periférico de entrada mais antigo ainda em uso universal. Cada tecla é um interruptor: ao ser pressionada, fecha um circuito e envia um código para o sistema operacional, que interpreta qual caractere foi digitado.</p>
-<p>No Linux, um dos primeiros passos de configuração é definir o mapa de layout correto do teclado. Os mais comuns no Brasil são o <strong>ABNT2</strong> (que possui a tecla Ç e o sotaque circunflexo junto ao número 1) e o <strong>Inglês Internacional (US)</strong>, que exige combinações de teclas para gerar acentuações.</p>
+<p>No Linux, um dos primeiros passos de configuração é definir o mapa de layout correto do teclado. Os mais comuns no Brasil são o <strong>ABNT2</strong> (que possui a tecla Ç e o circunflexo junto ao número 1), o <strong>Inglês Internacional (US)</strong>, que exige combinações de teclas para gerar acentuações.</p>
 <p>Dois tipos principais de construção dominam o mercado:</p>
 <ul>
-<li><strong>Membrana:</strong> uma camada plástica flexível que comprime ao toque. São silenciosos, baratos e presentes na maioria dos teclados de escritório;</li>
-<li><strong>Mecânico:</strong> um switch independente sob cada tecla, com feedback tátil ou sonoro mais pronunciado. Dentro dessa categoria, os switches variam conforme o comportamento:
-<ul>
-<li><strong>Linear:</strong> resistência uniforme ao longo de todo o percurso, sem ponto de clique;</li>
-<li><strong>Tátil:</strong> oferece um ponto de resistência no meio do percurso, sem som audível;</li>
-<li><strong>Clicky:</strong> adiciona um clique audível no ponto de atuação.</li>
-</ul>
-</li>
-<li><strong>Magnético:</strong> sensores detectam a posição de um magneto na tecla sem contato elétrico direto. Permitem ajustar o ponto de ativação;</li>
+<li><strong>Membrana:</strong> uma camada plástica flexível que comprime ao toque, são silenciosos e baratos;</li>
+<li><strong>Mecânico:</strong> um switch independente sob cada tecla, com feedback tátil ou sonoro mais pronunciado.</li>
+<li><strong>Magnético:</strong> sensores detectam a posição de um magneto na tecla sem contato elétrico direto.</li>
 <li><strong>Óptico:</strong> a ativação é detectada por um feixe de luz interrompido, em vez de contato elétrico;</li>
 <li><strong>Capacitivo:</strong> medem a mudança de capacitância ao toque, sem contato elétrico direto.</li>
 </ul>
-<p>A conexão com o computador é feita por USB com fio ou por radiofrequência e Bluetooth em modelos sem fio.</p>
+<p>A conexão com o computador é feita por: USB, fio, radiofrequência e Bluetooth.</p>
 <h3 id="mouse"><a class="header" href="#mouse">Mouse</a></h3>
 <p>O mouse traduz movimento físico em movimento do cursor na tela. Um sensor ilumina a superfície abaixo e fotografa microscópicas variações a milhares de vezes por segundo, calculando a direção e a velocidade do deslocamento.</p>
-<p>A precisão do sensor é medida em DPI (<em>dots per inch</em> ou pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento. A taxa de <em>polling</em> define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo.</p>
+<p>A precisão do sensor é medida em DPI (pontos por polegada): quanto maior o DPI, mais sensível o mouse ao menor movimento. A taxa de <em>polling</em> define quantas vezes por segundo o mouse reporta sua posição ao computador. Um mouse com taxa de 1.000 Hz atualiza a cada milissegundo.</p>
 <h3 id="outros-dispositivos-de-entrada"><a class="header" href="#outros-dispositivos-de-entrada">Outros dispositivos de entrada</a></h3>
 <ul>
 <li><strong>Trackpad:</strong> presente em todos os notebooks, reproduz as funções do mouse por meio de gestos com os dedos sobre uma superfície sensível ao toque;</li>
-<li><strong>Mesa digitalizadora e Displays Interativos:</strong> substitui o mouse por uma caneta que detecta pressão e inclinação. Podem ser mesas tradicionais (onde você risca olhando para o monitor) ou displays interativos (telas de alta fidelidade feitas para desenhar diretamente sobre elas);</li>
+<li><strong>Mesa digitalizadora:</strong> substitui o mouse por uma caneta que detecta pressão e inclinação. Podem ser mesas tradicionais (onde você risca olhando para o monitor) ou displays interativos (telas de alta fidelidade feitas para desenhar diretamente sobre elas);</li>
 <li><strong>Microfone:</strong> captura áudio analógico e o converte em sinal digital, classificando-se como dispositivo de entrada de áudio;</li>
-<li><strong>Controles de jogo:</strong> periféricos especializados (joysticks, volantes) que enviam ao sistema os estados dos botões e eixos em tempo real. No Linux, a maior parte desses dispositivos é reconhecida nativamente pelo próprio Kernel através de drivers de código aberto.</li>
+<li><strong>Controles de jogo:</strong> periféricos especializados (joysticks, volantes) que enviam ao sistema os estados dos botões e eixos em tempo real.</li>
 </ul>
+<p>No Linux, a maior parte desses dispositivos é reconhecida nativamente pelo próprio Kernel através de drivers de código aberto.</p>
 <h2 id="dispositivos-de-saída"><a class="header" href="#dispositivos-de-saída">Dispositivos de saída</a></h2>
 <h3 id="monitor-1"><a class="header" href="#monitor-1">Monitor</a></h3>
 <p>O monitor é o dispositivo de saída visual principal, responsável por converter o sinal enviado pela placa de vídeo em imagem visível, geralmente através de interfaces como HDMI ou DisplayPort. Cada imagem é formada por milhões de pixels que combinados reproduzem uma ampla gama de cores. A qualidade dessa conversão define em grande parte a experiência visual do usuário com o sistema.</p>
@@ -1195,11 +1083,11 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <p>A impressora recebe dados digitais e os transfers para um substrato físico, geralmente papel. Duas tecnologias dominam o mercado:</p>
 <ul>
 <li><strong>Jato de tinta (inkjet):</strong> projeta gotículas microscópicas de tinta colorida sobre o papel. Custo de aquisição menor, mas custo por página mais alto pelo preço dos cartuchos;</li>
-<li><strong>Laser:</strong> usa um feixe de laser para carregar eletrostaticamente um tambor, que atrai um pó fino chamado toner. O papel absorve o toner, fundido pelo calor. Mais rápida para volumes altos, com custo por página menor em uso intenso. No Linux, a comunicação com impressoras é largamente gerenciada pelo subsistema <strong>CUPS</strong> (<em>Common UNIX Printing System</em>).</li>
+<li><strong>Laser:</strong> usa um feixe de laser para carregar eletrostaticamente um tambor, que atrai um pó fino chamado toner. O papel absorve o toner, fundido pelo calor. Mais rápida para volumes altos, com custo por página menor em uso intenso. i</li>
 </ul>
+<p>No Linux, a comunicação com impressoras é largamente gerenciada pelo subsistema <strong>CUPS</strong> (<em>Common UNIX Printing System</em>).</p>
 <h2 id="armazenamento-externo"><a class="header" href="#armazenamento-externo">Armazenamento externo</a></h2>
 <p>Diferente dos dispositivos internos, fixados dentro do gabinete, o armazenamento externo conecta-se por interfaces como USB ou Thunderbolt e pode ser facilmente transportado entre máquinas. É uma categoria que une portabilidade e persistência.</p>
-<p><em>Nota de contexto Linux:</em> Ao conectar uma unidade externa no Linux, o sistema realiza a operação de <strong>montagem</strong> (<em>mount</em>) do dispositivo em um diretório do sistema para torná-lo acessível ao usuário, reconhecendo sistemas de arquivos comuns como ext4, NTFS ou exFAT.</p>
 <ul>
 <li><strong>Pendrive:</strong> a forma mais compacta e barata de armazenamento externo. Usa chips de memória flash e conecta-se por USB;</li>
 <li><strong>SSD externo:</strong> segue o mesmo princípio do pendrive, mas em formato maior e com desempenho muito superior, alcançando velocidades altíssimas via USB 3.2 ou Thunderbolt;</li>
@@ -1207,98 +1095,114 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <li><strong>Cartão de memória (SD / microSD):</strong> armazenamento compacto usado em câmeras e dispositivos móveis. A velocidade é classificada por classes que indicam a taxa mínima garantida de escrita.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="do-uso-ao-núcleo-as-camadas-do-software"><a class="header" href="#do-uso-ao-núcleo-as-camadas-do-software">Do Uso ao Núcleo: as Camadas do Software</a></h1>
-<p>Com o hardware entendido, é hora de subir uma camada. Este capítulo constrói a base de software que transforma os componentes já vistos em um sistema que alguém realmente usa, entende e escolhe como quer configurar.</p>
-<p>Começamos pela interface, o ponto onde o humano encontra a máquina. Comparamos a CLI, direta e baseada em texto, a GUI, visual e guiada por metáforas do mundo real, e a TUI, o meio-termo que une a leveza da linha de comando ao conforto de menus e janelas.</p>
-<p>Em seguida, descemos ao que sustenta qualquer uma dessas interfaces por trás das cortinas: o kernel. É ele quem arbitra o acesso ao processador, à memória e ao restante do hardware, e quem decide, em arquiteturas diferentes — monolítica, microkernel ou híbrida —, o que roda com privilégio total e o que fica isolado.</p>
-<p>Depois, tratamos de uma camada menos técnica e mais filosófica: o que torna um software livre, e por que essa distinção nunca foi sobre preço. Vemos como a filosofia GNU, o copyleft e a GPL moldaram o ecossistema onde o Linux, como conhecemos hoje, pôde nascer.</p>
-<p>Por fim, chegamos à camada prática que conecta tudo isso ao dia a dia: os pacotes e repositórios, o mecanismo que leva o software do servidor remoto até o disco do usuário, resolvendo dependências e garantindo que cada peça chegue íntegra e compatível com o sistema.</p>
+<h1 id="software-1"><a class="header" href="#software-1">Software</a></h1>
+<p>O próximo passo, depois de entender melhor como funciona o hardware, é estudar como funciona o software. Este capítulo vai se aprofundar em alguns conceitos mais gerais e comuns sobre o assunto. A partir daqui, o livro vai focar mais no Linux e naquilo que um usuário precisa saber para poder usar o sistema confortavelmente.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="software-livre-e-filosofia-gnu"><a class="header" href="#software-livre-e-filosofia-gnu">Software Livre e Filosofia GNU</a></h1>
-<p>Se o hardware é a estrutura física que viabiliza a computação, e o sistema operacional é o que organiza seus recursos, o software é o pensamento transformado em código. Mas o software não é apenas uma ferramenta técnica; ele é um produto de escolhas legais e políticas. A forma como o código é distribuído define o que o usuário pode ou não fazer em sua própria máquina, estabelecendo a fronteira entre o controle do usuário sobre o sistema e o controle do sistema sobre o usuário.</p>
 <h2 id="o-que-é-o-software-livre"><a class="header" href="#o-que-é-o-software-livre">O que é o Software Livre?</a></h2>
-<p>O conceito de Software Livre não trata de preço, mas de liberdade (a clássica distinção em inglês entre <em>free beer</em> e <em>free speech</em>). Um software é considerado livre quando sua licença garante aos usuários quatro liberdades fundamentais, formalizadas por Richard Stallman:</p>
+<p>O conceito de Software Livre não trata de preço, mas de liberdade. Um software é considerado livre quando sua licença garante aos usuários quatro liberdades fundamentais, formalizadas por Richard Stallman:</p>
 <ul>
-<li><strong>Liberdade 0:</strong> A liberdade de executar o programa para qualquer propósito.</li>
-<li><strong>Liberdade 1:</strong> A liberdade de estudar como o programa funciona e adaptá-lo às suas necessidades. O acesso ao código-fonte é um pré-requisito para isso.</li>
-<li><strong>Liberdade 2:</strong> A liberdade de redistribuir cópias de modo que você possa ajudar o próximo.</li>
-<li><strong>Liberdade 3:</strong> A liberdade de distribuir cópias de suas versões modificadas a terceiros. Desta forma, toda a comunidade tem a chance de se beneficiar de suas alterações.</li>
+<li><strong>Liberdade 0:</strong> executar o programa para qualquer propósito;</li>
+<li><strong>Liberdade 1:</strong> estudar como o programa funciona e adaptá-lo às suas necessidades;</li>
+<li><strong>Liberdade 2:</strong> redistribuir cópias de modo que você possa ajudar o próximo;</li>
+<li><strong>Liberdade 3:</strong> distribuir cópias de suas versões modificadas a terceiros.</li>
 </ul>
 <p>Se um programa priva o usuário de qualquer uma dessas liberdades, ele é classificado como software proprietário ou privativo. Nesse modelo, o desenvolvedor detém o controle sobre o software e, por extensão, sobre o que os usuários podem fazer com ele. No modelo livre, o controle pertence inteiramente aos usuários, individual e coletivamente.</p>
 <h2 id="a-filosofia-gnu-e-richard-stallman"><a class="header" href="#a-filosofia-gnu-e-richard-stallman">A Filosofia GNU e Richard Stallman</a></h2>
-<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a <em>Free Software Foundation</em> (FSF).</p>
+<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a <strong>FSH</strong> (<em>Free Software Foundation</em>).</p>
 <p>O objetivo do projeto era ambicioso: criar um sistema operacional inteiramente livre, de modo que ninguém precisasse usar software proprietário para operar um computador. O nome GNU é um acrônimo recursivo para <em>“GNU’s Not Unix”</em> (GNU não é Unix), uma homenagem técnica ao sistema que serviu de inspiração arquitetônica, mas cujas restrições de licença a filosofia GNU rejeitava.</p>
 <p>Para a filosofia GNU, o compartilhamento de software é um imperativo ético. Negar a alguém o direito de entender ou modificar um programa que ele utiliza é visto como uma violação da autonomia individual e um obstáculo à cooperação social.</p>
 <h2 id="o-mecanismo-do-copyleft-e-a-gpl"><a class="header" href="#o-mecanismo-do-copyleft-e-a-gpl">O mecanismo do Copyleft e a GPL</a></h2>
 <p>Para garantir que o software livre permanecesse livre, Stallman utilizou as próprias leis de direito autoral (<em>copyright</em>) de forma invertida, criando o conceito de <em>copyleft</em>.</p>
 <p>Em vez de usar o direito autoral para restringir e limitar o uso e a modificação, o copyleft usa a lei para garantir que ninguém possa remover essas liberdades. Sob uma licença com copyleft, qualquer pessoa é livre para modificar e redistribuir o código, desde que a versão modificada seja distribuída sob as mesmas condições de liberdade. Isso impede que uma empresa utilize um código público, faça melhorias e o transforme em um produto fechado e proprietário.</p>
-<p>A expressão máxima desse conceito é a GPL (<em>GNU General Public License</em>), a licença criada para proteger o sistema GNU. Ela funciona como um pacto legal: você pode usar e modificar o código como quiser, mas se decidir compartilhá-lo, é obrigado a passar adiante as mesmas liberdades que recebeu.</p>
-<p>Vale notar que nem toda licença de software livre ou de código aberto exige copyleft. Licenças permissivas, como a MIT e a BSD, também garantem as quatro liberdades, mas não obrigam que versões modificadas sejam redistribuídas sob a mesma licença — o que permite, inclusive, que o código seja incorporado em produtos fechados. Essa distinção entre licenças copyleft e permissivas será retomada em mais detalhe em um capítulo futuro sobre licenciamento.</p>
+<p>A expressão máxima desse conceito é a <strong>GPL</strong> (<em>GNU General Public License</em>), a licença criada para proteger o sistema GNU. Ela funciona como um pacto legal: você pode usar e modificar o código como quiser, mas se decidir compartilhá-lo, é obrigado a passar adiante as mesmas liberdades que recebeu.</p>
+<p>Vale notar que nem toda licença de software livre ou de código aberto exige copyleft. Licenças permissivas, como a MIT e a BSD, também garantem as quatro liberdades, mas não obrigam que versões modificadas sejam redistribuídas sob a mesma licença. Essa distinção entre licenças copyleft e permissivas será retomada em mais detalhe em um capítulo futuro sobre licenciamento.</p>
 <h2 id="o-encontro-entre-o-gnu-e-o-linux"><a class="header" href="#o-encontro-entre-o-gnu-e-o-linux">O encontro entre o GNU e o Linux</a></h2>
 <p>No início da década de 1990, o Projeto GNU já havia desenvolvido quase todas as partes necessárias para um sistema operacional completo: compiladores (GCC), editores de texto, bibliotecas de sistema e interpretadores de comando. Faltava, porém, o componente central que gerencia diretamente o hardware: o núcleo, ou <em>kernel</em>.</p>
 <p>Esse espaço foi preenchido em 1991, quando um estudante finlandês chamado Linus Torvalds desenvolveu um kernel independente e, posteriormente, o licenciou sob a GPL do GNU. A união das ferramentas de sistema do GNU com o kernel de Torvalds resultou no sistema operacional completo que hoje comumente chamamos de Linux, mas que a FSF e defensores da filosofia original argumentam que deve ser chamado de GNU/Linux.</p>
-<p>O kernel gerencia o processador, a memória e os discos; as ferramentas GNU fornecem a interface, os utilitários e o ambiente para o usuário operar o sistema. Nenhum dos dois — kernel ou ferramentas GNU — forma sozinho um sistema completo.</p>
+<p>O kernel gerencia o processador, a memória e os discos, já as ferramentas GNU fornecem a interface, os utilitários e o ambiente para o usuário operar o sistema, formando assim um sistema completo.</p>
 <h2 id="o-ecossistema-de-desenvolvimento-livre-vs-código-aberto"><a class="header" href="#o-ecossistema-de-desenvolvimento-livre-vs-código-aberto">O ecossistema de desenvolvimento: Livre vs. Código Aberto</a></h2>
-<p>Com o passar dos anos, o modelo de desenvolvimento comunitário provou ser extremamente eficiente, atraindo a atenção do mercado corporativo. Em 1998, surgiu o termo <em>Open Source</em> (Código Aberto), impulsionado pela <em>Open Source Initiative</em> (OSI), criando uma cisão ideológica que persiste até hoje no ecossistema.</p>
+<p>Com o passar dos anos, o modelo de desenvolvimento comunitário provou ser extremamente eficiente, atraindo a atenção do mercado corporativo. Em 1998, surgiu o termo <em>Open Source</em> (Código Aberto), impulsionado pela <strong>OSI</strong> (<em>Open Source Initiative</em>), criando uma cisão ideológica que persiste até hoje no ecossistema.</p>
 <p>O Código Aberto foca nos benefícios metodológicos e econômicos: argumenta que abrir o código resulta em softwares melhores, com menos bugs, desenvolvimento mais rápido e custos reduzidos. É uma abordagem essencialmente pragmática e técnica.</p>
 <p>A Filosofia GNU, por outro lado, mantém seu foco no aspecto ético e social. Para a FSF, a eficiência técnica é um benefício secundário; a prioridade absoluta é a liberdade do usuário. Um software proprietário que funciona perfeitamente ainda é considerado um problema moral pela filosofia GNU, pois mantém o usuário em um estado de dependência e submissão ao desenvolvedor.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="kernel"><a class="header" href="#kernel">Kernel</a></h1>
-<p>Se o processador executa instruções e a memória guarda dados, o kernel é o que decide quem tem permissão para usar esses recursos, quando e em que medida. Ele não executa a lógica dos programas do usuário nem armazena um arquivo por conta própria. Ele arbitra. É a camada de software que fica entre o hardware bruto e tudo o mais que roda em um computador, o núcleo que transforma um conjunto de componentes eletrônicos em um sistema que pode executar múltiplos programas ao mesmo tempo, de forma segura e organizada.</p>
-<h2 id="o-que-é-o-kernel"><a class="header" href="#o-que-é-o-kernel">O que é o kernel?</a></h2>
-<p>O kernel é a parte central do sistema operacional, carregada na memória assim que o computador liga e mantida em execução até o desligamento. Ele é o único software com acesso irrestrito ao hardware: processador, memória RAM, discos, placas de rede, periféricos. Todo programa que roda no sistema — do navegador ao editor de texto — depende do kernel para fazer qualquer coisa que envolva hardware, desde ler um arquivo até desenhar um pixel na tela.</p>
+<p>O kernel é a parte central do sistema operacional, carregada na memória assim que o computador liga e mantida em execução até o desligamento. Ele é o único software com acesso irrestrito ao hardware: processador, memória RAM, discos, placas de rede, periféricos e todos os programas que rodam no sistema.</p>
 <p>Essa centralização não é acidental. Se cada programa pudesse acessar o hardware diretamente, dois programas poderiam tentar escrever no mesmo endereço de memória ao mesmo tempo, ou um programa mal escrito poderia travar a máquina inteira. O kernel existe para impedir exatamente isso: ele intermedeia o acesso, garante que cada programa opere isolado dos demais, e distribui os recursos físicos entre todos que precisam deles.</p>
 <h2 id="kernel-space-e-user-space"><a class="header" href="#kernel-space-e-user-space">Kernel space e user space</a></h2>
 <p>Todo sistema operacional moderno divide a execução em dois domínios com privilégios diferentes: o <em>kernel space</em> e o <em>user space</em>.</p>
-<p>No <em>kernel space</em> roda o próprio kernel, com acesso completo ao hardware e à memória do sistema. É onde vivem o escalonador de processos, o gerenciador de memória e os drivers. No <em>user space</em> rodam os programas comuns: navegadores, jogos, aplicativos de escritório. Um programa em <em>user space</em> não pode acessar diretamente o disco, a rede ou a memória de outro processo — ele precisa pedir ao kernel, por meio de uma <em>syscall</em>, que faça isso em seu nome.</p>
-<p>Essa separação é imposta pelo próprio processador, que oferece níveis de privilégio distintos em hardware — na arquitetura x86, por exemplo, são os chamados <em>rings</em> de proteção. Outras arquiteturas, como a ARM, implementam o mesmo princípio com outro nome e outra organização interna, mas o efeito é o mesmo: um programa em <em>user space</em> simplesmente não tem instruções disponíveis para acessar certas regiões de memória ou certas portas de hardware. Só o kernel, rodando no nível mais privilegiado, tem essa permissão.</p>
+<ul>
+<li>
+<p><strong>kernel space:</strong> roda o próprio kernel, com acesso completo ao hardware e à memória do sistema. É onde vivem o escalonador de processos, o gerenciador de memória e os drivers.</p>
+</li>
+<li>
+<p><strong>user space:</strong> rodam os programas comuns, sendo eles: navegadores, jogos, aplicativos no geral. Um programa em <em>user space</em> não pode acessar diretamente o disco, a rede ou a memória de outro processo.</p>
+</li>
+</ul>
 <h2 id="tipos-de-kernel"><a class="header" href="#tipos-de-kernel">Tipos de kernel</a></h2>
 <p>Nem todo kernel organiza suas funções da mesma forma. A diferença está em quanto do sistema roda dentro do próprio kernel, com acesso total ao hardware, e quanto roda fora dele, isolado como qualquer outro programa.</p>
 <h3 id="monolítico"><a class="header" href="#monolítico">Monolítico</a></h3>
-<p>No modelo monolítico, praticamente todo o sistema operacional — escalonador, gerenciador de memória, sistema de arquivos, drivers — roda dentro do kernel, em <em>kernel space</em>. É o modelo usado pelo Linux e, historicamente, pela maioria dos Unix. A vantagem é desempenho: como tudo está no mesmo espaço de memória, a comunicação entre as partes é direta, sem a sobrecarga de trocar de contexto entre domínios de privilégio. A desvantagem é que um erro em um driver mal escrito pode derrubar o sistema inteiro, já que ele roda com os mesmos privilégios do restante do kernel. Embora rígido em sua concepção original, esse modelo evoluiu em kernels modernos para permitir a inclusão de novos componentes sem a necessidade de recompilar todo o sistema.</p>
+<p>Praticamente tudo roda dentro do próprio kernel (<em>kernel space</em>).</p>
+<ul>
+<li>
+<p><strong>Vantagem:</strong> como tudo está no mesmo espaço de memória, a comunicação entre as partes é direta, sem a sobrecarga de trocar contexto entre domínios de privilégio, o que garante um desempenho muito rápido;</p>
+</li>
+<li>
+<p><strong>Desvantagem:</strong> um erro em um driver mal escrito pode derrubar o sistema inteiro, já que ele roda com os mesmos privilégios do restante do kernel.</p>
+</li>
+</ul>
 <h3 id="microkernel"><a class="header" href="#microkernel">Microkernel</a></h3>
-<p>No modelo microkernel, o kernel propriamente dito faz o mínimo possível: comunicação entre processos, escalonamento básico e gerenciamento de memória. Drivers, sistemas de arquivos e outros serviços rodam em <em>user space</em>, como processos isolados. O QNX e o MINIX seguem essa filosofia. A vantagem é isolamento: se um driver falha, ele pode ser reiniciado sem derrubar o sistema. A desvantagem é desempenho — cada operação que envolveria uma chamada direta em um kernel monolítico agora exige comunicação entre processos, o que tem custo.</p>
+<p>No modelo microkernel, o kernel propriamente dito faz o mínimo possível: comunicação entre processos, escalonamento básico e gerenciamento de memória. Os demais serviços (como drivers e sistemas de arquivos) rodam no espaço do usuário (user space).</p>
+<ul>
+<li>
+<p><strong>Vantagem:</strong> se um driver falha, ele pode ser reiniciado sem derrubar o sistema, pois continua isolado do núcleo;</p>
+</li>
+<li>
+<p><strong>Desvantagem:</strong> cada operação que exige comunicação entre componentes precisa passar pelo espaço do usuário e voltar, gerando uma troca constante de contexto que impacta o desempenho.</p>
+</li>
+</ul>
 <h3 id="híbrido"><a class="header" href="#híbrido">Híbrido</a></h3>
-<p>O modelo híbrido tenta equilibrar os dois extremos. Mantém no <em>kernel space</em> os componentes mais sensíveis a desempenho, mas isola em <em>user space</em> partes que se beneficiam de maior segurança. O Windows NT e o macOS (baseado no XNU) seguem essa abordagem, cada um com seu próprio equilíbrio entre o que fica dentro e o que fica fora do núcleo.</p>
-<p>Para o usuário final, a escolha de qual sistema operacional usar raramente passa pela arquitetura do kernel em si — mas ela explica boa parte das diferenças de comportamento entre sistemas quando um driver falha ou quando o desempenho bruto é comparado.</p>
+<p>O modelo híbrido tenta equilibrar os dois extremos. Ele mantém no kernel space os componentes mais sensíveis para garantir desempenho, mas isola em user space partes que se beneficiam de maior estabilidade e segurança (usado por sistemas como o Windows e o macOS).</p>
+<ul>
+<li>
+<p><strong>Vantagem:</strong> oferece um bom equilíbrio entre a velocidade do modelo monolítico e a segurança do microkernel, permitindo que o sistema seja flexível sem perder tanta performance;</p>
+</li>
+<li>
+<p><strong>Desvantagem:</strong> a arquitetura é mais complexa de projetar e manter, e ainda pode cair por falhas em serviços críticos que continuam rodando no kernel space.</p>
+</li>
+</ul>
+<h3 id="monolítico-com-módulos"><a class="header" href="#monolítico-com-módulos">Monolítico com módulos</a></h3>
+<p>O linux, segue o modelo monolítico, mas permite carregar e remover módulos dinamicamente sem reiniciar o sistema. Por exemplo, existe um módulo (<code>.ko</code>) e só é carregado quando o hardware correspondente é detectado. Isso soma parte da flexibilidade de um microkernel ao desempenho do modelo monolítico.</p>
+<p>Para o usuário final, a escolha de qual sistema operacional usar raramente passa pela arquitetura do kernel em si. No entanto, entender essa estrutura explica boa parte das diferenças de comportamento entre os sistemas quando um driver falha ou quando o desempenho bruto é comparado.</p>
 <h2 id="funções-principais-do-kernel"><a class="header" href="#funções-principais-do-kernel">Funções principais do kernel</a></h2>
-<p>O que um kernel faz, independentemente da arquitetura escolhida, se resume a um conjunto de responsabilidades que todo sistema operacional precisa cobrir.</p>
 <h3 id="gerenciamento-de-processos"><a class="header" href="#gerenciamento-de-processos">Gerenciamento de processos</a></h3>
-<p>O kernel cria, agenda e encerra processos. Cada programa em execução é representado internamente como um processo, com sua própria região de memória, seus próprios arquivos abertos e seu próprio estado de execução. Como o processador físico só executa uma instrução por núcleo por vez, é o kernel quem decide qual processo roda em qual instante — uma função chamada de escalonamento, assunto que será aprofundado em um capítulo futuro sobre gerenciamento de processos. Ao alternar entre esses processos em velocidades altíssimas, o kernel cria a ilusão de que múltiplos programas estão rodando simultaneamente.</p>
+<p>O kernel cria, agenda e encerra processos. Cada programa em execução é representado internamente como um processo, com sua própria região de memória, seus próprios arquivos abertos e seu próprio estado de execução.</p>
 <h3 id="gerenciamento-de-memória"><a class="header" href="#gerenciamento-de-memória">Gerenciamento de memória</a></h3>
-<p>O kernel controla o acesso de cada processo à memória RAM, garantindo que um processo não leia ou escreva na área de memória de outro. Ele faz isso por meio de memória virtual: cada processo enxerga um espaço de endereços próprio, que o kernel traduz para endereços físicos reais com a ajuda de um componente do processador chamado MMU (<em>Memory Management Unit</em>). Essa tradução também permite que o sistema use mais memória do que fisicamente existe, movendo partes menos usadas para o disco — a chamada memória de troca ou <em>swap</em>.</p>
+<p>O kernel controla o acesso de cada processo à memória RAM, garantindo que um processo não leia ou escreva na área de memória de outro.</p>
 <h3 id="comunicação-com-hardware-drivers"><a class="header" href="#comunicação-com-hardware-drivers">Comunicação com hardware: drivers</a></h3>
-<p>Cada dispositivo de hardware — placa de vídeo, controlador de rede, SSD — tem particularidades próprias de fabricante e modelo. Os drivers são o código que traduz comandos genéricos do kernel em instruções específicas que aquele hardware entende, e vice-versa. Em kernels monolíticos, a maioria dos drivers roda dentro do próprio kernel; em microkernels, rodam isolados em <em>user space</em>.</p>
+<p>Os drivers são o código que traduz comandos genéricos do kernel em instruções específicas que aquele hardware entende, e vice-versa.</p>
 <h3 id="sistema-de-arquivos"><a class="header" href="#sistema-de-arquivos">Sistema de arquivos</a></h3>
 <p>O kernel gerencia como dados são organizados e recuperados de dispositivos de armazenamento, abstraindo a complexidade física do disco em uma estrutura de arquivos e diretórios que os programas conseguem usar sem precisar saber onde, fisicamente, cada bit está gravado.</p>
-<h2 id="chamadas-de-sistema-syscalls"><a class="header" href="#chamadas-de-sistema-syscalls">Chamadas de sistema (syscalls)</a></h2>
-<p>Uma <em>syscall</em> funciona como a ponte de comunicação pela qual um programa em <em>user space</em> solicita um serviço ao kernel. Abrir um arquivo, alocar memória, enviar dados pela rede — todas essas operações exigem uma <em>syscall</em>, porque nenhuma delas pode ser feita diretamente pelo programa sem acesso privilegiado ao hardware.</p>
-<p>Quando um programa faz uma <em>syscall</em>, o processador realiza uma troca de contexto: sai do modo de privilégio restrito do <em>user space</em> e entra no modo privilegiado do kernel, executa a operação solicitada, e retorna o resultado ao programa, voltando ao modo restrito. Essa troca tem um custo de desempenho pequeno, mas não nulo — por isso programas que fazem uso intensivo de I/O costumam agrupar operações para reduzir o número de <em>syscalls</em> necessárias.</p>
-<h2 id="o-kernel-linux"><a class="header" href="#o-kernel-linux">O kernel Linux</a></h2>
-<p>Criado por Linus Torvalds em 1991, o Linux é o kernel monolítico mais usado do mundo, presente em servidores, Android, supercomputadores e parte dos desktops.</p>
-<h3 id="monolítico-com-módulos"><a class="header" href="#monolítico-com-módulos">Monolítico com módulos</a></h3>
-<p>Segue o modelo monolítico, mas permite carregar e remover módulos dinamicamente sem reiniciar o sistema — um driver de rede, por exemplo, existe como módulo (<code>.ko</code>) e só é carregado quando o hardware correspondente é detectado. Isso soma parte da flexibilidade de um microkernel ao desempenho do modelo monolítico.</p>
-<h3 id="kernel-não-é-distribuição"><a class="header" href="#kernel-não-é-distribuição">Kernel não é distribuição</a></h3>
-<p>O kernel é só o núcleo: escalonador, memória, drivers, sistema de arquivos. Interface gráfica, gerenciador de pacotes e demais utilitários vêm de fora dele, empacotados por distribuições como Ubuntu, Fedora ou Arch — que, apesar das diferenças entre si, rodam essencialmente o mesmo kernel.</p>
+<h2 id="chamadas-de-sistema"><a class="header" href="#chamadas-de-sistema">Chamadas de sistema</a></h2>
+<p>Uma <em>syscall</em> funciona como a ponte de comunicação pela qual um programa em <em>user space</em> solicita um serviço ao kernel. Podemos citar: abrir um arquivo, alocar memória, enviar dados pela rede. Todas essas operações exigem uma <em>syscall</em>, porque nenhuma delas pode ser feita diretamente pelo programa sem acesso privilegiado ao hardware.</p>
+<p>Quando um programa faz uma <em>syscall</em>, o processador realiza uma troca de contexto: sai do modo de privilégio restrito do <em>user space</em> e entra no modo privilegiado do kernel, executa a operação solicitada, e retorna o resultado ao programa, voltando ao modo restrito.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="cli-vs-gui-vs-tui"><a class="header" href="#cli-vs-gui-vs-tui">CLI vs. GUI vs. TUI</a></h1>
-<p>Se o sistema operacional é a engrenagem que gerencia o hardware, a interface é o ponto de contato onde o humano encontra a máquina. O computador não exige telas coloridas ou cliques de mouse para funcionar; ele exige instruções. A forma como traduzimos o pensamento humano em comandos executáveis define a interface — e a escolha entre texto puro, janelas visuais ou blocos de caracteres molda toda a experiência de computação. No mundo Linux, essa escolha é especialmente relevante: é comum encontrar servidores rodando sem nenhuma interface gráfica instalada, administrados inteiramente por linha de comando através de uma conexão remota.</p>
+<p>Se o sistema operacional é a engrenagem que gerencia o hardware, a interface é o ponto de contato onde o humano encontra a máquina. O computador não exige telas coloridas ou cliques de mouse para funcionar; ele exige instruções.</p>
+<p>No mundo Linux, essa escolha é especialmente relevante: é comum encontrar servidores rodando sem nenhuma interface gráfica instalada, administrados inteiramente por linha de comando através de uma conexão remota.</p>
 <h2 id="cli"><a class="header" href="#cli">CLI</a></h2>
-<p>A CLI (Command Line Interface, ou Interface de Linha de Comando) é a forma mais direta e antiga de comunicação com um computador moderno. Trata-se de uma interface baseada estritamente em texto, geralmente acessada por meio de um emulador de terminal, onde o usuário digita comandos e recebe respostas textuais. Não há ponteiros, ícones ou botões. O cursor piscando no prompt aguarda a próxima instrução.</p>
+<p>A CLI (Interface de Linha de Comando) é a forma mais direta e antiga de comunicação com um computador moderno. Trata-se de uma interface baseada estritamente em texto, geralmente acessada por meio de um emulador de terminal, onde o usuário digita comandos e recebe respostas textuais. Não há ponteiros, ícones ou botões. O cursor piscando no prompt aguarda a próxima instrução.</p>
 <p>A grande força dela reside na eficiência e na capacidade de automação. Como os comandos são estruturados em sintaxe textual, tarefas repetitivas podem ser agrupadas em scripts para execução em lote (<em>shell scripting</em>). Além disso, a CLI consome uma fração irrisória de recursos de hardware (memória e processamento), tornando-a a interface padrão para administração de servidores remotos.</p>
-<p>Para o usuário iniciante, contudo, a CLI apresenta uma barreira de entrada íngreme: a falta de pistas visuais. O usuário precisa saber exatamente o nome do comando, suas flags (parâmetros) e argumentos para realizar qualquer ação.</p>
 <h2 id="gui"><a class="header" href="#gui">GUI</a></h2>
-<p>A GUI (Graphical User Interface, ou Interface Gráfica do Usuário) transformou o computador de uma ferramenta de especialistas em um eletrodoméstico de massa. Introduzida comercialmente na década de 1980, ela substitui a necessidade de memorizar comandos por metáforas visuais do mundo real: pastas, lixeira, janelas e botões. A interação é mediada por dispositivos de ponteiro, como mouses e telas sensíveis ao toque.</p>
-<p>A principal vantagem da GUI é a descoberta ativa e a baixa carga cognitiva. Um usuário consegue deduzir a função de um programa apenas explorando visualmente os menus. O fluxo de trabalho é guiado e intuitivo.</p>
+<p>A GUI (Interface Gráfica do Usuário) substitui a necessidade de memorizar comandos por metáforas visuais do mundo real: pastas, lixeira, janelas e botões. A interação é mediada por dispositivos de ponteiro, como mouses e telas sensíveis ao toque.</p>
 <p>Por outro lado, a GUI cobra seu preço em consumo de recursos. Renderizar gráficos de alta resolução, animações e gerenciar o estado visual de dezenas de janelas exige poder de processamento da CPU e da GPU, além de uma quantidade significativa de memória RAM. Adicionalmente, automatizar fluxos complexos em interfaces gráficas é uma tarefa consideravelmente mais difícil do que em ambientes de linha de comando.</p>
 <h2 id="tui"><a class="header" href="#tui">TUI</a></h2>
-<p>A TUI (Text User Interface, ou Interface Textual do Usuário) é o meio-termo histórico e conceitual entre a rigidez da CLI e o peso visual da GUI. Embora funcione inteiramente dentro de uma tela de terminal baseada em texto, a TUI usa caracteres especiais (como símbolos de borda e blocos Unicode) e cores para desenhar um layout visual. Ela oferece janelas, menus suspensos, barras de progresso e caixas de diálogo, desenhados inteiramente com caracteres textuais.</p>
-<p>Programas como o monitor de sistema <em>htop</em> e o gerenciador de arquivos <em>Midnight Commander</em> são exemplos clássicos de TUI. Muitas TUIs modernas aceitam comandos de mouse no terminal, mas a maioria é otimizada para navegação rápida via teclado (usando as setas, a tecla Tab e atalhos).</p>
-<p>A TUI une a leveza e a portabilidade da CLI (podendo ser rodada facilmente através de conexões SSH lentas) com o feedback visual organizado e menus fáceis de navegar da GUI.</p>
-<h2 id="o-ecossistema-de-uso-onde-cada-uma-domina"><a class="header" href="#o-ecossistema-de-uso-onde-cada-uma-domina">O ecossistema de uso: onde cada uma domina</a></h2>
+<p>A TUI (Interface Textual do Usuário) é o meio-termo histórico e conceitual entre a rigidez da CLI e o peso visual da GUI. Embora funcione inteiramente dentro de uma tela de terminal baseada em texto, a TUI usa caracteres especiais (como símbolos de borda e blocos Unicode) e cores para desenhar um layout visual. Ela oferece janelas, menus suspensos, barras de progresso e caixas de diálogo, desenhados inteiramente com caracteres textuais.</p>
+<p>Muitas TUIs modernas aceitam comandos de mouse no terminal, mas a maioria é otimizada para navegação rápida via teclado (usando as setas, a tecla Tab e atalhos). A TUI une a leveza e a portabilidade da CLI (podendo ser rodada facilmente através de conexões SSH lentas) com o feedback visual organizado e menus fáceis de navegar da GUI.</p>
+<h2 id="o-ecossistema-de-uso"><a class="header" href="#o-ecossistema-de-uso">O ecossistema de uso</a></h2>
 <p>Nenhuma interface substituiu a outra por completo; elas coexistem porque atendem a necessidades estruturalmente diferentes no ecossistema da computação.</p>
-<p>No desenvolvimento de software e na administração de sistemas, a CLI e a TUI dominam o cenário. Desenvolvedores utilizam ferramentas baseadas em CLI (como o <code>git</code> para versionamento de código ou o <code>npm</code> para gerenciamento de pacotes) porque a velocidade de digitação de comandos estruturados supera o tempo de mover o mouse entre menus de uma GUI. Editores de texto baseados em TUI, como o <em>Nano</em> (mais amigável para iniciantes) ou o <em>Vim</em> (com uma curva de aprendizado própria, por seu sistema de edição por modos), permitem modificar arquivos diretamente em servidores remotos sem a necessidade de baixar o arquivo ou abrir uma sessão pesada de desktop remoto.</p>
-<p>Para tarefas que envolvem criatividade visual, edição de vídeo, navegação casual na web e jogos, a GUI é indispensável. O cérebro humano processa informações visuais espaciais com facilidade, e ferramentas como suítes de escritório, navegadores de internet e softwares de design dependem fundamentalmente da precisão espacial e renderização de imagem que apenas a GUI consegue entregar.</p>
+<p>No desenvolvimento de software e na administração de sistemas, a CLI e a TUI dominam o cenário. Desenvolvedores utilizam ferramentas baseadas em CLI (como o <code>git</code> para versionamento de código ou o <code>npm</code> para gerenciamento de pacotes) porque a velocidade de digitação de comandos estruturados supera o tempo de mover o mouse entre menus de uma GUI.</p>
+<p>Para tarefas que envolvem criatividade visual, edição de vídeo, navegação casual na web e jogos, a GUI é indispensável. O cérebro humano processa informações visuais espaciais com facilidade, navegadores de internet e softwares de design dependem fundamentalmente da precisão espacial e renderização de imagem que apenas a GUI consegue entregar.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="pacotes-e-repositórios"><a class="header" href="#pacotes-e-repositórios">Pacotes e repositórios</a></h1>
 <p>Se o sistema operacional é a base sobre a qual tudo roda, os pacotes são a forma como o software chega até essa base. Instalar um programa raramente significa copiar um único arquivo executável: significa trazer um conjunto de binários, bibliotecas, arquivos de configuração e metadados, tudo organizado de um jeito que o sistema saiba o que fazer com cada peça. É o gerenciador de pacotes que viabiliza isso, e é o repositório que decide de onde esse conjunto vem.</p>
@@ -1309,78 +1213,75 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <p>Cada família de distribuições Linux adotou seu próprio formato de pacote, e a escolha de formato costuma ser a primeira coisa que diferencia uma distribuição da outra do ponto de vista prático:</p>
 <ul>
 <li>
-<p><strong>.deb:</strong> formato usado por Debian, Ubuntu e derivados. É um arquivo <em>ar</em> que contém, internamente, os binários e os metadados de controle do pacote.</p>
+<p><strong>.deb:</strong> formato usado por Debian, Ubuntu e derivados. É um arquivo <em>ar</em> que contém, internamente, os binários e os metadados de controle do pacote;</p>
 </li>
 <li>
-<p><strong>.rpm:</strong> formato usado por Red Hat, Fedora, openSUSE e derivados. Cumpre o mesmo papel do .deb, mas com estrutura interna e ferramentas de gerenciamento diferentes.</p>
+<p><strong>.rpm:</strong> formato usado por Red Hat, Fedora, openSUSE e derivados. Cumpre o mesmo papel do <code>.deb</code>, mas com estrutura interna e ferramentas de gerenciamento diferentes;</p>
 </li>
 <li>
 <p><strong>.pkg.tar.zst:</strong> formato usado pelo Arch Linux, compactado com Zstandard. Segue uma filosofia mais enxuta, com menos camadas de abstração sobre o conteúdo do pacote.</p>
 </li>
 </ul>
-<p>Nenhum desses formatos é compatível com os outros. Um .deb não instala em um sistema baseado em RPM sem conversão, e mesmo quando a conversão é possível (com ferramentas como o <em>alien</em>), o resultado nem sempre é confiável, porque as convenções de cada distribuição — caminhos de arquivos, nomes de dependências, scripts de pós-instalação — não se traduzem de forma direta.</p>
+<p>Nenhum desses formatos é compatível com os outros. Um <code>.deb</code> não instala em um sistema baseado em <code>.rpm</code> sem conversão, e mesmo quando a conversão é possível, o resultado nem sempre é confiável.</p>
 <h2 id="gerenciadores-de-pacote"><a class="header" href="#gerenciadores-de-pacote">Gerenciadores de pacote</a></h2>
 <p>O gerenciador de pacotes é o programa responsável por instalar, atualizar, remover e consultar pacotes no sistema. Ele existe em duas camadas complementares: uma camada de baixo nível, que lida com um único pacote por vez, e uma camada de alto nível, que resolve dependências e consulta repositórios.</p>
 <h3 id="camada-de-baixo-nível"><a class="header" href="#camada-de-baixo-nível">Camada de baixo nível</a></h3>
 <ul>
 <li>
-<p><strong>dpkg:</strong> ferramenta de baixo nível para sistemas baseados em Debian. Instala e remove arquivos .deb individuais, mas não resolve dependências nem consulta repositórios remotos.</p>
+<p><strong>dpkg:</strong> ferramenta de baixo nível para sistemas baseados em Debian. Instala e remove arquivos <code>.deb</code> individuais, mas não resolve dependências nem consulta repositórios remotos;</p>
 </li>
 <li>
-<p><strong>rpm:</strong> equivalente ao dpkg no mundo Red Hat. Instala pacotes .rpm diretamente, sem lidar com dependências externas ao próprio arquivo.</p>
+<p><strong>rpm:</strong> equivalente ao <code>dpkg</code> no mundo Red Hat. Instala pacotes <code>.rpm</code> diretamente, sem lidar com dependências externas ao próprio arquivo.</p>
 </li>
 </ul>
 <p>Usar essas ferramentas diretamente é possível, mas pouco prático: se o pacote depende de outro que não está instalado, a instalação falha e cabe ao usuário resolver manualmente.</p>
 <h3 id="camada-de-alto-nível"><a class="header" href="#camada-de-alto-nível">Camada de alto nível</a></h3>
 <ul>
 <li>
-<p><strong>APT (Advanced Package Tool):</strong> camada sobre o dpkg usada por Debian, Ubuntu e derivados. Resolve dependências automaticamente, consulta repositórios configurados e baixa tudo o que for necessário para completar a instalação.</p>
+<p><strong>APT:</strong> camada sobre o <code>dpkg</code> usada por Debian, Ubuntu e derivados. Resolve dependências automaticamente, consulta repositórios configurados e baixa tudo o que for necessário para completar a instalação;</p>
 </li>
 <li>
-<p><strong>DNF (Dandified YUM):</strong> camada sobre o rpm usada por Fedora e distribuições relacionadas. Sucessor do YUM, com resolução de dependências mais rápida e melhor tratamento de conflitos.</p>
+<p><strong>DNF:</strong> camada sobre o <code>rpm</code> usada por Fedora e distribuições relacionadas. Sucessor do YUM, com resolução de dependências mais rápida e melhor tratamento de conflitos;</p>
 </li>
 <li>
-<p><strong>Pacman:</strong> gerenciador do Arch Linux, que combina as duas camadas em uma única ferramenta. É conhecido pela sintaxe direta e pela velocidade das operações.</p>
-</li>
-<li>
-<p><strong>Zypper:</strong> gerenciador de alto nível do openSUSE, também construído sobre o rpm.</p>
+<p><strong>Pacman:</strong> gerenciador do Arch Linux, que combina as duas camadas em uma única ferramenta. É conhecido pela sintaxe direta e pela velocidade das operações;</p>
 </li>
 </ul>
-<p>Na prática, é essa camada de alto nível que o usuário acessa no dia a dia. Comandos como <code>sudo apt install</code>, <code>sudo dnf install</code> ou <code>sudo pacman -S</code> descrevem a intenção — instalar um programa — e deixam para o gerenciador a tarefa de descobrir tudo o que precisa ser baixado.</p>
+<p>Na prática, é essa camada de alto nível que o usuário acessa no dia a dia. Comandos como <code>sudo apt install</code>, <code>sudo dnf install</code> ou <code>sudo pacman -S</code>, descrevem a intenção: instalar um programa e deixar para o gerenciador de tarefas descobrir tudo o que precisa ser baixado.</p>
 <h2 id="repositórios"><a class="header" href="#repositórios">Repositórios</a></h2>
 <p>Um repositório é um servidor, ou conjunto de servidores, que hospeda pacotes prontos para instalação, junto com um índice que descreve o que está disponível: nomes, versões, dependências e a localização de cada arquivo. O gerenciador de pacotes consulta esse índice antes de instalar qualquer coisa, o que permite que ele saiba, sem baixar o pacote inteiro primeiro, se a instalação é viável e o que mais precisa ser trazido junto.</p>
 <h3 id="repositórios-oficiais"><a class="header" href="#repositórios-oficiais">Repositórios oficiais</a></h3>
-<p>Toda distribuição mantém repositórios oficiais, mantidos pela própria organização por trás dela. Esses repositórios passam por um processo de curadoria: os pacotes são testados, empacotados segundo convenções específicas da distribuição e, em muitos casos, assinados digitalmente antes de ficarem disponíveis. É a fonte mais confiável, mas também a mais conservadora — nem sempre tem a versão mais recente de um software, porque prioriza estabilidade sobre novidade.</p>
+<p>Toda distribuição mantém repositórios oficiais, mantidos pela própria organização por trás dela. Esses repositórios passam por um processo de curadoria: os pacotes são testados, empacotados segundo convenções específicas da distribuição e, em muitos casos, assinados digitalmente antes de ficarem disponíveis. É a fonte mais confiável, mas nem sempre tem a versão mais recente de um software, porque prioriza estabilidade sobre novidade.</p>
 <h3 id="repositórios-de-terceiros"><a class="header" href="#repositórios-de-terceiros">Repositórios de terceiros</a></h3>
 <p>Quando um pacote não está nos repositórios oficiais, ou está em uma versão desatualizada, é comum recorrer a repositórios de terceiros:</p>
 <ul>
 <li>
-<p><strong>PPA (Personal Package Archive):</strong> repositórios individuais no Ubuntu, mantidos por desenvolvedores ou equipes de projeto fora da estrutura oficial da distribuição.</p>
+<p><strong>PPA:</strong> repositórios individuais no Ubuntu, mantidos por desenvolvedores ou equipes de projeto fora da estrutura oficial da distribuição;</p>
 </li>
 <li>
-<p><strong>EPEL (Extra Packages for Enterprise Linux):</strong> repositório mantido pela comunidade Fedora, com pacotes adicionais para distribuições baseadas em Red Hat Enterprise Linux.</p>
+<p><strong>EPEL:</strong> repositório mantido pela comunidade Fedora, com pacotes adicionais para distribuições baseadas em Red Hat Enterprise Linux;</p>
 </li>
 <li>
-<p><strong>COPR:</strong> sistema de repositórios pessoais equivalente ao PPA, mas para o ecossistema Fedora.</p>
+<p><strong>COPR:</strong> sistema de repositórios pessoais equivalente ao PPA, mas para o ecossistema Fedora;</p>
 </li>
 <li>
-<p><strong>AUR (Arch User Repository):</strong> repositório mantido pela comunidade Arch Linux, onde usuários compartilham scripts de construção (PKGBUILDs) para software que não está nos repositórios oficiais.</p>
+<p><strong>AUR:</strong> repositório mantido pela comunidade Arch Linux, onde usuários compartilham scripts de construção (PKGBUILDs) para software que não está nos repositórios oficiais.</p>
 </li>
 </ul>
-<p>Adicionar um repositório de terceiros expande o que está disponível, mas também expande a superfície de confiança do sistema: o gerenciador passa a instalar pacotes de uma fonte que não passou pela mesma curadoria dos repositórios oficiais. Isso não é necessariamente um problema — muitos PPAs são mantidos pelos próprios desenvolvedores do software —, mas exige mais cautela do usuário sobre o que está habilitando.</p>
+<p>Adicionar um repositório de terceiros expande o que está disponível, mas também expande a superfície de confiança do sistema: o gerenciador passa a instalar pacotes de uma fonte que não passou pela mesma curadoria dos repositórios oficiais.</p>
 <h3 id="mirrors"><a class="header" href="#mirrors">Mirrors</a></h3>
 <p>Os repositórios oficiais raramente ficam em um único servidor. Eles são replicados em <em>mirrors</em> espalhados por diferentes regiões, o que reduz a distância entre o usuário e o servidor e distribui a carga de download. O gerenciador de pacotes costuma escolher automaticamente o mirror mais próximo ou mais rápido, embora seja possível configurar essa escolha manualmente.</p>
 <h2 id="resolução-de-dependências"><a class="header" href="#resolução-de-dependências">Resolução de dependências</a></h2>
 <p>O maior valor prático de um gerenciador de pacotes de alto nível está na resolução de dependências. Um programa raramente é autossuficiente: ele depende de bibliotecas compartilhadas, que por sua vez podem depender de outras bibliotecas. Instalar um único pacote pode, na prática, significar instalar uma dezena de outros pacotes que ele exige para funcionar.</p>
 <p>O gerenciador constrói uma árvore de dependências antes de iniciar qualquer instalação, verifica o que já está presente no sistema e baixa apenas o que falta. Quando duas dependências exigem versões incompatíveis de um mesmo pacote, ocorre um conflito de dependências, e é papel do gerenciador reportar isso ao usuário em vez de deixar o sistema em um estado inconsistente.</p>
-<p>Esse processo é o que torna comandos simples como <code>apt install pacote</code> confiáveis: por trás de uma única linha, há uma verificação completa de compatibilidade entre dezenas de componentes.</p>
 <h2 id="assinatura-e-verificação-de-pacotes"><a class="header" href="#assinatura-e-verificação-de-pacotes">Assinatura e verificação de pacotes</a></h2>
 <p>Repositórios confiáveis assinam digitalmente seus pacotes e seus índices com chaves GPG. Antes de instalar qualquer coisa, o gerenciador verifica essa assinatura e recusa a instalação se ela não corresponder a uma chave conhecida e confiável.</p>
 <p>Esse mecanismo protege contra dois cenários: um mirror comprometido que serve um pacote alterado, e um ataque de <em>man-in-the-middle</em> durante o download. Sem verificação de assinatura, nada impediria que um pacote malicioso fosse instalado silenciosamente no lugar do original.</p>
 <p>Ao adicionar um repositório de terceiros, é comum que o próprio processo exija importar a chave GPG daquele repositório antes que o gerenciador aceite instalar pacotes vindos dele.</p>
 <h2 id="cache-local-e-atualização-de-listas"><a class="header" href="#cache-local-e-atualização-de-listas">Cache local e atualização de listas</a></h2>
 <p>O gerenciador de pacotes mantém, localmente, uma cópia do índice de cada repositório configurado. Essa cópia é o que permite que comandos de busca e verificação de versão respondam rapidamente, sem precisar consultar o servidor remoto a cada operação.</p>
-<p>Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (<code>sudo apt update</code>, <code>sudo dnf makecache</code>, <code>sudo pacman -Sy</code>), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar. No caso do APT, é importante notar que o comando <code>update</code> atualiza apenas o índice de pacotes disponíveis, e não os programas instalados no sistema. No caso do Pacman, vale uma ressalva: o recomendado é sempre sincronizar e atualizar o sistema juntos (<code>sudo pacman -Syu</code>), em vez de rodar <code>-Sy</code> isoladamente, para evitar inconsistências entre pacotes — um cuidado específico do Arch Linux que será retomado em mais detalhe em um capítulo futuro.</p>
+<p>Esse índice local pode ficar desatualizado com o tempo, à medida que novos pacotes são publicados nos repositórios. Por isso, antes de instalar ou atualizar qualquer coisa, é prática comum atualizar essa lista primeiro (<code>sudo apt update</code>, <code>sudo dnf makecache</code>, <code>sudo pacman -Sy</code>), garantindo que o gerenciador esteja trabalhando com informações atuais antes de decidir o que baixar.</p>
+<p>No caso do APT, é importante notar que o comando <code>update</code> atualiza apenas o índice de pacotes disponíveis, e não os programas instalados no sistema. No caso do Pacman, vale uma ressalva: o recomendado é sempre sincronizar e atualizar o sistema juntos (<code>sudo pacman -Syu</code>), em vez de rodar <code>-Sy</code> isoladamente, para evitar inconsistências entre pacotes.</p>
 <h2 id="pacotes-binários-e-pacotes-de-código-fonte"><a class="header" href="#pacotes-binários-e-pacotes-de-código-fonte">Pacotes binários e pacotes de código-fonte</a></h2>
 <p>A grande maioria das instalações do dia a dia usa pacotes binários: o software já vem compilado, pronto para rodar na arquitetura correspondente. A alternativa é compilar o software a partir do código-fonte, algo que alguns gerenciadores, como o <em>Portage</em> do Gentoo, adotam como modelo padrão.</p>
 <p>Compilar a partir do código-fonte permite otimizações específicas para o hardware da máquina e maior controle sobre quais recursos do programa são incluídos, mas tem um custo real: o tempo de compilação, que pode levar de minutos a horas dependendo do software, e a necessidade de resolver dependências de compilação além das dependências de execução.</p>
@@ -1388,67 +1289,65 @@ distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais diret
 <p>Nos últimos anos, surgiram formatos de pacote que tentam contornar a fragmentação entre distribuições, empacotando o software junto com todas as suas dependências em um único arquivo autocontido:</p>
 <ul>
 <li>
-<p><strong>Flatpak:</strong> empacota o aplicativo junto com um runtime compartilhado, isolado do sistema por meio de sandboxing. Mantido por um projeto independente, com foco em aplicações de desktop.</p>
+<p><strong>Flatpak:</strong> empacota o aplicativo junto com um runtime compartilhado, isolado do sistema por meio de sandboxing. Mantido por um projeto independente, com foco em aplicações de desktop;</p>
 </li>
 <li>
-<p><strong>Snap:</strong> formato equivalente, mantido pela Canonical, com atualização automática integrada e forte presença no ecossistema Ubuntu.</p>
+<p><strong>Snap:</strong> formato equivalente, mantido pela Canonical, com atualização automática integrada e forte presença no ecossistema Ubuntu;</p>
 </li>
 <li>
-<p><strong>AppImage:</strong> o mais simples dos três — um único arquivo executável que não exige instalação nem privilégios administrativos, mas também não compartilha dependências entre diferentes AppImages instalados.</p>
+<p><strong>AppImage:</strong> um único arquivo executável que não exige instalação nem privilégios administrativos, mas também não compartilha dependências entre diferentes AppImages instalados.</p>
 </li>
 </ul>
-<p>A vantagem desses formatos é a portabilidade: o mesmo pacote funciona, em teoria, em qualquer distribuição, sem depender do formato ou do repositório nativo dela. A desvantagem é o tamanho — como cada aplicativo carrega suas próprias dependências, o espaço em disco ocupado tende a ser maior do que o de um pacote tradicional que compartilha bibliotecas já instaladas no sistema.</p>
+<p>A vantagem desses formatos é o fato de que o mesmo pacote funciona, em teoria, em qualquer distribuição, sem depender do formato ou do repositório nativo dela. A desvantagem é o tamanho: como ele traz o software e suas próprias dependências, acaba ocupando mais espaço em disco já que não reaproveita o que está instalado no sistema.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="licenças-de-software"><a class="header" href="#licenças-de-software">Licenças de Software</a></h1>
-<p>O software livre é definido pelas liberdades que sua licença garante ao usuário. Por isso, é preciso entender quais licenças existem e como cada uma equilibra os direitos do autor com os direitos de quem usa, modifica e redistribui o código. A licença não é um detalhe jurídico acessório — ela é o contrato que define se um software pode ser incorporado em um projeto proprietário, se uma versão modificada precisa ser aberta, ou se o autor original pode ser processado por patentes. No ecossistema Linux, onde centenas de licenças convivem no mesmo sistema, essa distinção tem consequências práticas todos os dias.</p>
+<p>O software livre é definido pelas liberdades que sua licença garante ao usuário. Por isso, é preciso entender quais licenças existem e como cada uma equilibra os direitos do autor com os direitos de quem usa, modifica e redistribui o código. No ecossistema Linux, onde centenas de licenças convivem no mesmo sistema, essa distinção tem consequências práticas todos os dias.</p>
 <h2 id="por-que-licenças-existem"><a class="header" href="#por-que-licenças-existem">Por que licenças existem?</a></h2>
-<p>Sem uma licença explícita, o código-fonte é protegido automaticamente pelas leis de direito autoral. Mesmo que o autor publique o código em um repositório público, sem uma licença ninguém tem o direito legal de usar, modificar ou redistribuir aquilo — a menos que o autor autorize individualmente cada caso. A licença existe para resolver esse problema: ela é uma declaração pública do autor sobre o que qualquer pessoa pode fazer com o código, sob quais condições, e o que acontece se alguém descumprir essas condições.</p>
+<p>Sem uma licença explícita, o código-fonte é protegido automaticamente pelas leis de direito autoral. Mesmo que o autor publique o código em um repositório público, sem uma licença ninguém tem o direito legal de usar, modificar ou redistribuir. A licença existe para resolver esse problema: ela é uma declaração pública do autor sobre o que qualquer pessoa pode fazer com o código, sob quais condições, e o que acontece se alguém descumprir essas condições.</p>
 <p>A escolha da licença não é trivial. Ela afeta diretamente quais projetos podem usar seu código, como empresas podem incorporá-lo em produtos comerciais, e se uma versão modificada precisa ser devolvida à comunidade. Dois projetos com código quase idêntico podem ter impactos radicalmente diferentes dependendo da licença escolhida.</p>
 <h2 id="licenças-permissivas"><a class="header" href="#licenças-permissivas">Licenças permissivas</a></h2>
-<p>As licenças permissivas garantem ao usuário ampla liberdade para usar, modificar e redistribuir o código, com poucas restrições — geralmente limitadas a preservar o aviso de copyright e a própria licença nas redistribuições. A grande maioria delas permite que o código seja incorporado em produtos proprietários, o que as torna a escolha preferida de empresas e de projetos que desejam máxima adoção.</p>
 <h3 id="mit"><a class="header" href="#mit">MIT</a></h3>
-<p>A MIT é a licença permissiva mais curta e mais utilizada do mundo. Seu texto completo cabe em poucos parágrafos e se resume a uma única restrição real: manter o aviso de copyright e a licença MIT em todas as cópias ou partes substanciais do código. Ela não impede o uso comercial, não exige abertura de código derivado, e não oferece proteção contra patentes — o que a torna simples, mas com menos proteção jurídica do que alternativas mais robustas.</p>
+<p>A MIT é a licença permissiva mais curta e mais utilizada do mundo. Seu texto completo cabe em poucos parágrafos e se resume a uma única restrição real: manter o aviso de copyright e a licença MIT em todas as cópias ou partes substanciais do código. Ela não impede o uso comercial, não exige abertura de código derivado, e não oferece proteção contra patentes, mas com menos proteção jurídica do que alternativas mais robustas.</p>
 <h3 id="apache-20"><a class="header" href="#apache-20">Apache 2.0</a></h3>
 <p>A Apache 2.0 oferece tudo que a MIT oferece, mas adiciona uma proteção importante: uma cláusula explícita de concessão de patentes. Quando alguém contribui com código sob Apache 2.0, ele concede aos usuários uma licença irrevogável para quaisquer patentes que aquele código possa infringir. Isso reduz o risco de um usuário ser processado por violação de patente ao usar o software, uma preocupação real em projetos de grande escala e em ambientes corporativos. A desvantagem é que o texto é mais longo e complexo, o que pode ser uma barreira para projetos pequenos.</p>
 <h3 id="bsd"><a class="header" href="#bsd">BSD</a></h3>
-<p>A BSD (Berkeley Software Distribution) existe em duas variantes principais: a 2-Clause e a 3-Clause. A 2-Clause é praticamente equivalente à MIT. A 3-Clause adiciona uma restrição adicional: proíbe o uso do nome dos autores originais para promover produtos derivados sem autorização. Isso implica que uma empresa não pode usar o nome do projeto original para dar credibilidade ao seu próprio produto.</p>
+<p>A BSD (<em>Berkeley Software Distribution</em>) existe em duas variantes principais: a 2-Clause e a 3-Clause. A 2-Clause é praticamente equivalente à MIT. A 3-Clause adiciona uma restrição adicional: proíbe o uso do nome dos autores originais para promover produtos derivados sem autorização. Isso implica que uma empresa não pode usar o nome do projeto original para dar credibilidade ao seu próprio produto.</p>
 <h3 id="isc"><a class="header" href="#isc">ISC</a></h3>
-<p>A ISC (Internet Systems Consortium) é funcionalmente equivalente à MIT, mas escrita de forma ainda mais concisa. Ela é comum em software de infraestrutura de rede, de onde a organização que a criou tem origem.</p>
+<p>A ISC (<em>Internet Systems Consortium</em>) é funcionalmente equivalente à MIT, mas escrita de forma ainda mais concisa. Ela é comum em software de infraestrutura de rede, de onde a organização que a criou tem origem.</p>
 <h2 id="licenças-copyleft"><a class="header" href="#licenças-copyleft">Licenças copyleft</a></h2>
-<p>As licenças copyleft invertem a lógica do direito autoral: em vez de restringir o uso, usam o direito autoral para garantir que o software permaneça livre em todas as suas versões. Qualquer pessoa pode usar, modificar e redistribuir o código, mas se distribuir uma versão modificada, é obrigada a distribuí-la sob os mesmos termos de liberdade. Isso impede que o código seja incorporado em produtos proprietários sem que as liberdades originais sejam preservadas.</p>
-<h3 id="gpl-gnu-general-public-license"><a class="header" href="#gpl-gnu-general-public-license">GPL (GNU General Public License)</a></h3>
-<p>A GPL é a expressão máxima do conceito de copyleft. Criada por Richard Stallman para proteger o sistema GNU, ela funciona como um contrato irrevogável: você pode usar e modificar o código como quiser, mas ao redistribuir, é obrigado a passar adiante as mesmas liberdades que recebeu. A versão mais utilizada hoje é a GPLv3, que adiciona proteção contra patentes e contra a chamada <em>tivoização</em> — o bloqueio de hardware que impede o usuário de executar versões modificadas do software.</p>
-<p>A GPLv2, por sua vez, continua sendo usada pelo kernel Linux, que não adotou a v3 por razões práticas — como a dificuldade de obter consentimento de milhares de contribuidores para trocar de licença — e por discordâncias com algumas cláusulas adicionadas na versão 3.</p>
+<h3 id="gpl"><a class="header" href="#gpl">GPL</a></h3>
+<p>A GPL (<em>GNU General Public License</em>) é a expressão máxima do conceito de copyleft. Criada por Richard Stallman para proteger o sistema GNU, ela funciona como um contrato irrevogável: você pode usar e modificar o código como quiser, mas ao redistribuir, é obrigado a passar adiante as mesmas liberdades que recebeu.</p>
+<p>A versão mais utilizada hoje é a GPLv3, que adiciona proteção contra patentes e contra a chamada <em>tivoização</em>, que é o bloqueio de hardware que impede o usuário de executar versões modificadas do software.</p>
+<p>A GPLv2, por sua vez, continua sendo usada pelo kernel Linux, que não adotou a v3 por razões práticas: dificuldade de obter consentimento de milhares de contribuidores para trocar de licença e até por por discordâncias com algumas cláusulas adicionadas na versão 3.</p>
 <h3 id="lgpl"><a class="header" href="#lgpl">LGPL</a></h3>
-<p>A LGPL (Lesser General Public License) é uma versão mais flexível da GPL, projetada para bibliotecas de software. Ela exige que modificações na própria biblioteca sejam distribuídas sob LGPL, mas permite que programas que usam a biblioteca sejam distribuídos como proprietários. Isso permite que uma biblioteca livre seja usada por software proprietário, ampliando sua adoção sem comprometer a liberdade do código da biblioteca em si.</p>
+<p>A LGPL (<em>Lesser General Public License</em>) é uma versão mais flexível da GPL, projetada para bibliotecas de software. Ela exige que modificações na própria biblioteca sejam distribuídas sob LGPL, mas permite que programas que usam a biblioteca sejam distribuídos como proprietários. Isso permite que uma biblioteca livre seja usada por software proprietário, ampliando sua adoção sem comprometer a liberdade do código da biblioteca em si.</p>
 <h3 id="agpl"><a class="header" href="#agpl">AGPL</a></h3>
-<p>A AGPL (Affero General Public License) estende a GPL para o contexto de software como serviço (<em>software as a service</em>, ou SaaS). Em uma GPL comum, o copyleft só se aplica quando o software é distribuído — ou seja, quando o binário ou código-fonte é enviado a alguém. Se o software roda em um servidor e os usuários interagem apenas pela rede, a GPL tradicional não é acionada. A AGPL fecha essa brecha: se o software é acessado remotamente, o operador é obrigado a oferecer o código-fonte aos usuários.</p>
+<p>A AGPL (<em>Affero General Public License</em>) estende a GPL para o contexto de SASS (software como serviço). Em uma GPL comum, o copyleft só se aplica quando o software é distribuído, quando o binário ou código-fonte é enviado a alguém. Se o software roda em um servidor e os usuários interagem apenas pela rede, a GPL tradicional não é acionada. A AGPL fecha essa brecha: se o software é acessado remotamente, o operador é obrigado a oferecer o código-fonte aos usuários.</p>
 <h2 id="licenças-com-copyleft-por-arquivo"><a class="header" href="#licenças-com-copyleft-por-arquivo">Licenças com copyleft por arquivo</a></h2>
 <h3 id="mpl-20"><a class="header" href="#mpl-20">MPL 2.0</a></h3>
-<p>A MPL 2.0 (Mozilla Public License) adota um modelo de copyleft por arquivo: as modificações feitas em arquivos que já existiam na MPL precisam ser redistribuídas sob MPL, mas código novo adicionado ao projeto pode usar outra licença. Isso permite combinar código MPL com código proprietário no mesmo projeto, desde que os arquivos originais permaneçam abertos. É uma alternativa popular entre quem quer copyleft sem a rigidez da GPL.</p>
+<p>A MPL 2.0 (<em>Mozilla Public License</em>) adota um modelo de copyleft por arquivo: as modificações feitas em arquivos que já existiam na MPL precisam ser redistribuídas sob MPL, mas código novo adicionado ao projeto pode usar outra licença. Isso permite combinar código MPL com código proprietário no mesmo projeto, desde que os arquivos originais permaneçam abertos. É uma alternativa popular entre quem quer copyleft sem a rigidez da GPL.</p>
 <h2 id="licenças-de-domínio-público"><a class="header" href="#licenças-de-domínio-público">Licenças de domínio público</a></h2>
 <h3 id="unlicense-e-cc0"><a class="header" href="#unlicense-e-cc0">Unlicense e CC0</a></h3>
 <p>O Unlicense e o CC0 (<em>Creative Commons Zero</em>) são licenças dedicadas ao domínio público. Elas renunciam todos os direitos autorais do autor, colocando o código à disposição de qualquer pessoa para qualquer uso, sem condição alguma. São ideais para utilitários pequenos, exemplos de código e projetos onde o autor não deseja nenhuma restrição. O CC0, como veremos adiante na seção sobre Creative Commons, também é usado fora do contexto de software, para dedicar outros tipos de obra ao domínio público.</p>
 <h2 id="licenças-proprietárias"><a class="header" href="#licenças-proprietárias">Licenças proprietárias</a></h2>
 <h3 id="eula"><a class="header" href="#eula">EULA</a></h3>
-<p>A EULA (<em>End-User License Agreement</em>) é o modelo padrão do software proprietário. Ao contrário das licenças de código aberto, a EULA não concede ao usuário a liberdade de estudar, modificar ou redistribuir o código. Em vez disso, ela define o que o usuário pode fazer com o software pronto — geralmente apenas usá-lo, e apenas nas condições impostas pelo fabricante. A maioria dos sistemas operacionais comerciais, softwares de escritório e jogos usa esse modelo.</p>
+<p>A EULA (<em>End-User License Agreement</em>) é o modelo padrão do software proprietário. Ela define o que o usuário pode fazer com o software pronto e apenas nas condições impostas pelo fabricante. A maioria dos sistemas operacionais comerciais, softwares de escritório e jogos usa esse modelo.</p>
 <h2 id="licenças-além-do-software"><a class="header" href="#licenças-além-do-software">Licenças além do software</a></h2>
 <p>Os conceitos de licenciamento se estendem muito além do código-fonte, e cada tipo de criação tem seu próprio conjunto de licenças adequadas, pois os direitos autorais e as regulamentações variam conforme o tipo de obra.</p>
 <h3 id="creative-commons"><a class="header" href="#creative-commons">Creative Commons</a></h3>
-<p>A família de licenças <em>Creative Commons</em> (CC) é o padrão para criações artísticas e culturais: textos, imagens, vídeos, áudios e músicas. Cada variante combina diferentes condições — atribuição (<em>BY</em>), compartilhamento igual (<em>SA</em>), uso não-comercial (<em>NC</em>) e derivações não permitidas (<em>ND</em>), resultando em combinações como CC-BY, CC-BY-SA e CC-BY-NC. O CC0 é a variante que dedica a obra ao domínio público.</p>
+<p>A família de licenças CC (<em>Creative Commons</em>) é o padrão para criações artísticas e culturais: textos, imagens, vídeos, áudios e músicas. Cada variante combina diferentes condições, sendo elas: atribuição (<em>BY</em>), compartilhamento igual (<em>SA</em>), uso não-comercial (<em>NC</em>) e derivações não permitidas (<em>ND</em>), resultando em combinações como CC-BY, CC-BY-SA e CC-BY-NC.</p>
 <h3 id="documentação-e-manuais"><a class="header" href="#documentação-e-manuais">Documentação e manuais</a></h3>
 <p>A GFDL (<em>GNU Free Documentation License</em>) foi criada para documentação de software livre e foi historicamente usada pela Wikipédia, que hoje adota principalmente a CC BY-SA, mantendo a GFDL apenas para conteúdo legado. Ela garante que o conteúdo documental permaneça aberto e modificável, seguindo princípios semelhantes aos da GPL, mas adaptados para textos e manuais.</p>
 <h3 id="fontes-tipográficas"><a class="header" href="#fontes-tipográficas">Fontes tipográficas</a></h3>
-<p>A SIL OFL (<em>Open Font License</em>) é o padrão para fontes tipográficas livres, amplamente adotada em repositórios de fontes de código aberto. Ela permite usar, modificar e redistribuir fontes, desde que a fonte modificada não seja renomeada — protegendo a identidade do projeto original.</p>
-<h3 id="hardware"><a class="header" href="#hardware">Hardware</a></h3>
+<p>A SIL OFL (<em>Open Font License</em>) é o padrão para fontes tipográficas livres, amplamente adotada em repositórios de fontes de código aberto. Ela permite usar, modificar e redistribuir fontes, desde que a fonte modificada não seja renomeada e protegendo a identidade do projeto original.</p>
+<h3 id="hardware-1"><a class="header" href="#hardware-1">Hardware</a></h3>
 <p>O hardware segue lógica diferente do software, porque envolve componentes físicos e processos de fabricação. A CERN OHL (<em>Open Hardware Licence</em>) e a TAPR OHL são licenças projetadas para projetos de hardware livre, cobrindo desde placas de circuito impresso até designs mecânicos.</p>
 <h3 id="dados-abertos"><a class="header" href="#dados-abertos">Dados abertos</a></h3>
-<p>Os conjuntos de dados — bases de informações, dados estatísticos, registros científicos — também possuem licenças próprias. O Open Data Commons (ODC) oferece licenças como a ODbL e a PDDL, projetadas para garantir que dados permaneçam abertos e reutilizáveis, independentemente do formato ou do domínio.</p>
-<h2 id="ideias-e-conceitos"><a class="header" href="#ideias-e-conceitos">Ideias e conceitos</a></h2>
-<p>Um ponto importante: não existem licenças para ideias puras. Os direitos autorais protegem a expressão de uma ideia — o código, o texto, a imagem —, mas não a ideia em si. Uma patente protege uma invenção, não um conceito abstrato. Não há mecanismo legal para colocar uma ideia sob licença, porque ideias, por natureza, não são passíveis de propriedade intelectual no mesmo sentido que uma obra criativa.</p>
-<h2 id="como-escolher-uma-licença"><a class="header" href="#como-escolher-uma-licença">Como escolher uma licença</a></h2>
-<p>A escolha de uma licença depende do objetivo do projeto. Para maximizar a adoção e permitir o uso em qualquer contexto, incluindo produtos proprietários, licenças permissivas como MIT ou Apache 2.0 são a escolha natural. Para garantir que todas as versões do software permaneçam livres, a GPL é o mecanismo mais forte disponível. Para projetos híbridos que precisam de flexibilidade parcial, a MPL ou a LGPL oferecem caminhos intermediários. Não existe licença “melhor” em absoluto — existe a licença mais adequada para o que o autor pretende proteger e para como ele deseja que o código seja usado.</p>
-<p>Outros dois temas relacionados — a compatibilidade entre licenças diferentes ao combinar código de origens distintas, e o uso de identificadores padronizados de licença (como os do SPDX) — serão explorados em capítulos futuros.</p>
+<p>Os conjuntos de dados: bases de informações, dados estatísticos, registros científicos, possuem licenças próprias. O ODC (<em>Open Data Commons</em>) oferece licenças como a ODbL e a PDDL, projetadas para garantir que dados permaneçam abertos e reutilizáveis, independentemente do formato ou do domínio.</p>
+<h2 id="como-escolher-uma-licença"><a class="header" href="#como-escolher-uma-licença">Como escolher uma licença?</a></h2>
+<p>A escolha de uma licença depende do objetivo do projeto. Para maximizar a adoção e permitir o uso em qualquer contexto, incluindo produtos proprietários, licenças permissivas como MIT ou Apache 2.0 são a escolha natural.</p>
+<p>Para garantir que todas as versões do software permaneçam livres, a GPL é o mecanismo mais forte disponível.</p>
+<p>Para projetos híbridos que precisam de flexibilidade parcial, a MPL ou a LGPL oferecem caminhos intermediários. Não existe licença “melhor”,existe a licença mais adequada para o que o autor pretende proteger e para como ele deseja que o código seja usado.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="arquivos"><a class="header" href="#arquivos">Arquivos</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>

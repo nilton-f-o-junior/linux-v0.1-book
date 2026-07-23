@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-41f7e1a4.js";
+            window.path_to_searchindex_js = "../searchindex-7d1ffa46.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-a0cfbb35.js"></script>
@@ -176,17 +176,16 @@
                     <main>
                         <h1 id="memória-ram"><a class="header" href="#memória-ram">Memória RAM</a></h1>
 <p>Quando você abre um navegador, um editor de texto e um player de música ao mesmo tempo, há algo no computador equilibrando tudo isso sem que você precise pensar no assunto. Esse algo é a memória RAM.</p>
-<p>RAM significa <em>Random Access Memory</em> (memória de acesso aleatório). O nome descreve sua característica mais importante: qualquer posição de memória pode ser lida ou escrita diretamente, em tempo constante, sem precisar percorrer o conteúdo do início até chegar ao dado desejado, como acontece em uma fita magnética.</p>
+<p>RAM significa memória de acesso aleatório. O nome descreve sua característica mais importante: qualquer posição de memória pode ser lida ou escrita diretamente, em tempo constante, sem precisar percorrer o conteúdo do início até chegar ao dado desejado, como acontece em uma fita magnética.</p>
 <h2 id="o-que-ela-faz"><a class="header" href="#o-que-ela-faz">O que ela faz</a></h2>
 <p>A RAM funciona como a mesa de trabalho do computador. O armazenamento, seja um SSD ou HD, é onde os dados ficam guardados permanentemente, como arquivos em uma gaveta. Mas para trabalhar com eles, o sistema operacional os traz para a RAM, onde o processador pode acessá-los com velocidade muito maior.</p>
-<p>A diferença de velocidade é significativa. SSDs modernos podem ler dados a vários GB/s e a RAM opera na faixa de 40 a 80 GB/s. O processador, por sua vez, usa memórias internas ainda mais rápidas, chamadas caches, porém com capacidade muito pequena, medida em megabytes. A RAM vive nesse meio-termo: rápida o suficiente para não travar o processador, grande o suficiente para manter vários programas abertos simultaneamente.</p>
 <h2 id="volátil-por-natureza"><a class="header" href="#volátil-por-natureza">Volátil por natureza</a></h2>
-<p>A característica que define a RAM é sua volatilidade, ela perde todo o conteúdo quando a energia é cortada. Não é uma limitação acidental, é consequência direta de como ela é construída. Cada bit é armazenado como uma carga elétrica em um capacitor minúsculo. Sem corrente elétrica contínua, essa carga se dissipa e a informação desaparece. A RAM dos computadores é do tipo dinâmica, conhecida como DRAM, justamente por precisar ser constantemente atualizada para manter os dados.</p>
+<p>A característica que define a RAM é sua volatilidade, ela perde todo o conteúdo quando a energia é cortada. Não é uma limitação acidental, é consequência direta de como ela é construída. Cada bit é armazenado como uma carga elétrica em um capacitor minúsculo. Sem corrente elétrica contínua, essa carga se dissipa e a informação desaparece.</p>
 <p>É por isso que ao desligar o computador, o que estava aberto some, e ao ligá-lo novamente, o sistema operacional precisa ser carregado do armazenamento de volta para a memória.</p>
 <h2 id="ddr-gerações-e-velocidade"><a class="header" href="#ddr-gerações-e-velocidade">DDR: gerações e velocidade</a></h2>
-<p>Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão DDR (<em>Double Data Rate</em>), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência. A performance final também é influenciada pela forma como os módulos são instalados (como no uso de <em>Dual Channel</em>), ampliando a velocidade de transferência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.</p>
-<p>As gerações mais relevantes hoje são a DDR4 e a DDR5. A DDR4 dominou os computadores da segunda metade da década de 2010 e ainda é comum. A DDR5, lançada em 2021, oferece largura de banda substancialmente maior e suporte a capacidades por módulo muito mais altas, mas exige plataformas mais recentes.</p>
-<p>Em dispositivos móveis, a RAM segue padrões próprios como LPDDR (<em>Low Power DDR</em>), otimizados para consumo de energia reduzido, essencial quando a bateria é o único recurso disponível.</p>
+<p>Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão <strong>DDR</strong> (<em>Double Data Rate</em>), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência.</p>
+<p>A performance final também é influenciada pela forma como os módulos são instalados (como no uso de <em>Dual Channel</em>), ampliando a velocidade de transferência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.</p>
+<p>Em dispositivos móveis, a RAM segue padrões próprios como <strong>LPDDR</strong> (<em>Low Power DDR</em>), otimizados para consumo de energia reduzido, essencial quando a bateria é o único recurso disponível.</p>
 <h2 id="quanto-é-suficiente"><a class="header" href="#quanto-é-suficiente">Quanto é suficiente?</a></h2>
 <p>A resposta depende do uso, mas alguns parâmetros práticos ajudam a calibrar a expectativa:</p>
 <ul>
@@ -208,9 +207,9 @@
 <p>O <em>Dual Channel</em> é uma tecnologia que permite ao processador comunicar-se com dois módulos de memória simultaneamente, dobrando a largura de banda de dados. Em vez de um único caminho de 64 bits, o sistema utiliza dois, o que melhora significativamente o desempenho em tarefas que exigem grande fluxo de dados, como jogos e edição de vídeo.</p>
 <p>Para que o <em>Dual Channel</em> funcione, não basta apenas ter dois pentes de memória; é preciso seguir algumas regras básicas:</p>
 <ul>
-<li><strong>Módulos Idênticos:</strong> O ideal é utilizar módulos de mesma capacidade, frequência e latência. Embora sistemas modernos consigam operar com memórias diferentes (em um modo chamado <em>Flex Mode</em>), a estabilidade e o desempenho máximo são alcançados com pares idênticos.</li>
-<li><strong>Posicionamento nos Slots:</strong> Em placas-mãe com quatro slots, os módulos geralmente não devem ser colocados lado a lado. Eles devem ser instalados em slots alternados (geralmente slots 2 e 4, ou 1 e 3), conforme indicado no manual da placa-mãe, para que cada módulo pertença a um canal diferente.</li>
-<li><strong>Quantidade de Módulos:</strong> O <em>Dual Channel</em> requer pares. Se você instalar três módulos, por exemplo, dois operarão em <em>Dual Channel</em> e o terceiro operará em <em>Single Channel</em>, o que pode gerar inconsistências de performance.</li>
+<li><strong>Módulos Idênticos:</strong> o ideal é utilizar módulos de mesma capacidade, frequência e latência;</li>
+<li><strong>Posicionamento nos Slots:</strong> em placas-mãe com quatro slots, eles devem ser instalados em slots alternados;</li>
+<li><strong>Quantidade de Módulos:</strong> requer pares, se você instalar três módulos, por exemplo, dois operarão em <em>dual channel</em> e o terceiro operará em <em>single channel</em>.</li>
 </ul>
 <h2 id="memória-virtual-e-swap"><a class="header" href="#memória-virtual-e-swap">Memória virtual e swap</a></h2>
 <p>Quando a RAM se esgota, o sistema operacional recorre a um mecanismo de emergência, sendo ele o <em>swap</em>. Uma parte do armazenamento em disco é usada como extensão da memória, movendo dados menos usados para lá e liberando espaço na RAM para o que está sendo processado.</p>

@@ -1,9 +1,5 @@
 # Fonte de Alimentação
 
-Cada componente dentro do computador precisa de energia elétrica para funcionar: o processador, a memória RAM, o armazenamento e os dispositivos conectados dependem de tensões específicas, estáveis e contínuas. A fonte de alimentação é o componente responsável por pegar a corrente da tomada e transformá-la em algo que o hardware entende.
-
-## O que ela faz
-
 A tomada elétrica fornece corrente alternada (CA), o tipo de energia que oscila de direção dezenas de vezes por segundo e que chega às casas em tensões de 110 V ou 220 V conforme a região. O hardware do computador, porém, opera com corrente contínua (CC), em tensões muito mais baixas: 3,3 V, 5 V e 12 V, dependendo do componente.
 
 A fonte converte um tipo no outro, ela retifica a corrente alternada, regula a tensão de saída para os valores esperados e distribui energia pelos cabos que alimentam a placa-mãe, o processador e outros componentes.
@@ -48,7 +44,7 @@ Algumas fontes possuem na parte traseira uma pequena chave com as opções 110 V
 
 Ligar a fonte com o seletor na posição errada é um erro grave, uma fonte configurada para 220 V em uma tomada de 110 V simplesmente não liga. O caminho inverso é mais perigoso, uma fonte ajustada para 110 V conectada a uma rede de 220 V recebe o dobro da tensão esperada, o que pode danificá-la permanentemente e, em alguns casos, causar curto-circuito ou incêndio.
 
-Fontes mais modernas eliminam esse risco com a tecnologia de chaveamento automático, chamada de bivolt automático, que detecta a tensão da rede e se ajusta sozinha, operando em qualquer tensão entre 100 V e 240 V sem nenhuma intervenção do usuário. Nessas fontes, o seletor não existe. Esse recurso costuma vir acompanhado do PFC ativo (*Power Factor Correction*), uma tecnologia relacionada que melhora a qualidade elétrica da fonte, mas trata-se de um conceito distinto, que será visto com mais detalhe em capítulo próprio.
+Fontes mais modernas eliminam esse risco com a tecnologia de chaveamento automático, chamada de bivolt automático, que detecta a tensão da rede e se ajusta sozinha, operando em qualquer tensão entre 100 V e 240 V sem nenhuma intervenção do usuário. Nessas fontes, o seletor não existe.
 
 ## Conectores
 
