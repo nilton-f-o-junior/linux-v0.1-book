@@ -25,32 +25,13 @@ Acesse: <https://linux-v0-1-book.vercel.app/>
 
 ## 📖 Índice
 
-### 1. Introdução
-
-- 1.1. Prefácio
-- 1.2. Introdução
-
-### 2. Do Hardware ao Sistema
-
-- 2.1. Dispositivos
-- 2.2. Software
-- 2.3. Sistemas Operacionais
-- 2.4. Distribuições
-- 2.5. Desktop Environments
-- 2.6. Tiling Window Managers
-
-### 3. Do Componente ao Computador
-
-- 3.1. Placa-mãe
-- 3.2. Firmware, BIOS, UEFI e Bootloader
-- 3.3. Processador (CPU)
-- 3.4. Memória RAM
-- 3.5. Armazenamento
-- 3.6. GPU
-- 3.7. Fonte de Alimentação
-- 3.8. Resfriamento
-- 3.9. Monitor
-- 3.10. Periféricos
+### 1. Apresentação
+### 2. Começando
+### 3. Hardware
+### 4. Software
+### 5. Sistema
+### 6. Visualização de Arquivos
+### 7. Manipulando Arquivos
 
 ## 🎯 Para Quem é Este Livro?
 
