@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-b443058c.js";
+            window.path_to_searchindex_js = "../searchindex-bcd7f4b0.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-37ca00fe.js"></script>
@@ -178,28 +178,22 @@
 <p>O Linux é, por natureza, um sistema operacional multiusuário estruturado sob um princípio rígido de privilégios. Para garantir a segurança, o isolamento de dados e a organização do ecossistema, o administrador do sistema (root) precisa controlar quem possui acesso à máquina e a quais departamentos essas identidades pertencem.</p>
 <h2 id="criando-e-administrando-usuários"><a class="header" href="#criando-e-administrando-usuários">Criando e Administrando Usuários</a></h2>
 <p>A criação de uma nova identidade no sistema pode ser feita por duas abordagens que operam em camadas diferentes do sistema operacional:</p>
-<ul>
-<li>
 <p><strong>useradd:</strong> é o utilitário nativo de baixo nível. Ele cria o usuário de forma direta e “crua”: o sistema apenas registra a entrada do usuário no arquivo <code>/etc/passwd</code>, sem configurar automaticamente um diretório pessoal (<code>/home</code>) ou uma senha inicial, exigindo parametrização manual posterior.</p>
-<pre><code class="language-bash">useradd &lt;nome-do-usuario&gt;
+<pre><code class="language-bash">useradd 
 </code></pre>
-</li>
-<li>
 <p><strong>adduser:</strong> é um script de alto nível muito mais amigável e interativo. Ao ser executado, ele guia o administrador na configuração do perfil, gera automaticamente o diretório de início (<code>/home/nome-do-usuario</code>), copia os arquivos base de ambiente (como <code>.bashrc</code>) e solicita a criação da senha em tempo de execução.</p>
-<pre><code class="language-bash">adduser &lt;nome-do-usuario&gt;
+<pre><code class="language-bash">adduser 
 </code></pre>
-</li>
-</ul>
 <h2 id="auditoria-e-exclusão-de-contas"><a class="header" href="#auditoria-e-exclusão-de-contas">Auditoria e Exclusão de Contas</a></h2>
 <p>Para validar se as contas foram criadas corretamente ou para removê-las quando um usuário deixa de fazer parte do sistema, utilizamos os seguintes comandos:</p>
 <pre><code class="language-bash"># verifica se o usuário foi registrado no arquivo central de contas do sistema
-cat /etc/passwd | grep &lt;nome-do-usuario&gt;
+cat /etc/passwd | grep 
 
 # valida a existência do usuário e o estado do hash da sua senha (requer sudo)
-sudo cat /etc/shadow | grep &lt;nome-do-usuario&gt;
+sudo cat /etc/shadow | grep 
 
 # remove a conta do usuário do sistema
-userdel &lt;nome-do-usuario&gt;
+userdel 
 </code></pre>
 <h2 id="gerenciando-grupos-no-linux"><a class="header" href="#gerenciando-grupos-no-linux">Gerenciando Grupos no Linux</a></h2>
 <p>Os grupos funcionam como caixas organizacionais projetadas para simplificar a atribuição de permissões em massa. Em vez de dar acesso a um arquivo para cinquenta usuários individualmente, o administrador cria um grupo, coloca os usuários lá dentro e dá a permissão apenas ao grupo.</p>
@@ -210,13 +204,13 @@ groupadd projetos
 cat /etc/group
 
 # adiciona um usuário a um grupo secundário (-a de append, -G de Group)
-usermod -aG &lt;nome-do-grupo&gt; &lt;nome-do-usuario&gt;
+usermod -aG 
 
 # verifica instantaneamente a quais grupos uma determinada conta pertence
-groups &lt;nome-do-usuario&gt;
+groups 
 
 # exclui um grupo do sistema operacional
-groupdel &lt;nome-do-grupo&gt;
+groupdel 
 </code></pre>
 
                     </main>

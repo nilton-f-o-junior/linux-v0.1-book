@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-b443058c.js";
+            window.path_to_searchindex_js = "../searchindex-bcd7f4b0.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-37ca00fe.js"></script>
@@ -178,66 +178,86 @@
 <p>O diretório raiz, representado graficamente por uma única barra para a frente (<code>/</code>), é o nível mais alto da hierarquia do Linux. Não existe nada acima dele. Todos os outros diretórios, subdiretórios e arquivos estão contidos dentro da raiz. Quando um SSD ou um pendrive é conectado ao sistema, ele não ganha uma nova letra de unidade; ele é “montado” como uma pasta sob essa mesma estrutura.</p>
 <p>Essa organização segue um padrão estrito chamado <strong>FHS</strong> (<em>Filesystem Hierarchy Standard</em>), que define exatamente onde cada tipo de arquivo deve morar. Isso garante que, independentemente da distribuição Linux que você esteja usando (seja Ubuntu, Fedora, Debian ou Arch), a lógica de funcionamento interno seja previsível e consistente.</p>
 <p>Visualmente, a árvore padrão do sistema se ramifica da seguinte forma a partir da raiz:</p>
-<pre><code class="language-text">/ (raiz)
-├── bin/       -&gt; Executáveis essenciais do sistema para todos os usuários
-├── boot/      -&gt; Arquivos de inicialização (Kernel, GRUB, initramfs)
-├── dev/       -&gt; Arquivos virtuais que representam dispositivos de hardware
-├── etc/       -&gt; Arquivos de configuração global do sistema e serviços
-├── home/      -&gt; Pastas pessoais dos usuários comuns (ex: /home/usuario)
-├── lib/       -&gt; Bibliotecas essenciais compartilhadas pelos programas do /bin
-├── lib64/     -&gt; Bibliotecas essenciais de 64 bits
-├── media/     -&gt; Ponto de montagem automático para mídias removíveis (pendrives)
-├── mnt/       -&gt; Ponto de montagem manual e temporário de sistemas de arquivos
-├── opt/       -&gt; Instalação de pacotes de softwares adicionais e proprietários
-├── proc/      -&gt; Sistema de arquivos virtual com informações de processos e do kernel
-├── root/      -&gt; Diretório pessoal do superusuário (administrador)
-├── run/       -&gt; Dados voláteis de processos em execução desde o último boot
-├── sbin/      -&gt; Executáveis essenciais de administração do sistema (privilégios root)
-├── srv/       -&gt; Dados de serviços e servidores hospedados na máquina
-├── sys/       -&gt; Interface em tempo real para configurações do kernel e hardware
-├── tmp/       -&gt; Arquivos temporários criados pelo sistema e aplicativos
-├── usr/       -&gt; Programas, documentações e bibliotecas secundárias dos usuários
-└── var/       -&gt; Arquivos de dados variáveis (logs do sistema, spools, e-mails)
+<pre><code class="language-bash">/ (raiz)
+├── bin/ -&gt; Executáveis essenciais do sistema para todos os usuários
+├── boot/ -&gt; Arquivos de inicialização (Kernel, GRUB, initramfs)
+├── dev/ -&gt; Arquivos virtuais que representam dispositivos de hardware
+├── etc/ -&gt; Arquivos de configuração global do sistema e serviços
+├── home/ -&gt; Pastas pessoais dos usuários comuns (ex: /home/usuario)
+├── lib/ -&gt; Bibliotecas essenciais compartilhadas pelos programas do /bin
+├── lib64/ -&gt; Bibliotecas essenciais de 64 bits
+├── media/ -&gt; Ponto de montagem automático para mídias removíveis (pendrives)
+├── mnt/ -&gt; Ponto de montagem manual e temporário de sistemas de arquivos
+├── opt/ -&gt; Instalação de pacotes de softwares adicionais e proprietários
+├── proc/ -&gt; Sistema de arquivos virtual com informações de processos e do kernel
+├── root/ -&gt; Diretório pessoal do superusuário (administrador)
+├── run/ -&gt; Dados voláteis de processos em execução desde o último boot
+├── sbin/ -&gt; Executáveis essenciais de administração do sistema (privilégios root)
+├── srv/ -&gt; Dados de serviços e servidores hospedados na máquina
+├── sys/ -&gt; Interface em tempo real para configurações do kernel e hardware
+├── tmp/ -&gt; Arquivos temporários criados pelo sistema e aplicativos
+├── usr/ -&gt; Programas, documentações e bibliotecas secundárias dos usuários
+└── var/ -&gt; Arquivos de dados variáveis (logs do sistema, spools, e-mails)
 </code></pre>
 <h2 id="os-principais-diretórios-e-suas-funções"><a class="header" href="#os-principais-diretórios-e-suas-funções">Os principais diretórios e suas funções</a></h2>
 <p>Abaixo da raiz, o sistema se divide em pastas com nomes curtos, quase sempre abreviações de suas funções originais em inglês. Os principais elementos que compõem o sistema são:</p>
 <h3 id="bin-e-sbin-os-executáveis-do-sistema"><a class="header" href="#bin-e-sbin-os-executáveis-do-sistema">/bin e /sbin: os executáveis do sistema</a></h3>
 <p>Esses diretórios guardam os comandos que você digita no terminal para interagir com a máquina.</p>
 <ul>
-<li><strong><code>/bin</code> (Binaries):</strong> contém os comandos binários essenciais que podem ser usados por qualquer usuário do sistema;</li>
-<li><strong><code>/sbin</code> (System Binaries):</strong> guarda os executáveis destinados à administração do sistema. Geralmente, exigem privilégios de superusuário (<em>root</em>) para serem executados.</li>
+<li>
+<p><strong><code>/bin</code> (Binaries):</strong> contém os comandos binários essenciais que podem ser usados por qualquer usuário do sistema;</p>
+</li>
+<li>
+<p><strong><code>/sbin</code> (System Binaries):</strong> guarda os executáveis destinados à administração do sistema. Geralmente, exigem privilégios de superusuário (<em>root</em>) para serem executados.</p>
+</li>
 </ul>
 <h3 id="boot-a-inicialização"><a class="header" href="#boot-a-inicialização">/boot: a inicialização</a></h3>
 <p>Aqui ficam os arquivos necessários para o computador ligar. É onde reside o carregador de inicialização (geralmente o GRUB), o próprio kernel do Linux (<code>vmlinuz</code>) e o <code>initramfs</code>, que prepara o terreno e carrega os drivers básicos antes de o sistema principal assumir o controle do hardware. Modificações incorretas neste diretório podem impedir a máquina de iniciar.</p>
 <h3 id="dev-os-dispositivos-como-arquivos"><a class="header" href="#dev-os-dispositivos-como-arquivos">/dev: os dispositivos como arquivos</a></h3>
 <p>No Linux, há uma máxima famosa: <em>“Tudo é um arquivo”</em>. O diretório <code>/dev</code> (Devices) é a aplicação prática desse conceito. Ele não armazena arquivos reais no disco, mas sim pontos de acesso aos hardwares da máquina.</p>
 <ul>
-<li><strong><code>/dev/sda</code> ou <code>/dev/nvme0n1</code>:</strong> representam os discos de armazenamento físicos;</li>
-<li><strong><code>/dev/null</code>:</strong> tudo o que é enviado para ele desaparece instantaneamente, sendo muito utilizado para descartar saídas de comandos indesejadas.</li>
+<li>
+<p><strong><code>/dev/sda</code> ou <code>/dev/nvme0n1</code>:</strong> representam os discos de armazenamento físicos;</p>
+</li>
+<li>
+<p><strong><code>/dev/null</code>:</strong> tudo o que é enviado para ele desaparece instantaneamente, sendo muito utilizado para descartar saídas de comandos indesejadas.</p>
+</li>
 </ul>
 <h3 id="etc-o-painel-de-controle-em-texto"><a class="header" href="#etc-o-painel-de-controle-em-texto">/etc: o painel de controle em texto</a></h3>
 <p>Se você precisa mudar a configuração de um programa, do sistema de rede ou dos usuários, o <code>/etc</code> (<em>Editable Text Configuration</em>) é o lugar. Ele guarda os arquivos de configuração de praticamente todos os serviços globais do sistema. Quase todos esses arquivos são em formato de texto puro, permitindo que o administrador altere o comportamento do sistema editando apenas algumas linhas.</p>
 <h3 id="home-e-root-os-territórios-dos-usuários"><a class="header" href="#home-e-root-os-territórios-dos-usuários">/home e /root: os territórios dos usuários</a></h3>
 <p>O Linux separa rigidamente o espaço do administrador geral dos usuários comuns.</p>
 <ul>
-<li><strong><code>/home</code>:</strong> é onde ficam as pastas pessoais de cada usuário cadastrado na máquina (ex: <code>/home/felipe</code>). Seus documentos, downloads, imagens e até as configurações personalizadas de seus programas ficam guardados aqui;</li>
-<li><strong><code>/root</code>:</strong> é a pasta pessoal exclusiva do superusuário do sistema. Ela fica separada do <code>/home</code> por questões de segurança, garantindo que o administrador tenha seu próprio espaço isolado e protegido de falhas comuns.</li>
+<li>
+<p><strong><code>/home</code>:</strong> é onde ficam as pastas pessoais de cada usuário cadastrado na máquina (ex: <code>/home/felipe</code>). Seus documentos, downloads, imagens e até as configurações personalizadas de seus programas ficam guardados aqui;</p>
+</li>
+<li>
+<p><strong><code>/root</code>:</strong> é a pasta pessoal exclusiva do superusuário do sistema. Ela fica separada do <code>/home</code> por questões de segurança, garantindo que o administrador tenha seu próprio espaço isolado e protegido de falhas comuns.</p>
+</li>
 </ul>
 <h3 id="lib-lib32-e-lib64-as-bibliotecas"><a class="header" href="#lib-lib32-e-lib64-as-bibliotecas">/lib, /lib32 e /lib64: as bibliotecas</a></h3>
 <p>Programas dependem de pedaços de código compartilhados para executar tarefas comuns (como desenhar uma interface na tela ou criptografar uma senha). Essas coleções de código são chamadas de bibliotecas e ficam guardadas nos diretórios <code>/lib</code>. Elas equivalem funcionalmente aos arquivos <code>.dll</code> do ecossistema Windows.</p>
 <h3 id="media-e-mnt-encaixando-novos-discos"><a class="header" href="#media-e-mnt-encaixando-novos-discos">/media e /mnt: encaixando novos discos</a></h3>
 <p>Quando você pluga um dispositivo de armazenamento externo, ele precisa ser “montado” na árvore de diretórios para se tornar acessível.</p>
 <ul>
-<li><strong><code>/media</code>:</strong> é gerenciado automaticamente pelo sistema. Quando você pluga um pendrive ou HD externo, o Linux cria uma pasta automática aqui dentro para dar acesso imediato aos arquivos;</li>
-<li><strong><code>/mnt</code>:</strong> é um espaço reservado para montagens manuais feitas pelo administrador. Se você precisa fixar temporariamente uma partição de rede ou outro disco rígido específico no sistema, o <code>/mnt</code> é o local padrão para isso.</li>
+<li>
+<p><strong><code>/media</code>:</strong> é gerenciado automaticamente pelo sistema. Quando você pluga um pendrive ou HD externo, o Linux cria uma pasta automática aqui dentro para dar acesso imediato aos arquivos;</p>
+</li>
+<li>
+<p><strong><code>/mnt</code>:</strong> é um espaço reservado para montagens manuais feitas pelo administrador. Se você precisa fixar temporariamente uma partição de rede ou outro disco rígido específico no sistema, o <code>/mnt</code> é o local padrão para isso.</p>
+</li>
 </ul>
 <h3 id="opt-softwares-de-terceiros"><a class="header" href="#opt-softwares-de-terceiros">/opt: softwares de terceiros</a></h3>
 <p>O diretório <code>/opt</code> serve para a instalação de aplicativos proprietários ou que não seguem o gerenciador de pacotes padrão da distribuição. Softwares corporativos ou de grande porte que vêm em pacotes fechados (como o Google Chrome, Discord ou ferramentas específicas de desenvolvimento) costumam se instalar em subpastas próprias dentro do <code>/opt</code> para não misturar seus arquivos com a estrutura padrão do sistema.</p>
 <h3 id="proc-e-sys-as-janelas-do-kernel"><a class="header" href="#proc-e-sys-as-janelas-do-kernel">/proc e /sys: as janelas do kernel</a></h3>
 <p>Assim como o <code>/dev</code>, os diretórios <code>/proc</code> (Processes) e <code>/sys</code> (System) não ocupam espaço físico no seu SSD ou HD. Eles são os chamados sistemas de arquivos virtuais, criados dinamicamente na memória RAM pelo kernel do Linux.</p>
 <ul>
-<li><strong><code>/proc</code>:</strong> contém informações em tempo real sobre os processos que estão rodando na máquina e o status do hardware;</li>
-<li><strong><code>/sys</code>:</strong> organiza e expõe informações sobre os drivers, barramentos e dispositivos do computador, permitindo ler e interagir diretamente com as configurações em tempo real do kernel.</li>
+<li>
+<p><strong><code>/proc</code>:</strong> contém informações em tempo real sobre os processos que estão rodando na máquina e o status do hardware;</p>
+</li>
+<li>
+<p><strong><code>/sys</code>:</strong> organiza e expõe informações sobre os drivers, barramentos e dispositivos do computador, permitindo ler e interagir diretamente com as configurações em tempo real do kernel.</p>
+</li>
 </ul>
 <h3 id="usr-a-central-de-aplicativos"><a class="header" href="#usr-a-central-de-aplicativos">/usr: a central de aplicativos</a></h3>
 <p>O <code>/usr</code> é uma das maiores pastas do sistema. Ela funciona como uma “segunda raiz” e guarda a grande maioria dos programas instalados e utilizados no dia a dia, junto com seus ícones, arquivos de tradução, documentações e fontes. Dentro dele, existem réplicas da estrutura principal voltadas para o usuário comum, como <code>/usr/bin</code> e <code>/usr/lib</code>.</p>
@@ -250,8 +270,12 @@
 <p><code>/home/usuario/.local/share/Trash/</code></p>
 <p>Internamente, essa estrutura oculta é dividida em duas subpastas vitais para a segurança do processo:</p>
 <ul>
-<li><strong><code>files/</code>:</strong> é o local onde os arquivos e pastas deletados residem fisicamente. O sistema pode alterar ligeiramente seus nomes originais caso ocorram duplicatas durante a remoção;</li>
-<li><strong><code>info/</code>:</strong> contém pequenos arquivos de texto com metadados cruciais de cada item excluído. Nesses arquivos são registrados o caminho original de onde o item foi retirado e a data/hora exata em que ele foi enviado à lixeira. É essa pasta de metadaos que torna o botão “Restaurar” funcional no sistema.</li>
+<li>
+<p><strong><code>files/</code>:</strong> é o local onde os arquivos e pastas deletados residem fisicamente. O sistema pode alterar ligeiramente seus nomes originais caso ocorram duplicatas durante a remoção;</p>
+</li>
+<li>
+<p><strong><code>info/</code>:</strong> contém pequenos arquivos de texto com metadados cruciais de cada item excluído. Nesses arquivos são registrados o caminho original de onde o item foi retirado e a data/hora exata em que ele foi enviado à lixeira. É essa pasta de metadaos que torna o botão “Restaurar” funcional no sistema.</p>
+</li>
 </ul>
 <h3 id="discos-externos-e-a-pasta-trash-uid"><a class="header" href="#discos-externos-e-a-pasta-trash-uid">Discos externos e a pasta <code>.Trash-$UID</code></a></h3>
 <p>O mecanismo muda quando lidamos com mídias removíveis, como pendrives ou partições secundárias de HDs montadas em <code>/media</code> ou <code>/mnt</code>. Mover um arquivo de 20 GB de um pendrive diretamente para a lixeira do <code>/home</code> exigiria que o sistema copiasse fisicamente todos esses dados através do barramento, tornando o processo demorado e ineficiente.</p>

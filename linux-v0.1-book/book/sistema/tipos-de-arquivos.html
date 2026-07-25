@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-b443058c.js";
+            window.path_to_searchindex_js = "../searchindex-bcd7f4b0.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-37ca00fe.js"></script>
@@ -176,50 +176,74 @@
                     <main>
                         <h1 id="tipos-de-arquivos"><a class="header" href="#tipos-de-arquivos">Tipos de arquivos</a></h1>
 <p>Um tipo de arquivo é determinado pela forma como seus dados internos são estruturados. Existem duas abordagens principais para o sistema operacional identificar essa estrutura:</p>
-<ul>
-<li>
 <p><strong>Extensão de arquivo:</strong> é o método padrão em sistemas Windows. O tipo do arquivo é indicado por um sufixo de três ou quatro letras após o ponto final no nome do arquivo (como <code>.docx</code>, <code>.jpg</code> ou <code>.mp4</code>). Se você alterar manualmente a extensão de um arquivo <code>.jpg</code> para <code>.txt</code>, o sistema tentará abri-lo em um editor de texto, resultando em uma tela cheia de caracteres ilegíveis.</p>
-</li>
-<li>
 <p><strong>Números Mágicos:</strong> é a abordagem nativa de sistemas Unix e Linux. O sistema operacional ignora a extensão do nome e lê os primeiros bytes do arquivo (o cabeçalho ou <em>header</em>). Esses bytes iniciais contêm uma assinatura única. Por exemplo, todo arquivo PDF começa estritamente com os caracteres <code>%PDF</code>, e toda imagem PNG começa com os bytes hexadecimais <code>89 50 4E 47</code>. Mesmo sem extensão nenhuma no nome, o sistema sabe exatamente o que aquele arquivo é.</p>
-</li>
-</ul>
 <h2 id="plain-text"><a class="header" href="#plain-text">Plain Text</a></h2>
 <p>São os arquivos mais simples e universais do ecossistema computacional. Eles contêm apenas caracteres numéricos e de texto puro, codificados em padrões como ASCII ou UTF-8, sem qualquer informação de formatação visual (como tamanho de fonte, cores ou margens).</p>
 <ul>
-<li><strong><code>.txt</code>:</strong> o formato básico de texto, sendo universalmente legível por qualquer dispositivo ou sistema operacional;</li>
-<li><strong><code>.cfg</code>, <code>.ini</code>, <code>.conf</code>:</strong> arquivos de texto estruturados para guardar configurações de softwares e do próprio sistema operacional;</li>
-<li><strong><code>.md</code>:</strong> arquivos de texto que utilizam marcações simples (como asteriscos e hashes) para indicar títulos e negritos, mantendo o arquivo perfeitamente legível mesmo quando aberto em um editor de texto puro.</li>
+<li>
+<p><strong><code>.txt</code>:</strong> o formato básico de texto, sendo universalmente legível por qualquer dispositivo ou sistema operacional;</p>
+</li>
+<li>
+<p><strong><code>.cfg</code>, <code>.ini</code>, <code>.conf</code>:</strong> arquivos de texto estruturados para guardar configurações de softwares e do próprio sistema operacional;</p>
+</li>
+<li>
+<p><strong><code>.md</code>:</strong> arquivos de texto que utilizam marcações simples (como asteriscos e hashes) para indicar títulos e negritos, mantendo o arquivo perfeitamente legível mesmo quando aberto em um editor de texto puro.</p>
+</li>
 </ul>
 <h2 id="arquivos-binários"><a class="header" href="#arquivos-binários">Arquivos binários</a></h2>
 <p>Ao contrário do anterior, os arquivos binários não foram feitos para serem lidos diretamente por humanos. Eles exigem um software específico que entenda a sua geometria interna para traduzir os bits em algo compreensível na tela. Seus principais grupos são:</p>
 <h3 id="arquivos-de-imagem"><a class="header" href="#arquivos-de-imagem">Arquivos de imagem</a></h3>
 <p>Armazenam dados visuais, dividindo-se entre mapas de bits (pixels) e vetores.</p>
 <ul>
-<li><strong><code>.jpg</code> / <code>.jpeg</code>:</strong> formato compactado com perda de qualidade, porém ideal para fotografias na web devido ao tamanho reduzido do arquivo;</li>
-<li><strong><code>.png</code>:</strong> compactação sem perda de dados, possui suporte a fundos transparentes;</li>
-<li><strong><code>.svg</code>:</strong> formato vetorial baseado em XML, mas em vez de salvar pixels, ele salva equações matemáticas de linhas e formas, permitindo que a imagem seja ampliada infinitamente sem perder a nitidez.</li>
+<li>
+<p><strong><code>.jpg</code> / <code>.jpeg</code>:</strong> formato compactado com perda de qualidade, porém ideal para fotografias na web devido ao tamanho reduzido do arquivo;</p>
+</li>
+<li>
+<p><strong><code>.png</code>:</strong> compactação sem perda de dados, possui suporte a fundos transparentes;</p>
+</li>
+<li>
+<p><strong><code>.svg</code>:</strong> formato vetorial baseado em XML, mas em vez de salvar pixels, ele salva equações matemáticas de linhas e formas, permitindo que a imagem seja ampliada infinitamente sem perder a nitidez.</p>
+</li>
 </ul>
 <h3 id="arquivos-de-áudio-e-vídeo"><a class="header" href="#arquivos-de-áudio-e-vídeo">Arquivos de áudio e vídeo</a></h3>
 <p>Funcionam frequentemente como contêineres que abrigam fluxos de dados codificados por algoritmos chamados codecs.</p>
 <ul>
-<li><strong><code>.mp3</code>:</strong> áudio compactado com perda de frequências imperceptíveis ao ouvido humano médio, mas tornou-se o padrão de distribuição musical digital;</li>
-<li><strong><code>.wav</code>:</strong> áudio sem compactação, consegue manter a fidelidade máxima da gravação original, resultando em arquivos massivos, usados profissionalmente na edição de som;</li>
-<li><strong><code>.mp4</code> / <code>.mkv</code>:</strong> arquivos contêineres que guardam uma faixa de vídeo, múltiplas faixas de áudio (dublagens) e legendas em um único pacote sincronizado.</li>
+<li>
+<p><strong><code>.mp3</code>:</strong> áudio compactado com perda de frequências imperceptíveis ao ouvido humano médio, mas tornou-se o padrão de distribuição musical digital;</p>
+</li>
+<li>
+<p><strong><code>.wav</code>:</strong> áudio sem compactação, consegue manter a fidelidade máxima da gravação original, resultando em arquivos massivos, usados profissionalmente na edição de som;</p>
+</li>
+<li>
+<p><strong><code>.mp4</code> / <code>.mkv</code>:</strong> arquivos contêineres que guardam uma faixa de vídeo, múltiplas faixas de áudio (dublagens) e legendas em um único pacote sincronizado.</p>
+</li>
 </ul>
 <h2 id="arquivos-executáveis"><a class="header" href="#arquivos-executáveis">Arquivos executáveis</a></h2>
 <p>São os arquivos que contêm instruções diretas para o processador executar tarefas. Eles mudam radicalmente conforme a arquitetura e o sistema operacional.</p>
 <ul>
-<li><strong><code>.exe</code> e <code>.msi</code>:</strong> os formatos executáveis padrão do Windows, possuindo o código binário compilado e rotinas de instalação;</li>
-<li><strong>ELF (sem extensão nativa):</strong> o padrão para executáveis em sistemas Linux, possuindo uma estrutura rígida que indica ao kernel como carregar o programa na memória RAM;</li>
-<li><strong>Scripts (<code>.sh</code>, <code>.bat</code>, <code>.py</code>):</strong> diferente dos executáveis binários, os scripts são arquivos de texto puro contendo comandos ordenados. Eles não são lidos diretamente pelo processador, mas sim interpretados linha por linha por um programa intermediário (como o terminal Bash ou o interpretador Python).</li>
+<li>
+<p><strong><code>.exe</code> e <code>.msi</code>:</strong> os formatos executáveis padrão do Windows, possuindo o código binário compilado e rotinas de instalação;</p>
+</li>
+<li>
+<p><strong>ELF (sem extensão nativa):</strong> o padrão para executáveis em sistemas Linux, possuindo uma estrutura rígida que indica ao kernel como carregar o programa na memória RAM;</p>
+</li>
+<li>
+<p><strong>Scripts (<code>.sh</code>, <code>.bat</code>, <code>.py</code>):</strong> diferente dos executáveis binários, os scripts são arquivos de texto puro contendo comandos ordenados. Eles não são lidos diretamente pelo processador, mas sim interpretados linha por linha por um programa intermediário (como o terminal Bash ou o interpretador Python).</p>
+</li>
 </ul>
 <h2 id="arquivamento-e-compactação"><a class="header" href="#arquivamento-e-compactação">Arquivamento e compactação</a></h2>
 <p>São formatos projetados para atuar como caixas digitais. Eles cumprem duas funções frequentemente confundidas: o arquivamento (juntar várias pastas e arquivos em um só local) e a compactação (reduzir o espaço em disco usando algoritmos matemáticos que eliminam redundâncias).</p>
 <ul>
-<li><strong><code>.zip</code>:</strong> o formato de compactação mais popular do mundo. Equilibra uma velocidade de compactação rápida com um nível de redução de tamanho aceitável;</li>
-<li><strong><code>.tar</code>:</strong> apenas realiza o arquivamento (junta os arquivos), sem aplicar nenhuma redução de tamanho;</li>
-<li><strong><code>.tar.gz</code> ou <code>.tgz</code>:</strong> a união do utilitário <code>.tar</code> (que junta as pastas) com a compactação do algoritmo <code>Gzip</code> (que reduz o tamanho). É o padrão para distribuição de código-fonte e backups no mundo Unix.</li>
+<li>
+<p><strong><code>.zip</code>:</strong> o formato de compactação mais popular do mundo. Equilibra uma velocidade de compactação rápida com um nível de redução de tamanho aceitável;</p>
+</li>
+<li>
+<p><strong><code>.tar</code>:</strong> apenas realiza o arquivamento (junta os arquivos), sem aplicar nenhuma redução de tamanho;</p>
+</li>
+<li>
+<p><strong><code>.tar.gz</code> ou <code>.tgz</code>:</strong> a união do utilitário <code>.tar</code> (que junta as pastas) com a compactação do algoritmo <code>Gzip</code> (que reduz o tamanho). É o padrão para distribuição de código-fonte e backups no mundo Unix.</p>
+</li>
 </ul>
 
                     </main>
