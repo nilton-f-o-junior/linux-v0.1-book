@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,38 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="tar"><a class="header" href="#tar">tar</a></h1>
+<p>Agrupa (e opcionalmente compacta) arquivos e diretórios em um único arquivo.</p>
+<pre><code class="language-bash">tar [opções] arquivo.tar arquivo [arquivo1]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>arquivo.tar</td><td>Nome do arquivo <code>.tar</code> a ser criado ou lido</td></tr>
+<tr><td>arquivo</td><td>Localização do(s) arquivo(s) ou diretório(s) a serem agrupados</td></tr>
+<tr><td>-c, –create</td><td>Cria um novo arquivo <code>.tar</code></td></tr>
+<tr><td>-x, –extract</td><td>Extrai o conteúdo de um arquivo <code>.tar</code></td></tr>
+<tr><td>-v, –verbose</td><td>Exibe os nomes dos arquivos processados durante a operação</td></tr>
+<tr><td>-f, –file</td><td>Especifica o nome do arquivo <code>.tar</code> a ser usado (geralmente obrigatório)</td></tr>
+<tr><td>-z, –gzip</td><td>Compacta/descompacta usando <code>gzip</code> (gera/lê arquivos <code>.tar.gz</code>)</td></tr>
+<tr><td>-t, –list</td><td>Lista o conteúdo de um arquivo <code>.tar</code>, sem extraí-lo</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>tar</code> originalmente apenas agrupa arquivos em um único pacote (sem compactar). Para compactar durante o processo, combine com a opção <code>-z</code> (gzip), gerando um arquivo <code>.tar.gz</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">tar -cvf arquivo.tar pasta/           # agrupa uma pasta em `arquivo.tar`
+tar -xvf arquivo.tar                  # extrai o conteúdo de `arquivo.tar`
+tar -czvf arquivo.tar.gz pasta/       # agrupa e compacta uma pasta em `arquivo.tar.gz`
+tar -xzvf arquivo.tar.gz              # extrai um arquivo `.tar.gz`
+tar -tvf arquivo.tar                  # lista o conteúdo de `arquivo.tar`, sem extraí-lo
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

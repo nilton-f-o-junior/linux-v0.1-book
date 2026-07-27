@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,31 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="hostname"><a class="header" href="#hostname">hostname</a></h1>
+<p>Exibe ou define o nome do host (nome da máquina) na rede.</p>
+<pre><code class="language-bash">hostname [opções] [novo_nome]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>novo_nome</td><td>Novo nome a ser atribuído ao host (geralmente requer permissão de superusuário)</td></tr>
+<tr><td>-i, –ip-address</td><td>Exibe o(s) endereço(s) IP associado(s) ao host</td></tr>
+<tr><td>-f, –fqdn</td><td>Exibe o nome de domínio totalmente qualificado (FQDN)</td></tr>
+<tr><td>-d, –domain</td><td>Exibe apenas o nome do domínio DNS</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Alterar o nome do host com <code>hostname novo_nome</code> costuma valer apenas para a sessão atual. Para tornar a mudança permanente, é necessário editar o arquivo <code>/etc/hostname</code> (e geralmente também <code>/etc/hosts</code>).</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">hostname                              # exibe o nome atual do host
+hostname -i                           # exibe o endereço IP associado ao host
+hostname -f                           # exibe o nome de domínio totalmente qualificado (FQDN)
+sudo hostname novo-nome               # altera o nome do host para `novo-nome` (temporariamente)
+</code></pre>
 
                     </main>
 

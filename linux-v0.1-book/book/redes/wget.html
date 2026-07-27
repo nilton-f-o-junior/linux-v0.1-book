@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,36 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="wget"><a class="header" href="#wget">wget</a></h1>
+<p>Baixa arquivos da internet através de protocolos como HTTP, HTTPS e FTP.</p>
+<pre><code class="language-bash">wget [opções] url
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td>Endereço do arquivo a ser baixado</td></tr>
+<tr><td>-O arquivo</td><td>Salva o conteúdo baixado com um nome específico, em vez do nome original</td></tr>
+<tr><td>-c, –continue</td><td>Retoma o download de um arquivo parcialmente baixado</td></tr>
+<tr><td>-b, –background</td><td>Executa o download em segundo plano</td></tr>
+<tr><td>-r, –recursive</td><td>Baixa recursivamente o conteúdo de um site (útil para espelhar páginas)</td></tr>
+<tr><td>-q, –quiet</td><td>Executa o download sem exibir mensagens no terminal</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Diferente do <code>curl</code>, que por padrão exibe o conteúdo no terminal, <code>wget</code> já salva o resultado em um arquivo automaticamente, sendo focado principalmente em download de arquivos.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">wget https://exemplo.com/arquivo.zip              # baixa o arquivo, mantendo o nome original
+wget -O novo_nome.zip https://exemplo.com/arquivo.zip  # baixa o arquivo com um novo nome
+wget -c https://exemplo.com/arquivo.zip           # retoma um download interrompido
+wget -b https://exemplo.com/arquivo.zip           # baixa o arquivo em segundo plano
+wget -r https://exemplo.com                       # baixa recursivamente o conteúdo de um site
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

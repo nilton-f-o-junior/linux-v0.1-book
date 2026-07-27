@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,37 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="tree"><a class="header" href="#tree">tree</a></h1>
+<p>Exibe a estrutura de diretórios e arquivos em formato de árvore.</p>
+<pre><code class="language-bash">tree [opções] [diretório]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório</td><td>Localização do diretório a ser exibido (padrão: diretório atual)</td></tr>
+<tr><td>-a</td><td>Exibe também arquivos e diretórios ocultos</td></tr>
+<tr><td>-d</td><td>Lista apenas diretórios, sem arquivos</td></tr>
+<tr><td>-L nível</td><td>Limita a profundidade de exibição ao número de níveis informado</td></tr>
+<tr><td>-f</td><td>Exibe o caminho completo de cada arquivo/diretório</td></tr>
+<tr><td>-h</td><td>Exibe o tamanho dos arquivos em formato legível (KB, MB, etc.)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>tree</code> normalmente não vem instalado por padrão em todas as distribuições. Pode ser necessário instalá-lo através do gerenciador de pacotes (ex.: <code>apt install tree</code>).</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">tree                                 # exibe a árvore do diretório atual
+tree /var/log                        # exibe a árvore do diretório `/var/log`
+tree -a                              # exibe a árvore incluindo arquivos e diretórios ocultos
+tree -d                              # exibe apenas os diretórios, sem listar arquivos
+tree -L 2                            # exibe a árvore limitada a 2 níveis de profundidade
+tree -h                              # exibe a árvore com o tamanho dos arquivos
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

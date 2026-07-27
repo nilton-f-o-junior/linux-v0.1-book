@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,35 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="unzip"><a class="header" href="#unzip">unzip</a></h1>
+<p>Descompacta arquivos no formato <code>.zip</code>.</p>
+<pre><code class="language-bash">unzip [opções] arquivo.zip
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>arquivo.zip</td><td>Localização do arquivo <code>.zip</code> a ser descompactado</td></tr>
+<tr><td>-d diretório</td><td>Descompacta o conteúdo em um diretório específico, em vez do diretório atual</td></tr>
+<tr><td>-l, –list</td><td>Lista o conteúdo do arquivo <code>.zip</code>, sem descompactá-lo</td></tr>
+<tr><td>-o, –overwrite</td><td>Sobrescreve arquivos existentes sem pedir confirmação</td></tr>
+<tr><td>-x arquivo</td><td>Exclui um arquivo específico da descompactação</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Ao descompactar um arquivo <code>.zip</code> protegido por senha, o <code>unzip</code> solicita a senha automaticamente durante o processo.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">unzip arquivo.zip                     # descompacta `arquivo.zip` no diretório atual
+unzip arquivo.zip -d pasta_destino    # descompacta o conteúdo em um diretório específico
+unzip -l arquivo.zip                  # lista o conteúdo do `.zip`, sem descompactar
+unzip -o arquivo.zip                  # descompacta sobrescrevendo arquivos existentes sem confirmação
+unzip -x "*.log" projeto.zip          # descompacta o arquivo, excluindo arquivos `.log`
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

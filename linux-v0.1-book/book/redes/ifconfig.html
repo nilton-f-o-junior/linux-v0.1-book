@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,35 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="ifconfig"><a class="header" href="#ifconfig">ifconfig</a></h1>
+<p>Exibe e configura as interfaces de rede do sistema.</p>
+<pre><code class="language-bash">ifconfig [interface] [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>interface</td><td>Nome da interface de rede a ser exibida ou configurada (ex.: <code>eth0</code>, <code>wlan0</code>)</td></tr>
+<tr><td>up</td><td>Ativa a interface de rede informada</td></tr>
+<tr><td>down</td><td>Desativa a interface de rede informada</td></tr>
+<tr><td>netmask endereço</td><td>Define a máscara de rede da interface</td></tr>
+<tr><td>(sem argumentos)</td><td>Exibe as informações de todas as interfaces de rede ativas</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>ifconfig</code> faz parte do pacote <code>net-tools</code>, considerado obsoleto em muitas distribuições Linux atuais, que priorizam o comando <code>ip</code> em seu lugar (ex.: <code>ip addr</code> no lugar de <code>ifconfig</code>). Ainda assim, <code>ifconfig</code> continua amplamente usado e disponível na maioria dos sistemas.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">ifconfig                              # exibe as informações de todas as interfaces de rede ativas
+ifconfig eth0                         # exibe as informações apenas da interface `eth0`
+sudo ifconfig eth0 up                 # ativa a interface `eth0`
+sudo ifconfig eth0 down               # desativa a interface `eth0`
+sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0  # define um endereço IP e máscara de rede
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,34 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="alias"><a class="header" href="#alias">alias</a></h1>
+<p>Cria um atalho (apelido) para um comando ou sequência de comandos.</p>
+<pre><code class="language-bash">alias [nome[=valor] ...]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>nome</td><td>Nome do atalho a ser criado</td></tr>
+<tr><td>valor</td><td>Comando (ou sequência de comandos) que o atalho vai executar</td></tr>
+<tr><td>alias (sem argumentos)</td><td>Lista todos os aliases definidos na sessão atual</td></tr>
+<tr><td>unalias nome</td><td>Remove um alias previamente criado</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Aliases criados diretamente no terminal valem apenas para a sessão atual. Para torná-los permanentes, adicione-os ao arquivo <code>~/.bashrc</code> (ou <code>~/.zshrc</code>, dependendo do shell) e recarregue com <code>source ~/.bashrc</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">alias                                # lista todos os aliases definidos
+alias ll='ls -la'                    # cria o atalho `ll` para `ls -la`
+alias rm='rm -i'                     # cria o atalho `rm` para pedir confirmação antes de remover
+alias atualizar='sudo apt update &amp;&amp; sudo apt upgrade'   # cria um atalho para um comando composto
+unalias ll                           # remove o alias `ll`
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

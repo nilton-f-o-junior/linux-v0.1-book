@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,37 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="grep"><a class="header" href="#grep">grep</a></h1>
+<p>Busca por padrões de texto dentro de arquivos.</p>
+<pre><code class="language-bash">grep [opções] padrão [arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>padrão</td><td>Texto ou expressão regular a ser procurado</td></tr>
+<tr><td>arquivo</td><td>Localização do arquivo onde a busca será realizada</td></tr>
+<tr><td>-i, –ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas</td></tr>
+<tr><td>-v, –invert-match</td><td>Exibe as linhas que <strong>não</strong> correspondem ao padrão</td></tr>
+<tr><td>-n, –line-number</td><td>Exibe o número da linha correspondente</td></tr>
+<tr><td>-r, –recursive</td><td>Busca recursivamente em todos os arquivos de um diretório</td></tr>
+<tr><td>-c, –count</td><td>Exibe apenas a quantidade de linhas correspondentes</td></tr>
+<tr><td>-E, –extended-regexp</td><td>Interpreta o padrão como uma expressão regular estendida (ERE)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>grep</code> é amplamente usado em conjunto com pipes (<code>|</code>) para filtrar a saída de outros comandos.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">grep "erro" log.txt                   # exibe as linhas de `log.txt` que contêm a palavra `erro`
+grep -i "erro" log.txt                # busca ignorando diferenças entre maiúsculas e minúsculas
+grep -n "erro" log.txt                # exibe as linhas correspondentes com o número da linha
+grep -v "erro" log.txt                # exibe as linhas que não contêm a palavra `erro`
+grep -r "TODO" ./projeto              # busca recursivamente pela palavra `TODO` dentro de um diretório
+ps aux | grep "firefox"                # filtra a lista de processos, exibindo apenas os relacionados a `firefox`
+</code></pre>
 
                     </main>
 
