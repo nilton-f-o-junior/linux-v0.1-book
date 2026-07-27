@@ -39,23 +39,16 @@ Dentro de cada bloco, existem três tipos de direitos fundamentais:
 
 Para otimizar a atribuição de permissões, o Linux traduz os bits de leitura (r = 4), escrita (w = 2) e execução (x = 1) em um sistema somatório de base octal (valores de 0 a 7):
 
-| Modo Numérico | Modo Simbólico | Significado Técnico | |
-
-| **7** | `rwx` | Leitura, escrita e execução (Controle total) | |
-
-| **6** | `rw-` | Leitura e escrita | |
-
-| **5** | `r-x` | Leitura e execução | |
-
-| **4** | `r--` | Apenas leitura | |
-
-| **3** | `-wx` | Escrita e execução | |
-
-| **2** | `-w-` | Apenas escrita | |
-
-| **1** | `--x` | Apenas execução | |
-
-| **0** | `---` | Nenhum acesso permitido | |
+| Modo Numérico | Modo Simbólico | Significado Técnico |
+|:---:|:---:|---|
+| 7 | `rwx` | Leitura, escrita e execução (Controle total) |
+| 6 | `rw-` | Leitura e escrita |
+| 5 | `r-x` | Leitura e execução |
+| 4 | `r--` | Apenas leitura |
+| 3 | `-wx` | Escrita e execução |
+| 2 | `-w-` | Apenas escrita |
+| 1 | `--x` | Apenas execução |
+| 0 | `---` | Nenhum acesso permitido |
 
 ### Permissão 755
 

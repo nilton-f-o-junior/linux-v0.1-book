@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-b443058c.js";
+            window.path_to_searchindex_js = "searchindex-4060757c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-37ca00fe.js"></script>
+        <script src="toc-3880f7dc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,21 +175,17 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="começando"><a class="header" href="#começando">Começando</a></h1>
+                        <h1 id="apresentação"><a class="header" href="#apresentação">Apresentação</a></h1>
 <p>Olá, boas-vindas!</p>
 <p>Este projeto foi criado para compartilhar conhecimentos sobre Linux de forma simples e direta. O objetivo é oferecer um espaço onde qualquer pessoa possa ter acesso fácil a uma documentação de qualidade, estruturada, online, gratuita e de código aberto.</p>
 <p>O Linux possui livros incríveis e muita documentação. Porém, parte desse material é pago e outra parte ainda está disponível apenas em PDF. Atualmente, a comunidade vem expandindo a oferta de materiais modernos de forma gratuita e em português, tornando o aprendizado ainda mais acessível.</p>
-<p>Este não é meu único projeto, também estou escrevendo um livro sobre a linguagem Rust, caso queira conhecer: https://rust-v1-9-book.vercel.app/</p>
-<p>O principal objetivo é tornar o aprendizado acessível, permitindo que qualquer pessoa compreenda os conceitos sem barreiras. Desejamos que este material seja útil para a sua jornada e esperamos que você aproveite a leitura.</p>
+<p>Este não é meu único projeto, também estou escrevendo um livro sobre a linguagem Rust, caso queira conhecer: <a href="https://rust-v1-9-book.vercel.app/">https://rust-v1-9-book.vercel.app/</a></p>
+<p>O principal objetivo é tornar o aprendizado acessível, permitindo que qualquer pessoa compreenda os conceitos sem barreiras. Desejo que este material seja útil para a sua jornada e espero que você aproveite bem a leitura.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="prefácio"><a href="#prefácio" class="header">Prefácio</a></h1>
 <p>“A beleza que vive no ato de compartilhar algo com os outros.” Monja Coen</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="introdução"><a class="header" href="#introdução">Introdução</a></h1>
-<p>O Linux foi criado por Linus Torvalds na Universidade de Helsinki em 1991, inicialmente como o núcleo (kernel) de um sistema operacional tipo Unix. A primeira versão estável (1.0) foi lançada em março de 1994, marcando o início de sua popularidade e adoção mais ampla na indústria.</p>
-<p>Ele é um sistema operacional livre e de código aberto (<em>open-source</em>), o que significa que qualquer pessoa tem a liberdade de executar, estudar, modificar e distribuir seu código-fonte. Isso o torna extremamente versátil, podendo ser executado em uma ampla variedade de dispositivos, desde servidores e <em>mainframes</em> até <em>smartphones</em> e dispositivos <em>IoT</em> (internet das coisas). O Linux se posiciona como uma alternativa a plataformas proprietárias como Windows e macOS, amplamente adotadas, mas mais restritivas em termos de customização e custos de licença.</p>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="básico"><a class="header" href="#básico">Básico</a></h1>
+<h1 id="começando"><a class="header" href="#começando">Começando</a></h1>
 <p>Inicialmente, alguns temas precisam ser explicados. Antes de entender os componentes do computador e do software, precisamos dar uma olhada inicial em outros conceitos comuns ao Linux que são bem recorrentes, independentemente do seu nível de conhecimento. É importante salientar que esta é apenas uma introdução básica para que você possa começar seus estudos e se familiarizar com o ambiente.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="dispositivos"><a class="header" href="#dispositivos">Dispositivos</a></h1>
@@ -1109,7 +1105,7 @@
 </ul>
 <p>Se um programa priva o usuário de qualquer uma dessas liberdades, ele é classificado como software proprietário ou privativo. Nesse modelo, o desenvolvedor detém o controle sobre o software e, por extensão, sobre o que os usuários podem fazer com ele. No modelo livre, o controle pertence inteiramente aos usuários, individual e coletivamente.</p>
 <h2 id="a-filosofia-gnu-e-richard-stallman"><a class="header" href="#a-filosofia-gnu-e-richard-stallman">A Filosofia GNU e Richard Stallman</a></h2>
-<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a <strong>FSF</strong> (<em>Free Software Foundation</em>).</p>
+<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1984 e, posteriormente, a <strong>FSF</strong> (<em>Free Software Foundation</em>).</p>
 <p>O objetivo do projeto era ambicioso: criar um sistema operacional inteiramente livre, de modo que ninguém precisasse usar software proprietário para operar um computador. O nome GNU é um acrônimo recursivo para <em>“GNU’s Not Unix”</em> (GNU não é Unix), uma homenagem técnica ao sistema que serviu de inspiração arquitetônica, mas cujas restrições de licença a filosofia GNU rejeitava.</p>
 <p>Para a filosofia GNU, o compartilhamento de software é um imperativo ético. Negar a alguém o direito de entender ou modificar um programa que ele utiliza é visto como uma violação da autonomia individual e um obstáculo à cooperação social.</p>
 <h2 id="o-mecanismo-do-copyleft-e-a-gpl"><a class="header" href="#o-mecanismo-do-copyleft-e-a-gpl">O mecanismo do Copyleft e a GPL</a></h2>
@@ -1374,72 +1370,109 @@
 <p>Grande parte das distribuições Linux atuais já utiliza o Wayland como padrão, mas mantém suporte ao X11 por compatibilidade. Isso é possível graças a uma camada de compatibilidade chamada <strong>XWayland</strong>, que permite que aplicativos escritos exclusivamente para X11 continuem funcionando normalmente dentro de uma sessão Wayland, sem que o usuário perceba a diferença.</p>
 <p>Na prática, para o usuário final, a escolha entre X11 e Wayland costuma ser transparente: ambos permitem abrir janelas, mover o mouse e digitar normalmente. A diferença fica mais evidente em cenários específicos, como compartilhamento de tela, uso de múltiplos monitores com taxas de atualização diferentes ou configurações avançadas de acessibilidade.</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="arquivos"><a class="header" href="#arquivos">Arquivos</a></h1>
-<p>Aos poucos, o livro vai se aprofundando no funcionamento do Linux. Porém, antes de avançar, alguns conceitos iniciais precisam estar bem definidos. Entender os diversos tipos de arquivos e o espaço que eles ocupam é fundamental, já que no Linux tudo é arquivo — e é inevitável ter que interagir com eles ao longo do tempo. Este capítulo tem como objetivo apresentar esses conhecimentos básicos, necessários para avançar aos próximos temas.</p>
+<h1 id="sistema"><a class="header" href="#sistema">Sistema</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tipos-de-arquivos"><a class="header" href="#tipos-de-arquivos">Tipos de arquivos</a></h1>
 <p>Um tipo de arquivo é determinado pela forma como seus dados internos são estruturados. Existem duas abordagens principais para o sistema operacional identificar essa estrutura:</p>
-<ul>
-<li>
 <p><strong>Extensão de arquivo:</strong> é o método padrão em sistemas Windows. O tipo do arquivo é indicado por um sufixo de três ou quatro letras após o ponto final no nome do arquivo (como <code>.docx</code>, <code>.jpg</code> ou <code>.mp4</code>). Se você alterar manualmente a extensão de um arquivo <code>.jpg</code> para <code>.txt</code>, o sistema tentará abri-lo em um editor de texto, resultando em uma tela cheia de caracteres ilegíveis.</p>
-</li>
-<li>
 <p><strong>Números Mágicos:</strong> é a abordagem nativa de sistemas Unix e Linux. O sistema operacional ignora a extensão do nome e lê os primeiros bytes do arquivo (o cabeçalho ou <em>header</em>). Esses bytes iniciais contêm uma assinatura única. Por exemplo, todo arquivo PDF começa estritamente com os caracteres <code>%PDF</code>, e toda imagem PNG começa com os bytes hexadecimais <code>89 50 4E 47</code>. Mesmo sem extensão nenhuma no nome, o sistema sabe exatamente o que aquele arquivo é.</p>
-</li>
-</ul>
 <h2 id="plain-text"><a class="header" href="#plain-text">Plain Text</a></h2>
 <p>São os arquivos mais simples e universais do ecossistema computacional. Eles contêm apenas caracteres numéricos e de texto puro, codificados em padrões como ASCII ou UTF-8, sem qualquer informação de formatação visual (como tamanho de fonte, cores ou margens).</p>
 <ul>
-<li><strong><code>.txt</code>:</strong> o formato básico de texto, sendo universalmente legível por qualquer dispositivo ou sistema operacional;</li>
-<li><strong><code>.cfg</code>, <code>.ini</code>, <code>.conf</code>:</strong> arquivos de texto estruturados para guardar configurações de softwares e do próprio sistema operacional;</li>
-<li><strong><code>.md</code>:</strong> arquivos de texto que utilizam marcações simples (como asteriscos e hashes) para indicar títulos e negritos, mantendo o arquivo perfeitamente legível mesmo quando aberto em um editor de texto puro.</li>
+<li>
+<p><strong><code>.txt</code>:</strong> o formato básico de texto, sendo universalmente legível por qualquer dispositivo ou sistema operacional;</p>
+</li>
+<li>
+<p><strong><code>.cfg</code>, <code>.ini</code>, <code>.conf</code>:</strong> arquivos de texto estruturados para guardar configurações de softwares e do próprio sistema operacional;</p>
+</li>
+<li>
+<p><strong><code>.md</code>:</strong> arquivos de texto que utilizam marcações simples (como asteriscos e hashes) para indicar títulos e negritos, mantendo o arquivo perfeitamente legível mesmo quando aberto em um editor de texto puro.</p>
+</li>
 </ul>
 <h2 id="arquivos-binários"><a class="header" href="#arquivos-binários">Arquivos binários</a></h2>
 <p>Ao contrário do anterior, os arquivos binários não foram feitos para serem lidos diretamente por humanos. Eles exigem um software específico que entenda a sua geometria interna para traduzir os bits em algo compreensível na tela. Seus principais grupos são:</p>
 <h3 id="arquivos-de-imagem"><a class="header" href="#arquivos-de-imagem">Arquivos de imagem</a></h3>
 <p>Armazenam dados visuais, dividindo-se entre mapas de bits (pixels) e vetores.</p>
 <ul>
-<li><strong><code>.jpg</code> / <code>.jpeg</code>:</strong> formato compactado com perda de qualidade, porém ideal para fotografias na web devido ao tamanho reduzido do arquivo;</li>
-<li><strong><code>.png</code>:</strong> compactação sem perda de dados, possui suporte a fundos transparentes;</li>
-<li><strong><code>.svg</code>:</strong> formato vetorial baseado em XML, mas em vez de salvar pixels, ele salva equações matemáticas de linhas e formas, permitindo que a imagem seja ampliada infinitamente sem perder a nitidez.</li>
+<li>
+<p><strong><code>.jpg</code> / <code>.jpeg</code>:</strong> formato compactado com perda de qualidade, porém ideal para fotografias na web devido ao tamanho reduzido do arquivo;</p>
+</li>
+<li>
+<p><strong><code>.png</code>:</strong> compactação sem perda de dados, possui suporte a fundos transparentes;</p>
+</li>
+<li>
+<p><strong><code>.svg</code>:</strong> formato vetorial baseado em XML, mas em vez de salvar pixels, ele salva equações matemáticas de linhas e formas, permitindo que a imagem seja ampliada infinitamente sem perder a nitidez.</p>
+</li>
 </ul>
 <h3 id="arquivos-de-áudio-e-vídeo"><a class="header" href="#arquivos-de-áudio-e-vídeo">Arquivos de áudio e vídeo</a></h3>
 <p>Funcionam frequentemente como contêineres que abrigam fluxos de dados codificados por algoritmos chamados codecs.</p>
 <ul>
-<li><strong><code>.mp3</code>:</strong> áudio compactado com perda de frequências imperceptíveis ao ouvido humano médio, mas tornou-se o padrão de distribuição musical digital;</li>
-<li><strong><code>.wav</code>:</strong> áudio sem compactação, consegue manter a fidelidade máxima da gravação original, resultando em arquivos massivos, usados profissionalmente na edição de som;</li>
-<li><strong><code>.mp4</code> / <code>.mkv</code>:</strong> arquivos contêineres que guardam uma faixa de vídeo, múltiplas faixas de áudio (dublagens) e legendas em um único pacote sincronizado.</li>
+<li>
+<p><strong><code>.mp3</code>:</strong> áudio compactado com perda de frequências imperceptíveis ao ouvido humano médio, mas tornou-se o padrão de distribuição musical digital;</p>
+</li>
+<li>
+<p><strong><code>.wav</code>:</strong> áudio sem compactação, consegue manter a fidelidade máxima da gravação original, resultando em arquivos massivos, usados profissionalmente na edição de som;</p>
+</li>
+<li>
+<p><strong><code>.mp4</code> / <code>.mkv</code>:</strong> arquivos contêineres que guardam uma faixa de vídeo, múltiplas faixas de áudio (dublagens) e legendas em um único pacote sincronizado.</p>
+</li>
 </ul>
 <h2 id="arquivos-executáveis"><a class="header" href="#arquivos-executáveis">Arquivos executáveis</a></h2>
 <p>São os arquivos que contêm instruções diretas para o processador executar tarefas. Eles mudam radicalmente conforme a arquitetura e o sistema operacional.</p>
 <ul>
-<li><strong><code>.exe</code> e <code>.msi</code>:</strong> os formatos executáveis padrão do Windows, possuindo o código binário compilado e rotinas de instalação;</li>
-<li><strong>ELF (sem extensão nativa):</strong> o padrão para executáveis em sistemas Linux, possuindo uma estrutura rígida que indica ao kernel como carregar o programa na memória RAM;</li>
-<li><strong>Scripts (<code>.sh</code>, <code>.bat</code>, <code>.py</code>):</strong> diferente dos executáveis binários, os scripts são arquivos de texto puro contendo comandos ordenados. Eles não são lidos diretamente pelo processador, mas sim interpretados linha por linha por um programa intermediário (como o terminal Bash ou o interpretador Python).</li>
+<li>
+<p><strong><code>.exe</code> e <code>.msi</code>:</strong> os formatos executáveis padrão do Windows, possuindo o código binário compilado e rotinas de instalação;</p>
+</li>
+<li>
+<p><strong>ELF (sem extensão nativa):</strong> o padrão para executáveis em sistemas Linux, possuindo uma estrutura rígida que indica ao kernel como carregar o programa na memória RAM;</p>
+</li>
+<li>
+<p><strong>Scripts (<code>.sh</code>, <code>.bat</code>, <code>.py</code>):</strong> diferente dos executáveis binários, os scripts são arquivos de texto puro contendo comandos ordenados. Eles não são lidos diretamente pelo processador, mas sim interpretados linha por linha por um programa intermediário (como o terminal Bash ou o interpretador Python).</p>
+</li>
 </ul>
 <h2 id="arquivamento-e-compactação"><a class="header" href="#arquivamento-e-compactação">Arquivamento e compactação</a></h2>
 <p>São formatos projetados para atuar como caixas digitais. Eles cumprem duas funções frequentemente confundidas: o arquivamento (juntar várias pastas e arquivos em um só local) e a compactação (reduzir o espaço em disco usando algoritmos matemáticos que eliminam redundâncias).</p>
 <ul>
-<li><strong><code>.zip</code>:</strong> o formato de compactação mais popular do mundo. Equilibra uma velocidade de compactação rápida com um nível de redução de tamanho aceitável;</li>
-<li><strong><code>.tar</code>:</strong> apenas realiza o arquivamento (junta os arquivos), sem aplicar nenhuma redução de tamanho;</li>
-<li><strong><code>.tar.gz</code> ou <code>.tgz</code>:</strong> a união do utilitário <code>.tar</code> (que junta as pastas) com a compactação do algoritmo <code>Gzip</code> (que reduz o tamanho). É o padrão para distribuição de código-fonte e backups no mundo Unix.</li>
+<li>
+<p><strong><code>.zip</code>:</strong> o formato de compactação mais popular do mundo. Equilibra uma velocidade de compactação rápida com um nível de redução de tamanho aceitável;</p>
+</li>
+<li>
+<p><strong><code>.tar</code>:</strong> apenas realiza o arquivamento (junta os arquivos), sem aplicar nenhuma redução de tamanho;</p>
+</li>
+<li>
+<p><strong><code>.tar.gz</code> ou <code>.tgz</code>:</strong> a união do utilitário <code>.tar</code> (que junta as pastas) com a compactação do algoritmo <code>Gzip</code> (que reduz o tamanho). É o padrão para distribuição de código-fonte e backups no mundo Unix.</p>
+</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="o-tamanho-dos-arquivos-digitais"><a class="header" href="#o-tamanho-dos-arquivos-digitais">O tamanho dos arquivos digitais</a></h1>
 <p>No nível mais baixo da computação, a menor unidade de informação possível é o <strong>bit</strong> (acrônimo para <em>Binary Digit</em>). Um bit representa um estado elétrico ou magnético simples: ou ele está desligado (0) ou está ligado (1). Sozinho, um bit não consegue carregar muita informação, funcionando apenas como uma resposta de “sim” ou “não”.</p>
 <p>Para criar dados complexos, os computadores agrupam esses bits em conjuntos de 8. Esse grupo de 8 bits recebe o nome de <strong>Byte</strong>.</p>
 <ul>
-<li><strong>1 Bit:</strong> a menor unidade (0 ou 1);</li>
-<li><strong>1 Byte:</strong> um conjunto de 8 bits.</li>
+<li>
+<p><strong>1 Bit:</strong> a menor unidade (0 ou 1);</p>
+</li>
+<li>
+<p><strong>1 Byte:</strong> um conjunto de 8 bits.</p>
+</li>
 </ul>
 <h2 id="a-escala-de-grandezas-digitais"><a class="header" href="#a-escala-de-grandezas-digitais">A escala de grandezas digitais</a></h2>
 <p>À medida que os arquivos incorporam elementos mais complexos do que texto puro, o número de bytes necessários para contê-los cresce exponencialmente. Para evitar lidar com números astronômicos na casa dos bilhões ou trilhões, utilizamos prefixos multiplicadores padronizados:</p>
 <ul>
-<li><strong>Kilobyte (KB):</strong> tradicionalmente equivale a 1.000 Bytes;</li>
-<li><strong>Megabyte (MB):</strong> equivale a 1.000 Kilobytes (ou 1 milhão de bytes);</li>
-<li><strong>Gigabyte (GB):</strong> equivale a 1.000 Megabytes (ou 1 bilhão de bytes);</li>
-<li><strong>Terabyte (TB):</strong> equivale a 1.000 Gigabytes (ou 1 trilhão de bytes);</li>
-<li><strong>Petabyte (PB):</strong> equivale a 1.000 Terabytes.</li>
+<li>
+<p><strong>Kilobyte (KB):</strong> tradicionalmente equivale a 1.000 Bytes;</p>
+</li>
+<li>
+<p><strong>Megabyte (MB):</strong> equivale a 1.000 Kilobytes (ou 1 milhão de bytes);</p>
+</li>
+<li>
+<p><strong>Gigabyte (GB):</strong> equivale a 1.000 Megabytes (ou 1 bilhão de bytes);</p>
+</li>
+<li>
+<p><strong>Terabyte (TB):</strong> equivale a 1.000 Gigabytes (ou 1 trilhão de bytes);</p>
+</li>
+<li>
+<p><strong>Petabyte (PB):</strong> equivale a 1.000 Terabytes.</p>
+</li>
 </ul>
 <h2 id="tamanho-real-vs-tamanho-em-disco"><a class="header" href="#tamanho-real-vs-tamanho-em-disco">Tamanho Real vs. Tamanho em Disco</a></h2>
 <p>Ao clicar com o botão direito sobre qualquer arquivo e acessar suas propriedades, você notará duas informações distintas: o <strong>Tamanho</strong> (Tamanho Real) e o <strong>Tamanho em disco</strong>. Quase sempre, o tamanho em disco é ligeiramente maior do que o tamanho real do arquivo.</p>
@@ -1447,82 +1480,94 @@
 <p>Cada cluster só pode conter dados de um único arquivo por vez. Portanto, se você criar um arquivo de texto que pesa apenas <strong>100 Bytes</strong> (Tamanho Real), o sistema operacional será obrigado a dedicar <strong>1 cluster inteiro</strong> para ele no disco. Consequentemente, o “Tamanho em disco” desse arquivo passará a ser de <strong>4 KB</strong>. O espaço restante daquele bloco (3.996 Bytes) é chamado de <em>Slack Space</em> e fica inutilizado até que o arquivo cresça ou seja deletado.</p>
 <h2 id="o-impacto-prático-do-tamanho-na-computação"><a class="header" href="#o-impacto-prático-do-tamanho-na-computação">O impacto prático do tamanho na computação</a></h2>
 <p>O tamanho de um arquivo dita o comportamento de toda a infraestrutura computacional ao seu redor:</p>
-<ul>
-<li>
 <p><strong>Velocidade de carregamento:</strong> quando você abre um arquivo, o processador ordena que ele seja copiado do armazenamento local (SSD/HD) para a memória RAM. Um documento de 50 KB abre instantaneamente; um banco de dados de 50 GB pode levar minutos para ser carregado na memória, dependendo da velocidade de leitura do hardware;</p>
-</li>
-<li>
 <p><strong>Largura de banda na rede:</strong> no tráfego de internet, o tamanho do arquivo determina o tempo de download e upload. Transmitir um arquivo de vídeo não compactado via rede consome muita banda, o que justifica a existência de algoritmos de compressão (como <code>.zip</code> ou formatos de streaming) para encolher o peso digital dos arquivos antes do envio;</p>
-</li>
-<li>
 <p><strong>Limitações arquitetônicas:</strong> sistemas de arquivos antigos possuem limites severos de tamanho. O antigo formato FAT32 (muito usado ainda em pendrives antigos) possui uma limitação matemática rígida: ele é incapaz de armazenar qualquer arquivo individual que seja maior do que <strong>4 GB</strong>, independentemente de o pendrive ter 64 GB de espaço total livre. Tentar copiar um arquivo de vídeo de 5 GB para um disco em FAT32 resultará em um erro de sistema instantâneo.</p>
-</li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="a-raiz-de-arquivos-do-linux"><a class="header" href="#a-raiz-de-arquivos-do-linux">A raiz de arquivos do Linux</a></h1>
 <p>O diretório raiz, representado graficamente por uma única barra para a frente (<code>/</code>), é o nível mais alto da hierarquia do Linux. Não existe nada acima dele. Todos os outros diretórios, subdiretórios e arquivos estão contidos dentro da raiz. Quando um SSD ou um pendrive é conectado ao sistema, ele não ganha uma nova letra de unidade; ele é “montado” como uma pasta sob essa mesma estrutura.</p>
 <p>Essa organização segue um padrão estrito chamado <strong>FHS</strong> (<em>Filesystem Hierarchy Standard</em>), que define exatamente onde cada tipo de arquivo deve morar. Isso garante que, independentemente da distribuição Linux que você esteja usando (seja Ubuntu, Fedora, Debian ou Arch), a lógica de funcionamento interno seja previsível e consistente.</p>
 <p>Visualmente, a árvore padrão do sistema se ramifica da seguinte forma a partir da raiz:</p>
-<pre><code class="language-text">/ (raiz)
-├── bin/       -&gt; Executáveis essenciais do sistema para todos os usuários
-├── boot/      -&gt; Arquivos de inicialização (Kernel, GRUB, initramfs)
-├── dev/       -&gt; Arquivos virtuais que representam dispositivos de hardware
-├── etc/       -&gt; Arquivos de configuração global do sistema e serviços
-├── home/      -&gt; Pastas pessoais dos usuários comuns (ex: /home/usuario)
-├── lib/       -&gt; Bibliotecas essenciais compartilhadas pelos programas do /bin
-├── lib64/     -&gt; Bibliotecas essenciais de 64 bits
-├── media/     -&gt; Ponto de montagem automático para mídias removíveis (pendrives)
-├── mnt/       -&gt; Ponto de montagem manual e temporário de sistemas de arquivos
-├── opt/       -&gt; Instalação de pacotes de softwares adicionais e proprietários
-├── proc/      -&gt; Sistema de arquivos virtual com informações de processos e do kernel
-├── root/      -&gt; Diretório pessoal do superusuário (administrador)
-├── run/       -&gt; Dados voláteis de processos em execução desde o último boot
-├── sbin/      -&gt; Executáveis essenciais de administração do sistema (privilégios root)
-├── srv/       -&gt; Dados de serviços e servidores hospedados na máquina
-├── sys/       -&gt; Interface em tempo real para configurações do kernel e hardware
-├── tmp/       -&gt; Arquivos temporários criados pelo sistema e aplicativos
-├── usr/       -&gt; Programas, documentações e bibliotecas secundárias dos usuários
-└── var/       -&gt; Arquivos de dados variáveis (logs do sistema, spools, e-mails)
+<pre><code class="language-bash">/ (raiz)
+├── bin/ -&gt; Executáveis essenciais do sistema para todos os usuários
+├── boot/ -&gt; Arquivos de inicialização (Kernel, GRUB, initramfs)
+├── dev/ -&gt; Arquivos virtuais que representam dispositivos de hardware
+├── etc/ -&gt; Arquivos de configuração global do sistema e serviços
+├── home/ -&gt; Pastas pessoais dos usuários comuns (ex: /home/usuario)
+├── lib/ -&gt; Bibliotecas essenciais compartilhadas pelos programas do /bin
+├── lib64/ -&gt; Bibliotecas essenciais de 64 bits
+├── media/ -&gt; Ponto de montagem automático para mídias removíveis (pendrives)
+├── mnt/ -&gt; Ponto de montagem manual e temporário de sistemas de arquivos
+├── opt/ -&gt; Instalação de pacotes de softwares adicionais e proprietários
+├── proc/ -&gt; Sistema de arquivos virtual com informações de processos e do kernel
+├── root/ -&gt; Diretório pessoal do superusuário (administrador)
+├── run/ -&gt; Dados voláteis de processos em execução desde o último boot
+├── sbin/ -&gt; Executáveis essenciais de administração do sistema (privilégios root)
+├── srv/ -&gt; Dados de serviços e servidores hospedados na máquina
+├── sys/ -&gt; Interface em tempo real para configurações do kernel e hardware
+├── tmp/ -&gt; Arquivos temporários criados pelo sistema e aplicativos
+├── usr/ -&gt; Programas, documentações e bibliotecas secundárias dos usuários
+└── var/ -&gt; Arquivos de dados variáveis (logs do sistema, spools, e-mails)
 </code></pre>
 <h2 id="os-principais-diretórios-e-suas-funções"><a class="header" href="#os-principais-diretórios-e-suas-funções">Os principais diretórios e suas funções</a></h2>
 <p>Abaixo da raiz, o sistema se divide em pastas com nomes curtos, quase sempre abreviações de suas funções originais em inglês. Os principais elementos que compõem o sistema são:</p>
 <h3 id="bin-e-sbin-os-executáveis-do-sistema"><a class="header" href="#bin-e-sbin-os-executáveis-do-sistema">/bin e /sbin: os executáveis do sistema</a></h3>
 <p>Esses diretórios guardam os comandos que você digita no terminal para interagir com a máquina.</p>
 <ul>
-<li><strong><code>/bin</code> (Binaries):</strong> contém os comandos binários essenciais que podem ser usados por qualquer usuário do sistema;</li>
-<li><strong><code>/sbin</code> (System Binaries):</strong> guarda os executáveis destinados à administração do sistema. Geralmente, exigem privilégios de superusuário (<em>root</em>) para serem executados.</li>
+<li>
+<p><strong><code>/bin</code> (Binaries):</strong> contém os comandos binários essenciais que podem ser usados por qualquer usuário do sistema;</p>
+</li>
+<li>
+<p><strong><code>/sbin</code> (System Binaries):</strong> guarda os executáveis destinados à administração do sistema. Geralmente, exigem privilégios de superusuário (<em>root</em>) para serem executados.</p>
+</li>
 </ul>
 <h3 id="boot-a-inicialização"><a class="header" href="#boot-a-inicialização">/boot: a inicialização</a></h3>
 <p>Aqui ficam os arquivos necessários para o computador ligar. É onde reside o carregador de inicialização (geralmente o GRUB), o próprio kernel do Linux (<code>vmlinuz</code>) e o <code>initramfs</code>, que prepara o terreno e carrega os drivers básicos antes de o sistema principal assumir o controle do hardware. Modificações incorretas neste diretório podem impedir a máquina de iniciar.</p>
 <h3 id="dev-os-dispositivos-como-arquivos"><a class="header" href="#dev-os-dispositivos-como-arquivos">/dev: os dispositivos como arquivos</a></h3>
 <p>No Linux, há uma máxima famosa: <em>“Tudo é um arquivo”</em>. O diretório <code>/dev</code> (Devices) é a aplicação prática desse conceito. Ele não armazena arquivos reais no disco, mas sim pontos de acesso aos hardwares da máquina.</p>
 <ul>
-<li><strong><code>/dev/sda</code> ou <code>/dev/nvme0n1</code>:</strong> representam os discos de armazenamento físicos;</li>
-<li><strong><code>/dev/null</code>:</strong> tudo o que é enviado para ele desaparece instantaneamente, sendo muito utilizado para descartar saídas de comandos indesejadas.</li>
+<li>
+<p><strong><code>/dev/sda</code> ou <code>/dev/nvme0n1</code>:</strong> representam os discos de armazenamento físicos;</p>
+</li>
+<li>
+<p><strong><code>/dev/null</code>:</strong> tudo o que é enviado para ele desaparece instantaneamente, sendo muito utilizado para descartar saídas de comandos indesejadas.</p>
+</li>
 </ul>
 <h3 id="etc-o-painel-de-controle-em-texto"><a class="header" href="#etc-o-painel-de-controle-em-texto">/etc: o painel de controle em texto</a></h3>
 <p>Se você precisa mudar a configuração de um programa, do sistema de rede ou dos usuários, o <code>/etc</code> (<em>Editable Text Configuration</em>) é o lugar. Ele guarda os arquivos de configuração de praticamente todos os serviços globais do sistema. Quase todos esses arquivos são em formato de texto puro, permitindo que o administrador altere o comportamento do sistema editando apenas algumas linhas.</p>
 <h3 id="home-e-root-os-territórios-dos-usuários"><a class="header" href="#home-e-root-os-territórios-dos-usuários">/home e /root: os territórios dos usuários</a></h3>
 <p>O Linux separa rigidamente o espaço do administrador geral dos usuários comuns.</p>
 <ul>
-<li><strong><code>/home</code>:</strong> é onde ficam as pastas pessoais de cada usuário cadastrado na máquina (ex: <code>/home/felipe</code>). Seus documentos, downloads, imagens e até as configurações personalizadas de seus programas ficam guardados aqui;</li>
-<li><strong><code>/root</code>:</strong> é a pasta pessoal exclusiva do superusuário do sistema. Ela fica separada do <code>/home</code> por questões de segurança, garantindo que o administrador tenha seu próprio espaço isolado e protegido de falhas comuns.</li>
+<li>
+<p><strong><code>/home</code>:</strong> é onde ficam as pastas pessoais de cada usuário cadastrado na máquina (ex: <code>/home/felipe</code>). Seus documentos, downloads, imagens e até as configurações personalizadas de seus programas ficam guardados aqui;</p>
+</li>
+<li>
+<p><strong><code>/root</code>:</strong> é a pasta pessoal exclusiva do superusuário do sistema. Ela fica separada do <code>/home</code> por questões de segurança, garantindo que o administrador tenha seu próprio espaço isolado e protegido de falhas comuns.</p>
+</li>
 </ul>
 <h3 id="lib-lib32-e-lib64-as-bibliotecas"><a class="header" href="#lib-lib32-e-lib64-as-bibliotecas">/lib, /lib32 e /lib64: as bibliotecas</a></h3>
 <p>Programas dependem de pedaços de código compartilhados para executar tarefas comuns (como desenhar uma interface na tela ou criptografar uma senha). Essas coleções de código são chamadas de bibliotecas e ficam guardadas nos diretórios <code>/lib</code>. Elas equivalem funcionalmente aos arquivos <code>.dll</code> do ecossistema Windows.</p>
 <h3 id="media-e-mnt-encaixando-novos-discos"><a class="header" href="#media-e-mnt-encaixando-novos-discos">/media e /mnt: encaixando novos discos</a></h3>
 <p>Quando você pluga um dispositivo de armazenamento externo, ele precisa ser “montado” na árvore de diretórios para se tornar acessível.</p>
 <ul>
-<li><strong><code>/media</code>:</strong> é gerenciado automaticamente pelo sistema. Quando você pluga um pendrive ou HD externo, o Linux cria uma pasta automática aqui dentro para dar acesso imediato aos arquivos;</li>
-<li><strong><code>/mnt</code>:</strong> é um espaço reservado para montagens manuais feitas pelo administrador. Se você precisa fixar temporariamente uma partição de rede ou outro disco rígido específico no sistema, o <code>/mnt</code> é o local padrão para isso.</li>
+<li>
+<p><strong><code>/media</code>:</strong> é gerenciado automaticamente pelo sistema. Quando você pluga um pendrive ou HD externo, o Linux cria uma pasta automática aqui dentro para dar acesso imediato aos arquivos;</p>
+</li>
+<li>
+<p><strong><code>/mnt</code>:</strong> é um espaço reservado para montagens manuais feitas pelo administrador. Se você precisa fixar temporariamente uma partição de rede ou outro disco rígido específico no sistema, o <code>/mnt</code> é o local padrão para isso.</p>
+</li>
 </ul>
 <h3 id="opt-softwares-de-terceiros"><a class="header" href="#opt-softwares-de-terceiros">/opt: softwares de terceiros</a></h3>
 <p>O diretório <code>/opt</code> serve para a instalação de aplicativos proprietários ou que não seguem o gerenciador de pacotes padrão da distribuição. Softwares corporativos ou de grande porte que vêm em pacotes fechados (como o Google Chrome, Discord ou ferramentas específicas de desenvolvimento) costumam se instalar em subpastas próprias dentro do <code>/opt</code> para não misturar seus arquivos com a estrutura padrão do sistema.</p>
 <h3 id="proc-e-sys-as-janelas-do-kernel"><a class="header" href="#proc-e-sys-as-janelas-do-kernel">/proc e /sys: as janelas do kernel</a></h3>
 <p>Assim como o <code>/dev</code>, os diretórios <code>/proc</code> (Processes) e <code>/sys</code> (System) não ocupam espaço físico no seu SSD ou HD. Eles são os chamados sistemas de arquivos virtuais, criados dinamicamente na memória RAM pelo kernel do Linux.</p>
 <ul>
-<li><strong><code>/proc</code>:</strong> contém informações em tempo real sobre os processos que estão rodando na máquina e o status do hardware;</li>
-<li><strong><code>/sys</code>:</strong> organiza e expõe informações sobre os drivers, barramentos e dispositivos do computador, permitindo ler e interagir diretamente com as configurações em tempo real do kernel.</li>
+<li>
+<p><strong><code>/proc</code>:</strong> contém informações em tempo real sobre os processos que estão rodando na máquina e o status do hardware;</p>
+</li>
+<li>
+<p><strong><code>/sys</code>:</strong> organiza e expõe informações sobre os drivers, barramentos e dispositivos do computador, permitindo ler e interagir diretamente com as configurações em tempo real do kernel.</p>
+</li>
 </ul>
 <h3 id="usr-a-central-de-aplicativos"><a class="header" href="#usr-a-central-de-aplicativos">/usr: a central de aplicativos</a></h3>
 <p>O <code>/usr</code> é uma das maiores pastas do sistema. Ela funciona como uma “segunda raiz” e guarda a grande maioria dos programas instalados e utilizados no dia a dia, junto com seus ícones, arquivos de tradução, documentações e fontes. Dentro dele, existem réplicas da estrutura principal voltadas para o usuário comum, como <code>/usr/bin</code> e <code>/usr/lib</code>.</p>
@@ -1535,8 +1580,12 @@
 <p><code>/home/usuario/.local/share/Trash/</code></p>
 <p>Internamente, essa estrutura oculta é dividida em duas subpastas vitais para a segurança do processo:</p>
 <ul>
-<li><strong><code>files/</code>:</strong> é o local onde os arquivos e pastas deletados residem fisicamente. O sistema pode alterar ligeiramente seus nomes originais caso ocorram duplicatas durante a remoção;</li>
-<li><strong><code>info/</code>:</strong> contém pequenos arquivos de texto com metadados cruciais de cada item excluído. Nesses arquivos são registrados o caminho original de onde o item foi retirado e a data/hora exata em que ele foi enviado à lixeira. É essa pasta de metadaos que torna o botão “Restaurar” funcional no sistema.</li>
+<li>
+<p><strong><code>files/</code>:</strong> é o local onde os arquivos e pastas deletados residem fisicamente. O sistema pode alterar ligeiramente seus nomes originais caso ocorram duplicatas durante a remoção;</p>
+</li>
+<li>
+<p><strong><code>info/</code>:</strong> contém pequenos arquivos de texto com metadados cruciais de cada item excluído. Nesses arquivos são registrados o caminho original de onde o item foi retirado e a data/hora exata em que ele foi enviado à lixeira. É essa pasta de metadaos que torna o botão “Restaurar” funcional no sistema.</p>
+</li>
 </ul>
 <h3 id="discos-externos-e-a-pasta-trash-uid"><a class="header" href="#discos-externos-e-a-pasta-trash-uid">Discos externos e a pasta <code>.Trash-$UID</code></a></h3>
 <p>O mecanismo muda quando lidamos com mídias removíveis, como pendrives ou partições secundárias de HDs montadas em <code>/media</code> ou <code>/mnt</code>. Mover um arquivo de 20 GB de um pendrive diretamente para a lixeira do <code>/home</code> exigiria que o sistema copiasse fisicamente todos esses dados através do barramento, tornando o processo demorado e ineficiente.</p>
@@ -1549,28 +1598,22 @@
 <p>O Linux é, por natureza, um sistema operacional multiusuário estruturado sob um princípio rígido de privilégios. Para garantir a segurança, o isolamento de dados e a organização do ecossistema, o administrador do sistema (root) precisa controlar quem possui acesso à máquina e a quais departamentos essas identidades pertencem.</p>
 <h2 id="criando-e-administrando-usuários"><a class="header" href="#criando-e-administrando-usuários">Criando e Administrando Usuários</a></h2>
 <p>A criação de uma nova identidade no sistema pode ser feita por duas abordagens que operam em camadas diferentes do sistema operacional:</p>
-<ul>
-<li>
 <p><strong>useradd:</strong> é o utilitário nativo de baixo nível. Ele cria o usuário de forma direta e “crua”: o sistema apenas registra a entrada do usuário no arquivo <code>/etc/passwd</code>, sem configurar automaticamente um diretório pessoal (<code>/home</code>) ou uma senha inicial, exigindo parametrização manual posterior.</p>
-<pre><code class="language-bash">useradd &lt;nome-do-usuario&gt;
+<pre><code class="language-bash">useradd 
 </code></pre>
-</li>
-<li>
 <p><strong>adduser:</strong> é um script de alto nível muito mais amigável e interativo. Ao ser executado, ele guia o administrador na configuração do perfil, gera automaticamente o diretório de início (<code>/home/nome-do-usuario</code>), copia os arquivos base de ambiente (como <code>.bashrc</code>) e solicita a criação da senha em tempo de execução.</p>
-<pre><code class="language-bash">adduser &lt;nome-do-usuario&gt;
+<pre><code class="language-bash">adduser 
 </code></pre>
-</li>
-</ul>
 <h2 id="auditoria-e-exclusão-de-contas"><a class="header" href="#auditoria-e-exclusão-de-contas">Auditoria e Exclusão de Contas</a></h2>
 <p>Para validar se as contas foram criadas corretamente ou para removê-las quando um usuário deixa de fazer parte do sistema, utilizamos os seguintes comandos:</p>
 <pre><code class="language-bash"># verifica se o usuário foi registrado no arquivo central de contas do sistema
-cat /etc/passwd | grep &lt;nome-do-usuario&gt;
+cat /etc/passwd | grep 
 
 # valida a existência do usuário e o estado do hash da sua senha (requer sudo)
-sudo cat /etc/shadow | grep &lt;nome-do-usuario&gt;
+sudo cat /etc/shadow | grep 
 
 # remove a conta do usuário do sistema
-userdel &lt;nome-do-usuario&gt;
+userdel 
 </code></pre>
 <h2 id="gerenciando-grupos-no-linux"><a class="header" href="#gerenciando-grupos-no-linux">Gerenciando Grupos no Linux</a></h2>
 <p>Os grupos funcionam como caixas organizacionais projetadas para simplificar a atribuição de permissões em massa. Em vez de dar acesso a um arquivo para cinquenta usuários individualmente, o administrador cria um grupo, coloca os usuários lá dentro e dá a permissão apenas ao grupo.</p>
@@ -1581,13 +1624,13 @@ groupadd projetos
 cat /etc/group
 
 # adiciona um usuário a um grupo secundário (-a de append, -G de Group)
-usermod -aG &lt;nome-do-grupo&gt; &lt;nome-do-usuario&gt;
+usermod -aG 
 
 # verifica instantaneamente a quais grupos uma determinada conta pertence
-groups &lt;nome-do-usuario&gt;
+groups 
 
 # exclui um grupo do sistema operacional
-groupdel &lt;nome-do-grupo&gt;
+groupdel 
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="permissões"><a class="header" href="#permissões">Permissões</a></h1>
@@ -1596,29 +1639,37 @@ groupdel &lt;nome-do-grupo&gt;
 <p>No ecossistema Linux, um arquivo ou diretório só pode pertencer a um único usuário dono e a um único grupo dono por vez.</p>
 <h2 id="significado"><a class="header" href="#significado">Significado</a></h2>
 <p>Ao listar os detalhes de um arquivo no terminal com o comando <code>ls -l</code>, a primeira coluna exibe uma string de 10 caracteres (como <code>drwxr-xr-x</code>). Essa string indica exatamente quem pode fazer o que com o arquivo.</p>
-<ul>
-<li>
 <p>O primeiro caractere identifica a natureza do item:</p>
 <ul>
-<li>d: Diretório (pasta);</li>
-<li>-: Arquivo comum.</li>
-</ul>
+<li>
+<p>d: Diretório (pasta);</p>
 </li>
 <li>
+<p>-: Arquivo comum.</p>
+</li>
+</ul>
 <p>Os 9 caracteres seguintes são divididos em 3 blocos de 3, representando as categorias de agentes:</p>
 <ul>
-<li>u (user): o usuário proprietário (dono) do arquivo;</li>
-<li>g (group): o grupo associado ao arquivo;</li>
-<li>o (others): todos os demais usuários do sistema (o resto do mundo).</li>
-</ul>
+<li>
+<p>u (user): o usuário proprietário (dono) do arquivo;</p>
 </li>
 <li>
+<p>g (group): o grupo associado ao arquivo;</p>
+</li>
+<li>
+<p>o (others): todos os demais usuários do sistema (o resto do mundo).</p>
+</li>
+</ul>
 <p>Dentro de cada bloco, existem três tipos de direitos fundamentais:</p>
 <ul>
-<li>r (read): permissão de leitura. Permite ver o conteúdo de um arquivo ou listar os itens de uma pasta;</li>
-<li>w (write): permissão de escrita. Permite modificar/deletar um arquivo ou criar itens dentro de uma pasta;</li>
-<li>x (execute): permissão de execução. Permite rodar um script/programa ou entrar e navegar em uma pasta.</li>
-</ul>
+<li>
+<p>r (read): permissão de leitura. Permite ver o conteúdo de um arquivo ou listar os itens de uma pasta;</p>
+</li>
+<li>
+<p>w (write): permissão de escrita. Permite modificar/deletar um arquivo ou criar itens dentro de uma pasta;</p>
+</li>
+<li>
+<p>x (execute): permissão de execução. Permite rodar um script/programa ou entrar e navegar em uma pasta.</p>
 </li>
 </ul>
 <h2 id="representação-numérica"><a class="header" href="#representação-numérica">Representação Numérica</a></h2>
@@ -1626,56 +1677,61 @@ groupdel &lt;nome-do-grupo&gt;
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th style="text-align: center">Modo Numérico</th><th style="text-align: center">Modo Simbólico</th><th style="text-align: left">Significado Técnico</th></tr>
+<tr><th style="text-align: center">Modo Numérico</th><th style="text-align: center">Modo Simbólico</th><th>Significado Técnico</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align: center"><strong>7</strong></td><td style="text-align: center"><code>rwx</code></td><td style="text-align: left">Leitura, escrita e execução (Controle total)</td></tr>
-<tr><td style="text-align: center"><strong>6</strong></td><td style="text-align: center"><code>rw-</code></td><td style="text-align: left">Leitura e escrita</td></tr>
-<tr><td style="text-align: center"><strong>5</strong></td><td style="text-align: center"><code>r-x</code></td><td style="text-align: left">Leitura e execução</td></tr>
-<tr><td style="text-align: center"><strong>4</strong></td><td style="text-align: center"><code>r--</code></td><td style="text-align: left">Apenas leitura</td></tr>
-<tr><td style="text-align: center"><strong>3</strong></td><td style="text-align: center"><code>-wx</code></td><td style="text-align: left">Escrita e execução</td></tr>
-<tr><td style="text-align: center"><strong>2</strong></td><td style="text-align: center"><code>-w-</code></td><td style="text-align: left">Apenas escrita</td></tr>
-<tr><td style="text-align: center"><strong>1</strong></td><td style="text-align: center"><code>--x</code></td><td style="text-align: left">Apenas execução</td></tr>
-<tr><td style="text-align: center"><strong>0</strong></td><td style="text-align: center"><code>---</code></td><td style="text-align: left">Nenhum acesso permitido</td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center"><code>rwx</code></td><td>Leitura, escrita e execução (Controle total)</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center"><code>rw-</code></td><td>Leitura e escrita</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center"><code>r-x</code></td><td>Leitura e execução</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center"><code>r--</code></td><td>Apenas leitura</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center"><code>-wx</code></td><td>Escrita e execução</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center"><code>-w-</code></td><td>Apenas escrita</td></tr>
+<tr><td style="text-align: center">1</td><td style="text-align: center"><code>--x</code></td><td>Apenas execução</td></tr>
+<tr><td style="text-align: center">0</td><td style="text-align: center"><code>---</code></td><td>Nenhum acesso permitido</td></tr>
 </tbody>
 </table>
 </div>
 <h3 id="permissão-755"><a class="header" href="#permissão-755">Permissão 755</a></h3>
-<pre><code class="language-bash">  chmod 755 nome_do_arquivo.sh
+<pre><code class="language-bash">chmod 755 nome_do_arquivo.sh
 </code></pre>
 <ul>
-<li>Ao aplicar a configuração 755 de forma recursiva (-R) em uma pasta, você está definindo:
-<ul>
-<li>7 (rwx) para o <em>user</em> (o dono pode ler, alterar e entrar na pasta);</li>
-<li>5 (r-x) para o <em>group</em> (os membros do grupo podem ler e entrar, mas não apagar nada);</li>
-<li>5 (r-x) para <em>others</em> (qualquer outro usuário do sistema pode ler e entrar, mas não alterar).</li>
-</ul>
+<li>
+<p>Ao aplicar a configuração 755 de forma recursiva (-R) em uma pasta, você está definindo:</p>
+</li>
+<li>
+<p>7 (rwx) para o <em>user</em> (o dono pode ler, alterar e entrar na pasta);</p>
+</li>
+<li>
+<p>5 (r-x) para o <em>group</em> (os membros do grupo podem ler e entrar, mas não apagar nada);</p>
+</li>
+<li>
+<p>5 (r-x) para <em>others</em> (qualquer outro usuário do sistema pode ler e entrar, mas não alterar).</p>
 </li>
 </ul>
 <h2 id="modificando-acessos"><a class="header" href="#modificando-acessos">Modificando Acessos</a></h2>
 <h3 id="alteração-de-permissões-com-chmod"><a class="header" href="#alteração-de-permissões-com-chmod">Alteração de permissões com chmod</a></h3>
 <p>O comando <code>chmod</code> altera o comportamento dos bits de acesso usando a lógica numérica ou a simbólica:</p>
 <pre><code class="language-bash"># restringe o arquivo/diretório para uso exclusivo do proprietário (700)
-chmod 700 &lt;nome-do-arquivo&gt;
+chmod 700 
 
 # remove de forma simbólica o direito de leitura (r) da categoria de outros (o)
-chmod o-r &lt;nome-do-arquivo&gt;
+chmod o-r 
 </code></pre>
 <h3 id="alteração-de-propriedade-com-chown-e-chgrp"><a class="header" href="#alteração-de-propriedade-com-chown-e-chgrp">Alteração de propriedade com chown e chgrp</a></h3>
 <p>Para transferir a posse de um recurso para outro responsável ou setor do sistema:</p>
 <pre><code class="language-bash"># define um novo usuário dono para o arquivo ou diretório
-chown &lt;nome-do-usuario&gt; &lt;nome-do-arquivo&gt;
+chown 
 
 # define unicamente um novo grupo proprietário para o alvo
-chgrp &lt;nome-do-grupo&gt; &lt;nome-do-arquivo&gt;
+chgrp 
 
 # altera simultaneamente o usuário dono e o grupo associado (usando o separador ":")
-chown &lt;nome-do-usuario&gt;:&lt;nome-do-grupo&gt; &lt;nome-do-arquivo&gt;
+chown : 
 </code></pre>
 <h2 id="permissões-especiais-o-sgid-gs"><a class="header" href="#permissões-especiais-o-sgid-gs">Permissões Especiais: O SGID (g+s)</a></h2>
 <p>Em ambientes de trabalho colaborativos onde múltiplos usuários modificam a mesma estrutura de diretórios (uma pasta compartilhada de um projeto, por exemplo), surge um problema operacional: por padrão, novos arquivos criados herdam o grupo primário de quem os criou, o que pode bloquear o acesso do restante da equipe.</p>
 <p>Para solucionar isso, aplica-se o bit especial SGID (Set Group ID):</p>
-<pre><code class="language-bash">chmod g+s &lt;nome-do-diretorio&gt;
+<pre><code class="language-bash">chmod g+s 
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="terminal"><a href="#terminal" class="header">Terminal</a></h1>
@@ -1827,6 +1883,74 @@ zless arquivo.txt.gz                # exibe um arquivo compactado com gzip de fo
 <h1 id="manipulando-arquivos"><a class="header" href="#manipulando-arquivos">Manipulando Arquivos</a></h1>
 <p>Depois de aprender a visualizar o conteúdo de arquivos, o próximo passo natural é entender como organizá-los. No dia a dia do terminal, é comum precisar listar o que existe em uma pasta, criar novos diretórios, copiar ou mover arquivos de um lugar para outro, apagar o que não é mais necessário e até ajustar a data de um arquivo. A seguir, veremos ls, mkdir, cp, mv, rm e touch, comandos que formam a base para organizar e manter seus arquivos no Linux.</p>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cd"><a class="header" href="#cd">cd</a></h1>
+<p>Muda o diretório de trabalho atual do shell.</p>
+<pre><code class="language-bash">cd [diretório]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório</td><td>Caminho do diretório para o qual deseja navegar</td></tr>
+<tr><td>(sem argumento)</td><td>Retorna ao diretório pessoal (home) do usuário</td></tr>
+<tr><td>-</td><td>Retorna ao diretório anterior (último em que se esteve)</td></tr>
+<tr><td>..</td><td>Sobe um nível, indo para o diretório pai</td></tr>
+<tr><td>~</td><td>Referencia o diretório pessoal (home) do usuário</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>cd</code> é um comando interno do shell (não um programa externo), por isso ele não aparece como um executável separado no sistema de arquivos.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">cd /etc                      # navega até o diretório /etc
+cd                           # volta para o diretório pessoal (home)
+cd ~                         # também volta para o diretório pessoal (home)
+cd ..                        # sobe um nível (diretório pai)
+cd -                         # volta para o diretório anterior
+cd ~/Documentos              # navega até a pasta "Documentos" dentro do home
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cp"><a class="header" href="#cp">cp</a></h1>
+<p>Copia arquivos e diretórios.</p>
+<pre><code class="language-bash">cp [opções] [origem] [destino]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>origem</td><td>Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas</td></tr>
+<tr><td>destino</td><td>Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele</td></tr>
+<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-f, –force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
+<tr><td>-r</td><td>Copia arquivos de diretórios e subdiretórios; prefira <code>-R</code></td></tr>
+<tr><td>-R, –recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
+<tr><td>-s, –symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
+<tr><td>-l, –link</td><td>Cria hard link no destino em vez de copiar</td></tr>
+<tr><td>-p, –preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
+<tr><td>-u, –update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>-x</td><td>Não copia arquivos localizados em um sistema de arquivos diferente do de origem</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">cp teste.txt teste1.txt             # copia `teste.txt` para `teste1.txt` no mesmo diretório
+cp teste.txt /tmp                   # copia `teste.txt` para dentro do diretório `/tmp`
+cp * /tmp                           # copia todos os arquivos do diretório atual para `/tmp`
+cp /bin/* .                         # copia todos os arquivos de `/bin` para o diretório atual
+cp -R /bin /tmp                     # copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
+cp -R /bin/* /tmp                   # copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
+cp -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
+cp -u teste.txt /tmp                # copia somente se `teste.txt` for mais recente que o destino
+cp -v * /tmp                        # copia todos os arquivos exibindo o progresso
+cp -p teste.txt /tmp                # copia preservando permissões e datas do arquivo
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ls"><a class="header" href="#ls">ls</a></h1>
 <p>Lista os arquivos de um diretório.</p>
 <pre><code class="language-bash">ls [opções] [caminho/arquivo] [caminho1/arquivo1]
@@ -1882,44 +2006,6 @@ ls -R                               # lista recursivamente diretórios e subdire
 ls -lX                              # listagem longa classificada por extensão
 ls -lr                              # listagem em ordem inversa
 ls --color=auto                     # coloriza a listagem conforme o tipo de arquivo
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="cp"><a class="header" href="#cp">cp</a></h1>
-<p>Copia arquivos e diretórios.</p>
-<pre><code class="language-bash">cp [opções] [origem] [destino]
-</code></pre>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
-</thead>
-<tbody>
-<tr><td>origem</td><td>Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas</td></tr>
-<tr><td>destino</td><td>Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele</td></tr>
-<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
-<tr><td>-f, –force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
-<tr><td>-r</td><td>Copia arquivos de diretórios e subdiretórios; prefira <code>-R</code></td></tr>
-<tr><td>-R, –recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
-<tr><td>-s, –symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
-<tr><td>-l, –link</td><td>Cria hard link no destino em vez de copiar</td></tr>
-<tr><td>-p, –preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
-<tr><td>-u, –update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
-<tr><td>-x</td><td>Não copia arquivos localizados em um sistema de arquivos diferente do de origem</td></tr>
-</tbody>
-</table>
-</div>
-<p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">cp teste.txt teste1.txt             # copia `teste.txt` para `teste1.txt` no mesmo diretório
-cp teste.txt /tmp                   # copia `teste.txt` para dentro do diretório `/tmp`
-cp * /tmp                           # copia todos os arquivos do diretório atual para `/tmp`
-cp /bin/* .                         # copia todos os arquivos de `/bin` para o diretório atual
-cp -R /bin /tmp                     # copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
-cp -R /bin/* /tmp                   # copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
-cp -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
-cp -u teste.txt /tmp                # copia somente se `teste.txt` for mais recente que o destino
-cp -v * /tmp                        # copia todos os arquivos exibindo o progresso
-cp -p teste.txt /tmp                # copia preservando permissões e datas do arquivo
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h1>
@@ -2019,6 +2105,8 @@ rm -v *.txt                         # exibe cada arquivo conforme é removido
 rm -f -- --arquivo--                # remove o arquivo de nome `--arquivo--`
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="rmdir"><a href="#rmdir" class="header">rmdir</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="touch"><a class="header" href="#touch">touch</a></h1>
 <p>Altera a data e hora de acesso/modificação de um arquivo. Se o arquivo não existir, cria um arquivo vazio.</p>
 <pre><code class="language-bash">touch [opções] [arquivos]
@@ -2049,27 +2137,396 @@ touch -t 202312311830.00 arquivo.txt  # define para 31/12/2023 às 18:30:00
 touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arquivo.txt`
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="utilitários"><a href="#utilitários" class="header">Utilitários</a></h1>
+<h1 id="tree"><a href="#tree" class="header">tree</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="df"><a href="#df" class="header">df</a></h1>
+<h1 id="utilitários"><a class="header" href="#utilitários">Utilitários</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="du"><a href="#du" class="header">du</a></h1>
+<h1 id="alias"><a href="#alias" class="header">alias</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="find"><a href="#find" class="header">find</a></h1>
+<h1 id="clear"><a href="#clear" class="header">clear</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="free"><a href="#free" class="header">free</a></h1>
+<h1 id="date"><a href="#date" class="header">date</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="ln"><a href="#ln" class="header">ln</a></h1>
+<h1 id="df"><a class="header" href="#df">df</a></h1>
+<p>Exibe o espaço de disco utilizado e disponível nos sistemas de arquivos montados.</p>
+<pre><code class="language-bash">df [opções] [diretório/arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório/arquivo</td><td>Exibe informações apenas do sistema de arquivos que contém esse diretório/arquivo</td></tr>
+<tr><td>-h</td><td>Exibe os tamanhos em formato legível (KB, MB, GB)</td></tr>
+<tr><td>-T</td><td>Exibe também o tipo de sistema de arquivos</td></tr>
+<tr><td>-i</td><td>Exibe informações de inodes em vez de blocos</td></tr>
+<tr><td>-a</td><td>Inclui sistemas de arquivos pseudo (com tamanho zero, como <code>/proc</code>)</td></tr>
+<tr><td>–total</td><td>Exibe uma linha adicional com o total geral</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, os tamanhos são exibidos em blocos de 1K, o que dificulta a leitura; use <code>-h</code> para um formato mais amigável.
+Para verificar o espaço ocupado por diretórios específicos (em vez do sistema de arquivos como um todo), utilize <code>du</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">df                          # exibe o uso de todos os sistemas de arquivos montados
+df -h                       # exibe os tamanhos em formato legível
+df -h /home                 # exibe o uso do sistema de arquivos que contém /home
+df -T                       # exibe também o tipo de cada sistema de arquivos
+df -i                       # exibe a quantidade de inodes usados e disponíveis
+df -h --total               # exibe o uso de todos os sistemas de arquivos e o total geral
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="nl"><a href="#nl" class="header">nl</a></h1>
+<h1 id="du"><a class="header" href="#du">du</a></h1>
+<p>Exibe o espaço em disco utilizado por arquivos e diretórios.</p>
+<pre><code class="language-bash">du [opções] [diretório/arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório/arquivo</td><td>Localização a ser analisada (padrão: diretório atual)</td></tr>
+<tr><td>-h</td><td>Exibe os tamanhos em formato legível (KB, MB, GB)</td></tr>
+<tr><td>-s</td><td>Exibe apenas o total geral, sem detalhar subdiretórios</td></tr>
+<tr><td>-a</td><td>Exibe o tamanho de todos os arquivos, não apenas dos diretórios</td></tr>
+<tr><td>-c</td><td>Exibe uma linha adicional com o total geral</td></tr>
+<tr><td>–max-depth=N</td><td>Limita a profundidade de exibição a <code>N</code> níveis de subdiretórios</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, <code>du</code> percorre recursivamente todos os subdiretórios, o que pode gerar uma saída bem extensa; combine com <code>-s</code> ou <code>--max-depth</code> para resumir o resultado.
+Para verificar o espaço total disponível no sistema de arquivos (em vez do espaço ocupado por arquivos específicos), utilize <code>df</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">du                           # exibe o uso de espaço do diretório atual e seus subdiretórios
+du -h                        # exibe os tamanhos em formato legível
+du -sh /home                 # exibe apenas o total do diretório /home, de forma legível
+du -ah /var/log               # exibe o tamanho de cada arquivo dentro de /var/log
+du -h --max-depth=1          # exibe o uso de espaço limitado a um nível de subdiretórios
+du -ch *.log                 # exibe o tamanho de cada arquivo .log e o total geral
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="pwd"><a href="#pwd" class="header">pwd</a></h1>
+<h1 id="echo"><a href="#echo" class="header">echo</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="reboot"><a href="#reboot" class="header">reboot</a></h1>
+<h1 id="find"><a class="header" href="#find">find</a></h1>
+<p>Localiza arquivos e diretórios em uma hierarquia, com base em critérios como nome, tipo, tamanho ou data.</p>
+<pre><code class="language-bash">find [diretório] [expressão]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório</td><td>Local onde a busca será iniciada (padrão: diretório atual)</td></tr>
+<tr><td>-name “padrão”</td><td>Busca por nome de arquivo, diferenciando maiúsculas de minúsculas</td></tr>
+<tr><td>-iname “padrão”</td><td>Busca por nome de arquivo, ignorando maiúsculas e minúsculas</td></tr>
+<tr><td>-type f/d</td><td>Filtra por tipo: <code>f</code> para arquivo, <code>d</code> para diretório</td></tr>
+<tr><td>-size N</td><td>Filtra por tamanho (ex.: <code>+100M</code>, <code>-1G</code>)</td></tr>
+<tr><td>-mtime N</td><td>Filtra por data de modificação, em dias (ex.: <code>-7</code> para os últimos 7 dias)</td></tr>
+<tr><td>-exec comando {} ;</td><td>Executa um comando sobre cada resultado encontrado</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>O padrão informado em <code>-name</code> costuma exigir aspas (<code>"*.txt"</code>), evitando que o shell expanda o curinga antes de <code>find</code> recebê-lo.
+Para buscar apenas pelo conteúdo de arquivos de texto (em vez do nome), utilize <code>grep -r</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">find . -name "*.txt"                    # busca arquivos .txt no diretório atual e subdiretórios
+find /home -iname "relatorio*"          # busca ignorando maiúsculas/minúsculas em /home
+find /var/log -type f -size +100M       # busca arquivos maiores que 100 MB
+find . -type d -name "backup"           # busca diretórios chamados `backup`
+find /tmp -mtime -7                     # busca arquivos modificados nos últimos 7 dias
+find . -name "*.log" -exec rm {} \;     # busca e remove arquivos .log encontrados
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="shutdown--power-off"><a href="#shutdown--power-off" class="header">shutdown / power-off</a></h1>
+<h1 id="free"><a class="header" href="#free">free</a></h1>
+<p>Exibe a quantidade de memória livre e utilizada no sistema, incluindo memória RAM e swap.</p>
+<pre><code class="language-bash">free [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-h</td><td>Exibe os valores em formato legível (KB, MB, GB)</td></tr>
+<tr><td>-m</td><td>Exibe os valores em megabytes</td></tr>
+<tr><td>-g</td><td>Exibe os valores em gigabytes</td></tr>
+<tr><td>-s N</td><td>Atualiza a exibição a cada <code>N</code> segundos, continuamente</td></tr>
+<tr><td>-t</td><td>Exibe uma linha adicional com o total de memória RAM e swap somados</td></tr>
+<tr><td>-c N</td><td>Repete a exibição <code>N</code> vezes (usado junto com <code>-s</code>)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>A coluna <code>available</code> costuma ser mais representativa do que <code>free</code> para saber quanta memória ainda pode ser usada por novos processos, já que o Linux reaproveita memória livre para cache.
+Para acompanhar o uso de memória por processo individual, utilize <code>top</code> ou <code>htop</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">free                         # exibe o uso de memória em blocos de 1K
+free -h                      # exibe os valores em formato legível
+free -m                      # exibe os valores em megabytes
+free -h -t                   # exibe os valores legíveis com o total geral
+free -h -s 5                 # atualiza a exibição a cada 5 segundos
+free -h -s 2 -c 3             # atualiza a cada 2 segundos, repetindo 3 vezes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="history"><a href="#history" class="header">history</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ln"><a class="header" href="#ln">ln</a></h1>
+<p>Cria links entre arquivos, permitindo que um mesmo conteúdo seja acessado por mais de um nome ou local.</p>
+<pre><code class="language-bash">ln [opções] alvo nome_do_link
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>alvo</td><td>Arquivo ou diretório original ao qual o link vai apontar</td></tr>
+<tr><td>nome_do_link</td><td>Nome (ou caminho) do link a ser criado</td></tr>
+<tr><td>-s</td><td>Cria um link simbólico (soft link), em vez de um link físico (hard link)</td></tr>
+<tr><td>-f</td><td>Força a criação do link, substituindo o destino caso já exista</td></tr>
+<tr><td>-v</td><td>Exibe o nome de cada arquivo antes de criar o link (modo verboso)</td></tr>
+<tr><td>-n</td><td>Trata o link simbólico como um arquivo comum ao apontar para um diretório existente</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, <code>ln</code> cria um link físico (hard link), que aponta diretamente para os mesmos dados no disco; para a maioria dos usos práticos, prefira <code>-s</code> para criar um link simbólico.
+Diferente do link físico, o link simbólico pode apontar para diretórios e para arquivos em outros sistemas de arquivos, mas deixa de funcionar caso o arquivo original seja removido ou movido.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">ln arquivo.txt link_fisico.txt          # cria um link físico apontando para `arquivo.txt`
+ln -s arquivo.txt link_simbolico.txt    # cria um link simbólico apontando para `arquivo.txt`
+ln -s /var/www/html html                # cria um link simbólico para um diretório
+ln -sf arquivo.txt link_simbolico.txt   # recria o link simbólico, substituindo-o se já existir
+ln -sv arquivo.txt link_simbolico.txt   # cria o link simbólico exibindo o resultado da operação
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="man"><a href="#man" class="header">man</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="nl"><a class="header" href="#nl">nl</a></h1>
+<p>Numera as linhas de um arquivo de texto e exibe o resultado na saída padrão.</p>
+<pre><code class="language-bash">nl [opções] [arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>arquivo</td><td>Localização do arquivo a ser numerado</td></tr>
+<tr><td>-b a</td><td>Numera todas as linhas, inclusive as em branco</td></tr>
+<tr><td>-b t</td><td>Numera apenas as linhas com conteúdo (padrão)</td></tr>
+<tr><td>-n ln</td><td>Alinha a numeração à esquerda</td></tr>
+<tr><td>-n rn</td><td>Alinha a numeração à direita (padrão)</td></tr>
+<tr><td>-w N</td><td>Define a largura, em colunas, reservada para o número da linha</td></tr>
+<tr><td>-s “separador”</td><td>Define o texto usado para separar o número do conteúdo da linha</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, <code>nl</code> não numera linhas em branco; use <code>-b a</code> caso queira incluí-las na contagem.
+Diferente de <code>cat -n</code>, que numera todas as linhas indiscriminadamente, <code>nl</code> oferece mais controle sobre quais linhas recebem numeração e como ela é formatada.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">nl arquivo.txt                     # numera as linhas com conteúdo de `arquivo.txt`
+nl -ba arquivo.txt                  # numera todas as linhas, inclusive as em branco
+nl -nln arquivo.txt                 # exibe a numeração alinhada à esquerda
+nl -w 5 arquivo.txt                  # reserva 5 colunas para o número da linha
+nl -s ") " arquivo.txt               # separa o número do conteúdo com ") "
+cat arquivo.txt | nl                 # numera a saída do comando `cat`
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poweroff"><a class="header" href="#poweroff">poweroff</a></h1>
+<p>Desliga o sistema imediatamente.</p>
+<pre><code class="language-bash">poweroff [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-f</td><td>Força o desligamento imediato, sem avisar outros processos</td></tr>
+<tr><td>-p</td><td>Desliga o sistema desligando também a energia do hardware (padrão em <code>poweroff</code>)</td></tr>
+<tr><td>–halt</td><td>Interrompe o sistema sem efetivamente desligar a energia</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>poweroff</code> desliga o sistema imediatamente, sem opção de agendamento, sendo equivalente a <code>shutdown -h now</code>.
+Para agendar o desligamento ou avisar outros usuários antes de executá-lo, utilize <code>shutdown</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo poweroff              # desliga o sistema imediatamente
+sudo poweroff -f            # força o desligamento, sem avisar processos
+sudo systemctl poweroff     # desliga o sistema via systemd
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pwd"><a class="header" href="#pwd">pwd</a></h1>
+<p>Exibe o caminho completo do diretório de trabalho atual.</p>
+<pre><code class="language-bash">pwd [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-L</td><td>Exibe o caminho lógico, considerando links simbólicos (padrão)</td></tr>
+<tr><td>-P</td><td>Exibe o caminho físico, resolvendo links simbólicos até o diretório real</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>A variável de ambiente <code>$PWD</code> guarda o mesmo valor exibido por <code>pwd</code> e pode ser usada diretamente em scripts.
+Ao navegar por links simbólicos com <code>cd</code>, <code>pwd</code> mostra o caminho pelo qual você chegou até ali; use <code>-P</code> para ver o caminho real no disco.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">pwd                    # exibe o caminho do diretório atual
+pwd -P                 # exibe o caminho físico, resolvendo links simbólicos
+cd /var/www &amp;&amp; pwd     # navega até `/var/www` e confirma o diretório atual
+echo $PWD              # exibe o diretório atual usando a variável de ambiente
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="reboot"><a class="header" href="#reboot">reboot</a></h1>
+<p>Reinicia o sistema.</p>
+<pre><code class="language-bash">reboot [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-f</td><td>Força a reinicialização imediata, sem avisar outros processos</td></tr>
+<tr><td>-p</td><td>Desliga o sistema em vez de reiniciá-lo (equivalente a <code>poweroff</code>)</td></tr>
+<tr><td>–halt</td><td>Interrompe o sistema sem desligar ou reiniciar</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Em sistemas com <code>systemd</code>, <code>reboot</code> costuma ser um atalho para <code>systemctl reboot</code>, que encerra os serviços de forma organizada antes de reiniciar.
+Executar <code>reboot</code> normalmente exige privilégios de superusuário (<code>sudo</code>).</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo reboot              # reinicia o sistema de forma padrão
+sudo reboot -f            # força a reinicialização imediata
+sudo systemctl reboot     # reinicia o sistema via systemd
+shutdown -r now           # alternativa para reiniciar o sistema imediatamente
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="shutdown"><a class="header" href="#shutdown">shutdown</a></h1>
+<p>Desliga ou reinicia o sistema, podendo agendar a ação e avisar os usuários conectados antes de executá-la.</p>
+<pre><code class="language-bash">shutdown [opções] [tempo] ["mensagem"]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>tempo</td><td>Momento em que a ação ocorrerá: <code>now</code>, número de minutos, ou horário no formato <code>hh:mm</code></td></tr>
+<tr><td>“mensagem”</td><td>Texto de aviso exibido aos usuários conectados</td></tr>
+<tr><td>-h</td><td>Desliga o sistema</td></tr>
+<tr><td>-r</td><td>Reinicia o sistema, em vez de desligá-lo</td></tr>
+<tr><td>-c</td><td>Cancela um desligamento agendado</td></tr>
+<tr><td>-k</td><td>Apenas envia o aviso aos usuários, sem desligar ou reiniciar de fato</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>shutdown</code> permite agendar a ação e notificar outros usuários antes de desligar ou reiniciar, o que o torna mais indicado para servidores com múltiplos usuários conectados.
+Executar <code>shutdown</code> normalmente exige privilégios de superusuário (<code>sudo</code>).</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo shutdown -h now                       # desliga o sistema imediatamente
+sudo shutdown -r now                       # reinicia o sistema imediatamente
+sudo shutdown -h +10 "Manutenção em 10min" # agenda o desligamento em 10 minutos, com aviso
+sudo shutdown -r 23:00                     # agenda a reinicialização para as 23h
+sudo shutdown -c                           # cancela um desligamento agendado
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="sort"><a href="#sort" class="header">sort</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="filtros"><a class="header" href="#filtros">Filtros</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cut"><a class="header" href="#cut">cut</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="grep"><a class="header" href="#grep">grep</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="tr"><a class="header" href="#tr">tr</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="wc"><a class="header" href="#wc">wc</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="processos"><a class="header" href="#processos">Processos</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ps"><a class="header" href="#ps">ps</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="top"><a class="header" href="#top">top</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="kill"><a class="header" href="#kill">kill</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="killall"><a class="header" href="#killall">killall</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pkill"><a class="header" href="#pkill">pkill</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="comandos-de-usuários-e-grupos"><a class="header" href="#comandos-de-usuários-e-grupos">Comandos de Usuários e Grupos</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="hostname"><a class="header" href="#hostname">hostname</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="uname"><a class="header" href="#uname">uname</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="susudo"><a class="header" href="#susudo">su/sudo</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="id"><a class="header" href="#id">id</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="whoami"><a class="header" href="#whoami">whoami</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="chgrp"><a class="header" href="#chgrp">chgrp</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="chown"><a class="header" href="#chown">chown</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="chmod"><a class="header" href="#chmod">chmod</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gerenciamento-de-disco"><a class="header" href="#gerenciamento-de-disco">Gerenciamento de Disco</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="fdisk"><a class="header" href="#fdisk">Fdisk</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gdisk"><a class="header" href="#gdisk">Gdisk</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cfdisk"><a class="header" href="#cfdisk">Cfdisk</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="mount"><a class="header" href="#mount">Mount</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="umount"><a class="header" href="#umount">Umount</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="fstab"><a class="header" href="#fstab">Fstab</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="swap"><a class="header" href="#swap">Swap</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="compactação-e-compressão"><a class="header" href="#compactação-e-compressão">Compactação e Compressão</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gzip"><a href="#gzip" class="header">gzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gunzip"><a href="#gunzip" class="header">gunzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="zip"><a href="#zip" class="header">zip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="unzip"><a href="#unzip" class="header">unzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="tar"><a href="#tar" class="header">tar</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="redes"><a class="header" href="#redes">Redes</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="rede"><a class="header" href="#rede">Rede</a></h1>
 <p>Uma rede é uma conexão entre dois ou mais dispositivos, com o objetivo de compartilhar dados entre si. O compartilhamento pode ser feito de várias formas:</p>
@@ -2145,6 +2602,20 @@ Roteador (192.168.110.1)
 <li>O <strong>endereço da rede</strong> é <code>192.168.110.0</code>. Representa a rede em si, e nenhum dispositivo pode usá-lo;</li>
 <li>O <strong>endereço de broadcast</strong> é <code>192.168.110.255</code>. Se o roteador precisar enviar um aviso para todos os dispositivos ao mesmo tempo (por exemplo, “a rede vai reiniciar”), ele usa esse endereço, e todos recebem a mensagem simultaneamente.</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ifconfig"><a href="#ifconfig" class="header">ifconfig</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ip"><a href="#ip" class="header">ip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ping"><a href="#ping" class="header">ping</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ssh"><a href="#ssh" class="header">ssh</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="scp"><a href="#scp" class="header">scp</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="curl"><a href="#curl" class="header">curl</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="wget"><a href="#wget" class="header">wget</a></h1>
 
                     </main>
 

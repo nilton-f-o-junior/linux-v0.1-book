@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-b443058c.js";
+            window.path_to_searchindex_js = "../searchindex-4060757c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-37ca00fe.js"></script>
+        <script src="../toc-3880f7dc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,38 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="df"><a class="header" href="#df">df</a></h1>
+<p>Exibe o espaço de disco utilizado e disponível nos sistemas de arquivos montados.</p>
+<pre><code class="language-bash">df [opções] [diretório/arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório/arquivo</td><td>Exibe informações apenas do sistema de arquivos que contém esse diretório/arquivo</td></tr>
+<tr><td>-h</td><td>Exibe os tamanhos em formato legível (KB, MB, GB)</td></tr>
+<tr><td>-T</td><td>Exibe também o tipo de sistema de arquivos</td></tr>
+<tr><td>-i</td><td>Exibe informações de inodes em vez de blocos</td></tr>
+<tr><td>-a</td><td>Inclui sistemas de arquivos pseudo (com tamanho zero, como <code>/proc</code>)</td></tr>
+<tr><td>–total</td><td>Exibe uma linha adicional com o total geral</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, os tamanhos são exibidos em blocos de 1K, o que dificulta a leitura; use <code>-h</code> para um formato mais amigável.
+Para verificar o espaço ocupado por diretórios específicos (em vez do sistema de arquivos como um todo), utilize <code>du</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">df                          # exibe o uso de todos os sistemas de arquivos montados
+df -h                       # exibe os tamanhos em formato legível
+df -h /home                 # exibe o uso do sistema de arquivos que contém /home
+df -T                       # exibe também o tipo de cada sistema de arquivos
+df -i                       # exibe a quantidade de inodes usados e disponíveis
+df -h --total               # exibe o uso de todos os sistemas de arquivos e o total geral
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

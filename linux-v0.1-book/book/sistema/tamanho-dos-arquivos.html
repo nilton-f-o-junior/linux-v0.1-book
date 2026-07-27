@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-b443058c.js";
+            window.path_to_searchindex_js = "../searchindex-4060757c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-37ca00fe.js"></script>
+        <script src="../toc-3880f7dc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,17 +178,31 @@
 <p>No nível mais baixo da computação, a menor unidade de informação possível é o <strong>bit</strong> (acrônimo para <em>Binary Digit</em>). Um bit representa um estado elétrico ou magnético simples: ou ele está desligado (0) ou está ligado (1). Sozinho, um bit não consegue carregar muita informação, funcionando apenas como uma resposta de “sim” ou “não”.</p>
 <p>Para criar dados complexos, os computadores agrupam esses bits em conjuntos de 8. Esse grupo de 8 bits recebe o nome de <strong>Byte</strong>.</p>
 <ul>
-<li><strong>1 Bit:</strong> a menor unidade (0 ou 1);</li>
-<li><strong>1 Byte:</strong> um conjunto de 8 bits.</li>
+<li>
+<p><strong>1 Bit:</strong> a menor unidade (0 ou 1);</p>
+</li>
+<li>
+<p><strong>1 Byte:</strong> um conjunto de 8 bits.</p>
+</li>
 </ul>
 <h2 id="a-escala-de-grandezas-digitais"><a class="header" href="#a-escala-de-grandezas-digitais">A escala de grandezas digitais</a></h2>
 <p>À medida que os arquivos incorporam elementos mais complexos do que texto puro, o número de bytes necessários para contê-los cresce exponencialmente. Para evitar lidar com números astronômicos na casa dos bilhões ou trilhões, utilizamos prefixos multiplicadores padronizados:</p>
 <ul>
-<li><strong>Kilobyte (KB):</strong> tradicionalmente equivale a 1.000 Bytes;</li>
-<li><strong>Megabyte (MB):</strong> equivale a 1.000 Kilobytes (ou 1 milhão de bytes);</li>
-<li><strong>Gigabyte (GB):</strong> equivale a 1.000 Megabytes (ou 1 bilhão de bytes);</li>
-<li><strong>Terabyte (TB):</strong> equivale a 1.000 Gigabytes (ou 1 trilhão de bytes);</li>
-<li><strong>Petabyte (PB):</strong> equivale a 1.000 Terabytes.</li>
+<li>
+<p><strong>Kilobyte (KB):</strong> tradicionalmente equivale a 1.000 Bytes;</p>
+</li>
+<li>
+<p><strong>Megabyte (MB):</strong> equivale a 1.000 Kilobytes (ou 1 milhão de bytes);</p>
+</li>
+<li>
+<p><strong>Gigabyte (GB):</strong> equivale a 1.000 Megabytes (ou 1 bilhão de bytes);</p>
+</li>
+<li>
+<p><strong>Terabyte (TB):</strong> equivale a 1.000 Gigabytes (ou 1 trilhão de bytes);</p>
+</li>
+<li>
+<p><strong>Petabyte (PB):</strong> equivale a 1.000 Terabytes.</p>
+</li>
 </ul>
 <h2 id="tamanho-real-vs-tamanho-em-disco"><a class="header" href="#tamanho-real-vs-tamanho-em-disco">Tamanho Real vs. Tamanho em Disco</a></h2>
 <p>Ao clicar com o botão direito sobre qualquer arquivo e acessar suas propriedades, você notará duas informações distintas: o <strong>Tamanho</strong> (Tamanho Real) e o <strong>Tamanho em disco</strong>. Quase sempre, o tamanho em disco é ligeiramente maior do que o tamanho real do arquivo.</p>
@@ -196,17 +210,9 @@
 <p>Cada cluster só pode conter dados de um único arquivo por vez. Portanto, se você criar um arquivo de texto que pesa apenas <strong>100 Bytes</strong> (Tamanho Real), o sistema operacional será obrigado a dedicar <strong>1 cluster inteiro</strong> para ele no disco. Consequentemente, o “Tamanho em disco” desse arquivo passará a ser de <strong>4 KB</strong>. O espaço restante daquele bloco (3.996 Bytes) é chamado de <em>Slack Space</em> e fica inutilizado até que o arquivo cresça ou seja deletado.</p>
 <h2 id="o-impacto-prático-do-tamanho-na-computação"><a class="header" href="#o-impacto-prático-do-tamanho-na-computação">O impacto prático do tamanho na computação</a></h2>
 <p>O tamanho de um arquivo dita o comportamento de toda a infraestrutura computacional ao seu redor:</p>
-<ul>
-<li>
 <p><strong>Velocidade de carregamento:</strong> quando você abre um arquivo, o processador ordena que ele seja copiado do armazenamento local (SSD/HD) para a memória RAM. Um documento de 50 KB abre instantaneamente; um banco de dados de 50 GB pode levar minutos para ser carregado na memória, dependendo da velocidade de leitura do hardware;</p>
-</li>
-<li>
 <p><strong>Largura de banda na rede:</strong> no tráfego de internet, o tamanho do arquivo determina o tempo de download e upload. Transmitir um arquivo de vídeo não compactado via rede consome muita banda, o que justifica a existência de algoritmos de compressão (como <code>.zip</code> ou formatos de streaming) para encolher o peso digital dos arquivos antes do envio;</p>
-</li>
-<li>
 <p><strong>Limitações arquitetônicas:</strong> sistemas de arquivos antigos possuem limites severos de tamanho. O antigo formato FAT32 (muito usado ainda em pendrives antigos) possui uma limitação matemática rígida: ele é incapaz de armazenar qualquer arquivo individual que seja maior do que <strong>4 GB</strong>, independentemente de o pendrive ter 64 GB de espaço total livre. Tentar copiar um arquivo de vídeo de 5 GB para um disco em FAT32 resultará em um erro de sistema instantâneo.</p>
-</li>
-</ul>
 
                     </main>
 
