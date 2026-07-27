@@ -6,6 +6,6 @@ Este projeto foi criado para compartilhar conhecimentos sobre Linux de forma sim
 
 O Linux possui livros incríveis e muita documentação. Porém, parte desse material é pago e outra parte ainda está disponível apenas em PDF. Atualmente, a comunidade vem expandindo a oferta de materiais modernos de forma gratuita e em português, tornando o aprendizado ainda mais acessível.
 
-Este não é meu único projeto, também estou escrevendo um livro sobre a linguagem Rust, caso queira conhecer: https://rust-v1-9-book.vercel.app/
+Este não é meu único projeto, também estou escrevendo um livro sobre a linguagem Rust, caso queira conhecer: [https://rust-v1-9-book.vercel.app/](https://rust-v1-9-book.vercel.app/)
 
-O principal objetivo é tornar o aprendizado acessível, permitindo que qualquer pessoa compreenda os conceitos sem barreiras. Desejamos que este material seja útil para a sua jornada e esperamos que você aproveite a leitura.
+O principal objetivo é tornar o aprendizado acessível, permitindo que qualquer pessoa compreenda os conceitos sem barreiras. Desejo que este material seja útil para a sua jornada e espero que você aproveite bem a leitura.
