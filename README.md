@@ -25,13 +25,20 @@ Acesse: <https://linux-v0-1-book.vercel.app/>
 
 ## 📖 Índice
 
-### 1. Apresentação
-### 2. Começando
-### 3. Hardware
-### 4. Software
-### 5. Sistema
-### 6. Visualização de Arquivos
-### 7. Manipulando Arquivos
+- Apresentação
+- Começando
+- Hardware
+- Software
+- Sistema
+- Visualizando Arquivos
+- Manipulando Arquivos
+- Utilitários
+- Filtros
+- Processos
+- Comandos de Usuários e Grupos
+- Gerenciamento de Disco
+- Compactação e Compressão
+- Redes
 
 ## 🎯 Para Quem é Este Livro?
 
