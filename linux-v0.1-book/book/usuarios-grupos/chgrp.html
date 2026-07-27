@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,32 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="chgrp"><a class="header" href="#chgrp">chgrp</a></h1>
+<p>Altera o grupo proprietário de um arquivo ou diretório.</p>
+<pre><code class="language-bash">chgrp [opções] grupo arquivo [arquivo1]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>grupo</td><td>Nome (ou número) do grupo que passará a ser o proprietário</td></tr>
+<tr><td>arquivo</td><td>Localização do arquivo ou diretório a ser alterado</td></tr>
+<tr><td>-R, –recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
+<tr><td>–reference=arquivo_ref</td><td>Usa o grupo de <code>arquivo_ref</code> em vez de especificar o nome diretamente</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Alterar o grupo de um arquivo geralmente requer que o usuário seja o dono do arquivo (e membro do grupo de destino) ou tenha permissões de superusuário.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">chgrp equipe arquivo.txt              # altera o grupo de `arquivo.txt` para `equipe`
+sudo chgrp -R equipe /var/www/site    # altera o grupo recursivamente para todos os arquivos de um diretório
+chgrp -v equipe arquivo.txt           # altera o grupo e exibe uma mensagem de confirmação
+chgrp --reference=modelo.txt copia.txt # aplica o mesmo grupo de `modelo.txt` a `copia.txt`
+</code></pre>
 
                     </main>
 

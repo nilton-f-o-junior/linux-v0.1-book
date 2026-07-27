@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,33 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="killall"><a class="header" href="#killall">killall</a></h1>
+<p>Envia um sinal a todos os processos que correspondem a um nome informado.</p>
+<pre><code class="language-bash">killall [opções] nome_do_processo
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>nome_do_processo</td><td>Nome do processo (ou programa) cujas instâncias serão sinalizadas</td></tr>
+<tr><td>-9, -SIGKILL</td><td>Força o encerramento imediato de todos os processos correspondentes</td></tr>
+<tr><td>-i, –interactive</td><td>Pede confirmação antes de encerrar cada processo encontrado</td></tr>
+<tr><td>-u usuário</td><td>Encerra apenas os processos pertencentes ao usuário informado</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe uma mensagem informando se o sinal foi enviado com sucesso</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Diferente do <code>kill</code>, que exige o PID de um processo específico, o <code>killall</code> localiza e sinaliza todos os processos que correspondem ao nome informado, o que é útil quando um programa possui múltiplas instâncias em execução.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">killall firefox                      # envia o sinal padrão (SIGTERM) para todas as instâncias do `firefox`
+killall -9 firefox                    # força o encerramento imediato de todas as instâncias do `firefox`
+killall -i chrome                     # pede confirmação antes de encerrar cada processo do `chrome`
+killall -u usuario                    # encerra todos os processos pertencentes a um usuário específico
+killall -v firefox                    # encerra os processos e exibe uma mensagem de confirmação
+</code></pre>
 
                     </main>
 

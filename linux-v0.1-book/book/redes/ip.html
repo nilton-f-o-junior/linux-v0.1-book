@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,36 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="ip"><a class="header" href="#ip">ip</a></h1>
+<p>Exibe e configura interfaces de rede, endereços, rotas e outros parâmetros de rede.</p>
+<pre><code class="language-bash">ip [opções] objeto comando
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>objeto</td><td>Elemento de rede a ser consultado ou configurado (ex.: <code>addr</code>, <code>link</code>, <code>route</code>)</td></tr>
+<tr><td>comando</td><td>Ação a ser executada sobre o objeto (ex.: <code>show</code>, <code>add</code>, <code>del</code>)</td></tr>
+<tr><td>addr, a</td><td>Exibe ou configura endereços IP das interfaces</td></tr>
+<tr><td>link, l</td><td>Exibe ou configura o estado das interfaces de rede (ex.: <code>up</code>, <code>down</code>)</td></tr>
+<tr><td>route, r</td><td>Exibe ou configura a tabela de rotas</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>ip</code> substitui o antigo <code>ifconfig</code> (e outras ferramentas do pacote <code>net-tools</code>) nas distribuições Linux atuais, oferecendo mais recursos e sendo o padrão recomendado hoje em dia.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">ip addr show                               # exibe os endereços IP de todas as interfaces
+ip a                                       # forma abreviada do comando acima
+ip link show                               # exibe o estado de todas as interfaces de rede
+sudo ip link set eth0 up                   # ativa a interface `eth0`
+sudo ip addr add 192.168.1.10/24 dev eth0  # atribui um endereço IP à interface `eth0`
+ip route show                              # exibe a tabela de rotas do sistema
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,33 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="chmod"><a class="header" href="#chmod">chmod</a></h1>
+<p>Altera as permissões de acesso de um arquivo ou diretório.</p>
+<pre><code class="language-bash">chmod [opções] modo arquivo [arquivo1]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>modo</td><td>Permissões a serem aplicadas, em formato numérico (ex.: <code>755</code>) ou simbólico (ex.: <code>u+x</code>)</td></tr>
+<tr><td>arquivo</td><td>Localização do arquivo ou diretório a ser alterado</td></tr>
+<tr><td>-R, –recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>As permissões são divididas em três grupos: usuário dono (<code>u</code>), grupo (<code>g</code>) e outros (<code>o</code>). Cada um pode ter permissão de leitura (<code>r</code> = 4), escrita (<code>w</code> = 2) e execução (<code>x</code> = 1), que se somam no formato numérico (ex.: <code>7</code> = leitura + escrita + execução).</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">chmod 755 script.sh                   # dá permissão total ao dono e leitura/execução aos demais
+chmod +x script.sh                    # adiciona permissão de execução para todos
+chmod u+x script.sh                   # adiciona permissão de execução apenas para o dono
+chmod g-w arquivo.txt                 # remove a permissão de escrita do grupo
+sudo chmod -R 644 /var/www/site       # aplica a permissão recursivamente a todos os arquivos de um diretório
+chmod -v 700 arquivo_privado.txt      # altera a permissão e exibe uma mensagem de confirmação
+</code></pre>
 
                     </main>
 

@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,36 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="history"><a class="header" href="#history">history</a></h1>
+<p>Exibe o histórico de comandos digitados no terminal.</p>
+<pre><code class="language-bash">history [opções] [N]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>N</td><td>Exibe apenas os últimos <code>N</code> comandos do histórico</td></tr>
+<tr><td>-c</td><td>Limpa todo o histórico de comandos da sessão atual</td></tr>
+<tr><td>-d posição</td><td>Remove uma entrada específica do histórico, pela posição informada</td></tr>
+<tr><td>!N</td><td>Executa novamente o comando de número <code>N</code> do histórico</td></tr>
+<tr><td>!!</td><td>Executa novamente o último comando digitado</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>O histórico é armazenado por padrão no arquivo <code>~/.bash_history</code> (ou equivalente, dependendo do shell) e é salvo ao encerrar a sessão do terminal.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">history                                # exibe todo o histórico de comandos
+history 10                             # exibe os últimos 10 comandos digitados
+history -c                             # limpa o histórico da sessão atual
+history -d 42                          # remove o comando de número 42 do histórico
+!!                                     # executa novamente o último comando
+!25                                    # executa novamente o comando de número 25 do histórico
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

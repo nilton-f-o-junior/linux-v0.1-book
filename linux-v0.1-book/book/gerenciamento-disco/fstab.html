@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,43 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="fstab"><a class="header" href="#fstab">Fstab</a></h1>
+                        <h1 id="fstab"><a class="header" href="#fstab">fstab</a></h1>
+<p>Arquivo de configuração que define os sistemas de arquivos a serem montados automaticamente durante a inicialização do sistema.</p>
+<pre><code class="language-bash">/etc/fstab
+</code></pre>
+<blockquote>
+<p>Diferente dos demais itens deste material, <code>fstab</code> não é um comando, e sim um arquivo de texto localizado em <code>/etc/fstab</code>. Ele é lido pelo sistema no momento da inicialização (e por comandos como <code>mount -a</code>) para montar automaticamente as partições e dispositivos configurados.</p>
+</blockquote>
+<p><strong>Estrutura de cada linha</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Campo</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>dispositivo</td><td>Localização do dispositivo/partição, ou identificador único (<code>UUID=...</code>)</td></tr>
+<tr><td>ponto_de_montagem</td><td>Diretório onde o sistema de arquivos será montado (ex.: <code>/</code>, <code>/home</code>, <code>/mnt/dados</code>)</td></tr>
+<tr><td>tipo</td><td>Tipo do sistema de arquivos (ex.: <code>ext4</code>, <code>ntfs</code>, <code>vfat</code>, <code>swap</code>)</td></tr>
+<tr><td>opções</td><td>Opções de montagem, separadas por vírgula (ex.: <code>defaults</code>, <code>ro</code>, <code>noatime</code>)</td></tr>
+<tr><td>dump</td><td>Define se o utilitário <code>dump</code> deve fazer backup do sistema de arquivos (<code>0</code> = não, <code>1</code> = sim)</td></tr>
+<tr><td>pass</td><td>Define a ordem de verificação do sistema de arquivos pelo <code>fsck</code> na inicialização (<code>0</code> = não verificar)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Editar o <code>/etc/fstab</code> incorretamente pode impedir o sistema de inicializar corretamente. Sempre faça uma cópia de segurança do arquivo antes de modificá-lo, e teste as alterações com <code>sudo mount -a</code> antes de reiniciar.</p>
+</blockquote>
+<p><strong>Exemplo de conteúdo</strong></p>
+<pre><code class="language-bash">UUID=1a2b3c4d-... /                ext4    defaults        0 1
+UUID=5e6f7g8h-... /home            ext4    defaults        0 2
+/dev/sdb1          /mnt/dados      ext4    defaults        0 2
+/swapfile          none            swap    sw              0 0
+</code></pre>
+<p><strong>Exemplos de uso relacionado</strong></p>
+<pre><code class="language-bash">sudo nano /etc/fstab                   # edita o arquivo fstab
+sudo mount -a                          # monta todos os sistemas de arquivos listados em `fstab`, sem reiniciar
+blkid                                  # exibe os UUIDs dos dispositivos, úteis para configurar o `fstab`
+</code></pre>
 
                     </main>
 

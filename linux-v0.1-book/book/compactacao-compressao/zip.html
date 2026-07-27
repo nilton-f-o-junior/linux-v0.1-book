@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,36 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="zip"><a class="header" href="#zip">zip</a></h1>
+<p>Compacta arquivos e diretórios no formato <code>.zip</code>.</p>
+<pre><code class="language-bash">zip [opções] arquivo.zip arquivo [arquivo1]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>arquivo.zip</td><td>Nome do arquivo compactado a ser criado</td></tr>
+<tr><td>arquivo</td><td>Localização do(s) arquivo(s) ou diretório(s) a serem compactados</td></tr>
+<tr><td>-r, –recurse-paths</td><td>Compacta diretórios recursivamente, incluindo subpastas e arquivos</td></tr>
+<tr><td>-e, –encrypt</td><td>Compacta protegendo o conteúdo com senha</td></tr>
+<tr><td>-x arquivo</td><td>Exclui um arquivo específico da compactação</td></tr>
+<tr><td>-9</td><td>Define o nível máximo de compressão</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Diferente do <code>gzip</code>, o <code>zip</code> pode compactar múltiplos arquivos e diretórios em um único arquivo <code>.zip</code>, sem removê-los do local original.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">zip arquivo.zip arquivo.txt                # compacta `arquivo.txt` em `arquivo.zip`
+zip arquivo.zip arquivo1.txt arquivo2.txt  # compacta dois arquivos em um único `.zip`
+zip -r pasta.zip pasta/                    # compacta um diretório inteiro, incluindo subpastas
+zip -e protegido.zip arquivo.txt           # compacta protegendo o arquivo com senha
+zip -r -x "*.log" projeto.zip projeto/     # compacta um diretório, excluindo arquivos `.log`
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

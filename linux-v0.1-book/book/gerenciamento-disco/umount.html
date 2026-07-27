@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,33 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="umount"><a class="header" href="#umount">Umount</a></h1>
+                        <h1 id="umount"><a class="header" href="#umount">umount</a></h1>
+<p>Desmonta um sistema de arquivos previamente montado.</p>
+<pre><code class="language-bash">umount [opções] dispositivo|diretório
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>dispositivo</td><td>Localização do dispositivo ou partição a ser desmontado (ex.: <code>/dev/sdb1</code>)</td></tr>
+<tr><td>diretório</td><td>Ponto de montagem a ser desmontado (ex.: <code>/mnt/usb</code>)</td></tr>
+<tr><td>-a, –all</td><td>Desmonta todos os sistemas de arquivos montados (exceto os essenciais ao sistema)</td></tr>
+<tr><td>-f, –force</td><td>Força a desmontagem, mesmo que o sistema de arquivos esteja ocupado ou inacessível</td></tr>
+<tr><td>-l, –lazy</td><td>Desmonta assim que possível, liberando o ponto de montagem imediatamente, mesmo que ainda esteja em uso</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Ao tentar desmontar, o sistema pode recusar a operação caso o sistema de arquivos esteja em uso (ex.: um arquivo aberto ou um terminal com o diretório como local atual). Feche os programas relacionados antes de tentar novamente.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo umount /mnt/usb                  # desmonta o sistema de arquivos montado em `/mnt/usb`
+sudo umount /dev/sdb1                 # desmonta o dispositivo `/dev/sdb1` diretamente
+sudo umount -f /mnt/usb               # força a desmontagem de um sistema de arquivos ocupado
+sudo umount -l /mnt/usb               # desmonta de forma "preguiçosa", liberando o ponto de montagem
+</code></pre>
 
                     </main>
 

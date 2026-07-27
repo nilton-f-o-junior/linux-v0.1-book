@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,34 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="man"><a class="header" href="#man">man</a></h1>
+<p>Exibe o manual (documentação) de um comando ou programa.</p>
+<pre><code class="language-bash">man [opções] comando
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>comando</td><td>Nome do comando ou programa cujo manual será exibido</td></tr>
+<tr><td>-k palavra-chave</td><td>Busca comandos cujo manual contenha a palavra-chave informada</td></tr>
+<tr><td>-f comando</td><td>Exibe uma breve descrição do comando</td></tr>
+<tr><td>seção</td><td>Número da seção do manual a ser consultada (ex.: <code>1</code> para comandos de usuário, <code>5</code> para arquivos de configuração)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Durante a leitura: <code>espaço</code> avança uma página, <code>Enter</code> avança uma linha, <code>q</code> encerra, <code>/palavra</code> pesquisa dentro do texto.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">man ls                                # exibe o manual do comando `ls`
+man 5 passwd                          # exibe o manual da seção 5 (arquivos) para `passwd`
+man -k rede                           # busca comandos relacionados à palavra `rede`
+man -f cat                            # exibe uma breve descrição do comando `cat`
+man man                               # exibe o manual do próprio comando `man`
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

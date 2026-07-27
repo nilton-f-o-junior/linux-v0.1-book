@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,34 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="gdisk"><a class="header" href="#gdisk">Gdisk</a></h1>
+                        <h1 id="gdisk"><a class="header" href="#gdisk">gdisk</a></h1>
+<p>Exibe e manipula a tabela de partições de discos que usam o padrão GPT.</p>
+<pre><code class="language-bash">gdisk [opções] dispositivo
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>dispositivo</td><td>Localização do disco a ser manipulado (ex.: <code>/dev/sda</code>)</td></tr>
+<tr><td>-l, –list</td><td>Lista as partições existentes de um dispositivo, sem entrar no modo interativo</td></tr>
+<tr><td>p</td><td>(modo interativo) Exibe a tabela de partições</td></tr>
+<tr><td>n</td><td>(modo interativo) Cria uma nova partição</td></tr>
+<tr><td>d</td><td>(modo interativo) Exclui uma partição</td></tr>
+<tr><td>w</td><td>(modo interativo) Grava as alterações no disco</td></tr>
+<tr><td>q</td><td>(modo interativo) Sai sem salvar</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>gdisk</code> funciona de forma parecida com o <code>fdisk</code>, mas é voltado para discos com tabela de partições <strong>GPT</strong>, em vez do padrão mais antigo <strong>MBR</strong>. Os comandos acima (<code>p</code>, <code>n</code>, <code>d</code>, <code>w</code>, <code>q</code>) são digitados dentro do modo interativo do próprio programa, não no terminal.
+Assim como o <code>fdisk</code>, alterar a tabela de partições é uma operação sensível e geralmente requer permissões de superusuário — erros podem causar perda de dados.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo gdisk -l /dev/sda                 # lista as partições GPT de um disco específico
+sudo gdisk /dev/sda                    # abre o modo interativo para manipular as partições do disco
+</code></pre>
 
                     </main>
 

@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,34 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="chown"><a class="header" href="#chown">chown</a></h1>
+<p>Altera o usuário e/ou grupo proprietário de um arquivo ou diretório.</p>
+<pre><code class="language-bash">chown [opções] usuário[:grupo] arquivo [arquivo1]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>usuário</td><td>Nome (ou número) do usuário que passará a ser o proprietário</td></tr>
+<tr><td>grupo</td><td>Nome (ou número) do grupo que passará a ser o proprietário (opcional, precedido por <code>:</code>)</td></tr>
+<tr><td>arquivo</td><td>Localização do arquivo ou diretório a ser alterado</td></tr>
+<tr><td>-R, –recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
+<tr><td>–reference=arquivo_ref</td><td>Usa o dono/grupo de <code>arquivo_ref</code> em vez de especificar diretamente</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Alterar o proprietário de um arquivo geralmente requer permissões de superusuário. Para alterar apenas o grupo, sem mudar o usuário, prefira o comando <code>chgrp</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo chown usuario arquivo.txt        # altera apenas o dono de `arquivo.txt` para `usuario`
+sudo chown usuario:equipe arquivo.txt # altera o dono para `usuario` e o grupo para `equipe`
+sudo chown -R usuario:equipe /var/www/site  # altera recursivamente o dono e o grupo de um diretório
+sudo chown -v usuario arquivo.txt     # altera o dono e exibe uma mensagem de confirmação
+sudo chown --reference=modelo.txt copia.txt # aplica o mesmo dono/grupo de `modelo.txt` a `copia.txt`
+</code></pre>
 
                     </main>
 

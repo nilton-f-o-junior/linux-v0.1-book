@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-4060757c.js";
+            window.path_to_searchindex_js = "../searchindex-7da6affd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3880f7dc.js"></script>
+        <script src="../toc-c917ea13.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,34 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="wc"><a class="header" href="#wc">wc</a></h1>
+<p>Conta linhas, palavras e caracteres de um arquivo de texto.</p>
+<pre><code class="language-bash">wc [opções] [arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>arquivo</td><td>Localização do arquivo a ser analisado</td></tr>
+<tr><td>-l, –lines</td><td>Exibe apenas o número de linhas</td></tr>
+<tr><td>-w, –words</td><td>Exibe apenas o número de palavras</td></tr>
+<tr><td>-c, –bytes</td><td>Exibe apenas o número de bytes</td></tr>
+<tr><td>-m, –chars</td><td>Exibe apenas o número de caracteres</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Sem opções, <code>wc</code> exibe três valores, nessa ordem: número de linhas, número de palavras e número de bytes do arquivo.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">wc arquivo.txt                        # exibe linhas, palavras e bytes de `arquivo.txt`
+wc -l arquivo.txt                     # exibe apenas o número de linhas
+wc -w arquivo.txt                     # exibe apenas o número de palavras
+wc -c arquivo.txt                     # exibe apenas o número de bytes
+cat arquivo.txt | wc -l               # conta o número de linhas da saída do comando `cat`
+ls -la | wc -l                        # conta a quantidade de itens listados em um diretório
+</code></pre>
 
                     </main>
 
