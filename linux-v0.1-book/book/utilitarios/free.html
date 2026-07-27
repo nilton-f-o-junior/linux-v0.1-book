@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-bcd7f4b0.js";
+            window.path_to_searchindex_js = "../searchindex-4060757c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-37ca00fe.js"></script>
+        <script src="../toc-3880f7dc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -174,7 +174,38 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        
+                        <h1 id="free"><a class="header" href="#free">free</a></h1>
+<p>Exibe a quantidade de memória livre e utilizada no sistema, incluindo memória RAM e swap.</p>
+<pre><code class="language-bash">free [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-h</td><td>Exibe os valores em formato legível (KB, MB, GB)</td></tr>
+<tr><td>-m</td><td>Exibe os valores em megabytes</td></tr>
+<tr><td>-g</td><td>Exibe os valores em gigabytes</td></tr>
+<tr><td>-s N</td><td>Atualiza a exibição a cada <code>N</code> segundos, continuamente</td></tr>
+<tr><td>-t</td><td>Exibe uma linha adicional com o total de memória RAM e swap somados</td></tr>
+<tr><td>-c N</td><td>Repete a exibição <code>N</code> vezes (usado junto com <code>-s</code>)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>A coluna <code>available</code> costuma ser mais representativa do que <code>free</code> para saber quanta memória ainda pode ser usada por novos processos, já que o Linux reaproveita memória livre para cache.
+Para acompanhar o uso de memória por processo individual, utilize <code>top</code> ou <code>htop</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">free                         # exibe o uso de memória em blocos de 1K
+free -h                      # exibe os valores em formato legível
+free -m                      # exibe os valores em megabytes
+free -h -t                   # exibe os valores legíveis com o total geral
+free -h -s 5                 # atualiza a exibição a cada 5 segundos
+free -h -s 2 -c 3             # atualiza a cada 2 segundos, repetindo 3 vezes
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -183,7 +214,7 @@
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../utilitarios/ln.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../utilitarios/history.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -197,7 +228,7 @@
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../utilitarios/ln.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../utilitarios/history.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
