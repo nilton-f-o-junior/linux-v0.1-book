@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-bcd7f4b0.js";
+            window.path_to_searchindex_js = "../searchindex-4060757c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-37ca00fe.js"></script>
+        <script src="../toc-3880f7dc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -215,15 +215,23 @@
 </ul>
 <h2 id="representação-numérica"><a class="header" href="#representação-numérica">Representação Numérica</a></h2>
 <p>Para otimizar a atribuição de permissões, o Linux traduz os bits de leitura (r = 4), escrita (w = 2) e execução (x = 1) em um sistema somatório de base octal (valores de 0 a 7):</p>
-<p>| Modo Numérico | Modo Simbólico | Significado Técnico | |</p>
-<p>| <strong>7</strong> | <code>rwx</code> | Leitura, escrita e execução (Controle total) | |</p>
-<p>| <strong>6</strong> | <code>rw-</code> | Leitura e escrita | |</p>
-<p>| <strong>5</strong> | <code>r-x</code> | Leitura e execução | |</p>
-<p>| <strong>4</strong> | <code>r--</code> | Apenas leitura | |</p>
-<p>| <strong>3</strong> | <code>-wx</code> | Escrita e execução | |</p>
-<p>| <strong>2</strong> | <code>-w-</code> | Apenas escrita | |</p>
-<p>| <strong>1</strong> | <code>--x</code> | Apenas execução | |</p>
-<p>| <strong>0</strong> | <code>---</code> | Nenhum acesso permitido | |</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: center">Modo Numérico</th><th style="text-align: center">Modo Simbólico</th><th>Significado Técnico</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: center">7</td><td style="text-align: center"><code>rwx</code></td><td>Leitura, escrita e execução (Controle total)</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center"><code>rw-</code></td><td>Leitura e escrita</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center"><code>r-x</code></td><td>Leitura e execução</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center"><code>r--</code></td><td>Apenas leitura</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center"><code>-wx</code></td><td>Escrita e execução</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center"><code>-w-</code></td><td>Apenas escrita</td></tr>
+<tr><td style="text-align: center">1</td><td style="text-align: center"><code>--x</code></td><td>Apenas execução</td></tr>
+<tr><td style="text-align: center">0</td><td style="text-align: center"><code>---</code></td><td>Nenhum acesso permitido</td></tr>
+</tbody>
+</table>
+</div>
 <h3 id="permissão-755"><a class="header" href="#permissão-755">Permissão 755</a></h3>
 <pre><code class="language-bash">chmod 755 nome_do_arquivo.sh
 </code></pre>
