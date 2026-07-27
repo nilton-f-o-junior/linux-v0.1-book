@@ -10,9 +10,9 @@ ln [opções] alvo nome_do_link
 |---|---|
 | alvo | Arquivo ou diretório original ao qual o link vai apontar |
 | nome_do_link | Nome (ou caminho) do link a ser criado |
-| -s | Cria um link simbólico (soft link), em vez de um link físico (hard link) |
-| -f | Força a criação do link, substituindo o destino caso já exista |
-| -v | Exibe o nome de cada arquivo antes de criar o link (modo verboso) |
+| -s, --symbolic | Cria um link simbólico (soft link), em vez de um link físico (hard link) |
+| -f, --force | Força a criação do link, substituindo o destino caso já exista |
+| -v, --verbose | Exibe o nome de cada arquivo antes de criar o link (modo verboso) |
 | -n | Trata o link simbólico como um arquivo comum ao apontar para um diretório existente |
 
 > Por padrão, `ln` cria um link físico (hard link), que aponta diretamente para os mesmos dados no disco; para a maioria dos usos práticos, prefira `-s` para criar um link simbólico.
