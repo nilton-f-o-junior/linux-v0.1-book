@@ -13,7 +13,7 @@ Se um programa priva o usuário de qualquer uma dessas liberdades, ele é classi
 
 ## A Filosofia GNU e Richard Stallman
 
-No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a **FSF** (*Free Software Foundation*).
+No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1984 e, posteriormente, a **FSF** (*Free Software Foundation*).
 
 O objetivo do projeto era ambicioso: criar um sistema operacional inteiramente livre, de modo que ninguém precisasse usar software proprietário para operar um computador. O nome GNU é um acrônimo recursivo para *"GNU's Not Unix"* (GNU não é Unix), uma homenagem técnica ao sistema que serviu de inspiração arquitetônica, mas cujas restrições de licença a filosofia GNU rejeitava.
 
