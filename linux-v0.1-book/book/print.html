@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-bcd7f4b0.js";
+            window.path_to_searchindex_js = "searchindex-4060757c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-37ca00fe.js"></script>
+        <script src="toc-3880f7dc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -179,15 +179,11 @@
 <p>Olá, boas-vindas!</p>
 <p>Este projeto foi criado para compartilhar conhecimentos sobre Linux de forma simples e direta. O objetivo é oferecer um espaço onde qualquer pessoa possa ter acesso fácil a uma documentação de qualidade, estruturada, online, gratuita e de código aberto.</p>
 <p>O Linux possui livros incríveis e muita documentação. Porém, parte desse material é pago e outra parte ainda está disponível apenas em PDF. Atualmente, a comunidade vem expandindo a oferta de materiais modernos de forma gratuita e em português, tornando o aprendizado ainda mais acessível.</p>
-<p>Este não é meu único projeto, também estou escrevendo um livro sobre a linguagem Rust, caso queira conhecer: https://rust-v1-9-book.vercel.app/</p>
-<p>O principal objetivo é tornar o aprendizado acessível, permitindo que qualquer pessoa compreenda os conceitos sem barreiras. Desejamos que este material seja útil para a sua jornada e esperamos que você aproveite a leitura.</p>
+<p>Este não é meu único projeto, também estou escrevendo um livro sobre a linguagem Rust, caso queira conhecer: <a href="https://rust-v1-9-book.vercel.app/">https://rust-v1-9-book.vercel.app/</a></p>
+<p>O principal objetivo é tornar o aprendizado acessível, permitindo que qualquer pessoa compreenda os conceitos sem barreiras. Desejo que este material seja útil para a sua jornada e espero que você aproveite bem a leitura.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="prefácio"><a href="#prefácio" class="header">Prefácio</a></h1>
 <p>“A beleza que vive no ato de compartilhar algo com os outros.” Monja Coen</p>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="introdução"><a class="header" href="#introdução">Introdução</a></h1>
-<p>O Linux foi criado por Linus Torvalds na Universidade de Helsinki em 1991, inicialmente como o núcleo (kernel) de um sistema operacional tipo Unix. A primeira versão estável (1.0) foi lançada em março de 1994, marcando o início de sua popularidade e adoção mais ampla na indústria.</p>
-<p>Ele é um sistema operacional livre e de código aberto (<em>open-source</em>), o que significa que qualquer pessoa tem a liberdade de executar, estudar, modificar e distribuir seu código-fonte. Isso o torna extremamente versátil, podendo ser executado em uma ampla variedade de dispositivos, desde servidores e <em>mainframes</em> até <em>smartphones</em> e dispositivos <em>IoT</em> (internet das coisas). O Linux se posiciona como uma alternativa a plataformas proprietárias como Windows e macOS, amplamente adotadas, mas mais restritivas em termos de customização e custos de licença.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="começando"><a class="header" href="#começando">Começando</a></h1>
 <p>Inicialmente, alguns temas precisam ser explicados. Antes de entender os componentes do computador e do software, precisamos dar uma olhada inicial em outros conceitos comuns ao Linux que são bem recorrentes, independentemente do seu nível de conhecimento. É importante salientar que esta é apenas uma introdução básica para que você possa começar seus estudos e se familiarizar com o ambiente.</p>
@@ -1109,7 +1105,7 @@
 </ul>
 <p>Se um programa priva o usuário de qualquer uma dessas liberdades, ele é classificado como software proprietário ou privativo. Nesse modelo, o desenvolvedor detém o controle sobre o software e, por extensão, sobre o que os usuários podem fazer com ele. No modelo livre, o controle pertence inteiramente aos usuários, individual e coletivamente.</p>
 <h2 id="a-filosofia-gnu-e-richard-stallman"><a class="header" href="#a-filosofia-gnu-e-richard-stallman">A Filosofia GNU e Richard Stallman</a></h2>
-<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1983 e, posteriormente, a <strong>FSF</strong> (<em>Free Software Foundation</em>).</p>
+<p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1984 e, posteriormente, a <strong>FSF</strong> (<em>Free Software Foundation</em>).</p>
 <p>O objetivo do projeto era ambicioso: criar um sistema operacional inteiramente livre, de modo que ninguém precisasse usar software proprietário para operar um computador. O nome GNU é um acrônimo recursivo para <em>“GNU’s Not Unix”</em> (GNU não é Unix), uma homenagem técnica ao sistema que serviu de inspiração arquitetônica, mas cujas restrições de licença a filosofia GNU rejeitava.</p>
 <p>Para a filosofia GNU, o compartilhamento de software é um imperativo ético. Negar a alguém o direito de entender ou modificar um programa que ele utiliza é visto como uma violação da autonomia individual e um obstáculo à cooperação social.</p>
 <h2 id="o-mecanismo-do-copyleft-e-a-gpl"><a class="header" href="#o-mecanismo-do-copyleft-e-a-gpl">O mecanismo do Copyleft e a GPL</a></h2>
@@ -1678,15 +1674,23 @@ groupdel
 </ul>
 <h2 id="representação-numérica"><a class="header" href="#representação-numérica">Representação Numérica</a></h2>
 <p>Para otimizar a atribuição de permissões, o Linux traduz os bits de leitura (r = 4), escrita (w = 2) e execução (x = 1) em um sistema somatório de base octal (valores de 0 a 7):</p>
-<p>| Modo Numérico | Modo Simbólico | Significado Técnico | |</p>
-<p>| <strong>7</strong> | <code>rwx</code> | Leitura, escrita e execução (Controle total) | |</p>
-<p>| <strong>6</strong> | <code>rw-</code> | Leitura e escrita | |</p>
-<p>| <strong>5</strong> | <code>r-x</code> | Leitura e execução | |</p>
-<p>| <strong>4</strong> | <code>r--</code> | Apenas leitura | |</p>
-<p>| <strong>3</strong> | <code>-wx</code> | Escrita e execução | |</p>
-<p>| <strong>2</strong> | <code>-w-</code> | Apenas escrita | |</p>
-<p>| <strong>1</strong> | <code>--x</code> | Apenas execução | |</p>
-<p>| <strong>0</strong> | <code>---</code> | Nenhum acesso permitido | |</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: center">Modo Numérico</th><th style="text-align: center">Modo Simbólico</th><th>Significado Técnico</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: center">7</td><td style="text-align: center"><code>rwx</code></td><td>Leitura, escrita e execução (Controle total)</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center"><code>rw-</code></td><td>Leitura e escrita</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center"><code>r-x</code></td><td>Leitura e execução</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center"><code>r--</code></td><td>Apenas leitura</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center"><code>-wx</code></td><td>Escrita e execução</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center"><code>-w-</code></td><td>Apenas escrita</td></tr>
+<tr><td style="text-align: center">1</td><td style="text-align: center"><code>--x</code></td><td>Apenas execução</td></tr>
+<tr><td style="text-align: center">0</td><td style="text-align: center"><code>---</code></td><td>Nenhum acesso permitido</td></tr>
+</tbody>
+</table>
+</div>
 <h3 id="permissão-755"><a class="header" href="#permissão-755">Permissão 755</a></h3>
 <pre><code class="language-bash">chmod 755 nome_do_arquivo.sh
 </code></pre>
@@ -1879,6 +1883,74 @@ zless arquivo.txt.gz                # exibe um arquivo compactado com gzip de fo
 <h1 id="manipulando-arquivos"><a class="header" href="#manipulando-arquivos">Manipulando Arquivos</a></h1>
 <p>Depois de aprender a visualizar o conteúdo de arquivos, o próximo passo natural é entender como organizá-los. No dia a dia do terminal, é comum precisar listar o que existe em uma pasta, criar novos diretórios, copiar ou mover arquivos de um lugar para outro, apagar o que não é mais necessário e até ajustar a data de um arquivo. A seguir, veremos ls, mkdir, cp, mv, rm e touch, comandos que formam a base para organizar e manter seus arquivos no Linux.</p>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cd"><a class="header" href="#cd">cd</a></h1>
+<p>Muda o diretório de trabalho atual do shell.</p>
+<pre><code class="language-bash">cd [diretório]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório</td><td>Caminho do diretório para o qual deseja navegar</td></tr>
+<tr><td>(sem argumento)</td><td>Retorna ao diretório pessoal (home) do usuário</td></tr>
+<tr><td>-</td><td>Retorna ao diretório anterior (último em que se esteve)</td></tr>
+<tr><td>..</td><td>Sobe um nível, indo para o diretório pai</td></tr>
+<tr><td>~</td><td>Referencia o diretório pessoal (home) do usuário</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>cd</code> é um comando interno do shell (não um programa externo), por isso ele não aparece como um executável separado no sistema de arquivos.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">cd /etc                      # navega até o diretório /etc
+cd                           # volta para o diretório pessoal (home)
+cd ~                         # também volta para o diretório pessoal (home)
+cd ..                        # sobe um nível (diretório pai)
+cd -                         # volta para o diretório anterior
+cd ~/Documentos              # navega até a pasta "Documentos" dentro do home
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cp"><a class="header" href="#cp">cp</a></h1>
+<p>Copia arquivos e diretórios.</p>
+<pre><code class="language-bash">cp [opções] [origem] [destino]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>origem</td><td>Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas</td></tr>
+<tr><td>destino</td><td>Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele</td></tr>
+<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-f, –force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
+<tr><td>-r</td><td>Copia arquivos de diretórios e subdiretórios; prefira <code>-R</code></td></tr>
+<tr><td>-R, –recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
+<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
+<tr><td>-s, –symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
+<tr><td>-l, –link</td><td>Cria hard link no destino em vez de copiar</td></tr>
+<tr><td>-p, –preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
+<tr><td>-u, –update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>-x</td><td>Não copia arquivos localizados em um sistema de arquivos diferente do de origem</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">cp teste.txt teste1.txt             # copia `teste.txt` para `teste1.txt` no mesmo diretório
+cp teste.txt /tmp                   # copia `teste.txt` para dentro do diretório `/tmp`
+cp * /tmp                           # copia todos os arquivos do diretório atual para `/tmp`
+cp /bin/* .                         # copia todos os arquivos de `/bin` para o diretório atual
+cp -R /bin /tmp                     # copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
+cp -R /bin/* /tmp                   # copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
+cp -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
+cp -u teste.txt /tmp                # copia somente se `teste.txt` for mais recente que o destino
+cp -v * /tmp                        # copia todos os arquivos exibindo o progresso
+cp -p teste.txt /tmp                # copia preservando permissões e datas do arquivo
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ls"><a class="header" href="#ls">ls</a></h1>
 <p>Lista os arquivos de um diretório.</p>
 <pre><code class="language-bash">ls [opções] [caminho/arquivo] [caminho1/arquivo1]
@@ -1934,44 +2006,6 @@ ls -R                               # lista recursivamente diretórios e subdire
 ls -lX                              # listagem longa classificada por extensão
 ls -lr                              # listagem em ordem inversa
 ls --color=auto                     # coloriza a listagem conforme o tipo de arquivo
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="cp"><a class="header" href="#cp">cp</a></h1>
-<p>Copia arquivos e diretórios.</p>
-<pre><code class="language-bash">cp [opções] [origem] [destino]
-</code></pre>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
-</thead>
-<tbody>
-<tr><td>origem</td><td>Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas</td></tr>
-<tr><td>destino</td><td>Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele</td></tr>
-<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
-<tr><td>-f, –force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
-<tr><td>-r</td><td>Copia arquivos de diretórios e subdiretórios; prefira <code>-R</code></td></tr>
-<tr><td>-R, –recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
-<tr><td>-s, –symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
-<tr><td>-l, –link</td><td>Cria hard link no destino em vez de copiar</td></tr>
-<tr><td>-p, –preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
-<tr><td>-u, –update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
-<tr><td>-x</td><td>Não copia arquivos localizados em um sistema de arquivos diferente do de origem</td></tr>
-</tbody>
-</table>
-</div>
-<p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">cp teste.txt teste1.txt             # copia `teste.txt` para `teste1.txt` no mesmo diretório
-cp teste.txt /tmp                   # copia `teste.txt` para dentro do diretório `/tmp`
-cp * /tmp                           # copia todos os arquivos do diretório atual para `/tmp`
-cp /bin/* .                         # copia todos os arquivos de `/bin` para o diretório atual
-cp -R /bin /tmp                     # copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
-cp -R /bin/* /tmp                   # copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
-cp -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
-cp -u teste.txt /tmp                # copia somente se `teste.txt` for mais recente que o destino
-cp -v * /tmp                        # copia todos os arquivos exibindo o progresso
-cp -p teste.txt /tmp                # copia preservando permissões e datas do arquivo
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h1>
@@ -2071,6 +2105,8 @@ rm -v *.txt                         # exibe cada arquivo conforme é removido
 rm -f -- --arquivo--                # remove o arquivo de nome `--arquivo--`
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="rmdir"><a href="#rmdir" class="header">rmdir</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="touch"><a class="header" href="#touch">touch</a></h1>
 <p>Altera a data e hora de acesso/modificação de um arquivo. Se o arquivo não existir, cria um arquivo vazio.</p>
 <pre><code class="language-bash">touch [opções] [arquivos]
@@ -2101,27 +2137,396 @@ touch -t 202312311830.00 arquivo.txt  # define para 31/12/2023 às 18:30:00
 touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arquivo.txt`
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="utilitários"><a href="#utilitários" class="header">Utilitários</a></h1>
+<h1 id="tree"><a href="#tree" class="header">tree</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="df"><a href="#df" class="header">df</a></h1>
+<h1 id="utilitários"><a class="header" href="#utilitários">Utilitários</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="du"><a href="#du" class="header">du</a></h1>
+<h1 id="alias"><a href="#alias" class="header">alias</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="find"><a href="#find" class="header">find</a></h1>
+<h1 id="clear"><a href="#clear" class="header">clear</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="free"><a href="#free" class="header">free</a></h1>
+<h1 id="date"><a href="#date" class="header">date</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="ln"><a href="#ln" class="header">ln</a></h1>
+<h1 id="df"><a class="header" href="#df">df</a></h1>
+<p>Exibe o espaço de disco utilizado e disponível nos sistemas de arquivos montados.</p>
+<pre><code class="language-bash">df [opções] [diretório/arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório/arquivo</td><td>Exibe informações apenas do sistema de arquivos que contém esse diretório/arquivo</td></tr>
+<tr><td>-h</td><td>Exibe os tamanhos em formato legível (KB, MB, GB)</td></tr>
+<tr><td>-T</td><td>Exibe também o tipo de sistema de arquivos</td></tr>
+<tr><td>-i</td><td>Exibe informações de inodes em vez de blocos</td></tr>
+<tr><td>-a</td><td>Inclui sistemas de arquivos pseudo (com tamanho zero, como <code>/proc</code>)</td></tr>
+<tr><td>–total</td><td>Exibe uma linha adicional com o total geral</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, os tamanhos são exibidos em blocos de 1K, o que dificulta a leitura; use <code>-h</code> para um formato mais amigável.
+Para verificar o espaço ocupado por diretórios específicos (em vez do sistema de arquivos como um todo), utilize <code>du</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">df                          # exibe o uso de todos os sistemas de arquivos montados
+df -h                       # exibe os tamanhos em formato legível
+df -h /home                 # exibe o uso do sistema de arquivos que contém /home
+df -T                       # exibe também o tipo de cada sistema de arquivos
+df -i                       # exibe a quantidade de inodes usados e disponíveis
+df -h --total               # exibe o uso de todos os sistemas de arquivos e o total geral
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="nl"><a href="#nl" class="header">nl</a></h1>
+<h1 id="du"><a class="header" href="#du">du</a></h1>
+<p>Exibe o espaço em disco utilizado por arquivos e diretórios.</p>
+<pre><code class="language-bash">du [opções] [diretório/arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório/arquivo</td><td>Localização a ser analisada (padrão: diretório atual)</td></tr>
+<tr><td>-h</td><td>Exibe os tamanhos em formato legível (KB, MB, GB)</td></tr>
+<tr><td>-s</td><td>Exibe apenas o total geral, sem detalhar subdiretórios</td></tr>
+<tr><td>-a</td><td>Exibe o tamanho de todos os arquivos, não apenas dos diretórios</td></tr>
+<tr><td>-c</td><td>Exibe uma linha adicional com o total geral</td></tr>
+<tr><td>–max-depth=N</td><td>Limita a profundidade de exibição a <code>N</code> níveis de subdiretórios</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, <code>du</code> percorre recursivamente todos os subdiretórios, o que pode gerar uma saída bem extensa; combine com <code>-s</code> ou <code>--max-depth</code> para resumir o resultado.
+Para verificar o espaço total disponível no sistema de arquivos (em vez do espaço ocupado por arquivos específicos), utilize <code>df</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">du                           # exibe o uso de espaço do diretório atual e seus subdiretórios
+du -h                        # exibe os tamanhos em formato legível
+du -sh /home                 # exibe apenas o total do diretório /home, de forma legível
+du -ah /var/log               # exibe o tamanho de cada arquivo dentro de /var/log
+du -h --max-depth=1          # exibe o uso de espaço limitado a um nível de subdiretórios
+du -ch *.log                 # exibe o tamanho de cada arquivo .log e o total geral
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="pwd"><a href="#pwd" class="header">pwd</a></h1>
+<h1 id="echo"><a href="#echo" class="header">echo</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="reboot"><a href="#reboot" class="header">reboot</a></h1>
+<h1 id="find"><a class="header" href="#find">find</a></h1>
+<p>Localiza arquivos e diretórios em uma hierarquia, com base em critérios como nome, tipo, tamanho ou data.</p>
+<pre><code class="language-bash">find [diretório] [expressão]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>diretório</td><td>Local onde a busca será iniciada (padrão: diretório atual)</td></tr>
+<tr><td>-name “padrão”</td><td>Busca por nome de arquivo, diferenciando maiúsculas de minúsculas</td></tr>
+<tr><td>-iname “padrão”</td><td>Busca por nome de arquivo, ignorando maiúsculas e minúsculas</td></tr>
+<tr><td>-type f/d</td><td>Filtra por tipo: <code>f</code> para arquivo, <code>d</code> para diretório</td></tr>
+<tr><td>-size N</td><td>Filtra por tamanho (ex.: <code>+100M</code>, <code>-1G</code>)</td></tr>
+<tr><td>-mtime N</td><td>Filtra por data de modificação, em dias (ex.: <code>-7</code> para os últimos 7 dias)</td></tr>
+<tr><td>-exec comando {} ;</td><td>Executa um comando sobre cada resultado encontrado</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>O padrão informado em <code>-name</code> costuma exigir aspas (<code>"*.txt"</code>), evitando que o shell expanda o curinga antes de <code>find</code> recebê-lo.
+Para buscar apenas pelo conteúdo de arquivos de texto (em vez do nome), utilize <code>grep -r</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">find . -name "*.txt"                    # busca arquivos .txt no diretório atual e subdiretórios
+find /home -iname "relatorio*"          # busca ignorando maiúsculas/minúsculas em /home
+find /var/log -type f -size +100M       # busca arquivos maiores que 100 MB
+find . -type d -name "backup"           # busca diretórios chamados `backup`
+find /tmp -mtime -7                     # busca arquivos modificados nos últimos 7 dias
+find . -name "*.log" -exec rm {} \;     # busca e remove arquivos .log encontrados
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="shutdown--power-off"><a href="#shutdown--power-off" class="header">shutdown / power-off</a></h1>
+<h1 id="free"><a class="header" href="#free">free</a></h1>
+<p>Exibe a quantidade de memória livre e utilizada no sistema, incluindo memória RAM e swap.</p>
+<pre><code class="language-bash">free [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-h</td><td>Exibe os valores em formato legível (KB, MB, GB)</td></tr>
+<tr><td>-m</td><td>Exibe os valores em megabytes</td></tr>
+<tr><td>-g</td><td>Exibe os valores em gigabytes</td></tr>
+<tr><td>-s N</td><td>Atualiza a exibição a cada <code>N</code> segundos, continuamente</td></tr>
+<tr><td>-t</td><td>Exibe uma linha adicional com o total de memória RAM e swap somados</td></tr>
+<tr><td>-c N</td><td>Repete a exibição <code>N</code> vezes (usado junto com <code>-s</code>)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>A coluna <code>available</code> costuma ser mais representativa do que <code>free</code> para saber quanta memória ainda pode ser usada por novos processos, já que o Linux reaproveita memória livre para cache.
+Para acompanhar o uso de memória por processo individual, utilize <code>top</code> ou <code>htop</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">free                         # exibe o uso de memória em blocos de 1K
+free -h                      # exibe os valores em formato legível
+free -m                      # exibe os valores em megabytes
+free -h -t                   # exibe os valores legíveis com o total geral
+free -h -s 5                 # atualiza a exibição a cada 5 segundos
+free -h -s 2 -c 3             # atualiza a cada 2 segundos, repetindo 3 vezes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="history"><a href="#history" class="header">history</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ln"><a class="header" href="#ln">ln</a></h1>
+<p>Cria links entre arquivos, permitindo que um mesmo conteúdo seja acessado por mais de um nome ou local.</p>
+<pre><code class="language-bash">ln [opções] alvo nome_do_link
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>alvo</td><td>Arquivo ou diretório original ao qual o link vai apontar</td></tr>
+<tr><td>nome_do_link</td><td>Nome (ou caminho) do link a ser criado</td></tr>
+<tr><td>-s</td><td>Cria um link simbólico (soft link), em vez de um link físico (hard link)</td></tr>
+<tr><td>-f</td><td>Força a criação do link, substituindo o destino caso já exista</td></tr>
+<tr><td>-v</td><td>Exibe o nome de cada arquivo antes de criar o link (modo verboso)</td></tr>
+<tr><td>-n</td><td>Trata o link simbólico como um arquivo comum ao apontar para um diretório existente</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, <code>ln</code> cria um link físico (hard link), que aponta diretamente para os mesmos dados no disco; para a maioria dos usos práticos, prefira <code>-s</code> para criar um link simbólico.
+Diferente do link físico, o link simbólico pode apontar para diretórios e para arquivos em outros sistemas de arquivos, mas deixa de funcionar caso o arquivo original seja removido ou movido.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">ln arquivo.txt link_fisico.txt          # cria um link físico apontando para `arquivo.txt`
+ln -s arquivo.txt link_simbolico.txt    # cria um link simbólico apontando para `arquivo.txt`
+ln -s /var/www/html html                # cria um link simbólico para um diretório
+ln -sf arquivo.txt link_simbolico.txt   # recria o link simbólico, substituindo-o se já existir
+ln -sv arquivo.txt link_simbolico.txt   # cria o link simbólico exibindo o resultado da operação
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="man"><a href="#man" class="header">man</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="nl"><a class="header" href="#nl">nl</a></h1>
+<p>Numera as linhas de um arquivo de texto e exibe o resultado na saída padrão.</p>
+<pre><code class="language-bash">nl [opções] [arquivo]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>arquivo</td><td>Localização do arquivo a ser numerado</td></tr>
+<tr><td>-b a</td><td>Numera todas as linhas, inclusive as em branco</td></tr>
+<tr><td>-b t</td><td>Numera apenas as linhas com conteúdo (padrão)</td></tr>
+<tr><td>-n ln</td><td>Alinha a numeração à esquerda</td></tr>
+<tr><td>-n rn</td><td>Alinha a numeração à direita (padrão)</td></tr>
+<tr><td>-w N</td><td>Define a largura, em colunas, reservada para o número da linha</td></tr>
+<tr><td>-s “separador”</td><td>Define o texto usado para separar o número do conteúdo da linha</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Por padrão, <code>nl</code> não numera linhas em branco; use <code>-b a</code> caso queira incluí-las na contagem.
+Diferente de <code>cat -n</code>, que numera todas as linhas indiscriminadamente, <code>nl</code> oferece mais controle sobre quais linhas recebem numeração e como ela é formatada.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">nl arquivo.txt                     # numera as linhas com conteúdo de `arquivo.txt`
+nl -ba arquivo.txt                  # numera todas as linhas, inclusive as em branco
+nl -nln arquivo.txt                 # exibe a numeração alinhada à esquerda
+nl -w 5 arquivo.txt                  # reserva 5 colunas para o número da linha
+nl -s ") " arquivo.txt               # separa o número do conteúdo com ") "
+cat arquivo.txt | nl                 # numera a saída do comando `cat`
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poweroff"><a class="header" href="#poweroff">poweroff</a></h1>
+<p>Desliga o sistema imediatamente.</p>
+<pre><code class="language-bash">poweroff [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-f</td><td>Força o desligamento imediato, sem avisar outros processos</td></tr>
+<tr><td>-p</td><td>Desliga o sistema desligando também a energia do hardware (padrão em <code>poweroff</code>)</td></tr>
+<tr><td>–halt</td><td>Interrompe o sistema sem efetivamente desligar a energia</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>poweroff</code> desliga o sistema imediatamente, sem opção de agendamento, sendo equivalente a <code>shutdown -h now</code>.
+Para agendar o desligamento ou avisar outros usuários antes de executá-lo, utilize <code>shutdown</code>.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo poweroff              # desliga o sistema imediatamente
+sudo poweroff -f            # força o desligamento, sem avisar processos
+sudo systemctl poweroff     # desliga o sistema via systemd
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pwd"><a class="header" href="#pwd">pwd</a></h1>
+<p>Exibe o caminho completo do diretório de trabalho atual.</p>
+<pre><code class="language-bash">pwd [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-L</td><td>Exibe o caminho lógico, considerando links simbólicos (padrão)</td></tr>
+<tr><td>-P</td><td>Exibe o caminho físico, resolvendo links simbólicos até o diretório real</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>A variável de ambiente <code>$PWD</code> guarda o mesmo valor exibido por <code>pwd</code> e pode ser usada diretamente em scripts.
+Ao navegar por links simbólicos com <code>cd</code>, <code>pwd</code> mostra o caminho pelo qual você chegou até ali; use <code>-P</code> para ver o caminho real no disco.</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">pwd                    # exibe o caminho do diretório atual
+pwd -P                 # exibe o caminho físico, resolvendo links simbólicos
+cd /var/www &amp;&amp; pwd     # navega até `/var/www` e confirma o diretório atual
+echo $PWD              # exibe o diretório atual usando a variável de ambiente
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="reboot"><a class="header" href="#reboot">reboot</a></h1>
+<p>Reinicia o sistema.</p>
+<pre><code class="language-bash">reboot [opções]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>-f</td><td>Força a reinicialização imediata, sem avisar outros processos</td></tr>
+<tr><td>-p</td><td>Desliga o sistema em vez de reiniciá-lo (equivalente a <code>poweroff</code>)</td></tr>
+<tr><td>–halt</td><td>Interrompe o sistema sem desligar ou reiniciar</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Em sistemas com <code>systemd</code>, <code>reboot</code> costuma ser um atalho para <code>systemctl reboot</code>, que encerra os serviços de forma organizada antes de reiniciar.
+Executar <code>reboot</code> normalmente exige privilégios de superusuário (<code>sudo</code>).</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo reboot              # reinicia o sistema de forma padrão
+sudo reboot -f            # força a reinicialização imediata
+sudo systemctl reboot     # reinicia o sistema via systemd
+shutdown -r now           # alternativa para reiniciar o sistema imediatamente
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="shutdown"><a class="header" href="#shutdown">shutdown</a></h1>
+<p>Desliga ou reinicia o sistema, podendo agendar a ação e avisar os usuários conectados antes de executá-la.</p>
+<pre><code class="language-bash">shutdown [opções] [tempo] ["mensagem"]
+</code></pre>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Argumento / Opção</th><th>Descrição</th></tr>
+</thead>
+<tbody>
+<tr><td>tempo</td><td>Momento em que a ação ocorrerá: <code>now</code>, número de minutos, ou horário no formato <code>hh:mm</code></td></tr>
+<tr><td>“mensagem”</td><td>Texto de aviso exibido aos usuários conectados</td></tr>
+<tr><td>-h</td><td>Desliga o sistema</td></tr>
+<tr><td>-r</td><td>Reinicia o sistema, em vez de desligá-lo</td></tr>
+<tr><td>-c</td><td>Cancela um desligamento agendado</td></tr>
+<tr><td>-k</td><td>Apenas envia o aviso aos usuários, sem desligar ou reiniciar de fato</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><code>shutdown</code> permite agendar a ação e notificar outros usuários antes de desligar ou reiniciar, o que o torna mais indicado para servidores com múltiplos usuários conectados.
+Executar <code>shutdown</code> normalmente exige privilégios de superusuário (<code>sudo</code>).</p>
+</blockquote>
+<p><strong>Exemplos</strong></p>
+<pre><code class="language-bash">sudo shutdown -h now                       # desliga o sistema imediatamente
+sudo shutdown -r now                       # reinicia o sistema imediatamente
+sudo shutdown -h +10 "Manutenção em 10min" # agenda o desligamento em 10 minutos, com aviso
+sudo shutdown -r 23:00                     # agenda a reinicialização para as 23h
+sudo shutdown -c                           # cancela um desligamento agendado
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="sort"><a href="#sort" class="header">sort</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="filtros"><a class="header" href="#filtros">Filtros</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cut"><a class="header" href="#cut">cut</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="grep"><a class="header" href="#grep">grep</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="tr"><a class="header" href="#tr">tr</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="wc"><a class="header" href="#wc">wc</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="processos"><a class="header" href="#processos">Processos</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ps"><a class="header" href="#ps">ps</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="top"><a class="header" href="#top">top</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="kill"><a class="header" href="#kill">kill</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="killall"><a class="header" href="#killall">killall</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pkill"><a class="header" href="#pkill">pkill</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="comandos-de-usuários-e-grupos"><a class="header" href="#comandos-de-usuários-e-grupos">Comandos de Usuários e Grupos</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="hostname"><a class="header" href="#hostname">hostname</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="uname"><a class="header" href="#uname">uname</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="susudo"><a class="header" href="#susudo">su/sudo</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="id"><a class="header" href="#id">id</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="whoami"><a class="header" href="#whoami">whoami</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="chgrp"><a class="header" href="#chgrp">chgrp</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="chown"><a class="header" href="#chown">chown</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="chmod"><a class="header" href="#chmod">chmod</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gerenciamento-de-disco"><a class="header" href="#gerenciamento-de-disco">Gerenciamento de Disco</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="fdisk"><a class="header" href="#fdisk">Fdisk</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gdisk"><a class="header" href="#gdisk">Gdisk</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cfdisk"><a class="header" href="#cfdisk">Cfdisk</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="mount"><a class="header" href="#mount">Mount</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="umount"><a class="header" href="#umount">Umount</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="fstab"><a class="header" href="#fstab">Fstab</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="swap"><a class="header" href="#swap">Swap</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="compactação-e-compressão"><a class="header" href="#compactação-e-compressão">Compactação e Compressão</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gzip"><a href="#gzip" class="header">gzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gunzip"><a href="#gunzip" class="header">gunzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="zip"><a href="#zip" class="header">zip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="unzip"><a href="#unzip" class="header">unzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="tar"><a href="#tar" class="header">tar</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="redes"><a class="header" href="#redes">Redes</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="rede"><a class="header" href="#rede">Rede</a></h1>
 <p>Uma rede é uma conexão entre dois ou mais dispositivos, com o objetivo de compartilhar dados entre si. O compartilhamento pode ser feito de várias formas:</p>
@@ -2197,6 +2602,20 @@ Roteador (192.168.110.1)
 <li>O <strong>endereço da rede</strong> é <code>192.168.110.0</code>. Representa a rede em si, e nenhum dispositivo pode usá-lo;</li>
 <li>O <strong>endereço de broadcast</strong> é <code>192.168.110.255</code>. Se o roteador precisar enviar um aviso para todos os dispositivos ao mesmo tempo (por exemplo, “a rede vai reiniciar”), ele usa esse endereço, e todos recebem a mensagem simultaneamente.</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ifconfig"><a href="#ifconfig" class="header">ifconfig</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ip"><a href="#ip" class="header">ip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ping"><a href="#ping" class="header">ping</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ssh"><a href="#ssh" class="header">ssh</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="scp"><a href="#scp" class="header">scp</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="curl"><a href="#curl" class="header">curl</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="wget"><a href="#wget" class="header">wget</a></h1>
 
                     </main>
 
