@@ -3,6 +3,8 @@
 * [Apresentação](./intro/apresentacao.md)
   * [Prefácio](./intro/prefacio.md)
 
+# Parte I: Fundamentos
+
 * [Começando](./comecando/intro.md)
   * [Dispositivos](./comecando/dispositivos.md)
   * [Software](./comecando/software.md)
@@ -38,6 +40,8 @@
   * [Usuários e Grupos](./sistema/usuarios-grupos.md)
   * [Permissões](./sistema/permissoes.md)
   * [Terminal](./sistema/terminal.md)
+
+# Parte II: Comandos
 
 * [Visualizando Arquivos](./visualizando-arquivos/intro.md)
   * [cat](./visualizando-arquivos/cat.md)
@@ -83,7 +87,6 @@
 
 * [Processos](./processos/intro.md)
   * [ps](./processos/ps.md)
-  * [top](./processos/top.md)
   * [kill](./processos/kill.md)
   * [killall](./processos/killall.md)
   * [pkill](./processos/pkill.md)
@@ -125,3 +128,9 @@
   * [scp](./redes/scp.md)
   * [curl](./redes/curl.md)
   * [wget](./redes/wget.md)
+
+# Parte III: Ferramentas
+
+
+
+# Parte IV: Configuração
