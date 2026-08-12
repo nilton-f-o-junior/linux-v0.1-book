@@ -6,7 +6,7 @@ Tecnicamente falando, Linux é apenas o kernel, o núcleo do sistema operacional
 
 ### Debian
 
-A [Debian](https://www.debian.org/) nasceu em 1993 e foi construída com um princípio muito claro: software livre, estabilidade e governança comunitária. Ela criou o formato de pacotes `.deb` e o gerenciador `apt` (construído sobre o `dpkg`, a ferramenta base de gerenciamento de pacotes), que se tornaram padrão em boa parte do mundo Linux.
+O [Debian](https://www.debian.org/) nasceu em 1993 e foi construída com um princípio muito claro: software livre, estabilidade e governança comunitária. Ela criou o formato de pacotes `.deb` e o gerenciador `apt`, que se tornaram padrão em boa parte do mundo Linux.
 
 - Principais distribuições filhas: [Ubuntu](https://ubuntu.com/) e [Linux Mint](https://linuxmint.com/).
 
@@ -18,13 +18,17 @@ A [Red Hat](https://www.redhat.com/) foi pioneira na ideia de que era possível 
 
 ### Arch Linux
 
-A [Arch](https://archlinux.org/) tem uma filosofia completamente diferente: é rolling release, ou seja, não tem versões — o sistema é atualizado continuamente com os pacotes mais recentes. Tradicionalmente, a instalação é feita do zero, sem assistentes gráficos, e o usuário monta o sistema peça por peça. Hoje existe também um script oficial opcional, o archinstall, para quem prefere um caminho guiado.
+O [Arch](https://archlinux.org/) é rolling release, ou seja o sistema é atualizado continuamente com os pacotes mais recentes. Tradicionalmente, a instalação é feita do zero, sem assistentes gráficos, e o usuário monta o sistema peça por peça. Hoje existe também um script oficial opcional, o archinstall, para quem prefere um caminho guiado.
 
-- Principais distribuições filhas: [Manjaro](https://manjaro.org/) e [EndeavourOS](https://endeavouros.com/).
+- Principais distribuições filhas: [Manjaro](https://manjaro.org/) e [CachyOS](https://cachyos.org/).
 
 ## Outras famílias relevantes
 
 Além dessas três, outras distribuições com linhagens próprias merecem menção.
+
+### NixOS
+
+O [NixOS](https://nixos.org/) representa uma abordagem radicalmente diferente: o sistema inteiro é descrito por um arquivo de configuração declarativo. Qualquer mudança pode ser revertida. 
 
 ### openSUSE
 
@@ -37,7 +41,3 @@ O [Gentoo](https://www.gentoo.org/) é a distribuição onde você compila tudo.
 ### Slackware
 
 O [Slackware](http://www.slackware.com/), lançado em 1993, é a distribuição ativa mais antiga. Sem gerenciador de dependências automático e com um instalador minimalista em modo texto, é sinônimo de purismo total.
-
-### NixOS
-
-O [NixOS](https://nixos.org/) representa uma abordagem radicalmente diferente: o sistema inteiro é descrito por um arquivo de configuração declarativo. Qualquer mudança pode ser revertida. 

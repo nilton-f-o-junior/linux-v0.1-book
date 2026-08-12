@@ -4,7 +4,6 @@ Os gerenciadores de janelas em mosaico, ou *tiling window managers* (TWMs), não
 
 Ao abrir um programa, ele ocupa a tela inteira. Ao abrir um segundo, a tela se divide ao meio. Um terceiro programa faz a divisão se reorganizar novamente, e assim por diante. Cada janela encaixa ao lado da outra como peças de um quebra-cabeça, sem sobreposição, sem espaço vazio. O nome *tiling*, em inglês, significa azulejo, e o comportamento é exatamente esse.
 
-Assim como os ambientes de desktop tradicionais, os TWMs também se dividem entre os que rodam sobre o *Wayland* e os que rodam sobre o *X11*.
 
 ## Wayland
 
@@ -27,6 +26,7 @@ Um TWM minimalista, o [river](https://isaacfreund.com/software/river/) é um nú
 ### Wayfire
 
 O [wayfire](https://wayfire.org/) une o conceito de tiling a um sistema de plugins que permite adicionar efeitos visuais, animações e comportamentos personalizados. É uma opção para quem vem de ambientes mais visuais e não quer abrir mão completamente desses recursos.
+
 
 ## X11
 
@@ -54,10 +54,8 @@ Uma filosofia de software que leva o minimalismo ao extremo, o [dwm](https://dwm
 
 O  [xmonad.org](https://xmonad.org/) é escrito e configurado na linguagem Haskell. Sua configuração é, na prática, um pequeno programa, o que atrai principalmente usuários já familiarizados com programação funcional. É extremamente estável, ainda que exija uma curva de aprendizado mais acentuada para quem não conhece a linguagem.
 
+
 ## O que esperar da experiência
 
-Usar um TWM pela primeira vez é desorientador, pois não há nada na tela além do que você colocou lá. Nenhuma pista visual, nenhum menu de boas-vindas. A produtividade inicial cai, e a configuração consome tempo.
+Usar um TWM pela primeira vez é desorientador, com algumas semanas de uso, a lógica começa a fazer sentido, o teclado se torna uma extensão do pensamento, e mover o mouse para clicar em algo passa a parecer lento.
 
-Com algumas semanas de uso, a lógica começa a fazer sentido, o teclado se torna uma extensão do pensamento, e mover o mouse para clicar em algo passa a parecer lento. Muitos usuários descrevem a transição como irreversível.
-
-É uma categoria ideal para desenvolvedores, administradores de sistemas e qualquer pessoa que passe horas por dia no terminal, mas não é recomendada para quem está começando no Linux ou precisa de uma experiência imediata sem curva de aprendizado.
