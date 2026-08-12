@@ -6,15 +6,11 @@ O hardware é dimensionado para cargas de trabalho variadas, desde tarefas simpl
 
 - **Arquitetura:** geralmente baseada em *x86/x64* (*Intel* ou *AMD*);
 
-- **Recursos:** grande quantidade de memória *RAM*, armazenamento expansível, componentes modulares de fácil substituição e atualização, e sistemas operacionais complexos (*Windows*, *macOS*, *Linux*).
-
 ## Dispositivos Móveis (Smartphones/Tablets)
 
 O hardware é otimizado para eficiência energética, priorizando autonomia de bateria sem sacrificar o desempenho em tarefas do dia a dia.
 
 - **Arquitetura:** baseada em *ARM* (*Apple Silicon*, *Qualcomm Snapdragon*, *MediaTek*);
-
-- **Recursos:** memória *RAM* limitada (4–16 GB), armazenamento em memória flash (tecnologia NAND), geralmente não expansível, telas sensíveis ao toque e sistemas operacionais compactos (*iOS*, *Android*).
 
 ## Servidores
 
@@ -22,9 +18,7 @@ Projetados para disponibilidade contínua e atendimento simultâneo a múltiplos
 
 - **Arquitetura:** também baseada em *x86/x64* (*Intel Xeon*, *AMD EPYC*), mas com foco em múltiplos núcleos, suporte a grandes quantidades de *RAM* (centenas de GBs) e redundância de componentes. Servidores de nuvem modernos também adotam *ARM* (como os chips *Graviton* da *AWS*);
 
-- **Recursos:** memória *ECC* (com correção de erros), armazenamento em *RAID* para tolerância a falhas, múltiplas fontes de energia e sistemas operacionais voltados para estabilidade (*Linux Server*, *Windows Server*).
-
-## Sistemas Embarcados (Embedded Systems)
+## Sistemas Embarcados
 
 Um sistema embarcado é um sistema dedicado a executar uma função específica, integrado ao produto final.
 

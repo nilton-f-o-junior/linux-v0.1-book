@@ -1,12 +1,8 @@
 # Desktop Environments
 
-Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto e um fundo personalizável, está olhando para uma construção inteiramente separada do kernel: desenvolvedores precisaram escrever todo aquele ambiente do zero.
-
-Entre o kernel e o ambiente gráfico existe ainda uma camada intermediária chamada servidor gráfico, responsável por traduzir as instruções do sistema em imagens na tela. Hoje ela está dividida entre o *Wayland*, cada vez mais adotado, e o *X11*, ainda amplamente utilizado.
+Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto e um fundo personalizável, está olhando para uma construção inteiramente separada do kernel, esse é o que chamamos de desktop environment.
 
 Vale destacar que o ambiente de desktop é independente da distribuição escolhida. A grande maioria das distribuições permite instalar e alternar entre diferentes ambientes gráficos, e muitas oferecem variações oficiais, cada uma vindo com um ambiente diferente já configurado por padrão. Escolher uma distribuição e escolher um ambiente de desktop são, na prática, decisões separadas.
-
-## Um ecossistema, muitas filosofias
 
 ### GNOME
 
@@ -22,7 +18,7 @@ O [COSMIC](https://system76.com/cosmic) é um ambiente relativamente novo, desen
 
 ### XFCE
 
-O [XFCE](https://www.xfce.org/) nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente, sem excessos.
+O [XFCE](https://www.xfce.org/) nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente.
 
 ### MATE
 
