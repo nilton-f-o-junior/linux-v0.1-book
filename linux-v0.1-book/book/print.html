@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-180dbe68.js";
+            window.path_to_searchindex_js = "searchindex-a4f439e2.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-d18aaafb.js"></script>
@@ -192,34 +192,19 @@
 <h2 id="computadores-de-uso-geral-desktoplaptop"><a class="header" href="#computadores-de-uso-geral-desktoplaptop">Computadores de Uso Geral (Desktop/Laptop)</a></h2>
 <p>O hardware é dimensionado para cargas de trabalho variadas, desde tarefas simples como digitar um texto até renderização de vídeos pesados.</p>
 <ul>
-<li>
-<p><strong>Arquitetura:</strong> geralmente baseada em <em>x86/x64</em> (<em>Intel</em> ou <em>AMD</em>);</p>
-</li>
-<li>
-<p><strong>Recursos:</strong> grande quantidade de memória <em>RAM</em>, armazenamento expansível, componentes modulares de fácil substituição e atualização, e sistemas operacionais complexos (<em>Windows</em>, <em>macOS</em>, <em>Linux</em>).</p>
-</li>
+<li><strong>Arquitetura:</strong> geralmente baseada em <em>x86/x64</em> (<em>Intel</em> ou <em>AMD</em>);</li>
 </ul>
 <h2 id="dispositivos-móveis-smartphonestablets"><a class="header" href="#dispositivos-móveis-smartphonestablets">Dispositivos Móveis (Smartphones/Tablets)</a></h2>
 <p>O hardware é otimizado para eficiência energética, priorizando autonomia de bateria sem sacrificar o desempenho em tarefas do dia a dia.</p>
 <ul>
-<li>
-<p><strong>Arquitetura:</strong> baseada em <em>ARM</em> (<em>Apple Silicon</em>, <em>Qualcomm Snapdragon</em>, <em>MediaTek</em>);</p>
-</li>
-<li>
-<p><strong>Recursos:</strong> memória <em>RAM</em> limitada (4–16 GB), armazenamento em memória flash (tecnologia NAND), geralmente não expansível, telas sensíveis ao toque e sistemas operacionais compactos (<em>iOS</em>, <em>Android</em>).</p>
-</li>
+<li><strong>Arquitetura:</strong> baseada em <em>ARM</em> (<em>Apple Silicon</em>, <em>Qualcomm Snapdragon</em>, <em>MediaTek</em>);</li>
 </ul>
 <h2 id="servidores"><a class="header" href="#servidores">Servidores</a></h2>
 <p>Projetados para disponibilidade contínua e atendimento simultâneo a múltiplos usuários ou sistemas. Ao contrário de um desktop, um servidor raramente tem monitor ou teclado conectado, o acesso é feito remotamente, algo que exploraremos mais adiante ao tratar do protocolo SSH. Ele existe para servir dados, processar requisições e manter serviços no ar ininterruptamente.</p>
 <ul>
-<li>
-<p><strong>Arquitetura:</strong> também baseada em <em>x86/x64</em> (<em>Intel Xeon</em>, <em>AMD EPYC</em>), mas com foco em múltiplos núcleos, suporte a grandes quantidades de <em>RAM</em> (centenas de GBs) e redundância de componentes. Servidores de nuvem modernos também adotam <em>ARM</em> (como os chips <em>Graviton</em> da <em>AWS</em>);</p>
-</li>
-<li>
-<p><strong>Recursos:</strong> memória <em>ECC</em> (com correção de erros), armazenamento em <em>RAID</em> para tolerância a falhas, múltiplas fontes de energia e sistemas operacionais voltados para estabilidade (<em>Linux Server</em>, <em>Windows Server</em>).</p>
-</li>
+<li><strong>Arquitetura:</strong> também baseada em <em>x86/x64</em> (<em>Intel Xeon</em>, <em>AMD EPYC</em>), mas com foco em múltiplos núcleos, suporte a grandes quantidades de <em>RAM</em> (centenas de GBs) e redundância de componentes. Servidores de nuvem modernos também adotam <em>ARM</em> (como os chips <em>Graviton</em> da <em>AWS</em>);</li>
 </ul>
-<h2 id="sistemas-embarcados-embedded-systems"><a class="header" href="#sistemas-embarcados-embedded-systems">Sistemas Embarcados (Embedded Systems)</a></h2>
+<h2 id="sistemas-embarcados"><a class="header" href="#sistemas-embarcados">Sistemas Embarcados</a></h2>
 <p>Um sistema embarcado é um sistema dedicado a executar uma função específica, integrado ao produto final.</p>
 <ul>
 <li>
@@ -244,57 +229,43 @@
 <p>Todo software se encaixa em uma de duas grandes categorias:</p>
 <ul>
 <li>
-<p><strong>Software de Sistema:</strong> responsável por gerenciar o hardware e criar o ambiente onde os demais programas rodam, é aqui que entram os <em>sistemas operacionais</em> como <em>Windows</em>, <em>macOS</em> e <em>Linux</em>, e os <em>drivers</em>;</p>
+<p><strong>Software de Sistema:</strong> responsável por gerenciar o hardware e criar o ambiente onde os demais programas rodam, é aqui que entram os <em>sistemas operacionais</em> como <em>Windows</em>, <em>macOS</em> e <em>Linux</em>;</p>
 </li>
 <li>
 <p><strong>Software de Aplicação:</strong> programas que usamos no dia a dia, como navegadores, editores de texto, jogos e aplicativos.</p>
 </li>
 </ul>
-<p>Outros dois conceitos muito conhecidos são:</p>
-<ul>
-<li>
-<p><strong>Software Open-source (código aberto):</strong> programas cujo código-fonte é público e pode ser lido, modificado e redistribuído por qualquer pessoa.</p>
-</li>
-<li>
-<p><strong>Software Livre (<em>free software</em>):</strong> termo relacionado, mas com ênfase na liberdade do usuário mais do que na abertura do código, a diferença é sutil, porém importante, e é um tema que revisitaremos ao falar sobre licenças.</p>
-</li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="sistemas-operacionais"><a class="header" href="#sistemas-operacionais">Sistemas Operacionais</a></h1>
-<h2 id="windows-microsoft"><a class="header" href="#windows-microsoft">Windows (Microsoft)</a></h2>
+<h3 id="windows-microsoft"><a class="header" href="#windows-microsoft">Windows (Microsoft)</a></h3>
 <p>É o sistema mais popular do mundo para desktops e notebooks.</p>
 <ul>
 <li><strong>Foco:</strong> versatilidade e compatibilidade;</li>
-<li><strong>Vantagens:</strong> ampla compatibilidade com softwares e jogos;</li>
-<li><strong>Ponto fraco:</strong> por ser o mais utilizado, torna-se o alvo mais atraente para ataques maliciosos, exigindo mais atenção com segurança. Além disso, exige a compra de licenças pagas.</li>
+<li><strong>Vantagens:</strong> ampla compatibilidade com softwares e jogos.</li>
 </ul>
-<h2 id="macos-apple"><a class="header" href="#macos-apple">macOS (Apple)</a></h2>
+<h3 id="macos-apple"><a class="header" href="#macos-apple">macOS (Apple)</a></h3>
 <p>Exclusivo para os computadores da Apple.</p>
 <ul>
 <li><strong>Foco:</strong> experiência do usuário e design;</li>
-<li><strong>Vantagens:</strong> extremamente estável, fluido e com integração impecável com outros produtos da empresa;</li>
-<li><strong>Ponto fraco:</strong> o custo de entrada é alto, pois exige a compra do hardware proprietário.</li>
+<li><strong>Vantagens:</strong> extremamente estável, fluido e com integração impecável com outros produtos da empresa.</li>
 </ul>
-<h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
+<h3 id="linux"><a class="header" href="#linux">Linux</a></h3>
 <p>Ao contrário dos outros, o Linux não é um produto de empresa, mas um núcleo (<em>kernel</em>) de código aberto (<em>open source</em>) que permite a criação de diversas versões, chamadas de distribuições ou distros, como: Ubuntu, Fedora e Linux Mint.</p>
 <ul>
 <li><strong>Foco:</strong> liberdade e customização;</li>
-<li><strong>Vantagens:</strong> gratuito, leve e reconhecido pela sua segurança e estabilidade, especialmente em ambientes de servidor;</li>
-<li><strong>Ponto fraco:</strong> pode ter uma curva de aprendizado maior em algumas distribuições e alguns softwares específicos (como a suíte <em>Adobe</em>) não rodam nativamente, porém, já existem outras alternativas de código aberto.</li>
+<li><strong>Vantagens:</strong> gratuito, leve e reconhecido pela sua segurança e estabilidade, especialmente em ambientes de servidor.</li>
 </ul>
-<h2 id="android-google"><a class="header" href="#android-google">Android (Google)</a></h2>
+<h3 id="android-google"><a class="header" href="#android-google">Android (Google)</a></h3>
 <p>Baseado no kernel do Linux, é o sistema operacional móvel mais usado no planeta.</p>
 <ul>
 <li><strong>Foco:</strong> mobilidade e ecossistema aberto;</li>
-<li><strong>Vantagens:</strong> presente desde celulares básicos até aparelhos de alto padrão, oferece grande liberdade para instalar aplicativos de fontes variadas;</li>
-<li><strong>Ponto fraco:</strong> como muitas fabricantes (Samsung, Xiaomi, Motorola) modificam o sistema, as atualizações de segurança podem demorar a chegar em modelos mais antigos, embora esse cenário tenha melhorado progressivamente com atualizações modulares introduzidas nas versões mais recentes do sistema.</li>
+<li><strong>Vantagens:</strong> presente desde celulares básicos até aparelhos de alto padrão, oferece grande liberdade para instalar aplicativos de fontes variadas.</li>
 </ul>
-<h2 id="ios--ipados-apple"><a class="header" href="#ios--ipados-apple">iOS / iPadOS (Apple)</a></h2>
+<h3 id="ios--ipados-apple"><a class="header" href="#ios--ipados-apple">iOS / iPadOS (Apple)</a></h3>
 <p>Exclusivo para os dispositivos móveis da Apple (iPhones e iPads).</p>
 <ul>
 <li><strong>Foco:</strong> segurança, desempenho otimizado e experiência integrada;</li>
-<li><strong>Vantagens:</strong> atualizações de segurança chegam simultaneamente a todos os dispositivos suportados, com forte integração com o macOS e curadoria rigorosa da <em>App Store</em>;</li>
-<li><strong>Ponto fraco:</strong> sistema mais fechado, com menos liberdade de personalização e instalação de aplicativos fora da loja oficial em comparação ao Android.</li>
+<li><strong>Vantagens:</strong> atualizações de segurança chegam simultaneamente a todos os dispositivos suportados, com forte integração com o macOS e curadoria rigorosa da <em>App Store</em>.</li>
 </ul>
 <h2 id="sistemas-operacionais-de-servidor"><a class="header" href="#sistemas-operacionais-de-servidor">Sistemas Operacionais de Servidor</a></h2>
 <p>Enquanto os sistemas anteriores são projetados para a interação direta com o usuário, os SOs de servidor são otimizados para rodar continuamente, consumir poucos recursos e atender a múltiplas requisições simultâneas, sem necessariamente ter uma interface gráfica.</p>
@@ -302,22 +273,20 @@
 <p>Conjunto de distribuições Linux otimizadas para ambientes de servidor, sendo a base da maior parte da infraestrutura web e de nuvem atual.</p>
 <ul>
 <li><strong>Foco:</strong> estabilidade, desempenho e administração via linha de comando;</li>
-<li><strong>Vantagens:</strong> gratuito na maioria das distribuições, com suporte de longo prazo (<em>LTS</em>) disponível. A grande maioria dos servidores web, serviços de nuvem e infraestruturas corporativas roda sobre Linux;</li>
-<li><strong>Ponto fraco:</strong> exige familiaridade com a linha de comando, o que pode representar uma barreira inicial para quem vem de ambientes gráficos.</li>
+<li><strong>Vantagens:</strong> gratuito na maioria das distribuições, com suporte de longo prazo (<em>LTS</em>) disponível. A grande maioria dos servidores web, serviços de nuvem e infraestruturas corporativas roda sobre Linux.</li>
 </ul>
 <h3 id="windows-server-microsoft"><a class="header" href="#windows-server-microsoft">Windows Server (Microsoft)</a></h3>
 <p>Alternativa da Microsoft para ambientes corporativos que já usam seu ecossistema de ferramentas.</p>
 <ul>
 <li><strong>Foco:</strong> integração com o ecossistema Microsoft em ambientes corporativos;</li>
-<li><strong>Vantagens:</strong> interface gráfica opcional e integração nativa com tecnologias como <em>Active Directory</em>, <em>Exchange</em> e <em>.NET</em>, amplamente adotadas em empresas;</li>
-<li><strong>Ponto fraco:</strong> licenciamento pago, com custos que podem ser expressivos dependendo da escala do ambiente.</li>
+<li><strong>Vantagens:</strong> interface gráfica opcional e integração nativa com tecnologias como <em>Active Directory</em>, <em>Exchange</em> e <em>.NET</em>, amplamente adotadas em empresas.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="distribuições"><a class="header" href="#distribuições">Distribuições</a></h1>
 <p>Tecnicamente falando, Linux é apenas o kernel, o núcleo do sistema operacional, que gerencia o hardware, a memória e os processos. Mas um kernel sozinho não é um sistema utilizável. Para isso, é preciso empacotá-lo junto com ferramentas, interfaces gráficas, gerenciadores de pacotes, utilitários e configurações. Esse pacote completo é o que chamamos de distribuição ou distro.</p>
 <h2 id="as-três-grandes-famílias"><a class="header" href="#as-três-grandes-famílias">As três grandes famílias</a></h2>
 <h3 id="debian"><a class="header" href="#debian">Debian</a></h3>
-<p>A <a href="https://www.debian.org/">Debian</a> nasceu em 1993 e foi construída com um princípio muito claro: software livre, estabilidade e governança comunitária. Ela criou o formato de pacotes <code>.deb</code> e o gerenciador <code>apt</code> (construído sobre o <code>dpkg</code>, a ferramenta base de gerenciamento de pacotes), que se tornaram padrão em boa parte do mundo Linux.</p>
+<p>O <a href="https://www.debian.org/">Debian</a> nasceu em 1993 e foi construída com um princípio muito claro: software livre, estabilidade e governança comunitária. Ela criou o formato de pacotes <code>.deb</code> e o gerenciador <code>apt</code>, que se tornaram padrão em boa parte do mundo Linux.</p>
 <ul>
 <li>Principais distribuições filhas: <a href="https://ubuntu.com/">Ubuntu</a> e <a href="https://linuxmint.com/">Linux Mint</a>.</li>
 </ul>
@@ -327,26 +296,24 @@
 <li>Principais distribuições filhas: <a href="https://fedoraproject.org/">Fedora</a> e <a href="https://rockylinux.org/">Rocky Linux</a>.</li>
 </ul>
 <h3 id="arch-linux"><a class="header" href="#arch-linux">Arch Linux</a></h3>
-<p>A <a href="https://archlinux.org/">Arch</a> tem uma filosofia completamente diferente: é rolling release, ou seja, não tem versões — o sistema é atualizado continuamente com os pacotes mais recentes. Tradicionalmente, a instalação é feita do zero, sem assistentes gráficos, e o usuário monta o sistema peça por peça. Hoje existe também um script oficial opcional, o archinstall, para quem prefere um caminho guiado.</p>
+<p>O <a href="https://archlinux.org/">Arch</a> é rolling release, ou seja o sistema é atualizado continuamente com os pacotes mais recentes. Tradicionalmente, a instalação é feita do zero, sem assistentes gráficos, e o usuário monta o sistema peça por peça. Hoje existe também um script oficial opcional, o archinstall, para quem prefere um caminho guiado.</p>
 <ul>
-<li>Principais distribuições filhas: <a href="https://manjaro.org/">Manjaro</a> e <a href="https://endeavouros.com/">EndeavourOS</a>.</li>
+<li>Principais distribuições filhas: <a href="https://manjaro.org/">Manjaro</a> e <a href="https://cachyos.org/">CachyOS</a>.</li>
 </ul>
 <h2 id="outras-famílias-relevantes"><a class="header" href="#outras-famílias-relevantes">Outras famílias relevantes</a></h2>
 <p>Além dessas três, outras distribuições com linhagens próprias merecem menção.</p>
+<h3 id="nixos"><a class="header" href="#nixos">NixOS</a></h3>
+<p>O <a href="https://nixos.org/">NixOS</a> representa uma abordagem radicalmente diferente: o sistema inteiro é descrito por um arquivo de configuração declarativo. Qualquer mudança pode ser revertida.</p>
 <h3 id="opensuse"><a class="header" href="#opensuse">openSUSE</a></h3>
 <p>O <a href="https://www.opensuse.org/">openSUSE</a> tem uma linhagem própria, com a versão Leap (estável e previsível) e a Tumbleweed (rolling release como a Arch).</p>
 <h3 id="gentoo"><a class="header" href="#gentoo">Gentoo</a></h3>
 <p>O <a href="https://www.gentoo.org/">Gentoo</a> é a distribuição onde você compila tudo. Cada pacote é compilado localmente com as otimizações que você definir.</p>
 <h3 id="slackware"><a class="header" href="#slackware">Slackware</a></h3>
 <p>O <a href="http://www.slackware.com/">Slackware</a>, lançado em 1993, é a distribuição ativa mais antiga. Sem gerenciador de dependências automático e com um instalador minimalista em modo texto, é sinônimo de purismo total.</p>
-<h3 id="nixos"><a class="header" href="#nixos">NixOS</a></h3>
-<p>O <a href="https://nixos.org/">NixOS</a> representa uma abordagem radicalmente diferente: o sistema inteiro é descrito por um arquivo de configuração declarativo. Qualquer mudança pode ser revertida.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="desktop-environments"><a class="header" href="#desktop-environments">Desktop Environments</a></h1>
-<p>Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto e um fundo personalizável, está olhando para uma construção inteiramente separada do kernel: desenvolvedores precisaram escrever todo aquele ambiente do zero.</p>
-<p>Entre o kernel e o ambiente gráfico existe ainda uma camada intermediária chamada servidor gráfico, responsável por traduzir as instruções do sistema em imagens na tela. Hoje ela está dividida entre o <em>Wayland</em>, cada vez mais adotado, e o <em>X11</em>, ainda amplamente utilizado.</p>
+<p>Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto e um fundo personalizável, está olhando para uma construção inteiramente separada do kernel, esse é o que chamamos de desktop environment.</p>
 <p>Vale destacar que o ambiente de desktop é independente da distribuição escolhida. A grande maioria das distribuições permite instalar e alternar entre diferentes ambientes gráficos, e muitas oferecem variações oficiais, cada uma vindo com um ambiente diferente já configurado por padrão. Escolher uma distribuição e escolher um ambiente de desktop são, na prática, decisões separadas.</p>
-<h2 id="um-ecossistema-muitas-filosofias"><a class="header" href="#um-ecossistema-muitas-filosofias">Um ecossistema, muitas filosofias</a></h2>
 <h3 id="gnome"><a class="header" href="#gnome">GNOME</a></h3>
 <p>O <a href="https://www.gnome.org/">GNOME</a> aposta em simplicidade e coerência. Sua filosofia é reduzir o número de decisões que o usuário precisa tomar: poucos botões expostos, fluxos bem definidos, estética limpa e moderna. A área de trabalho é quase vazia por padrão. O foco está nas “atividades”, um painel central que organiza tarefas e aplicativos abertos.</p>
 <h3 id="kde-plasma"><a class="header" href="#kde-plasma">KDE Plasma</a></h3>
@@ -354,7 +321,7 @@
 <h3 id="cosmic"><a class="header" href="#cosmic">COSMIC</a></h3>
 <p>O <a href="https://system76.com/cosmic">COSMIC</a> é um ambiente relativamente novo, desenvolvido do zero por uma empresa fabricante de computadores focada em Linux. Diferente da maioria dos ambientes tradicionais, foi escrito em uma linguagem de programação moderna voltada para segurança e desempenho. Ainda em evolução ativa, busca unir uma estética contemporânea com um modelo de configuração simples e direto.</p>
 <h3 id="xfce"><a class="header" href="#xfce">XFCE</a></h3>
-<p>O <a href="https://www.xfce.org/">XFCE</a> nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente, sem excessos.</p>
+<p>O <a href="https://www.xfce.org/">XFCE</a> nasceu com um propósito claro: ser leve. Em máquinas antigas ou com poucos recursos, ele entrega uma experiência gráfica funcional e organizada sem consumir memória à toa. É rápido, estável e, para muitos usuários, o suficiente.</p>
 <h3 id="mate"><a class="header" href="#mate">MATE</a></h3>
 <p>O <a href="https://mate-desktop.org/">MATE</a> nasceu como uma continuação do GNOME 2, num momento em que parte da comunidade não se identificou com as mudanças trazidas pelo GNOME 3. Ele preserva a metáfora clássica de área de trabalho, com painéis, menus tradicionais e ícones na tela. É uma opção leve e familiar para quem prefere esse modelo mais convencional, e é uma das alternativas oferecidas pelo Linux Mint.</p>
 <h3 id="cinnamon"><a class="header" href="#cinnamon">Cinnamon</a></h3>
@@ -370,7 +337,6 @@
 <h1 id="tiling-window-managers"><a class="header" href="#tiling-window-managers">Tiling Window Managers</a></h1>
 <p>Os gerenciadores de janelas em mosaico, ou <em>tiling window managers</em> (TWMs), não entregam uma área de trabalho no sentido convencional: sem ícones na tela, sem barra de tarefas clicável, sem mouse obrigatório. O que entregam é controle total sobre onde cada janela fica, e fazem isso de forma automática.</p>
 <p>Ao abrir um programa, ele ocupa a tela inteira. Ao abrir um segundo, a tela se divide ao meio. Um terceiro programa faz a divisão se reorganizar novamente, e assim por diante. Cada janela encaixa ao lado da outra como peças de um quebra-cabeça, sem sobreposição, sem espaço vazio. O nome <em>tiling</em>, em inglês, significa azulejo, e o comportamento é exatamente esse.</p>
-<p>Assim como os ambientes de desktop tradicionais, os TWMs também se dividem entre os que rodam sobre o <em>Wayland</em> e os que rodam sobre o <em>X11</em>.</p>
 <h2 id="wayland"><a class="header" href="#wayland">Wayland</a></h2>
 <h3 id="hyprland"><a class="header" href="#hyprland">Hyprland</a></h3>
 <p>O <a href="https://hyprland.org/">hyprland</a> é um dos TWMs que mais cresceram em popularidade nos últimos anos. Trouxe algo que os TWMs clássicos evitam: animações, janelas que deslizam, bordas arredondadas, efeitos visuais. É a aposta de quem quer o melhor dos dois mundos.</p>
@@ -396,9 +362,7 @@
 <h3 id="xmonad"><a class="header" href="#xmonad">xmonad</a></h3>
 <p>O  <a href="https://xmonad.org/">xmonad.org</a> é escrito e configurado na linguagem Haskell. Sua configuração é, na prática, um pequeno programa, o que atrai principalmente usuários já familiarizados com programação funcional. É extremamente estável, ainda que exija uma curva de aprendizado mais acentuada para quem não conhece a linguagem.</p>
 <h2 id="o-que-esperar-da-experiência"><a class="header" href="#o-que-esperar-da-experiência">O que esperar da experiência</a></h2>
-<p>Usar um TWM pela primeira vez é desorientador, pois não há nada na tela além do que você colocou lá. Nenhuma pista visual, nenhum menu de boas-vindas. A produtividade inicial cai, e a configuração consome tempo.</p>
-<p>Com algumas semanas de uso, a lógica começa a fazer sentido, o teclado se torna uma extensão do pensamento, e mover o mouse para clicar em algo passa a parecer lento. Muitos usuários descrevem a transição como irreversível.</p>
-<p>É uma categoria ideal para desenvolvedores, administradores de sistemas e qualquer pessoa que passe horas por dia no terminal, mas não é recomendada para quem está começando no Linux ou precisa de uma experiência imediata sem curva de aprendizado.</p>
+<p>Usar um TWM pela primeira vez é desorientador, com algumas semanas de uso, a lógica começa a fazer sentido, o teclado se torna uma extensão do pensamento, e mover o mouse para clicar em algo passa a parecer lento.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="hardware"><a class="header" href="#hardware">Hardware</a></h1>
 <p>Um computador, independente do seu tamanho ou formato, é composto por peças físicas que, em conjunto com o software, permitem que você o utilize da forma como desejar. Este capítulo foi escrito para explicar os componentes principais que formam um computador convencional, abordando cada peça separadamente.</p>
