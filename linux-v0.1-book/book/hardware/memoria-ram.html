@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-a4f439e2.js";
+            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -175,14 +175,28 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="memória-ram"><a class="header" href="#memória-ram">Memória RAM</a></h1>
-<p>Quando você abre um navegador, um editor de texto e um player de música ao mesmo tempo, há algo no computador equilibrando tudo isso sem que você precise pensar no assunto. Esse algo é a memória RAM.</p>
-<p>RAM significa memória de acesso aleatório. O nome descreve sua característica mais importante: qualquer posição de memória pode ser lida ou escrita diretamente, em tempo constante, sem precisar percorrer o conteúdo do início até chegar ao dado desejado, como acontece em uma fita magnética.</p>
 <h2 id="o-que-ela-faz"><a class="header" href="#o-que-ela-faz">O que ela faz</a></h2>
 <p>A RAM funciona como a mesa de trabalho do computador. O armazenamento, seja um SSD ou HD, é onde os dados ficam guardados permanentemente, como arquivos em uma gaveta. Mas para trabalhar com eles, o sistema operacional os traz para a RAM, onde o processador pode acessá-los com velocidade muito maior.</p>
 <h2 id="volátil-por-natureza"><a class="header" href="#volátil-por-natureza">Volátil por natureza</a></h2>
 <p>A característica que define a RAM é sua volatilidade, ela perde todo o conteúdo quando a energia é cortada. Não é uma limitação acidental, é consequência direta de como ela é construída. Cada bit é armazenado como uma carga elétrica em um capacitor minúsculo. Sem corrente elétrica contínua, essa carga se dissipa e a informação desaparece.</p>
 <p>É por isso que ao desligar o computador, o que estava aberto some, e ao ligá-lo novamente, o sistema operacional precisa ser carregado do armazenamento de volta para a memória.</p>
 <h2 id="ddr-gerações-e-velocidade"><a class="header" href="#ddr-gerações-e-velocidade">DDR: gerações e velocidade</a></h2>
+<h4 id="gerações-de-ddr-e-o-encaixe-na-placa-mãe"><a class="header" href="#gerações-de-ddr-e-o-encaixe-na-placa-mãe">Gerações de DDR e o encaixe na placa-mãe</a></h4>
+<p>Cada geração de DDR tem um encaixe físico diferente. O pente muda de tamanho, a posição do entalhe que guia a instalação muda, e o slot da placa-mãe
+↪ muda junto. Isso torna impossível instalar uma geração errada por acidente: um pente DDR5 simplesmente não entra em um slot DDR4, e vice-versa.</p>
+<ul>
+<li><strong>DDR1:</strong> 184 pinos;</li>
+<li><strong>DDR2:</strong> 240 pinos;</li>
+<li><strong>DDR3:</strong> 240 pinos;</li>
+<li><strong>DDR4:</strong> 288 pinos;</li>
+<li><strong>DDR5:</strong> 288 pinos;</li>
+</ul>
+<h4 id="dual-channel"><a class="header" href="#dual-channel">Dual channel</a></h4>
+<p>Quando dois pentes de RAM idênticos são instalados nos slots corretos, a placa-mãe ativa o modo <em>dual channel</em>, que dobra a largura de banda
+↪ disponível para o processador ao acessar a memória. A diferença é perceptível especialmente em processadores com GPU integrada, que compartilham a
+↪ memória RAM com os gráficos, e em tarefas que movimentam grandes volumes de dados entre CPU e memória.</p>
+<p>Os slots de <em>dual channel</em> na placa são identificados por cores: instalar os pentes nos dois slots da mesma cor ativa o modo. O manual da placa sempre
+↪ indica a combinação correta.</p>
 <p>Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão <strong>DDR</strong> (<em>Double Data Rate</em>), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência.</p>
 <p>A performance final também é influenciada pela forma como os módulos são instalados (como no uso de <em>Dual Channel</em>), ampliando a velocidade de transferência. Cada geração traz maior velocidade, menor consumo de energia e incompatibilidade física com a geração anterior: os encaixes são diferentes propositalmente para evitar instalar o módulo errado na placa-mãe.</p>
 <p>Em dispositivos móveis, a RAM segue padrões próprios como <strong>LPDDR</strong> (<em>Low Power DDR</em>), otimizados para consumo de energia reduzido, essencial quando a bateria é o único recurso disponível.</p>
@@ -203,7 +217,7 @@
 </li>
 </ul>
 <p>No Linux, o consumo base de RAM varia bastante conforme o ambiente gráfico escolhido. Um sistema com XFCE ou LXQt pode iniciar usando menos de 500 MB; o GNOME com extensões ativas pode facilmente ocupar mais de 1.5 GB só na área de trabalho, antes de qualquer aplicativo ser aberto.</p>
-<h2 id="dual-channel"><a class="header" href="#dual-channel">Dual Channel</a></h2>
+<h2 id="dual-channel-1"><a class="header" href="#dual-channel-1">Dual Channel</a></h2>
 <p>O <em>Dual Channel</em> é uma tecnologia que permite ao processador comunicar-se com dois módulos de memória simultaneamente, dobrando a largura de banda de dados. Em vez de um único caminho de 64 bits, o sistema utiliza dois, o que melhora significativamente o desempenho em tarefas que exigem grande fluxo de dados, como jogos e edição de vídeo.</p>
 <p>Para que o <em>Dual Channel</em> funcione, não basta apenas ter dois pentes de memória; é preciso seguir algumas regras básicas:</p>
 <ul>

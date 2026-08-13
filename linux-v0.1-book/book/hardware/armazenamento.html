@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-a4f439e2.js";
+            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -178,20 +178,11 @@
 <p>A memória RAM, vista anteriormente, é rápida mas volátil: perde tudo quando a energia cai. O armazenamento é o oposto. É persistente, os dados ficam gravados mesmo sem energia, e é onde o sistema coloca tudo que precisa sobreviver entre uma sessão e outra: o próprio sistema operacional, os programas instalados, os arquivos do usuário.</p>
 <h2 id="ssd"><a class="header" href="#ssd">SSD</a></h2>
 <p>O SSD não tem partes móveis. Armazena dados em chips de memória flash, a mesma tecnologia base usada em celulares e câmeras, mas em versões otimizadas para desempenho e durabilidade.</p>
-<p>Sem braços mecânicos, sem pratos girando, o acesso a qualquer ponto do armazenamento é quase instantâneo. Um computador com SSD inicializa o sistema operacional em segundos. Programas abrem antes de o usuário piscar.</p>
-<ul>
-<li><strong>Vantagens:</strong> velocidade muito superior ao HD, resistente a impactos, silencioso e com menor consumo de energia;</li>
-<li><strong>Desvantagens:</strong> custo por gigabyte mais alto que o HD, embora essa diferença venha caindo progressivamente nos últimos anos.</li>
-</ul>
 <h3 id="nvme-ssds-ainda-mais-rápidos"><a class="header" href="#nvme-ssds-ainda-mais-rápidos">NVMe: SSDs ainda mais rápidos</a></h3>
 <p>Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs mais antigos e mais baratos usam a interface SATA, a mesma criada originalmente para os HDs. Ela funciona bem, mas é um gargalo para os chips modernos de memória flash.</p>
 <p>Os SSDs <strong>NVMe</strong> (<em>Non-Volatile Memory Express</em>) conectam-se diretamente ao processador por meio do barramento PCIe, eliminando esse gargalo. A diferença em velocidade é expressiva e cresce a cada nova geração do PCIe: um SSD SATA lê dados a cerca de 500 MB/s, enquanto um NVMe pode ultrapassar tranquilamente os 3.000 MB/s.</p>
 <h2 id="hd"><a class="header" href="#hd">HD</a></h2>
 <p>O HD é mais barato de se produzir e capaz de armazenar grandes volumes de dados, mas é limitado pela velocidade da mecânica. Cada leitura depende de o prato estar na posição certa e de o braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se acumula e se torna perceptível.</p>
-<ul>
-<li><strong>Vantagens:</strong> custo por gigabyte muito baixo, ideal para armazenar grandes volumes de dados;</li>
-<li><strong>Desvantagens:</strong> mais lento, sensível a impactos físicos (a mecânica interna pode ser danificada) e consome mais energia.</li>
-</ul>
 <h3 id="armazenamento-em-servidores"><a class="header" href="#armazenamento-em-servidores">Armazenamento em servidores</a></h3>
 <h4 id="raid"><a class="header" href="#raid">RAID</a></h4>
 <p>Um servidor que guarda dados importantes raramente confia em um único disco. O <strong>RAID</strong> (<em>Redundant Array of Independent Disks</em>) é uma técnica que combina múltiplos discos para funcionar como uma unidade só. Cada configuração equilibra de forma diferente velocidade, redundância e capacidade útil:</p>
@@ -225,7 +216,6 @@
 </ul>
 </li>
 </ul>
-<p>O resultado prático é que um servidor bem configurado pode perder um disco físico no meio da operação e continuar servindo dados normalmente, enquanto o disco defeituoso é substituído.</p>
 <h4 id="armazenamento-em-rede"><a class="header" href="#armazenamento-em-rede">Armazenamento em rede</a></h4>
 <p>Em ambientes corporativos ou de nuvem, o armazenamento frequentemente não está na mesma máquina que o sistema que o usa. Dois protocolos dominam esse cenário.</p>
 <ul>
@@ -236,10 +226,8 @@
 <p><strong>SAN (<em>Storage Area Network</em>):</strong> cria uma rede dedicada exclusivamente ao tráfego de armazenamento, separada da rede comum de dados. O servidor enxerga o armazenamento remoto como se fosse um disco diretamente conectado. É uma solução mais complexa e cara, usada em ambientes que exigem altíssimo desempenho e baixa latência, como bancos de dados críticos e sistemas financeiros.</p>
 </li>
 </ul>
-<h4 id="a-escala-da-nuvem"><a class="header" href="#a-escala-da-nuvem">A escala da nuvem</a></h4>
-<p>Provedores como AWS, Google Cloud e Azure abstraem toda essa complexidade em serviços gerenciados. O sistema operacional de uma instância de servidor na nuvem geralmente reside em um volume virtual, como o EBS da AWS, que por baixo dos panos é armazenamento em rede com redundância automática, sem que o administrador precise configurar RAID ou gerenciar discos físicos manualmente.</p>
 <h3 id="particionamento-de-disco"><a class="header" href="#particionamento-de-disco">Particionamento de disco</a></h3>
-<p>Um disco físico, seja ele um SSD ou um HD, chega ao sistema como um bloco bruto. Antes de guardar qualquer dado, esse espaço precisa ser organizado. O particionamento é o processo de dividir esse bloco em regiões independentes, cada uma com início, fim e propósito definidos.</p>
+<p>Um disco físico, seja ele um SSD ou um HD, chega ao sistema como um bloco bruto. Antes de guardar qualquer dado, esse espaço precisa ser organizado. O particionamento é o processo de dividir esse bloco em regiões independentes e propósito definidos.</p>
 <p>Para o sistema operacional, cada partição aparece como um dispositivo separado. Um único disco de 1 TB pode se comportar como se fossem dois ou três discos menores, cada um com seu próprio sistema de arquivos, suas próprias permissões e sua própria função.</p>
 <h4 id="por-que-particionar"><a class="header" href="#por-que-particionar">Por que particionar?</a></h4>
 <p>A razão mais imediata é separação de responsabilidades. Em um servidor Linux, é comum isolar o sistema operacional em uma partição, os dados dos usuários em outra e os logs do sistema em uma terceira. Se os logs crescerem sem controle e preencherem o disco, apenas a partição deles é afetada. O sistema continua funcionando, e os dados dos usuários permanecem intactos.</p>

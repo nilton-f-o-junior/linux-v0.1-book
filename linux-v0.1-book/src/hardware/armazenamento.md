@@ -6,11 +6,6 @@ A memória RAM, vista anteriormente, é rápida mas volátil: perde tudo quando 
 
 O SSD não tem partes móveis. Armazena dados em chips de memória flash, a mesma tecnologia base usada em celulares e câmeras, mas em versões otimizadas para desempenho e durabilidade.
 
-Sem braços mecânicos, sem pratos girando, o acesso a qualquer ponto do armazenamento é quase instantâneo. Um computador com SSD inicializa o sistema operacional em segundos. Programas abrem antes de o usuário piscar.
-
-- **Vantagens:** velocidade muito superior ao HD, resistente a impactos, silencioso e com menor consumo de energia;
-- **Desvantagens:** custo por gigabyte mais alto que o HD, embora essa diferença venha caindo progressivamente nos últimos anos.
-
 ### NVMe: SSDs ainda mais rápidos
 
 Dentro do universo dos SSDs existe uma distinção importante de interface. SSDs mais antigos e mais baratos usam a interface SATA, a mesma criada originalmente para os HDs. Ela funciona bem, mas é um gargalo para os chips modernos de memória flash.
@@ -20,9 +15,6 @@ Os SSDs **NVMe** (*Non-Volatile Memory Express*) conectam-se diretamente ao proc
 ## HD
 
 O HD é mais barato de se produzir e capaz de armazenar grandes volumes de dados, mas é limitado pela velocidade da mecânica. Cada leitura depende de o prato estar na posição certa e de o braço chegar até lá. Em tarefas que exigem muitos acessos pequenos e espalhados pelo disco, como iniciar o sistema operacional, esse tempo de busca se acumula e se torna perceptível.
-
-- **Vantagens:** custo por gigabyte muito baixo, ideal para armazenar grandes volumes de dados;
-- **Desvantagens:** mais lento, sensível a impactos físicos (a mecânica interna pode ser danificada) e consome mais energia.
 
 ### Armazenamento em servidores
 
@@ -46,8 +38,6 @@ Um servidor que guarda dados importantes raramente confia em um único disco. O 
   - É ao mesmo tempo rápido e redundante;
   - Usa metade da capacidade total para espelhamento.
 
-O resultado prático é que um servidor bem configurado pode perder um disco físico no meio da operação e continuar servindo dados normalmente, enquanto o disco defeituoso é substituído.
-
 #### Armazenamento em rede
 
 Em ambientes corporativos ou de nuvem, o armazenamento frequentemente não está na mesma máquina que o sistema que o usa. Dois protocolos dominam esse cenário.
@@ -56,13 +46,9 @@ Em ambientes corporativos ou de nuvem, o armazenamento frequentemente não está
  
 - **SAN (*Storage Area Network*):** cria uma rede dedicada exclusivamente ao tráfego de armazenamento, separada da rede comum de dados. O servidor enxerga o armazenamento remoto como se fosse um disco diretamente conectado. É uma solução mais complexa e cara, usada em ambientes que exigem altíssimo desempenho e baixa latência, como bancos de dados críticos e sistemas financeiros.
 
-#### A escala da nuvem
-
-Provedores como AWS, Google Cloud e Azure abstraem toda essa complexidade em serviços gerenciados. O sistema operacional de uma instância de servidor na nuvem geralmente reside em um volume virtual, como o EBS da AWS, que por baixo dos panos é armazenamento em rede com redundância automática, sem que o administrador precise configurar RAID ou gerenciar discos físicos manualmente.
-
 ### Particionamento de disco
 
-Um disco físico, seja ele um SSD ou um HD, chega ao sistema como um bloco bruto. Antes de guardar qualquer dado, esse espaço precisa ser organizado. O particionamento é o processo de dividir esse bloco em regiões independentes, cada uma com início, fim e propósito definidos.
+Um disco físico, seja ele um SSD ou um HD, chega ao sistema como um bloco bruto. Antes de guardar qualquer dado, esse espaço precisa ser organizado. O particionamento é o processo de dividir esse bloco em regiões independentes e propósito definidos.
 
 Para o sistema operacional, cada partição aparece como um dispositivo separado. Um único disco de 1 TB pode se comportar como se fossem dois ou três discos menores, cada um com seu próprio sistema de arquivos, suas próprias permissões e sua própria função.
 
