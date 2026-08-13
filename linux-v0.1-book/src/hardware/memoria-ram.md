@@ -1,9 +1,5 @@
 # Memória RAM
 
-Quando você abre um navegador, um editor de texto e um player de música ao mesmo tempo, há algo no computador equilibrando tudo isso sem que você precise pensar no assunto. Esse algo é a memória RAM.
-
-RAM significa memória de acesso aleatório. O nome descreve sua característica mais importante: qualquer posição de memória pode ser lida ou escrita diretamente, em tempo constante, sem precisar percorrer o conteúdo do início até chegar ao dado desejado, como acontece em uma fita magnética.
-
 ## O que ela faz
 
 A RAM funciona como a mesa de trabalho do computador. O armazenamento, seja um SSD ou HD, é onde os dados ficam guardados permanentemente, como arquivos em uma gaveta. Mas para trabalhar com eles, o sistema operacional os traz para a RAM, onde o processador pode acessá-los com velocidade muito maior.
@@ -15,6 +11,27 @@ A característica que define a RAM é sua volatilidade, ela perde todo o conteú
 É por isso que ao desligar o computador, o que estava aberto some, e ao ligá-lo novamente, o sistema operacional precisa ser carregado do armazenamento de volta para a memória.
 
 ## DDR: gerações e velocidade
+
+ #### Gerações de DDR e o encaixe na placa-mãe
+
+  Cada geração de DDR tem um encaixe físico diferente. O pente muda de tamanho, a posição do entalhe que guia a instalação muda, e o slot da placa-mãe
+  ↪ muda junto. Isso torna impossível instalar uma geração errada por acidente: um pente DDR5 simplesmente não entra em um slot DDR4, e vice-versa.
+
+  - **DDR1:** 184 pinos;
+  - **DDR2:** 240 pinos;
+  - **DDR3:** 240 pinos;
+  - **DDR4:** 288 pinos;
+  - **DDR5:** 288 pinos;
+
+  #### Dual channel
+
+  Quando dois pentes de RAM idênticos são instalados nos slots corretos, a placa-mãe ativa o modo *dual channel*, que dobra a largura de banda
+  ↪ disponível para o processador ao acessar a memória. A diferença é perceptível especialmente em processadores com GPU integrada, que compartilham a
+  ↪ memória RAM com os gráficos, e em tarefas que movimentam grandes volumes de dados entre CPU e memória.
+
+  Os slots de *dual channel* na placa são identificados por cores: instalar os pentes nos dois slots da mesma cor ativa o modo. O manual da placa sempre
+  ↪ indica a combinação correta.
+
 
 Além da volatilidade, outro aspecto importante da RAM é como ela evoluiu ao longo do tempo em termos de velocidade e capacidade. A RAM moderna segue o padrão **DDR** (*Double Data Rate*), que transfere dados duas vezes por ciclo de clock, dobrando a largura de banda sem precisar dobrar a frequência.
 

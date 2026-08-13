@@ -34,13 +34,11 @@ O cache é organizado em níveis:
 
 - **L3:** compartilhado entre todos os núcleos do processador. Muito maior, podendo chegar a dezenas de megabytes, mas com latência maior que os anteriores.
 
-A eficiência do cache depende da localidade dos dados: programas que acessam os mesmos dados repetidamente ou em sequência se beneficiam muito mais do que aqueles com acesso aleatório a grandes volumes.
-
 ## TDP e consumo de energia
 
 Todo processador tem um **TDP** (*Thermal Design Power*), que expressa quanto calor o componente dissipa sob carga típica, medido em watts. É o parâmetro que orienta a escolha do sistema de resfriamento: um processador com TDP de 65 W precisa de um cooler diferente de um com TDP de 125 W.
 
-Processadores para desktops têm TDPs mais altos porque operam conectados à tomada e com espaço para dissipadores maiores. Processadores para notebooks precisam operar com TDPs muito menores, frequentemente entre 15 W e 45 W, para preservar a bateria e caber em designs finos. Essa restrição energética é o que define, em grande parte, a diferença de desempenho entre um processador de notebook e o equivalente para desktop da mesma geração.
+Processadores para desktops têm TDPs mais altos porque operam conectados à tomada e com espaço para dissipadores maiores. Processadores para notebooks precisam operar com TDPs muito menores, frequentemente entre 15 W e 45 W, para preservar a bateria e caber em designs finos. 
 
 ## Fabricantes e arquiteturas
 
@@ -88,48 +86,6 @@ As linhas específicas para servidores dos principais fabricantes são:
 
 - **ARM em data centers:** alternativa mais recente ao domínio x86. O AWS Graviton (Amazon) e a Ampere Altra (usada por Google Cloud e Azure) se destacam pela melhor relação desempenho/consumo de energia, reduzindo custo operacional. A limitação é a compatibilidade: softwares feitos só para x86 precisam ser recompilados ou emulados para rodar em ARM.
 
-## Tempo de vida de um processador
-
-Processadores são um dos componentes mais duráveis de um computador. Diferente de discos mecânicos, que têm partes em movimento sujeitas a desgaste, ou de baterias, que degradam quimicamente com o uso, um processador não tem partes móveis e não se desgasta da mesma forma. Na prática, é comum ver Xeons de dez ou quinze anos rodando 24 horas por dia, sete dias por semana, sem falhas, e isso não é exceção, é o esperado para esse segmento.
-
-### Obsolescência de software
-
-A durabilidade física, porém, não é o único limite. Um Xeon de 2010 pode estar eletricamente perfeito hoje e ainda assim ser inutilizável para certas tarefas, não porque o hardware falhou, mas porque o software parou de suportá-lo.
-
-Esse processo acontece em camadas:
-
-- **Sistema operacional:** o Windows 11, por exemplo, exige requisitos de firmware como TPM 2.0 e Secure Boot, além de uma lista restrita de CPUs suportadas pela Microsoft, bloqueando a instalação mesmo em hardware funcionando perfeitamente. O Linux é mais permissivo nesse aspecto, permitindo rodar versões recentes do kernel em hardware mais antigo por mais tempo;
-
-- **Instruções de hardware:** novas gerações trazem conjuntos como AVX, AVX2 e AVX-512, que aceleram tarefas como criptografia e cálculos científicos, softwares compilados para usá-las não funcionam em CPUs sem esse suporte;
-
-- **Suporte do fabricante:** Intel e AMD param de lançar correções de microcódigo para arquiteturas antigas. O processador continua funcionando, mas fica vulnerável a falhas sem correção oficial.
-
-### O caso dos Xeons antigos
-
-O uso de Xeons antigos em servidores caseiros e pequenas infraestruturas é um fenômeno real e economicamente racional. Um Xeon E5 de 2013, por exemplo, pode ser encontrado por poucos dólares no mercado de usados, oferece múltiplos núcleos, suporte a grandes volumes de ECC RAM e funciona perfeitamente com Linux atual para tarefas como armazenamento em rede, virtualização leve e serviços de homelabs.
-
-## Processadores e sistemas operacionais
-
-A relação entre processador e sistema operacional vai além de simplesmente "ligar e funcionar". O sistema operacional precisa ser construído para entender a linguagem do processador, e quando essa correspondência falha ou é imperfeita, os problemas aparecem em camadas diferentes.
-
-### Compatibilidade de arquitetura
-
-Um sistema operacional é um software como qualquer outro: precisa ser compilado para a arquitetura do processador que vai executá-lo. 
- 
-- **Linux:** por ser open source, o kernel Linux é compilado para dezenas de arquiteturas diferentes. Rodar Linux em ARM, x86, RISC-V ou outros processadores é uma questão de usar a versão correta da distribuição. Essa flexibilidade é uma das razões pelas quais o Linux domina servidores ARM e dispositivos embarcados;
-
-- **Windows:** historicamente exclusivo do x86, o Windows em ARM existe e funciona em processadores como o Qualcomm Snapdragon. A Microsoft desenvolveu uma camada de tradução que permite rodar aplicativos x86 em hardware ARM, mas com custo de desempenho variável.
-
-- **macOS:** até 2020, rodava exclusivamente em x86 (Intel). Com a transição para o Apple Silicon, a Apple desenvolveu o Rosetta 2, uma camada de tradução que converte código x86 para ARM em tempo real. A transição foi tecnicamente bem-sucedida, mas aplicativos não recompilados nativamente para ARM rodam com desempenho levemente inferior.
-
-### Suporte a drivers e hardware
-
-O driver é o software que permite ao sistema operacional conversar com um componente de hardware. Processadores muito novos, ou plataformas de nicho, às vezes chegam ao mercado antes de os sistemas operacionais terem suporte completo.
-
-No Linux, esse fenômeno é mais visível. O suporte a novos processadores e chipsets depende de contribuições ao kernel, que seguem um ciclo de lançamento próprio. Um processador lançado hoje pode ter suporte completo no kernel apenas meses depois. Distribuições que seguem o kernel de perto, como o Arch Linux ou o Fedora, tendem a receber esse suporte antes de distribuições mais conservadoras, como o Debian estável.
-
-No Windows, a Microsoft e os fabricantes de processadores costumam coordenar o lançamento de drivers com o lançamento do hardware, tornando o processo mais transparente para o usuário final. O problema aparece mais em hardware corporativo antigo ou em processadores de nicho sem suporte ativo do fabricante.
-
 ## O soquete e a compatibilidade com a placa-mãe
 
 Além da compatibilidade com software, o processador precisa ser fisicamente compatível com a placa-mãe. Soquetes de fabricantes diferentes são fisicamente incompatíveis entre si: um processador AMD não cabe em uma placa Intel, e vice-versa. 
@@ -153,3 +109,27 @@ A política de compatibilidade entre gerações varia bastante entre os fabrican
 ### A armadilha do firmware
 
 Mesmo quando o soquete é compatível, há um detalhe que pega muitos usuários de surpresa: ao combinar uma placa-mãe mais antiga com um processador mais novo, o firmware da placa pode precisar de atualização para reconhecer o novo chip. Uma placa com soquete AM5, por exemplo, pode não inicializar com um Ryzen de geração mais recente se o firmware estiver desatualizado.
+
+## Tempo de vida de um processador
+
+Processadores são um dos componentes mais duráveis de um computador. Diferente de discos mecânicos, que têm partes em movimento sujeitas a desgaste, ou de baterias, que degradam quimicamente com o uso, um processador não tem partes móveis e não se desgasta da mesma forma. Na prática, é comum ver Xeons de dez ou quinze anos rodando 24 horas por dia, sete dias por semana, sem falhas, e isso não é exceção, é o esperado para esse segmento.
+
+### Obsolescência de software
+
+A durabilidade física, porém, não é o único limite. Um Xeon de 2010 pode estar eletricamente perfeito hoje e ainda assim ser inutilizável para certas tarefas, não porque o hardware falhou, mas porque o software parou de suportá-lo.
+
+Esse processo acontece em camadas:
+
+- **Sistema operacional:** o Windows 11, por exemplo, exige requisitos de firmware como TPM 2.0 e Secure Boot, além de uma lista restrita de CPUs suportadas pela Microsoft, bloqueando a instalação mesmo em hardware funcionando perfeitamente. O Linux é mais permissivo nesse aspecto, permitindo rodar versões recentes do kernel em hardware mais antigo por mais tempo;
+
+- **Instruções de hardware:** novas gerações trazem conjuntos como AVX, AVX2 e AVX-512, que aceleram tarefas como criptografia e cálculos científicos, softwares compilados para usá-las não funcionam em CPUs sem esse suporte;
+
+- **Suporte do fabricante:** Intel e AMD param de lançar correções de microcódigo para arquiteturas antigas. O processador continua funcionando, mas fica vulnerável a falhas sem correção oficial.
+
+### Suporte a drivers e hardware
+
+O driver é o software que permite ao sistema operacional conversar com um componente de hardware. Processadores muito novos, ou plataformas de nicho, às vezes chegam ao mercado antes de os sistemas operacionais terem suporte completo.
+
+No Linux, esse fenômeno é mais visível. O suporte a novos processadores e chipsets depende de contribuições ao kernel, que seguem um ciclo de lançamento próprio. Um processador lançado hoje pode ter suporte completo no kernel apenas meses depois. Distribuições que seguem o kernel de perto, como o Arch Linux ou o Fedora, tendem a receber esse suporte antes de distribuições mais conservadoras, como o Debian estável.
+
+No Windows, a Microsoft e os fabricantes de processadores costumam coordenar o lançamento de drivers com o lançamento do hardware, tornando o processo mais transparente para o usuário final. O problema aparece mais em hardware corporativo antigo ou em processadores de nicho sem suporte ativo do fabricante.

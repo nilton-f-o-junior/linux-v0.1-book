@@ -1,7 +1,5 @@
 # Firmware, BIOS, UEFI e Bootloader
 
-Quando você pressiona o botão de ligar o computador, a primeira coisa que acontece não é o Windows subindo, nem o Linux carregando. Antes de qualquer sistema operacional entrar em cena, existe um processo de inicialização inteiro que acontece em camadas, cada uma preparando o terreno para a próxima.
-
 ## Firmware
 
 Quando seu computador inicia, um chip soldado diretamente na placa-mãe contém o *firmware*: um software gravado em memória não volátil, que persiste mesmo sem energia e que o processador é projetado para executar automaticamente ao ligar. O firmware é, literalmente, o primeiro programa que o computador executa.
@@ -31,9 +29,3 @@ O bootloader tem uma função muito precisa: encontrar o kernel do sistema opera
 No Linux, o bootloader mais comum é o **GRUB** (*Grand Unified Bootloader*), que consegue localizar kernels em partições diferentes, passar parâmetros de configuração para o kernel e lidar com múltiplos sistemas no mesmo computador, o que os usuários chamam de ***dual boot***.
 
 Uma alternativa mais simples e moderna é o **systemd-boot**, que integra ao ecossistema do **systemd** (o gerenciador de serviços padrão em boa parte das distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais direto e com menos configuração manual envolvida.
-
-O comportamento do bootloader varia conforme o sistema operacional:
-
-- **Linux:** configurável, personalizável e visível ao usuário, especialmente no GRUB;
-- **Windows:** proprietário e transparente, sem interação direta pelo usuário;
-- **macOS:** gerenciado pelo próprio chip, de forma integrada e invisível ao usuário.
