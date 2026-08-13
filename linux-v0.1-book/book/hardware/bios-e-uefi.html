@@ -35,7 +35,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-a4f439e2.js";
+            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -175,7 +175,6 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="firmware-bios-uefi-e-bootloader"><a class="header" href="#firmware-bios-uefi-e-bootloader">Firmware, BIOS, UEFI e Bootloader</a></h1>
-<p>Quando você pressiona o botão de ligar o computador, a primeira coisa que acontece não é o Windows subindo, nem o Linux carregando. Antes de qualquer sistema operacional entrar em cena, existe um processo de inicialização inteiro que acontece em camadas, cada uma preparando o terreno para a próxima.</p>
 <h2 id="firmware"><a class="header" href="#firmware">Firmware</a></h2>
 <p>Quando seu computador inicia, um chip soldado diretamente na placa-mãe contém o <em>firmware</em>: um software gravado em memória não volátil, que persiste mesmo sem energia e que o processador é projetado para executar automaticamente ao ligar. O firmware é, literalmente, o primeiro programa que o computador executa.</p>
 <p>A primeira coisa que o firmware faz é o <strong>POST</strong> (<em>Power-On Self Test</em>): uma varredura rápida pelo hardware presente. Ele verifica se a memória RAM responde, se o processador está funcional, se há dispositivos de armazenamento conectados. Se algo falhar nessa etapa, o computador pode emitir bipes, um código sonoro que técnicos usam para diagnosticar problemas antes mesmo de uma imagem aparecer na tela.</p>
@@ -191,12 +190,6 @@
 <p>O bootloader tem uma função muito precisa: encontrar o kernel do sistema operacional no disco, carregá-lo na memória e inicializá-lo. Ele é uma camada necessária porque o kernel não pode simplesmente “se carregar sozinho”, ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware.</p>
 <p>No Linux, o bootloader mais comum é o <strong>GRUB</strong> (<em>Grand Unified Bootloader</em>), que consegue localizar kernels em partições diferentes, passar parâmetros de configuração para o kernel e lidar com múltiplos sistemas no mesmo computador, o que os usuários chamam de <em><strong>dual boot</strong></em>.</p>
 <p>Uma alternativa mais simples e moderna é o <strong>systemd-boot</strong>, que integra ao ecossistema do <strong>systemd</strong> (o gerenciador de serviços padrão em boa parte das distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais direto e com menos configuração manual envolvida.</p>
-<p>O comportamento do bootloader varia conforme o sistema operacional:</p>
-<ul>
-<li><strong>Linux:</strong> configurável, personalizável e visível ao usuário, especialmente no GRUB;</li>
-<li><strong>Windows:</strong> proprietário e transparente, sem interação direta pelo usuário;</li>
-<li><strong>macOS:</strong> gerenciado pelo próprio chip, de forma integrada e invisível ao usuário.</li>
-</ul>
 
                     </main>
 
