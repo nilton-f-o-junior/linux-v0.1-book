@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -195,13 +196,26 @@
 <p>Áreas de swap também podem ser configuradas para ativação automática na inicialização, através do arquivo <code>/etc/fstab</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo fallocate -l 2G /swapfile        # cria um arquivo de 2 GB para ser usado como swap
-sudo chmod 600 /swapfile              # restringe as permissões do arquivo de swap por segurança
-sudo mkswap /swapfile                 # formata o arquivo como área de swap
-sudo swapon /swapfile                 # ativa o arquivo de swap
-sudo swapoff /swapfile                # desativa o arquivo de swap
-swapon -s                             # lista as áreas de swap ativas
-free -h                               # exibe o uso de memória RAM e swap
+<pre><code class="language-bash"># cria um arquivo de 2 GB para ser usado como swap
+sudo fallocate -l 2G /swapfile
+</code></pre>
+<pre><code class="language-bash"># restringe as permissões do arquivo de swap por segurança
+sudo chmod 600 /swapfile
+</code></pre>
+<pre><code class="language-bash"># formata o arquivo como área de swap
+sudo mkswap /swapfile
+</code></pre>
+<pre><code class="language-bash"># ativa o arquivo de swap
+sudo swapon /swapfile
+</code></pre>
+<pre><code class="language-bash"># desativa o arquivo de swap
+sudo swapoff /swapfile
+</code></pre>
+<pre><code class="language-bash"># lista as áreas de swap ativas
+swapon -s
+</code></pre>
+<pre><code class="language-bash"># exibe o uso de memória RAM e swap
+free -h
 </code></pre>
 
                     </main>

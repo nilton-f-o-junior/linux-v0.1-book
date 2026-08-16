@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,9 +187,9 @@
 <tbody>
 <tr><td>alvo</td><td>Arquivo ou diretório original ao qual o link vai apontar</td></tr>
 <tr><td>nome_do_link</td><td>Nome (ou caminho) do link a ser criado</td></tr>
-<tr><td>-s, –symbolic</td><td>Cria um link simbólico (soft link), em vez de um link físico (hard link)</td></tr>
-<tr><td>-f, –force</td><td>Força a criação do link, substituindo o destino caso já exista</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe o nome de cada arquivo antes de criar o link (modo verboso)</td></tr>
+<tr><td>-s, --symbolic</td><td>Cria um link simbólico (soft link), em vez de um link físico (hard link)</td></tr>
+<tr><td>-f, --force</td><td>Força a criação do link, substituindo o destino caso já exista</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe o nome de cada arquivo antes de criar o link (modo verboso)</td></tr>
 <tr><td>-n</td><td>Trata o link simbólico como um arquivo comum ao apontar para um diretório existente</td></tr>
 </tbody>
 </table>
@@ -198,11 +199,20 @@
 Diferente do link físico, o link simbólico pode apontar para diretórios e para arquivos em outros sistemas de arquivos, mas deixa de funcionar caso o arquivo original seja removido ou movido.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ln arquivo.txt link_fisico.txt          # cria um link físico apontando para `arquivo.txt`
-ln -s arquivo.txt link_simbolico.txt    # cria um link simbólico apontando para `arquivo.txt`
-ln -s /var/www/html html                # cria um link simbólico para um diretório
-ln -sf arquivo.txt link_simbolico.txt   # recria o link simbólico, substituindo-o se já existir
-ln -sv arquivo.txt link_simbolico.txt   # cria o link simbólico exibindo o resultado da operação
+<pre><code class="language-bash"># cria um link físico apontando para `arquivo.txt`
+ln arquivo.txt link_fisico.txt
+</code></pre>
+<pre><code class="language-bash"># cria um link simbólico apontando para `arquivo.txt`
+ln -s arquivo.txt link_simbolico.txt
+</code></pre>
+<pre><code class="language-bash"># cria um link simbólico para um diretório
+ln -s /var/www/html html
+</code></pre>
+<pre><code class="language-bash"># recria o link simbólico, substituindo-o se já existir
+ln -sf arquivo.txt link_simbolico.txt
+</code></pre>
+<pre><code class="language-bash"># cria o link simbólico exibindo o resultado da operação
+ln -sv arquivo.txt link_simbolico.txt
 </code></pre>
 
                     </main>

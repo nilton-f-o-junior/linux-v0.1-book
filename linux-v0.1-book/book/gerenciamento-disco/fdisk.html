@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,7 +186,7 @@
 </thead>
 <tbody>
 <tr><td>dispositivo</td><td>Localização do disco a ser manipulado (ex.: <code>/dev/sda</code>)</td></tr>
-<tr><td>-l, –list</td><td>Lista as partições existentes de um ou mais dispositivos</td></tr>
+<tr><td>-l, --list</td><td>Lista as partições existentes de um ou mais dispositivos</td></tr>
 <tr><td>-u</td><td>Exibe os tamanhos em setores, em vez de cilindros</td></tr>
 <tr><td>p</td><td>(modo interativo) Exibe a tabela de partições</td></tr>
 <tr><td>n</td><td>(modo interativo) Cria uma nova partição</td></tr>
@@ -200,9 +201,14 @@
 Alterar a tabela de partições é uma operação sensível e geralmente requer permissões de superusuário — erros podem causar perda de dados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo fdisk -l                           # lista as partições de todos os discos do sistema
-sudo fdisk -l /dev/sda                  # lista as partições de um disco específico
-sudo fdisk /dev/sda                     # abre o modo interativo para manipular as partições do disco
+<pre><code class="language-bash"># lista as partições de todos os discos do sistema
+sudo fdisk -l
+</code></pre>
+<pre><code class="language-bash"># lista as partições de um disco específico
+sudo fdisk -l /dev/sda
+</code></pre>
+<pre><code class="language-bash"># abre o modo interativo para manipular as partições do disco
+sudo fdisk /dev/sda
 </code></pre>
 
                     </main>

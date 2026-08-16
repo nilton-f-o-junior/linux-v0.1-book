@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -196,12 +197,23 @@
 <p><code>cd</code> é um comando interno do shell (não um programa externo), por isso ele não aparece como um executável separado no sistema de arquivos.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">cd /etc                      # navega até o diretório /etc
-cd                           # volta para o diretório pessoal (home)
-cd ~                         # também volta para o diretório pessoal (home)
-cd ..                        # sobe um nível (diretório pai)
-cd -                         # volta para o diretório anterior
-cd ~/Documentos              # navega até a pasta "Documentos" dentro do home
+<pre><code class="language-bash"># navega até o diretório /etc
+cd /etc
+</code></pre>
+<pre><code class="language-bash"># volta para o diretório pessoal (home)
+cd
+</code></pre>
+<pre><code class="language-bash"># também volta para o diretório pessoal (home)
+cd ~
+</code></pre>
+<pre><code class="language-bash"># sobe um nível (diretório pai)
+cd ..
+</code></pre>
+<pre><code class="language-bash"># volta para o diretório anterior
+cd -
+</code></pre>
+<pre><code class="language-bash"># navega até a pasta "Documentos" dentro do home
+cd ~/Documentos
 </code></pre>
 
                     </main>

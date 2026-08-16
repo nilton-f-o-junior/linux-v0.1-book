@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,7 +187,7 @@
 <tbody>
 <tr><td>-f</td><td>Força a reinicialização imediata, sem avisar outros processos</td></tr>
 <tr><td>-p</td><td>Desliga o sistema em vez de reiniciá-lo (equivalente a <code>poweroff</code>)</td></tr>
-<tr><td>–halt</td><td>Interrompe o sistema sem desligar ou reiniciar</td></tr>
+<tr><td>--halt</td><td>Interrompe o sistema sem desligar ou reiniciar</td></tr>
 </tbody>
 </table>
 </div>
@@ -195,10 +196,17 @@
 Executar <code>reboot</code> normalmente exige privilégios de superusuário (<code>sudo</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo reboot              # reinicia o sistema de forma padrão
-sudo reboot -f            # força a reinicialização imediata
-sudo systemctl reboot     # reinicia o sistema via systemd
-shutdown -r now           # alternativa para reiniciar o sistema imediatamente
+<pre><code class="language-bash"># reinicia o sistema de forma padrão
+sudo reboot
+</code></pre>
+<pre><code class="language-bash"># força a reinicialização imediata
+sudo reboot -f
+</code></pre>
+<pre><code class="language-bash"># reinicia o sistema via systemd
+sudo systemctl reboot
+</code></pre>
+<pre><code class="language-bash"># alternativa para reiniciar o sistema imediatamente
+shutdown -r now
 </code></pre>
 
                     </main>

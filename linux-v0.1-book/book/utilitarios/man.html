@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -195,11 +196,20 @@
 <p>Durante a leitura: <code>espaço</code> avança uma página, <code>Enter</code> avança uma linha, <code>q</code> encerra, <code>/palavra</code> pesquisa dentro do texto.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">man ls                                # exibe o manual do comando `ls`
-man 5 passwd                          # exibe o manual da seção 5 (arquivos) para `passwd`
-man -k rede                           # busca comandos relacionados à palavra `rede`
-man -f cat                            # exibe uma breve descrição do comando `cat`
-man man                               # exibe o manual do próprio comando `man`
+<pre><code class="language-bash"># exibe o manual do comando `ls`
+man ls
+</code></pre>
+<pre><code class="language-bash"># exibe o manual da seção 5 (arquivos) para `passwd`
+man 5 passwd
+</code></pre>
+<pre><code class="language-bash"># busca comandos relacionados à palavra `rede`
+man -k rede
+</code></pre>
+<pre><code class="language-bash"># exibe uma breve descrição do comando `cat`
+man -f cat
+</code></pre>
+<pre><code class="language-bash"># exibe o manual do próprio comando `man`
+man man
 </code></pre>
 
                     </main>

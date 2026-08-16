@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -195,11 +196,20 @@
 <p>Aliases criados diretamente no terminal valem apenas para a sessão atual. Para torná-los permanentes, adicione-os ao arquivo <code>~/.bashrc</code> (ou <code>~/.zshrc</code>, dependendo do shell) e recarregue com <code>source ~/.bashrc</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">alias                                # lista todos os aliases definidos
-alias ll='ls -la'                    # cria o atalho `ll` para `ls -la`
-alias rm='rm -i'                     # cria o atalho `rm` para pedir confirmação antes de remover
-alias atualizar='sudo apt update &amp;&amp; sudo apt upgrade'   # cria um atalho para um comando composto
-unalias ll                           # remove o alias `ll`
+<pre><code class="language-bash"># lista todos os aliases definidos
+alias
+</code></pre>
+<pre><code class="language-bash"># cria o atalho `ll` para `ls -la`
+alias ll='ls -la'
+</code></pre>
+<pre><code class="language-bash"># cria o atalho `rm` para pedir confirmação antes de remover
+alias rm='rm -i'
+</code></pre>
+<pre><code class="language-bash"># cria um atalho para um comando composto
+alias atualizar='sudo apt update &amp;&amp; sudo apt upgrade'
+</code></pre>
+<pre><code class="language-bash"># remove o alias `ll`
+unalias ll
 </code></pre>
 
                     </main>

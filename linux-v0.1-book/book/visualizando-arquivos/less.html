@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,8 +186,8 @@
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td>-N, –LINE-NUMBERS</td><td>Exibe o número de cada linha</td></tr>
-<tr><td>-S, –chop-long-lines</td><td>Trunca linhas longas em vez de quebrá-las</td></tr>
+<tr><td>-N, --LINE-NUMBERS</td><td>Exibe o número de cada linha</td></tr>
+<tr><td>-S, --chop-long-lines</td><td>Trunca linhas longas em vez de quebrá-las</td></tr>
 <tr><td>+N</td><td>Inicia a exibição a partir da linha <code>N</code></td></tr>
 <tr><td>zless</td><td>Variante para visualizar arquivos compactados com gzip</td></tr>
 </tbody>
@@ -197,13 +198,26 @@
 Ao contrário de <code>more</code>, o <code>less</code> não carrega o arquivo inteiro na memória — ideal para arquivos grandes.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">less arquivo.txt                    # exibe `arquivo.txt` de forma paginada
-less -N arquivo.txt                 # exibe com numeração de linhas
-less -S arquivo.txt                 # trunca linhas longas sem quebra
-less +20 arquivo.txt                # inicia a exibição a partir da linha 20
-cat arquivo.txt | less              # pagina a saída do comando `cat`
-ls -la /etc | less                  # pagina a listagem de um diretório longo
-zless arquivo.txt.gz                # exibe um arquivo compactado com gzip de forma paginada
+<pre><code class="language-bash"># exibe `arquivo.txt` de forma paginada
+less arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe com numeração de linhas
+less -N arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># trunca linhas longas sem quebra
+less -S arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># inicia a exibição a partir da linha 20
+less +20 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># pagina a saída do comando `cat`
+cat arquivo.txt | less
+</code></pre>
+<pre><code class="language-bash"># pagina a listagem de um diretório longo
+ls -la /etc | less
+</code></pre>
+<pre><code class="language-bash"># exibe um arquivo compactado com gzip de forma paginada
+zless arquivo.txt.gz
 </code></pre>
 
                     </main>

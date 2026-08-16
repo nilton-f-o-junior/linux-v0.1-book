@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,11 +186,11 @@
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser ordenado</td></tr>
-<tr><td>-r, –reverse</td><td>Ordena em ordem decrescente</td></tr>
-<tr><td>-n, –numeric-sort</td><td>Ordena os valores numericamente, em vez de alfabeticamente</td></tr>
-<tr><td>-u, –unique</td><td>Remove linhas duplicadas, exibindo apenas ocorrências únicas</td></tr>
+<tr><td>-r, --reverse</td><td>Ordena em ordem decrescente</td></tr>
+<tr><td>-n, --numeric-sort</td><td>Ordena os valores numericamente, em vez de alfabeticamente</td></tr>
+<tr><td>-u, --unique</td><td>Remove linhas duplicadas, exibindo apenas ocorrências únicas</td></tr>
 <tr><td>-k campo</td><td>Ordena com base em um campo (coluna) específico</td></tr>
-<tr><td>-f, –ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas ao ordenar</td></tr>
+<tr><td>-f, --ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas ao ordenar</td></tr>
 </tbody>
 </table>
 </div>
@@ -197,12 +198,23 @@
 <p>Por padrão, <code>sort</code> ordena as linhas em ordem alfabética crescente, sem alterar o arquivo original — a saída é exibida na tela.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sort arquivo.txt                      # exibe o conteúdo ordenado alfabeticamente
-sort -r arquivo.txt                   # exibe o conteúdo ordenado em ordem decrescente
-sort -n numeros.txt                   # ordena os valores numericamente
-sort -u arquivo.txt                   # exibe o conteúdo ordenado, removendo linhas duplicadas
-sort -k 2 dados.txt                   # ordena com base no segundo campo de cada linha
-cat arquivo.txt | sort                # ordena a saída do comando `cat` via pipe
+<pre><code class="language-bash"># exibe o conteúdo ordenado alfabeticamente
+sort arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe o conteúdo ordenado em ordem decrescente
+sort -r arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># ordena os valores numericamente
+sort -n numeros.txt
+</code></pre>
+<pre><code class="language-bash"># exibe o conteúdo ordenado, removendo linhas duplicadas
+sort -u arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># ordena com base no segundo campo de cada linha
+sort -k 2 dados.txt
+</code></pre>
+<pre><code class="language-bash"># ordena a saída do comando `cat` via pipe
+cat arquivo.txt | sort
 </code></pre>
 
                     </main>

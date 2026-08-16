@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -194,10 +195,17 @@
 Ao navegar por links simbólicos com <code>cd</code>, <code>pwd</code> mostra o caminho pelo qual você chegou até ali; use <code>-P</code> para ver o caminho real no disco.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">pwd                    # exibe o caminho do diretório atual
-pwd -P                 # exibe o caminho físico, resolvendo links simbólicos
-cd /var/www &amp;&amp; pwd     # navega até `/var/www` e confirma o diretório atual
-echo $PWD              # exibe o diretório atual usando a variável de ambiente
+<pre><code class="language-bash"># exibe o caminho do diretório atual
+pwd
+</code></pre>
+<pre><code class="language-bash"># exibe o caminho físico, resolvendo links simbólicos
+pwd -P
+</code></pre>
+<pre><code class="language-bash"># navega até `/var/www` e confirma o diretório atual
+cd /var/www &amp;&amp; pwd
+</code></pre>
+<pre><code class="language-bash"># exibe o diretório atual usando a variável de ambiente
+echo $PWD
 </code></pre>
 
                     </main>

@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,9 +186,9 @@
 </thead>
 <tbody>
 <tr><td>+formato</td><td>Define o formato de saída da data/hora usando símbolos (ex.: <code>%Y</code>, <code>%m</code>, <code>%d</code>)</td></tr>
-<tr><td>-d, –date=string</td><td>Exibe a data/hora descrita em <code>string</code>, em vez da data/hora atual</td></tr>
-<tr><td>-u, –utc</td><td>Exibe a data/hora em UTC (horário universal), em vez do horário local</td></tr>
-<tr><td>-s, –set=string</td><td>Define a data/hora do sistema (geralmente requer permissão de superusuário)</td></tr>
+<tr><td>-d, --date=string</td><td>Exibe a data/hora descrita em <code>string</code>, em vez da data/hora atual</td></tr>
+<tr><td>-u, --utc</td><td>Exibe a data/hora em UTC (horário universal), em vez do horário local</td></tr>
+<tr><td>-s, --set=string</td><td>Define a data/hora do sistema (geralmente requer permissão de superusuário)</td></tr>
 </tbody>
 </table>
 </div>
@@ -195,12 +196,23 @@
 <p>Alguns símbolos comuns de formato: <code>%Y</code> (ano com 4 dígitos), <code>%m</code> (mês), <code>%d</code> (dia), <code>%H</code> (hora), <code>%M</code> (minuto), <code>%S</code> (segundo).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">date                                  # exibe a data e hora atuais
-date +%Y-%m-%d                        # exibe a data no formato ano-mês-dia
-date +"%H:%M:%S"                      # exibe apenas o horário atual
-date -u                               # exibe a data e hora atuais em UTC
-date -d "yesterday"                   # exibe a data referente a ontem
-sudo date -s "2026-07-27 10:00:00"    # define a data e hora do sistema
+<pre><code class="language-bash"># exibe a data e hora atuais
+date
+</code></pre>
+<pre><code class="language-bash"># exibe a data no formato ano-mês-dia
+date +%Y-%m-%d
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o horário atual
+date +"%H:%M:%S"
+</code></pre>
+<pre><code class="language-bash"># exibe a data e hora atuais em UTC
+date -u
+</code></pre>
+<pre><code class="language-bash"># exibe a data referente a ontem
+date -d "yesterday"
+</code></pre>
+<pre><code class="language-bash"># define a data e hora do sistema
+sudo date -s "2026-07-27 10:00:00"
 </code></pre>
 
                     </main>

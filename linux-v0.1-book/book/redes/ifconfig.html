@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -196,11 +197,20 @@
 <p><code>ifconfig</code> faz parte do pacote <code>net-tools</code>, considerado obsoleto em muitas distribuições Linux atuais, que priorizam o comando <code>ip</code> em seu lugar (ex.: <code>ip addr</code> no lugar de <code>ifconfig</code>). Ainda assim, <code>ifconfig</code> continua amplamente usado e disponível na maioria dos sistemas.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ifconfig                              # exibe as informações de todas as interfaces de rede ativas
-ifconfig eth0                         # exibe as informações apenas da interface `eth0`
-sudo ifconfig eth0 up                 # ativa a interface `eth0`
-sudo ifconfig eth0 down               # desativa a interface `eth0`
-sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0  # define um endereço IP e máscara de rede
+<pre><code class="language-bash"># exibe as informações de todas as interfaces de rede ativas
+ifconfig
+</code></pre>
+<pre><code class="language-bash"># exibe as informações apenas da interface `eth0`
+ifconfig eth0
+</code></pre>
+<pre><code class="language-bash"># ativa a interface `eth0`
+sudo ifconfig eth0 up
+</code></pre>
+<pre><code class="language-bash"># desativa a interface `eth0`
+sudo ifconfig eth0 down
+</code></pre>
+<pre><code class="language-bash"># define um endereço IP e máscara de rede
+sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0
 </code></pre>
 
                     </main>

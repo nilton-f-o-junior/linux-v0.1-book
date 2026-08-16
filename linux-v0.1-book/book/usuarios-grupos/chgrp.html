@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,9 +187,9 @@
 <tbody>
 <tr><td>grupo</td><td>Nome (ou número) do grupo que passará a ser o proprietário</td></tr>
 <tr><td>arquivo</td><td>Localização do arquivo ou diretório a ser alterado</td></tr>
-<tr><td>-R, –recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
-<tr><td>–reference=arquivo_ref</td><td>Usa o grupo de <code>arquivo_ref</code> em vez de especificar o nome diretamente</td></tr>
+<tr><td>-R, --recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
+<tr><td>--reference=arquivo_ref</td><td>Usa o grupo de <code>arquivo_ref</code> em vez de especificar o nome diretamente</td></tr>
 </tbody>
 </table>
 </div>
@@ -196,10 +197,17 @@
 <p>Alterar o grupo de um arquivo geralmente requer que o usuário seja o dono do arquivo (e membro do grupo de destino) ou tenha permissões de superusuário.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">chgrp equipe arquivo.txt              # altera o grupo de `arquivo.txt` para `equipe`
-sudo chgrp -R equipe /var/www/site    # altera o grupo recursivamente para todos os arquivos de um diretório
-chgrp -v equipe arquivo.txt           # altera o grupo e exibe uma mensagem de confirmação
-chgrp --reference=modelo.txt copia.txt # aplica o mesmo grupo de `modelo.txt` a `copia.txt`
+<pre><code class="language-bash"># altera o grupo de `arquivo.txt` para `equipe`
+chgrp equipe arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># altera o grupo recursivamente para todos os arquivos de um diretório
+sudo chgrp -R equipe /var/www/site
+</code></pre>
+<pre><code class="language-bash"># altera o grupo e exibe uma mensagem de confirmação
+chgrp -v equipe arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># aplica o mesmo grupo de `modelo.txt` a `copia.txt`
+chgrp --reference=modelo.txt copia.txt
 </code></pre>
 
                     </main>

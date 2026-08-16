@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -187,10 +188,10 @@
 <tr><td>url</td><td>Endereço do recurso a ser acessado</td></tr>
 <tr><td>-o arquivo</td><td>Salva o conteúdo baixado em um arquivo com o nome especificado</td></tr>
 <tr><td>-O</td><td>Salva o conteúdo baixado usando o mesmo nome do arquivo remoto</td></tr>
-<tr><td>-I, –head</td><td>Exibe apenas os cabeçalhos da resposta, sem baixar o conteúdo</td></tr>
+<tr><td>-I, --head</td><td>Exibe apenas os cabeçalhos da resposta, sem baixar o conteúdo</td></tr>
 <tr><td>-X método</td><td>Especifica o método HTTP a ser usado (ex.: <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>)</td></tr>
 <tr><td>-d dados</td><td>Envia dados no corpo da requisição (geralmente usado com <code>POST</code>)</td></tr>
-<tr><td>-L, –location</td><td>Segue redirecionamentos automaticamente</td></tr>
+<tr><td>-L, --location</td><td>Segue redirecionamentos automaticamente</td></tr>
 </tbody>
 </table>
 </div>
@@ -198,12 +199,23 @@
 <p>Por padrão, <code>curl</code> exibe o conteúdo da resposta diretamente no terminal, sem salvá-lo em um arquivo. Use <code>-o</code> ou <code>-O</code> para baixar e salvar o conteúdo.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">curl https://exemplo.com                          # exibe o conteúdo da página no terminal
-curl -O https://exemplo.com/arquivo.zip           # baixa o arquivo, mantendo o nome original
-curl -o meu_arquivo.zip https://exemplo.com/arquivo.zip  # baixa o arquivo com um novo nome
-curl -I https://exemplo.com                       # exibe apenas os cabeçalhos da resposta
-curl -X POST -d "nome=teste" https://exemplo.com/api     # envia dados via método POST
-curl -L https://exemplo.com                       # segue redirecionamentos automaticamente
+<pre><code class="language-bash"># exibe o conteúdo da página no terminal
+curl https://exemplo.com
+</code></pre>
+<pre><code class="language-bash"># baixa o arquivo, mantendo o nome original
+curl -O https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># baixa o arquivo com um novo nome
+curl -o meu_arquivo.zip https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># exibe apenas os cabeçalhos da resposta
+curl -I https://exemplo.com
+</code></pre>
+<pre><code class="language-bash"># envia dados via método POST
+curl -X POST -d "nome=teste" https://exemplo.com/api
+</code></pre>
+<pre><code class="language-bash"># segue redirecionamentos automaticamente
+curl -L https://exemplo.com
 </code></pre>
 
                     </main>

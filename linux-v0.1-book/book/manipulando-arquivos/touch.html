@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,22 +187,37 @@
 <tbody>
 <tr><td>arquivos</td><td>Arquivos que terão sua data e hora modificados</td></tr>
 <tr><td>-t [ANO]MMDDhhmm[.ss]</td><td>Define data/hora manualmente: ano (opcional), mês, dia, hora, minuto e, opcionalmente, segundos</td></tr>
-<tr><td>-a, –time=atime</td><td>Altera somente a data e hora de acesso</td></tr>
-<tr><td>-m, –time=mtime</td><td>Altera somente a data e hora de modificação</td></tr>
-<tr><td>-c, –no-create</td><td>Não cria o arquivo caso ele não exista</td></tr>
+<tr><td>-a, --time=atime</td><td>Altera somente a data e hora de acesso</td></tr>
+<tr><td>-m, --time=mtime</td><td>Altera somente a data e hora de modificação</td></tr>
+<tr><td>-c, --no-create</td><td>Não cria o arquivo caso ele não exista</td></tr>
 <tr><td>-r arquivo</td><td>Usa a data e hora de outro arquivo como referência</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">touch arquivo.txt                     # cria `arquivo.txt` vazio ou atualiza sua data/hora para agora
-touch a.txt b.txt c.txt               # cria ou atualiza a data/hora de múltiplos arquivos
-touch -c arquivo.txt                  # atualiza a data/hora sem criar o arquivo caso não exista
-touch -a arquivo.txt                  # atualiza somente a data de acesso
-touch -m arquivo.txt                  # atualiza somente a data de modificação
-touch -t 12311830 arquivo.txt         # define a data/hora para 31 de dezembro às 18:30
-touch -t 202312311830.00 arquivo.txt  # define para 31/12/2023 às 18:30:00
-touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arquivo.txt`
+<pre><code class="language-bash"># cria `arquivo.txt` vazio ou atualiza sua data/hora para agora
+touch arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># cria ou atualiza a data/hora de múltiplos arquivos
+touch a.txt b.txt c.txt
+</code></pre>
+<pre><code class="language-bash"># atualiza a data/hora sem criar o arquivo caso não exista
+touch -c arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># atualiza somente a data de acesso
+touch -a arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># atualiza somente a data de modificação
+touch -m arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># define a data/hora para 31 de dezembro às 18:30
+touch -t 12311830 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># define para 31/12/2023 às 18:30:00
+touch -t 202312311830.00 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># aplica a data/hora de `ref.txt` em `arquivo.txt`
+touch -r ref.txt arquivo.txt
 </code></pre>
 
                     </main>

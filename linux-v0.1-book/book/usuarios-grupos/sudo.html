@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -188,7 +189,7 @@
 <tr><td>-u usuário</td><td>Executa o comando como um usuário específico, em vez de root</td></tr>
 <tr><td>-i</td><td>Executa o comando simulando o ambiente de login do usuário de destino</td></tr>
 <tr><td>-s</td><td>Executa um shell com privilégios elevados</td></tr>
-<tr><td>-l, –list</td><td>Lista os comandos que o usuário atual tem permissão de executar com <code>sudo</code></td></tr>
+<tr><td>-l, --list</td><td>Lista os comandos que o usuário atual tem permissão de executar com <code>sudo</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -196,11 +197,20 @@
 <p><code>sudo</code> executa apenas um comando pontual com privilégios elevados, pedindo a senha do próprio usuário (não a do root), desde que ele tenha permissão configurada no arquivo <code>/etc/sudoers</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo apt update                       # executa o comando `apt update` com privilégios de root
-sudo -u usuario ls /home/usuario      # executa o comando como um usuário específico
-sudo -i                               # abre um shell interativo como root
-sudo -l                               # lista os comandos que o usuário atual pode executar com sudo
-sudo systemctl restart nginx          # reinicia um serviço do sistema com privilégios elevados
+<pre><code class="language-bash"># executa o comando `apt update` com privilégios de root
+sudo apt update
+</code></pre>
+<pre><code class="language-bash"># executa o comando como um usuário específico
+sudo -u usuario ls /home/usuario
+</code></pre>
+<pre><code class="language-bash"># abre um shell interativo como root
+sudo -i
+</code></pre>
+<pre><code class="language-bash"># lista os comandos que o usuário atual pode executar com sudo
+sudo -l
+</code></pre>
+<pre><code class="language-bash"># reinicia um serviço do sistema com privilégios elevados
+sudo systemctl restart nginx
 </code></pre>
 
                     </main>

@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,12 +187,12 @@
 <tbody>
 <tr><td>arquivo.tar</td><td>Nome do arquivo <code>.tar</code> a ser criado ou lido</td></tr>
 <tr><td>arquivo</td><td>Localização do(s) arquivo(s) ou diretório(s) a serem agrupados</td></tr>
-<tr><td>-c, –create</td><td>Cria um novo arquivo <code>.tar</code></td></tr>
-<tr><td>-x, –extract</td><td>Extrai o conteúdo de um arquivo <code>.tar</code></td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os nomes dos arquivos processados durante a operação</td></tr>
-<tr><td>-f, –file</td><td>Especifica o nome do arquivo <code>.tar</code> a ser usado (geralmente obrigatório)</td></tr>
-<tr><td>-z, –gzip</td><td>Compacta/descompacta usando <code>gzip</code> (gera/lê arquivos <code>.tar.gz</code>)</td></tr>
-<tr><td>-t, –list</td><td>Lista o conteúdo de um arquivo <code>.tar</code>, sem extraí-lo</td></tr>
+<tr><td>-c, --create</td><td>Cria um novo arquivo <code>.tar</code></td></tr>
+<tr><td>-x, --extract</td><td>Extrai o conteúdo de um arquivo <code>.tar</code></td></tr>
+<tr><td>-v, --verbose</td><td>Exibe os nomes dos arquivos processados durante a operação</td></tr>
+<tr><td>-f, --file</td><td>Especifica o nome do arquivo <code>.tar</code> a ser usado (geralmente obrigatório)</td></tr>
+<tr><td>-z, --gzip</td><td>Compacta/descompacta usando <code>gzip</code> (gera/lê arquivos <code>.tar.gz</code>)</td></tr>
+<tr><td>-t, --list</td><td>Lista o conteúdo de um arquivo <code>.tar</code>, sem extraí-lo</td></tr>
 </tbody>
 </table>
 </div>
@@ -199,11 +200,20 @@
 <p><code>tar</code> originalmente apenas agrupa arquivos em um único pacote (sem compactar). Para compactar durante o processo, combine com a opção <code>-z</code> (gzip), gerando um arquivo <code>.tar.gz</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">tar -cvf arquivo.tar pasta/           # agrupa uma pasta em `arquivo.tar`
-tar -xvf arquivo.tar                  # extrai o conteúdo de `arquivo.tar`
-tar -czvf arquivo.tar.gz pasta/       # agrupa e compacta uma pasta em `arquivo.tar.gz`
-tar -xzvf arquivo.tar.gz              # extrai um arquivo `.tar.gz`
-tar -tvf arquivo.tar                  # lista o conteúdo de `arquivo.tar`, sem extraí-lo
+<pre><code class="language-bash"># agrupa uma pasta em `arquivo.tar`
+tar -cvf arquivo.tar pasta/
+</code></pre>
+<pre><code class="language-bash"># extrai o conteúdo de `arquivo.tar`
+tar -xvf arquivo.tar
+</code></pre>
+<pre><code class="language-bash"># agrupa e compacta uma pasta em `arquivo.tar.gz`
+tar -czvf arquivo.tar.gz pasta/
+</code></pre>
+<pre><code class="language-bash"># extrai um arquivo `.tar.gz`
+tar -xzvf arquivo.tar.gz
+</code></pre>
+<pre><code class="language-bash"># lista o conteúdo de `arquivo.tar`, sem extraí-lo
+tar -tvf arquivo.tar
 </code></pre>
 
                     </main>

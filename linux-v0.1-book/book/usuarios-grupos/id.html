@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,10 +186,10 @@
 </thead>
 <tbody>
 <tr><td>usuário</td><td>Nome do usuário sobre o qual se deseja obter informações (padrão: usuário atual)</td></tr>
-<tr><td>-u, –user</td><td>Exibe apenas o UID (identificador do usuário)</td></tr>
-<tr><td>-g, –group</td><td>Exibe apenas o GID (identificador do grupo principal)</td></tr>
-<tr><td>-G, –groups</td><td>Exibe todos os IDs de grupos aos quais o usuário pertence</td></tr>
-<tr><td>-n, –name</td><td>Exibe o nome, em vez do número, ao ser usado junto com <code>-u</code>, <code>-g</code> ou <code>-G</code></td></tr>
+<tr><td>-u, --user</td><td>Exibe apenas o UID (identificador do usuário)</td></tr>
+<tr><td>-g, --group</td><td>Exibe apenas o GID (identificador do grupo principal)</td></tr>
+<tr><td>-G, --groups</td><td>Exibe todos os IDs de grupos aos quais o usuário pertence</td></tr>
+<tr><td>-n, --name</td><td>Exibe o nome, em vez do número, ao ser usado junto com <code>-u</code>, <code>-g</code> ou <code>-G</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -196,11 +197,20 @@
 <p>A saída padrão do <code>id</code> exibe três informações: <code>uid</code> (usuário), <code>gid</code> (grupo principal) e <code>groups</code> (todos os grupos aos quais o usuário pertence).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">id                                    # exibe as informações do usuário atual
-id usuario                            # exibe as informações de um usuário específico
-id -u                                 # exibe apenas o UID do usuário atual
-id -un                                # exibe apenas o nome do usuário atual
-id -Gn                                # exibe os nomes de todos os grupos do usuário atual
+<pre><code class="language-bash"># exibe as informações do usuário atual
+id
+</code></pre>
+<pre><code class="language-bash"># exibe as informações de um usuário específico
+id usuario
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o UID do usuário atual
+id -u
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o nome do usuário atual
+id -un
+</code></pre>
+<pre><code class="language-bash"># exibe os nomes de todos os grupos do usuário atual
+id -Gn
 </code></pre>
 
                     </main>

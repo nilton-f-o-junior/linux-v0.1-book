@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,7 +186,7 @@
 </thead>
 <tbody>
 <tr><td>dispositivo</td><td>Localização do disco a ser manipulado (ex.: <code>/dev/sda</code>)</td></tr>
-<tr><td>-z, –zero</td><td>Inicia com uma tabela de partições em branco, ignorando a existente</td></tr>
+<tr><td>-z, --zero</td><td>Inicia com uma tabela de partições em branco, ignorando a existente</td></tr>
 <tr><td>↑ / ↓</td><td>Navega entre as partições listadas</td></tr>
 <tr><td>← / →</td><td>Navega entre as opções do menu (New, Delete, Write, Quit, etc.)</td></tr>
 <tr><td>Enter</td><td>Confirma a opção selecionada no menu</td></tr>
@@ -197,8 +198,11 @@
 Assim como o <code>fdisk</code>, alterar a tabela de partições é uma operação sensível e geralmente requer permissões de superusuário — erros podem causar perda de dados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo cfdisk /dev/sda                  # abre a interface interativa para manipular as partições do disco
-sudo cfdisk -z /dev/sdb                # abre a interface iniciando com uma tabela de partições em branco
+<pre><code class="language-bash"># abre a interface interativa para manipular as partições do disco
+sudo cfdisk /dev/sda
+</code></pre>
+<pre><code class="language-bash"># abre a interface iniciando com uma tabela de partições em branco
+sudo cfdisk -z /dev/sdb
 </code></pre>
 
                     </main>

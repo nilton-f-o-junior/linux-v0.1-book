@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,7 +187,7 @@
 <tbody>
 <tr><td>-f</td><td>Força o desligamento imediato, sem avisar outros processos</td></tr>
 <tr><td>-p</td><td>Desliga o sistema desligando também a energia do hardware (padrão em <code>poweroff</code>)</td></tr>
-<tr><td>–halt</td><td>Interrompe o sistema sem efetivamente desligar a energia</td></tr>
+<tr><td>--halt</td><td>Interrompe o sistema sem efetivamente desligar a energia</td></tr>
 </tbody>
 </table>
 </div>
@@ -195,9 +196,14 @@
 Para agendar o desligamento ou avisar outros usuários antes de executá-lo, utilize <code>shutdown</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo poweroff              # desliga o sistema imediatamente
-sudo poweroff -f            # força o desligamento, sem avisar processos
-sudo systemctl poweroff     # desliga o sistema via systemd
+<pre><code class="language-bash"># desliga o sistema imediatamente
+sudo poweroff
+</code></pre>
+<pre><code class="language-bash"># força o desligamento, sem avisar processos
+sudo poweroff -f
+</code></pre>
+<pre><code class="language-bash"># desliga o sistema via systemd
+sudo systemctl poweroff
 </code></pre>
 
                     </main>

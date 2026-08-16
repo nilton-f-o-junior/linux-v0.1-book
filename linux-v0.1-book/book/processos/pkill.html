@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,9 +187,9 @@
 <tbody>
 <tr><td>padrão</td><td>Nome (ou expressão) usado para localizar os processos a serem sinalizados</td></tr>
 <tr><td>-9, -SIGKILL</td><td>Força o encerramento imediato dos processos correspondentes</td></tr>
-<tr><td>-f, –full</td><td>Considera a linha de comando completa na busca, não apenas o nome do processo</td></tr>
+<tr><td>-f, --full</td><td>Considera a linha de comando completa na busca, não apenas o nome do processo</td></tr>
 <tr><td>-u usuário</td><td>Sinaliza apenas os processos pertencentes ao usuário informado</td></tr>
-<tr><td>-i, –ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas na busca</td></tr>
+<tr><td>-i, --ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas na busca</td></tr>
 </tbody>
 </table>
 </div>
@@ -196,11 +197,20 @@
 <p><code>pkill</code> é semelhante ao <code>killall</code>, mas permite buscas mais flexíveis, como por expressões regulares e por trechos da linha de comando (<code>-f</code>), em vez de exigir o nome exato do processo.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">pkill firefox                         # envia o sinal padrão (SIGTERM) para processos chamados `firefox`
-pkill -9 firefox                      # força o encerramento imediato dos processos `firefox`
-pkill -f "python script.py"           # encerra processos cuja linha de comando completa corresponda ao padrão
-pkill -u usuario                      # encerra todos os processos pertencentes a um usuário específico
-pkill -i FIREFOX                      # busca ignorando diferenças entre maiúsculas e minúsculas
+<pre><code class="language-bash"># envia o sinal padrão (SIGTERM) para processos chamados `firefox`
+pkill firefox
+</code></pre>
+<pre><code class="language-bash"># força o encerramento imediato dos processos `firefox`
+pkill -9 firefox
+</code></pre>
+<pre><code class="language-bash"># encerra processos cuja linha de comando completa corresponda ao padrão
+pkill -f "python script.py"
+</code></pre>
+<pre><code class="language-bash"># encerra todos os processos pertencentes a um usuário específico
+pkill -u usuario
+</code></pre>
+<pre><code class="language-bash"># busca ignorando diferenças entre maiúsculas e minúsculas
+pkill -i FIREFOX
 </code></pre>
 
                     </main>

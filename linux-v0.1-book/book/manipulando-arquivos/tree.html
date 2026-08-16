@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -197,12 +198,23 @@
 <p><code>tree</code> normalmente não vem instalado por padrão em todas as distribuições. Pode ser necessário instalá-lo através do gerenciador de pacotes (ex.: <code>apt install tree</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">tree                                 # exibe a árvore do diretório atual
-tree /var/log                        # exibe a árvore do diretório `/var/log`
-tree -a                              # exibe a árvore incluindo arquivos e diretórios ocultos
-tree -d                              # exibe apenas os diretórios, sem listar arquivos
-tree -L 2                            # exibe a árvore limitada a 2 níveis de profundidade
-tree -h                              # exibe a árvore com o tamanho dos arquivos
+<pre><code class="language-bash"># exibe a árvore do diretório atual
+tree
+</code></pre>
+<pre><code class="language-bash"># exibe a árvore do diretório `/var/log`
+tree /var/log
+</code></pre>
+<pre><code class="language-bash"># exibe a árvore incluindo arquivos e diretórios ocultos
+tree -a
+</code></pre>
+<pre><code class="language-bash"># exibe apenas os diretórios, sem listar arquivos
+tree -d
+</code></pre>
+<pre><code class="language-bash"># exibe a árvore limitada a 2 níveis de profundidade
+tree -L 2
+</code></pre>
+<pre><code class="language-bash"># exibe a árvore com o tamanho dos arquivos
+tree -h
 </code></pre>
 
                     </main>

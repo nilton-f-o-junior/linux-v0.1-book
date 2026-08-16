@@ -29,6 +29,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -36,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-d18aaafb.js"></script>
@@ -183,7 +184,7 @@
 <p>O principal objetivo é tornar o aprendizado acessível, permitindo que qualquer pessoa compreenda os conceitos sem barreiras. Desejo que este material seja útil para a sua jornada e espero que você aproveite bem a leitura.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="prefácio"><a href="#prefácio" class="header">Prefácio</a></h1>
-<p>“A beleza que vive no ato de compartilhar algo com os outros.” Monja Coen</p>
+<p>"A beleza que vive no ato de compartilhar algo com os outros." Monja Coen</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="começando"><a class="header" href="#começando">Começando</a></h1>
 <p>Inicialmente, alguns temas precisam ser explicados. Antes de entender os componentes do computador e do software, precisamos dar uma olhada inicial em outros conceitos comuns ao Linux que são bem recorrentes, independentemente do seu nível de conhecimento. É importante salientar que esta é apenas uma introdução básica para que você possa começar seus estudos e se familiarizar com o ambiente.</p>
@@ -315,7 +316,7 @@
 <p>Quando alguém liga o computador e vê uma área de trabalho surgindo na tela, com pastas, um relógio no canto e um fundo personalizável, está olhando para uma construção inteiramente separada do kernel, esse é o que chamamos de desktop environment.</p>
 <p>Vale destacar que o ambiente de desktop é independente da distribuição escolhida. A grande maioria das distribuições permite instalar e alternar entre diferentes ambientes gráficos, e muitas oferecem variações oficiais, cada uma vindo com um ambiente diferente já configurado por padrão. Escolher uma distribuição e escolher um ambiente de desktop são, na prática, decisões separadas.</p>
 <h3 id="gnome"><a class="header" href="#gnome">GNOME</a></h3>
-<p>O <a href="https://www.gnome.org/">GNOME</a> aposta em simplicidade e coerência. Sua filosofia é reduzir o número de decisões que o usuário precisa tomar: poucos botões expostos, fluxos bem definidos, estética limpa e moderna. A área de trabalho é quase vazia por padrão. O foco está nas “atividades”, um painel central que organiza tarefas e aplicativos abertos.</p>
+<p>O <a href="https://www.gnome.org/">GNOME</a> aposta em simplicidade e coerência. Sua filosofia é reduzir o número de decisões que o usuário precisa tomar: poucos botões expostos, fluxos bem definidos, estética limpa e moderna. A área de trabalho é quase vazia por padrão. O foco está nas "atividades", um painel central que organiza tarefas e aplicativos abertos.</p>
 <h3 id="kde-plasma"><a class="header" href="#kde-plasma">KDE Plasma</a></h3>
 <p>O <a href="https://kde.org/plasma-desktop/">KDE Plasma</a> vai na direção oposta ao GNOME. É um ambiente profundamente configurável, onde praticamente tudo pode ser ajustado: posição da barra de tarefas, comportamento dos ícones, atalhos de teclado, temas visuais e efeitos de janela. É possível adicionar widgets diretamente na área de trabalho, criar temas personalizados e muito mais.</p>
 <h3 id="cosmic"><a class="header" href="#cosmic">COSMIC</a></h3>
@@ -401,7 +402,7 @@
 <h3 id="slots-pcie"><a class="header" href="#slots-pcie">Slots PCIe</a></h3>
 <p>Pense no PCIe como os encaixes da placa-mãe para conectar outras peças no computador. O encaixe maior (x16) é feito sob medida para a placa de vídeo, garantindo a velocidade máxima. Os encaixes menores (x4 e x1) servem para coisas mais simples, como placas de rede, som ou espaço extra de armazenamento.</p>
 <h3 id="conectores-sata"><a class="header" href="#conectores-sata">Conectores SATA</a></h3>
-<p>Apesar da popularidade crescente dos SSDs M.2, os conectores SATA ainda estão presentes na maioria das placas-mãe para quem usa HDs ou SSDs do tipo 2.5“. Cada conector SATA alimenta um dispositivo, e a quantidade disponível varia conforme o modelo da placa.</p>
+<p>Apesar da popularidade crescente dos SSDs M.2, os conectores SATA ainda estão presentes na maioria das placas-mãe para quem usa HDs ou SSDs do tipo 2.5". Cada conector SATA alimenta um dispositivo, e a quantidade disponível varia conforme o modelo da placa.</p>
 <h3 id="slots-m2"><a class="header" href="#slots-m2">Slots M.2</a></h3>
 <p>Os slots M.2 são conectores compactos usados principalmente para SSDs NVMe. Um slot M.2 no formato físico correto pode operar tanto via PCIe quanto via SATA, dependendo da placa e do SSD. É importante verificar qual protocolo cada slot suporta, porque um SSD NVMe não vai funcionar em sua velocidade máxima em um slot M.2 que opera apenas em SATA.</p>
 <h3 id="conectores-de-energia"><a class="header" href="#conectores-de-energia">Conectores de energia</a></h3>
@@ -457,13 +458,13 @@
 <h2 id="bios-e-uefi"><a class="header" href="#bios-e-uefi">BIOS e UEFI</a></h2>
 <p>Durante décadas, esse firmware foi chamado de <strong>BIOS</strong> (<em>Basic Input/Output System</em>). A interface era simples, navegada com o teclado, exibida em texto puro. O BIOS tinha uma limitação estrutural importante: ele só conseguia reconhecer partições de disco seguindo um padrão chamado <strong>MBR</strong> (<em>Master Boot Record</em>), que limitava discos a 2 TB e suportava no máximo quatro partições primárias.</p>
 <p>A indústria desenvolveu o <strong>UEFI</strong> (<em>Unified Extensible Firmware Interface</em>), que substituiu o BIOS na maioria dos computadores fabricados a partir do início dos anos 2010. O UEFI trouxe uma interface gráfica navegável com mouse, suporte a discos maiores por meio do padrão <strong>GPT</strong> (<em>GUID Partition Table</em>), inicialização mais rápida e um recurso chamado <em><strong>Secure Boot</strong></em> que verifica criptograficamente se o bootloader a ser carregado é confiável, bloqueando softwares maliciosos que tentariam se inserir nessa etapa.</p>
-<p>Na prática, UEFI é o BIOS moderno. A maioria das pessoas ainda chama de “entrar na BIOS” a ação de acessar as configurações de firmware, mesmo que o sistema seja UEFI, e os fabricantes de placas-mãe mantêm essa terminologia nas interfaces para não confundir os usuários.</p>
+<p>Na prática, UEFI é o BIOS moderno. A maioria das pessoas ainda chama de "entrar na BIOS" a ação de acessar as configurações de firmware, mesmo que o sistema seja UEFI, e os fabricantes de placas-mãe mantêm essa terminologia nas interfaces para não confundir os usuários.</p>
 <p>Para acessar essas configurações, é preciso pressionar uma tecla específica logo nos primeiros segundos após ligar o computador, antes que o bootloader assuma o controle.</p>
 <p>A tecla varia conforme o fabricante e até mesmo entre modelos de uma mesma marca, sendo <code>Del</code>, <code>F2</code>, <code>F1</code>, <code>F10</code> e <code>F12</code> algumas das mais comuns. Na dúvida, o manual do fabricante ou uma busca pelo modelo exato da placa-mãe ou do notebook é o caminho mais confiável..</p>
-<p>Muitos fabricantes exibem brevemente essa informação na tela durante o POST, uma linha discreta como “Press DEL to enter setup”, mas ela desaparece rápido. Além disso, muitos computadores modernos vêm com um recurso de inicialização rápida (<em>Fast Boot</em>) habilitado por padrão no UEFI, que reduz ainda mais essa janela de tempo. Se não houver tempo de reagir, basta reiniciar e tentar novamente.</p>
+<p>Muitos fabricantes exibem brevemente essa informação na tela durante o POST, uma linha discreta como "Press DEL to enter setup", mas ela desaparece rápido. Além disso, muitos computadores modernos vêm com um recurso de inicialização rápida (<em>Fast Boot</em>) habilitado por padrão no UEFI, que reduz ainda mais essa janela de tempo. Se não houver tempo de reagir, basta reiniciar e tentar novamente.</p>
 <h2 id="o-bootloader-a-ponte-entre-o-firmware-e-o-kernel"><a class="header" href="#o-bootloader-a-ponte-entre-o-firmware-e-o-kernel">O bootloader: a ponte entre o firmware e o kernel</a></h2>
 <p>Após o POST, o firmware localiza um dispositivo de armazenamento inicializável, geralmente o SSD ou HD onde o sistema operacional está instalado, e transfere o controle para um programa específico chamado <em>bootloader</em>.</p>
-<p>O bootloader tem uma função muito precisa: encontrar o kernel do sistema operacional no disco, carregá-lo na memória e inicializá-lo. Ele é uma camada necessária porque o kernel não pode simplesmente “se carregar sozinho”, ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware.</p>
+<p>O bootloader tem uma função muito precisa: encontrar o kernel do sistema operacional no disco, carregá-lo na memória e inicializá-lo. Ele é uma camada necessária porque o kernel não pode simplesmente "se carregar sozinho", ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware.</p>
 <p>No Linux, o bootloader mais comum é o <strong>GRUB</strong> (<em>Grand Unified Bootloader</em>), que consegue localizar kernels em partições diferentes, passar parâmetros de configuração para o kernel e lidar com múltiplos sistemas no mesmo computador, o que os usuários chamam de <em><strong>dual boot</strong></em>.</p>
 <p>Uma alternativa mais simples e moderna é o <strong>systemd-boot</strong>, que integra ao ecossistema do <strong>systemd</strong> (o gerenciador de serviços padrão em boa parte das distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais direto e com menos configuração manual envolvida.</p>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -871,7 +872,7 @@
 <p>Antes de entrar nas variações, vale entender dois termos que aparecem com frequência:</p>
 <ul>
 <li><strong>LCD (<em>Liquid Crystal Display</em>):</strong> a imagem é formada por cristais líquidos que controlam a passagem de luz, mas que não emitem luz por conta própria, dependendo de uma iluminação de fundo chamada <em>backlight</em>.</li>
-<li><strong>LED:</strong> monitores chamados de “LED” simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. Sendo mais eficiente, que permite designs mais finos e melhor precisão de cores.</li>
+<li><strong>LED:</strong> monitores chamados de "LED" simplesmente usam diodos emissores de luz para iluminar o painel LCD por trás, em vez das fluorescentes mais antigas. Sendo mais eficiente, que permite designs mais finos e melhor precisão de cores.</li>
 </ul>
 <h3 id="ips"><a class="header" href="#ips">IPS</a></h3>
 <p>O painel IPS (<em>In-Plane Switching</em>) é conhecido pela qualidade de cor e pelos ângulos de visão amplos. As cores permanecem precisas mesmo quando o monitor é visto de lado ou de cima, sem o desvio perceptível que outros painéis apresentam. Por isso, é a tecnologia preferida em trabalhos que exigem fidelidade visual: edição de fotos, design gráfico e produção de vídeo.</p>
@@ -907,7 +908,7 @@
 <p>As resoluções mais comuns no mercado atual:</p>
 <ul>
 <li><strong>Full HD (1920 × 1080):</strong> padrão dominante por anos, ainda presente na maioria dos monitores de entrada e meio de gama. Adequado para telas de até 27 polegadas; em tamanhos maiores, a densidade de pixels começa a ser percebida;</li>
-<li><strong>QHD (2560 × 1440):</strong> equilíbrio entre nitidez e desempenho, indicado para monitores de 27 a 32 polegadas, exige mais da placa de vídeo que o Full HD mas sem o custo total do 4K. O termo “2K” é usado informalmente no mercado para se referir a essa resolução, embora tecnicamente 2K corresponda ao padrão de cinema digital (2048×1080);</li>
+<li><strong>QHD (2560 × 1440):</strong> equilíbrio entre nitidez e desempenho, indicado para monitores de 27 a 32 polegadas, exige mais da placa de vídeo que o Full HD mas sem o custo total do 4K. O termo "2K" é usado informalmente no mercado para se referir a essa resolução, embora tecnicamente 2K corresponda ao padrão de cinema digital (2048×1080);</li>
 <li><strong>4K / UHD (3840 × 2160):</strong> quatro vezes mais pixels que o Full HD, a nitidez é notável em telas maiores, especialmente para edição de imagem e vídeo. Exige hardware potente para jogos nessa resolução com desempenho fluido.</li>
 </ul>
 <h2 id="taxa-de-atualização"><a class="header" href="#taxa-de-atualização">Taxa de atualização</a></h2>
@@ -1023,7 +1024,7 @@
 <p>Se um programa priva o usuário de qualquer uma dessas liberdades, ele é classificado como software proprietário ou privativo. Nesse modelo, o desenvolvedor detém o controle sobre o software e, por extensão, sobre o que os usuários podem fazer com ele. No modelo livre, o controle pertence inteiramente aos usuários, individual e coletivamente.</p>
 <h2 id="a-filosofia-gnu-e-richard-stallman"><a class="header" href="#a-filosofia-gnu-e-richard-stallman">A Filosofia GNU e Richard Stallman</a></h2>
 <p>No final da década de 1970 e início da década de 1980, o ecossistema de computação mudou drasticamente. Softwares que antes eram compartilhados livremente entre cientistas e laboratórios passaram a ser cercados por contratos de confidencialidade e licenças restritivas. Em resposta a essa comercialização que isolava os usuários, Richard Stallman fundou o Projeto GNU em 1984 e, posteriormente, a <strong>FSF</strong> (<em>Free Software Foundation</em>).</p>
-<p>O objetivo do projeto era ambicioso: criar um sistema operacional inteiramente livre, de modo que ninguém precisasse usar software proprietário para operar um computador. O nome GNU é um acrônimo recursivo para <em>“GNU’s Not Unix”</em> (GNU não é Unix), uma homenagem técnica ao sistema que serviu de inspiração arquitetônica, mas cujas restrições de licença a filosofia GNU rejeitava.</p>
+<p>O objetivo do projeto era ambicioso: criar um sistema operacional inteiramente livre, de modo que ninguém precisasse usar software proprietário para operar um computador. O nome GNU é um acrônimo recursivo para <em>"GNU's Not Unix"</em> (GNU não é Unix), uma homenagem técnica ao sistema que serviu de inspiração arquitetônica, mas cujas restrições de licença a filosofia GNU rejeitava.</p>
 <p>Para a filosofia GNU, o compartilhamento de software é um imperativo ético. Negar a alguém o direito de entender ou modificar um programa que ele utiliza é visto como uma violação da autonomia individual e um obstáculo à cooperação social.</p>
 <h2 id="o-mecanismo-do-copyleft-e-a-gpl"><a class="header" href="#o-mecanismo-do-copyleft-e-a-gpl">O mecanismo do Copyleft e a GPL</a></h2>
 <p>Para garantir que o software livre permanecesse livre, Stallman utilizou as próprias leis de direito autoral (<em>copyright</em>) de forma invertida, criando o conceito de <em>copyleft</em>.</p>
@@ -1260,10 +1261,10 @@
 <h2 id="como-escolher-uma-licença"><a class="header" href="#como-escolher-uma-licença">Como escolher uma licença?</a></h2>
 <p>A escolha de uma licença depende do objetivo do projeto. Para maximizar a adoção e permitir o uso em qualquer contexto, incluindo produtos proprietários, licenças permissivas como MIT ou Apache 2.0 são a escolha natural.</p>
 <p>Para garantir que todas as versões do software permaneçam livres, a GPL é o mecanismo mais forte disponível.</p>
-<p>Para projetos híbridos que precisam de flexibilidade parcial, a MPL ou a LGPL oferecem caminhos intermediários. Não existe licença “melhor”,existe a licença mais adequada para o que o autor pretende proteger e para como ele deseja que o código seja usado.</p>
+<p>Para projetos híbridos que precisam de flexibilidade parcial, a MPL ou a LGPL oferecem caminhos intermediários. Não existe licença "melhor",existe a licença mais adequada para o que o autor pretende proteger e para como ele deseja que o código seja usado.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="sistema-de-janelas"><a class="header" href="#sistema-de-janelas">Sistema de Janelas</a></h1>
-<p>Antes que qualquer elemento gráfico apareça na tela, algo precisa decidir onde cada janela fica, como o mouse e o teclado se comunicam com os programas e como as imagens chegam até a placa de vídeo. Esse “algo” é o <strong>protocolo de exibição gráfica</strong>, e no Linux os dois protocolos mais relevantes são o X11 e o Wayland.</p>
+<p>Antes que qualquer elemento gráfico apareça na tela, algo precisa decidir onde cada janela fica, como o mouse e o teclado se comunicam com os programas e como as imagens chegam até a placa de vídeo. Esse "algo" é o <strong>protocolo de exibição gráfica</strong>, e no Linux os dois protocolos mais relevantes são o X11 e o Wayland.</p>
 <h2 id="o-que-é-um-protocolo-de-exibição"><a class="header" href="#o-que-é-um-protocolo-de-exibição">O que é um protocolo de exibição</a></h2>
 <p>Um protocolo de exibição define as regras de comunicação entre os aplicativos gráficos e o hardware de vídeo. Ele é responsável por desenhar janelas, capturar eventos de entrada (cliques, toques de teclado) e entregar tudo isso de forma organizada na tela. Sem esse intermediário, cada aplicativo teria que conversar diretamente com a placa de vídeo, algo inviável e inseguro.</p>
 <h2 id="x11-1"><a class="header" href="#x11-1">X11</a></h2>
@@ -1658,7 +1659,7 @@ chown :
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="cat"><a class="header" href="#cat">cat</a></h1>
 <p>Mostra o conteúdo de um arquivo de texto.</p>
-<pre><code class="language-bash">cat [opções] [arquivo] [arquivo1]
+<pre><code class="language-bash">cat [opções] [arquivo]
 </code></pre>
 <div class="table-wrapper">
 <table>
@@ -1667,8 +1668,8 @@ chown :
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td>-n, –number</td><td>Exibe o número de cada linha</td></tr>
-<tr><td>-s, –squeeze-blank</td><td>Suprime linhas em branco consecutivas, exibindo no máximo uma</td></tr>
+<tr><td>-n, --number</td><td>Exibe o número de cada linha</td></tr>
+<tr><td>-s, --squeeze-blank</td><td>Suprime linhas em branco consecutivas, exibindo no máximo uma</td></tr>
 <tr><td>-</td><td>Lê a entrada padrão (<code>stdin</code>), ou seja, o que é digitado ou enviado por outro comando via pipe</td></tr>
 </tbody>
 </table>
@@ -1677,13 +1678,26 @@ chown :
 <p>Use <code>zcat</code> para visualizar diretamente arquivos compactados com gzip.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">cat arquivo.txt                     # exibe o conteúdo de `arquivo.txt`
-cat /usr/doc/copyright/GPL          # exibe o arquivo `GPL` usando caminho absoluto
-cat arquivo1.txt arquivo2.txt       # exibe o conteúdo de dois arquivos em sequência
-cat -n arquivo.txt                  # exibe o conteúdo com o número de cada linha
-cat -s arquivo.txt                  # exibe o conteúdo suprimindo linhas em branco consecutivas
-cat -n -s arquivo.txt               # combina numeração de linhas e supressão de linhas em branco
-cat -                               # lê e exibe o que for digitado na entrada padrão (stdin)
+<pre><code class="language-bash"># exibe o conteúdo de `arquivo.txt`
+cat arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe o arquivo `GPL` usando caminho absoluto
+cat /usr/doc/copyright/GPL
+</code></pre>
+<pre><code class="language-bash"># exibe o conteúdo de dois arquivos em sequência
+cat arquivo1.txt arquivo2.txt
+</code></pre>
+<pre><code class="language-bash"># exibe o conteúdo com o número de cada linha
+cat -n arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe o conteúdo suprimindo linhas em branco consecutivas
+cat -s arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># combina numeração de linhas e supressão de linhas em branco
+cat -n -s arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># lê e exibe o que for digitado na entrada padrão (stdin)
+cat -
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="head"><a class="header" href="#head">head</a></h1>
@@ -1697,17 +1711,23 @@ cat -                               # lê e exibe o que for digitado na entrada 
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td>-n, –lines=N</td><td>Exibe as primeiras <code>N</code> linhas (padrão: 10)</td></tr>
-<tr><td>-c, –bytes=N</td><td>Exibe os primeiros <code>N</code> bytes do arquivo</td></tr>
+<tr><td>-n, --lines=N</td><td>Exibe as primeiras <code>N</code> linhas (padrão: 10)</td></tr>
+<tr><td>-c, --bytes=N</td><td>Exibe os primeiros <code>N</code> bytes do arquivo</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">head arquivo.txt                    # exibe as 10 primeiras linhas de `arquivo.txt`
-head -n 20 arquivo.txt              # exibe as 20 primeiras linhas
-head -c 100 arquivo.txt             # exibe os 100 primeiros bytes
-head arquivo1.txt arquivo2.txt      # exibe as primeiras linhas de dois arquivos
-ps aux | head -n 5                  # exibe os 5 primeiros processos listados
+<pre><code class="language-bash"># exibe as 10 primeiras linhas de `arquivo.txt`
+head arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe as 20 primeiras linhas
+head -n 20 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe os 100 primeiros bytes
+head -c 100 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe as primeiras linhas de dois arquivos
+head arquivo1.txt arquivo2.txt
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tail"><a class="header" href="#tail">tail</a></h1>
@@ -1721,18 +1741,27 @@ ps aux | head -n 5                  # exibe os 5 primeiros processos listados
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td>-n, –lines=N</td><td>Exibe as últimas <code>N</code> linhas (padrão: 10)</td></tr>
-<tr><td>-c, –bytes=N</td><td>Exibe os últimos <code>N</code> bytes do arquivo</td></tr>
-<tr><td>-f, –follow</td><td>Mantém o arquivo aberto e exibe novas linhas em tempo real</td></tr>
+<tr><td>-n, --lines=N</td><td>Exibe as últimas <code>N</code> linhas (padrão: 10)</td></tr>
+<tr><td>-c, --bytes=N</td><td>Exibe os últimos <code>N</code> bytes do arquivo</td></tr>
+<tr><td>-f, --follow</td><td>Mantém o arquivo aberto e exibe novas linhas em tempo real</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">tail arquivo.txt                    # exibe as 10 últimas linhas de `arquivo.txt`
-tail -n 20 arquivo.txt              # exibe as 20 últimas linhas
-tail -c 100 arquivo.txt             # exibe os 100 últimos bytes
-tail -f /var/log/syslog             # monitora o arquivo em tempo real (útil para logs)
-tail -n +5 arquivo.txt              # exibe o arquivo a partir da 5ª linha até o fim
+<pre><code class="language-bash"># exibe as 10 últimas linhas de `arquivo.txt`
+tail arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe as 20 últimas linhas
+tail -n 20 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe os 100 últimos bytes
+tail -c 100 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># monitora o arquivo em tempo real (útil para logs)
+tail -f /var/log/syslog
+</code></pre>
+<pre><code class="language-bash"># exibe o arquivo a partir da 5ª linha até o fim
+tail -n +5 arquivo.txt
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="more"><a class="header" href="#more">more</a></h1>
@@ -1757,12 +1786,23 @@ tail -n +5 arquivo.txt              # exibe o arquivo a partir da 5ª linha até
 Para navegação bidirecional (rolar para cima), prefira <code>less</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">more arquivo.txt                    # exibe `arquivo.txt` de forma paginada
-more -10 arquivo.txt                # exibe 10 linhas por página
-more +20 arquivo.txt                # inicia a exibição a partir da linha 20
-cat arquivo.txt | more              # pagina a saída do comando `cat`
-ls -la /etc | more                  # pagina a listagem de um diretório longo
-zmore arquivo.txt.gz                # exibe um arquivo compactado com gzip de forma paginada
+<pre><code class="language-bash"># exibe `arquivo.txt` de forma paginada
+more arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe 10 linhas por página
+more -10 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># inicia a exibição a partir da linha 20
+more +20 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># pagina a saída do comando `cat`
+cat arquivo.txt | more
+</code></pre>
+<pre><code class="language-bash"># pagina a listagem de um diretório longo
+ls -la /etc | more
+</code></pre>
+<pre><code class="language-bash"># exibe um arquivo compactado com gzip de forma paginada
+zmore arquivo.txt.gz
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="less"><a class="header" href="#less">less</a></h1>
@@ -1776,8 +1816,8 @@ zmore arquivo.txt.gz                # exibe um arquivo compactado com gzip de fo
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td>-N, –LINE-NUMBERS</td><td>Exibe o número de cada linha</td></tr>
-<tr><td>-S, –chop-long-lines</td><td>Trunca linhas longas em vez de quebrá-las</td></tr>
+<tr><td>-N, --LINE-NUMBERS</td><td>Exibe o número de cada linha</td></tr>
+<tr><td>-S, --chop-long-lines</td><td>Trunca linhas longas em vez de quebrá-las</td></tr>
 <tr><td>+N</td><td>Inicia a exibição a partir da linha <code>N</code></td></tr>
 <tr><td>zless</td><td>Variante para visualizar arquivos compactados com gzip</td></tr>
 </tbody>
@@ -1788,13 +1828,26 @@ zmore arquivo.txt.gz                # exibe um arquivo compactado com gzip de fo
 Ao contrário de <code>more</code>, o <code>less</code> não carrega o arquivo inteiro na memória — ideal para arquivos grandes.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">less arquivo.txt                    # exibe `arquivo.txt` de forma paginada
-less -N arquivo.txt                 # exibe com numeração de linhas
-less -S arquivo.txt                 # trunca linhas longas sem quebra
-less +20 arquivo.txt                # inicia a exibição a partir da linha 20
-cat arquivo.txt | less              # pagina a saída do comando `cat`
-ls -la /etc | less                  # pagina a listagem de um diretório longo
-zless arquivo.txt.gz                # exibe um arquivo compactado com gzip de forma paginada
+<pre><code class="language-bash"># exibe `arquivo.txt` de forma paginada
+less arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe com numeração de linhas
+less -N arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># trunca linhas longas sem quebra
+less -S arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># inicia a exibição a partir da linha 20
+less +20 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># pagina a saída do comando `cat`
+cat arquivo.txt | less
+</code></pre>
+<pre><code class="language-bash"># pagina a listagem de um diretório longo
+ls -la /etc | less
+</code></pre>
+<pre><code class="language-bash"># exibe um arquivo compactado com gzip de forma paginada
+zless arquivo.txt.gz
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="manipulando-arquivos"><a class="header" href="#manipulando-arquivos">Manipulando Arquivos</a></h1>
@@ -1822,12 +1875,23 @@ zless arquivo.txt.gz                # exibe um arquivo compactado com gzip de fo
 <p><code>cd</code> é um comando interno do shell (não um programa externo), por isso ele não aparece como um executável separado no sistema de arquivos.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">cd /etc                      # navega até o diretório /etc
-cd                           # volta para o diretório pessoal (home)
-cd ~                         # também volta para o diretório pessoal (home)
-cd ..                        # sobe um nível (diretório pai)
-cd -                         # volta para o diretório anterior
-cd ~/Documentos              # navega até a pasta "Documentos" dentro do home
+<pre><code class="language-bash"># navega até o diretório /etc
+cd /etc
+</code></pre>
+<pre><code class="language-bash"># volta para o diretório pessoal (home)
+cd
+</code></pre>
+<pre><code class="language-bash"># também volta para o diretório pessoal (home)
+cd ~
+</code></pre>
+<pre><code class="language-bash"># sobe um nível (diretório pai)
+cd ..
+</code></pre>
+<pre><code class="language-bash"># volta para o diretório anterior
+cd -
+</code></pre>
+<pre><code class="language-bash"># navega até a pasta "Documentos" dentro do home
+cd ~/Documentos
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="cp"><a class="header" href="#cp">cp</a></h1>
@@ -1842,30 +1906,49 @@ cd ~/Documentos              # navega até a pasta "Documentos" dentro do home
 <tbody>
 <tr><td>origem</td><td>Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas</td></tr>
 <tr><td>destino</td><td>Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele</td></tr>
-<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
-<tr><td>-f, –force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
+<tr><td>-i, --interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-f, --force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
 <tr><td>-r</td><td>Copia arquivos de diretórios e subdiretórios; prefira <code>-R</code></td></tr>
-<tr><td>-R, –recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
-<tr><td>-s, –symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
-<tr><td>-l, –link</td><td>Cria hard link no destino em vez de copiar</td></tr>
-<tr><td>-p, –preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
-<tr><td>-u, –update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>-R, --recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
+<tr><td>-s, --symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
+<tr><td>-l, --link</td><td>Cria hard link no destino em vez de copiar</td></tr>
+<tr><td>-p, --preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
+<tr><td>-u, --update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
 <tr><td>-x</td><td>Não copia arquivos localizados em um sistema de arquivos diferente do de origem</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">cp teste.txt teste1.txt             # copia `teste.txt` para `teste1.txt` no mesmo diretório
-cp teste.txt /tmp                   # copia `teste.txt` para dentro do diretório `/tmp`
-cp * /tmp                           # copia todos os arquivos do diretório atual para `/tmp`
-cp /bin/* .                         # copia todos os arquivos de `/bin` para o diretório atual
-cp -R /bin /tmp                     # copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
-cp -R /bin/* /tmp                   # copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
-cp -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
-cp -u teste.txt /tmp                # copia somente se `teste.txt` for mais recente que o destino
-cp -v * /tmp                        # copia todos os arquivos exibindo o progresso
-cp -p teste.txt /tmp                # copia preservando permissões e datas do arquivo
+<pre><code class="language-bash"># copia `teste.txt` para `teste1.txt` no mesmo diretório
+cp teste.txt teste1.txt
+</code></pre>
+<pre><code class="language-bash"># copia `teste.txt` para dentro do diretório `/tmp`
+cp teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># copia todos os arquivos do diretório atual para `/tmp`
+cp * /tmp
+</code></pre>
+<pre><code class="language-bash"># copia todos os arquivos de `/bin` para o diretório atual
+cp /bin/* .
+</code></pre>
+<pre><code class="language-bash"># copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
+cp -R /bin /tmp
+</code></pre>
+<pre><code class="language-bash"># copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
+cp -R /bin/* /tmp
+</code></pre>
+<pre><code class="language-bash"># pergunta antes de substituir caso já exista em `/tmp`
+cp -i teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># copia somente se `teste.txt` for mais recente que o destino
+cp -u teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># copia todos os arquivos exibindo o progresso
+cp -v * /tmp
+</code></pre>
+<pre><code class="language-bash"># copia preservando permissões e datas do arquivo
+cp -p teste.txt /tmp
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ls"><a class="header" href="#ls">ls</a></h1>
@@ -1879,19 +1962,19 @@ cp -p teste.txt /tmp                # copia preservando permissões e datas do a
 </thead>
 <tbody>
 <tr><td>caminho/arquivo</td><td>Diretório ou arquivo a ser listado</td></tr>
-<tr><td>-a, –all</td><td>Lista todos os arquivos, inclusive os ocultos</td></tr>
-<tr><td>-A, –almost-all</td><td>Lista arquivos ocultos, exceto <code>.</code> e <code>..</code></td></tr>
-<tr><td>-B, –ignore-backups</td><td>Não lista arquivos que terminam com <code>~</code> (backup)</td></tr>
-<tr><td>–color=PARAM</td><td>Coloriza a listagem: <code>never</code>, <code>always</code> ou <code>auto</code></td></tr>
-<tr><td>-d, –directory</td><td>Lista o nome do diretório em vez do seu conteúdo</td></tr>
+<tr><td>-a, --all</td><td>Lista todos os arquivos, inclusive os ocultos</td></tr>
+<tr><td>-A, --almost-all</td><td>Lista arquivos ocultos, exceto <code>.</code> e <code>..</code></td></tr>
+<tr><td>-B, --ignore-backups</td><td>Não lista arquivos que terminam com <code>~</code> (backup)</td></tr>
+<tr><td>--color=PARAM</td><td>Coloriza a listagem: <code>never</code>, <code>always</code> ou <code>auto</code></td></tr>
+<tr><td>-d, --directory</td><td>Lista o nome do diretório em vez do seu conteúdo</td></tr>
 <tr><td>-f</td><td>Não classifica a listagem</td></tr>
 <tr><td>-F</td><td>Acrescenta um caractere identificador ao nome</td></tr>
-<tr><td>-G, –no-group</td><td>Oculta a coluna de grupo</td></tr>
-<tr><td>-h, –human-readable</td><td>Exibe tamanhos em KB, MB, GB (base 1024)</td></tr>
+<tr><td>-G, --no-group</td><td>Oculta a coluna de grupo</td></tr>
+<tr><td>-h, --human-readable</td><td>Exibe tamanhos em KB, MB, GB (base 1024)</td></tr>
 <tr><td>-H</td><td>Igual a <code>-h</code>, mas usa base 1000</td></tr>
 <tr><td>-l</td><td>Formato longo: exibe permissões, dono, grupo, tamanho e data</td></tr>
 <tr><td>-n</td><td>Usa IDs numéricos de usuário e grupo em vez dos nomes</td></tr>
-<tr><td>-L, –dereference</td><td>Lista o arquivo original em vez do link simbólico</td></tr>
+<tr><td>-L, --dereference</td><td>Lista o arquivo original em vez do link simbólico</td></tr>
 <tr><td>-o</td><td>Listagem longa sem a coluna de grupo (equivale a <code>-lG</code>)</td></tr>
 <tr><td>-p</td><td>Acrescenta uma <code>/</code> ao final de diretórios listados</td></tr>
 <tr><td>-R</td><td>Lista diretórios e subdiretórios recursivamente</td></tr>
@@ -1900,7 +1983,7 @@ cp -p teste.txt /tmp                # copia preservando permissões e datas do a
 <tr><td>-X</td><td>Classifica pela extensão</td></tr>
 <tr><td>-U</td><td>Lista na ordem do diretório, sem classificar</td></tr>
 <tr><td>-Z</td><td>Exibe o contexto SELinux de cada arquivo</td></tr>
-<tr><td>–full-time</td><td>Exibe data e hora completas</td></tr>
+<tr><td>--full-time</td><td>Exibe data e hora completas</td></tr>
 </tbody>
 </table>
 </div>
@@ -1913,16 +1996,35 @@ cp -p teste.txt /tmp                # copia preservando permissões e datas do a
 Ex: <code>-rwxr-xr-- 1 joao users 8192 nov 4 16:00 teste</code></p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ls                                  # lista os arquivos do diretório atual
-ls /bin /sbin                       # lista os arquivos de `/bin` e `/sbin`
-ls -a                               # lista todos os arquivos, incluindo ocultos
-ls -l                               # listagem longa com permissões, dono, tamanho e data
-ls -la /bin                         # listagem longa e completa de `/bin`, incluindo ocultos
-ls -lh                              # listagem longa com tamanhos legíveis (KB, MB, GB)
-ls -R                               # lista recursivamente diretórios e subdiretórios
-ls -lX                              # listagem longa classificada por extensão
-ls -lr                              # listagem em ordem inversa
-ls --color=auto                     # coloriza a listagem conforme o tipo de arquivo
+<pre><code class="language-bash"># lista os arquivos do diretório atual
+ls
+</code></pre>
+<pre><code class="language-bash"># lista os arquivos de `/bin` e `/sbin`
+ls /bin /sbin
+</code></pre>
+<pre><code class="language-bash"># lista todos os arquivos, incluindo ocultos
+ls -a
+</code></pre>
+<pre><code class="language-bash"># listagem longa com permissões, dono, tamanho e data
+ls -l
+</code></pre>
+<pre><code class="language-bash"># listagem longa e completa de `/bin`, incluindo ocultos
+ls -la /bin
+</code></pre>
+<pre><code class="language-bash"># listagem longa com tamanhos legíveis (KB, MB, GB)
+ls -lh
+</code></pre>
+<pre><code class="language-bash"># lista recursivamente diretórios e subdiretórios
+ls -R
+</code></pre>
+<pre><code class="language-bash"># listagem longa classificada por extensão
+ls -lX
+</code></pre>
+<pre><code class="language-bash"># listagem em ordem inversa
+ls -lr
+</code></pre>
+<pre><code class="language-bash"># coloriza a listagem conforme o tipo de arquivo
+ls --color=auto
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h1>
@@ -1938,17 +2040,28 @@ ls --color=auto                     # coloriza a listagem conforme o tipo de arq
 <tr><td>caminho</td><td>Caminho onde o diretório será criado</td></tr>
 <tr><td>diretório</td><td>Nome do diretório que será criado</td></tr>
 <tr><td>-p</td><td>Cria os diretórios intermediários que ainda não existem</td></tr>
-<tr><td>–verbose</td><td>Exibe uma mensagem para cada diretório criado</td></tr>
+<tr><td>--verbose</td><td>Exibe uma mensagem para cada diretório criado</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">mkdir projetos                      # cria o diretório `projetos` no diretório atual
-mkdir /home/user/documentos/notas   # cria o diretório `notas` em um caminho absoluto
-mkdir docs imagens videos           # cria três diretórios de uma só vez
-mkdir -p projeto/src/componentes    # cria toda a cadeia de diretórios, mesmo que `projeto` e `src` ainda não existam
-mkdir --verbose novo-site           # cria o diretório e exibe: mkdir: criado diretório 'novo-site'
-mkdir -p --verbose a/b/c            # cria os diretórios intermediários e exibe uma mensagem para cada um criado
+<pre><code class="language-bash"># cria o diretório `projetos` no diretório atual
+mkdir projetos
+</code></pre>
+<pre><code class="language-bash"># cria o diretório `notas` em um caminho absoluto
+mkdir /home/user/documentos/notas
+</code></pre>
+<pre><code class="language-bash"># cria três diretórios de uma só vez
+mkdir docs imagens videos
+</code></pre>
+<pre><code class="language-bash"># cria toda a cadeia de diretórios, mesmo que `projeto` e `src` ainda não existam
+mkdir -p projeto/src/componentes
+</code></pre>
+<pre><code class="language-bash"># cria o diretório e exibe: mkdir: criado diretório 'novo-site'
+mkdir --verbose novo-site
+</code></pre>
+<pre><code class="language-bash"># cria os diretórios intermediários e exibe uma mensagem para cada um criado
+mkdir -p --verbose a/b/c
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="mv"><a class="header" href="#mv">mv</a></h1>
@@ -1963,10 +2076,10 @@ mkdir -p --verbose a/b/c            # cria os diretórios intermediários e exib
 <tbody>
 <tr><td>origem</td><td>Arquivo ou diretório a ser movido ou renomeado</td></tr>
 <tr><td>destino</td><td>Caminho de destino ou novo nome do arquivo/diretório</td></tr>
-<tr><td>-f, –force</td><td>Substitui o arquivo de destino sem perguntar</td></tr>
-<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são movidos</td></tr>
-<tr><td>-u, –update</td><td>Move somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>-f, --force</td><td>Substitui o arquivo de destino sem perguntar</td></tr>
+<tr><td>-i, --interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe os arquivos enquanto são movidos</td></tr>
+<tr><td>-u, --update</td><td>Move somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
 </tbody>
 </table>
 </div>
@@ -1977,13 +2090,26 @@ mkdir -p --verbose a/b/c            # cria os diretórios intermediários e exib
 <p>Diferente do <code>cp</code>, o <code>mv</code> apaga o arquivo de origem após a cópia — o resultado é semelhante a recortar e colar.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">mv teste.txt teste1.txt             # renomeia `teste.txt` para `teste1.txt`
-mv teste.txt /tmp                   # move `teste.txt` para `/tmp` (origem é apagada)
-mv teste.txt teste.new              # sobrescreve `teste.new` com `teste.txt` e apaga a origem
-mv -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
-mv -f teste.txt /tmp                # move sem perguntar, substituindo o destino se existir
-mv -v *.txt /tmp                    # move todos os arquivos `.txt` exibindo o progresso
-mv -u teste.txt /tmp                # move somente se `teste.txt` for mais recente que o destino
+<pre><code class="language-bash"># renomeia `teste.txt` para `teste1.txt`
+mv teste.txt teste1.txt
+</code></pre>
+<pre><code class="language-bash"># move `teste.txt` para `/tmp` (origem é apagada)
+mv teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># sobrescreve `teste.new` com `teste.txt` e apaga a origem
+mv teste.txt teste.new
+</code></pre>
+<pre><code class="language-bash"># pergunta antes de substituir caso já exista em `/tmp`
+mv -i teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># move sem perguntar, substituindo o destino se existir
+mv -f teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># move todos os arquivos `.txt` exibindo o progresso
+mv -v *.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># move somente se `teste.txt` for mais recente que o destino
+mv -u teste.txt /tmp
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="rm"><a class="header" href="#rm">rm</a></h1>
@@ -1997,11 +2123,11 @@ mv -u teste.txt /tmp                # move somente se `teste.txt` for mais recen
 </thead>
 <tbody>
 <tr><td>caminho/arquivo</td><td>Localização e nome do arquivo ou diretório a ser apagado</td></tr>
-<tr><td>-i, –interactive</td><td>Pergunta antes de remover cada arquivo</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são removidos</td></tr>
-<tr><td>-r, –recursive</td><td>Remove arquivos em subdiretórios e os próprios subdiretórios</td></tr>
-<tr><td>-f, –force</td><td>Remove sem perguntar, ignorando arquivos inexistentes</td></tr>
-<tr><td>–</td><td>Indica o fim das opções da linha de comando; útil para apagar arquivos cujo nome comece com traço (<code>-</code>)</td></tr>
+<tr><td>-i, --interactive</td><td>Pergunta antes de remover cada arquivo</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe os arquivos enquanto são removidos</td></tr>
+<tr><td>-r, --recursive</td><td>Remove arquivos em subdiretórios e os próprios subdiretórios</td></tr>
+<tr><td>-f, --force</td><td>Remove sem perguntar, ignorando arquivos inexistentes</td></tr>
+<tr><td>--</td><td>Indica o fim das opções da linha de comando; útil para apagar arquivos cujo nome comece com traço (<code>-</code>)</td></tr>
 </tbody>
 </table>
 </div>
@@ -2012,19 +2138,34 @@ mv -u teste.txt /tmp                # move somente se `teste.txt` for mais recen
 <p><strong>Atenção:</strong> arquivos removidos com <code>rm</code> não vão para a lixeira e não podem ser recuperados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">rm teste.txt                        # apaga `teste.txt` no diretório atual
-rm *.txt                            # apaga todos os arquivos `.txt` do diretório atual
-rm *.txt teste.novo                 # apaga todos os `.txt` e também `teste.novo`
-rm -rf /tmp/teste/*                 # apaga todo o conteúdo de `/tmp/teste`, mas mantém o diretório
-rm -rf /tmp/teste                   # apaga o diretório `/tmp/teste` e todo o seu conteúdo
-rm -i *.txt                         # pergunta antes de apagar cada arquivo `.txt`
-rm -v *.txt                         # exibe cada arquivo conforme é removido
-rm -f -- --arquivo--                # remove o arquivo de nome `--arquivo--`
+<pre><code class="language-bash"># apaga `teste.txt` no diretório atual
+rm teste.txt
+</code></pre>
+<pre><code class="language-bash"># apaga todos os arquivos `.txt` do diretório atual
+rm *.txt
+</code></pre>
+<pre><code class="language-bash"># apaga todos os `.txt` e também `teste.novo`
+rm *.txt teste.novo
+</code></pre>
+<pre><code class="language-bash"># apaga todo o conteúdo de `/tmp/teste`, mas mantém o diretório
+rm -rf /tmp/teste/*
+</code></pre>
+<pre><code class="language-bash"># apaga o diretório `/tmp/teste` e todo o seu conteúdo
+rm -rf /tmp/teste
+</code></pre>
+<pre><code class="language-bash"># pergunta antes de apagar cada arquivo `.txt`
+rm -i *.txt
+</code></pre>
+<pre><code class="language-bash"># exibe cada arquivo conforme é removido
+rm -v *.txt
+</code></pre>
+<pre><code class="language-bash"># remove o arquivo de nome `--arquivo--`
+rm -f -- --arquivo--
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="rmdir"><a class="header" href="#rmdir">rmdir</a></h1>
 <p>Remove diretórios vazios.</p>
-<pre><code class="language-bash">rmdir [opções] diretório [diretório1]
+<pre><code class="language-bash">rmdir [opções] [diretório] [diretório1]
 </code></pre>
 <div class="table-wrapper">
 <table>
@@ -2033,9 +2174,9 @@ rm -f -- --arquivo--                # remove o arquivo de nome `--arquivo--`
 </thead>
 <tbody>
 <tr><td>diretório</td><td>Localização do diretório a ser removido</td></tr>
-<tr><td>-p, –parents</td><td>Remove o diretório e também seus diretórios pais, caso fiquem vazios após a remoção</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada diretório removido</td></tr>
-<tr><td>–ignore-fail-on-non-empty</td><td>Ignora erros causados por diretórios não vazios</td></tr>
+<tr><td>-p, --parents</td><td>Remove o diretório e também seus diretórios pais, caso fiquem vazios após a remoção</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe uma mensagem para cada diretório removido</td></tr>
+<tr><td>--ignore-fail-on-non-empty</td><td>Ignora erros causados por diretórios não vazios</td></tr>
 </tbody>
 </table>
 </div>
@@ -2043,11 +2184,20 @@ rm -f -- --arquivo--                # remove o arquivo de nome `--arquivo--`
 <p><code>rmdir</code> só remove diretórios vazios. Para remover diretórios com conteúdo, use <code>rm -r</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">rmdir pasta                         # remove o diretório `pasta`, se estiver vazio
-rmdir pasta1 pasta2                 # remove dois diretórios vazios em sequência
-rmdir -p pasta/subpasta             # remove `subpasta` e depois `pasta`, se ambos ficarem vazios
-rmdir -v pasta                      # remove o diretório e exibe uma mensagem confirmando a ação
-rmdir pasta_com_arquivos            # gera erro, pois o diretório não está vazio
+<pre><code class="language-bash"># remove o diretório `pasta`, se estiver vazio
+rmdir pasta
+</code></pre>
+<pre><code class="language-bash"># remove dois diretórios vazios em sequência
+rmdir pasta1 pasta2
+</code></pre>
+<pre><code class="language-bash"># remove `subpasta` e depois `pasta`, se ambos ficarem vazios
+rmdir -p pasta/subpasta
+</code></pre>
+<pre><code class="language-bash"># remove o diretório e exibe uma mensagem confirmando a ação
+rmdir -v pasta
+</code></pre>
+<pre><code class="language-bash"># gera erro, pois o diretório não está vazio
+rmdir pasta_com_arquivos
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="touch"><a class="header" href="#touch">touch</a></h1>
@@ -2062,22 +2212,37 @@ rmdir pasta_com_arquivos            # gera erro, pois o diretório não está va
 <tbody>
 <tr><td>arquivos</td><td>Arquivos que terão sua data e hora modificados</td></tr>
 <tr><td>-t [ANO]MMDDhhmm[.ss]</td><td>Define data/hora manualmente: ano (opcional), mês, dia, hora, minuto e, opcionalmente, segundos</td></tr>
-<tr><td>-a, –time=atime</td><td>Altera somente a data e hora de acesso</td></tr>
-<tr><td>-m, –time=mtime</td><td>Altera somente a data e hora de modificação</td></tr>
-<tr><td>-c, –no-create</td><td>Não cria o arquivo caso ele não exista</td></tr>
+<tr><td>-a, --time=atime</td><td>Altera somente a data e hora de acesso</td></tr>
+<tr><td>-m, --time=mtime</td><td>Altera somente a data e hora de modificação</td></tr>
+<tr><td>-c, --no-create</td><td>Não cria o arquivo caso ele não exista</td></tr>
 <tr><td>-r arquivo</td><td>Usa a data e hora de outro arquivo como referência</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">touch arquivo.txt                     # cria `arquivo.txt` vazio ou atualiza sua data/hora para agora
-touch a.txt b.txt c.txt               # cria ou atualiza a data/hora de múltiplos arquivos
-touch -c arquivo.txt                  # atualiza a data/hora sem criar o arquivo caso não exista
-touch -a arquivo.txt                  # atualiza somente a data de acesso
-touch -m arquivo.txt                  # atualiza somente a data de modificação
-touch -t 12311830 arquivo.txt         # define a data/hora para 31 de dezembro às 18:30
-touch -t 202312311830.00 arquivo.txt  # define para 31/12/2023 às 18:30:00
-touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arquivo.txt`
+<pre><code class="language-bash"># cria `arquivo.txt` vazio ou atualiza sua data/hora para agora
+touch arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># cria ou atualiza a data/hora de múltiplos arquivos
+touch a.txt b.txt c.txt
+</code></pre>
+<pre><code class="language-bash"># atualiza a data/hora sem criar o arquivo caso não exista
+touch -c arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># atualiza somente a data de acesso
+touch -a arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># atualiza somente a data de modificação
+touch -m arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># define a data/hora para 31 de dezembro às 18:30
+touch -t 12311830 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># define para 31/12/2023 às 18:30:00
+touch -t 202312311830.00 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># aplica a data/hora de `ref.txt` em `arquivo.txt`
+touch -r ref.txt arquivo.txt
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tree"><a class="header" href="#tree">tree</a></h1>
@@ -2103,12 +2268,23 @@ touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arqu
 <p><code>tree</code> normalmente não vem instalado por padrão em todas as distribuições. Pode ser necessário instalá-lo através do gerenciador de pacotes (ex.: <code>apt install tree</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">tree                                 # exibe a árvore do diretório atual
-tree /var/log                        # exibe a árvore do diretório `/var/log`
-tree -a                              # exibe a árvore incluindo arquivos e diretórios ocultos
-tree -d                              # exibe apenas os diretórios, sem listar arquivos
-tree -L 2                            # exibe a árvore limitada a 2 níveis de profundidade
-tree -h                              # exibe a árvore com o tamanho dos arquivos
+<pre><code class="language-bash"># exibe a árvore do diretório atual
+tree
+</code></pre>
+<pre><code class="language-bash"># exibe a árvore do diretório `/var/log`
+tree /var/log
+</code></pre>
+<pre><code class="language-bash"># exibe a árvore incluindo arquivos e diretórios ocultos
+tree -a
+</code></pre>
+<pre><code class="language-bash"># exibe apenas os diretórios, sem listar arquivos
+tree -d
+</code></pre>
+<pre><code class="language-bash"># exibe a árvore limitada a 2 níveis de profundidade
+tree -L 2
+</code></pre>
+<pre><code class="language-bash"># exibe a árvore com o tamanho dos arquivos
+tree -h
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="utilitários"><a class="header" href="#utilitários">Utilitários</a></h1>
@@ -2134,11 +2310,20 @@ tree -h                              # exibe a árvore com o tamanho dos arquivo
 <p>Aliases criados diretamente no terminal valem apenas para a sessão atual. Para torná-los permanentes, adicione-os ao arquivo <code>~/.bashrc</code> (ou <code>~/.zshrc</code>, dependendo do shell) e recarregue com <code>source ~/.bashrc</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">alias                                # lista todos os aliases definidos
-alias ll='ls -la'                    # cria o atalho `ll` para `ls -la`
-alias rm='rm -i'                     # cria o atalho `rm` para pedir confirmação antes de remover
-alias atualizar='sudo apt update &amp;&amp; sudo apt upgrade'   # cria um atalho para um comando composto
-unalias ll                           # remove o alias `ll`
+<pre><code class="language-bash"># lista todos os aliases definidos
+alias
+</code></pre>
+<pre><code class="language-bash"># cria o atalho `ll` para `ls -la`
+alias ll='ls -la'
+</code></pre>
+<pre><code class="language-bash"># cria o atalho `rm` para pedir confirmação antes de remover
+alias rm='rm -i'
+</code></pre>
+<pre><code class="language-bash"># cria um atalho para um comando composto
+alias atualizar='sudo apt update &amp;&amp; sudo apt upgrade'
+</code></pre>
+<pre><code class="language-bash"># remove o alias `ll`
+unalias ll
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="clear"><a class="header" href="#clear">clear</a></h1>
@@ -2159,7 +2344,8 @@ unalias ll                           # remove o alias `ll`
 <p>Atalho de teclado equivalente: <code>Ctrl + L</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">clear                                # limpa a tela do terminal
+<pre><code class="language-bash"># limpa a tela do terminal
+clear
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="date"><a class="header" href="#date">date</a></h1>
@@ -2173,9 +2359,9 @@ unalias ll                           # remove o alias `ll`
 </thead>
 <tbody>
 <tr><td>+formato</td><td>Define o formato de saída da data/hora usando símbolos (ex.: <code>%Y</code>, <code>%m</code>, <code>%d</code>)</td></tr>
-<tr><td>-d, –date=string</td><td>Exibe a data/hora descrita em <code>string</code>, em vez da data/hora atual</td></tr>
-<tr><td>-u, –utc</td><td>Exibe a data/hora em UTC (horário universal), em vez do horário local</td></tr>
-<tr><td>-s, –set=string</td><td>Define a data/hora do sistema (geralmente requer permissão de superusuário)</td></tr>
+<tr><td>-d, --date=string</td><td>Exibe a data/hora descrita em <code>string</code>, em vez da data/hora atual</td></tr>
+<tr><td>-u, --utc</td><td>Exibe a data/hora em UTC (horário universal), em vez do horário local</td></tr>
+<tr><td>-s, --set=string</td><td>Define a data/hora do sistema (geralmente requer permissão de superusuário)</td></tr>
 </tbody>
 </table>
 </div>
@@ -2183,12 +2369,23 @@ unalias ll                           # remove o alias `ll`
 <p>Alguns símbolos comuns de formato: <code>%Y</code> (ano com 4 dígitos), <code>%m</code> (mês), <code>%d</code> (dia), <code>%H</code> (hora), <code>%M</code> (minuto), <code>%S</code> (segundo).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">date                                  # exibe a data e hora atuais
-date +%Y-%m-%d                        # exibe a data no formato ano-mês-dia
-date +"%H:%M:%S"                      # exibe apenas o horário atual
-date -u                               # exibe a data e hora atuais em UTC
-date -d "yesterday"                   # exibe a data referente a ontem
-sudo date -s "2026-07-27 10:00:00"    # define a data e hora do sistema
+<pre><code class="language-bash"># exibe a data e hora atuais
+date
+</code></pre>
+<pre><code class="language-bash"># exibe a data no formato ano-mês-dia
+date +%Y-%m-%d
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o horário atual
+date +"%H:%M:%S"
+</code></pre>
+<pre><code class="language-bash"># exibe a data e hora atuais em UTC
+date -u
+</code></pre>
+<pre><code class="language-bash"># exibe a data referente a ontem
+date -d "yesterday"
+</code></pre>
+<pre><code class="language-bash"># define a data e hora do sistema
+sudo date -s "2026-07-27 10:00:00"
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="df"><a class="header" href="#df">df</a></h1>
@@ -2206,7 +2403,7 @@ sudo date -s "2026-07-27 10:00:00"    # define a data e hora do sistema
 <tr><td>-T</td><td>Exibe também o tipo de sistema de arquivos</td></tr>
 <tr><td>-i</td><td>Exibe informações de inodes em vez de blocos</td></tr>
 <tr><td>-a</td><td>Inclui sistemas de arquivos pseudo (com tamanho zero, como <code>/proc</code>)</td></tr>
-<tr><td>–total</td><td>Exibe uma linha adicional com o total geral</td></tr>
+<tr><td>--total</td><td>Exibe uma linha adicional com o total geral</td></tr>
 </tbody>
 </table>
 </div>
@@ -2215,12 +2412,23 @@ sudo date -s "2026-07-27 10:00:00"    # define a data e hora do sistema
 Para verificar o espaço ocupado por diretórios específicos (em vez do sistema de arquivos como um todo), utilize <code>du</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">df                          # exibe o uso de todos os sistemas de arquivos montados
-df -h                       # exibe os tamanhos em formato legível
-df -h /home                 # exibe o uso do sistema de arquivos que contém /home
-df -T                       # exibe também o tipo de cada sistema de arquivos
-df -i                       # exibe a quantidade de inodes usados e disponíveis
-df -h --total               # exibe o uso de todos os sistemas de arquivos e o total geral
+<pre><code class="language-bash"># exibe o uso de todos os sistemas de arquivos montados
+df
+</code></pre>
+<pre><code class="language-bash"># exibe os tamanhos em formato legível
+df -h
+</code></pre>
+<pre><code class="language-bash"># exibe o uso do sistema de arquivos que contém /home
+df -h /home
+</code></pre>
+<pre><code class="language-bash"># exibe também o tipo de cada sistema de arquivos
+df -T
+</code></pre>
+<pre><code class="language-bash"># exibe a quantidade de inodes usados e disponíveis
+df -i
+</code></pre>
+<pre><code class="language-bash"># exibe o uso de todos os sistemas de arquivos e o total geral
+df -h --total
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="du"><a class="header" href="#du">du</a></h1>
@@ -2238,7 +2446,7 @@ df -h --total               # exibe o uso de todos os sistemas de arquivos e o t
 <tr><td>-s</td><td>Exibe apenas o total geral, sem detalhar subdiretórios</td></tr>
 <tr><td>-a</td><td>Exibe o tamanho de todos os arquivos, não apenas dos diretórios</td></tr>
 <tr><td>-c</td><td>Exibe uma linha adicional com o total geral</td></tr>
-<tr><td>–max-depth=N</td><td>Limita a profundidade de exibição a <code>N</code> níveis de subdiretórios</td></tr>
+<tr><td>--max-depth=N</td><td>Limita a profundidade de exibição a <code>N</code> níveis de subdiretórios</td></tr>
 </tbody>
 </table>
 </div>
@@ -2247,12 +2455,23 @@ df -h --total               # exibe o uso de todos os sistemas de arquivos e o t
 Para verificar o espaço total disponível no sistema de arquivos (em vez do espaço ocupado por arquivos específicos), utilize <code>df</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">du                           # exibe o uso de espaço do diretório atual e seus subdiretórios
-du -h                        # exibe os tamanhos em formato legível
-du -sh /home                 # exibe apenas o total do diretório /home, de forma legível
-du -ah /var/log               # exibe o tamanho de cada arquivo dentro de /var/log
-du -h --max-depth=1          # exibe o uso de espaço limitado a um nível de subdiretórios
-du -ch *.log                 # exibe o tamanho de cada arquivo .log e o total geral
+<pre><code class="language-bash"># exibe o uso de espaço do diretório atual e seus subdiretórios
+du
+</code></pre>
+<pre><code class="language-bash"># exibe os tamanhos em formato legível
+du -h
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o total do diretório /home, de forma legível
+du -sh /home
+</code></pre>
+<pre><code class="language-bash"># exibe o tamanho de cada arquivo dentro de /var/log
+du -ah /var/log
+</code></pre>
+<pre><code class="language-bash"># exibe o uso de espaço limitado a um nível de subdiretórios
+du -h --max-depth=1
+</code></pre>
+<pre><code class="language-bash"># exibe o tamanho de cada arquivo .log e o total geral
+du -ch *.log
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="find"><a class="header" href="#find">find</a></h1>
@@ -2266,8 +2485,8 @@ du -ch *.log                 # exibe o tamanho de cada arquivo .log e o total ge
 </thead>
 <tbody>
 <tr><td>diretório</td><td>Local onde a busca será iniciada (padrão: diretório atual)</td></tr>
-<tr><td>-name “padrão”</td><td>Busca por nome de arquivo, diferenciando maiúsculas de minúsculas</td></tr>
-<tr><td>-iname “padrão”</td><td>Busca por nome de arquivo, ignorando maiúsculas e minúsculas</td></tr>
+<tr><td>-name "padrão"</td><td>Busca por nome de arquivo, diferenciando maiúsculas de minúsculas</td></tr>
+<tr><td>-iname "padrão"</td><td>Busca por nome de arquivo, ignorando maiúsculas e minúsculas</td></tr>
 <tr><td>-type f/d</td><td>Filtra por tipo: <code>f</code> para arquivo, <code>d</code> para diretório</td></tr>
 <tr><td>-size N</td><td>Filtra por tamanho (ex.: <code>+100M</code>, <code>-1G</code>)</td></tr>
 <tr><td>-mtime N</td><td>Filtra por data de modificação, em dias (ex.: <code>-7</code> para os últimos 7 dias)</td></tr>
@@ -2280,12 +2499,23 @@ du -ch *.log                 # exibe o tamanho de cada arquivo .log e o total ge
 Para buscar apenas pelo conteúdo de arquivos de texto (em vez do nome), utilize <code>grep -r</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">find . -name "*.txt"                    # busca arquivos .txt no diretório atual e subdiretórios
-find /home -iname "relatorio*"          # busca ignorando maiúsculas/minúsculas em /home
-find /var/log -type f -size +100M       # busca arquivos maiores que 100 MB
-find . -type d -name "backup"           # busca diretórios chamados `backup`
-find /tmp -mtime -7                     # busca arquivos modificados nos últimos 7 dias
-find . -name "*.log" -exec rm {} \;     # busca e remove arquivos .log encontrados
+<pre><code class="language-bash"># busca arquivos .txt no diretório atual e subdiretórios
+find . -name "*.txt"
+</code></pre>
+<pre><code class="language-bash"># busca ignorando maiúsculas/minúsculas em /home
+find /home -iname "relatorio*"
+</code></pre>
+<pre><code class="language-bash"># busca arquivos maiores que 100 MB
+find /var/log -type f -size +100M
+</code></pre>
+<pre><code class="language-bash"># busca diretórios chamados `backup`
+find . -type d -name "backup"
+</code></pre>
+<pre><code class="language-bash"># busca arquivos modificados nos últimos 7 dias
+find /tmp -mtime -7
+</code></pre>
+<pre><code class="language-bash"># busca e remove arquivos .log encontrados
+find . -name "*.log" -exec rm {} \;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="free"><a class="header" href="#free">free</a></h1>
@@ -2312,12 +2542,23 @@ find . -name "*.log" -exec rm {} \;     # busca e remove arquivos .log encontrad
 Para acompanhar o uso de memória por processo individual, utilize <code>top</code> ou <code>htop</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">free                         # exibe o uso de memória em blocos de 1K
-free -h                      # exibe os valores em formato legível
-free -m                      # exibe os valores em megabytes
-free -h -t                   # exibe os valores legíveis com o total geral
-free -h -s 5                 # atualiza a exibição a cada 5 segundos
-free -h -s 2 -c 3             # atualiza a cada 2 segundos, repetindo 3 vezes
+<pre><code class="language-bash"># exibe o uso de memória em blocos de 1K
+free
+</code></pre>
+<pre><code class="language-bash"># exibe os valores em formato legível
+free -h
+</code></pre>
+<pre><code class="language-bash"># exibe os valores em megabytes
+free -m
+</code></pre>
+<pre><code class="language-bash"># exibe os valores legíveis com o total geral
+free -h -t
+</code></pre>
+<pre><code class="language-bash"># atualiza a exibição a cada 5 segundos
+free -h -s 5
+</code></pre>
+<pre><code class="language-bash"># atualiza a cada 2 segundos, repetindo 3 vezes
+free -h -s 2 -c 3
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="history"><a class="header" href="#history">history</a></h1>
@@ -2342,12 +2583,23 @@ free -h -s 2 -c 3             # atualiza a cada 2 segundos, repetindo 3 vezes
 <p>O histórico é armazenado por padrão no arquivo <code>~/.bash_history</code> (ou equivalente, dependendo do shell) e é salvo ao encerrar a sessão do terminal.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">history                                # exibe todo o histórico de comandos
-history 10                             # exibe os últimos 10 comandos digitados
-history -c                             # limpa o histórico da sessão atual
-history -d 42                          # remove o comando de número 42 do histórico
-!!                                     # executa novamente o último comando
-!25                                    # executa novamente o comando de número 25 do histórico
+<pre><code class="language-bash"># exibe todo o histórico de comandos
+history
+</code></pre>
+<pre><code class="language-bash"># exibe os últimos 10 comandos digitados
+history 10
+</code></pre>
+<pre><code class="language-bash"># limpa o histórico da sessão atual
+history -c
+</code></pre>
+<pre><code class="language-bash"># remove o comando de número 42 do histórico
+history -d 42
+</code></pre>
+<pre><code class="language-bash"># executa novamente o último comando
+!!
+</code></pre>
+<pre><code class="language-bash"># executa novamente o comando de número 25 do histórico
+!25
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ln"><a class="header" href="#ln">ln</a></h1>
@@ -2362,9 +2614,9 @@ history -d 42                          # remove o comando de número 42 do hist�
 <tbody>
 <tr><td>alvo</td><td>Arquivo ou diretório original ao qual o link vai apontar</td></tr>
 <tr><td>nome_do_link</td><td>Nome (ou caminho) do link a ser criado</td></tr>
-<tr><td>-s, –symbolic</td><td>Cria um link simbólico (soft link), em vez de um link físico (hard link)</td></tr>
-<tr><td>-f, –force</td><td>Força a criação do link, substituindo o destino caso já exista</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe o nome de cada arquivo antes de criar o link (modo verboso)</td></tr>
+<tr><td>-s, --symbolic</td><td>Cria um link simbólico (soft link), em vez de um link físico (hard link)</td></tr>
+<tr><td>-f, --force</td><td>Força a criação do link, substituindo o destino caso já exista</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe o nome de cada arquivo antes de criar o link (modo verboso)</td></tr>
 <tr><td>-n</td><td>Trata o link simbólico como um arquivo comum ao apontar para um diretório existente</td></tr>
 </tbody>
 </table>
@@ -2374,11 +2626,20 @@ history -d 42                          # remove o comando de número 42 do hist�
 Diferente do link físico, o link simbólico pode apontar para diretórios e para arquivos em outros sistemas de arquivos, mas deixa de funcionar caso o arquivo original seja removido ou movido.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ln arquivo.txt link_fisico.txt          # cria um link físico apontando para `arquivo.txt`
-ln -s arquivo.txt link_simbolico.txt    # cria um link simbólico apontando para `arquivo.txt`
-ln -s /var/www/html html                # cria um link simbólico para um diretório
-ln -sf arquivo.txt link_simbolico.txt   # recria o link simbólico, substituindo-o se já existir
-ln -sv arquivo.txt link_simbolico.txt   # cria o link simbólico exibindo o resultado da operação
+<pre><code class="language-bash"># cria um link físico apontando para `arquivo.txt`
+ln arquivo.txt link_fisico.txt
+</code></pre>
+<pre><code class="language-bash"># cria um link simbólico apontando para `arquivo.txt`
+ln -s arquivo.txt link_simbolico.txt
+</code></pre>
+<pre><code class="language-bash"># cria um link simbólico para um diretório
+ln -s /var/www/html html
+</code></pre>
+<pre><code class="language-bash"># recria o link simbólico, substituindo-o se já existir
+ln -sf arquivo.txt link_simbolico.txt
+</code></pre>
+<pre><code class="language-bash"># cria o link simbólico exibindo o resultado da operação
+ln -sv arquivo.txt link_simbolico.txt
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="man"><a class="header" href="#man">man</a></h1>
@@ -2402,11 +2663,20 @@ ln -sv arquivo.txt link_simbolico.txt   # cria o link simbólico exibindo o resu
 <p>Durante a leitura: <code>espaço</code> avança uma página, <code>Enter</code> avança uma linha, <code>q</code> encerra, <code>/palavra</code> pesquisa dentro do texto.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">man ls                                # exibe o manual do comando `ls`
-man 5 passwd                          # exibe o manual da seção 5 (arquivos) para `passwd`
-man -k rede                           # busca comandos relacionados à palavra `rede`
-man -f cat                            # exibe uma breve descrição do comando `cat`
-man man                               # exibe o manual do próprio comando `man`
+<pre><code class="language-bash"># exibe o manual do comando `ls`
+man ls
+</code></pre>
+<pre><code class="language-bash"># exibe o manual da seção 5 (arquivos) para `passwd`
+man 5 passwd
+</code></pre>
+<pre><code class="language-bash"># busca comandos relacionados à palavra `rede`
+man -k rede
+</code></pre>
+<pre><code class="language-bash"># exibe uma breve descrição do comando `cat`
+man -f cat
+</code></pre>
+<pre><code class="language-bash"># exibe o manual do próprio comando `man`
+man man
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="nl"><a class="header" href="#nl">nl</a></h1>
@@ -2425,7 +2695,7 @@ man man                               # exibe o manual do próprio comando `man`
 <tr><td>-n ln</td><td>Alinha a numeração à esquerda</td></tr>
 <tr><td>-n rn</td><td>Alinha a numeração à direita (padrão)</td></tr>
 <tr><td>-w N</td><td>Define a largura, em colunas, reservada para o número da linha</td></tr>
-<tr><td>-s “separador”</td><td>Define o texto usado para separar o número do conteúdo da linha</td></tr>
+<tr><td>-s "separador"</td><td>Define o texto usado para separar o número do conteúdo da linha</td></tr>
 </tbody>
 </table>
 </div>
@@ -2434,12 +2704,23 @@ man man                               # exibe o manual do próprio comando `man`
 Diferente de <code>cat -n</code>, que numera todas as linhas indiscriminadamente, <code>nl</code> oferece mais controle sobre quais linhas recebem numeração e como ela é formatada.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">nl arquivo.txt                     # numera as linhas com conteúdo de `arquivo.txt`
-nl -ba arquivo.txt                  # numera todas as linhas, inclusive as em branco
-nl -nln arquivo.txt                 # exibe a numeração alinhada à esquerda
-nl -w 5 arquivo.txt                  # reserva 5 colunas para o número da linha
-nl -s ") " arquivo.txt               # separa o número do conteúdo com ") "
-cat arquivo.txt | nl                 # numera a saída do comando `cat`
+<pre><code class="language-bash"># numera as linhas com conteúdo de `arquivo.txt`
+nl arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># numera todas as linhas, inclusive as em branco
+nl -ba arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe a numeração alinhada à esquerda
+nl -nln arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># reserva 5 colunas para o número da linha
+nl -w 5 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># separa o número do conteúdo com ") "
+nl -s ") " arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># numera a saída do comando `cat`
+cat arquivo.txt | nl
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="poweroff"><a class="header" href="#poweroff">poweroff</a></h1>
@@ -2454,7 +2735,7 @@ cat arquivo.txt | nl                 # numera a saída do comando `cat`
 <tbody>
 <tr><td>-f</td><td>Força o desligamento imediato, sem avisar outros processos</td></tr>
 <tr><td>-p</td><td>Desliga o sistema desligando também a energia do hardware (padrão em <code>poweroff</code>)</td></tr>
-<tr><td>–halt</td><td>Interrompe o sistema sem efetivamente desligar a energia</td></tr>
+<tr><td>--halt</td><td>Interrompe o sistema sem efetivamente desligar a energia</td></tr>
 </tbody>
 </table>
 </div>
@@ -2463,9 +2744,14 @@ cat arquivo.txt | nl                 # numera a saída do comando `cat`
 Para agendar o desligamento ou avisar outros usuários antes de executá-lo, utilize <code>shutdown</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo poweroff              # desliga o sistema imediatamente
-sudo poweroff -f            # força o desligamento, sem avisar processos
-sudo systemctl poweroff     # desliga o sistema via systemd
+<pre><code class="language-bash"># desliga o sistema imediatamente
+sudo poweroff
+</code></pre>
+<pre><code class="language-bash"># força o desligamento, sem avisar processos
+sudo poweroff -f
+</code></pre>
+<pre><code class="language-bash"># desliga o sistema via systemd
+sudo systemctl poweroff
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="pwd"><a class="header" href="#pwd">pwd</a></h1>
@@ -2488,10 +2774,17 @@ sudo systemctl poweroff     # desliga o sistema via systemd
 Ao navegar por links simbólicos com <code>cd</code>, <code>pwd</code> mostra o caminho pelo qual você chegou até ali; use <code>-P</code> para ver o caminho real no disco.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">pwd                    # exibe o caminho do diretório atual
-pwd -P                 # exibe o caminho físico, resolvendo links simbólicos
-cd /var/www &amp;&amp; pwd     # navega até `/var/www` e confirma o diretório atual
-echo $PWD              # exibe o diretório atual usando a variável de ambiente
+<pre><code class="language-bash"># exibe o caminho do diretório atual
+pwd
+</code></pre>
+<pre><code class="language-bash"># exibe o caminho físico, resolvendo links simbólicos
+pwd -P
+</code></pre>
+<pre><code class="language-bash"># navega até `/var/www` e confirma o diretório atual
+cd /var/www &amp;&amp; pwd
+</code></pre>
+<pre><code class="language-bash"># exibe o diretório atual usando a variável de ambiente
+echo $PWD
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="reboot"><a class="header" href="#reboot">reboot</a></h1>
@@ -2506,7 +2799,7 @@ echo $PWD              # exibe o diretório atual usando a variável de ambiente
 <tbody>
 <tr><td>-f</td><td>Força a reinicialização imediata, sem avisar outros processos</td></tr>
 <tr><td>-p</td><td>Desliga o sistema em vez de reiniciá-lo (equivalente a <code>poweroff</code>)</td></tr>
-<tr><td>–halt</td><td>Interrompe o sistema sem desligar ou reiniciar</td></tr>
+<tr><td>--halt</td><td>Interrompe o sistema sem desligar ou reiniciar</td></tr>
 </tbody>
 </table>
 </div>
@@ -2515,10 +2808,17 @@ echo $PWD              # exibe o diretório atual usando a variável de ambiente
 Executar <code>reboot</code> normalmente exige privilégios de superusuário (<code>sudo</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo reboot              # reinicia o sistema de forma padrão
-sudo reboot -f            # força a reinicialização imediata
-sudo systemctl reboot     # reinicia o sistema via systemd
-shutdown -r now           # alternativa para reiniciar o sistema imediatamente
+<pre><code class="language-bash"># reinicia o sistema de forma padrão
+sudo reboot
+</code></pre>
+<pre><code class="language-bash"># força a reinicialização imediata
+sudo reboot -f
+</code></pre>
+<pre><code class="language-bash"># reinicia o sistema via systemd
+sudo systemctl reboot
+</code></pre>
+<pre><code class="language-bash"># alternativa para reiniciar o sistema imediatamente
+shutdown -r now
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="shutdown"><a class="header" href="#shutdown">shutdown</a></h1>
@@ -2532,7 +2832,7 @@ shutdown -r now           # alternativa para reiniciar o sistema imediatamente
 </thead>
 <tbody>
 <tr><td>tempo</td><td>Momento em que a ação ocorrerá: <code>now</code>, número de minutos, ou horário no formato <code>hh:mm</code></td></tr>
-<tr><td>“mensagem”</td><td>Texto de aviso exibido aos usuários conectados</td></tr>
+<tr><td>"mensagem"</td><td>Texto de aviso exibido aos usuários conectados</td></tr>
 <tr><td>-h</td><td>Desliga o sistema</td></tr>
 <tr><td>-r</td><td>Reinicia o sistema, em vez de desligá-lo</td></tr>
 <tr><td>-c</td><td>Cancela um desligamento agendado</td></tr>
@@ -2545,11 +2845,20 @@ shutdown -r now           # alternativa para reiniciar o sistema imediatamente
 Executar <code>shutdown</code> normalmente exige privilégios de superusuário (<code>sudo</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo shutdown -h now                       # desliga o sistema imediatamente
-sudo shutdown -r now                       # reinicia o sistema imediatamente
-sudo shutdown -h +10 "Manutenção em 10min" # agenda o desligamento em 10 minutos, com aviso
-sudo shutdown -r 23:00                     # agenda a reinicialização para as 23h
-sudo shutdown -c                           # cancela um desligamento agendado
+<pre><code class="language-bash"># desliga o sistema imediatamente
+sudo shutdown -h now
+</code></pre>
+<pre><code class="language-bash"># reinicia o sistema imediatamente
+sudo shutdown -r now
+</code></pre>
+<pre><code class="language-bash"># agenda o desligamento em 10 minutos, com aviso
+sudo shutdown -h +10 "Manutenção em 10min"
+</code></pre>
+<pre><code class="language-bash"># agenda a reinicialização para as 23h
+sudo shutdown -r 23:00
+</code></pre>
+<pre><code class="language-bash"># cancela um desligamento agendado
+sudo shutdown -c
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="sort"><a class="header" href="#sort">sort</a></h1>
@@ -2563,11 +2872,11 @@ sudo shutdown -c                           # cancela um desligamento agendado
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser ordenado</td></tr>
-<tr><td>-r, –reverse</td><td>Ordena em ordem decrescente</td></tr>
-<tr><td>-n, –numeric-sort</td><td>Ordena os valores numericamente, em vez de alfabeticamente</td></tr>
-<tr><td>-u, –unique</td><td>Remove linhas duplicadas, exibindo apenas ocorrências únicas</td></tr>
+<tr><td>-r, --reverse</td><td>Ordena em ordem decrescente</td></tr>
+<tr><td>-n, --numeric-sort</td><td>Ordena os valores numericamente, em vez de alfabeticamente</td></tr>
+<tr><td>-u, --unique</td><td>Remove linhas duplicadas, exibindo apenas ocorrências únicas</td></tr>
 <tr><td>-k campo</td><td>Ordena com base em um campo (coluna) específico</td></tr>
-<tr><td>-f, –ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas ao ordenar</td></tr>
+<tr><td>-f, --ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas ao ordenar</td></tr>
 </tbody>
 </table>
 </div>
@@ -2575,12 +2884,23 @@ sudo shutdown -c                           # cancela um desligamento agendado
 <p>Por padrão, <code>sort</code> ordena as linhas em ordem alfabética crescente, sem alterar o arquivo original — a saída é exibida na tela.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sort arquivo.txt                      # exibe o conteúdo ordenado alfabeticamente
-sort -r arquivo.txt                   # exibe o conteúdo ordenado em ordem decrescente
-sort -n numeros.txt                   # ordena os valores numericamente
-sort -u arquivo.txt                   # exibe o conteúdo ordenado, removendo linhas duplicadas
-sort -k 2 dados.txt                   # ordena com base no segundo campo de cada linha
-cat arquivo.txt | sort                # ordena a saída do comando `cat` via pipe
+<pre><code class="language-bash"># exibe o conteúdo ordenado alfabeticamente
+sort arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe o conteúdo ordenado em ordem decrescente
+sort -r arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># ordena os valores numericamente
+sort -n numeros.txt
+</code></pre>
+<pre><code class="language-bash"># exibe o conteúdo ordenado, removendo linhas duplicadas
+sort -u arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># ordena com base no segundo campo de cada linha
+sort -k 2 dados.txt
+</code></pre>
+<pre><code class="language-bash"># ordena a saída do comando `cat` via pipe
+cat arquivo.txt | sort
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="filtros"><a class="header" href="#filtros">Filtros</a></h1>
@@ -2596,10 +2916,10 @@ cat arquivo.txt | sort                # ordena a saída do comando `cat` via pip
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser processado</td></tr>
-<tr><td>-f, –fields=lista</td><td>Seleciona os campos (colunas) informados</td></tr>
-<tr><td>-d, –delimiter=caractere</td><td>Define o caractere delimitador entre os campos (padrão: <code>tab</code>)</td></tr>
-<tr><td>-c, –characters=lista</td><td>Seleciona os caracteres informados em cada linha, por posição</td></tr>
-<tr><td>–complement</td><td>Inverte a seleção, exibindo tudo exceto os campos/caracteres informados</td></tr>
+<tr><td>-f, --fields=lista</td><td>Seleciona os campos (colunas) informados</td></tr>
+<tr><td>-d, --delimiter=caractere</td><td>Define o caractere delimitador entre os campos (padrão: <code>tab</code>)</td></tr>
+<tr><td>-c, --characters=lista</td><td>Seleciona os caracteres informados em cada linha, por posição</td></tr>
+<tr><td>--complement</td><td>Inverte a seleção, exibindo tudo exceto os campos/caracteres informados</td></tr>
 </tbody>
 </table>
 </div>
@@ -2607,11 +2927,20 @@ cat arquivo.txt | sort                # ordena a saída do comando `cat` via pip
 <p>Por padrão, <code>cut</code> usa o caractere <code>tab</code> como delimitador entre os campos. Para arquivos separados por vírgula (CSV), use <code>-d ','</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">cut -f 1 dados.tsv                    # exibe apenas o primeiro campo de cada linha
-cut -d ',' -f 2 dados.csv             # exibe o segundo campo, usando vírgula como delimitador
-cut -d ',' -f 1,3 dados.csv           # exibe o primeiro e o terceiro campos
-cut -c 1-5 arquivo.txt                # exibe os 5 primeiros caracteres de cada linha
-cut -d ':' -f 1 /etc/passwd           # exibe apenas os nomes de usuário do arquivo `passwd`
+<pre><code class="language-bash"># exibe apenas o primeiro campo de cada linha
+cut -f 1 dados.tsv
+</code></pre>
+<pre><code class="language-bash"># exibe o segundo campo, usando vírgula como delimitador
+cut -d ',' -f 2 dados.csv
+</code></pre>
+<pre><code class="language-bash"># exibe o primeiro e o terceiro campos
+cut -d ',' -f 1,3 dados.csv
+</code></pre>
+<pre><code class="language-bash"># exibe os 5 primeiros caracteres de cada linha
+cut -c 1-5 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe apenas os nomes de usuário do arquivo `passwd`
+cut -d ':' -f 1 /etc/passwd
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="grep"><a class="header" href="#grep">grep</a></h1>
@@ -2626,12 +2955,12 @@ cut -d ':' -f 1 /etc/passwd           # exibe apenas os nomes de usuário do arq
 <tbody>
 <tr><td>padrão</td><td>Texto ou expressão regular a ser procurado</td></tr>
 <tr><td>arquivo</td><td>Localização do arquivo onde a busca será realizada</td></tr>
-<tr><td>-i, –ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas</td></tr>
-<tr><td>-v, –invert-match</td><td>Exibe as linhas que <strong>não</strong> correspondem ao padrão</td></tr>
-<tr><td>-n, –line-number</td><td>Exibe o número da linha correspondente</td></tr>
-<tr><td>-r, –recursive</td><td>Busca recursivamente em todos os arquivos de um diretório</td></tr>
-<tr><td>-c, –count</td><td>Exibe apenas a quantidade de linhas correspondentes</td></tr>
-<tr><td>-E, –extended-regexp</td><td>Interpreta o padrão como uma expressão regular estendida (ERE)</td></tr>
+<tr><td>-i, --ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas</td></tr>
+<tr><td>-v, --invert-match</td><td>Exibe as linhas que <strong>não</strong> correspondem ao padrão</td></tr>
+<tr><td>-n, --line-number</td><td>Exibe o número da linha correspondente</td></tr>
+<tr><td>-r, --recursive</td><td>Busca recursivamente em todos os arquivos de um diretório</td></tr>
+<tr><td>-c, --count</td><td>Exibe apenas a quantidade de linhas correspondentes</td></tr>
+<tr><td>-E, --extended-regexp</td><td>Interpreta o padrão como uma expressão regular estendida (ERE)</td></tr>
 </tbody>
 </table>
 </div>
@@ -2639,12 +2968,23 @@ cut -d ':' -f 1 /etc/passwd           # exibe apenas os nomes de usuário do arq
 <p><code>grep</code> é amplamente usado em conjunto com pipes (<code>|</code>) para filtrar a saída de outros comandos.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">grep "erro" log.txt                   # exibe as linhas de `log.txt` que contêm a palavra `erro`
-grep -i "erro" log.txt                # busca ignorando diferenças entre maiúsculas e minúsculas
-grep -n "erro" log.txt                # exibe as linhas correspondentes com o número da linha
-grep -v "erro" log.txt                # exibe as linhas que não contêm a palavra `erro`
-grep -r "TODO" ./projeto              # busca recursivamente pela palavra `TODO` dentro de um diretório
-ps aux | grep "firefox"                # filtra a lista de processos, exibindo apenas os relacionados a `firefox`
+<pre><code class="language-bash"># exibe as linhas de `log.txt` que contêm a palavra `erro`
+grep "erro" log.txt
+</code></pre>
+<pre><code class="language-bash"># busca ignorando diferenças entre maiúsculas e minúsculas
+grep -i "erro" log.txt
+</code></pre>
+<pre><code class="language-bash"># exibe as linhas correspondentes com o número da linha
+grep -n "erro" log.txt
+</code></pre>
+<pre><code class="language-bash"># exibe as linhas que não contêm a palavra `erro`
+grep -v "erro" log.txt
+</code></pre>
+<pre><code class="language-bash"># busca recursivamente pela palavra `TODO` dentro de um diretório
+grep -r "TODO" ./projeto
+</code></pre>
+<pre><code class="language-bash"># filtra a lista de processos, exibindo apenas os relacionados a `firefox`
+ps aux | grep "firefox"
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tr"><a class="header" href="#tr">tr</a></h1>
@@ -2659,9 +2999,9 @@ ps aux | grep "firefox"                # filtra a lista de processos, exibindo a
 <tbody>
 <tr><td>conjunto1</td><td>Conjunto de caracteres a serem substituídos ou removidos</td></tr>
 <tr><td>conjunto2</td><td>Conjunto de caracteres que substituirá <code>conjunto1</code></td></tr>
-<tr><td>-d, –delete</td><td>Remove os caracteres de <code>conjunto1</code>, em vez de substituí-los</td></tr>
-<tr><td>-s, –squeeze-repeats</td><td>Reduz sequências repetidas de um mesmo caractere a uma única ocorrência</td></tr>
-<tr><td>-c, –complement</td><td>Usa o complemento de <code>conjunto1</code> (todos os caracteres que não estão nele)</td></tr>
+<tr><td>-d, --delete</td><td>Remove os caracteres de <code>conjunto1</code>, em vez de substituí-los</td></tr>
+<tr><td>-s, --squeeze-repeats</td><td>Reduz sequências repetidas de um mesmo caractere a uma única ocorrência</td></tr>
+<tr><td>-c, --complement</td><td>Usa o complemento de <code>conjunto1</code> (todos os caracteres que não estão nele)</td></tr>
 </tbody>
 </table>
 </div>
@@ -2669,11 +3009,20 @@ ps aux | grep "firefox"                # filtra a lista de processos, exibindo a
 <p><code>tr</code> trabalha apenas com a entrada padrão (<code>stdin</code>), não recebe arquivo diretamente como argumento — por isso, costuma ser usado em conjunto com pipes (<code>|</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">echo "Ola Mundo" | tr 'a-z' 'A-Z'      # converte todo o texto para maiúsculas
-echo "Ola Mundo" | tr ' ' '_'          # substitui espaços por underscores
-cat arquivo.txt | tr -d '0-9'          # remove todos os números do texto
-cat arquivo.txt | tr -s ' '            # reduz múltiplos espaços consecutivos a um único espaço
-echo "12345" | tr -c '0-9' '#'         # substitui tudo que não for número por `#`
+<pre><code class="language-bash"># converte todo o texto para maiúsculas
+echo "Ola Mundo" | tr 'a-z' 'A-Z'
+</code></pre>
+<pre><code class="language-bash"># substitui espaços por underscores
+echo "Ola Mundo" | tr ' ' '_'
+</code></pre>
+<pre><code class="language-bash"># remove todos os números do texto
+cat arquivo.txt | tr -d '0-9'
+</code></pre>
+<pre><code class="language-bash"># reduz múltiplos espaços consecutivos a um único espaço
+cat arquivo.txt | tr -s ' '
+</code></pre>
+<pre><code class="language-bash"># substitui tudo que não for número por `#`
+echo "12345" | tr -c '0-9' '#'
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="wc"><a class="header" href="#wc">wc</a></h1>
@@ -2687,10 +3036,10 @@ echo "12345" | tr -c '0-9' '#'         # substitui tudo que não for número por
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser analisado</td></tr>
-<tr><td>-l, –lines</td><td>Exibe apenas o número de linhas</td></tr>
-<tr><td>-w, –words</td><td>Exibe apenas o número de palavras</td></tr>
-<tr><td>-c, –bytes</td><td>Exibe apenas o número de bytes</td></tr>
-<tr><td>-m, –chars</td><td>Exibe apenas o número de caracteres</td></tr>
+<tr><td>-l, --lines</td><td>Exibe apenas o número de linhas</td></tr>
+<tr><td>-w, --words</td><td>Exibe apenas o número de palavras</td></tr>
+<tr><td>-c, --bytes</td><td>Exibe apenas o número de bytes</td></tr>
+<tr><td>-m, --chars</td><td>Exibe apenas o número de caracteres</td></tr>
 </tbody>
 </table>
 </div>
@@ -2698,12 +3047,23 @@ echo "12345" | tr -c '0-9' '#'         # substitui tudo que não for número por
 <p>Sem opções, <code>wc</code> exibe três valores, nessa ordem: número de linhas, número de palavras e número de bytes do arquivo.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">wc arquivo.txt                        # exibe linhas, palavras e bytes de `arquivo.txt`
-wc -l arquivo.txt                     # exibe apenas o número de linhas
-wc -w arquivo.txt                     # exibe apenas o número de palavras
-wc -c arquivo.txt                     # exibe apenas o número de bytes
-cat arquivo.txt | wc -l               # conta o número de linhas da saída do comando `cat`
-ls -la | wc -l                        # conta a quantidade de itens listados em um diretório
+<pre><code class="language-bash"># exibe linhas, palavras e bytes de `arquivo.txt`
+wc arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o número de linhas
+wc -l arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o número de palavras
+wc -w arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o número de bytes
+wc -c arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># conta o número de linhas da saída do comando `cat`
+cat arquivo.txt | wc -l
+</code></pre>
+<pre><code class="language-bash"># conta a quantidade de itens listados em um diretório
+ls -la | wc -l
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="processos"><a class="header" href="#processos">Processos</a></h1>
@@ -2721,8 +3081,8 @@ ls -la | wc -l                        # conta a quantidade de itens listados em 
 <tr><td>a</td><td>Exibe os processos de todos os usuários associados a um terminal</td></tr>
 <tr><td>u</td><td>Exibe informações detalhadas, incluindo usuário e uso de recursos</td></tr>
 <tr><td>x</td><td>Inclui processos sem terminal associado (ex.: serviços em segundo plano)</td></tr>
-<tr><td>-e, –everyone</td><td>Exibe todos os processos do sistema</td></tr>
-<tr><td>-f, –full</td><td>Exibe uma listagem completa, com mais detalhes sobre cada processo</td></tr>
+<tr><td>-e, --everyone</td><td>Exibe todos os processos do sistema</td></tr>
+<tr><td>-f, --full</td><td>Exibe uma listagem completa, com mais detalhes sobre cada processo</td></tr>
 </tbody>
 </table>
 </div>
@@ -2730,11 +3090,20 @@ ls -la | wc -l                        # conta a quantidade de itens listados em 
 <p>A combinação <code>ps aux</code> é uma das mais usadas, exibindo todos os processos do sistema com informações detalhadas, independentemente de terminal.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ps                                     # exibe os processos do terminal atual
-ps aux                                 # exibe todos os processos do sistema com detalhes
-ps -ef                                 # exibe todos os processos em formato completo
-ps aux | grep "firefox"                # filtra os processos relacionados ao `firefox`
-ps -u usuario                          # exibe os processos de um usuário específico
+<pre><code class="language-bash"># exibe os processos do terminal atual
+ps
+</code></pre>
+<pre><code class="language-bash"># exibe todos os processos do sistema com detalhes
+ps aux
+</code></pre>
+<pre><code class="language-bash"># exibe todos os processos em formato completo
+ps -ef
+</code></pre>
+<pre><code class="language-bash"># filtra os processos relacionados ao `firefox`
+ps aux | grep "firefox"
+</code></pre>
+<pre><code class="language-bash"># exibe os processos de um usuário específico
+ps -u usuario
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="kill"><a class="header" href="#kill">kill</a></h1>
@@ -2748,7 +3117,7 @@ ps -u usuario                          # exibe os processos de um usuário espec
 </thead>
 <tbody>
 <tr><td>PID</td><td>Número de identificação do processo (Process ID) a ser sinalizado</td></tr>
-<tr><td>-l, –list</td><td>Lista todos os sinais disponíveis</td></tr>
+<tr><td>-l, --list</td><td>Lista todos os sinais disponíveis</td></tr>
 <tr><td>-9, -SIGKILL</td><td>Força o encerramento imediato do processo, sem chance de finalização controlada</td></tr>
 <tr><td>-15, -SIGTERM</td><td>Solicita o encerramento normal do processo (sinal padrão)</td></tr>
 <tr><td>-1, -SIGHUP</td><td>Reinicia o processo, recarregando sua configuração</td></tr>
@@ -2756,14 +3125,23 @@ ps -u usuario                          # exibe os processos de um usuário espec
 </table>
 </div>
 <blockquote>
-<p><code>kill</code> não “mata” o processo diretamente — ele envia um sinal, e o comportamento depende de como o processo trata esse sinal. Use <code>-9</code> apenas quando o processo não responder ao sinal padrão.</p>
+<p><code>kill</code> não "mata" o processo diretamente — ele envia um sinal, e o comportamento depende de como o processo trata esse sinal. Use <code>-9</code> apenas quando o processo não responder ao sinal padrão.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">kill 1234                             # envia o sinal padrão (SIGTERM) para o processo de PID 1234
-kill -9 1234                          # força o encerramento imediato do processo 1234
-kill -l                               # lista todos os sinais disponíveis
-kill -1 1234                          # envia o sinal SIGHUP, recarregando a configuração do processo
-pkill firefox                         # encerra processos pelo nome, sem precisar informar o PID
+<pre><code class="language-bash"># envia o sinal padrão (SIGTERM) para o processo de PID 1234
+kill 1234
+</code></pre>
+<pre><code class="language-bash"># força o encerramento imediato do processo 1234
+kill -9 1234
+</code></pre>
+<pre><code class="language-bash"># lista todos os sinais disponíveis
+kill -l
+</code></pre>
+<pre><code class="language-bash"># envia o sinal SIGHUP, recarregando a configuração do processo
+kill -1 1234
+</code></pre>
+<pre><code class="language-bash"># encerra processos pelo nome, sem precisar informar o PID
+pkill firefox
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="killall"><a class="header" href="#killall">killall</a></h1>
@@ -2778,9 +3156,9 @@ pkill firefox                         # encerra processos pelo nome, sem precisa
 <tbody>
 <tr><td>nome_do_processo</td><td>Nome do processo (ou programa) cujas instâncias serão sinalizadas</td></tr>
 <tr><td>-9, -SIGKILL</td><td>Força o encerramento imediato de todos os processos correspondentes</td></tr>
-<tr><td>-i, –interactive</td><td>Pede confirmação antes de encerrar cada processo encontrado</td></tr>
+<tr><td>-i, --interactive</td><td>Pede confirmação antes de encerrar cada processo encontrado</td></tr>
 <tr><td>-u usuário</td><td>Encerra apenas os processos pertencentes ao usuário informado</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe uma mensagem informando se o sinal foi enviado com sucesso</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe uma mensagem informando se o sinal foi enviado com sucesso</td></tr>
 </tbody>
 </table>
 </div>
@@ -2788,11 +3166,20 @@ pkill firefox                         # encerra processos pelo nome, sem precisa
 <p>Diferente do <code>kill</code>, que exige o PID de um processo específico, o <code>killall</code> localiza e sinaliza todos os processos que correspondem ao nome informado, o que é útil quando um programa possui múltiplas instâncias em execução.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">killall firefox                      # envia o sinal padrão (SIGTERM) para todas as instâncias do `firefox`
-killall -9 firefox                    # força o encerramento imediato de todas as instâncias do `firefox`
-killall -i chrome                     # pede confirmação antes de encerrar cada processo do `chrome`
-killall -u usuario                    # encerra todos os processos pertencentes a um usuário específico
-killall -v firefox                    # encerra os processos e exibe uma mensagem de confirmação
+<pre><code class="language-bash"># envia o sinal padrão (SIGTERM) para todas as instâncias do `firefox`
+killall firefox
+</code></pre>
+<pre><code class="language-bash"># força o encerramento imediato de todas as instâncias do `firefox`
+killall -9 firefox
+</code></pre>
+<pre><code class="language-bash"># pede confirmação antes de encerrar cada processo do `chrome`
+killall -i chrome
+</code></pre>
+<pre><code class="language-bash"># encerra todos os processos pertencentes a um usuário específico
+killall -u usuario
+</code></pre>
+<pre><code class="language-bash"># encerra os processos e exibe uma mensagem de confirmação
+killall -v firefox
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="pkill"><a class="header" href="#pkill">pkill</a></h1>
@@ -2807,9 +3194,9 @@ killall -v firefox                    # encerra os processos e exibe uma mensage
 <tbody>
 <tr><td>padrão</td><td>Nome (ou expressão) usado para localizar os processos a serem sinalizados</td></tr>
 <tr><td>-9, -SIGKILL</td><td>Força o encerramento imediato dos processos correspondentes</td></tr>
-<tr><td>-f, –full</td><td>Considera a linha de comando completa na busca, não apenas o nome do processo</td></tr>
+<tr><td>-f, --full</td><td>Considera a linha de comando completa na busca, não apenas o nome do processo</td></tr>
 <tr><td>-u usuário</td><td>Sinaliza apenas os processos pertencentes ao usuário informado</td></tr>
-<tr><td>-i, –ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas na busca</td></tr>
+<tr><td>-i, --ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas na busca</td></tr>
 </tbody>
 </table>
 </div>
@@ -2817,11 +3204,20 @@ killall -v firefox                    # encerra os processos e exibe uma mensage
 <p><code>pkill</code> é semelhante ao <code>killall</code>, mas permite buscas mais flexíveis, como por expressões regulares e por trechos da linha de comando (<code>-f</code>), em vez de exigir o nome exato do processo.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">pkill firefox                         # envia o sinal padrão (SIGTERM) para processos chamados `firefox`
-pkill -9 firefox                      # força o encerramento imediato dos processos `firefox`
-pkill -f "python script.py"           # encerra processos cuja linha de comando completa corresponda ao padrão
-pkill -u usuario                      # encerra todos os processos pertencentes a um usuário específico
-pkill -i FIREFOX                      # busca ignorando diferenças entre maiúsculas e minúsculas
+<pre><code class="language-bash"># envia o sinal padrão (SIGTERM) para processos chamados `firefox`
+pkill firefox
+</code></pre>
+<pre><code class="language-bash"># força o encerramento imediato dos processos `firefox`
+pkill -9 firefox
+</code></pre>
+<pre><code class="language-bash"># encerra processos cuja linha de comando completa corresponda ao padrão
+pkill -f "python script.py"
+</code></pre>
+<pre><code class="language-bash"># encerra todos os processos pertencentes a um usuário específico
+pkill -u usuario
+</code></pre>
+<pre><code class="language-bash"># busca ignorando diferenças entre maiúsculas e minúsculas
+pkill -i FIREFOX
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="comandos-de-usuários-e-grupos"><a class="header" href="#comandos-de-usuários-e-grupos">Comandos de Usuários e Grupos</a></h1>
@@ -2837,9 +3233,9 @@ pkill -i FIREFOX                      # busca ignorando diferenças entre maiús
 </thead>
 <tbody>
 <tr><td>novo_nome</td><td>Novo nome a ser atribuído ao host (geralmente requer permissão de superusuário)</td></tr>
-<tr><td>-i, –ip-address</td><td>Exibe o(s) endereço(s) IP associado(s) ao host</td></tr>
-<tr><td>-f, –fqdn</td><td>Exibe o nome de domínio totalmente qualificado (FQDN)</td></tr>
-<tr><td>-d, –domain</td><td>Exibe apenas o nome do domínio DNS</td></tr>
+<tr><td>-i, --ip-address</td><td>Exibe o(s) endereço(s) IP associado(s) ao host</td></tr>
+<tr><td>-f, --fqdn</td><td>Exibe o nome de domínio totalmente qualificado (FQDN)</td></tr>
+<tr><td>-d, --domain</td><td>Exibe apenas o nome do domínio DNS</td></tr>
 </tbody>
 </table>
 </div>
@@ -2847,10 +3243,17 @@ pkill -i FIREFOX                      # busca ignorando diferenças entre maiús
 <p>Alterar o nome do host com <code>hostname novo_nome</code> costuma valer apenas para a sessão atual. Para tornar a mudança permanente, é necessário editar o arquivo <code>/etc/hostname</code> (e geralmente também <code>/etc/hosts</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">hostname                              # exibe o nome atual do host
-hostname -i                           # exibe o endereço IP associado ao host
-hostname -f                           # exibe o nome de domínio totalmente qualificado (FQDN)
-sudo hostname novo-nome               # altera o nome do host para `novo-nome` (temporariamente)
+<pre><code class="language-bash"># exibe o nome atual do host
+hostname
+</code></pre>
+<pre><code class="language-bash"># exibe o endereço IP associado ao host
+hostname -i
+</code></pre>
+<pre><code class="language-bash"># exibe o nome de domínio totalmente qualificado (FQDN)
+hostname -f
+</code></pre>
+<pre><code class="language-bash"># altera o nome do host para `novo-nome` (temporariamente)
+sudo hostname novo-nome
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="uname"><a class="header" href="#uname">uname</a></h1>
@@ -2863,11 +3266,11 @@ sudo hostname novo-nome               # altera o nome do host para `novo-nome` (
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>-a, –all</td><td>Exibe todas as informações disponíveis</td></tr>
-<tr><td>-s, –kernel-name</td><td>Exibe o nome do kernel (padrão, quando nenhuma opção é informada)</td></tr>
-<tr><td>-r, –kernel-release</td><td>Exibe a versão (release) do kernel</td></tr>
-<tr><td>-m, –machine</td><td>Exibe a arquitetura da máquina (ex.: <code>x86_64</code>)</td></tr>
-<tr><td>-o, –operating-system</td><td>Exibe o nome do sistema operacional</td></tr>
+<tr><td>-a, --all</td><td>Exibe todas as informações disponíveis</td></tr>
+<tr><td>-s, --kernel-name</td><td>Exibe o nome do kernel (padrão, quando nenhuma opção é informada)</td></tr>
+<tr><td>-r, --kernel-release</td><td>Exibe a versão (release) do kernel</td></tr>
+<tr><td>-m, --machine</td><td>Exibe a arquitetura da máquina (ex.: <code>x86_64</code>)</td></tr>
+<tr><td>-o, --operating-system</td><td>Exibe o nome do sistema operacional</td></tr>
 </tbody>
 </table>
 </div>
@@ -2875,11 +3278,20 @@ sudo hostname novo-nome               # altera o nome do host para `novo-nome` (
 <p>Sem opções, <code>uname</code> exibe apenas o nome do kernel (equivalente a <code>-s</code>). Para uma visão completa do sistema, use <code>uname -a</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">uname                                 # exibe o nome do kernel
-uname -a                              # exibe todas as informações do sistema
-uname -r                              # exibe a versão do kernel
-uname -m                              # exibe a arquitetura da máquina
-uname -o                              # exibe o nome do sistema operacional
+<pre><code class="language-bash"># exibe o nome do kernel
+uname
+</code></pre>
+<pre><code class="language-bash"># exibe todas as informações do sistema
+uname -a
+</code></pre>
+<pre><code class="language-bash"># exibe a versão do kernel
+uname -r
+</code></pre>
+<pre><code class="language-bash"># exibe a arquitetura da máquina
+uname -m
+</code></pre>
+<pre><code class="language-bash"># exibe o nome do sistema operacional
+uname -o
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="su"><a class="header" href="#su">su</a></h1>
@@ -2893,9 +3305,9 @@ uname -o                              # exibe o nome do sistema operacional
 </thead>
 <tbody>
 <tr><td>usuário</td><td>Nome do usuário para o qual deseja trocar (padrão: root)</td></tr>
-<tr><td>-, -l, –login</td><td>Inicia uma sessão de login completa, carregando o ambiente do usuário de destino</td></tr>
-<tr><td>-c, –command=“comando”</td><td>Executa um único comando como o usuário de destino, sem abrir um novo shell</td></tr>
-<tr><td>-s, –shell=shell</td><td>Define o shell a ser usado na nova sessão</td></tr>
+<tr><td>-, -l, --login</td><td>Inicia uma sessão de login completa, carregando o ambiente do usuário de destino</td></tr>
+<tr><td>-c, --command="comando"</td><td>Executa um único comando como o usuário de destino, sem abrir um novo shell</td></tr>
+<tr><td>-s, --shell=shell</td><td>Define o shell a ser usado na nova sessão</td></tr>
 </tbody>
 </table>
 </div>
@@ -2903,11 +3315,20 @@ uname -o                              # exibe o nome do sistema operacional
 <p><code>su</code> pede a senha do usuário de destino (não a do usuário atual) e permanece nesse usuário até que se digite <code>exit</code>, retornando à sessão anterior.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">su                                    # troca para o usuário root (pede a senha do root)
-su -                                  # troca para o root, carregando também seu ambiente completo
-su usuario                            # troca para o usuário `usuario` (pede a senha dele)
-su -c "apt update"                    # executa um único comando como root, sem abrir um novo shell
-exit                                  # encerra a sessão como o outro usuário e retorna à anterior
+<pre><code class="language-bash"># troca para o usuário root (pede a senha do root)
+su
+</code></pre>
+<pre><code class="language-bash"># troca para o root, carregando também seu ambiente completo
+su -
+</code></pre>
+<pre><code class="language-bash"># troca para o usuário `usuario` (pede a senha dele)
+su usuario
+</code></pre>
+<pre><code class="language-bash"># executa um único comando como root, sem abrir um novo shell
+su -c "apt update"
+</code></pre>
+<pre><code class="language-bash"># encerra a sessão como o outro usuário e retorna à anterior
+exit
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="sudo"><a class="header" href="#sudo">sudo</a></h1>
@@ -2924,7 +3345,7 @@ exit                                  # encerra a sessão como o outro usuário 
 <tr><td>-u usuário</td><td>Executa o comando como um usuário específico, em vez de root</td></tr>
 <tr><td>-i</td><td>Executa o comando simulando o ambiente de login do usuário de destino</td></tr>
 <tr><td>-s</td><td>Executa um shell com privilégios elevados</td></tr>
-<tr><td>-l, –list</td><td>Lista os comandos que o usuário atual tem permissão de executar com <code>sudo</code></td></tr>
+<tr><td>-l, --list</td><td>Lista os comandos que o usuário atual tem permissão de executar com <code>sudo</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -2932,11 +3353,20 @@ exit                                  # encerra a sessão como o outro usuário 
 <p><code>sudo</code> executa apenas um comando pontual com privilégios elevados, pedindo a senha do próprio usuário (não a do root), desde que ele tenha permissão configurada no arquivo <code>/etc/sudoers</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo apt update                       # executa o comando `apt update` com privilégios de root
-sudo -u usuario ls /home/usuario      # executa o comando como um usuário específico
-sudo -i                               # abre um shell interativo como root
-sudo -l                               # lista os comandos que o usuário atual pode executar com sudo
-sudo systemctl restart nginx          # reinicia um serviço do sistema com privilégios elevados
+<pre><code class="language-bash"># executa o comando `apt update` com privilégios de root
+sudo apt update
+</code></pre>
+<pre><code class="language-bash"># executa o comando como um usuário específico
+sudo -u usuario ls /home/usuario
+</code></pre>
+<pre><code class="language-bash"># abre um shell interativo como root
+sudo -i
+</code></pre>
+<pre><code class="language-bash"># lista os comandos que o usuário atual pode executar com sudo
+sudo -l
+</code></pre>
+<pre><code class="language-bash"># reinicia um serviço do sistema com privilégios elevados
+sudo systemctl restart nginx
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="id"><a class="header" href="#id">id</a></h1>
@@ -2950,10 +3380,10 @@ sudo systemctl restart nginx          # reinicia um serviço do sistema com priv
 </thead>
 <tbody>
 <tr><td>usuário</td><td>Nome do usuário sobre o qual se deseja obter informações (padrão: usuário atual)</td></tr>
-<tr><td>-u, –user</td><td>Exibe apenas o UID (identificador do usuário)</td></tr>
-<tr><td>-g, –group</td><td>Exibe apenas o GID (identificador do grupo principal)</td></tr>
-<tr><td>-G, –groups</td><td>Exibe todos os IDs de grupos aos quais o usuário pertence</td></tr>
-<tr><td>-n, –name</td><td>Exibe o nome, em vez do número, ao ser usado junto com <code>-u</code>, <code>-g</code> ou <code>-G</code></td></tr>
+<tr><td>-u, --user</td><td>Exibe apenas o UID (identificador do usuário)</td></tr>
+<tr><td>-g, --group</td><td>Exibe apenas o GID (identificador do grupo principal)</td></tr>
+<tr><td>-G, --groups</td><td>Exibe todos os IDs de grupos aos quais o usuário pertence</td></tr>
+<tr><td>-n, --name</td><td>Exibe o nome, em vez do número, ao ser usado junto com <code>-u</code>, <code>-g</code> ou <code>-G</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -2961,11 +3391,20 @@ sudo systemctl restart nginx          # reinicia um serviço do sistema com priv
 <p>A saída padrão do <code>id</code> exibe três informações: <code>uid</code> (usuário), <code>gid</code> (grupo principal) e <code>groups</code> (todos os grupos aos quais o usuário pertence).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">id                                    # exibe as informações do usuário atual
-id usuario                            # exibe as informações de um usuário específico
-id -u                                 # exibe apenas o UID do usuário atual
-id -un                                # exibe apenas o nome do usuário atual
-id -Gn                                # exibe os nomes de todos os grupos do usuário atual
+<pre><code class="language-bash"># exibe as informações do usuário atual
+id
+</code></pre>
+<pre><code class="language-bash"># exibe as informações de um usuário específico
+id usuario
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o UID do usuário atual
+id -u
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o nome do usuário atual
+id -un
+</code></pre>
+<pre><code class="language-bash"># exibe os nomes de todos os grupos do usuário atual
+id -Gn
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="whoami"><a class="header" href="#whoami">whoami</a></h1>
@@ -2986,8 +3425,11 @@ id -Gn                                # exibe os nomes de todos os grupos do usu
 <p><code>whoami</code> é equivalente a <code>id -un</code>, exibindo apenas o nome do usuário efetivo da sessão atual — útil, por exemplo, para verificar se você está operando como root após um <code>sudo -i</code> ou <code>su</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">whoami                                # exibe o nome do usuário atual
-sudo whoami                           # confirma que os privilégios foram elevados, exibindo `root`
+<pre><code class="language-bash"># exibe o nome do usuário atual
+whoami
+</code></pre>
+<pre><code class="language-bash"># confirma que os privilégios foram elevados, exibindo `root`
+sudo whoami
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="chgrp"><a class="header" href="#chgrp">chgrp</a></h1>
@@ -3002,9 +3444,9 @@ sudo whoami                           # confirma que os privilégios foram eleva
 <tbody>
 <tr><td>grupo</td><td>Nome (ou número) do grupo que passará a ser o proprietário</td></tr>
 <tr><td>arquivo</td><td>Localização do arquivo ou diretório a ser alterado</td></tr>
-<tr><td>-R, –recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
-<tr><td>–reference=arquivo_ref</td><td>Usa o grupo de <code>arquivo_ref</code> em vez de especificar o nome diretamente</td></tr>
+<tr><td>-R, --recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
+<tr><td>--reference=arquivo_ref</td><td>Usa o grupo de <code>arquivo_ref</code> em vez de especificar o nome diretamente</td></tr>
 </tbody>
 </table>
 </div>
@@ -3012,10 +3454,17 @@ sudo whoami                           # confirma que os privilégios foram eleva
 <p>Alterar o grupo de um arquivo geralmente requer que o usuário seja o dono do arquivo (e membro do grupo de destino) ou tenha permissões de superusuário.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">chgrp equipe arquivo.txt              # altera o grupo de `arquivo.txt` para `equipe`
-sudo chgrp -R equipe /var/www/site    # altera o grupo recursivamente para todos os arquivos de um diretório
-chgrp -v equipe arquivo.txt           # altera o grupo e exibe uma mensagem de confirmação
-chgrp --reference=modelo.txt copia.txt # aplica o mesmo grupo de `modelo.txt` a `copia.txt`
+<pre><code class="language-bash"># altera o grupo de `arquivo.txt` para `equipe`
+chgrp equipe arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># altera o grupo recursivamente para todos os arquivos de um diretório
+sudo chgrp -R equipe /var/www/site
+</code></pre>
+<pre><code class="language-bash"># altera o grupo e exibe uma mensagem de confirmação
+chgrp -v equipe arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># aplica o mesmo grupo de `modelo.txt` a `copia.txt`
+chgrp --reference=modelo.txt copia.txt
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="chown"><a class="header" href="#chown">chown</a></h1>
@@ -3031,9 +3480,9 @@ chgrp --reference=modelo.txt copia.txt # aplica o mesmo grupo de `modelo.txt` a 
 <tr><td>usuário</td><td>Nome (ou número) do usuário que passará a ser o proprietário</td></tr>
 <tr><td>grupo</td><td>Nome (ou número) do grupo que passará a ser o proprietário (opcional, precedido por <code>:</code>)</td></tr>
 <tr><td>arquivo</td><td>Localização do arquivo ou diretório a ser alterado</td></tr>
-<tr><td>-R, –recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
-<tr><td>–reference=arquivo_ref</td><td>Usa o dono/grupo de <code>arquivo_ref</code> em vez de especificar diretamente</td></tr>
+<tr><td>-R, --recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
+<tr><td>--reference=arquivo_ref</td><td>Usa o dono/grupo de <code>arquivo_ref</code> em vez de especificar diretamente</td></tr>
 </tbody>
 </table>
 </div>
@@ -3041,11 +3490,20 @@ chgrp --reference=modelo.txt copia.txt # aplica o mesmo grupo de `modelo.txt` a 
 <p>Alterar o proprietário de um arquivo geralmente requer permissões de superusuário. Para alterar apenas o grupo, sem mudar o usuário, prefira o comando <code>chgrp</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo chown usuario arquivo.txt        # altera apenas o dono de `arquivo.txt` para `usuario`
-sudo chown usuario:equipe arquivo.txt # altera o dono para `usuario` e o grupo para `equipe`
-sudo chown -R usuario:equipe /var/www/site  # altera recursivamente o dono e o grupo de um diretório
-sudo chown -v usuario arquivo.txt     # altera o dono e exibe uma mensagem de confirmação
-sudo chown --reference=modelo.txt copia.txt # aplica o mesmo dono/grupo de `modelo.txt` a `copia.txt`
+<pre><code class="language-bash"># altera apenas o dono de `arquivo.txt` para `usuario`
+sudo chown usuario arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># altera o dono para `usuario` e o grupo para `equipe`
+sudo chown usuario:equipe arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># altera recursivamente o dono e o grupo de um diretório
+sudo chown -R usuario:equipe /var/www/site
+</code></pre>
+<pre><code class="language-bash"># altera o dono e exibe uma mensagem de confirmação
+sudo chown -v usuario arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># aplica o mesmo dono/grupo de `modelo.txt` a `copia.txt`
+sudo chown --reference=modelo.txt copia.txt
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="chmod"><a class="header" href="#chmod">chmod</a></h1>
@@ -3060,8 +3518,8 @@ sudo chown --reference=modelo.txt copia.txt # aplica o mesmo dono/grupo de `mode
 <tbody>
 <tr><td>modo</td><td>Permissões a serem aplicadas, em formato numérico (ex.: <code>755</code>) ou simbólico (ex.: <code>u+x</code>)</td></tr>
 <tr><td>arquivo</td><td>Localização do arquivo ou diretório a ser alterado</td></tr>
-<tr><td>-R, –recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
+<tr><td>-R, --recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
 </tbody>
 </table>
 </div>
@@ -3069,12 +3527,23 @@ sudo chown --reference=modelo.txt copia.txt # aplica o mesmo dono/grupo de `mode
 <p>As permissões são divididas em três grupos: usuário dono (<code>u</code>), grupo (<code>g</code>) e outros (<code>o</code>). Cada um pode ter permissão de leitura (<code>r</code> = 4), escrita (<code>w</code> = 2) e execução (<code>x</code> = 1), que se somam no formato numérico (ex.: <code>7</code> = leitura + escrita + execução).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">chmod 755 script.sh                   # dá permissão total ao dono e leitura/execução aos demais
-chmod +x script.sh                    # adiciona permissão de execução para todos
-chmod u+x script.sh                   # adiciona permissão de execução apenas para o dono
-chmod g-w arquivo.txt                 # remove a permissão de escrita do grupo
-sudo chmod -R 644 /var/www/site       # aplica a permissão recursivamente a todos os arquivos de um diretório
-chmod -v 700 arquivo_privado.txt      # altera a permissão e exibe uma mensagem de confirmação
+<pre><code class="language-bash"># dá permissão total ao dono e leitura/execução aos demais
+chmod 755 script.sh
+</code></pre>
+<pre><code class="language-bash"># adiciona permissão de execução para todos
+chmod +x script.sh
+</code></pre>
+<pre><code class="language-bash"># adiciona permissão de execução apenas para o dono
+chmod u+x script.sh
+</code></pre>
+<pre><code class="language-bash"># remove a permissão de escrita do grupo
+chmod g-w arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># aplica a permissão recursivamente a todos os arquivos de um diretório
+sudo chmod -R 644 /var/www/site
+</code></pre>
+<pre><code class="language-bash"># altera a permissão e exibe uma mensagem de confirmação
+chmod -v 700 arquivo_privado.txt
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="gerenciamento-de-disco"><a class="header" href="#gerenciamento-de-disco">Gerenciamento de Disco</a></h1>
@@ -3090,7 +3559,7 @@ chmod -v 700 arquivo_privado.txt      # altera a permissão e exibe uma mensagem
 </thead>
 <tbody>
 <tr><td>dispositivo</td><td>Localização do disco a ser manipulado (ex.: <code>/dev/sda</code>)</td></tr>
-<tr><td>-l, –list</td><td>Lista as partições existentes de um ou mais dispositivos</td></tr>
+<tr><td>-l, --list</td><td>Lista as partições existentes de um ou mais dispositivos</td></tr>
 <tr><td>-u</td><td>Exibe os tamanhos em setores, em vez de cilindros</td></tr>
 <tr><td>p</td><td>(modo interativo) Exibe a tabela de partições</td></tr>
 <tr><td>n</td><td>(modo interativo) Cria uma nova partição</td></tr>
@@ -3105,9 +3574,14 @@ chmod -v 700 arquivo_privado.txt      # altera a permissão e exibe uma mensagem
 Alterar a tabela de partições é uma operação sensível e geralmente requer permissões de superusuário — erros podem causar perda de dados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo fdisk -l                           # lista as partições de todos os discos do sistema
-sudo fdisk -l /dev/sda                  # lista as partições de um disco específico
-sudo fdisk /dev/sda                     # abre o modo interativo para manipular as partições do disco
+<pre><code class="language-bash"># lista as partições de todos os discos do sistema
+sudo fdisk -l
+</code></pre>
+<pre><code class="language-bash"># lista as partições de um disco específico
+sudo fdisk -l /dev/sda
+</code></pre>
+<pre><code class="language-bash"># abre o modo interativo para manipular as partições do disco
+sudo fdisk /dev/sda
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="gdisk"><a class="header" href="#gdisk">gdisk</a></h1>
@@ -3121,7 +3595,7 @@ sudo fdisk /dev/sda                     # abre o modo interativo para manipular 
 </thead>
 <tbody>
 <tr><td>dispositivo</td><td>Localização do disco a ser manipulado (ex.: <code>/dev/sda</code>)</td></tr>
-<tr><td>-l, –list</td><td>Lista as partições existentes de um dispositivo, sem entrar no modo interativo</td></tr>
+<tr><td>-l, --list</td><td>Lista as partições existentes de um dispositivo, sem entrar no modo interativo</td></tr>
 <tr><td>p</td><td>(modo interativo) Exibe a tabela de partições</td></tr>
 <tr><td>n</td><td>(modo interativo) Cria uma nova partição</td></tr>
 <tr><td>d</td><td>(modo interativo) Exclui uma partição</td></tr>
@@ -3135,8 +3609,11 @@ sudo fdisk /dev/sda                     # abre o modo interativo para manipular 
 Assim como o <code>fdisk</code>, alterar a tabela de partições é uma operação sensível e geralmente requer permissões de superusuário — erros podem causar perda de dados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo gdisk -l /dev/sda                 # lista as partições GPT de um disco específico
-sudo gdisk /dev/sda                    # abre o modo interativo para manipular as partições do disco
+<pre><code class="language-bash"># lista as partições GPT de um disco específico
+sudo gdisk -l /dev/sda
+</code></pre>
+<pre><code class="language-bash"># abre o modo interativo para manipular as partições do disco
+sudo gdisk /dev/sda
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="cfdisk"><a class="header" href="#cfdisk">cfdisk</a></h1>
@@ -3150,7 +3627,7 @@ sudo gdisk /dev/sda                    # abre o modo interativo para manipular a
 </thead>
 <tbody>
 <tr><td>dispositivo</td><td>Localização do disco a ser manipulado (ex.: <code>/dev/sda</code>)</td></tr>
-<tr><td>-z, –zero</td><td>Inicia com uma tabela de partições em branco, ignorando a existente</td></tr>
+<tr><td>-z, --zero</td><td>Inicia com uma tabela de partições em branco, ignorando a existente</td></tr>
 <tr><td>↑ / ↓</td><td>Navega entre as partições listadas</td></tr>
 <tr><td>← / →</td><td>Navega entre as opções do menu (New, Delete, Write, Quit, etc.)</td></tr>
 <tr><td>Enter</td><td>Confirma a opção selecionada no menu</td></tr>
@@ -3162,8 +3639,11 @@ sudo gdisk /dev/sda                    # abre o modo interativo para manipular a
 Assim como o <code>fdisk</code>, alterar a tabela de partições é uma operação sensível e geralmente requer permissões de superusuário — erros podem causar perda de dados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo cfdisk /dev/sda                  # abre a interface interativa para manipular as partições do disco
-sudo cfdisk -z /dev/sdb                # abre a interface iniciando com uma tabela de partições em branco
+<pre><code class="language-bash"># abre a interface interativa para manipular as partições do disco
+sudo cfdisk /dev/sda
+</code></pre>
+<pre><code class="language-bash"># abre a interface iniciando com uma tabela de partições em branco
+sudo cfdisk -z /dev/sdb
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="mount"><a class="header" href="#mount">mount</a></h1>
@@ -3180,7 +3660,7 @@ sudo cfdisk -z /dev/sdb                # abre a interface iniciando com uma tabe
 <tr><td>diretório</td><td>Ponto de montagem, ou seja, o diretório onde o conteúdo será acessado</td></tr>
 <tr><td>-t tipo</td><td>Especifica o tipo de sistema de arquivos (ex.: <code>ext4</code>, <code>ntfs</code>, <code>vfat</code>)</td></tr>
 <tr><td>-o opções</td><td>Define opções de montagem, separadas por vírgula (ex.: <code>ro</code>, <code>rw</code>, <code>noexec</code>)</td></tr>
-<tr><td>-a, –all</td><td>Monta todos os sistemas de arquivos listados em <code>/etc/fstab</code></td></tr>
+<tr><td>-a, --all</td><td>Monta todos os sistemas de arquivos listados em <code>/etc/fstab</code></td></tr>
 <tr><td>(sem argumentos)</td><td>Exibe todos os sistemas de arquivos atualmente montados</td></tr>
 </tbody>
 </table>
@@ -3189,11 +3669,20 @@ sudo cfdisk -z /dev/sdb                # abre a interface iniciando com uma tabe
 <p>Sem argumentos, <code>mount</code> apenas lista o que já está montado no sistema. Para desmontar um sistema de arquivos, use o comando <code>umount</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">mount                                  # lista todos os sistemas de arquivos montados
-sudo mount /dev/sdb1 /mnt/usb          # monta o dispositivo `/dev/sdb1` no diretório `/mnt/usb`
-sudo mount -t ntfs /dev/sdb1 /mnt/usb  # monta especificando o tipo de sistema de arquivos
-sudo mount -o ro /dev/sdb1 /mnt/usb    # monta o dispositivo em modo somente leitura
-sudo mount -a                          # monta todos os sistemas de arquivos listados em `/etc/fstab`
+<pre><code class="language-bash"># lista todos os sistemas de arquivos montados
+mount
+</code></pre>
+<pre><code class="language-bash"># monta o dispositivo `/dev/sdb1` no diretório `/mnt/usb`
+sudo mount /dev/sdb1 /mnt/usb
+</code></pre>
+<pre><code class="language-bash"># monta especificando o tipo de sistema de arquivos
+sudo mount -t ntfs /dev/sdb1 /mnt/usb
+</code></pre>
+<pre><code class="language-bash"># monta o dispositivo em modo somente leitura
+sudo mount -o ro /dev/sdb1 /mnt/usb
+</code></pre>
+<pre><code class="language-bash"># monta todos os sistemas de arquivos listados em `/etc/fstab`
+sudo mount -a
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="umount"><a class="header" href="#umount">umount</a></h1>
@@ -3208,9 +3697,9 @@ sudo mount -a                          # monta todos os sistemas de arquivos lis
 <tbody>
 <tr><td>dispositivo</td><td>Localização do dispositivo ou partição a ser desmontado (ex.: <code>/dev/sdb1</code>)</td></tr>
 <tr><td>diretório</td><td>Ponto de montagem a ser desmontado (ex.: <code>/mnt/usb</code>)</td></tr>
-<tr><td>-a, –all</td><td>Desmonta todos os sistemas de arquivos montados (exceto os essenciais ao sistema)</td></tr>
-<tr><td>-f, –force</td><td>Força a desmontagem, mesmo que o sistema de arquivos esteja ocupado ou inacessível</td></tr>
-<tr><td>-l, –lazy</td><td>Desmonta assim que possível, liberando o ponto de montagem imediatamente, mesmo que ainda esteja em uso</td></tr>
+<tr><td>-a, --all</td><td>Desmonta todos os sistemas de arquivos montados (exceto os essenciais ao sistema)</td></tr>
+<tr><td>-f, --force</td><td>Força a desmontagem, mesmo que o sistema de arquivos esteja ocupado ou inacessível</td></tr>
+<tr><td>-l, --lazy</td><td>Desmonta assim que possível, liberando o ponto de montagem imediatamente, mesmo que ainda esteja em uso</td></tr>
 </tbody>
 </table>
 </div>
@@ -3218,10 +3707,17 @@ sudo mount -a                          # monta todos os sistemas de arquivos lis
 <p>Ao tentar desmontar, o sistema pode recusar a operação caso o sistema de arquivos esteja em uso (ex.: um arquivo aberto ou um terminal com o diretório como local atual). Feche os programas relacionados antes de tentar novamente.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo umount /mnt/usb                  # desmonta o sistema de arquivos montado em `/mnt/usb`
-sudo umount /dev/sdb1                 # desmonta o dispositivo `/dev/sdb1` diretamente
-sudo umount -f /mnt/usb               # força a desmontagem de um sistema de arquivos ocupado
-sudo umount -l /mnt/usb               # desmonta de forma "preguiçosa", liberando o ponto de montagem
+<pre><code class="language-bash"># desmonta o sistema de arquivos montado em `/mnt/usb`
+sudo umount /mnt/usb
+</code></pre>
+<pre><code class="language-bash"># desmonta o dispositivo `/dev/sdb1` diretamente
+sudo umount /dev/sdb1
+</code></pre>
+<pre><code class="language-bash"># força a desmontagem de um sistema de arquivos ocupado
+sudo umount -f /mnt/usb
+</code></pre>
+<pre><code class="language-bash"># desmonta de forma "preguiçosa", liberando o ponto de montagem
+sudo umount -l /mnt/usb
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="fstab"><a class="header" href="#fstab">fstab</a></h1>
@@ -3257,9 +3753,14 @@ UUID=5e6f7g8h-... /home            ext4    defaults        0 2
 /swapfile          none            swap    sw              0 0
 </code></pre>
 <p><strong>Exemplos de uso relacionado</strong></p>
-<pre><code class="language-bash">sudo nano /etc/fstab                   # edita o arquivo fstab
-sudo mount -a                          # monta todos os sistemas de arquivos listados em `fstab`, sem reiniciar
-blkid                                  # exibe os UUIDs dos dispositivos, úteis para configurar o `fstab`
+<pre><code class="language-bash"># edita o arquivo fstab
+sudo nano /etc/fstab
+</code></pre>
+<pre><code class="language-bash"># monta todos os sistemas de arquivos listados em `fstab`, sem reiniciar
+sudo mount -a
+</code></pre>
+<pre><code class="language-bash"># exibe os UUIDs dos dispositivos, úteis para configurar o `fstab`
+blkid
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="swap"><a class="header" href="#swap">swap</a></h1>
@@ -3283,13 +3784,26 @@ blkid                                  # exibe os UUIDs dos dispositivos, úteis
 <p>Áreas de swap também podem ser configuradas para ativação automática na inicialização, através do arquivo <code>/etc/fstab</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo fallocate -l 2G /swapfile        # cria um arquivo de 2 GB para ser usado como swap
-sudo chmod 600 /swapfile              # restringe as permissões do arquivo de swap por segurança
-sudo mkswap /swapfile                 # formata o arquivo como área de swap
-sudo swapon /swapfile                 # ativa o arquivo de swap
-sudo swapoff /swapfile                # desativa o arquivo de swap
-swapon -s                             # lista as áreas de swap ativas
-free -h                               # exibe o uso de memória RAM e swap
+<pre><code class="language-bash"># cria um arquivo de 2 GB para ser usado como swap
+sudo fallocate -l 2G /swapfile
+</code></pre>
+<pre><code class="language-bash"># restringe as permissões do arquivo de swap por segurança
+sudo chmod 600 /swapfile
+</code></pre>
+<pre><code class="language-bash"># formata o arquivo como área de swap
+sudo mkswap /swapfile
+</code></pre>
+<pre><code class="language-bash"># ativa o arquivo de swap
+sudo swapon /swapfile
+</code></pre>
+<pre><code class="language-bash"># desativa o arquivo de swap
+sudo swapoff /swapfile
+</code></pre>
+<pre><code class="language-bash"># lista as áreas de swap ativas
+swapon -s
+</code></pre>
+<pre><code class="language-bash"># exibe o uso de memória RAM e swap
+free -h
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="compactação-e-compressão"><a class="header" href="#compactação-e-compressão">Compactação e Compressão</a></h1>
@@ -3305,10 +3819,10 @@ free -h                               # exibe o uso de memória RAM e swap
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser compactado</td></tr>
-<tr><td>-d, –decompress</td><td>Descompacta um arquivo <code>.gz</code> (equivalente ao comando <code>gunzip</code>)</td></tr>
-<tr><td>-k, –keep</td><td>Mantém o arquivo original, em vez de removê-lo após compactar/descompactar</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe informações sobre o processo, como a taxa de compressão</td></tr>
-<tr><td>-r, –recursive</td><td>Compacta recursivamente todos os arquivos de um diretório</td></tr>
+<tr><td>-d, --decompress</td><td>Descompacta um arquivo <code>.gz</code> (equivalente ao comando <code>gunzip</code>)</td></tr>
+<tr><td>-k, --keep</td><td>Mantém o arquivo original, em vez de removê-lo após compactar/descompactar</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe informações sobre o processo, como a taxa de compressão</td></tr>
+<tr><td>-r, --recursive</td><td>Compacta recursivamente todos os arquivos de um diretório</td></tr>
 <tr><td>-1 a -9</td><td>Define o nível de compressão (1 = mais rápido, 9 = compressão máxima)</td></tr>
 </tbody>
 </table>
@@ -3317,12 +3831,23 @@ free -h                               # exibe o uso de memória RAM e swap
 <p>Por padrão, <code>gzip</code> remove o arquivo original após a compactação, substituindo-o por um novo arquivo com extensão <code>.gz</code>. Use <code>-k</code> para manter o original. Para arquivos <code>.gz</code>, use <code>gunzip</code> ou <code>gzip -d</code> para descompactar.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">gzip arquivo.txt                      # compacta `arquivo.txt`, gerando `arquivo.txt.gz`
-gzip -k arquivo.txt                   # compacta mantendo o arquivo original
-gzip -d arquivo.txt.gz                # descompacta `arquivo.txt.gz`
-gzip -9 arquivo.txt                   # compacta usando o nível máximo de compressão
-gzip -v arquivo.txt                   # compacta exibindo a taxa de compressão obtida
-gzip -r pasta/                        # compacta recursivamente todos os arquivos de um diretório
+<pre><code class="language-bash"># compacta `arquivo.txt`, gerando `arquivo.txt.gz`
+gzip arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># compacta mantendo o arquivo original
+gzip -k arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># descompacta `arquivo.txt.gz`
+gzip -d arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># compacta usando o nível máximo de compressão
+gzip -9 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># compacta exibindo a taxa de compressão obtida
+gzip -v arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># compacta recursivamente todos os arquivos de um diretório
+gzip -r pasta/
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="gunzip"><a class="header" href="#gunzip">gunzip</a></h1>
@@ -3336,10 +3861,10 @@ gzip -r pasta/                        # compacta recursivamente todos os arquivo
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo <code>.gz</code> a ser descompactado</td></tr>
-<tr><td>-k, –keep</td><td>Mantém o arquivo compactado original, em vez de removê-lo após descompactar</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe informações sobre o processo de descompactação</td></tr>
-<tr><td>-r, –recursive</td><td>Descompacta recursivamente todos os arquivos <code>.gz</code> de um diretório</td></tr>
-<tr><td>-l, –list</td><td>Exibe informações sobre o conteúdo do arquivo compactado, sem descompactá-lo</td></tr>
+<tr><td>-k, --keep</td><td>Mantém o arquivo compactado original, em vez de removê-lo após descompactar</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe informações sobre o processo de descompactação</td></tr>
+<tr><td>-r, --recursive</td><td>Descompacta recursivamente todos os arquivos <code>.gz</code> de um diretório</td></tr>
+<tr><td>-l, --list</td><td>Exibe informações sobre o conteúdo do arquivo compactado, sem descompactá-lo</td></tr>
 </tbody>
 </table>
 </div>
@@ -3347,11 +3872,20 @@ gzip -r pasta/                        # compacta recursivamente todos os arquivo
 <p><code>gunzip</code> é equivalente a <code>gzip -d</code>. Por padrão, remove o arquivo <code>.gz</code> original após a descompactação, substituindo-o pelo arquivo descompactado. Use <code>-k</code> para manter o arquivo compactado.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">gunzip arquivo.txt.gz                 # descompacta `arquivo.txt.gz`, gerando `arquivo.txt`
-gunzip -k arquivo.txt.gz              # descompacta mantendo o arquivo `.gz` original
-gunzip -v arquivo.txt.gz              # descompacta exibindo informações do processo
-gunzip -l arquivo.txt.gz              # exibe informações do arquivo compactado, sem descompactá-lo
-gunzip -r pasta/                      # descompacta recursivamente todos os arquivos `.gz` de um diretório
+<pre><code class="language-bash"># descompacta `arquivo.txt.gz`, gerando `arquivo.txt`
+gunzip arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># descompacta mantendo o arquivo `.gz` original
+gunzip -k arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># descompacta exibindo informações do processo
+gunzip -v arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># exibe informações do arquivo compactado, sem descompactá-lo
+gunzip -l arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># descompacta recursivamente todos os arquivos `.gz` de um diretório
+gunzip -r pasta/
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="zip"><a class="header" href="#zip">zip</a></h1>
@@ -3366,8 +3900,8 @@ gunzip -r pasta/                      # descompacta recursivamente todos os arqu
 <tbody>
 <tr><td>arquivo.zip</td><td>Nome do arquivo compactado a ser criado</td></tr>
 <tr><td>arquivo</td><td>Localização do(s) arquivo(s) ou diretório(s) a serem compactados</td></tr>
-<tr><td>-r, –recurse-paths</td><td>Compacta diretórios recursivamente, incluindo subpastas e arquivos</td></tr>
-<tr><td>-e, –encrypt</td><td>Compacta protegendo o conteúdo com senha</td></tr>
+<tr><td>-r, --recurse-paths</td><td>Compacta diretórios recursivamente, incluindo subpastas e arquivos</td></tr>
+<tr><td>-e, --encrypt</td><td>Compacta protegendo o conteúdo com senha</td></tr>
 <tr><td>-x arquivo</td><td>Exclui um arquivo específico da compactação</td></tr>
 <tr><td>-9</td><td>Define o nível máximo de compressão</td></tr>
 </tbody>
@@ -3377,11 +3911,20 @@ gunzip -r pasta/                      # descompacta recursivamente todos os arqu
 <p>Diferente do <code>gzip</code>, o <code>zip</code> pode compactar múltiplos arquivos e diretórios em um único arquivo <code>.zip</code>, sem removê-los do local original.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">zip arquivo.zip arquivo.txt                # compacta `arquivo.txt` em `arquivo.zip`
-zip arquivo.zip arquivo1.txt arquivo2.txt  # compacta dois arquivos em um único `.zip`
-zip -r pasta.zip pasta/                    # compacta um diretório inteiro, incluindo subpastas
-zip -e protegido.zip arquivo.txt           # compacta protegendo o arquivo com senha
-zip -r -x "*.log" projeto.zip projeto/     # compacta um diretório, excluindo arquivos `.log`
+<pre><code class="language-bash"># compacta `arquivo.txt` em `arquivo.zip`
+zip arquivo.zip arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># compacta dois arquivos em um único `.zip`
+zip arquivo.zip arquivo1.txt arquivo2.txt
+</code></pre>
+<pre><code class="language-bash"># compacta um diretório inteiro, incluindo subpastas
+zip -r pasta.zip pasta/
+</code></pre>
+<pre><code class="language-bash"># compacta protegendo o arquivo com senha
+zip -e protegido.zip arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># compacta um diretório, excluindo arquivos `.log`
+zip -r -x "*.log" projeto.zip projeto/
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="unzip"><a class="header" href="#unzip">unzip</a></h1>
@@ -3396,8 +3939,8 @@ zip -r -x "*.log" projeto.zip projeto/     # compacta um diretório, excluindo a
 <tbody>
 <tr><td>arquivo.zip</td><td>Localização do arquivo <code>.zip</code> a ser descompactado</td></tr>
 <tr><td>-d diretório</td><td>Descompacta o conteúdo em um diretório específico, em vez do diretório atual</td></tr>
-<tr><td>-l, –list</td><td>Lista o conteúdo do arquivo <code>.zip</code>, sem descompactá-lo</td></tr>
-<tr><td>-o, –overwrite</td><td>Sobrescreve arquivos existentes sem pedir confirmação</td></tr>
+<tr><td>-l, --list</td><td>Lista o conteúdo do arquivo <code>.zip</code>, sem descompactá-lo</td></tr>
+<tr><td>-o, --overwrite</td><td>Sobrescreve arquivos existentes sem pedir confirmação</td></tr>
 <tr><td>-x arquivo</td><td>Exclui um arquivo específico da descompactação</td></tr>
 </tbody>
 </table>
@@ -3406,11 +3949,20 @@ zip -r -x "*.log" projeto.zip projeto/     # compacta um diretório, excluindo a
 <p>Ao descompactar um arquivo <code>.zip</code> protegido por senha, o <code>unzip</code> solicita a senha automaticamente durante o processo.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">unzip arquivo.zip                     # descompacta `arquivo.zip` no diretório atual
-unzip arquivo.zip -d pasta_destino    # descompacta o conteúdo em um diretório específico
-unzip -l arquivo.zip                  # lista o conteúdo do `.zip`, sem descompactar
-unzip -o arquivo.zip                  # descompacta sobrescrevendo arquivos existentes sem confirmação
-unzip -x "*.log" projeto.zip          # descompacta o arquivo, excluindo arquivos `.log`
+<pre><code class="language-bash"># descompacta `arquivo.zip` no diretório atual
+unzip arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># descompacta o conteúdo em um diretório específico
+unzip arquivo.zip -d pasta_destino
+</code></pre>
+<pre><code class="language-bash"># lista o conteúdo do `.zip`, sem descompactar
+unzip -l arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># descompacta sobrescrevendo arquivos existentes sem confirmação
+unzip -o arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># descompacta o arquivo, excluindo arquivos `.log`
+unzip -x "*.log" projeto.zip
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="tar"><a class="header" href="#tar">tar</a></h1>
@@ -3425,12 +3977,12 @@ unzip -x "*.log" projeto.zip          # descompacta o arquivo, excluindo arquivo
 <tbody>
 <tr><td>arquivo.tar</td><td>Nome do arquivo <code>.tar</code> a ser criado ou lido</td></tr>
 <tr><td>arquivo</td><td>Localização do(s) arquivo(s) ou diretório(s) a serem agrupados</td></tr>
-<tr><td>-c, –create</td><td>Cria um novo arquivo <code>.tar</code></td></tr>
-<tr><td>-x, –extract</td><td>Extrai o conteúdo de um arquivo <code>.tar</code></td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os nomes dos arquivos processados durante a operação</td></tr>
-<tr><td>-f, –file</td><td>Especifica o nome do arquivo <code>.tar</code> a ser usado (geralmente obrigatório)</td></tr>
-<tr><td>-z, –gzip</td><td>Compacta/descompacta usando <code>gzip</code> (gera/lê arquivos <code>.tar.gz</code>)</td></tr>
-<tr><td>-t, –list</td><td>Lista o conteúdo de um arquivo <code>.tar</code>, sem extraí-lo</td></tr>
+<tr><td>-c, --create</td><td>Cria um novo arquivo <code>.tar</code></td></tr>
+<tr><td>-x, --extract</td><td>Extrai o conteúdo de um arquivo <code>.tar</code></td></tr>
+<tr><td>-v, --verbose</td><td>Exibe os nomes dos arquivos processados durante a operação</td></tr>
+<tr><td>-f, --file</td><td>Especifica o nome do arquivo <code>.tar</code> a ser usado (geralmente obrigatório)</td></tr>
+<tr><td>-z, --gzip</td><td>Compacta/descompacta usando <code>gzip</code> (gera/lê arquivos <code>.tar.gz</code>)</td></tr>
+<tr><td>-t, --list</td><td>Lista o conteúdo de um arquivo <code>.tar</code>, sem extraí-lo</td></tr>
 </tbody>
 </table>
 </div>
@@ -3438,11 +3990,20 @@ unzip -x "*.log" projeto.zip          # descompacta o arquivo, excluindo arquivo
 <p><code>tar</code> originalmente apenas agrupa arquivos em um único pacote (sem compactar). Para compactar durante o processo, combine com a opção <code>-z</code> (gzip), gerando um arquivo <code>.tar.gz</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">tar -cvf arquivo.tar pasta/           # agrupa uma pasta em `arquivo.tar`
-tar -xvf arquivo.tar                  # extrai o conteúdo de `arquivo.tar`
-tar -czvf arquivo.tar.gz pasta/       # agrupa e compacta uma pasta em `arquivo.tar.gz`
-tar -xzvf arquivo.tar.gz              # extrai um arquivo `.tar.gz`
-tar -tvf arquivo.tar                  # lista o conteúdo de `arquivo.tar`, sem extraí-lo
+<pre><code class="language-bash"># agrupa uma pasta em `arquivo.tar`
+tar -cvf arquivo.tar pasta/
+</code></pre>
+<pre><code class="language-bash"># extrai o conteúdo de `arquivo.tar`
+tar -xvf arquivo.tar
+</code></pre>
+<pre><code class="language-bash"># agrupa e compacta uma pasta em `arquivo.tar.gz`
+tar -czvf arquivo.tar.gz pasta/
+</code></pre>
+<pre><code class="language-bash"># extrai um arquivo `.tar.gz`
+tar -xzvf arquivo.tar.gz
+</code></pre>
+<pre><code class="language-bash"># lista o conteúdo de `arquivo.tar`, sem extraí-lo
+tar -tvf arquivo.tar
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="redes"><a class="header" href="#redes">Redes</a></h1>
@@ -3469,7 +4030,7 @@ tar -tvf arquivo.tar                  # lista o conteúdo de `arquivo.tar`, sem 
 <p>Um endereço IP é formado por quatro grupos de números (octetos), no formato x.x.x.x, onde cada x pode ir de 0 a 255.</p>
 <p>Na prática, ao atribuir um endereço a um dispositivo dentro de uma rede, evita-se usar os valores 0 e 255 nos octetos finais, pois eles costumam ter significados especiais — como veremos mais adiante, na seção sobre máscara de rede.</p>
 <h4 id="classes-de-rede-ip"><a class="header" href="#classes-de-rede-ip">Classes de Rede IP</a></h4>
-<p>A “classe” define o tamanho de uma rede, com base no valor do primeiro octeto do endereço IP:</p>
+<p>A "classe" define o tamanho de uma rede, com base no valor do primeiro octeto do endereço IP:</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -3519,7 +4080,7 @@ Roteador (192.168.110.1)
 <li>Todos os dispositivos compartilham a mesma <strong>porção de rede</strong>: <code>192.168.110.</code></li>
 <li>Cada dispositivo tem sua própria <strong>porção de host</strong>, que o diferencia dos demais: <code>.1</code>, <code>.10</code>, <code>.11</code>, <code>.12</code>, <code>.13</code>;</li>
 <li>O <strong>endereço da rede</strong> é <code>192.168.110.0</code>. Representa a rede em si, e nenhum dispositivo pode usá-lo;</li>
-<li>O <strong>endereço de broadcast</strong> é <code>192.168.110.255</code>. Se o roteador precisar enviar um aviso para todos os dispositivos ao mesmo tempo (por exemplo, “a rede vai reiniciar”), ele usa esse endereço, e todos recebem a mensagem simultaneamente.</li>
+<li>O <strong>endereço de broadcast</strong> é <code>192.168.110.255</code>. Se o roteador precisar enviar um aviso para todos os dispositivos ao mesmo tempo (por exemplo, "a rede vai reiniciar"), ele usa esse endereço, e todos recebem a mensagem simultaneamente.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ifconfig"><a class="header" href="#ifconfig">ifconfig</a></h1>
@@ -3544,11 +4105,20 @@ Roteador (192.168.110.1)
 <p><code>ifconfig</code> faz parte do pacote <code>net-tools</code>, considerado obsoleto em muitas distribuições Linux atuais, que priorizam o comando <code>ip</code> em seu lugar (ex.: <code>ip addr</code> no lugar de <code>ifconfig</code>). Ainda assim, <code>ifconfig</code> continua amplamente usado e disponível na maioria dos sistemas.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ifconfig                              # exibe as informações de todas as interfaces de rede ativas
-ifconfig eth0                         # exibe as informações apenas da interface `eth0`
-sudo ifconfig eth0 up                 # ativa a interface `eth0`
-sudo ifconfig eth0 down               # desativa a interface `eth0`
-sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0  # define um endereço IP e máscara de rede
+<pre><code class="language-bash"># exibe as informações de todas as interfaces de rede ativas
+ifconfig
+</code></pre>
+<pre><code class="language-bash"># exibe as informações apenas da interface `eth0`
+ifconfig eth0
+</code></pre>
+<pre><code class="language-bash"># ativa a interface `eth0`
+sudo ifconfig eth0 up
+</code></pre>
+<pre><code class="language-bash"># desativa a interface `eth0`
+sudo ifconfig eth0 down
+</code></pre>
+<pre><code class="language-bash"># define um endereço IP e máscara de rede
+sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ip"><a class="header" href="#ip">ip</a></h1>
@@ -3573,12 +4143,23 @@ sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0  # define um endereço IP 
 <p><code>ip</code> substitui o antigo <code>ifconfig</code> (e outras ferramentas do pacote <code>net-tools</code>) nas distribuições Linux atuais, oferecendo mais recursos e sendo o padrão recomendado hoje em dia.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ip addr show                               # exibe os endereços IP de todas as interfaces
-ip a                                       # forma abreviada do comando acima
-ip link show                               # exibe o estado de todas as interfaces de rede
-sudo ip link set eth0 up                   # ativa a interface `eth0`
-sudo ip addr add 192.168.1.10/24 dev eth0  # atribui um endereço IP à interface `eth0`
-ip route show                              # exibe a tabela de rotas do sistema
+<pre><code class="language-bash"># exibe os endereços IP de todas as interfaces
+ip addr show
+</code></pre>
+<pre><code class="language-bash"># forma abreviada do comando acima
+ip a
+</code></pre>
+<pre><code class="language-bash"># exibe o estado de todas as interfaces de rede
+ip link show
+</code></pre>
+<pre><code class="language-bash"># ativa a interface `eth0`
+sudo ip link set eth0 up
+</code></pre>
+<pre><code class="language-bash"># atribui um endereço IP à interface `eth0`
+sudo ip addr add 192.168.1.10/24 dev eth0
+</code></pre>
+<pre><code class="language-bash"># exibe a tabela de rotas do sistema
+ip route show
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ping"><a class="header" href="#ping">ping</a></h1>
@@ -3604,11 +4185,20 @@ ip route show                              # exibe a tabela de rotas do sistema
 <p>Por padrão, <code>ping</code> envia pacotes continuamente até ser interrompido manualmente (<code>Ctrl + C</code>). Use <code>-c</code> para limitar a quantidade de pacotes enviados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ping google.com                       # envia pacotes continuamente para `google.com`
-ping -c 4 google.com                  # envia 4 pacotes e encerra automaticamente
-ping -i 2 google.com                  # envia pacotes a cada 2 segundos
-ping -s 100 google.com                # envia pacotes de 100 bytes
-ping -c 4 192.168.1.1                 # testa a conectividade com um endereço IP específico
+<pre><code class="language-bash"># envia pacotes continuamente para `google.com`
+ping google.com
+</code></pre>
+<pre><code class="language-bash"># envia 4 pacotes e encerra automaticamente
+ping -c 4 google.com
+</code></pre>
+<pre><code class="language-bash"># envia pacotes a cada 2 segundos
+ping -i 2 google.com
+</code></pre>
+<pre><code class="language-bash"># envia pacotes de 100 bytes
+ping -s 100 google.com
+</code></pre>
+<pre><code class="language-bash"># testa a conectividade com um endereço IP específico
+ping -c 4 192.168.1.1
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ssh-keygen"><a class="header" href="#ssh-keygen">ssh-keygen</a></h1>
@@ -3632,11 +4222,20 @@ ping -c 4 192.168.1.1                 # testa a conectividade com um endereço I
 <p>Ao gerar o par de chaves, a chave privada (sem extensão, ex.: <code>id_rsa</code>) deve ser mantida em sigilo, enquanto a chave pública (com extensão <code>.pub</code>, ex.: <code>id_rsa.pub</code>) é copiada para o servidor remoto, através do comando <code>ssh-copy-id</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ssh-keygen                                    # gera um novo par de chaves com as opções padrão
-ssh-keygen -t ed25519                         # gera um par de chaves usando o tipo `ed25519`
-ssh-keygen -t rsa -b 4096                     # gera um par de chaves RSA de 4096 bits
-ssh-keygen -t ed25519 -C "email@exemplo.com"  # gera um novo par de chaves, com comentário
-ssh-copy-id usuario@servidor.com              # copia a chave pública para o servidor remoto, habilitando login sem senha
+<pre><code class="language-bash"># gera um novo par de chaves com as opções padrão
+ssh-keygen
+</code></pre>
+<pre><code class="language-bash"># gera um par de chaves usando o tipo `ed25519`
+ssh-keygen -t ed25519
+</code></pre>
+<pre><code class="language-bash"># gera um par de chaves RSA de 4096 bits
+ssh-keygen -t rsa -b 4096
+</code></pre>
+<pre><code class="language-bash"># gera um novo par de chaves, com comentário
+ssh-keygen -t ed25519 -C "email@exemplo.com"
+</code></pre>
+<pre><code class="language-bash"># copia a chave pública para o servidor remoto, habilitando login sem senha
+ssh-copy-id usuario@servidor.com
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ssh"><a class="header" href="#ssh">ssh</a></h1>
@@ -3654,7 +4253,7 @@ ssh-copy-id usuario@servidor.com              # copia a chave pública para o se
 <tr><td>-p porta</td><td>Especifica a porta de conexão (padrão: 22)</td></tr>
 <tr><td>-i arquivo</td><td>Especifica o arquivo de chave privada a ser usado na autenticação</td></tr>
 <tr><td>-X</td><td>Habilita o encaminhamento de aplicações gráficas (X11) do host remoto</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe informações detalhadas sobre o processo de conexão (útil para depuração)</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe informações detalhadas sobre o processo de conexão (útil para depuração)</td></tr>
 </tbody>
 </table>
 </div>
@@ -3662,10 +4261,17 @@ ssh-copy-id usuario@servidor.com              # copia a chave pública para o se
 <p>A conexão via <code>ssh</code> usa criptografia para proteger os dados transmitidos, sendo o método padrão para administração remota segura de servidores Linux. A autenticação pode ser feita por senha ou por par de chaves pública/privada (mais segura). Para gerar esse par de chaves, veja o comando <code>ssh-keygen</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ssh usuario@192.168.1.10              # conecta ao host `192.168.1.10` como `usuario`
-ssh usuario@servidor.com -p 2222      # conecta usando uma porta específica
-ssh -i chave_privada.pem usuario@servidor.com  # conecta usando um arquivo de chave privada
-ssh -X usuario@servidor.com           # conecta habilitando o encaminhamento de aplicações gráficas
+<pre><code class="language-bash"># conecta ao host `192.168.1.10` como `usuario`
+ssh usuario@192.168.1.10
+</code></pre>
+<pre><code class="language-bash"># conecta usando uma porta específica
+ssh usuario@servidor.com -p 2222
+</code></pre>
+<pre><code class="language-bash"># conecta usando um arquivo de chave privada
+ssh -i chave_privada.pem usuario@servidor.com
+</code></pre>
+<pre><code class="language-bash"># conecta habilitando o encaminhamento de aplicações gráficas
+ssh -X usuario@servidor.com
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="scp"><a class="header" href="#scp">scp</a></h1>
@@ -3680,10 +4286,10 @@ ssh -X usuario@servidor.com           # conecta habilitando o encaminhamento de 
 <tbody>
 <tr><td>origem</td><td>Localização do arquivo a ser copiado (local ou remoto, no formato <code>usuário@host:caminho</code>)</td></tr>
 <tr><td>destino</td><td>Localização para onde o arquivo será copiado (local ou remoto, no formato <code>usuário@host:caminho</code>)</td></tr>
-<tr><td>-r, –recursive</td><td>Copia diretórios recursivamente, incluindo subpastas e arquivos</td></tr>
+<tr><td>-r, --recursive</td><td>Copia diretórios recursivamente, incluindo subpastas e arquivos</td></tr>
 <tr><td>-P porta</td><td>Especifica a porta de conexão (padrão: 22)</td></tr>
 <tr><td>-i arquivo</td><td>Especifica o arquivo de chave privada a ser usado na autenticação</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe informações detalhadas sobre o processo de cópia (útil para depuração)</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe informações detalhadas sobre o processo de cópia (útil para depuração)</td></tr>
 </tbody>
 </table>
 </div>
@@ -3691,11 +4297,20 @@ ssh -X usuario@servidor.com           # conecta habilitando o encaminhamento de 
 <p><code>scp</code> usa a mesma autenticação e criptografia do <code>ssh</code>. É possível copiar de um computador local para um remoto, de um remoto para o local, ou até entre dois computadores remotos.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">scp arquivo.txt usuario@servidor.com:/home/usuario/       # copia um arquivo local para um servidor remoto
-scp usuario@servidor.com:/home/usuario/arquivo.txt .       # copia um arquivo remoto para o diretório atual
-scp -r pasta/ usuario@servidor.com:/home/usuario/          # copia um diretório inteiro para um servidor remoto
-scp -P 2222 arquivo.txt usuario@servidor.com:/home/usuario/  # copia usando uma porta específica
-scp -i chave_privada.pem arquivo.txt usuario@servidor.com:/home/usuario/  # copia usando uma chave privada
+<pre><code class="language-bash"># copia um arquivo local para um servidor remoto
+scp arquivo.txt usuario@servidor.com:/home/usuario/
+</code></pre>
+<pre><code class="language-bash"># copia um arquivo remoto para o diretório atual
+scp usuario@servidor.com:/home/usuario/arquivo.txt .
+</code></pre>
+<pre><code class="language-bash"># copia um diretório inteiro para um servidor remoto
+scp -r pasta/ usuario@servidor.com:/home/usuario/
+</code></pre>
+<pre><code class="language-bash"># copia usando uma porta específica
+scp -P 2222 arquivo.txt usuario@servidor.com:/home/usuario/
+</code></pre>
+<pre><code class="language-bash"># copia usando uma chave privada
+scp -i chave_privada.pem arquivo.txt usuario@servidor.com:/home/usuario/
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="curl"><a class="header" href="#curl">curl</a></h1>
@@ -3711,10 +4326,10 @@ scp -i chave_privada.pem arquivo.txt usuario@servidor.com:/home/usuario/  # copi
 <tr><td>url</td><td>Endereço do recurso a ser acessado</td></tr>
 <tr><td>-o arquivo</td><td>Salva o conteúdo baixado em um arquivo com o nome especificado</td></tr>
 <tr><td>-O</td><td>Salva o conteúdo baixado usando o mesmo nome do arquivo remoto</td></tr>
-<tr><td>-I, –head</td><td>Exibe apenas os cabeçalhos da resposta, sem baixar o conteúdo</td></tr>
+<tr><td>-I, --head</td><td>Exibe apenas os cabeçalhos da resposta, sem baixar o conteúdo</td></tr>
 <tr><td>-X método</td><td>Especifica o método HTTP a ser usado (ex.: <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>)</td></tr>
 <tr><td>-d dados</td><td>Envia dados no corpo da requisição (geralmente usado com <code>POST</code>)</td></tr>
-<tr><td>-L, –location</td><td>Segue redirecionamentos automaticamente</td></tr>
+<tr><td>-L, --location</td><td>Segue redirecionamentos automaticamente</td></tr>
 </tbody>
 </table>
 </div>
@@ -3722,12 +4337,23 @@ scp -i chave_privada.pem arquivo.txt usuario@servidor.com:/home/usuario/  # copi
 <p>Por padrão, <code>curl</code> exibe o conteúdo da resposta diretamente no terminal, sem salvá-lo em um arquivo. Use <code>-o</code> ou <code>-O</code> para baixar e salvar o conteúdo.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">curl https://exemplo.com                          # exibe o conteúdo da página no terminal
-curl -O https://exemplo.com/arquivo.zip           # baixa o arquivo, mantendo o nome original
-curl -o meu_arquivo.zip https://exemplo.com/arquivo.zip  # baixa o arquivo com um novo nome
-curl -I https://exemplo.com                       # exibe apenas os cabeçalhos da resposta
-curl -X POST -d "nome=teste" https://exemplo.com/api     # envia dados via método POST
-curl -L https://exemplo.com                       # segue redirecionamentos automaticamente
+<pre><code class="language-bash"># exibe o conteúdo da página no terminal
+curl https://exemplo.com
+</code></pre>
+<pre><code class="language-bash"># baixa o arquivo, mantendo o nome original
+curl -O https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># baixa o arquivo com um novo nome
+curl -o meu_arquivo.zip https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># exibe apenas os cabeçalhos da resposta
+curl -I https://exemplo.com
+</code></pre>
+<pre><code class="language-bash"># envia dados via método POST
+curl -X POST -d "nome=teste" https://exemplo.com/api
+</code></pre>
+<pre><code class="language-bash"># segue redirecionamentos automaticamente
+curl -L https://exemplo.com
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="wget"><a class="header" href="#wget">wget</a></h1>
@@ -3742,10 +4368,10 @@ curl -L https://exemplo.com                       # segue redirecionamentos auto
 <tbody>
 <tr><td>url</td><td>Endereço do arquivo a ser baixado</td></tr>
 <tr><td>-O arquivo</td><td>Salva o conteúdo baixado com um nome específico, em vez do nome original</td></tr>
-<tr><td>-c, –continue</td><td>Retoma o download de um arquivo parcialmente baixado</td></tr>
-<tr><td>-b, –background</td><td>Executa o download em segundo plano</td></tr>
-<tr><td>-r, –recursive</td><td>Baixa recursivamente o conteúdo de um site (útil para espelhar páginas)</td></tr>
-<tr><td>-q, –quiet</td><td>Executa o download sem exibir mensagens no terminal</td></tr>
+<tr><td>-c, --continue</td><td>Retoma o download de um arquivo parcialmente baixado</td></tr>
+<tr><td>-b, --background</td><td>Executa o download em segundo plano</td></tr>
+<tr><td>-r, --recursive</td><td>Baixa recursivamente o conteúdo de um site (útil para espelhar páginas)</td></tr>
+<tr><td>-q, --quiet</td><td>Executa o download sem exibir mensagens no terminal</td></tr>
 </tbody>
 </table>
 </div>
@@ -3753,11 +4379,20 @@ curl -L https://exemplo.com                       # segue redirecionamentos auto
 <p>Diferente do <code>curl</code>, que por padrão exibe o conteúdo no terminal, <code>wget</code> já salva o resultado em um arquivo automaticamente, sendo focado principalmente em download de arquivos.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">wget https://exemplo.com/arquivo.zip              # baixa o arquivo, mantendo o nome original
-wget -O novo_nome.zip https://exemplo.com/arquivo.zip  # baixa o arquivo com um novo nome
-wget -c https://exemplo.com/arquivo.zip           # retoma um download interrompido
-wget -b https://exemplo.com/arquivo.zip           # baixa o arquivo em segundo plano
-wget -r https://exemplo.com                       # baixa recursivamente o conteúdo de um site
+<pre><code class="language-bash"># baixa o arquivo, mantendo o nome original
+wget https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># baixa o arquivo com um novo nome
+wget -O novo_nome.zip https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># retoma um download interrompido
+wget -c https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># baixa o arquivo em segundo plano
+wget -b https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># baixa recursivamente o conteúdo de um site
+wget -r https://exemplo.com
 </code></pre>
 
                     </main>

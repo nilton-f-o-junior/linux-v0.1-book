@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,12 +187,12 @@
 <tbody>
 <tr><td>padrão</td><td>Texto ou expressão regular a ser procurado</td></tr>
 <tr><td>arquivo</td><td>Localização do arquivo onde a busca será realizada</td></tr>
-<tr><td>-i, –ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas</td></tr>
-<tr><td>-v, –invert-match</td><td>Exibe as linhas que <strong>não</strong> correspondem ao padrão</td></tr>
-<tr><td>-n, –line-number</td><td>Exibe o número da linha correspondente</td></tr>
-<tr><td>-r, –recursive</td><td>Busca recursivamente em todos os arquivos de um diretório</td></tr>
-<tr><td>-c, –count</td><td>Exibe apenas a quantidade de linhas correspondentes</td></tr>
-<tr><td>-E, –extended-regexp</td><td>Interpreta o padrão como uma expressão regular estendida (ERE)</td></tr>
+<tr><td>-i, --ignore-case</td><td>Ignora diferenças entre maiúsculas e minúsculas</td></tr>
+<tr><td>-v, --invert-match</td><td>Exibe as linhas que <strong>não</strong> correspondem ao padrão</td></tr>
+<tr><td>-n, --line-number</td><td>Exibe o número da linha correspondente</td></tr>
+<tr><td>-r, --recursive</td><td>Busca recursivamente em todos os arquivos de um diretório</td></tr>
+<tr><td>-c, --count</td><td>Exibe apenas a quantidade de linhas correspondentes</td></tr>
+<tr><td>-E, --extended-regexp</td><td>Interpreta o padrão como uma expressão regular estendida (ERE)</td></tr>
 </tbody>
 </table>
 </div>
@@ -199,12 +200,23 @@
 <p><code>grep</code> é amplamente usado em conjunto com pipes (<code>|</code>) para filtrar a saída de outros comandos.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">grep "erro" log.txt                   # exibe as linhas de `log.txt` que contêm a palavra `erro`
-grep -i "erro" log.txt                # busca ignorando diferenças entre maiúsculas e minúsculas
-grep -n "erro" log.txt                # exibe as linhas correspondentes com o número da linha
-grep -v "erro" log.txt                # exibe as linhas que não contêm a palavra `erro`
-grep -r "TODO" ./projeto              # busca recursivamente pela palavra `TODO` dentro de um diretório
-ps aux | grep "firefox"                # filtra a lista de processos, exibindo apenas os relacionados a `firefox`
+<pre><code class="language-bash"># exibe as linhas de `log.txt` que contêm a palavra `erro`
+grep "erro" log.txt
+</code></pre>
+<pre><code class="language-bash"># busca ignorando diferenças entre maiúsculas e minúsculas
+grep -i "erro" log.txt
+</code></pre>
+<pre><code class="language-bash"># exibe as linhas correspondentes com o número da linha
+grep -n "erro" log.txt
+</code></pre>
+<pre><code class="language-bash"># exibe as linhas que não contêm a palavra `erro`
+grep -v "erro" log.txt
+</code></pre>
+<pre><code class="language-bash"># busca recursivamente pela palavra `TODO` dentro de um diretório
+grep -r "TODO" ./projeto
+</code></pre>
+<pre><code class="language-bash"># filtra a lista de processos, exibindo apenas os relacionados a `firefox`
+ps aux | grep "firefox"
 </code></pre>
 
                     </main>

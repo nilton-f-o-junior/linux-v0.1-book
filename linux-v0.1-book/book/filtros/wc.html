@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,10 +186,10 @@
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser analisado</td></tr>
-<tr><td>-l, –lines</td><td>Exibe apenas o número de linhas</td></tr>
-<tr><td>-w, –words</td><td>Exibe apenas o número de palavras</td></tr>
-<tr><td>-c, –bytes</td><td>Exibe apenas o número de bytes</td></tr>
-<tr><td>-m, –chars</td><td>Exibe apenas o número de caracteres</td></tr>
+<tr><td>-l, --lines</td><td>Exibe apenas o número de linhas</td></tr>
+<tr><td>-w, --words</td><td>Exibe apenas o número de palavras</td></tr>
+<tr><td>-c, --bytes</td><td>Exibe apenas o número de bytes</td></tr>
+<tr><td>-m, --chars</td><td>Exibe apenas o número de caracteres</td></tr>
 </tbody>
 </table>
 </div>
@@ -196,12 +197,23 @@
 <p>Sem opções, <code>wc</code> exibe três valores, nessa ordem: número de linhas, número de palavras e número de bytes do arquivo.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">wc arquivo.txt                        # exibe linhas, palavras e bytes de `arquivo.txt`
-wc -l arquivo.txt                     # exibe apenas o número de linhas
-wc -w arquivo.txt                     # exibe apenas o número de palavras
-wc -c arquivo.txt                     # exibe apenas o número de bytes
-cat arquivo.txt | wc -l               # conta o número de linhas da saída do comando `cat`
-ls -la | wc -l                        # conta a quantidade de itens listados em um diretório
+<pre><code class="language-bash"># exibe linhas, palavras e bytes de `arquivo.txt`
+wc arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o número de linhas
+wc -l arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o número de palavras
+wc -w arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o número de bytes
+wc -c arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># conta o número de linhas da saída do comando `cat`
+cat arquivo.txt | wc -l
+</code></pre>
+<pre><code class="language-bash"># conta a quantidade de itens listados em um diretório
+ls -la | wc -l
 </code></pre>
 
                     </main>
