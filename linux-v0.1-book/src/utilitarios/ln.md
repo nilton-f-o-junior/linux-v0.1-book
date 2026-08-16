@@ -21,9 +21,26 @@ ln [opções] alvo nome_do_link
 **Exemplos**
 
 ```bash
-ln arquivo.txt link_fisico.txt          # cria um link físico apontando para `arquivo.txt`
-ln -s arquivo.txt link_simbolico.txt    # cria um link simbólico apontando para `arquivo.txt`
-ln -s /var/www/html html                # cria um link simbólico para um diretório
-ln -sf arquivo.txt link_simbolico.txt   # recria o link simbólico, substituindo-o se já existir
-ln -sv arquivo.txt link_simbolico.txt   # cria o link simbólico exibindo o resultado da operação
+# cria um link físico apontando para `arquivo.txt`
+ln arquivo.txt link_fisico.txt
+```
+
+```bash
+# cria um link simbólico apontando para `arquivo.txt`
+ln -s arquivo.txt link_simbolico.txt
+```
+
+```bash
+# cria um link simbólico para um diretório
+ln -s /var/www/html html
+```
+
+```bash
+# recria o link simbólico, substituindo-o se já existir
+ln -sf arquivo.txt link_simbolico.txt
+```
+
+```bash
+# cria o link simbólico exibindo o resultado da operação
+ln -sv arquivo.txt link_simbolico.txt
 ```

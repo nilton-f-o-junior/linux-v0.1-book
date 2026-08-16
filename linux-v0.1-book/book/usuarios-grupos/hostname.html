@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,9 +186,9 @@
 </thead>
 <tbody>
 <tr><td>novo_nome</td><td>Novo nome a ser atribuído ao host (geralmente requer permissão de superusuário)</td></tr>
-<tr><td>-i, –ip-address</td><td>Exibe o(s) endereço(s) IP associado(s) ao host</td></tr>
-<tr><td>-f, –fqdn</td><td>Exibe o nome de domínio totalmente qualificado (FQDN)</td></tr>
-<tr><td>-d, –domain</td><td>Exibe apenas o nome do domínio DNS</td></tr>
+<tr><td>-i, --ip-address</td><td>Exibe o(s) endereço(s) IP associado(s) ao host</td></tr>
+<tr><td>-f, --fqdn</td><td>Exibe o nome de domínio totalmente qualificado (FQDN)</td></tr>
+<tr><td>-d, --domain</td><td>Exibe apenas o nome do domínio DNS</td></tr>
 </tbody>
 </table>
 </div>
@@ -195,10 +196,17 @@
 <p>Alterar o nome do host com <code>hostname novo_nome</code> costuma valer apenas para a sessão atual. Para tornar a mudança permanente, é necessário editar o arquivo <code>/etc/hostname</code> (e geralmente também <code>/etc/hosts</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">hostname                              # exibe o nome atual do host
-hostname -i                           # exibe o endereço IP associado ao host
-hostname -f                           # exibe o nome de domínio totalmente qualificado (FQDN)
-sudo hostname novo-nome               # altera o nome do host para `novo-nome` (temporariamente)
+<pre><code class="language-bash"># exibe o nome atual do host
+hostname
+</code></pre>
+<pre><code class="language-bash"># exibe o endereço IP associado ao host
+hostname -i
+</code></pre>
+<pre><code class="language-bash"># exibe o nome de domínio totalmente qualificado (FQDN)
+hostname -f
+</code></pre>
+<pre><code class="language-bash"># altera o nome do host para `novo-nome` (temporariamente)
+sudo hostname novo-nome
 </code></pre>
 
                     </main>

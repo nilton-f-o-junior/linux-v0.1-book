@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,10 +186,10 @@
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser compactado</td></tr>
-<tr><td>-d, –decompress</td><td>Descompacta um arquivo <code>.gz</code> (equivalente ao comando <code>gunzip</code>)</td></tr>
-<tr><td>-k, –keep</td><td>Mantém o arquivo original, em vez de removê-lo após compactar/descompactar</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe informações sobre o processo, como a taxa de compressão</td></tr>
-<tr><td>-r, –recursive</td><td>Compacta recursivamente todos os arquivos de um diretório</td></tr>
+<tr><td>-d, --decompress</td><td>Descompacta um arquivo <code>.gz</code> (equivalente ao comando <code>gunzip</code>)</td></tr>
+<tr><td>-k, --keep</td><td>Mantém o arquivo original, em vez de removê-lo após compactar/descompactar</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe informações sobre o processo, como a taxa de compressão</td></tr>
+<tr><td>-r, --recursive</td><td>Compacta recursivamente todos os arquivos de um diretório</td></tr>
 <tr><td>-1 a -9</td><td>Define o nível de compressão (1 = mais rápido, 9 = compressão máxima)</td></tr>
 </tbody>
 </table>
@@ -197,12 +198,23 @@
 <p>Por padrão, <code>gzip</code> remove o arquivo original após a compactação, substituindo-o por um novo arquivo com extensão <code>.gz</code>. Use <code>-k</code> para manter o original. Para arquivos <code>.gz</code>, use <code>gunzip</code> ou <code>gzip -d</code> para descompactar.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">gzip arquivo.txt                      # compacta `arquivo.txt`, gerando `arquivo.txt.gz`
-gzip -k arquivo.txt                   # compacta mantendo o arquivo original
-gzip -d arquivo.txt.gz                # descompacta `arquivo.txt.gz`
-gzip -9 arquivo.txt                   # compacta usando o nível máximo de compressão
-gzip -v arquivo.txt                   # compacta exibindo a taxa de compressão obtida
-gzip -r pasta/                        # compacta recursivamente todos os arquivos de um diretório
+<pre><code class="language-bash"># compacta `arquivo.txt`, gerando `arquivo.txt.gz`
+gzip arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># compacta mantendo o arquivo original
+gzip -k arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># descompacta `arquivo.txt.gz`
+gzip -d arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># compacta usando o nível máximo de compressão
+gzip -9 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># compacta exibindo a taxa de compressão obtida
+gzip -v arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># compacta recursivamente todos os arquivos de um diretório
+gzip -r pasta/
 </code></pre>
 
                     </main>

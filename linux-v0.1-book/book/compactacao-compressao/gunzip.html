@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,10 +186,10 @@
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo <code>.gz</code> a ser descompactado</td></tr>
-<tr><td>-k, –keep</td><td>Mantém o arquivo compactado original, em vez de removê-lo após descompactar</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe informações sobre o processo de descompactação</td></tr>
-<tr><td>-r, –recursive</td><td>Descompacta recursivamente todos os arquivos <code>.gz</code> de um diretório</td></tr>
-<tr><td>-l, –list</td><td>Exibe informações sobre o conteúdo do arquivo compactado, sem descompactá-lo</td></tr>
+<tr><td>-k, --keep</td><td>Mantém o arquivo compactado original, em vez de removê-lo após descompactar</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe informações sobre o processo de descompactação</td></tr>
+<tr><td>-r, --recursive</td><td>Descompacta recursivamente todos os arquivos <code>.gz</code> de um diretório</td></tr>
+<tr><td>-l, --list</td><td>Exibe informações sobre o conteúdo do arquivo compactado, sem descompactá-lo</td></tr>
 </tbody>
 </table>
 </div>
@@ -196,11 +197,20 @@
 <p><code>gunzip</code> é equivalente a <code>gzip -d</code>. Por padrão, remove o arquivo <code>.gz</code> original após a descompactação, substituindo-o pelo arquivo descompactado. Use <code>-k</code> para manter o arquivo compactado.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">gunzip arquivo.txt.gz                 # descompacta `arquivo.txt.gz`, gerando `arquivo.txt`
-gunzip -k arquivo.txt.gz              # descompacta mantendo o arquivo `.gz` original
-gunzip -v arquivo.txt.gz              # descompacta exibindo informações do processo
-gunzip -l arquivo.txt.gz              # exibe informações do arquivo compactado, sem descompactá-lo
-gunzip -r pasta/                      # descompacta recursivamente todos os arquivos `.gz` de um diretório
+<pre><code class="language-bash"># descompacta `arquivo.txt.gz`, gerando `arquivo.txt`
+gunzip arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># descompacta mantendo o arquivo `.gz` original
+gunzip -k arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># descompacta exibindo informações do processo
+gunzip -v arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># exibe informações do arquivo compactado, sem descompactá-lo
+gunzip -l arquivo.txt.gz
+</code></pre>
+<pre><code class="language-bash"># descompacta recursivamente todos os arquivos `.gz` de um diretório
+gunzip -r pasta/
 </code></pre>
 
                     </main>

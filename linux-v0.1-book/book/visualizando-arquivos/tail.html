@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,18 +186,27 @@
 </thead>
 <tbody>
 <tr><td>arquivo</td><td>Localização do arquivo a ser visualizado</td></tr>
-<tr><td>-n, –lines=N</td><td>Exibe as últimas <code>N</code> linhas (padrão: 10)</td></tr>
-<tr><td>-c, –bytes=N</td><td>Exibe os últimos <code>N</code> bytes do arquivo</td></tr>
-<tr><td>-f, –follow</td><td>Mantém o arquivo aberto e exibe novas linhas em tempo real</td></tr>
+<tr><td>-n, --lines=N</td><td>Exibe as últimas <code>N</code> linhas (padrão: 10)</td></tr>
+<tr><td>-c, --bytes=N</td><td>Exibe os últimos <code>N</code> bytes do arquivo</td></tr>
+<tr><td>-f, --follow</td><td>Mantém o arquivo aberto e exibe novas linhas em tempo real</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">tail arquivo.txt                    # exibe as 10 últimas linhas de `arquivo.txt`
-tail -n 20 arquivo.txt              # exibe as 20 últimas linhas
-tail -c 100 arquivo.txt             # exibe os 100 últimos bytes
-tail -f /var/log/syslog             # monitora o arquivo em tempo real (útil para logs)
-tail -n +5 arquivo.txt              # exibe o arquivo a partir da 5ª linha até o fim
+<pre><code class="language-bash"># exibe as 10 últimas linhas de `arquivo.txt`
+tail arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe as 20 últimas linhas
+tail -n 20 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe os 100 últimos bytes
+tail -c 100 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># monitora o arquivo em tempo real (útil para logs)
+tail -f /var/log/syslog
+</code></pre>
+<pre><code class="language-bash"># exibe o arquivo a partir da 5ª linha até o fim
+tail -n +5 arquivo.txt
 </code></pre>
 
                     </main>

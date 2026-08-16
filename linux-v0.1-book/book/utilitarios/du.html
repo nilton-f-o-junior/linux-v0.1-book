@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -189,7 +190,7 @@
 <tr><td>-s</td><td>Exibe apenas o total geral, sem detalhar subdiretórios</td></tr>
 <tr><td>-a</td><td>Exibe o tamanho de todos os arquivos, não apenas dos diretórios</td></tr>
 <tr><td>-c</td><td>Exibe uma linha adicional com o total geral</td></tr>
-<tr><td>–max-depth=N</td><td>Limita a profundidade de exibição a <code>N</code> níveis de subdiretórios</td></tr>
+<tr><td>--max-depth=N</td><td>Limita a profundidade de exibição a <code>N</code> níveis de subdiretórios</td></tr>
 </tbody>
 </table>
 </div>
@@ -198,12 +199,23 @@
 Para verificar o espaço total disponível no sistema de arquivos (em vez do espaço ocupado por arquivos específicos), utilize <code>df</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">du                           # exibe o uso de espaço do diretório atual e seus subdiretórios
-du -h                        # exibe os tamanhos em formato legível
-du -sh /home                 # exibe apenas o total do diretório /home, de forma legível
-du -ah /var/log               # exibe o tamanho de cada arquivo dentro de /var/log
-du -h --max-depth=1          # exibe o uso de espaço limitado a um nível de subdiretórios
-du -ch *.log                 # exibe o tamanho de cada arquivo .log e o total geral
+<pre><code class="language-bash"># exibe o uso de espaço do diretório atual e seus subdiretórios
+du
+</code></pre>
+<pre><code class="language-bash"># exibe os tamanhos em formato legível
+du -h
+</code></pre>
+<pre><code class="language-bash"># exibe apenas o total do diretório /home, de forma legível
+du -sh /home
+</code></pre>
+<pre><code class="language-bash"># exibe o tamanho de cada arquivo dentro de /var/log
+du -ah /var/log
+</code></pre>
+<pre><code class="language-bash"># exibe o uso de espaço limitado a um nível de subdiretórios
+du -h --max-depth=1
+</code></pre>
+<pre><code class="language-bash"># exibe o tamanho de cada arquivo .log e o total geral
+du -ch *.log
 </code></pre>
 
                     </main>

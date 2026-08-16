@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -189,7 +190,7 @@
 <tr><td>-p porta</td><td>Especifica a porta de conexão (padrão: 22)</td></tr>
 <tr><td>-i arquivo</td><td>Especifica o arquivo de chave privada a ser usado na autenticação</td></tr>
 <tr><td>-X</td><td>Habilita o encaminhamento de aplicações gráficas (X11) do host remoto</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe informações detalhadas sobre o processo de conexão (útil para depuração)</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe informações detalhadas sobre o processo de conexão (útil para depuração)</td></tr>
 </tbody>
 </table>
 </div>
@@ -197,10 +198,17 @@
 <p>A conexão via <code>ssh</code> usa criptografia para proteger os dados transmitidos, sendo o método padrão para administração remota segura de servidores Linux. A autenticação pode ser feita por senha ou por par de chaves pública/privada (mais segura). Para gerar esse par de chaves, veja o comando <code>ssh-keygen</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ssh usuario@192.168.1.10              # conecta ao host `192.168.1.10` como `usuario`
-ssh usuario@servidor.com -p 2222      # conecta usando uma porta específica
-ssh -i chave_privada.pem usuario@servidor.com  # conecta usando um arquivo de chave privada
-ssh -X usuario@servidor.com           # conecta habilitando o encaminhamento de aplicações gráficas
+<pre><code class="language-bash"># conecta ao host `192.168.1.10` como `usuario`
+ssh usuario@192.168.1.10
+</code></pre>
+<pre><code class="language-bash"># conecta usando uma porta específica
+ssh usuario@servidor.com -p 2222
+</code></pre>
+<pre><code class="language-bash"># conecta usando um arquivo de chave privada
+ssh -i chave_privada.pem usuario@servidor.com
+</code></pre>
+<pre><code class="language-bash"># conecta habilitando o encaminhamento de aplicações gráficas
+ssh -X usuario@servidor.com
 </code></pre>
 
                     </main>

@@ -22,10 +22,31 @@ find [diretório] [expressão]
 **Exemplos**
 
 ```bash
-find . -name "*.txt"                    # busca arquivos .txt no diretório atual e subdiretórios
-find /home -iname "relatorio*"          # busca ignorando maiúsculas/minúsculas em /home
-find /var/log -type f -size +100M       # busca arquivos maiores que 100 MB
-find . -type d -name "backup"           # busca diretórios chamados `backup`
-find /tmp -mtime -7                     # busca arquivos modificados nos últimos 7 dias
-find . -name "*.log" -exec rm {} \;     # busca e remove arquivos .log encontrados
+# busca arquivos .txt no diretório atual e subdiretórios
+find . -name "*.txt"
+```
+
+```bash
+# busca ignorando maiúsculas/minúsculas em /home
+find /home -iname "relatorio*"
+```
+
+```bash
+# busca arquivos maiores que 100 MB
+find /var/log -type f -size +100M
+```
+
+```bash
+# busca diretórios chamados `backup`
+find . -type d -name "backup"
+```
+
+```bash
+# busca arquivos modificados nos últimos 7 dias
+find /tmp -mtime -7
+```
+
+```bash
+# busca e remove arquivos .log encontrados
+find . -name "*.log" -exec rm {} \;
 ```

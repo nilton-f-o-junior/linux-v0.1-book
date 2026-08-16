@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,10 +187,10 @@
 <tbody>
 <tr><td>origem</td><td>Localização do arquivo a ser copiado (local ou remoto, no formato <code>usuário@host:caminho</code>)</td></tr>
 <tr><td>destino</td><td>Localização para onde o arquivo será copiado (local ou remoto, no formato <code>usuário@host:caminho</code>)</td></tr>
-<tr><td>-r, –recursive</td><td>Copia diretórios recursivamente, incluindo subpastas e arquivos</td></tr>
+<tr><td>-r, --recursive</td><td>Copia diretórios recursivamente, incluindo subpastas e arquivos</td></tr>
 <tr><td>-P porta</td><td>Especifica a porta de conexão (padrão: 22)</td></tr>
 <tr><td>-i arquivo</td><td>Especifica o arquivo de chave privada a ser usado na autenticação</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe informações detalhadas sobre o processo de cópia (útil para depuração)</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe informações detalhadas sobre o processo de cópia (útil para depuração)</td></tr>
 </tbody>
 </table>
 </div>
@@ -197,11 +198,20 @@
 <p><code>scp</code> usa a mesma autenticação e criptografia do <code>ssh</code>. É possível copiar de um computador local para um remoto, de um remoto para o local, ou até entre dois computadores remotos.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">scp arquivo.txt usuario@servidor.com:/home/usuario/       # copia um arquivo local para um servidor remoto
-scp usuario@servidor.com:/home/usuario/arquivo.txt .       # copia um arquivo remoto para o diretório atual
-scp -r pasta/ usuario@servidor.com:/home/usuario/          # copia um diretório inteiro para um servidor remoto
-scp -P 2222 arquivo.txt usuario@servidor.com:/home/usuario/  # copia usando uma porta específica
-scp -i chave_privada.pem arquivo.txt usuario@servidor.com:/home/usuario/  # copia usando uma chave privada
+<pre><code class="language-bash"># copia um arquivo local para um servidor remoto
+scp arquivo.txt usuario@servidor.com:/home/usuario/
+</code></pre>
+<pre><code class="language-bash"># copia um arquivo remoto para o diretório atual
+scp usuario@servidor.com:/home/usuario/arquivo.txt .
+</code></pre>
+<pre><code class="language-bash"># copia um diretório inteiro para um servidor remoto
+scp -r pasta/ usuario@servidor.com:/home/usuario/
+</code></pre>
+<pre><code class="language-bash"># copia usando uma porta específica
+scp -P 2222 arquivo.txt usuario@servidor.com:/home/usuario/
+</code></pre>
+<pre><code class="language-bash"># copia usando uma chave privada
+scp -i chave_privada.pem arquivo.txt usuario@servidor.com:/home/usuario/
 </code></pre>
 
                     </main>

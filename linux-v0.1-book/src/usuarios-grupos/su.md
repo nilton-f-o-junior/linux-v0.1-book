@@ -18,9 +18,26 @@ su [opções] [usuário]
 **Exemplos**
 
 ```bash
-su                                    # troca para o usuário root (pede a senha do root)
-su -                                  # troca para o root, carregando também seu ambiente completo
-su usuario                            # troca para o usuário `usuario` (pede a senha dele)
-su -c "apt update"                    # executa um único comando como root, sem abrir um novo shell
-exit                                  # encerra a sessão como o outro usuário e retorna à anterior
+# troca para o usuário root (pede a senha do root)
+su
+```
+
+```bash
+# troca para o root, carregando também seu ambiente completo
+su -
+```
+
+```bash
+# troca para o usuário `usuario` (pede a senha dele)
+su usuario
+```
+
+```bash
+# executa um único comando como root, sem abrir um novo shell
+su -c "apt update"
+```
+
+```bash
+# encerra a sessão como o outro usuário e retorna à anterior
+exit
 ```

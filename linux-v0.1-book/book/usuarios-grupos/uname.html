@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -184,11 +185,11 @@
 <tr><th>Argumento / Opção</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>-a, –all</td><td>Exibe todas as informações disponíveis</td></tr>
-<tr><td>-s, –kernel-name</td><td>Exibe o nome do kernel (padrão, quando nenhuma opção é informada)</td></tr>
-<tr><td>-r, –kernel-release</td><td>Exibe a versão (release) do kernel</td></tr>
-<tr><td>-m, –machine</td><td>Exibe a arquitetura da máquina (ex.: <code>x86_64</code>)</td></tr>
-<tr><td>-o, –operating-system</td><td>Exibe o nome do sistema operacional</td></tr>
+<tr><td>-a, --all</td><td>Exibe todas as informações disponíveis</td></tr>
+<tr><td>-s, --kernel-name</td><td>Exibe o nome do kernel (padrão, quando nenhuma opção é informada)</td></tr>
+<tr><td>-r, --kernel-release</td><td>Exibe a versão (release) do kernel</td></tr>
+<tr><td>-m, --machine</td><td>Exibe a arquitetura da máquina (ex.: <code>x86_64</code>)</td></tr>
+<tr><td>-o, --operating-system</td><td>Exibe o nome do sistema operacional</td></tr>
 </tbody>
 </table>
 </div>
@@ -196,11 +197,20 @@
 <p>Sem opções, <code>uname</code> exibe apenas o nome do kernel (equivalente a <code>-s</code>). Para uma visão completa do sistema, use <code>uname -a</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">uname                                 # exibe o nome do kernel
-uname -a                              # exibe todas as informações do sistema
-uname -r                              # exibe a versão do kernel
-uname -m                              # exibe a arquitetura da máquina
-uname -o                              # exibe o nome do sistema operacional
+<pre><code class="language-bash"># exibe o nome do kernel
+uname
+</code></pre>
+<pre><code class="language-bash"># exibe todas as informações do sistema
+uname -a
+</code></pre>
+<pre><code class="language-bash"># exibe a versão do kernel
+uname -r
+</code></pre>
+<pre><code class="language-bash"># exibe a arquitetura da máquina
+uname -m
+</code></pre>
+<pre><code class="language-bash"># exibe o nome do sistema operacional
+uname -o
 </code></pre>
 
                     </main>

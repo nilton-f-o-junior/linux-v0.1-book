@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -187,8 +188,8 @@
 <tr><td>a</td><td>Exibe os processos de todos os usuários associados a um terminal</td></tr>
 <tr><td>u</td><td>Exibe informações detalhadas, incluindo usuário e uso de recursos</td></tr>
 <tr><td>x</td><td>Inclui processos sem terminal associado (ex.: serviços em segundo plano)</td></tr>
-<tr><td>-e, –everyone</td><td>Exibe todos os processos do sistema</td></tr>
-<tr><td>-f, –full</td><td>Exibe uma listagem completa, com mais detalhes sobre cada processo</td></tr>
+<tr><td>-e, --everyone</td><td>Exibe todos os processos do sistema</td></tr>
+<tr><td>-f, --full</td><td>Exibe uma listagem completa, com mais detalhes sobre cada processo</td></tr>
 </tbody>
 </table>
 </div>
@@ -196,11 +197,20 @@
 <p>A combinação <code>ps aux</code> é uma das mais usadas, exibindo todos os processos do sistema com informações detalhadas, independentemente de terminal.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ps                                     # exibe os processos do terminal atual
-ps aux                                 # exibe todos os processos do sistema com detalhes
-ps -ef                                 # exibe todos os processos em formato completo
-ps aux | grep "firefox"                # filtra os processos relacionados ao `firefox`
-ps -u usuario                          # exibe os processos de um usuário específico
+<pre><code class="language-bash"># exibe os processos do terminal atual
+ps
+</code></pre>
+<pre><code class="language-bash"># exibe todos os processos do sistema com detalhes
+ps aux
+</code></pre>
+<pre><code class="language-bash"># exibe todos os processos em formato completo
+ps -ef
+</code></pre>
+<pre><code class="language-bash"># filtra os processos relacionados ao `firefox`
+ps aux | grep "firefox"
+</code></pre>
+<pre><code class="language-bash"># exibe os processos de um usuário específico
+ps -u usuario
 </code></pre>
 
                     </main>

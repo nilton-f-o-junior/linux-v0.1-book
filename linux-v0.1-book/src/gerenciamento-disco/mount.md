@@ -20,9 +20,26 @@ mount [opções] dispositivo diretório
 **Exemplos**
 
 ```bash
-mount                                  # lista todos os sistemas de arquivos montados
-sudo mount /dev/sdb1 /mnt/usb          # monta o dispositivo `/dev/sdb1` no diretório `/mnt/usb`
-sudo mount -t ntfs /dev/sdb1 /mnt/usb  # monta especificando o tipo de sistema de arquivos
-sudo mount -o ro /dev/sdb1 /mnt/usb    # monta o dispositivo em modo somente leitura
-sudo mount -a                          # monta todos os sistemas de arquivos listados em `/etc/fstab`
+# lista todos os sistemas de arquivos montados
+mount
+```
+
+```bash
+# monta o dispositivo `/dev/sdb1` no diretório `/mnt/usb`
+sudo mount /dev/sdb1 /mnt/usb
+```
+
+```bash
+# monta especificando o tipo de sistema de arquivos
+sudo mount -t ntfs /dev/sdb1 /mnt/usb
+```
+
+```bash
+# monta o dispositivo em modo somente leitura
+sudo mount -o ro /dev/sdb1 /mnt/usb
+```
+
+```bash
+# monta todos os sistemas de arquivos listados em `/etc/fstab`
+sudo mount -a
 ```

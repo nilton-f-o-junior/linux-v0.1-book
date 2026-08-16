@@ -19,9 +19,26 @@ cut [opções] [arquivo]
 **Exemplos**
 
 ```bash
-cut -f 1 dados.tsv                    # exibe apenas o primeiro campo de cada linha
-cut -d ',' -f 2 dados.csv             # exibe o segundo campo, usando vírgula como delimitador
-cut -d ',' -f 1,3 dados.csv           # exibe o primeiro e o terceiro campos
-cut -c 1-5 arquivo.txt                # exibe os 5 primeiros caracteres de cada linha
-cut -d ':' -f 1 /etc/passwd           # exibe apenas os nomes de usuário do arquivo `passwd`
+# exibe apenas o primeiro campo de cada linha
+cut -f 1 dados.tsv
+```
+
+```bash
+# exibe o segundo campo, usando vírgula como delimitador
+cut -d ',' -f 2 dados.csv
+```
+
+```bash
+# exibe o primeiro e o terceiro campos
+cut -d ',' -f 1,3 dados.csv
+```
+
+```bash
+# exibe os 5 primeiros caracteres de cada linha
+cut -c 1-5 arquivo.txt
+```
+
+```bash
+# exibe apenas os nomes de usuário do arquivo `passwd`
+cut -d ':' -f 1 /etc/passwd
 ```

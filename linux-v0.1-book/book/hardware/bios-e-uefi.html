@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -181,13 +182,13 @@
 <h2 id="bios-e-uefi"><a class="header" href="#bios-e-uefi">BIOS e UEFI</a></h2>
 <p>Durante décadas, esse firmware foi chamado de <strong>BIOS</strong> (<em>Basic Input/Output System</em>). A interface era simples, navegada com o teclado, exibida em texto puro. O BIOS tinha uma limitação estrutural importante: ele só conseguia reconhecer partições de disco seguindo um padrão chamado <strong>MBR</strong> (<em>Master Boot Record</em>), que limitava discos a 2 TB e suportava no máximo quatro partições primárias.</p>
 <p>A indústria desenvolveu o <strong>UEFI</strong> (<em>Unified Extensible Firmware Interface</em>), que substituiu o BIOS na maioria dos computadores fabricados a partir do início dos anos 2010. O UEFI trouxe uma interface gráfica navegável com mouse, suporte a discos maiores por meio do padrão <strong>GPT</strong> (<em>GUID Partition Table</em>), inicialização mais rápida e um recurso chamado <em><strong>Secure Boot</strong></em> que verifica criptograficamente se o bootloader a ser carregado é confiável, bloqueando softwares maliciosos que tentariam se inserir nessa etapa.</p>
-<p>Na prática, UEFI é o BIOS moderno. A maioria das pessoas ainda chama de “entrar na BIOS” a ação de acessar as configurações de firmware, mesmo que o sistema seja UEFI, e os fabricantes de placas-mãe mantêm essa terminologia nas interfaces para não confundir os usuários.</p>
+<p>Na prática, UEFI é o BIOS moderno. A maioria das pessoas ainda chama de "entrar na BIOS" a ação de acessar as configurações de firmware, mesmo que o sistema seja UEFI, e os fabricantes de placas-mãe mantêm essa terminologia nas interfaces para não confundir os usuários.</p>
 <p>Para acessar essas configurações, é preciso pressionar uma tecla específica logo nos primeiros segundos após ligar o computador, antes que o bootloader assuma o controle.</p>
 <p>A tecla varia conforme o fabricante e até mesmo entre modelos de uma mesma marca, sendo <code>Del</code>, <code>F2</code>, <code>F1</code>, <code>F10</code> e <code>F12</code> algumas das mais comuns. Na dúvida, o manual do fabricante ou uma busca pelo modelo exato da placa-mãe ou do notebook é o caminho mais confiável..</p>
-<p>Muitos fabricantes exibem brevemente essa informação na tela durante o POST, uma linha discreta como “Press DEL to enter setup”, mas ela desaparece rápido. Além disso, muitos computadores modernos vêm com um recurso de inicialização rápida (<em>Fast Boot</em>) habilitado por padrão no UEFI, que reduz ainda mais essa janela de tempo. Se não houver tempo de reagir, basta reiniciar e tentar novamente.</p>
+<p>Muitos fabricantes exibem brevemente essa informação na tela durante o POST, uma linha discreta como "Press DEL to enter setup", mas ela desaparece rápido. Além disso, muitos computadores modernos vêm com um recurso de inicialização rápida (<em>Fast Boot</em>) habilitado por padrão no UEFI, que reduz ainda mais essa janela de tempo. Se não houver tempo de reagir, basta reiniciar e tentar novamente.</p>
 <h2 id="o-bootloader-a-ponte-entre-o-firmware-e-o-kernel"><a class="header" href="#o-bootloader-a-ponte-entre-o-firmware-e-o-kernel">O bootloader: a ponte entre o firmware e o kernel</a></h2>
 <p>Após o POST, o firmware localiza um dispositivo de armazenamento inicializável, geralmente o SSD ou HD onde o sistema operacional está instalado, e transfere o controle para um programa específico chamado <em>bootloader</em>.</p>
-<p>O bootloader tem uma função muito precisa: encontrar o kernel do sistema operacional no disco, carregá-lo na memória e inicializá-lo. Ele é uma camada necessária porque o kernel não pode simplesmente “se carregar sozinho”, ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware.</p>
+<p>O bootloader tem uma função muito precisa: encontrar o kernel do sistema operacional no disco, carregá-lo na memória e inicializá-lo. Ele é uma camada necessária porque o kernel não pode simplesmente "se carregar sozinho", ele precisa de alguém que o coloque na memória antes de tomar o controle do hardware.</p>
 <p>No Linux, o bootloader mais comum é o <strong>GRUB</strong> (<em>Grand Unified Bootloader</em>), que consegue localizar kernels em partições diferentes, passar parâmetros de configuração para o kernel e lidar com múltiplos sistemas no mesmo computador, o que os usuários chamam de <em><strong>dual boot</strong></em>.</p>
 <p>Uma alternativa mais simples e moderna é o <strong>systemd-boot</strong>, que integra ao ecossistema do <strong>systemd</strong> (o gerenciador de serviços padrão em boa parte das distribuições Linux atuais). Ele é menos flexível que o GRUB, mas mais direto e com menos configuração manual envolvida.</p>
 

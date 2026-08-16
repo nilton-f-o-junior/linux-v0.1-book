@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -207,9 +208,14 @@ UUID=5e6f7g8h-... /home            ext4    defaults        0 2
 /swapfile          none            swap    sw              0 0
 </code></pre>
 <p><strong>Exemplos de uso relacionado</strong></p>
-<pre><code class="language-bash">sudo nano /etc/fstab                   # edita o arquivo fstab
-sudo mount -a                          # monta todos os sistemas de arquivos listados em `fstab`, sem reiniciar
-blkid                                  # exibe os UUIDs dos dispositivos, úteis para configurar o `fstab`
+<pre><code class="language-bash"># edita o arquivo fstab
+sudo nano /etc/fstab
+</code></pre>
+<pre><code class="language-bash"># monta todos os sistemas de arquivos listados em `fstab`, sem reiniciar
+sudo mount -a
+</code></pre>
+<pre><code class="language-bash"># exibe os UUIDs dos dispositivos, úteis para configurar o `fstab`
+blkid
 </code></pre>
 
                     </main>

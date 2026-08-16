@@ -20,9 +20,26 @@ chown [opções] usuário[:grupo] arquivo [arquivo1]
 **Exemplos**
 
 ```bash
-sudo chown usuario arquivo.txt        # altera apenas o dono de `arquivo.txt` para `usuario`
-sudo chown usuario:equipe arquivo.txt # altera o dono para `usuario` e o grupo para `equipe`
-sudo chown -R usuario:equipe /var/www/site  # altera recursivamente o dono e o grupo de um diretório
-sudo chown -v usuario arquivo.txt     # altera o dono e exibe uma mensagem de confirmação
-sudo chown --reference=modelo.txt copia.txt # aplica o mesmo dono/grupo de `modelo.txt` a `copia.txt`
+# altera apenas o dono de `arquivo.txt` para `usuario`
+sudo chown usuario arquivo.txt
+```
+
+```bash
+# altera o dono para `usuario` e o grupo para `equipe`
+sudo chown usuario:equipe arquivo.txt
+```
+
+```bash
+# altera recursivamente o dono e o grupo de um diretório
+sudo chown -R usuario:equipe /var/www/site
+```
+
+```bash
+# altera o dono e exibe uma mensagem de confirmação
+sudo chown -v usuario arquivo.txt
+```
+
+```bash
+# aplica o mesmo dono/grupo de `modelo.txt` a `copia.txt`
+sudo chown --reference=modelo.txt copia.txt
 ```

@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -187,17 +188,28 @@
 <tr><td>caminho</td><td>Caminho onde o diretório será criado</td></tr>
 <tr><td>diretório</td><td>Nome do diretório que será criado</td></tr>
 <tr><td>-p</td><td>Cria os diretórios intermediários que ainda não existem</td></tr>
-<tr><td>–verbose</td><td>Exibe uma mensagem para cada diretório criado</td></tr>
+<tr><td>--verbose</td><td>Exibe uma mensagem para cada diretório criado</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">mkdir projetos                      # cria o diretório `projetos` no diretório atual
-mkdir /home/user/documentos/notas   # cria o diretório `notas` em um caminho absoluto
-mkdir docs imagens videos           # cria três diretórios de uma só vez
-mkdir -p projeto/src/componentes    # cria toda a cadeia de diretórios, mesmo que `projeto` e `src` ainda não existam
-mkdir --verbose novo-site           # cria o diretório e exibe: mkdir: criado diretório 'novo-site'
-mkdir -p --verbose a/b/c            # cria os diretórios intermediários e exibe uma mensagem para cada um criado
+<pre><code class="language-bash"># cria o diretório `projetos` no diretório atual
+mkdir projetos
+</code></pre>
+<pre><code class="language-bash"># cria o diretório `notas` em um caminho absoluto
+mkdir /home/user/documentos/notas
+</code></pre>
+<pre><code class="language-bash"># cria três diretórios de uma só vez
+mkdir docs imagens videos
+</code></pre>
+<pre><code class="language-bash"># cria toda a cadeia de diretórios, mesmo que `projeto` e `src` ainda não existam
+mkdir -p projeto/src/componentes
+</code></pre>
+<pre><code class="language-bash"># cria o diretório e exibe: mkdir: criado diretório 'novo-site'
+mkdir --verbose novo-site
+</code></pre>
+<pre><code class="language-bash"># cria os diretórios intermediários e exibe uma mensagem para cada um criado
+mkdir -p --verbose a/b/c
 </code></pre>
 
                     </main>

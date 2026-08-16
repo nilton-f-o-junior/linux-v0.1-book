@@ -19,9 +19,26 @@ uname [opções]
 **Exemplos**
 
 ```bash
-uname                                 # exibe o nome do kernel
-uname -a                              # exibe todas as informações do sistema
-uname -r                              # exibe a versão do kernel
-uname -m                              # exibe a arquitetura da máquina
-uname -o                              # exibe o nome do sistema operacional
+# exibe o nome do kernel
+uname
+```
+
+```bash
+# exibe todas as informações do sistema
+uname -a
+```
+
+```bash
+# exibe a versão do kernel
+uname -r
+```
+
+```bash
+# exibe a arquitetura da máquina
+uname -m
+```
+
+```bash
+# exibe o nome do sistema operacional
+uname -o
 ```

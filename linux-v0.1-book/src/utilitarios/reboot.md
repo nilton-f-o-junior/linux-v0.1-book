@@ -18,8 +18,21 @@ reboot [opções]
 **Exemplos**
 
 ```bash
-sudo reboot              # reinicia o sistema de forma padrão
-sudo reboot -f            # força a reinicialização imediata
-sudo systemctl reboot     # reinicia o sistema via systemd
-shutdown -r now           # alternativa para reiniciar o sistema imediatamente
+# reinicia o sistema de forma padrão
+sudo reboot
+```
+
+```bash
+# força a reinicialização imediata
+sudo reboot -f
+```
+
+```bash
+# reinicia o sistema via systemd
+sudo systemctl reboot
+```
+
+```bash
+# alternativa para reiniciar o sistema imediatamente
+shutdown -r now
 ```

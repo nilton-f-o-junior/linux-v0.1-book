@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,9 +186,9 @@
 </thead>
 <tbody>
 <tr><td>usuário</td><td>Nome do usuário para o qual deseja trocar (padrão: root)</td></tr>
-<tr><td>-, -l, –login</td><td>Inicia uma sessão de login completa, carregando o ambiente do usuário de destino</td></tr>
-<tr><td>-c, –command=“comando”</td><td>Executa um único comando como o usuário de destino, sem abrir um novo shell</td></tr>
-<tr><td>-s, –shell=shell</td><td>Define o shell a ser usado na nova sessão</td></tr>
+<tr><td>-, -l, --login</td><td>Inicia uma sessão de login completa, carregando o ambiente do usuário de destino</td></tr>
+<tr><td>-c, --command="comando"</td><td>Executa um único comando como o usuário de destino, sem abrir um novo shell</td></tr>
+<tr><td>-s, --shell=shell</td><td>Define o shell a ser usado na nova sessão</td></tr>
 </tbody>
 </table>
 </div>
@@ -195,11 +196,20 @@
 <p><code>su</code> pede a senha do usuário de destino (não a do usuário atual) e permanece nesse usuário até que se digite <code>exit</code>, retornando à sessão anterior.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">su                                    # troca para o usuário root (pede a senha do root)
-su -                                  # troca para o root, carregando também seu ambiente completo
-su usuario                            # troca para o usuário `usuario` (pede a senha dele)
-su -c "apt update"                    # executa um único comando como root, sem abrir um novo shell
-exit                                  # encerra a sessão como o outro usuário e retorna à anterior
+<pre><code class="language-bash"># troca para o usuário root (pede a senha do root)
+su
+</code></pre>
+<pre><code class="language-bash"># troca para o root, carregando também seu ambiente completo
+su -
+</code></pre>
+<pre><code class="language-bash"># troca para o usuário `usuario` (pede a senha dele)
+su usuario
+</code></pre>
+<pre><code class="language-bash"># executa um único comando como root, sem abrir um novo shell
+su -c "apt update"
+</code></pre>
+<pre><code class="language-bash"># encerra a sessão como o outro usuário e retorna à anterior
+exit
 </code></pre>
 
                     </main>

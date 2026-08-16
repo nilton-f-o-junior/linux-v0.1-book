@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,8 +187,8 @@
 <tbody>
 <tr><td>arquivo.zip</td><td>Localização do arquivo <code>.zip</code> a ser descompactado</td></tr>
 <tr><td>-d diretório</td><td>Descompacta o conteúdo em um diretório específico, em vez do diretório atual</td></tr>
-<tr><td>-l, –list</td><td>Lista o conteúdo do arquivo <code>.zip</code>, sem descompactá-lo</td></tr>
-<tr><td>-o, –overwrite</td><td>Sobrescreve arquivos existentes sem pedir confirmação</td></tr>
+<tr><td>-l, --list</td><td>Lista o conteúdo do arquivo <code>.zip</code>, sem descompactá-lo</td></tr>
+<tr><td>-o, --overwrite</td><td>Sobrescreve arquivos existentes sem pedir confirmação</td></tr>
 <tr><td>-x arquivo</td><td>Exclui um arquivo específico da descompactação</td></tr>
 </tbody>
 </table>
@@ -196,11 +197,20 @@
 <p>Ao descompactar um arquivo <code>.zip</code> protegido por senha, o <code>unzip</code> solicita a senha automaticamente durante o processo.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">unzip arquivo.zip                     # descompacta `arquivo.zip` no diretório atual
-unzip arquivo.zip -d pasta_destino    # descompacta o conteúdo em um diretório específico
-unzip -l arquivo.zip                  # lista o conteúdo do `.zip`, sem descompactar
-unzip -o arquivo.zip                  # descompacta sobrescrevendo arquivos existentes sem confirmação
-unzip -x "*.log" projeto.zip          # descompacta o arquivo, excluindo arquivos `.log`
+<pre><code class="language-bash"># descompacta `arquivo.zip` no diretório atual
+unzip arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># descompacta o conteúdo em um diretório específico
+unzip arquivo.zip -d pasta_destino
+</code></pre>
+<pre><code class="language-bash"># lista o conteúdo do `.zip`, sem descompactar
+unzip -l arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># descompacta sobrescrevendo arquivos existentes sem confirmação
+unzip -o arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># descompacta o arquivo, excluindo arquivos `.log`
+unzip -x "*.log" projeto.zip
 </code></pre>
 
                     </main>

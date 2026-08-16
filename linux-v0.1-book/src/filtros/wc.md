@@ -19,10 +19,31 @@ wc [opções] [arquivo]
 **Exemplos**
 
 ```bash
-wc arquivo.txt                        # exibe linhas, palavras e bytes de `arquivo.txt`
-wc -l arquivo.txt                     # exibe apenas o número de linhas
-wc -w arquivo.txt                     # exibe apenas o número de palavras
-wc -c arquivo.txt                     # exibe apenas o número de bytes
-cat arquivo.txt | wc -l               # conta o número de linhas da saída do comando `cat`
-ls -la | wc -l                        # conta a quantidade de itens listados em um diretório
+# exibe linhas, palavras e bytes de `arquivo.txt`
+wc arquivo.txt
+```
+
+```bash
+# exibe apenas o número de linhas
+wc -l arquivo.txt
+```
+
+```bash
+# exibe apenas o número de palavras
+wc -w arquivo.txt
+```
+
+```bash
+# exibe apenas o número de bytes
+wc -c arquivo.txt
+```
+
+```bash
+# conta o número de linhas da saída do comando `cat`
+cat arquivo.txt | wc -l
+```
+
+```bash
+# conta a quantidade de itens listados em um diretório
+ls -la | wc -l
 ```

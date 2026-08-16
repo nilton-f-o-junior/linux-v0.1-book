@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -196,12 +197,23 @@
 Para navegação bidirecional (rolar para cima), prefira <code>less</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">more arquivo.txt                    # exibe `arquivo.txt` de forma paginada
-more -10 arquivo.txt                # exibe 10 linhas por página
-more +20 arquivo.txt                # inicia a exibição a partir da linha 20
-cat arquivo.txt | more              # pagina a saída do comando `cat`
-ls -la /etc | more                  # pagina a listagem de um diretório longo
-zmore arquivo.txt.gz                # exibe um arquivo compactado com gzip de forma paginada
+<pre><code class="language-bash"># exibe `arquivo.txt` de forma paginada
+more arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe 10 linhas por página
+more -10 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># inicia a exibição a partir da linha 20
+more +20 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># pagina a saída do comando `cat`
+cat arquivo.txt | more
+</code></pre>
+<pre><code class="language-bash"># pagina a listagem de um diretório longo
+ls -la /etc | more
+</code></pre>
+<pre><code class="language-bash"># exibe um arquivo compactado com gzip de forma paginada
+zmore arquivo.txt.gz
 </code></pre>
 
                     </main>

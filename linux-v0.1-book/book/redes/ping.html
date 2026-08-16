@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -197,11 +198,20 @@
 <p>Por padrão, <code>ping</code> envia pacotes continuamente até ser interrompido manualmente (<code>Ctrl + C</code>). Use <code>-c</code> para limitar a quantidade de pacotes enviados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ping google.com                       # envia pacotes continuamente para `google.com`
-ping -c 4 google.com                  # envia 4 pacotes e encerra automaticamente
-ping -i 2 google.com                  # envia pacotes a cada 2 segundos
-ping -s 100 google.com                # envia pacotes de 100 bytes
-ping -c 4 192.168.1.1                 # testa a conectividade com um endereço IP específico
+<pre><code class="language-bash"># envia pacotes continuamente para `google.com`
+ping google.com
+</code></pre>
+<pre><code class="language-bash"># envia 4 pacotes e encerra automaticamente
+ping -c 4 google.com
+</code></pre>
+<pre><code class="language-bash"># envia pacotes a cada 2 segundos
+ping -i 2 google.com
+</code></pre>
+<pre><code class="language-bash"># envia pacotes de 100 bytes
+ping -s 100 google.com
+</code></pre>
+<pre><code class="language-bash"># testa a conectividade com um endereço IP específico
+ping -c 4 192.168.1.1
 </code></pre>
 
                     </main>

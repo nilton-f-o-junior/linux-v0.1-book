@@ -18,10 +18,31 @@ date [opções] [+formato]
 **Exemplos**
 
 ```bash
-date                                  # exibe a data e hora atuais
-date +%Y-%m-%d                        # exibe a data no formato ano-mês-dia
-date +"%H:%M:%S"                      # exibe apenas o horário atual
-date -u                               # exibe a data e hora atuais em UTC
-date -d "yesterday"                   # exibe a data referente a ontem
-sudo date -s "2026-07-27 10:00:00"    # define a data e hora do sistema
+# exibe a data e hora atuais
+date
+```
+
+```bash
+# exibe a data no formato ano-mês-dia
+date +%Y-%m-%d
+```
+
+```bash
+# exibe apenas o horário atual
+date +"%H:%M:%S"
+```
+
+```bash
+# exibe a data e hora atuais em UTC
+date -u
+```
+
+```bash
+# exibe a data referente a ontem
+date -d "yesterday"
+```
+
+```bash
+# define a data e hora do sistema
+sudo date -s "2026-07-27 10:00:00"
 ```

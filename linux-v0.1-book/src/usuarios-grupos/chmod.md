@@ -18,10 +18,31 @@ chmod [opções] modo arquivo [arquivo1]
 **Exemplos**
 
 ```bash
-chmod 755 script.sh                   # dá permissão total ao dono e leitura/execução aos demais
-chmod +x script.sh                    # adiciona permissão de execução para todos
-chmod u+x script.sh                   # adiciona permissão de execução apenas para o dono
-chmod g-w arquivo.txt                 # remove a permissão de escrita do grupo
-sudo chmod -R 644 /var/www/site       # aplica a permissão recursivamente a todos os arquivos de um diretório
-chmod -v 700 arquivo_privado.txt      # altera a permissão e exibe uma mensagem de confirmação
+# dá permissão total ao dono e leitura/execução aos demais
+chmod 755 script.sh
+```
+
+```bash
+# adiciona permissão de execução para todos
+chmod +x script.sh
+```
+
+```bash
+# adiciona permissão de execução apenas para o dono
+chmod u+x script.sh
+```
+
+```bash
+# remove a permissão de escrita do grupo
+chmod g-w arquivo.txt
+```
+
+```bash
+# aplica a permissão recursivamente a todos os arquivos de um diretório
+sudo chmod -R 644 /var/www/site
+```
+
+```bash
+# altera a permissão e exibe uma mensagem de confirmação
+chmod -v 700 arquivo_privado.txt
 ```

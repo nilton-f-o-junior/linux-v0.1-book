@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -187,9 +188,9 @@
 <tr><td>usuário</td><td>Nome (ou número) do usuário que passará a ser o proprietário</td></tr>
 <tr><td>grupo</td><td>Nome (ou número) do grupo que passará a ser o proprietário (opcional, precedido por <code>:</code>)</td></tr>
 <tr><td>arquivo</td><td>Localização do arquivo ou diretório a ser alterado</td></tr>
-<tr><td>-R, –recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
-<tr><td>–reference=arquivo_ref</td><td>Usa o dono/grupo de <code>arquivo_ref</code> em vez de especificar diretamente</td></tr>
+<tr><td>-R, --recursive</td><td>Aplica a alteração recursivamente a diretórios e seus conteúdos</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe uma mensagem para cada arquivo processado</td></tr>
+<tr><td>--reference=arquivo_ref</td><td>Usa o dono/grupo de <code>arquivo_ref</code> em vez de especificar diretamente</td></tr>
 </tbody>
 </table>
 </div>
@@ -197,11 +198,20 @@
 <p>Alterar o proprietário de um arquivo geralmente requer permissões de superusuário. Para alterar apenas o grupo, sem mudar o usuário, prefira o comando <code>chgrp</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo chown usuario arquivo.txt        # altera apenas o dono de `arquivo.txt` para `usuario`
-sudo chown usuario:equipe arquivo.txt # altera o dono para `usuario` e o grupo para `equipe`
-sudo chown -R usuario:equipe /var/www/site  # altera recursivamente o dono e o grupo de um diretório
-sudo chown -v usuario arquivo.txt     # altera o dono e exibe uma mensagem de confirmação
-sudo chown --reference=modelo.txt copia.txt # aplica o mesmo dono/grupo de `modelo.txt` a `copia.txt`
+<pre><code class="language-bash"># altera apenas o dono de `arquivo.txt` para `usuario`
+sudo chown usuario arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># altera o dono para `usuario` e o grupo para `equipe`
+sudo chown usuario:equipe arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># altera recursivamente o dono e o grupo de um diretório
+sudo chown -R usuario:equipe /var/www/site
+</code></pre>
+<pre><code class="language-bash"># altera o dono e exibe uma mensagem de confirmação
+sudo chown -v usuario arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># aplica o mesmo dono/grupo de `modelo.txt` a `copia.txt`
+sudo chown --reference=modelo.txt copia.txt
 </code></pre>
 
                     </main>

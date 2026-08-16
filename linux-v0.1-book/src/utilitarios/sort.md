@@ -20,10 +20,31 @@ sort [opções] [arquivo]
 **Exemplos**
 
 ```bash
-sort arquivo.txt                      # exibe o conteúdo ordenado alfabeticamente
-sort -r arquivo.txt                   # exibe o conteúdo ordenado em ordem decrescente
-sort -n numeros.txt                   # ordena os valores numericamente
-sort -u arquivo.txt                   # exibe o conteúdo ordenado, removendo linhas duplicadas
-sort -k 2 dados.txt                   # ordena com base no segundo campo de cada linha
-cat arquivo.txt | sort                # ordena a saída do comando `cat` via pipe
+# exibe o conteúdo ordenado alfabeticamente
+sort arquivo.txt
+```
+
+```bash
+# exibe o conteúdo ordenado em ordem decrescente
+sort -r arquivo.txt
+```
+
+```bash
+# ordena os valores numericamente
+sort -n numeros.txt
+```
+
+```bash
+# exibe o conteúdo ordenado, removendo linhas duplicadas
+sort -u arquivo.txt
+```
+
+```bash
+# ordena com base no segundo campo de cada linha
+sort -k 2 dados.txt
+```
+
+```bash
+# ordena a saída do comando `cat` via pipe
+cat arquivo.txt | sort
 ```

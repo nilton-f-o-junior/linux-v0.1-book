@@ -21,10 +21,31 @@ curl [opções] url
 **Exemplos**
 
 ```bash
-curl https://exemplo.com                          # exibe o conteúdo da página no terminal
-curl -O https://exemplo.com/arquivo.zip           # baixa o arquivo, mantendo o nome original
-curl -o meu_arquivo.zip https://exemplo.com/arquivo.zip  # baixa o arquivo com um novo nome
-curl -I https://exemplo.com                       # exibe apenas os cabeçalhos da resposta
-curl -X POST -d "nome=teste" https://exemplo.com/api     # envia dados via método POST
-curl -L https://exemplo.com                       # segue redirecionamentos automaticamente
+# exibe o conteúdo da página no terminal
+curl https://exemplo.com
+```
+
+```bash
+# baixa o arquivo, mantendo o nome original
+curl -O https://exemplo.com/arquivo.zip
+```
+
+```bash
+# baixa o arquivo com um novo nome
+curl -o meu_arquivo.zip https://exemplo.com/arquivo.zip
+```
+
+```bash
+# exibe apenas os cabeçalhos da resposta
+curl -I https://exemplo.com
+```
+
+```bash
+# envia dados via método POST
+curl -X POST -d "nome=teste" https://exemplo.com/api
+```
+
+```bash
+# segue redirecionamentos automaticamente
+curl -L https://exemplo.com
 ```

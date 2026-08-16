@@ -22,10 +22,31 @@ grep [opções] padrão [arquivo]
 **Exemplos**
 
 ```bash
-grep "erro" log.txt                   # exibe as linhas de `log.txt` que contêm a palavra `erro`
-grep -i "erro" log.txt                # busca ignorando diferenças entre maiúsculas e minúsculas
-grep -n "erro" log.txt                # exibe as linhas correspondentes com o número da linha
-grep -v "erro" log.txt                # exibe as linhas que não contêm a palavra `erro`
-grep -r "TODO" ./projeto              # busca recursivamente pela palavra `TODO` dentro de um diretório
-ps aux | grep "firefox"                # filtra a lista de processos, exibindo apenas os relacionados a `firefox`
+# exibe as linhas de `log.txt` que contêm a palavra `erro`
+grep "erro" log.txt
+```
+
+```bash
+# busca ignorando diferenças entre maiúsculas e minúsculas
+grep -i "erro" log.txt
+```
+
+```bash
+# exibe as linhas correspondentes com o número da linha
+grep -n "erro" log.txt
+```
+
+```bash
+# exibe as linhas que não contêm a palavra `erro`
+grep -v "erro" log.txt
+```
+
+```bash
+# busca recursivamente pela palavra `TODO` dentro de um diretório
+grep -r "TODO" ./projeto
+```
+
+```bash
+# filtra a lista de processos, exibindo apenas os relacionados a `firefox`
+ps aux | grep "firefox"
 ```

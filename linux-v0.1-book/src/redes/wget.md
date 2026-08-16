@@ -20,9 +20,26 @@ wget [opções] url
 **Exemplos**
 
 ```bash
-wget https://exemplo.com/arquivo.zip              # baixa o arquivo, mantendo o nome original
-wget -O novo_nome.zip https://exemplo.com/arquivo.zip  # baixa o arquivo com um novo nome
-wget -c https://exemplo.com/arquivo.zip           # retoma um download interrompido
-wget -b https://exemplo.com/arquivo.zip           # baixa o arquivo em segundo plano
-wget -r https://exemplo.com                       # baixa recursivamente o conteúdo de um site
+# baixa o arquivo, mantendo o nome original
+wget https://exemplo.com/arquivo.zip
+```
+
+```bash
+# baixa o arquivo com um novo nome
+wget -O novo_nome.zip https://exemplo.com/arquivo.zip
+```
+
+```bash
+# retoma um download interrompido
+wget -c https://exemplo.com/arquivo.zip
+```
+
+```bash
+# baixa o arquivo em segundo plano
+wget -b https://exemplo.com/arquivo.zip
+```
+
+```bash
+# baixa recursivamente o conteúdo de um site
+wget -r https://exemplo.com
 ```

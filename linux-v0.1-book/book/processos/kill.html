@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,7 +186,7 @@
 </thead>
 <tbody>
 <tr><td>PID</td><td>Número de identificação do processo (Process ID) a ser sinalizado</td></tr>
-<tr><td>-l, –list</td><td>Lista todos os sinais disponíveis</td></tr>
+<tr><td>-l, --list</td><td>Lista todos os sinais disponíveis</td></tr>
 <tr><td>-9, -SIGKILL</td><td>Força o encerramento imediato do processo, sem chance de finalização controlada</td></tr>
 <tr><td>-15, -SIGTERM</td><td>Solicita o encerramento normal do processo (sinal padrão)</td></tr>
 <tr><td>-1, -SIGHUP</td><td>Reinicia o processo, recarregando sua configuração</td></tr>
@@ -193,14 +194,23 @@
 </table>
 </div>
 <blockquote>
-<p><code>kill</code> não “mata” o processo diretamente — ele envia um sinal, e o comportamento depende de como o processo trata esse sinal. Use <code>-9</code> apenas quando o processo não responder ao sinal padrão.</p>
+<p><code>kill</code> não "mata" o processo diretamente — ele envia um sinal, e o comportamento depende de como o processo trata esse sinal. Use <code>-9</code> apenas quando o processo não responder ao sinal padrão.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">kill 1234                             # envia o sinal padrão (SIGTERM) para o processo de PID 1234
-kill -9 1234                          # força o encerramento imediato do processo 1234
-kill -l                               # lista todos os sinais disponíveis
-kill -1 1234                          # envia o sinal SIGHUP, recarregando a configuração do processo
-pkill firefox                         # encerra processos pelo nome, sem precisar informar o PID
+<pre><code class="language-bash"># envia o sinal padrão (SIGTERM) para o processo de PID 1234
+kill 1234
+</code></pre>
+<pre><code class="language-bash"># força o encerramento imediato do processo 1234
+kill -9 1234
+</code></pre>
+<pre><code class="language-bash"># lista todos os sinais disponíveis
+kill -l
+</code></pre>
+<pre><code class="language-bash"># envia o sinal SIGHUP, recarregando a configuração do processo
+kill -1 1234
+</code></pre>
+<pre><code class="language-bash"># encerra processos pelo nome, sem precisar informar o PID
+pkill firefox
 </code></pre>
 
                     </main>

@@ -20,10 +20,31 @@ gzip [opções] arquivo [arquivo1]
 **Exemplos**
 
 ```bash
-gzip arquivo.txt                      # compacta `arquivo.txt`, gerando `arquivo.txt.gz`
-gzip -k arquivo.txt                   # compacta mantendo o arquivo original
-gzip -d arquivo.txt.gz                # descompacta `arquivo.txt.gz`
-gzip -9 arquivo.txt                   # compacta usando o nível máximo de compressão
-gzip -v arquivo.txt                   # compacta exibindo a taxa de compressão obtida
-gzip -r pasta/                        # compacta recursivamente todos os arquivos de um diretório
+# compacta `arquivo.txt`, gerando `arquivo.txt.gz`
+gzip arquivo.txt
+```
+
+```bash
+# compacta mantendo o arquivo original
+gzip -k arquivo.txt
+```
+
+```bash
+# descompacta `arquivo.txt.gz`
+gzip -d arquivo.txt.gz
+```
+
+```bash
+# compacta usando o nível máximo de compressão
+gzip -9 arquivo.txt
+```
+
+```bash
+# compacta exibindo a taxa de compressão obtida
+gzip -v arquivo.txt
+```
+
+```bash
+# compacta recursivamente todos os arquivos de um diretório
+gzip -r pasta/
 ```

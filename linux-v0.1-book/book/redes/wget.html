@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,10 +187,10 @@
 <tbody>
 <tr><td>url</td><td>Endereço do arquivo a ser baixado</td></tr>
 <tr><td>-O arquivo</td><td>Salva o conteúdo baixado com um nome específico, em vez do nome original</td></tr>
-<tr><td>-c, –continue</td><td>Retoma o download de um arquivo parcialmente baixado</td></tr>
-<tr><td>-b, –background</td><td>Executa o download em segundo plano</td></tr>
-<tr><td>-r, –recursive</td><td>Baixa recursivamente o conteúdo de um site (útil para espelhar páginas)</td></tr>
-<tr><td>-q, –quiet</td><td>Executa o download sem exibir mensagens no terminal</td></tr>
+<tr><td>-c, --continue</td><td>Retoma o download de um arquivo parcialmente baixado</td></tr>
+<tr><td>-b, --background</td><td>Executa o download em segundo plano</td></tr>
+<tr><td>-r, --recursive</td><td>Baixa recursivamente o conteúdo de um site (útil para espelhar páginas)</td></tr>
+<tr><td>-q, --quiet</td><td>Executa o download sem exibir mensagens no terminal</td></tr>
 </tbody>
 </table>
 </div>
@@ -197,11 +198,20 @@
 <p>Diferente do <code>curl</code>, que por padrão exibe o conteúdo no terminal, <code>wget</code> já salva o resultado em um arquivo automaticamente, sendo focado principalmente em download de arquivos.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">wget https://exemplo.com/arquivo.zip              # baixa o arquivo, mantendo o nome original
-wget -O novo_nome.zip https://exemplo.com/arquivo.zip  # baixa o arquivo com um novo nome
-wget -c https://exemplo.com/arquivo.zip           # retoma um download interrompido
-wget -b https://exemplo.com/arquivo.zip           # baixa o arquivo em segundo plano
-wget -r https://exemplo.com                       # baixa recursivamente o conteúdo de um site
+<pre><code class="language-bash"># baixa o arquivo, mantendo o nome original
+wget https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># baixa o arquivo com um novo nome
+wget -O novo_nome.zip https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># retoma um download interrompido
+wget -c https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># baixa o arquivo em segundo plano
+wget -b https://exemplo.com/arquivo.zip
+</code></pre>
+<pre><code class="language-bash"># baixa recursivamente o conteúdo de um site
+wget -r https://exemplo.com
 </code></pre>
 
                     </main>

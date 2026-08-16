@@ -19,9 +19,26 @@ tr [opções] conjunto1 [conjunto2]
 **Exemplos**
 
 ```bash
-echo "Ola Mundo" | tr 'a-z' 'A-Z'      # converte todo o texto para maiúsculas
-echo "Ola Mundo" | tr ' ' '_'          # substitui espaços por underscores
-cat arquivo.txt | tr -d '0-9'          # remove todos os números do texto
-cat arquivo.txt | tr -s ' '            # reduz múltiplos espaços consecutivos a um único espaço
-echo "12345" | tr -c '0-9' '#'         # substitui tudo que não for número por `#`
+# converte todo o texto para maiúsculas
+echo "Ola Mundo" | tr 'a-z' 'A-Z'
+```
+
+```bash
+# substitui espaços por underscores
+echo "Ola Mundo" | tr ' ' '_'
+```
+
+```bash
+# remove todos os números do texto
+cat arquivo.txt | tr -d '0-9'
+```
+
+```bash
+# reduz múltiplos espaços consecutivos a um único espaço
+cat arquivo.txt | tr -s ' '
+```
+
+```bash
+# substitui tudo que não for número por `#`
+echo "12345" | tr -c '0-9' '#'
 ```

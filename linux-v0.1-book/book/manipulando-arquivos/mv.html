@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,10 +187,10 @@
 <tbody>
 <tr><td>origem</td><td>Arquivo ou diretório a ser movido ou renomeado</td></tr>
 <tr><td>destino</td><td>Caminho de destino ou novo nome do arquivo/diretório</td></tr>
-<tr><td>-f, –force</td><td>Substitui o arquivo de destino sem perguntar</td></tr>
-<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são movidos</td></tr>
-<tr><td>-u, –update</td><td>Move somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>-f, --force</td><td>Substitui o arquivo de destino sem perguntar</td></tr>
+<tr><td>-i, --interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe os arquivos enquanto são movidos</td></tr>
+<tr><td>-u, --update</td><td>Move somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
 </tbody>
 </table>
 </div>
@@ -200,13 +201,26 @@
 <p>Diferente do <code>cp</code>, o <code>mv</code> apaga o arquivo de origem após a cópia — o resultado é semelhante a recortar e colar.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">mv teste.txt teste1.txt             # renomeia `teste.txt` para `teste1.txt`
-mv teste.txt /tmp                   # move `teste.txt` para `/tmp` (origem é apagada)
-mv teste.txt teste.new              # sobrescreve `teste.new` com `teste.txt` e apaga a origem
-mv -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
-mv -f teste.txt /tmp                # move sem perguntar, substituindo o destino se existir
-mv -v *.txt /tmp                    # move todos os arquivos `.txt` exibindo o progresso
-mv -u teste.txt /tmp                # move somente se `teste.txt` for mais recente que o destino
+<pre><code class="language-bash"># renomeia `teste.txt` para `teste1.txt`
+mv teste.txt teste1.txt
+</code></pre>
+<pre><code class="language-bash"># move `teste.txt` para `/tmp` (origem é apagada)
+mv teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># sobrescreve `teste.new` com `teste.txt` e apaga a origem
+mv teste.txt teste.new
+</code></pre>
+<pre><code class="language-bash"># pergunta antes de substituir caso já exista em `/tmp`
+mv -i teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># move sem perguntar, substituindo o destino se existir
+mv -f teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># move todos os arquivos `.txt` exibindo o progresso
+mv -v *.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># move somente se `teste.txt` for mais recente que o destino
+mv -u teste.txt /tmp
 </code></pre>
 
                     </main>

@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,9 +187,9 @@
 <tbody>
 <tr><td>conjunto1</td><td>Conjunto de caracteres a serem substituídos ou removidos</td></tr>
 <tr><td>conjunto2</td><td>Conjunto de caracteres que substituirá <code>conjunto1</code></td></tr>
-<tr><td>-d, –delete</td><td>Remove os caracteres de <code>conjunto1</code>, em vez de substituí-los</td></tr>
-<tr><td>-s, –squeeze-repeats</td><td>Reduz sequências repetidas de um mesmo caractere a uma única ocorrência</td></tr>
-<tr><td>-c, –complement</td><td>Usa o complemento de <code>conjunto1</code> (todos os caracteres que não estão nele)</td></tr>
+<tr><td>-d, --delete</td><td>Remove os caracteres de <code>conjunto1</code>, em vez de substituí-los</td></tr>
+<tr><td>-s, --squeeze-repeats</td><td>Reduz sequências repetidas de um mesmo caractere a uma única ocorrência</td></tr>
+<tr><td>-c, --complement</td><td>Usa o complemento de <code>conjunto1</code> (todos os caracteres que não estão nele)</td></tr>
 </tbody>
 </table>
 </div>
@@ -196,11 +197,20 @@
 <p><code>tr</code> trabalha apenas com a entrada padrão (<code>stdin</code>), não recebe arquivo diretamente como argumento — por isso, costuma ser usado em conjunto com pipes (<code>|</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">echo "Ola Mundo" | tr 'a-z' 'A-Z'      # converte todo o texto para maiúsculas
-echo "Ola Mundo" | tr ' ' '_'          # substitui espaços por underscores
-cat arquivo.txt | tr -d '0-9'          # remove todos os números do texto
-cat arquivo.txt | tr -s ' '            # reduz múltiplos espaços consecutivos a um único espaço
-echo "12345" | tr -c '0-9' '#'         # substitui tudo que não for número por `#`
+<pre><code class="language-bash"># converte todo o texto para maiúsculas
+echo "Ola Mundo" | tr 'a-z' 'A-Z'
+</code></pre>
+<pre><code class="language-bash"># substitui espaços por underscores
+echo "Ola Mundo" | tr ' ' '_'
+</code></pre>
+<pre><code class="language-bash"># remove todos os números do texto
+cat arquivo.txt | tr -d '0-9'
+</code></pre>
+<pre><code class="language-bash"># reduz múltiplos espaços consecutivos a um único espaço
+cat arquivo.txt | tr -s ' '
+</code></pre>
+<pre><code class="language-bash"># substitui tudo que não for número por `#`
+echo "12345" | tr -c '0-9' '#'
 </code></pre>
 
                     </main>

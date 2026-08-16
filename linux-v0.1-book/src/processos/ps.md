@@ -19,9 +19,26 @@ ps [opções]
 **Exemplos**
 
 ```bash
-ps                                     # exibe os processos do terminal atual
-ps aux                                 # exibe todos os processos do sistema com detalhes
-ps -ef                                 # exibe todos os processos em formato completo
-ps aux | grep "firefox"                # filtra os processos relacionados ao `firefox`
-ps -u usuario                          # exibe os processos de um usuário específico
+# exibe os processos do terminal atual
+ps
+```
+
+```bash
+# exibe todos os processos do sistema com detalhes
+ps aux
+```
+
+```bash
+# exibe todos os processos em formato completo
+ps -ef
+```
+
+```bash
+# filtra os processos relacionados ao `firefox`
+ps aux | grep "firefox"
+```
+
+```bash
+# exibe os processos de um usuário específico
+ps -u usuario
 ```

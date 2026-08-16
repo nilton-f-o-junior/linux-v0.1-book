@@ -15,5 +15,6 @@ clear
 **Exemplos**
 
 ```bash
-clear                                # limpa a tela do terminal
+# limpa a tela do terminal
+clear
 ```

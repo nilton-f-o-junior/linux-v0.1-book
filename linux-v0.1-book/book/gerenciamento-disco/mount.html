@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -188,7 +189,7 @@
 <tr><td>diretório</td><td>Ponto de montagem, ou seja, o diretório onde o conteúdo será acessado</td></tr>
 <tr><td>-t tipo</td><td>Especifica o tipo de sistema de arquivos (ex.: <code>ext4</code>, <code>ntfs</code>, <code>vfat</code>)</td></tr>
 <tr><td>-o opções</td><td>Define opções de montagem, separadas por vírgula (ex.: <code>ro</code>, <code>rw</code>, <code>noexec</code>)</td></tr>
-<tr><td>-a, –all</td><td>Monta todos os sistemas de arquivos listados em <code>/etc/fstab</code></td></tr>
+<tr><td>-a, --all</td><td>Monta todos os sistemas de arquivos listados em <code>/etc/fstab</code></td></tr>
 <tr><td>(sem argumentos)</td><td>Exibe todos os sistemas de arquivos atualmente montados</td></tr>
 </tbody>
 </table>
@@ -197,11 +198,20 @@
 <p>Sem argumentos, <code>mount</code> apenas lista o que já está montado no sistema. Para desmontar um sistema de arquivos, use o comando <code>umount</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">mount                                  # lista todos os sistemas de arquivos montados
-sudo mount /dev/sdb1 /mnt/usb          # monta o dispositivo `/dev/sdb1` no diretório `/mnt/usb`
-sudo mount -t ntfs /dev/sdb1 /mnt/usb  # monta especificando o tipo de sistema de arquivos
-sudo mount -o ro /dev/sdb1 /mnt/usb    # monta o dispositivo em modo somente leitura
-sudo mount -a                          # monta todos os sistemas de arquivos listados em `/etc/fstab`
+<pre><code class="language-bash"># lista todos os sistemas de arquivos montados
+mount
+</code></pre>
+<pre><code class="language-bash"># monta o dispositivo `/dev/sdb1` no diretório `/mnt/usb`
+sudo mount /dev/sdb1 /mnt/usb
+</code></pre>
+<pre><code class="language-bash"># monta especificando o tipo de sistema de arquivos
+sudo mount -t ntfs /dev/sdb1 /mnt/usb
+</code></pre>
+<pre><code class="language-bash"># monta o dispositivo em modo somente leitura
+sudo mount -o ro /dev/sdb1 /mnt/usb
+</code></pre>
+<pre><code class="language-bash"># monta todos os sistemas de arquivos listados em `/etc/fstab`
+sudo mount -a
 </code></pre>
 
                     </main>

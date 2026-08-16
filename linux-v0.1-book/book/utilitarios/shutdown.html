@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,7 +186,7 @@
 </thead>
 <tbody>
 <tr><td>tempo</td><td>Momento em que a ação ocorrerá: <code>now</code>, número de minutos, ou horário no formato <code>hh:mm</code></td></tr>
-<tr><td>“mensagem”</td><td>Texto de aviso exibido aos usuários conectados</td></tr>
+<tr><td>"mensagem"</td><td>Texto de aviso exibido aos usuários conectados</td></tr>
 <tr><td>-h</td><td>Desliga o sistema</td></tr>
 <tr><td>-r</td><td>Reinicia o sistema, em vez de desligá-lo</td></tr>
 <tr><td>-c</td><td>Cancela um desligamento agendado</td></tr>
@@ -198,11 +199,20 @@
 Executar <code>shutdown</code> normalmente exige privilégios de superusuário (<code>sudo</code>).</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">sudo shutdown -h now                       # desliga o sistema imediatamente
-sudo shutdown -r now                       # reinicia o sistema imediatamente
-sudo shutdown -h +10 "Manutenção em 10min" # agenda o desligamento em 10 minutos, com aviso
-sudo shutdown -r 23:00                     # agenda a reinicialização para as 23h
-sudo shutdown -c                           # cancela um desligamento agendado
+<pre><code class="language-bash"># desliga o sistema imediatamente
+sudo shutdown -h now
+</code></pre>
+<pre><code class="language-bash"># reinicia o sistema imediatamente
+sudo shutdown -r now
+</code></pre>
+<pre><code class="language-bash"># agenda o desligamento em 10 minutos, com aviso
+sudo shutdown -h +10 "Manutenção em 10min"
+</code></pre>
+<pre><code class="language-bash"># agenda a reinicialização para as 23h
+sudo shutdown -r 23:00
+</code></pre>
+<pre><code class="language-bash"># cancela um desligamento agendado
+sudo shutdown -c
 </code></pre>
 
                     </main>

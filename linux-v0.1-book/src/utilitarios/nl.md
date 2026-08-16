@@ -22,10 +22,31 @@ nl [opções] [arquivo]
 **Exemplos**
 
 ```bash
-nl arquivo.txt                     # numera as linhas com conteúdo de `arquivo.txt`
-nl -ba arquivo.txt                  # numera todas as linhas, inclusive as em branco
-nl -nln arquivo.txt                 # exibe a numeração alinhada à esquerda
-nl -w 5 arquivo.txt                  # reserva 5 colunas para o número da linha
-nl -s ") " arquivo.txt               # separa o número do conteúdo com ") "
-cat arquivo.txt | nl                 # numera a saída do comando `cat`
+# numera as linhas com conteúdo de `arquivo.txt`
+nl arquivo.txt
+```
+
+```bash
+# numera todas as linhas, inclusive as em branco
+nl -ba arquivo.txt
+```
+
+```bash
+# exibe a numeração alinhada à esquerda
+nl -nln arquivo.txt
+```
+
+```bash
+# reserva 5 colunas para o número da linha
+nl -w 5 arquivo.txt
+```
+
+```bash
+# separa o número do conteúdo com ") "
+nl -s ") " arquivo.txt
+```
+
+```bash
+# numera a saída do comando `cat`
+cat arquivo.txt | nl
 ```

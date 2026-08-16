@@ -18,9 +18,26 @@ man [opções] comando
 **Exemplos**
 
 ```bash
-man ls                                # exibe o manual do comando `ls`
-man 5 passwd                          # exibe o manual da seção 5 (arquivos) para `passwd`
-man -k rede                           # busca comandos relacionados à palavra `rede`
-man -f cat                            # exibe uma breve descrição do comando `cat`
-man man                               # exibe o manual do próprio comando `man`
+# exibe o manual do comando `ls`
+man ls
+```
+
+```bash
+# exibe o manual da seção 5 (arquivos) para `passwd`
+man 5 passwd
+```
+
+```bash
+# busca comandos relacionados à palavra `rede`
+man -k rede
+```
+
+```bash
+# exibe uma breve descrição do comando `cat`
+man -f cat
+```
+
+```bash
+# exibe o manual do próprio comando `man`
+man man
 ```

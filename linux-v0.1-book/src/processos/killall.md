@@ -19,9 +19,26 @@ killall [opções] nome_do_processo
 **Exemplos**
 
 ```bash
-killall firefox                      # envia o sinal padrão (SIGTERM) para todas as instâncias do `firefox`
-killall -9 firefox                    # força o encerramento imediato de todas as instâncias do `firefox`
-killall -i chrome                     # pede confirmação antes de encerrar cada processo do `chrome`
-killall -u usuario                    # encerra todos os processos pertencentes a um usuário específico
-killall -v firefox                    # encerra os processos e exibe uma mensagem de confirmação
+# envia o sinal padrão (SIGTERM) para todas as instâncias do `firefox`
+killall firefox
+```
+
+```bash
+# força o encerramento imediato de todas as instâncias do `firefox`
+killall -9 firefox
+```
+
+```bash
+# pede confirmação antes de encerrar cada processo do `chrome`
+killall -i chrome
+```
+
+```bash
+# encerra todos os processos pertencentes a um usuário específico
+killall -u usuario
+```
+
+```bash
+# encerra os processos e exibe uma mensagem de confirmação
+killall -v firefox
 ```

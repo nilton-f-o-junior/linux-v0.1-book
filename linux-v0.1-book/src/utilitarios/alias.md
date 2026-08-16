@@ -18,9 +18,26 @@ alias [nome[=valor] ...]
 **Exemplos**
 
 ```bash
-alias                                # lista todos os aliases definidos
-alias ll='ls -la'                    # cria o atalho `ll` para `ls -la`
-alias rm='rm -i'                     # cria o atalho `rm` para pedir confirmação antes de remover
-alias atualizar='sudo apt update && sudo apt upgrade'   # cria um atalho para um comando composto
-unalias ll                           # remove o alias `ll`
+# lista todos os aliases definidos
+alias
+```
+
+```bash
+# cria o atalho `ll` para `ls -la`
+alias ll='ls -la'
+```
+
+```bash
+# cria o atalho `rm` para pedir confirmação antes de remover
+alias rm='rm -i'
+```
+
+```bash
+# cria um atalho para um comando composto
+alias atualizar='sudo apt update && sudo apt upgrade'
+```
+
+```bash
+# remove o alias `ll`
+unalias ll
 ```

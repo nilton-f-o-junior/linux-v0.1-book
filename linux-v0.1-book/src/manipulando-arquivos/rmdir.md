@@ -3,7 +3,7 @@
 Remove diretórios vazios.
 
 ```bash
-rmdir [opções] diretório [diretório1]
+rmdir [opções] [diretório] [diretório1]
 ```
 
 | Argumento / Opção | Descrição |
@@ -18,9 +18,26 @@ rmdir [opções] diretório [diretório1]
 **Exemplos**
 
 ```bash
-rmdir pasta                         # remove o diretório `pasta`, se estiver vazio
-rmdir pasta1 pasta2                 # remove dois diretórios vazios em sequência
-rmdir -p pasta/subpasta             # remove `subpasta` e depois `pasta`, se ambos ficarem vazios
-rmdir -v pasta                      # remove o diretório e exibe uma mensagem confirmando a ação
-rmdir pasta_com_arquivos            # gera erro, pois o diretório não está vazio
+# remove o diretório `pasta`, se estiver vazio
+rmdir pasta
+```
+
+```bash
+# remove dois diretórios vazios em sequência
+rmdir pasta1 pasta2
+```
+
+```bash
+# remove `subpasta` e depois `pasta`, se ambos ficarem vazios
+rmdir -p pasta/subpasta
+```
+
+```bash
+# remove o diretório e exibe uma mensagem confirmando a ação
+rmdir -v pasta
+```
+
+```bash
+# gera erro, pois o diretório não está vazio
+rmdir pasta_com_arquivos
 ```

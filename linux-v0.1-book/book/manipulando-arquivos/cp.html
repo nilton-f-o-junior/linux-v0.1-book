@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -186,30 +187,49 @@
 <tbody>
 <tr><td>origem</td><td>Arquivo ou diretório a ser copiado; aceita múltiplos arquivos e coringas</td></tr>
 <tr><td>destino</td><td>Caminho ou nome de destino; se for um diretório, os arquivos são copiados para dentro dele</td></tr>
-<tr><td>-i, –interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
-<tr><td>-f, –force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
+<tr><td>-i, --interactive</td><td>Pergunta antes de substituir um arquivo existente</td></tr>
+<tr><td>-f, --force</td><td>Substitui arquivos existentes sem perguntar</td></tr>
 <tr><td>-r</td><td>Copia arquivos de diretórios e subdiretórios; prefira <code>-R</code></td></tr>
-<tr><td>-R, –recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
-<tr><td>-s, –symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
-<tr><td>-l, –link</td><td>Cria hard link no destino em vez de copiar</td></tr>
-<tr><td>-p, –preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
-<tr><td>-u, –update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
+<tr><td>-R, --recursive</td><td>Copia arquivos e subdiretórios, incluindo arquivos especiais FIFO e dispositivos</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe os arquivos enquanto são copiados</td></tr>
+<tr><td>-s, --symbolic-link</td><td>Cria link simbólico no destino em vez de copiar</td></tr>
+<tr><td>-l, --link</td><td>Cria hard link no destino em vez de copiar</td></tr>
+<tr><td>-p, --preserve</td><td>Preserva atributos do arquivo (permissões, datas, etc.)</td></tr>
+<tr><td>-u, --update</td><td>Copia somente se a origem é mais recente que o destino ou se o destino não existe</td></tr>
 <tr><td>-x</td><td>Não copia arquivos localizados em um sistema de arquivos diferente do de origem</td></tr>
 </tbody>
 </table>
 </div>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">cp teste.txt teste1.txt             # copia `teste.txt` para `teste1.txt` no mesmo diretório
-cp teste.txt /tmp                   # copia `teste.txt` para dentro do diretório `/tmp`
-cp * /tmp                           # copia todos os arquivos do diretório atual para `/tmp`
-cp /bin/* .                         # copia todos os arquivos de `/bin` para o diretório atual
-cp -R /bin /tmp                     # copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
-cp -R /bin/* /tmp                   # copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
-cp -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
-cp -u teste.txt /tmp                # copia somente se `teste.txt` for mais recente que o destino
-cp -v * /tmp                        # copia todos os arquivos exibindo o progresso
-cp -p teste.txt /tmp                # copia preservando permissões e datas do arquivo
+<pre><code class="language-bash"># copia `teste.txt` para `teste1.txt` no mesmo diretório
+cp teste.txt teste1.txt
+</code></pre>
+<pre><code class="language-bash"># copia `teste.txt` para dentro do diretório `/tmp`
+cp teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># copia todos os arquivos do diretório atual para `/tmp`
+cp * /tmp
+</code></pre>
+<pre><code class="language-bash"># copia todos os arquivos de `/bin` para o diretório atual
+cp /bin/* .
+</code></pre>
+<pre><code class="language-bash"># copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
+cp -R /bin /tmp
+</code></pre>
+<pre><code class="language-bash"># copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
+cp -R /bin/* /tmp
+</code></pre>
+<pre><code class="language-bash"># pergunta antes de substituir caso já exista em `/tmp`
+cp -i teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># copia somente se `teste.txt` for mais recente que o destino
+cp -u teste.txt /tmp
+</code></pre>
+<pre><code class="language-bash"># copia todos os arquivos exibindo o progresso
+cp -v * /tmp
+</code></pre>
+<pre><code class="language-bash"># copia preservando permissões e datas do arquivo
+cp -p teste.txt /tmp
 </code></pre>
 
                     </main>

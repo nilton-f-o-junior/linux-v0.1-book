@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,11 +186,11 @@
 </thead>
 <tbody>
 <tr><td>caminho/arquivo</td><td>Localização e nome do arquivo ou diretório a ser apagado</td></tr>
-<tr><td>-i, –interactive</td><td>Pergunta antes de remover cada arquivo</td></tr>
-<tr><td>-v, –verbose</td><td>Exibe os arquivos enquanto são removidos</td></tr>
-<tr><td>-r, –recursive</td><td>Remove arquivos em subdiretórios e os próprios subdiretórios</td></tr>
-<tr><td>-f, –force</td><td>Remove sem perguntar, ignorando arquivos inexistentes</td></tr>
-<tr><td>–</td><td>Indica o fim das opções da linha de comando; útil para apagar arquivos cujo nome comece com traço (<code>-</code>)</td></tr>
+<tr><td>-i, --interactive</td><td>Pergunta antes de remover cada arquivo</td></tr>
+<tr><td>-v, --verbose</td><td>Exibe os arquivos enquanto são removidos</td></tr>
+<tr><td>-r, --recursive</td><td>Remove arquivos em subdiretórios e os próprios subdiretórios</td></tr>
+<tr><td>-f, --force</td><td>Remove sem perguntar, ignorando arquivos inexistentes</td></tr>
+<tr><td>--</td><td>Indica o fim das opções da linha de comando; útil para apagar arquivos cujo nome comece com traço (<code>-</code>)</td></tr>
 </tbody>
 </table>
 </div>
@@ -200,14 +201,29 @@
 <p><strong>Atenção:</strong> arquivos removidos com <code>rm</code> não vão para a lixeira e não podem ser recuperados.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">rm teste.txt                        # apaga `teste.txt` no diretório atual
-rm *.txt                            # apaga todos os arquivos `.txt` do diretório atual
-rm *.txt teste.novo                 # apaga todos os `.txt` e também `teste.novo`
-rm -rf /tmp/teste/*                 # apaga todo o conteúdo de `/tmp/teste`, mas mantém o diretório
-rm -rf /tmp/teste                   # apaga o diretório `/tmp/teste` e todo o seu conteúdo
-rm -i *.txt                         # pergunta antes de apagar cada arquivo `.txt`
-rm -v *.txt                         # exibe cada arquivo conforme é removido
-rm -f -- --arquivo--                # remove o arquivo de nome `--arquivo--`
+<pre><code class="language-bash"># apaga `teste.txt` no diretório atual
+rm teste.txt
+</code></pre>
+<pre><code class="language-bash"># apaga todos os arquivos `.txt` do diretório atual
+rm *.txt
+</code></pre>
+<pre><code class="language-bash"># apaga todos os `.txt` e também `teste.novo`
+rm *.txt teste.novo
+</code></pre>
+<pre><code class="language-bash"># apaga todo o conteúdo de `/tmp/teste`, mas mantém o diretório
+rm -rf /tmp/teste/*
+</code></pre>
+<pre><code class="language-bash"># apaga o diretório `/tmp/teste` e todo o seu conteúdo
+rm -rf /tmp/teste
+</code></pre>
+<pre><code class="language-bash"># pergunta antes de apagar cada arquivo `.txt`
+rm -i *.txt
+</code></pre>
+<pre><code class="language-bash"># exibe cada arquivo conforme é removido
+rm -v *.txt
+</code></pre>
+<pre><code class="language-bash"># remove o arquivo de nome `--arquivo--`
+rm -f -- --arquivo--
 </code></pre>
 
                     </main>

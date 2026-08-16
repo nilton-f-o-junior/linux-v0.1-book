@@ -21,10 +21,31 @@ free [opções]
 **Exemplos**
 
 ```bash
-free                         # exibe o uso de memória em blocos de 1K
-free -h                      # exibe os valores em formato legível
-free -m                      # exibe os valores em megabytes
-free -h -t                   # exibe os valores legíveis com o total geral
-free -h -s 5                 # atualiza a exibição a cada 5 segundos
-free -h -s 2 -c 3             # atualiza a cada 2 segundos, repetindo 3 vezes
+# exibe o uso de memória em blocos de 1K
+free
+```
+
+```bash
+# exibe os valores em formato legível
+free -h
+```
+
+```bash
+# exibe os valores em megabytes
+free -m
+```
+
+```bash
+# exibe os valores legíveis com o total geral
+free -h -t
+```
+
+```bash
+# atualiza a exibição a cada 5 segundos
+free -h -s 5
+```
+
+```bash
+# atualiza a cada 2 segundos, repetindo 3 vezes
+free -h -s 2 -c 3
 ```

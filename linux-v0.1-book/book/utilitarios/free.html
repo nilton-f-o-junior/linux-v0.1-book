@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -198,12 +199,23 @@
 Para acompanhar o uso de memória por processo individual, utilize <code>top</code> ou <code>htop</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">free                         # exibe o uso de memória em blocos de 1K
-free -h                      # exibe os valores em formato legível
-free -m                      # exibe os valores em megabytes
-free -h -t                   # exibe os valores legíveis com o total geral
-free -h -s 5                 # atualiza a exibição a cada 5 segundos
-free -h -s 2 -c 3             # atualiza a cada 2 segundos, repetindo 3 vezes
+<pre><code class="language-bash"># exibe o uso de memória em blocos de 1K
+free
+</code></pre>
+<pre><code class="language-bash"># exibe os valores em formato legível
+free -h
+</code></pre>
+<pre><code class="language-bash"># exibe os valores em megabytes
+free -m
+</code></pre>
+<pre><code class="language-bash"># exibe os valores legíveis com o total geral
+free -h -t
+</code></pre>
+<pre><code class="language-bash"># atualiza a exibição a cada 5 segundos
+free -h -s 5
+</code></pre>
+<pre><code class="language-bash"># atualiza a cada 2 segundos, repetindo 3 vezes
+free -h -s 2 -c 3
 </code></pre>
 
                     </main>

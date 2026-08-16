@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -196,12 +197,23 @@
 <p><code>ip</code> substitui o antigo <code>ifconfig</code> (e outras ferramentas do pacote <code>net-tools</code>) nas distribuições Linux atuais, oferecendo mais recursos e sendo o padrão recomendado hoje em dia.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">ip addr show                               # exibe os endereços IP de todas as interfaces
-ip a                                       # forma abreviada do comando acima
-ip link show                               # exibe o estado de todas as interfaces de rede
-sudo ip link set eth0 up                   # ativa a interface `eth0`
-sudo ip addr add 192.168.1.10/24 dev eth0  # atribui um endereço IP à interface `eth0`
-ip route show                              # exibe a tabela de rotas do sistema
+<pre><code class="language-bash"># exibe os endereços IP de todas as interfaces
+ip addr show
+</code></pre>
+<pre><code class="language-bash"># forma abreviada do comando acima
+ip a
+</code></pre>
+<pre><code class="language-bash"># exibe o estado de todas as interfaces de rede
+ip link show
+</code></pre>
+<pre><code class="language-bash"># ativa a interface `eth0`
+sudo ip link set eth0 up
+</code></pre>
+<pre><code class="language-bash"># atribui um endereço IP à interface `eth0`
+sudo ip addr add 192.168.1.10/24 dev eth0
+</code></pre>
+<pre><code class="language-bash"># exibe a tabela de rotas do sistema
+ip route show
 </code></pre>
 
                     </main>

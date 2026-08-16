@@ -24,14 +24,51 @@ cp [opções] [origem] [destino]
 **Exemplos**
 
 ```bash
-cp teste.txt teste1.txt             # copia `teste.txt` para `teste1.txt` no mesmo diretório
-cp teste.txt /tmp                   # copia `teste.txt` para dentro do diretório `/tmp`
-cp * /tmp                           # copia todos os arquivos do diretório atual para `/tmp`
-cp /bin/* .                         # copia todos os arquivos de `/bin` para o diretório atual
-cp -R /bin /tmp                     # copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
-cp -R /bin/* /tmp                   # copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
-cp -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
-cp -u teste.txt /tmp                # copia somente se `teste.txt` for mais recente que o destino
-cp -v * /tmp                        # copia todos os arquivos exibindo o progresso
-cp -p teste.txt /tmp                # copia preservando permissões e datas do arquivo
+# copia `teste.txt` para `teste1.txt` no mesmo diretório
+cp teste.txt teste1.txt
+```
+
+```bash
+# copia `teste.txt` para dentro do diretório `/tmp`
+cp teste.txt /tmp
+```
+
+```bash
+# copia todos os arquivos do diretório atual para `/tmp`
+cp * /tmp
+```
+
+```bash
+# copia todos os arquivos de `/bin` para o diretório atual
+cp /bin/* .
+```
+
+```bash
+# copia o diretório `/bin` e todo o seu conteúdo para `/tmp`
+cp -R /bin /tmp
+```
+
+```bash
+# copia o conteúdo de `/bin` (sem o diretório em si) para `/tmp`
+cp -R /bin/* /tmp
+```
+
+```bash
+# pergunta antes de substituir caso já exista em `/tmp`
+cp -i teste.txt /tmp
+```
+
+```bash
+# copia somente se `teste.txt` for mais recente que o destino
+cp -u teste.txt /tmp
+```
+
+```bash
+# copia todos os arquivos exibindo o progresso
+cp -v * /tmp
+```
+
+```bash
+# copia preservando permissões e datas do arquivo
+cp -p teste.txt /tmp
 ```

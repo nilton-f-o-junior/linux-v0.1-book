@@ -23,7 +23,16 @@ fdisk [opções] dispositivo
 **Exemplos**
 
 ```bash
-sudo fdisk -l                           # lista as partições de todos os discos do sistema
-sudo fdisk -l /dev/sda                  # lista as partições de um disco específico
-sudo fdisk /dev/sda                     # abre o modo interativo para manipular as partições do disco
+# lista as partições de todos os discos do sistema
+sudo fdisk -l
+```
+
+```bash
+# lista as partições de um disco específico
+sudo fdisk -l /dev/sda
+```
+
+```bash
+# abre o modo interativo para manipular as partições do disco
+sudo fdisk /dev/sda
 ```

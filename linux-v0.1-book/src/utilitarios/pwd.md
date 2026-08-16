@@ -17,8 +17,21 @@ pwd [opções]
 **Exemplos**
 
 ```bash
-pwd                    # exibe o caminho do diretório atual
-pwd -P                 # exibe o caminho físico, resolvendo links simbólicos
-cd /var/www && pwd     # navega até `/var/www` e confirma o diretório atual
-echo $PWD              # exibe o diretório atual usando a variável de ambiente
+# exibe o caminho do diretório atual
+pwd
+```
+
+```bash
+# exibe o caminho físico, resolvendo links simbólicos
+pwd -P
+```
+
+```bash
+# navega até `/var/www` e confirma o diretório atual
+cd /var/www && pwd
+```
+
+```bash
+# exibe o diretório atual usando a variável de ambiente
+echo $PWD
 ```

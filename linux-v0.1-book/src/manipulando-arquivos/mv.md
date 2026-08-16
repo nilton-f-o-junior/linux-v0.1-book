@@ -22,11 +22,36 @@ mv [opções] [origem] [destino]
 **Exemplos**
 
 ```bash
-mv teste.txt teste1.txt             # renomeia `teste.txt` para `teste1.txt`
-mv teste.txt /tmp                   # move `teste.txt` para `/tmp` (origem é apagada)
-mv teste.txt teste.new              # sobrescreve `teste.new` com `teste.txt` e apaga a origem
-mv -i teste.txt /tmp                # pergunta antes de substituir caso já exista em `/tmp`
-mv -f teste.txt /tmp                # move sem perguntar, substituindo o destino se existir
-mv -v *.txt /tmp                    # move todos os arquivos `.txt` exibindo o progresso
-mv -u teste.txt /tmp                # move somente se `teste.txt` for mais recente que o destino
+# renomeia `teste.txt` para `teste1.txt`
+mv teste.txt teste1.txt
+```
+
+```bash
+# move `teste.txt` para `/tmp` (origem é apagada)
+mv teste.txt /tmp
+```
+
+```bash
+# sobrescreve `teste.new` com `teste.txt` e apaga a origem
+mv teste.txt teste.new
+```
+
+```bash
+# pergunta antes de substituir caso já exista em `/tmp`
+mv -i teste.txt /tmp
+```
+
+```bash
+# move sem perguntar, substituindo o destino se existir
+mv -f teste.txt /tmp
+```
+
+```bash
+# move todos os arquivos `.txt` exibindo o progresso
+mv -v *.txt /tmp
+```
+
+```bash
+# move somente se `teste.txt` for mais recente que o destino
+mv -u teste.txt /tmp
 ```

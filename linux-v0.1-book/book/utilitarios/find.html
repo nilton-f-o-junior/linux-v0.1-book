@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -185,8 +186,8 @@
 </thead>
 <tbody>
 <tr><td>diretório</td><td>Local onde a busca será iniciada (padrão: diretório atual)</td></tr>
-<tr><td>-name “padrão”</td><td>Busca por nome de arquivo, diferenciando maiúsculas de minúsculas</td></tr>
-<tr><td>-iname “padrão”</td><td>Busca por nome de arquivo, ignorando maiúsculas e minúsculas</td></tr>
+<tr><td>-name "padrão"</td><td>Busca por nome de arquivo, diferenciando maiúsculas de minúsculas</td></tr>
+<tr><td>-iname "padrão"</td><td>Busca por nome de arquivo, ignorando maiúsculas e minúsculas</td></tr>
 <tr><td>-type f/d</td><td>Filtra por tipo: <code>f</code> para arquivo, <code>d</code> para diretório</td></tr>
 <tr><td>-size N</td><td>Filtra por tamanho (ex.: <code>+100M</code>, <code>-1G</code>)</td></tr>
 <tr><td>-mtime N</td><td>Filtra por data de modificação, em dias (ex.: <code>-7</code> para os últimos 7 dias)</td></tr>
@@ -199,12 +200,23 @@
 Para buscar apenas pelo conteúdo de arquivos de texto (em vez do nome), utilize <code>grep -r</code>.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">find . -name "*.txt"                    # busca arquivos .txt no diretório atual e subdiretórios
-find /home -iname "relatorio*"          # busca ignorando maiúsculas/minúsculas em /home
-find /var/log -type f -size +100M       # busca arquivos maiores que 100 MB
-find . -type d -name "backup"           # busca diretórios chamados `backup`
-find /tmp -mtime -7                     # busca arquivos modificados nos últimos 7 dias
-find . -name "*.log" -exec rm {} \;     # busca e remove arquivos .log encontrados
+<pre><code class="language-bash"># busca arquivos .txt no diretório atual e subdiretórios
+find . -name "*.txt"
+</code></pre>
+<pre><code class="language-bash"># busca ignorando maiúsculas/minúsculas em /home
+find /home -iname "relatorio*"
+</code></pre>
+<pre><code class="language-bash"># busca arquivos maiores que 100 MB
+find /var/log -type f -size +100M
+</code></pre>
+<pre><code class="language-bash"># busca diretórios chamados `backup`
+find . -type d -name "backup"
+</code></pre>
+<pre><code class="language-bash"># busca arquivos modificados nos últimos 7 dias
+find /tmp -mtime -7
+</code></pre>
+<pre><code class="language-bash"># busca e remove arquivos .log encontrados
+find . -name "*.log" -exec rm {} \;
 </code></pre>
 
                     </main>

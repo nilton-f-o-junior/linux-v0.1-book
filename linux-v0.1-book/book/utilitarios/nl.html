@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -190,7 +191,7 @@
 <tr><td>-n ln</td><td>Alinha a numeração à esquerda</td></tr>
 <tr><td>-n rn</td><td>Alinha a numeração à direita (padrão)</td></tr>
 <tr><td>-w N</td><td>Define a largura, em colunas, reservada para o número da linha</td></tr>
-<tr><td>-s “separador”</td><td>Define o texto usado para separar o número do conteúdo da linha</td></tr>
+<tr><td>-s "separador"</td><td>Define o texto usado para separar o número do conteúdo da linha</td></tr>
 </tbody>
 </table>
 </div>
@@ -199,12 +200,23 @@
 Diferente de <code>cat -n</code>, que numera todas as linhas indiscriminadamente, <code>nl</code> oferece mais controle sobre quais linhas recebem numeração e como ela é formatada.</p>
 </blockquote>
 <p><strong>Exemplos</strong></p>
-<pre><code class="language-bash">nl arquivo.txt                     # numera as linhas com conteúdo de `arquivo.txt`
-nl -ba arquivo.txt                  # numera todas as linhas, inclusive as em branco
-nl -nln arquivo.txt                 # exibe a numeração alinhada à esquerda
-nl -w 5 arquivo.txt                  # reserva 5 colunas para o número da linha
-nl -s ") " arquivo.txt               # separa o número do conteúdo com ") "
-cat arquivo.txt | nl                 # numera a saída do comando `cat`
+<pre><code class="language-bash"># numera as linhas com conteúdo de `arquivo.txt`
+nl arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># numera todas as linhas, inclusive as em branco
+nl -ba arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># exibe a numeração alinhada à esquerda
+nl -nln arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># reserva 5 colunas para o número da linha
+nl -w 5 arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># separa o número do conteúdo com ") "
+nl -s ") " arquivo.txt
+</code></pre>
+<pre><code class="language-bash"># numera a saída do comando `cat`
+cat arquivo.txt | nl
 </code></pre>
 
                     </main>

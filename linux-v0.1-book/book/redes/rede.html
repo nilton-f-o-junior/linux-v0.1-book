@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom-f6fb7a90.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9f014f95.js";
+            window.path_to_searchindex_js = "../searchindex-bf540dc1.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d18aaafb.js"></script>
@@ -196,7 +197,7 @@
 <p>Um endereço IP é formado por quatro grupos de números (octetos), no formato x.x.x.x, onde cada x pode ir de 0 a 255.</p>
 <p>Na prática, ao atribuir um endereço a um dispositivo dentro de uma rede, evita-se usar os valores 0 e 255 nos octetos finais, pois eles costumam ter significados especiais — como veremos mais adiante, na seção sobre máscara de rede.</p>
 <h4 id="classes-de-rede-ip"><a class="header" href="#classes-de-rede-ip">Classes de Rede IP</a></h4>
-<p>A “classe” define o tamanho de uma rede, com base no valor do primeiro octeto do endereço IP:</p>
+<p>A "classe" define o tamanho de uma rede, com base no valor do primeiro octeto do endereço IP:</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -246,7 +247,7 @@ Roteador (192.168.110.1)
 <li>Todos os dispositivos compartilham a mesma <strong>porção de rede</strong>: <code>192.168.110.</code></li>
 <li>Cada dispositivo tem sua própria <strong>porção de host</strong>, que o diferencia dos demais: <code>.1</code>, <code>.10</code>, <code>.11</code>, <code>.12</code>, <code>.13</code>;</li>
 <li>O <strong>endereço da rede</strong> é <code>192.168.110.0</code>. Representa a rede em si, e nenhum dispositivo pode usá-lo;</li>
-<li>O <strong>endereço de broadcast</strong> é <code>192.168.110.255</code>. Se o roteador precisar enviar um aviso para todos os dispositivos ao mesmo tempo (por exemplo, “a rede vai reiniciar”), ele usa esse endereço, e todos recebem a mensagem simultaneamente.</li>
+<li>O <strong>endereço de broadcast</strong> é <code>192.168.110.255</code>. Se o roteador precisar enviar um aviso para todos os dispositivos ao mesmo tempo (por exemplo, "a rede vai reiniciar"), ele usa esse endereço, e todos recebem a mensagem simultaneamente.</li>
 </ul>
 
                     </main>

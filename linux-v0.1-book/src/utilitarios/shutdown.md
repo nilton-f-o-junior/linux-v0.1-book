@@ -21,9 +21,26 @@ shutdown [opções] [tempo] ["mensagem"]
 **Exemplos**
 
 ```bash
-sudo shutdown -h now                       # desliga o sistema imediatamente
-sudo shutdown -r now                       # reinicia o sistema imediatamente
-sudo shutdown -h +10 "Manutenção em 10min" # agenda o desligamento em 10 minutos, com aviso
-sudo shutdown -r 23:00                     # agenda a reinicialização para as 23h
-sudo shutdown -c                           # cancela um desligamento agendado
+# desliga o sistema imediatamente
+sudo shutdown -h now
+```
+
+```bash
+# reinicia o sistema imediatamente
+sudo shutdown -r now
+```
+
+```bash
+# agenda o desligamento em 10 minutos, com aviso
+sudo shutdown -h +10 "Manutenção em 10min"
+```
+
+```bash
+# agenda a reinicialização para as 23h
+sudo shutdown -r 23:00
+```
+
+```bash
+# cancela um desligamento agendado
+sudo shutdown -c
 ```

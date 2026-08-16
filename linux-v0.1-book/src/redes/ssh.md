@@ -20,8 +20,21 @@ ssh [opções] usuário@host
 **Exemplos**
 
 ```bash
-ssh usuario@192.168.1.10              # conecta ao host `192.168.1.10` como `usuario`
-ssh usuario@servidor.com -p 2222      # conecta usando uma porta específica
-ssh -i chave_privada.pem usuario@servidor.com  # conecta usando um arquivo de chave privada
-ssh -X usuario@servidor.com           # conecta habilitando o encaminhamento de aplicações gráficas
+# conecta ao host `192.168.1.10` como `usuario`
+ssh usuario@192.168.1.10
+```
+
+```bash
+# conecta usando uma porta específica
+ssh usuario@servidor.com -p 2222
+```
+
+```bash
+# conecta usando um arquivo de chave privada
+ssh -i chave_privada.pem usuario@servidor.com
+```
+
+```bash
+# conecta habilitando o encaminhamento de aplicações gráficas
+ssh -X usuario@servidor.com
 ```

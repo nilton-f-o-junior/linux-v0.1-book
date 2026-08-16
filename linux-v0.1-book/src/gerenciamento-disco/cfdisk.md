@@ -20,6 +20,11 @@ cfdisk [opções] [dispositivo]
 **Exemplos**
 
 ```bash
-sudo cfdisk /dev/sda                  # abre a interface interativa para manipular as partições do disco
-sudo cfdisk -z /dev/sdb                # abre a interface iniciando com uma tabela de partições em branco
+# abre a interface interativa para manipular as partições do disco
+sudo cfdisk /dev/sda
+```
+
+```bash
+# abre a interface iniciando com uma tabela de partições em branco
+sudo cfdisk -z /dev/sdb
 ```

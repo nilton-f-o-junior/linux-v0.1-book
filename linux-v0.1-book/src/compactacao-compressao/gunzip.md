@@ -19,9 +19,26 @@ gunzip [opções] arquivo [arquivo1]
 **Exemplos**
 
 ```bash
-gunzip arquivo.txt.gz                 # descompacta `arquivo.txt.gz`, gerando `arquivo.txt`
-gunzip -k arquivo.txt.gz              # descompacta mantendo o arquivo `.gz` original
-gunzip -v arquivo.txt.gz              # descompacta exibindo informações do processo
-gunzip -l arquivo.txt.gz              # exibe informações do arquivo compactado, sem descompactá-lo
-gunzip -r pasta/                      # descompacta recursivamente todos os arquivos `.gz` de um diretório
+# descompacta `arquivo.txt.gz`, gerando `arquivo.txt`
+gunzip arquivo.txt.gz
+```
+
+```bash
+# descompacta mantendo o arquivo `.gz` original
+gunzip -k arquivo.txt.gz
+```
+
+```bash
+# descompacta exibindo informações do processo
+gunzip -v arquivo.txt.gz
+```
+
+```bash
+# exibe informações do arquivo compactado, sem descompactá-lo
+gunzip -l arquivo.txt.gz
+```
+
+```bash
+# descompacta recursivamente todos os arquivos `.gz` de um diretório
+gunzip -r pasta/
 ```
