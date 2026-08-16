@@ -22,6 +22,11 @@ gdisk [opções] dispositivo
 **Exemplos**
 
 ```bash
-sudo gdisk -l /dev/sda                 # lista as partições GPT de um disco específico
-sudo gdisk /dev/sda                    # abre o modo interativo para manipular as partições do disco
+# lista as partições GPT de um disco específico
+sudo gdisk -l /dev/sda
+```
+
+```bash
+# abre o modo interativo para manipular as partições do disco
+sudo gdisk /dev/sda
 ```

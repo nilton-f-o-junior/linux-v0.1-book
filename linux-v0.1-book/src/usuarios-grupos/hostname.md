@@ -18,8 +18,21 @@ hostname [opções] [novo_nome]
 **Exemplos**
 
 ```bash
-hostname                              # exibe o nome atual do host
-hostname -i                           # exibe o endereço IP associado ao host
-hostname -f                           # exibe o nome de domínio totalmente qualificado (FQDN)
-sudo hostname novo-nome               # altera o nome do host para `novo-nome` (temporariamente)
+# exibe o nome atual do host
+hostname
+```
+
+```bash
+# exibe o endereço IP associado ao host
+hostname -i
+```
+
+```bash
+# exibe o nome de domínio totalmente qualificado (FQDN)
+hostname -f
+```
+
+```bash
+# altera o nome do host para `novo-nome` (temporariamente)
+sudo hostname novo-nome
 ```

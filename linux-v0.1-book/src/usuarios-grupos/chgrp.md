@@ -19,8 +19,21 @@ chgrp [opções] grupo arquivo [arquivo1]
 **Exemplos**
 
 ```bash
-chgrp equipe arquivo.txt              # altera o grupo de `arquivo.txt` para `equipe`
-sudo chgrp -R equipe /var/www/site    # altera o grupo recursivamente para todos os arquivos de um diretório
-chgrp -v equipe arquivo.txt           # altera o grupo e exibe uma mensagem de confirmação
-chgrp --reference=modelo.txt copia.txt # aplica o mesmo grupo de `modelo.txt` a `copia.txt`
+# altera o grupo de `arquivo.txt` para `equipe`
+chgrp equipe arquivo.txt
+```
+
+```bash
+# altera o grupo recursivamente para todos os arquivos de um diretório
+sudo chgrp -R equipe /var/www/site
+```
+
+```bash
+# altera o grupo e exibe uma mensagem de confirmação
+chgrp -v equipe arquivo.txt
+```
+
+```bash
+# aplica o mesmo grupo de `modelo.txt` a `copia.txt`
+chgrp --reference=modelo.txt copia.txt
 ```

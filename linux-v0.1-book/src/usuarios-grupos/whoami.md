@@ -15,6 +15,11 @@ whoami
 **Exemplos**
 
 ```bash
-whoami                                # exibe o nome do usuário atual
-sudo whoami                           # confirma que os privilégios foram elevados, exibindo `root`
+# exibe o nome do usuário atual
+whoami
+```
+
+```bash
+# confirma que os privilégios foram elevados, exibindo `root`
+sudo whoami
 ```

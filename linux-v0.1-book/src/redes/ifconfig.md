@@ -19,9 +19,26 @@ ifconfig [interface] [opções]
 **Exemplos**
 
 ```bash
-ifconfig                              # exibe as informações de todas as interfaces de rede ativas
-ifconfig eth0                         # exibe as informações apenas da interface `eth0`
-sudo ifconfig eth0 up                 # ativa a interface `eth0`
-sudo ifconfig eth0 down               # desativa a interface `eth0`
-sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0  # define um endereço IP e máscara de rede
+# exibe as informações de todas as interfaces de rede ativas
+ifconfig
+```
+
+```bash
+# exibe as informações apenas da interface `eth0`
+ifconfig eth0
+```
+
+```bash
+# ativa a interface `eth0`
+sudo ifconfig eth0 up
+```
+
+```bash
+# desativa a interface `eth0`
+sudo ifconfig eth0 down
+```
+
+```bash
+# define um endereço IP e máscara de rede
+sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0
 ```

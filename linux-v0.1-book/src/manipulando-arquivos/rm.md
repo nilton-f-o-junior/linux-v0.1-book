@@ -22,12 +22,41 @@ rm [opções] [caminho/arquivo] [caminho1/arquivo1]
 **Exemplos**
 
 ```bash
-rm teste.txt                        # apaga `teste.txt` no diretório atual
-rm *.txt                            # apaga todos os arquivos `.txt` do diretório atual
-rm *.txt teste.novo                 # apaga todos os `.txt` e também `teste.novo`
-rm -rf /tmp/teste/*                 # apaga todo o conteúdo de `/tmp/teste`, mas mantém o diretório
-rm -rf /tmp/teste                   # apaga o diretório `/tmp/teste` e todo o seu conteúdo
-rm -i *.txt                         # pergunta antes de apagar cada arquivo `.txt`
-rm -v *.txt                         # exibe cada arquivo conforme é removido
-rm -f -- --arquivo--                # remove o arquivo de nome `--arquivo--`
+# apaga `teste.txt` no diretório atual
+rm teste.txt
+```
+
+```bash
+# apaga todos os arquivos `.txt` do diretório atual
+rm *.txt
+```
+
+```bash
+# apaga todos os `.txt` e também `teste.novo`
+rm *.txt teste.novo
+```
+
+```bash
+# apaga todo o conteúdo de `/tmp/teste`, mas mantém o diretório
+rm -rf /tmp/teste/*
+```
+
+```bash
+# apaga o diretório `/tmp/teste` e todo o seu conteúdo
+rm -rf /tmp/teste
+```
+
+```bash
+# pergunta antes de apagar cada arquivo `.txt`
+rm -i *.txt
+```
+
+```bash
+# exibe cada arquivo conforme é removido
+rm -v *.txt
+```
+
+```bash
+# remove o arquivo de nome `--arquivo--`
+rm -f -- --arquivo--
 ```

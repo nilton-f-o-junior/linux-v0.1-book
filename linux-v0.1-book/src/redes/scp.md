@@ -20,9 +20,26 @@ scp [opções] origem destino
 **Exemplos**
 
 ```bash
-scp arquivo.txt usuario@servidor.com:/home/usuario/       # copia um arquivo local para um servidor remoto
-scp usuario@servidor.com:/home/usuario/arquivo.txt .       # copia um arquivo remoto para o diretório atual
-scp -r pasta/ usuario@servidor.com:/home/usuario/          # copia um diretório inteiro para um servidor remoto
-scp -P 2222 arquivo.txt usuario@servidor.com:/home/usuario/  # copia usando uma porta específica
-scp -i chave_privada.pem arquivo.txt usuario@servidor.com:/home/usuario/  # copia usando uma chave privada
+# copia um arquivo local para um servidor remoto
+scp arquivo.txt usuario@servidor.com:/home/usuario/
+```
+
+```bash
+# copia um arquivo remoto para o diretório atual
+scp usuario@servidor.com:/home/usuario/arquivo.txt .
+```
+
+```bash
+# copia um diretório inteiro para um servidor remoto
+scp -r pasta/ usuario@servidor.com:/home/usuario/
+```
+
+```bash
+# copia usando uma porta específica
+scp -P 2222 arquivo.txt usuario@servidor.com:/home/usuario/
+```
+
+```bash
+# copia usando uma chave privada
+scp -i chave_privada.pem arquivo.txt usuario@servidor.com:/home/usuario/
 ```

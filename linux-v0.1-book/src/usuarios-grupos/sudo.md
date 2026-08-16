@@ -19,9 +19,26 @@ sudo [opções] comando
 **Exemplos**
 
 ```bash
-sudo apt update                       # executa o comando `apt update` com privilégios de root
-sudo -u usuario ls /home/usuario      # executa o comando como um usuário específico
-sudo -i                               # abre um shell interativo como root
-sudo -l                               # lista os comandos que o usuário atual pode executar com sudo
-sudo systemctl restart nginx          # reinicia um serviço do sistema com privilégios elevados
+# executa o comando `apt update` com privilégios de root
+sudo apt update
+```
+
+```bash
+# executa o comando como um usuário específico
+sudo -u usuario ls /home/usuario
+```
+
+```bash
+# abre um shell interativo como root
+sudo -i
+```
+
+```bash
+# lista os comandos que o usuário atual pode executar com sudo
+sudo -l
+```
+
+```bash
+# reinicia um serviço do sistema com privilégios elevados
+sudo systemctl restart nginx
 ```

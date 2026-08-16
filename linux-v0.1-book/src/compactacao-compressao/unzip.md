@@ -19,9 +19,26 @@ unzip [opções] arquivo.zip
 **Exemplos**
 
 ```bash
-unzip arquivo.zip                     # descompacta `arquivo.zip` no diretório atual
-unzip arquivo.zip -d pasta_destino    # descompacta o conteúdo em um diretório específico
-unzip -l arquivo.zip                  # lista o conteúdo do `.zip`, sem descompactar
-unzip -o arquivo.zip                  # descompacta sobrescrevendo arquivos existentes sem confirmação
-unzip -x "*.log" projeto.zip          # descompacta o arquivo, excluindo arquivos `.log`
+# descompacta `arquivo.zip` no diretório atual
+unzip arquivo.zip
+```
+
+```bash
+# descompacta o conteúdo em um diretório específico
+unzip arquivo.zip -d pasta_destino
+```
+
+```bash
+# lista o conteúdo do `.zip`, sem descompactar
+unzip -l arquivo.zip
+```
+
+```bash
+# descompacta sobrescrevendo arquivos existentes sem confirmação
+unzip -o arquivo.zip
+```
+
+```bash
+# descompacta o arquivo, excluindo arquivos `.log`
+unzip -x "*.log" projeto.zip
 ```

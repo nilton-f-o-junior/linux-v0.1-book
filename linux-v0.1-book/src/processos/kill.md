@@ -19,9 +19,26 @@ kill [opções] PID [PID1]
 **Exemplos**
 
 ```bash
-kill 1234                             # envia o sinal padrão (SIGTERM) para o processo de PID 1234
-kill -9 1234                          # força o encerramento imediato do processo 1234
-kill -l                               # lista todos os sinais disponíveis
-kill -1 1234                          # envia o sinal SIGHUP, recarregando a configuração do processo
-pkill firefox                         # encerra processos pelo nome, sem precisar informar o PID
+# envia o sinal padrão (SIGTERM) para o processo de PID 1234
+kill 1234
+```
+
+```bash
+# força o encerramento imediato do processo 1234
+kill -9 1234
+```
+
+```bash
+# lista todos os sinais disponíveis
+kill -l
+```
+
+```bash
+# envia o sinal SIGHUP, recarregando a configuração do processo
+kill -1 1234
+```
+
+```bash
+# encerra processos pelo nome, sem precisar informar o PID
+pkill firefox
 ```

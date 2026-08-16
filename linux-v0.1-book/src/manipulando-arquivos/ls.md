@@ -34,7 +34,6 @@ ls [opções] [caminho/arquivo] [caminho1/arquivo1]
 
 > Caractere identificador: `*` executável, `/` diretório, `=` socket, `@` link simbólico, `\|` pipe
 
-
 > A saída de `ls -la` segue o formato:
 > `[permissões] [links] [dono] [grupo] [tamanho] [data] [nome]`
 > Ex: `-rwxr-xr-- 1 joao users 8192 nov 4 16:00 teste`
@@ -42,14 +41,51 @@ ls [opções] [caminho/arquivo] [caminho1/arquivo1]
 **Exemplos**
 
 ```bash
-ls                                  # lista os arquivos do diretório atual
-ls /bin /sbin                       # lista os arquivos de `/bin` e `/sbin`
-ls -a                               # lista todos os arquivos, incluindo ocultos
-ls -l                               # listagem longa com permissões, dono, tamanho e data
-ls -la /bin                         # listagem longa e completa de `/bin`, incluindo ocultos
-ls -lh                              # listagem longa com tamanhos legíveis (KB, MB, GB)
-ls -R                               # lista recursivamente diretórios e subdiretórios
-ls -lX                              # listagem longa classificada por extensão
-ls -lr                              # listagem em ordem inversa
-ls --color=auto                     # coloriza a listagem conforme o tipo de arquivo
+# lista os arquivos do diretório atual
+ls
+```
+
+```bash
+# lista os arquivos de `/bin` e `/sbin`
+ls /bin /sbin
+```
+
+```bash
+# lista todos os arquivos, incluindo ocultos
+ls -a
+```
+
+```bash
+# listagem longa com permissões, dono, tamanho e data
+ls -l
+```
+
+```bash
+# listagem longa e completa de `/bin`, incluindo ocultos
+ls -la /bin
+```
+
+```bash
+# listagem longa com tamanhos legíveis (KB, MB, GB)
+ls -lh
+```
+
+```bash
+# lista recursivamente diretórios e subdiretórios
+ls -R
+```
+
+```bash
+# listagem longa classificada por extensão
+ls -lX
+```
+
+```bash
+# listagem em ordem inversa
+ls -lr
+```
+
+```bash
+# coloriza a listagem conforme o tipo de arquivo
+ls --color=auto
 ```

@@ -19,8 +19,21 @@ umount [opções] dispositivo|diretório
 **Exemplos**
 
 ```bash
-sudo umount /mnt/usb                  # desmonta o sistema de arquivos montado em `/mnt/usb`
-sudo umount /dev/sdb1                 # desmonta o dispositivo `/dev/sdb1` diretamente
-sudo umount -f /mnt/usb               # força a desmontagem de um sistema de arquivos ocupado
-sudo umount -l /mnt/usb               # desmonta de forma "preguiçosa", liberando o ponto de montagem
+# desmonta o sistema de arquivos montado em `/mnt/usb`
+sudo umount /mnt/usb
+```
+
+```bash
+# desmonta o dispositivo `/dev/sdb1` diretamente
+sudo umount /dev/sdb1
+```
+
+```bash
+# força a desmontagem de um sistema de arquivos ocupado
+sudo umount -f /mnt/usb
+```
+
+```bash
+# desmonta de forma "preguiçosa", liberando o ponto de montagem
+sudo umount -l /mnt/usb
 ```

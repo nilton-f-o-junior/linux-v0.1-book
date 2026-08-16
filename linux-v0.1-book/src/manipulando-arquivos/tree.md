@@ -20,10 +20,31 @@ tree [opções] [diretório]
 **Exemplos**
 
 ```bash
-tree                                 # exibe a árvore do diretório atual
-tree /var/log                        # exibe a árvore do diretório `/var/log`
-tree -a                              # exibe a árvore incluindo arquivos e diretórios ocultos
-tree -d                              # exibe apenas os diretórios, sem listar arquivos
-tree -L 2                            # exibe a árvore limitada a 2 níveis de profundidade
-tree -h                              # exibe a árvore com o tamanho dos arquivos
+# exibe a árvore do diretório atual
+tree
+```
+
+```bash
+# exibe a árvore do diretório `/var/log`
+tree /var/log
+```
+
+```bash
+# exibe a árvore incluindo arquivos e diretórios ocultos
+tree -a
+```
+
+```bash
+# exibe apenas os diretórios, sem listar arquivos
+tree -d
+```
+
+```bash
+# exibe a árvore limitada a 2 níveis de profundidade
+tree -L 2
+```
+
+```bash
+# exibe a árvore com o tamanho dos arquivos
+tree -h
 ```

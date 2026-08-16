@@ -21,10 +21,31 @@ du [opções] [diretório/arquivo]
 **Exemplos**
 
 ```bash
-du                           # exibe o uso de espaço do diretório atual e seus subdiretórios
-du -h                        # exibe os tamanhos em formato legível
-du -sh /home                 # exibe apenas o total do diretório /home, de forma legível
-du -ah /var/log               # exibe o tamanho de cada arquivo dentro de /var/log
-du -h --max-depth=1          # exibe o uso de espaço limitado a um nível de subdiretórios
-du -ch *.log                 # exibe o tamanho de cada arquivo .log e o total geral
+# exibe o uso de espaço do diretório atual e seus subdiretórios
+du
+```
+
+```bash
+# exibe os tamanhos em formato legível
+du -h
+```
+
+```bash
+# exibe apenas o total do diretório /home, de forma legível
+du -sh /home
+```
+
+```bash
+# exibe o tamanho de cada arquivo dentro de /var/log
+du -ah /var/log
+```
+
+```bash
+# exibe o uso de espaço limitado a um nível de subdiretórios
+du -h --max-depth=1
+```
+
+```bash
+# exibe o tamanho de cada arquivo .log e o total geral
+du -ch *.log
 ```

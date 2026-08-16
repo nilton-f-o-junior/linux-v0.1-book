@@ -19,10 +19,31 @@ history [opções] [N]
 **Exemplos**
 
 ```bash
-history                                # exibe todo o histórico de comandos
-history 10                             # exibe os últimos 10 comandos digitados
-history -c                             # limpa o histórico da sessão atual
-history -d 42                          # remove o comando de número 42 do histórico
-!!                                     # executa novamente o último comando
-!25                                    # executa novamente o comando de número 25 do histórico
+# exibe todo o histórico de comandos
+history
+```
+
+```bash
+# exibe os últimos 10 comandos digitados
+history 10
+```
+
+```bash
+# limpa o histórico da sessão atual
+history -c
+```
+
+```bash
+# remove o comando de número 42 do histórico
+history -d 42
+```
+
+```bash
+# executa novamente o último comando
+!!
+```
+
+```bash
+# executa novamente o comando de número 25 do histórico
+!25
 ```

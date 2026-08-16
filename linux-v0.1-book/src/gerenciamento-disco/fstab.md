@@ -33,7 +33,16 @@ UUID=5e6f7g8h-... /home            ext4    defaults        0 2
 **Exemplos de uso relacionado**
 
 ```bash
-sudo nano /etc/fstab                   # edita o arquivo fstab
-sudo mount -a                          # monta todos os sistemas de arquivos listados em `fstab`, sem reiniciar
-blkid                                  # exibe os UUIDs dos dispositivos, úteis para configurar o `fstab`
+# edita o arquivo fstab
+sudo nano /etc/fstab
+```
+
+```bash
+# monta todos os sistemas de arquivos listados em `fstab`, sem reiniciar
+sudo mount -a
+```
+
+```bash
+# exibe os UUIDs dos dispositivos, úteis para configurar o `fstab`
+blkid
 ```

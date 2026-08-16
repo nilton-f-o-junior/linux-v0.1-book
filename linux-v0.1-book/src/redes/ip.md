@@ -19,10 +19,31 @@ ip [opções] objeto comando
 **Exemplos**
 
 ```bash
-ip addr show                               # exibe os endereços IP de todas as interfaces
-ip a                                       # forma abreviada do comando acima
-ip link show                               # exibe o estado de todas as interfaces de rede
-sudo ip link set eth0 up                   # ativa a interface `eth0`
-sudo ip addr add 192.168.1.10/24 dev eth0  # atribui um endereço IP à interface `eth0`
-ip route show                              # exibe a tabela de rotas do sistema
+# exibe os endereços IP de todas as interfaces
+ip addr show
+```
+
+```bash
+# forma abreviada do comando acima
+ip a
+```
+
+```bash
+# exibe o estado de todas as interfaces de rede
+ip link show
+```
+
+```bash
+# ativa a interface `eth0`
+sudo ip link set eth0 up
+```
+
+```bash
+# atribui um endereço IP à interface `eth0`
+sudo ip addr add 192.168.1.10/24 dev eth0
+```
+
+```bash
+# exibe a tabela de rotas do sistema
+ip route show
 ```

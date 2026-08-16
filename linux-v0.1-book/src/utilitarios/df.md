@@ -21,10 +21,31 @@ df [opções] [diretório/arquivo]
 **Exemplos**
 
 ```bash
-df                          # exibe o uso de todos os sistemas de arquivos montados
-df -h                       # exibe os tamanhos em formato legível
-df -h /home                 # exibe o uso do sistema de arquivos que contém /home
-df -T                       # exibe também o tipo de cada sistema de arquivos
-df -i                       # exibe a quantidade de inodes usados e disponíveis
-df -h --total               # exibe o uso de todos os sistemas de arquivos e o total geral
+# exibe o uso de todos os sistemas de arquivos montados
+df
+```
+
+```bash
+# exibe os tamanhos em formato legível
+df -h
+```
+
+```bash
+# exibe o uso do sistema de arquivos que contém /home
+df -h /home
+```
+
+```bash
+# exibe também o tipo de cada sistema de arquivos
+df -T
+```
+
+```bash
+# exibe a quantidade de inodes usados e disponíveis
+df -i
+```
+
+```bash
+# exibe o uso de todos os sistemas de arquivos e o total geral
+df -h --total
 ```

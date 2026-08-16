@@ -18,9 +18,26 @@ ssh-keygen [opções]
 **Exemplos**
 
 ```bash
-ssh-keygen                                    # gera um novo par de chaves com as opções padrão
-ssh-keygen -t ed25519                         # gera um par de chaves usando o tipo `ed25519`
-ssh-keygen -t rsa -b 4096                     # gera um par de chaves RSA de 4096 bits
-ssh-keygen -t ed25519 -C "email@exemplo.com"  # gera um novo par de chaves, com comentário
-ssh-copy-id usuario@servidor.com              # copia a chave pública para o servidor remoto, habilitando login sem senha
+# gera um novo par de chaves com as opções padrão
+ssh-keygen
+```
+
+```bash
+# gera um par de chaves usando o tipo `ed25519`
+ssh-keygen -t ed25519
+```
+
+```bash
+# gera um par de chaves RSA de 4096 bits
+ssh-keygen -t rsa -b 4096
+```
+
+```bash
+# gera um novo par de chaves, com comentário
+ssh-keygen -t ed25519 -C "email@exemplo.com"
+```
+
+```bash
+# copia a chave pública para o servidor remoto, habilitando login sem senha
+ssh-copy-id usuario@servidor.com
 ```

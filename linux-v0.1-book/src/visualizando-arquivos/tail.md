@@ -16,9 +16,26 @@ tail [opções] [arquivo] [arquivo1]
 **Exemplos**
 
 ```bash
-tail arquivo.txt                    # exibe as 10 últimas linhas de `arquivo.txt`
-tail -n 20 arquivo.txt              # exibe as 20 últimas linhas
-tail -c 100 arquivo.txt             # exibe os 100 últimos bytes
-tail -f /var/log/syslog             # monitora o arquivo em tempo real (útil para logs)
-tail -n +5 arquivo.txt              # exibe o arquivo a partir da 5ª linha até o fim
+# exibe as 10 últimas linhas de `arquivo.txt`
+tail arquivo.txt
+```
+
+```bash
+# exibe as 20 últimas linhas
+tail -n 20 arquivo.txt
+```
+
+```bash
+# exibe os 100 últimos bytes
+tail -c 100 arquivo.txt
+```
+
+```bash
+# monitora o arquivo em tempo real (útil para logs)
+tail -f /var/log/syslog
+```
+
+```bash
+# exibe o arquivo a partir da 5ª linha até o fim
+tail -n +5 arquivo.txt
 ```

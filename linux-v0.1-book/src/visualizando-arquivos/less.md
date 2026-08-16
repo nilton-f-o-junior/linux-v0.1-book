@@ -20,11 +20,36 @@ less [opções] [arquivo]
 **Exemplos**
 
 ```bash
-less arquivo.txt                    # exibe `arquivo.txt` de forma paginada
-less -N arquivo.txt                 # exibe com numeração de linhas
-less -S arquivo.txt                 # trunca linhas longas sem quebra
-less +20 arquivo.txt                # inicia a exibição a partir da linha 20
-cat arquivo.txt | less              # pagina a saída do comando `cat`
-ls -la /etc | less                  # pagina a listagem de um diretório longo
-zless arquivo.txt.gz                # exibe um arquivo compactado com gzip de forma paginada
+# exibe `arquivo.txt` de forma paginada
+less arquivo.txt
+```
+
+```bash
+# exibe com numeração de linhas
+less -N arquivo.txt
+```
+
+```bash
+# trunca linhas longas sem quebra
+less -S arquivo.txt
+```
+
+```bash
+# inicia a exibição a partir da linha 20
+less +20 arquivo.txt
+```
+
+```bash
+# pagina a saída do comando `cat`
+cat arquivo.txt | less
+```
+
+```bash
+# pagina a listagem de um diretório longo
+ls -la /etc | less
+```
+
+```bash
+# exibe um arquivo compactado com gzip de forma paginada
+zless arquivo.txt.gz
 ```

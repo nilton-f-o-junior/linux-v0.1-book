@@ -19,9 +19,26 @@ id [opções] [usuário]
 **Exemplos**
 
 ```bash
-id                                    # exibe as informações do usuário atual
-id usuario                            # exibe as informações de um usuário específico
-id -u                                 # exibe apenas o UID do usuário atual
-id -un                                # exibe apenas o nome do usuário atual
-id -Gn                                # exibe os nomes de todos os grupos do usuário atual
+# exibe as informações do usuário atual
+id
+```
+
+```bash
+# exibe as informações de um usuário específico
+id usuario
+```
+
+```bash
+# exibe apenas o UID do usuário atual
+id -u
+```
+
+```bash
+# exibe apenas o nome do usuário atual
+id -un
+```
+
+```bash
+# exibe os nomes de todos os grupos do usuário atual
+id -Gn
 ```

@@ -22,9 +22,26 @@ tar [opções] arquivo.tar arquivo [arquivo1]
 **Exemplos**
 
 ```bash
-tar -cvf arquivo.tar pasta/           # agrupa uma pasta em `arquivo.tar`
-tar -xvf arquivo.tar                  # extrai o conteúdo de `arquivo.tar`
-tar -czvf arquivo.tar.gz pasta/       # agrupa e compacta uma pasta em `arquivo.tar.gz`
-tar -xzvf arquivo.tar.gz              # extrai um arquivo `.tar.gz`
-tar -tvf arquivo.tar                  # lista o conteúdo de `arquivo.tar`, sem extraí-lo
+# agrupa uma pasta em `arquivo.tar`
+tar -cvf arquivo.tar pasta/
+```
+
+```bash
+# extrai o conteúdo de `arquivo.tar`
+tar -xvf arquivo.tar
+```
+
+```bash
+# agrupa e compacta uma pasta em `arquivo.tar.gz`
+tar -czvf arquivo.tar.gz pasta/
+```
+
+```bash
+# extrai um arquivo `.tar.gz`
+tar -xzvf arquivo.tar.gz
+```
+
+```bash
+# lista o conteúdo de `arquivo.tar`, sem extraí-lo
+tar -tvf arquivo.tar
 ```

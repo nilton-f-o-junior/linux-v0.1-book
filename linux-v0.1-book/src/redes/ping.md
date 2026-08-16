@@ -20,9 +20,26 @@ ping [opções] host
 **Exemplos**
 
 ```bash
-ping google.com                       # envia pacotes continuamente para `google.com`
-ping -c 4 google.com                  # envia 4 pacotes e encerra automaticamente
-ping -i 2 google.com                  # envia pacotes a cada 2 segundos
-ping -s 100 google.com                # envia pacotes de 100 bytes
-ping -c 4 192.168.1.1                 # testa a conectividade com um endereço IP específico
+# envia pacotes continuamente para `google.com`
+ping google.com
+```
+
+```bash
+# envia 4 pacotes e encerra automaticamente
+ping -c 4 google.com
+```
+
+```bash
+# envia pacotes a cada 2 segundos
+ping -i 2 google.com
+```
+
+```bash
+# envia pacotes de 100 bytes
+ping -s 100 google.com
+```
+
+```bash
+# testa a conectividade com um endereço IP específico
+ping -c 4 192.168.1.1
 ```

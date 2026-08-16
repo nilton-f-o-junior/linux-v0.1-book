@@ -16,10 +16,31 @@ mkdir [opções] [caminho/diretório] [caminho1/diretório1]
 **Exemplos**
 
 ```bash
-mkdir projetos                      # cria o diretório `projetos` no diretório atual
-mkdir /home/user/documentos/notas   # cria o diretório `notas` em um caminho absoluto
-mkdir docs imagens videos           # cria três diretórios de uma só vez
-mkdir -p projeto/src/componentes    # cria toda a cadeia de diretórios, mesmo que `projeto` e `src` ainda não existam
-mkdir --verbose novo-site           # cria o diretório e exibe: mkdir: criado diretório 'novo-site'
-mkdir -p --verbose a/b/c            # cria os diretórios intermediários e exibe uma mensagem para cada um criado
+# cria o diretório `projetos` no diretório atual
+mkdir projetos
+```
+
+```bash
+# cria o diretório `notas` em um caminho absoluto
+mkdir /home/user/documentos/notas
+```
+
+```bash
+# cria três diretórios de uma só vez
+mkdir docs imagens videos
+```
+
+```bash
+# cria toda a cadeia de diretórios, mesmo que `projeto` e `src` ainda não existam
+mkdir -p projeto/src/componentes
+```
+
+```bash
+# cria o diretório e exibe: mkdir: criado diretório 'novo-site'
+mkdir --verbose novo-site
+```
+
+```bash
+# cria os diretórios intermediários e exibe uma mensagem para cada um criado
+mkdir -p --verbose a/b/c
 ```

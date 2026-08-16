@@ -19,10 +19,31 @@ more [opções] [diretório/arquivo]
 **Exemplos**
 
 ```bash
-more arquivo.txt                    # exibe `arquivo.txt` de forma paginada
-more -10 arquivo.txt                # exibe 10 linhas por página
-more +20 arquivo.txt                # inicia a exibição a partir da linha 20
-cat arquivo.txt | more              # pagina a saída do comando `cat`
-ls -la /etc | more                  # pagina a listagem de um diretório longo
-zmore arquivo.txt.gz                # exibe um arquivo compactado com gzip de forma paginada
+# exibe `arquivo.txt` de forma paginada
+more arquivo.txt
+```
+
+```bash
+# exibe 10 linhas por página
+more -10 arquivo.txt
+```
+
+```bash
+# inicia a exibição a partir da linha 20
+more +20 arquivo.txt
+```
+
+```bash
+# pagina a saída do comando `cat`
+cat arquivo.txt | more
+```
+
+```bash
+# pagina a listagem de um diretório longo
+ls -la /etc | more
+```
+
+```bash
+# exibe um arquivo compactado com gzip de forma paginada
+zmore arquivo.txt.gz
 ```

@@ -18,7 +18,16 @@ poweroff [opções]
 **Exemplos**
 
 ```bash
-sudo poweroff              # desliga o sistema imediatamente
-sudo poweroff -f            # força o desligamento, sem avisar processos
-sudo systemctl poweroff     # desliga o sistema via systemd
+# desliga o sistema imediatamente
+sudo poweroff
+```
+
+```bash
+# força o desligamento, sem avisar processos
+sudo poweroff -f
+```
+
+```bash
+# desliga o sistema via systemd
+sudo systemctl poweroff
 ```

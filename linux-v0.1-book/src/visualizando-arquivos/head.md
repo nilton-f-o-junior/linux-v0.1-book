@@ -15,9 +15,21 @@ head [opções] [arquivo] [arquivo1]
 **Exemplos**
 
 ```bash
-head arquivo.txt                    # exibe as 10 primeiras linhas de `arquivo.txt`
-head -n 20 arquivo.txt              # exibe as 20 primeiras linhas
-head -c 100 arquivo.txt             # exibe os 100 primeiros bytes
-head arquivo1.txt arquivo2.txt      # exibe as primeiras linhas de dois arquivos
-ps aux | head -n 5                  # exibe os 5 primeiros processos listados
+# exibe as 10 primeiras linhas de `arquivo.txt`
+head arquivo.txt
+```
+
+```bash
+# exibe as 20 primeiras linhas
+head -n 20 arquivo.txt
+```
+
+```bash
+# exibe os 100 primeiros bytes
+head -c 100 arquivo.txt
+```
+
+```bash
+# exibe as primeiras linhas de dois arquivos
+head arquivo1.txt arquivo2.txt
 ```

@@ -20,9 +20,26 @@ zip [opções] arquivo.zip arquivo [arquivo1]
 **Exemplos**
 
 ```bash
-zip arquivo.zip arquivo.txt                # compacta `arquivo.txt` em `arquivo.zip`
-zip arquivo.zip arquivo1.txt arquivo2.txt  # compacta dois arquivos em um único `.zip`
-zip -r pasta.zip pasta/                    # compacta um diretório inteiro, incluindo subpastas
-zip -e protegido.zip arquivo.txt           # compacta protegendo o arquivo com senha
-zip -r -x "*.log" projeto.zip projeto/     # compacta um diretório, excluindo arquivos `.log`
+# compacta `arquivo.txt` em `arquivo.zip`
+zip arquivo.zip arquivo.txt
+```
+
+```bash
+# compacta dois arquivos em um único `.zip`
+zip arquivo.zip arquivo1.txt arquivo2.txt
+```
+
+```bash
+# compacta um diretório inteiro, incluindo subpastas
+zip -r pasta.zip pasta/
+```
+
+```bash
+# compacta protegendo o arquivo com senha
+zip -e protegido.zip arquivo.txt
+```
+
+```bash
+# compacta um diretório, excluindo arquivos `.log`
+zip -r -x "*.log" projeto.zip projeto/
 ```

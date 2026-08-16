@@ -18,12 +18,41 @@ touch [opções] [arquivos]
 **Exemplos**
 
 ```bash
-touch arquivo.txt                     # cria `arquivo.txt` vazio ou atualiza sua data/hora para agora
-touch a.txt b.txt c.txt               # cria ou atualiza a data/hora de múltiplos arquivos
-touch -c arquivo.txt                  # atualiza a data/hora sem criar o arquivo caso não exista
-touch -a arquivo.txt                  # atualiza somente a data de acesso
-touch -m arquivo.txt                  # atualiza somente a data de modificação
-touch -t 12311830 arquivo.txt         # define a data/hora para 31 de dezembro às 18:30
-touch -t 202312311830.00 arquivo.txt  # define para 31/12/2023 às 18:30:00
-touch -r ref.txt arquivo.txt          # aplica a data/hora de `ref.txt` em `arquivo.txt`
+# cria `arquivo.txt` vazio ou atualiza sua data/hora para agora
+touch arquivo.txt
+```
+
+```bash
+# cria ou atualiza a data/hora de múltiplos arquivos
+touch a.txt b.txt c.txt
+```
+
+```bash
+# atualiza a data/hora sem criar o arquivo caso não exista
+touch -c arquivo.txt
+```
+
+```bash
+# atualiza somente a data de acesso
+touch -a arquivo.txt
+```
+
+```bash
+# atualiza somente a data de modificação
+touch -m arquivo.txt
+```
+
+```bash
+# define a data/hora para 31 de dezembro às 18:30
+touch -t 12311830 arquivo.txt
+```
+
+```bash
+# define para 31/12/2023 às 18:30:00
+touch -t 202312311830.00 arquivo.txt
+```
+
+```bash
+# aplica a data/hora de `ref.txt` em `arquivo.txt`
+touch -r ref.txt arquivo.txt
 ```

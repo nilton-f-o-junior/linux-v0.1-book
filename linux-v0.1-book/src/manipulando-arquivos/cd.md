@@ -19,10 +19,31 @@ cd [diretório]
 **Exemplos**
 
 ```bash
-cd /etc                      # navega até o diretório /etc
-cd                           # volta para o diretório pessoal (home)
-cd ~                         # também volta para o diretório pessoal (home)
-cd ..                        # sobe um nível (diretório pai)
-cd -                         # volta para o diretório anterior
-cd ~/Documentos              # navega até a pasta "Documentos" dentro do home
+# navega até o diretório /etc
+cd /etc
+```
+
+```bash
+# volta para o diretório pessoal (home)
+cd
+```
+
+```bash
+# também volta para o diretório pessoal (home)
+cd ~
+```
+
+```bash
+# sobe um nível (diretório pai)
+cd ..
+```
+
+```bash
+# volta para o diretório anterior
+cd -
+```
+
+```bash
+# navega até a pasta "Documentos" dentro do home
+cd ~/Documentos
 ```
