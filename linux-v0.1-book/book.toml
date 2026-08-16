@@ -3,3 +3,7 @@ authors = ["nilton-f-o-junior"]
 language = "en"
 src = "src"
 title = "Linux - eBook"
+
+[output.html]
+smart-punctuation = false
+additional-css = ["theme/custom.css"]
